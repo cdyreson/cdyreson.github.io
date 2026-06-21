@@ -1,0 +1,43 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, June 2004</em>)
+
+The June 2004 issue of :journalAcronym[] is another blockbuster, with five 
+papers
+in this issue. In fact, the first two issues of 2004 contain the same number
+of papers as appeared in all of 2002. While the Web is still really
+hot, with papers on evaluating top-<i>k</i> queries over the Web, XML indexing,
+and dynamically generated web content, this issue also has papers with
+innovative approaches to bulk loading and to sequence queries. And to get 
+a head start on the September issue, check out 
+<a href="http://www.acm.org/tods/Upcoming.html">the Upcoming Issues page</a>.
+
+I have appointed four new Associate Editors.
+<ul>
+<li> <b>Luis Gravano</b> works at the juncture of databases and information
+  retrieval, including research on distributed search over text
+  databases, Web search, information extraction, and text mining.
+</li>
+<li> <b>Ralf Hartmut  G&uuml;ting</b> works on extensible and modular database
+system architectures, and in spatial and spatio-temporal data modeling and 
+implementation issues, especially in the recent flavor of "moving 
+objects databases".
+</li>
+<li> <b>Hank Korth</b>'s most recent publications have been in the areas of
+XML-relational data integration and main-memory databases.  He is currently
+addressing CPU-architecture aware query processing and also data modeling
+and query processing issues arising from homeland-security applications.
+</li>
+<li> <b>Betty Salzberg</b> does research on database kernel issues, in
+  particular spatial and temporal indexing, online reorganization, and
+  concurrency and recovery.
+</li>
+</ul>
+All four are internationally-known scholars in the field of
+database systems and are well known also to the database community
+through their past service. I'm gratified that they are willing
+to help :journalAcronym[] continue to improve.
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[Developments at ACM TODS]

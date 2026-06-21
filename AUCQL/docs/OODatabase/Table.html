@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./OODatabase/Table.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_table">NAME Table</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(string_$tablename)">new(string $tableName)</a></li>
+		<li><a href="#inserttuple(tuple_$tuple)">insertTuple(Tuple $tuple)</a></li>
+		<li><a href="#deletetuple(column_$key)">deleteTuple(Column $key)</a></li>
+		<li><a href="#retrievetuple(column_$key)">retrieveTuple(Column $key)</a></li>
+		<li><a href="#enumerate()"><code>enumerate()</code></a></li>
+		<li><a href="#enumeratekeys()"><code>enumerateKeys()</code></a></li>
+		<li><a href="#save()"><code>save()</code></a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_table">NAME Table</a></h1>
+<p>This package is part of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase.html">the OODatabase manpage</a>.</p>
+<p>Copyright &amp;copy 1997 Curtis E. Dyreson. All rights reserved.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This class represents a table in a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Database.html">the OODatabase::Database manpage</a>.
+A table is a dbm file.  Each entry in the table is
+a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Tuple.html">the OODatabase::Tuple manpage</a>.  The class has been configured to use either
+BSD, GDBM, or BigDB files.  You must edit this package to configure 
+it.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(string_$tablename)">new(string $tableName)</a></h2>
+<ul>
+<li><strong><a name="item_string_%24tablename">string $tableName</a></strong><br />
+</li>
+- The name of the table (a dbm file name).
+<p></p></ul>
+<p>Create a table with the give name (opens a dbm file).
+Second line.</p>
+<p>
+</p>
+<h2><a name="inserttuple(tuple_$tuple)">insertTuple(Tuple $tuple)</a></h2>
+<ul>
+<li></li>
+<a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Tuple.html">the OODatabase::Tuple manpage</a> $tuple - The tuple to insert.
+<p></p></ul>
+<p>Insert a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Tuple.html">the OODatabase::Tuple manpage</a> into the table.  Will replace an existing 
+tuple so be careful.</p>
+<p>
+</p>
+<h2><a name="deletetuple(column_$key)">deleteTuple(Column $key)</a></h2>
+<ul>
+<li><strong><a name="item_column_%24key">Column $key</a></strong><br />
+</li>
+- The key for the tuple to retrieve, must be a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Persistent.html">the OODatabase::Persistent manpage</a> object.
+<p></p></ul>
+<p>Delete a tuple.  The function returns true or false depending on 
+whether or not the tuple found and deleted.</p>
+<p>
+</p>
+<h2><a name="retrievetuple(column_$key)">retrieveTuple(Column $key)</a></h2>
+<ul>
+<li><strong>Column $key</strong><br />
+</li>
+- The key for the tuple to retrieve, must be a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Persistent.html">the OODatabase::Persistent manpage</a> object.
+<p></p></ul>
+<p>Retrieve a tuple with the given key from the table.  This routine will 
+retrieve a tuple from the table, or if the tuple is not found it will
+return 0.  Use as follows.</p>
+<pre>
+   # we want to retrieve the tuple for the key &quot;hi&quot;
+   $key = Id::fromString(&quot;hi&quot;);
+   # try to retrieve it 
+   $r = $table-&gt;retrieveTuple($key);    
+   # let's test if we found it
+   if ($r) { 
+     # key was found in the table 
+   else { 
+     # key was not found
+     }</pre>
+<p>
+</p>
+<h2><a name="enumerate()"><code>enumerate()</code></a></h2>
+<p>Return a reference to the dbm file.</p>
+<p>
+</p>
+<h2><a name="enumeratekeys()"><code>enumerateKeys()</code></a></h2>
+<p>Return a list of the keys.</p>
+<p>
+</p>
+<h2><a name="save()"><code>save()</code></a></h2>
+<p>Close the DBM file</p>
+
+</body>
+
+</html>

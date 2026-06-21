@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/Id.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_list_of_integers_">new(list of integers)</A>
+		<LI><A HREF="#equals_Id_other_">equals(Id $other)</A>
+		<LI><A HREF="#fromString_string_string_">fromString(string $string)</A>
+		<LI><A HREF="#fromBytes_ByteArray_b_">fromBytes(ByteArray $b)</A>
+		<LI><A HREF="#toString_">toString()</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#cloneMe_">cloneMe()</A>
+		<LI><A HREF="#increment_">increment()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An Id is a compact 'key' data type for columns in a database <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_list_of_integers_">new(list of integers)</A></H2>
+<P>
+An Id is just a list of integers
+
+<P>
+<HR>
+<H2><A NAME="equals_Id_other_">equals(Id $other)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_DBMDatabase">DBMDatabase::Id $other</A></STRONG>
+<P>
+- The other Id to compare
+
+</UL>
+<P>
+Is this Id equal to another? Compare byte images.
+
+<P>
+<HR>
+<H2><A NAME="fromString_string_string_">fromString(string $string)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $string</A></STRONG>
+<P>
+- The string
+
+</UL>
+<P>
+Create an Id from a string.
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_ByteArray_b_">fromBytes(ByteArray $b)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_ByteArray">ByteArray $b</A></STRONG>
+<P>
+- The sequence of bytes
+
+</UL>
+<P>
+Create an Id from the byte image of an Id.
+
+<P>
+<HR>
+<H2><A NAME="toString_">toString()</A></H2>
+<P>
+Returns a string image of an Id.
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Returns a byte image of an Id.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Return a string image of the Id.
+
+<P>
+<HR>
+<H2><A NAME="cloneMe_">cloneMe()</A></H2>
+<P>
+Return a duplicate of the Id.
+
+<P>
+<HR>
+<H2><A NAME="increment_">increment()</A></H2>
+<P>
+Increment an Id (this is for Ids that are counters)!
+
+</BODY>
+
+</HTML>

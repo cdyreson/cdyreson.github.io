@@ -1,0 +1,31 @@
+:include[macros]
+:arg1[
+The following papers appear in the current issue of the
+ACM Transactions on Database Systems (Volume 25, Number 4, December, 2000).
+<ul>
+Michael H. B&ouml;hlen, Christian S. Jensen, and Richard T. Snodgrass<BR>
+<I>Temporal Statement Modifiers.</I><br>
+Postscript: <A HREF="accepted/2000/BoehlenTemporal.ps.gz"><samp>ACM/tods/accepted/2000/BoehlenTemporal.ps.gz</samp></A>
+<BR>
+PDF: <A HREF="accepted/2000/BoehlenTemporal.pdf"><samp>ACM/tods/accepted/2000/BoehlenTemporal.pdf</samp></A>
+
+Donald Kossmann, Michael J. Franklin and Gerhard Drasch<BR>
+<I>Cache Investment: Integrating Query Optimization and Distributed Data
+Placement.</I>
+<BR>
+PDF: <A HREF="accepted/2000/KossmannCache.pdf"><samp>ACM/tods/accepted/2000/KossmannCache.pdf</samp></A>
+
+Leonidas Fegaras and David Maier<BR>
+<I>Optimizing Object Queries Using an Effective Calculus.</I>
+<BR>
+PDF: <A HREF="accepted/2000/FegarasOptimizing.pdf"><samp>ACM/tods/accepted/2000/FegarasOptimizing.pdf</samp></A>
+<BR>
+PS: <A
+HREF="accepted/2000/FegarasOptimizing.ps.gz"><samp>ACM/tods/accepted/2000/FegarasOptimizing.ps.gz</samp></A>
+<BR>
+Source code: <A HREF="http://lambda.uta.edu/lambda-DB.html"><samp>http://lambda.uta.edu/lambda-DB.html</samp></A>
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Current Issue]

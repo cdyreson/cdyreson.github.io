@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<TITLE>./ExpressionTree/Operations/Comparison.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_ExpressionTree_Operations_">NAME ExpressionTree::Operations::Comparison</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_op_left_right_">new($op, $left, $right)</A>
+		<LI><A HREF="#validate_op_leftType_rightType">validate(op, leftType, rightType)</A>
+		<LI><A HREF="#resultType_">resultType()</A>
+		<LI><A HREF="#dump_indent_">dump($indent)</A>
+		<LI><A HREF="#evaluate_State_state_">evaluate(State state)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_ExpressionTree_Operations_">NAME ExpressionTree::Operations::Comparison</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class represents any comparison operation.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_op_left_right_">new($op, $left, $right)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_op">op</A></STRONG>
+<P>
+The comparison operation.
+
+<LI><STRONG><A NAME="item_left">left</A></STRONG>
+<P>
+<A HREF="././ExpressionTree.html#">the ExpressionTree manpage</A> - The left child
+
+<LI><STRONG><A NAME="item_right">right</A></STRONG>
+<P>
+<A HREF="././ExpressionTree.html#">the ExpressionTree manpage</A> - The right child
+
+</UL>
+<P>
+Create a new comparison operation
+
+<P>
+<HR>
+<H2><A NAME="validate_op_leftType_rightType">validate(op, leftType, rightType)</A></H2>
+<P>
+#--------------------------------------------------------------------- sub
+validate { my <CODE>$type</CODE> = shift; return ``No operation for
+comparison.'' unless <CODE>scalar(@_);</CODE> my ($op) = shift; return ``No
+left operand in comparison.'' unless <CODE>scalar(@_);</CODE> my
+($leftType) = shift; return ``No right operand in comparison.'' unless
+<CODE>scalar(@_);</CODE> my ($rightType) = shift; return ``invalid
+operation $op'' unless defined $Operations{$op}; return undef; # passed
+validation! }
+#---------------------------------------------------------------------
+
+<P>
+<HR>
+<H2><A NAME="resultType_">resultType()</A></H2>
+<P>
+Return the type of result.
+
+<P>
+<HR>
+<H2><A NAME="dump_indent_">dump($indent)</A></H2>
+<P>
+Dump this node.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_State_state_">evaluate(State state)</A></H2>
+<P>
+Evaluate the comparison operation returning a Boolean result.
+
+</BODY>
+
+</HTML>

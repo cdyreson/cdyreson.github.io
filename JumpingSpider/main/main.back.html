@@ -1,0 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-e (April 9, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>A Jumping Spider: Restructuring the WWW Graph to Index Concepts that Span Pages</TITLE>
+<META NAME="description" CONTENT="A Jumping Spider: Restructuring the WWW Graph to Index Concepts that Span Pages">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="main.css">
+</HEAD>
+<BODY LANG="EN">
+<P>
+<H1 ALIGN=CENTER>A Jumping Spider: Restructuring the WWW Graph to Index Concepts 
+that Span Pages</H1>
+<P ALIGN=CENTER><STRONG>Curtis E. Dyreson<BR> 
+Department of Computer Science<BR> 
+James Cook University<BR> 
+Townsville, QLD 4811<BR> 
+Australia<BR> 
+</STRONG></P><P>
+<P ALIGN=CENTER><STRONG></STRONG></P><P>
+<P>
+<H3 CLASS=ABSTRACT>Abstract:</H3>
+<P CLASS=ABSTRACT>A search engine can index a concept that
+appears entirely on a <EM>single</EM> page.
+But concepts can span <EM>several</EM> pages.
+For instance, a page on <EM>trees</EM> may be
+linked to a page on <EM>lecture notes</EM> for a <EM>data structures</EM> 
+course.  
+If the <EM>trees</EM> page does
+not specifically mention <EM>lecture notes</EM>, 
+then a search engine search for <EM>lecture notes on
+trees</EM> will, at best, only partially
+match each page.
+<P>
+In this paper we describe a practical system, called a Jumping Spider,
+to index concepts that span more than one page.  
+We assume that a multi-page concept is created by a 
+<EM>concept-path</EM>, consisting of some number of hyperlinks,
+that transits through pages with specific content.
+For instance, there must be 
+a concept-path from the 
+<EM>lecture notes</EM> page to the <EM>trees</EM> page
+to create the 
+<EM>lecture notes on trees</EM> concept.
+The concept-paths
+must be relatively few (certainly much fewer than
+the overall number of paths in the WWW) or the cost of the
+index will be too great.  
+At the same time, the paths must be easily identified, 
+so that they are capable of being automatically computed
+and indexed quickly.
+Finally, the paths must be viable, in the sense that they
+really do connect multi-page concepts.
+<P>
+The Jumping Spider restructures the WWW graph (within the index)
+to create a graph consisting only of concept-paths.
+The restructuring only permits paths from from pages in a parent 
+directory to any transitively connected page in a child directory, 
+or over a single link that connects two unrelated directories.
+</P><P>
+<A NAME="secmotivation"></A><H1><A NAME="SECTION00010000000000000000">Motivation</A></H1>
+<P>
+Sally is teaching a course in data structures.  
+She is currently lecturing about trees and is interested in how the 
+material is taught elsewhere.  Sally decides to look on the WWW to 
+find the relevant information.
+There are two kinds of tools that Sally can use: search engines and
+WWW query languages.
+<P>
+<H2><A NAME="SECTION00011000000000000000">Search engines</A></H2>
+<P>
+Search engines are the <em>de facto</em> standard for finding information
+on the WWW.
+While there are a great variety of search engines 
+they all share the same basic architecture.
+A search engine consists of three components: a robot, an index, and 
+a user-interface.
+The robot periodically traverses the WWW.
+For each page that it finds, the robot extracts the content for that
+page, usually a set of keywords.
+The keywords are used to update the index, which is a
+mapping from keywords to URLs.
+A user searches by inputting one or more 
+keywords into the user-interface.
+The user interface consults the index and retrieves the URLs 
+of pages that best match the given keywords.
+The result are often ranked by 
+how well the keywords match.
+Search engines differ primarily in how content is extracted, how much of the
+WWW they search, and how keywords are matched and results ranked.
+<P>
+An important feature of a search engine is that the architecture is
+optimized to respond quickly to user requests.
+In particular, the user only interacts with the index. 
+The WWW search, 
+which is performed by the robot, is entirely separate.
+This architecture recognizes that searching the WWW is slow, and that robots
+impose an overhead on network bandwidth.
+We will call an architecture where the WWW search is distinct from a user
+query a <EM>static</EM> architecture.
+<P>
+The primary drawback to search engines (for our purposes) is that they 
+only index single pages.
+Sally wishes to find the <EM>lecture notes</EM>
+on <EM>trees</EM> for a <EM>data structures</EM> course.
+In most courses, each lecture has its own page, separate from both a 
+lecture notes page and course home page.
+Since the search terms do not appear together on a 
+<EM>single</EM> page
+it is unlikely that the notes could be located by using a
+combination of <EM>all</EM> of the above descriptions 
+(e.g., <EM>trees</EM> AND <EM>lecture notes</EM> AND <EM>data structures</EM>).
+On the other hand, using just a few of the terms (e.g., just 
+<EM>trees</EM>) would find too many irrelevant URLs, and 
+fail to isolate the notes within a data structures course.
+<P>
+In order to find the appropriate notes using a search engine, 
+Sally would have to employ a
+two-pronged strategy.  First she would use a search engine
+to find data structures courses.  Then she would manually explore each
+course to find lecture notes on trees.  Sally is unhappy with
+this strategy since it has a manual component.
+But she can use a <EM>WWW query language</EM>
+to automate the exploration of each course.
+<P>
+<H2><A NAME="SECTION00012000000000000000">WWW query languages</A></H2>
+<P>
+The database research community has recently 
+developed several languages to overcome search engine limitations.
+Languages such as WebSQL&nbsp;[<A HREF="main.html#MENDELZON96">MMM96</A>, <A HREF="main.html#AROCENA96">AMM97</A>, <A HREF="main.html#MENDELZON97A">MMM97</A>],
+W3QL&nbsp;[<A HREF="main.html#KONOPNICKI95">KS95</A>], and WebLog&nbsp;[<A HREF="main.html#LAKSHMANAN96">LSS96</A>]
+combine <EM>content predicates</EM> to search a 
+page with <EM>path expressions</EM> to traverse links between pages.
+A content predicate tests whether a page or link to a page 
+has some specified content.
+A path expression is a description of the path 
+that connects pages.
+<P>
+Sally chooses to use WebSQL to find the notes.
+She decides on the following page navigation strategy.
+Starting with pages on <EM>data structures</EM>, navigate to pages which 
+mention <EM>lecture notes</EM> that are within three links, and from
+those pages, navigate at most two links to find pages on 
+<EM>trees</EM>.
+A WebSQL query for this navigation strategy is given in
+Figure&nbsp;<A HREF="main.html#figwebsql">1</A>.
+<P><A NAME="368">&#160;</A> <IMG WIDTH=664 HEIGHT=189 ALIGN=BOTTOM ALT="figure149" SRC="img2.gif"  > <BR>
+<STRONG>Figure 1:</STRONG> An example WebSQL query<A NAME="figwebsql">&#160;</A><BR>
+<P>
+The <B>FROM</B> clause stipulates that
+the Uniform Resource Locators (URLs) associated with
+`data structures' are retrieved from a search engine
+(by using a <B>MENTIONS</B> to build the <B>DOCUMENT</B> <EM>dataStructures</EM>).
+From this set of pages,
+pages that are within three
+(<EM>local</EM>) links are
+visited as specified
+by the path constraint 
+` <IMG WIDTH=131 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline597" SRC="img3.gif"  > '.
+The <B>WHERE</B> clause adds 
+(with a <B>CONTAINS</B> predicate)
+the constraint
+that for each page visited, navigation should continue only from those
+that contain the string `lecture notes'.
+Finally from those pages, two links can be followed to
+reach the pages on `trees'.
+<P>
+Sally is making a fundamental assumption that
+pages are usually linked to conceptually-related 
+information.
+For instance, a user will likely assume that traversing one link 
+from a page on <EM>data structures</EM> will access information somehow 
+related to <EM>data structures</EM>. 
+So the graph of (hyper)links 
+is a (very) rough approximation of
+the conceptual relationships between pages.
+In general, however, this assumption is false since there are usually
+some links on the page that do not obey this rule, 
+such as a link to a page maintainer's home page or a link back to a 
+central entry page.
+<P>
+Sally must also guess the maximum number of links that can separate 
+related concepts.
+She guesses at most three links between one pair and at most two links
+between another.  Sally may not realize that it is very important
+for her to be as <EM>conservative</EM> as possible in her guesses 
+since the number of links she uses in a path expression 
+has a huge impact on the performance of
+her query. The query explores  <IMG WIDTH=44 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline599" SRC="img4.gif"  >  links in the graph, where <I>k</I> is the 
+number of links from a page and <I>n</I> is the number of links in the path 
+expression, in other words the size of the graph explored is exponential in 
+the number of links in the path expression.
+At the same time, Sally should not be too conservative since she might
+miss the desired information.
+<P>
+For the data structures notes at James Cook University Sally has guessed 
+wrong since the lecture notes for all of 
+the courses taught by the department are within
+three links of the data structures home page; it is one link back to a 
+list of courses, then one link to a course home page, and finally, one to 
+the lecture notes for that course.
+Paths of length three also exist from the data structures course through 
+lecturers' home pages to notes in other courses.
+<P>
+In general, in order to direct and constrain 
+the navigation in a WWW query using path expressions
+Sally needs to have some a priori knowledge of the 
+topology of the WWW in the region of desired content.
+In this case she has
+to know roughly how many links exist between pieces of information.
+Unfortunately, content is only loosely related to the graph topology of 
+the WWW and although the user will likely be perfectly capable of specifying
+the content,
+the user will usually not have a priori knowledge of the specific topology
+(in the terminology of Lacroix et. al&nbsp;[<A HREF="main.html#LACROIX97A">LSCS97</A>], the user has ``zero 
+knowledge'' of the topology).
+<P>
+One other limitation is that 
+current implementations of WWW query languages 
+do not separate the search phase from the query.
+We will call architectures that search the WWW during a query <EM>dynamic</EM>.
+One advantage of dynamic architectures is that they do not become dated since
+the current version of the WWW is used during the search.
+But dynamic architectures have a high query evaluation cost since the WWW is
+explored during a query.
+<P>
+<H2><A NAME="SECTION00013000000000000000">Hybrid systems - a Jumping Spider</A></H2>
+<P>
+In this paper we describe a hybrid system, called a Jumping Spider, 
+that combines search engine and WWW query language features.  
+Our position is that WWW query languages offer too <EM>powerful</EM> 
+a mechanism for searching the WWW while search engines are too <EM>weak</EM>.
+The Jumping Spider is a desirable medium between the two approaches.
+Like WWW query languages, a Jumping Spider uses paths in the WWW 
+to find concepts that span pages.
+But there are three key differences between a Jumping Spider and a 
+WWW query language.
+<OL>
+<LI> A Jumping Spider uses its own links between pages rather than 
+the hyperlinks in a WWW graph.
+The Jumping Spider adds some links and removes others from the WWW graph
+to enhance and direct the search for concept-paths.
+<LI> A Jumping Spider has only one kind of path expression, which is a 
+single link between concepts (although each Jumping Spider link may 
+span any number of hyperlinks).
+We sacrifice the power of general path expressions in WWW query languages
+to attain reasonable query evaluation times.
+<LI> A Jumping Spider has a static architecture like a search engine.
+The WWW search is done by a robot, off-line, entirely separate
+from a query.
+We believe that the user is more interested in fast query 
+evaluation than up-to-date WWW graphs.
+</OL>
+<P>
+In the next section we describe how to build 
+a <EM>concept graph</EM> that stores each link 
+in a concept-path.
+The Jumping Spider has been implemented and an example is presented.
+Finally we discuss related work and present a summary of this paper.
+<P>
+<H1><A NAME="SECTION00020000000000000000">The concept graph</A></H1>
+<P>
+The motivating query presented in Section&nbsp;<A HREF="main.html#secmotivation">1</A> is
+a general kind of query, which we will call a <EM>concept-refinement</EM> query.
+In this kind of query a large concept space is identified initially.
+The concept space is then refined or ``narrowed'' in subsequent steps.
+In the motivating query Sally first requested information on data structures
+courses.  Then that information space was narrowed to lecture notes,
+and finally to trees.
+<P>
+What this suggests is that a concept-path
+must similarly refine or narrow the concept space.
+The WWW graph, however, does not have any such narrowing.
+Links can lead anywhere, they do not naturally lead from 
+more general to more specialized information.
+Instead, a narrowing graph structure must be defined on top of 
+the underlying WWW graph.
+In the remainder of this section we present an easily computable 
+structure which is used by the Jumping Spider.
+<P>
+<H2><A NAME="SECTION00021000000000000000">An observation about URLs</A></H2>
+<P>
+The structure we propose is based on URLs.
+A URL for a page pinpoints the page's 
+<EM>disk location.</EM>
+For example, the URL
+<BLOCKQUOTE> <TT>http://www.cs.jcu.edu.au/ftp/web/Subjects/Informal.html</TT>
+</BLOCKQUOTE>
+specifies that the page is in the
+<TT>ftp/web/Subjects</TT>
+directory relative to the server's root directory.
+<P>
+Because the URL is related to the hierarchy of directories
+on a disk, it offers a primitive mechanism by which it is possible to 
+make a initial guess as to which information is general and which is 
+specialized.
+A general rule of thumb is that information in subdirectories is more 
+specialized with respect to the information in parent directories.
+This is the common ``cultural'' convention for dividing
+information between parent directories and subdirectories in both 
+WWW and non-WWW information repositories.
+So for instance, we might infer that the information in 
+<BLOCKQUOTE> <TT>http://www.cs.jcu.edu.au/ftp/web/Subjects/index.html</TT>
+</BLOCKQUOTE>
+is ``more general'' than that in 
+<BLOCKQUOTE> <TT>http://www.cs.jcu.edu.au/ftp/web/Subjects/cp2001/index.html</TT> 
+</BLOCKQUOTE>
+since
+the former resides in a parent directory of the latter.
+We should note that we are <EM>not</EM> stating that the URL itself be 
+used to infer the content of a page, since the name of the 
+directory is often entirely unrelated to the content; few would know
+that cp2001 means a data structures course.  Rather we are 
+suggesting that some general/specialized relationship holds between
+the pages, at least, such a relationship is assumed by whomever
+maintains the pages.
+A page in a subdirectory contains information (whatever it may be) 
+that is more specialized than that contained in a page in the 
+parent directory (whatever that may be).
+Certainly, it will not always be the case that this is so, but
+it is a useful, cheap, and simple heuristic.
+We note that a similar heuristic is used 
+by <TT>WebGlimpse</TT>&nbsp;[<A HREF="main.html#MANBER97">MSB97</A>] 
+(extends <TT>glimpseHTTP</TT>s indexing of a directory)
+and also by Infoseek&nbsp;[<A HREF="main.html#Infoseek">Inf</A>] 
+(in grouping URLs with common prefixes).
+<P>
+<H2><A NAME="SECTION00022000000000000000">Kinds of links</A></H2>
+<P>
+This assumption gives us enough information to distinguish
+different <EM>kinds</EM> of links.
+<UL>
+<LI> <EM>back link</EM> - A back link is a 
+link to a page that is more general, that is, to a page in 
+a parent directory.
+<LI> <EM>side link</EM> - 
+A side link is a link to a page in an unrelated directory which is neither
+a parent directory nor a subdirectory,
+e.g., a link to a page on a different server, or from a page in the server's
+root directory to one in a user's <TT>public_html</TT> directory.
+<LI> <EM>down link</EM> - A link 
+from a parent to a subdirectory is called a <EM>down link</EM>.
+A down link leads from a more general to a more specialized page.
+</UL>
+<P>
+This classification is incomplete since links between
+pages within the same directory have yet to be classified.
+Intra-directory links
+are classified according to the following rules.
+<UL>
+<LI> A link from an <EM>index.html</EM>
+(we use <EM>index.html</EM> in this discussion
+as the default name, the actual page name depends on the server, 
+we mean the page that is loaded by default when the directory is used
+as the URL)
+page to a page in the same directory
+is a down link.
+<LI> A link leading to an <EM>index.html</EM> is a back link.
+<LI> For other links within the same directory, it depends upon whether
+there is an incoming down or side link to a page from some other directory.
+If so, then the page can be reached from outside the directory and links
+from that page to pages in the same directory are treated as down links.
+If not, then the links are treated as side links.
+</UL>
+<P>
+Figure&nbsp;<A HREF="main.html#figcs">2</A> shows a part of the WWW graph in the region of the
+lecture notes on trees.
+Figure&nbsp;<A HREF="main.html#figconcept">3</A> shows how the links in this region are classified.
+In the figure, back links have been eliminated.  Side links, such as the
+one to the lecturer (curtis) are shown with dashed lines.  Down links are
+shown with solid lines.
+<P><A NAME="234">&#160;</A><P><A NAME="figcs">&#160;</A> <IMG WIDTH=475 HEIGHT=344 ALIGN=BOTTOM ALT="figure228" SRC="img5.gif"  > <P><BR>
+<STRONG>Figure 2:</STRONG> Part of the WWW graph in the region of the lecture notes on trees<BR>
+<P><H2><A NAME="SECTION00023000000000000000">Building the concept graph</A></H2>
+<P>
+Having identified each kind of link we construct a <EM>concept graph</EM>
+from the WWW graph using the following rules.
+<OL>
+<LI> Each link in the WWW graph is added to the concept graph <EM>
+except</EM> back links.
+In general, we believe that back links should not be traversed.
+They usually represent a link back to a central entry page,
+e.g., back to the server root page, and consequently are counter
+to the narrowing needed in a content-refinement query.
+<LI> A link is added to the concept graph 
+for each path consisting of any number of down 
+links followed by at most one side link.
+Paths that consist entirely of down links have the best chance, in 
+general, of leading to more refined content.  A single side link 
+is allowed to terminate such a path.
+</OL>
+The concept graph constructed from the links classified in 
+Figure&nbsp;<A HREF="main.html#figconcept">3</A> is shown in Figure&nbsp;<A HREF="main.html#figfinal">4</A>.
+<P>
+While the concept graph is larger than the WWW graph, the increase in size
+is modest.
+Rule 1 eliminates some links, while
+rule 2 adds links for 
+paths that are either completely within a single directory ``tree,'' or have
+at most one link outside of that tree are retained.  
+This adds  <IMG WIDTH=96 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline607" SRC="img6.gif"  >  links to the concept graph, 
+where 
+<I>n</I> is the number of nodes in the WWW graph,
+<I>k</I> is the branching factor in the directory tree,
+and <I>m</I> is the number of nodes in a single server.
+In general <I>n</I> will be on the order of millions of nodes, while <I>m</I> will be
+in the tens of thousands and <I>z</I> will be less than ten.
+<P>
+<P><A NAME="248">&#160;</A><P><A NAME="figconcept">&#160;</A> <IMG WIDTH=644 HEIGHT=340 ALIGN=BOTTOM ALT="figure242" SRC="img7.gif"  > <P><BR>
+<STRONG>Figure 3:</STRONG> The links classified, solid lines are down links, 
+dashed lines are side links (back links have been eliminated)<BR>
+<P>
+<P>
+<P><A NAME="254">&#160;</A><P><A NAME="figfinal">&#160;</A> <IMG WIDTH=475 HEIGHT=344 ALIGN=BOTTOM ALT="figure248" SRC="img8.gif"  > <P><BR>
+<STRONG>Figure 4:</STRONG> The resulting concept graph<BR>
+<P>
+<P>
+The benefit to creating the concept graph is that it eliminates the
+necessity of performing a <EM>dynamic</EM> search of the WWW graph 
+to refine a concept.
+This saves time during query evaluation at the 
+cost of storing a larger graph, although the size of the concept graph is 
+modest, just slightly above linear in the size of the WWW graph.
+<P>
+<H2><A NAME="SECTION00024000000000000000">Example queries</A></H2>
+<P>
+User's query for concept-paths in the concept graph by giving a list
+of keywords.  A single jump (link) is permitted between each keyword.
+Below we list some example queries.
+<UL>
+<LI> Find the URLs of the <EM>lecture notes</EM> on <EM>trees</EM> in
+<EM>data structures</EM> subjects.
+<BLOCKQUOTE> <EM>data structures</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>lecture notes</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>trees</EM>
+</BLOCKQUOTE>
+<LI> Find the URLs of <EM>lecture notes</EM> on <EM>trees</EM>.
+<BLOCKQUOTE> <EM>lecture notes</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>trees</EM>
+</BLOCKQUOTE>
+<LI> Find the URLs of anything having to do with <EM>trees</EM> in 
+a <EM>data structures</EM> course.
+<BLOCKQUOTE> <EM>lecture notes</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>trees</EM>
+</BLOCKQUOTE>
+<LI> Find the URLs of the <EM>lecture notes</EM> on <EM>trees</EM> in
+<EM>data structures</EM> subjects at <EM>James Cook University (JCU)</EM>
+<BLOCKQUOTE> <EM>JCU</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>data structures</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>lecture notes</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>
+ trees</EM>
+</BLOCKQUOTE>
+<LI> Find the URLs of the <EM>lecturers</EM> in 
+a <EM>data structures</EM> course at <EM>JCU</EM>.
+<BLOCKQUOTE> <EM>JCU</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>data structures</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>lecturer</EM>
+</BLOCKQUOTE>
+<LI> Find the URLs of all <EM>lecturers</EM> in 
+a <EM>courses</EM> at <EM>JCU</EM>.
+<BLOCKQUOTE> <EM>JCU</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>subjects</EM>  <IMG WIDTH=15 HEIGHT=6 ALIGN=BOTTOM ALT="tex2html_wrap_inline625" SRC="img9.gif"  >  <EM>lecturers</EM>
+</BLOCKQUOTE></UL><H2><A NAME="SECTION00025000000000000000">Evaluating queries</A></H2>
+<P>
+The query evaluation architecture is a (relational) database, 
+which is described in detail elsewhere&nbsp;[<A HREF="main.html#DYRESON97">Dyr97</A>].
+The database has two tables:
+a <EM>SearchEngine</EM> table which maps concepts to URLs, and 
+a <EM>Reachable</EM> table which is the set of edges in the concept graph.
+We anticipate that the size of the concept graph will limit the
+number of servers that a Jumping Spider can index.
+For instance, a Jumping Spider could be constructed 
+for information available from the servers at James Cook University, or 
+for the servers at all the universities in Queensland, 
+or just for information in computer science courses, available from 
+universities world-wide.
+<P>
+A query consists of a list of keywords.
+The query is evaluated by 
+performing a sequence of joins between tuples in the
+<EM>SearchEngine</EM> and <EM>Reachable</EM> tables.
+The number of joins is proportional
+to the number of keywords in the query.
+For example, to find the lecture notes on trees in a data structures
+course the following relational algebra expression would be evaluated
+<PRE><TT> 
+		 <IMG WIDTH=395 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline647" SRC="img10.gif"  > 
+<P>
+				 <IMG WIDTH=380 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline649" SRC="img11.gif"  > 
+<P>
+				 <IMG WIDTH=209 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline651" SRC="img12.gif"  >  
+</TT></PRE>
+If we assume that each of the tables is indexed appropriately, 
+then the restrictions ( <IMG WIDTH=9 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline653" SRC="img13.gif"  > ) are cheap, and the joins are all
+hash joins, so the overall cost of the query will be largely determined by 
+the size of the output for each selection and the resulting join with
+the <EM>Reachable</EM> table.
+In other words, if there are many <EM>data structures</EM> pages 
+then the cost of the query will be relatively high since
+the number of reachable pages (jumping one link) will be high.
+In the worst case this will be the entire <EM>Reachable</EM> table, but
+in practice it will be a very small portion of that table.
+The primary difference between this navigation strategy and that in 
+WWW query languages is that only a single link is ever traversed between
+concepts, whereas in a WWW query language the transitive closure
+of the WWW graph may have to be computed.
+<P>
+<H2><A NAME="SECTION00026000000000000000">Reducing the size of the concept graph</A></H2>
+<P>
+The concept graph can be dramatically reduced in size by assuming that
+a down link exists from a page to all pages in either that directory 
+or a subdirectory.
+This assumption has two benefits. 
+First, it leaves only side links to unrelated directories in the
+concept-graph.
+We note that Altavista&nbsp;[<A HREF="main.html#ALTAVISTA">Alt</A>] 
+already stores these links, so this strategy
+could be implemented using Altavista directly (we plan to do so 
+shortly).
+Second, it improves the speed of query evaluation by reducing the
+size of the <EM>Reachable</EM> table.
+<P>
+<H1><A NAME="SECTION00030000000000000000">Jumping Spider Demonstration</A></H1>
+<P>
+Building the Jumping Spider is relatively straight-forward.
+Like a search engine, a 
+Jumping Spider, is a three-component architecture consisting of a robot,
+two tables, and a user-interface.
+The robot traverses the WWW and 
+gathers information for a search engine index and the
+concept graph.
+The index and graph are stored as the pair of
+<EM>SearchEngine</EM> and <EM>Reachable</EM> tables.
+<P>
+The Jumping Spider architecture 
+has been implemented in Perl, version 5.003.
+We chose Perl to facilitate easy distribution.
+The code and an example interface are available at the following URL.
+<BLOCKQUOTE>
+<A HREF="http://www.cs.jcu.edu.au/~curtis/htmls/JumpingSpider/demo.html">
+http://www.cs.jcu.edu.au/~curtis/htmls/JumpingSpider/demo.html</a>.
+</BLOCKQUOTE>
+The user-interface prompts the user for a set of keywords as shown
+in Figure&nbsp;<A HREF="main.html#figscreendump">5</A>.
+The result of evaluating the example query using a Jumping
+Spider for the servers at James Cook University is shown in 
+Figure&nbsp;<A HREF="main.html#figscreen2">6</A>.
+<P>
+<P><A NAME="337">&#160;</A><P><A NAME="figscreendump">&#160;</A> <IMG WIDTH=614 HEIGHT=610 ALIGN=BOTTOM ALT="figure330" SRC="img14.gif"  > <P><BR>
+<STRONG>Figure 5:</STRONG> An example interface to the Jumping Spider (part of a Mini-World Web)<BR>
+<P>
+<P>
+<P><A NAME="342">&#160;</A><P><A NAME="figscreen2">&#160;</A> <IMG WIDTH=614 HEIGHT=610 ALIGN=BOTTOM ALT="figure337" SRC="img15.gif"  > <P><BR>
+<STRONG>Figure 6:</STRONG> The output for the motivating query<BR>
+<P><A NAME="secRelatedWork"></A><H1><A NAME="SECTION00040000000000000000">Related Work</A></H1>
+<P>
+W3QL&nbsp;[<A HREF="main.html#KONOPNICKI95">KS95</A>], WebLog&nbsp;[<A HREF="main.html#LAKSHMANAN96">LSS96</A>], 
+WebSQL&nbsp;[<A HREF="main.html#MENDELZON96">MMM96</A>, <A HREF="main.html#AROCENA96">AMM97</A>, <A HREF="main.html#MENDELZON97A">MMM97</A>], and AKIRA&nbsp;[<A HREF="main.html#LACROIX97A">LSCS97</A>] 
+are query languages that
+have been designed specifically to retrieve information from the WWW.
+Each of these languages supports sophisticated path expressions.
+AKIRA also supports ``fuzzy'' navigation whereby a user can retrieve 
+information ``near'' to a particular page.
+In contrast, a Jumping Spider uses concept-refinement and 
+lack all path expressions to direct and constrain a query.
+We believe that many WWW queries will be concept-refinement kinds of 
+queries and that, for these queries, a Jumping Spider is
+more ``user-friendly.''
+<P>
+W3QL, WebLog, WebSQL, and AKIRA each have a <EM>dynamic</EM> query
+evaluation architecture in which a query will dynamically traverse
+the WWW.
+A dynamic architecture has several benefits.
+The most recent version of the constantly changing WWW graph is always
+used.
+The architecture is scalable since no
+large tables need to be computed or stored.
+A rich set of content predicates can be supported 
+since content is extracted dynamically
+(WebLog and AKIRA have extensive sets of content predicates).
+Dynamic pages (e.g., pages generated by CGI scripts)
+can be explored, which W3QL supports.
+In contrast, we propose a <EM>static</EM> architecture.
+Prior to query evaluation, a subgraph of the WWW 
+is traversed and the graph stored in Reachable and
+SearchEngine tables. 
+These tables optimize query evaluation within the subgraph.
+Our belief is that the user will be willing to use a slightly
+out-of-date WWW graph and sacrifice the other benefits of a dynamic
+architecture if doing so helps to improve the speed of query evaluation.
+<P>
+We share with WebSQL a practical focus both on the issue of cost and 
+the means to control that cost by having different kinds of links.
+WebSQL distinguishes between local and global links.
+We distinguish between side, down, and back links.
+WebSQL estimates the cost of a query as a function of the 
+number of global links in a path expression.
+We use side links to limit the cost of a query.
+<P>
+Semi-structured query language have also been applied to 
+the WWW&nbsp;[<A HREF="main.html#BUNEMAN97">Bun97</A>, <A HREF="main.html#BUNEMAN96">BDHS96</A>, <A HREF="main.html#MCHUGH97">MAG <IMG WIDTH=8 HEIGHT=10 ALIGN=BOTTOM ALT="tex2html_wrap_inline591" SRC="img1.gif"  > 97</A>, <A HREF="main.html#FERNANDEZ97">FFLS97</A>].
+A semi-structured data model consists of a graph that is a hierarchy
+with a well-defined root branching to data values through a sequence
+of ``role edges.''
+A semi-structured query can be thought of as a regular expression over an 
+alphabet of role descriptions;
+the query is evaluated by matching the 
+regular expression against the
+role descriptions on a path.
+Unlike these papers, we focus on the
+issue of creating a semi-structured data model from the 
+unstructured information in the WWW.  
+A straightforward approach would make a one-to-one mapping between 
+hyper-links in the WWW and links in a semi-structured data model.
+Our approach is to remove some links (back links) and
+adding a number of links (all reachable down links).
+A further difference is that the concept graph described in this paper
+is neither a hierarchy nor has a root, queries can start from anywhere
+within the graph.
+<P>
+Finally, a related research area is that explored by WebGlimpse&nbsp;[<A HREF="main.html#MANBER97">MSB97</A>].
+WebGlimpse indexes pages within a ``neighborhood'' of a given page.
+The neighborhood can be a region of the WWW graph, such
+as the region within two links of a given page.
+In this paper, the neighborhood is a directory hierarchy (like glimpseHTTP).
+But the focus of this paper is on indexing jumps
+between neighborhoods.  Essentially the index build by glimpse
+is a SearchEngine table in our implementation.
+<P>
+<H1><A NAME="SECTION00050000000000000000">Summary</A></H1>
+<P>
+In this paper we presented a Jumping Spider, which
+is a tool to find information on the WWW.
+A Jumping Spider adds a limited, but desirable kind of WWW query 
+language search to a search engine.
+The heart of a Jumping Spider is a concept graph that has links which
+lead from more general to more specialized information.
+We discussed how to build this graph by identifying different kinds
+of links in the WWW graph and restructuring the graph appropriately.
+Our strategy uses a simple heuristic based on URLs.
+We plan to investigate other heuristics in future.
+Whatever heuristic is used, the key insight in this research is 
+that the WWW graph should be massaged to improve the speed of query
+evaluation when using path expressions.
+We showed that the Jumping Spider implementation has an efficient, 
+architecture which requires no changes to the WWW itself, and utilizes
+standard relational database technology to evaluate a query.
+<P>
+<P><A NAME="SECTIONREF"><H2>References</H2></A><P>
+<DL COMPACT>
+<DT><A NAME="ALTAVISTA"><STRONG>Alt</STRONG></A><DD>
+Altavista Home Page.
+<TT>http://www.altavista.com</TT>.
+<P>
+<DT><A NAME="AROCENA96"><STRONG>AMM97</STRONG></A><DD>
+G.&nbsp;Arocena, A.&nbsp;Mendelzon, and G.&nbsp;Mihaila.
+Applications of a Web Query Language.
+In <EM>Sixth International World Wide Web Conference</EM>, Santa Clara,
+  CA, April 1997.
+<P>
+<DT><A NAME="BUNEMAN96"><STRONG>BDHS96</STRONG></A><DD>
+Peter Buneman, Susan&nbsp;B. Davidson, Gerd&nbsp;G. Hillebrand, and Dan Suciu.
+A Query Language and Optimization Techniques for
+  Unstructured Data.
+In H.&nbsp;V. Jagadish and Inderpal&nbsp;Singh Mumick, editors, <EM>
+  Proceedings of the 1996 ACM SIGMOD International Conference on Management
+  of Data</EM>, pages 505-516, Montreal, Quebec, Canada, 4-6&nbsp;June 1996.
+<P>
+<DT><A NAME="BUNEMAN97"><STRONG>Bun97</STRONG></A><DD>
+P.&nbsp;Buneman.
+Semistructured Data.
+In <EM>SIGMOD/PODS '97 (tutorial notes)</EM>, Tucson, AZ, May 1997.
+<P>
+<DT><A NAME="DYRESON97"><STRONG>Dyr97</STRONG></A><DD>
+C.&nbsp;Dyreson.
+Content-based Navigation in a Mini-World Web.
+Technical Report 97/06, James Cook University, 1997.
+<P>
+<DT><A NAME="FERNANDEZ97"><STRONG>FFLS97</STRONG></A><DD>
+M.&nbsp;Fernandez, D.&nbsp;Florescu, A.&nbsp;Levy, and D.&nbsp;Suciu.
+A Query Language for a Web-Site Management System.
+<EM>SIGMOD Record</EM>, 26(3), September 1997.
+<P>
+<DT><A NAME="Infoseek"><STRONG>Inf</STRONG></A><DD>
+Infoseek Home Page.
+<TT>http://www.infoseek.com</TT>.
+<P>
+<DT><A NAME="KONOPNICKI95"><STRONG>KS95</STRONG></A><DD>
+D.&nbsp;Konopnicki and O.&nbsp;Shmueli.
+W3QS: A Query System for the World Wide Web.
+In <EM>Proceedings of the International Conference on Very Large
+  Databases (VLDB '95)</EM>, pages 54-65, Zurich, Switzerland, September 1995.
+<P>
+<DT><A NAME="LACROIX97A"><STRONG>LSCS97</STRONG></A><DD>
+Z.&nbsp;Lacroix, A.&nbsp;Sahuguet, R.&nbsp;Chandrasekar, and B.&nbsp;Srinivas.
+A Novel Approach to Querying the Web: Integrating
+  Retrieval and Browsing.
+In <EM>ER97 - Workshop on Conceptual Modeling for Multimedia
+  Information Seeking</EM>, Los Angeles, CA, November 1997.
+<P>
+<DT><A NAME="LAKSHMANAN96"><STRONG>LSS96</STRONG></A><DD>
+L.&nbsp;Lakshmanan, F.&nbsp;Sadri, and I.&nbsp;Subramanian.
+A Declarative Language for Querying and Restructuring the
+  Web.
+In <EM>Proceedings of the Sixth International Workshop on Research
+  Issues in Data Engineering (RIDE '96)</EM>, New Orleans, February 1996.
+<P>
+<DT><A NAME="MCHUGH97"><STRONG>MAG <IMG WIDTH=8 HEIGHT=10 ALIGN=BOTTOM ALT="tex2html_wrap_inline591" SRC="img1.gif"  > 97</STRONG></A><DD>
+J.&nbsp;McHugh, S.&nbsp;Abiteboul, R.&nbsp;Goldman, D.&nbsp;Quass, and J.&nbsp;Widom.
+Lore: A Database Management System for Semistructured
+  Data.
+<EM>SIGMOD Record</EM>, 26(3):54-66, September 1997.
+<P>
+<DT><A NAME="MENDELZON96"><STRONG>MMM96</STRONG></A><DD>
+A.&nbsp;Mendelzon, G.&nbsp;Mihaila, and T.&nbsp;Milo.
+Querying the World Wide Web.
+In <EM>Proceedings of the Fourth International Conference on
+  Parallel and Distributed Information Systems</EM>, pages 18-20, Miami, FL,
+  December 1996.
+<P>
+<DT><A NAME="MENDELZON97A"><STRONG>MMM97</STRONG></A><DD>
+A.&nbsp;Mendelzon, G.&nbsp;Mihaila, and T.&nbsp;Milo.
+Querying the World Wide Web.
+<EM>International Journal on Digital Libraries</EM>, 1(1):54-67,
+  January 1997.
+<P>
+<DT><A NAME="MANBER97"><STRONG>MSB97</STRONG></A><DD>
+U.&nbsp;Manber, M.&nbsp;Smith, and G.&nbsp;Burra.
+WebGlimpse -- Combining Browsing and Searching.
+In <EM>Usenix Technical Conference</EM>, pages 6-10, January 1997.
+</DL>
+<P>
+<BR> <HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Contrast With Existing Semistructured Data Models</TITLE>
+<META NAME="description" CONTENT="Contrast With Existing Semistructured Data Models">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html94"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html92"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html88"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html95"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<B> Up:</B> <A NAME="tex2html93"
+ HREF="node2.html">Motivation and Background</A>
+<B> Previous:</B> <A NAME="tex2html89"
+ HREF="node5.html">Features of Properties in</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00024000000000000000">
+Contrast With Existing Semistructured Data Models</A>
+</H2>
+
+<P>
+Our proposed model 
+is not the only one capable of representing meta-data;
+existing semistructured data models with simple string labels 
+can also explicitly capture meta-data.  For example, the
+``property'' information in a label could be encoded by splitting an
+edge into separate <EM>data</EM> and <EM>meta-data</EM> edges, with the
+properties branching from the end of the meta-data edge.  But
+there are at least two problems with this approach of encoding the
+meta-data together with the data.
+
+<P>
+First, meta-data has no special status in such a model, so a query
+that involves a <EM>wildcard</EM> (which matches any label) may
+unintentionally access meta-data rather than data.  
+A user could formulate a query that follows only <EM>data</EM> edges, but
+this is challenging and, we believe, unnecessary.  It should not be
+left to the user to guess how the meta-data is represented in the
+database and to write queries to explicitly avoid such data.
+
+<P>
+A second, more fundamental problem, is that <EM>some</EM> of the
+meta-data has special semantics that must be accounted for in queries.
+For instance, assume that in a semistructured database with simple
+string labels, the transaction time for an object is represented as a
+<B>ttime</B> edge from that node.  As discussed above, a path is
+only valid if its edges are concurrent in the database--any other
+semantics is incorrect.  Below we give a Lorel-like query to
+correctly retrieve only <TT>movie.star.name</TT>s that are concurrent
+(assuming that the INTERSECT operation computes the intersection of two
+time intervals).
+<PRE>
+SELECT N
+FROM movie M, M.star S, S.name N
+WHERE NOT_EMPTY(M.ttime INTERSECT 
+            S.ttime INTERSECT N.ttime)
+</PRE>The WHERE clause tests the transaction times of objects along the path
+to ensure that they are concurrent.
+
+<P>
+Although a user may explicitly formulate each query to correctly
+manipulate the transaction time and other properties, such a strategy
+has several highly undesirable features.
+First, all properties must be accounted for in all queries.  For
+example, the query given above is incorrect since it does not
+correctly handle the security property.
+Second, the semantics of a property cannot be enforced.  For example, a
+user could simply omit the WHERE clause in the query given above, or
+test some other condition on transaction time.  The query will run to
+completion and return a result.  But since the semantics of the
+transaction time property has not been observed, the result may
+include <EM>fictive</EM> paths.
+Third, naive users cannot formulate queries.  A user has to know which
+properties exist, be familiar with the semantics of those properties,
+and must appropriately contend with all properties in every query.
+Fourth, queries become brittle.  Even correctly formed queries will
+have a short shelf-life since adding a new property, or deleting an
+existing one, can break existing queries.
+
+<P>
+In summary, it is theoretically possible, but unattractive and beyond
+the capabilities of users to represent and query properties using an
+ordinary semistructured database.
+The extensible data model presented in this paper can be viewed as,
+and perhaps can even be implemented as, a layer on top of a normal
+semistructured data model.  The layer implements the semantics for
+each property and correctly translates queries and results between the
+user and the underlying database.
+
+<P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html94"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html92"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html88"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html95"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<B> Up:</B> <A NAME="tex2html93"
+ HREF="node2.html">Motivation and Background</A>
+<B> Previous:</B> <A NAME="tex2html89"
+ HREF="node5.html">Features of Properties in</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

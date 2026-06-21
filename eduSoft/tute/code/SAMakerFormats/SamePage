@@ -1,0 +1,250 @@
+sub defaultHeaderFormat {
+  return '<HR>';
+  }
+
+sub defaultFooterFormat {
+  return '<HR>';
+  }
+
+sub defaultEntryPageFormat {
+  return <<'ENTRYFORMAT';
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Self-assessment
+  </TITLE>
+  </HEAD>
+
+  <BODY>
+  CBEGIN $CheaderText CEND
+
+  <FORM METHOD="POST" ACTION="CBEGIN$Croot/marker$CextensionCEND">
+  CBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$ChiddenText">CEND
+  <H1> Hello and Welcome to the Self-assessment!</H1>
+  Use the mouse to select your choices.
+  At some places you will be asked to enter text.
+  If you are using a Netscape brower, before typing the text
+  you must first click the mouse in the text box.
+  <BR>
+  <INPUT TYPE="submit" NAME="starter" VALUE="Start Self-assessment">
+  </FORM>
+
+  CBEGIN $CfooterText CEND
+
+  </BODY>
+  </HTML>
+ENTRYFORMAT
+}
+
+sub defaultStatsPageFormat {
+  return <<'STATSFORMAT';
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Self-assessment Statistics
+  </TITLE>
+  </HEAD>
+  <BODY>
+  CBEGIN $CheaderText CEND
+
+  <FORM METHOD="POST" ACTION="CBEGIN$Croot/statsCEND">
+  CBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$ChiddenText">CEND
+  <H1> Vailkommen to the Self-assessment Stats!</H1>
+  <HR>
+  Loading the stats may take awhile. 
+  <BR>
+  <INPUT TYPE="submit" NAME="action" VALUE="continue">
+  </FORM>
+
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+STATSFORMAT
+}
+
+sub defaultExitPageFormat {
+  return <<'EXITFORMAT';
+  <HTML>
+  <TITLE>
+  All Done!
+  </TITLE>
+  <BODY>
+  CBEGIN $CheaderText CEND
+  Congratulations, you have finished the self-assessment.
+  <P>
+  CBEGIN $CreturnText CEND
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+EXITFORMAT
+  }
+
+sub defaultCorrectQuestionFormat {
+  return <<'CORRECTFORMAT';
+  Congratulations, your answer,
+  RBEGIN $RanswerText REND
+  is correct!  Your current score is 
+  RBEGIN$RquestionsCorrectREND
+  out of 
+  RBEGIN$RquestionsTriedREND.
+  <BR>
+  <INPUT TYPE="submit" NAME="explanationFormatRBEGIN$RquestionIdREND" 
+      VALUE="Look at Answer">
+  <INPUT TYPE="submit" NAME="next" VALUE="Next Question">
+  RBEGIN $RpagesRemaining more question(s) are left. REND
+CORRECTFORMAT
+  }
+
+sub defaultIncorrectQuestionFormat {
+  return <<'INCORRECTFORMAT';
+  Unfortunately, your answer,
+  RBEGIN $RanswerText REND
+  is incorrect.  Your current score is 
+  RBEGIN$RquestionsCorrectREND
+  out of 
+  RBEGIN$RquestionsTriedREND.
+  <BR>
+  <INPUT TYPE="submit" NAME="this" VALUE="Retry Question">
+  <INPUT TYPE="submit" NAME="explanationFormatRBEGIN$RquestionIdREND" 
+     VALUE="Look at Answer">
+  <INPUT TYPE="submit" NAME="next" VALUE="Next Question">
+  RBEGIN $RpagesRemaining more question(s) are left. REND
+INCORRECTFORMAT
+  }
+
+sub defaultMarkPageFormat {
+  return <<'ANSWERFORMAT';
+  <HTML>
+  <TITLE>
+  Question RBEGIN$RpageNumberREND - Answer Given
+  </TITLE>
+  <BODY>
+  CBEGIN $CheaderText CEND
+  CBEGIN
+    <FORM METHOD="POST" ACTION="$Croot/marker$Cextension">
+    RBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$RhiddenText">REND
+    RBEGIN$RquestionsTextREND
+    </FORM>
+  CEND
+  CBEGIN $CreturnText CEND
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+ANSWERFORMAT
+  }
+
+sub defaultExplanationQuestionFormat {
+  return <<'LOOKATANSWERFORMAT';
+  <H1>Explanation for question RBEGIN $RpageNumber REND</H1>
+  RBEGIN $Rexplanation REND
+  RBEGIN So the correct answer(s) are $RanswerTextREND
+  <HR>
+  CBEGIN $CquestionText CEND
+  <BR>
+  <INPUT TYPE="submit" NAME="next" VALUE="Next Question">
+  RBEGIN $RpagesRemaining more question(s) are left. REND
+LOOKATANSWERFORMAT
+  }
+
+sub defaultHintQuestionFormat {
+  return <<'HINTFORMAT';
+  RBEGIN The hint for this question follows. <P> $RhintText <HR> REND
+  CBEGIN $CquestionText CEND
+HINTFORMAT
+  }
+
+sub defaultNormalQuestionFormat {
+  return <<'NORMALFORMAT';
+  CBEGIN$CquestionTextCEND
+  <BR>
+  <INPUT TYPE="submit" NAME="skip" VALUE="Skip Question">
+  CBEGIN $CexistsHint<INPUT TYPE="submit" NAME="hintFormatRBEGIN$RquestionIdREND" VALUE="Hint"> CEND
+NORMALFORMAT
+  }
+
+sub defaultNormalPageFormat {
+  return <<'NORMALFORMAT';
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Question RBEGIN$RpageNumberREND
+  </TITLE>
+  </HEAD>
+  <BODY>
+  CBEGIN $CheaderText CEND
+  CBEGIN
+    <FORM METHOD="POST" ACTION="$Croot/marker$Cextension">
+    RBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$RhiddenText">REND
+    RBEGIN$RquestionsTextREND
+    <BR>
+    </FORM>
+  CEND
+  CBEGIN $CreturnText CEND
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+NORMALFORMAT
+  }
+
+sub defaultTFFormat {
+  return <<'TFFORMAT';
+  RBEGIN$RpageNumberREND) 
+  CBEGIN$CquestionTextCEND
+  <BR><INPUT TYPE="submit" NAME="answer$CquestionId" VALUE="true"> 
+  <INPUT TYPE="submit" NAME="answer$CquestionId" VALUE="false">
+TFFORMAT
+} 
+
+sub defaultMCFormat {
+  return <<'MCFORMAT';
+VALUES
+  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w
+OPTION
+  CBEGIN<BR><INPUT TYPE="submit" 
+                  NAME="answerRBEGIN$RquestionIdREND" 
+                  VALUE="$CanswerValue"
+            >$CanswerText
+  CEND
+ACTUALTEXT
+  RBEGIN$RpageNumberREND) 
+  CBEGIN$CquestionTextCEND
+  CBEGIN$CanswerTextCEND
+MCFORMAT
+}
+
+sub defaultMMFormat {
+  return <<'MMFORMAT';
+OPTION
+  <OPTION> CBEGIN$CanswerTextCEND
+ACTUALTEXT
+  RBEGIN$RpageNumberREND) 
+  CBEGIN$CquestionTextCEND
+  <BR>
+  <SELECT NAME="answerRBEGIN$RquestionIdREND" 
+        SIZE=CBEGIN$CanswerSizeCEND MULTIPLE>
+  CBEGIN$CanswerTextCEND
+  </SELECT>
+MMFORMAT
+} 
+
+sub defaultSAFormat {
+  return <<'SAFORMAT';
+  $CquestionText
+  <P>
+  Put your answer here 
+    <INPUT TYPE="text" NAME="answerRBEGIN$RquestionIdREND" VALUE="" SIZE=30>
+  <INPUT TYPE="submit" NAME="ignore" VALUE="Done"> 
+SAFORMAT
+} 
+
+sub defaultEAFormat {
+  return <<'EAFORMAT';
+  $CquestionText
+  <P>
+  Put your answer here 
+    <INPUT TYPE="text" NAME="answerRBEGIN$RquestionIdREND" VALUE="" SIZE=30>
+  <INPUT TYPE="submit" NAME="ignore" VALUE="Click Here When Done"> 
+EAFORMAT
+} 
+
+1;

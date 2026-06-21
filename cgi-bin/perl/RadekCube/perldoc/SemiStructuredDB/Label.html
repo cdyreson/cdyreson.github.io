@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<TITLE>./SemiStructuredDB/Label.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Label">NAME Label </A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_List_of_Regions_r_">new(List of Regions r)</A>
+		<LI><A HREF="#toString_">toString()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#regions_">regions()</A>
+		<LI><A HREF="#insert_Region_r_">insert(Region r)</A>
+		<LI><A HREF="#dimensionExtract_string_dimensio">dimensionExtract(string dimension)</A>
+		<LI><A HREF="#slice_Region_S_">slice(Region S)</A>
+		<LI><A HREF="#collapse_Label_other_">collapse(Label other)</A>
+		<LI><A HREF="#match_Region_r_">match(Region r)</A>
+		<LI><A HREF="#coalesce_String_propertyName_">coalesce(String propertyName)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Label">NAME Label</A></H1>
+<P>
+Class encapsulating an Edge Label in a SemiStructured Database
+
+<P>
+This package is part of <A HREF="././SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> Label is a list of property space regions (see <A HREF="././SemiStructuredDB/Region.html#">the Region manpage</A>). The label supports matching, slicing, coalescing, and collapsing
+operations.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_List_of_Regions_r_">new(List of Regions r)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_RegionList">RegionList r</A></STRONG>
+<P>
+- The list of <A HREF="././SemiStructuredDB/Region.html#">the Region manpage</A>s
+
+</UL>
+<P>
+
+<FONT SIZE=-1>A</FONT> Label is a list of property space <A HREF="././SemiStructuredDB/Region.html#">the Region manpage</A>s. This creates a Label from a list of <A HREF="././SemiStructuredDB/Region.html#">the Region manpage</A>s.
+
+<P>
+<HR>
+<H2><A NAME="toString_">toString()</A></H2>
+<P>
+Returns a string image of an Label.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Return a string image of the Label.
+
+<P>
+<HR>
+<H2><A NAME="regions_">regions()</A></H2>
+<P>
+Return a reference to the list of regions in a Label.
+
+<P>
+<HR>
+<H2><A NAME="insert_Region_r_">insert(Region r)</A></H2>
+<UL>
+<LI><STRONG>RegionList r</STRONG>
+<P>
+- The list of <A HREF="././SemiStructuredDB/Region.html#">the Region manpage</A>s
+
+</UL>
+<P>
+Insert a region into the list.
+
+<P>
+<HR>
+<H2><A NAME="dimensionExtract_string_dimensio">dimensionExtract(string dimension)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string dimension</A></STRONG>
+<P>
+- The name of the dimension to extract
+
+</UL>
+<P>
+Extracts the dimension value from each region in the list building a new
+list.
+
+<P>
+<HR>
+<H2><A NAME="slice_Region_S_">slice(Region S)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Region">Region S</A></STRONG>
+<P>
+- The region to slice with.
+
+</UL>
+<P>
+Slices a portion from each region in the label, creating a new label.
+
+<P>
+<HR>
+<H2><A NAME="collapse_Label_other_">collapse(Label other)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Label">Label other</A></STRONG>
+<P>
+- The label to collapse with.
+
+</UL>
+<P>
+Collapses this label with another, creating a new label. The collapsing is
+the pairwise collapsing of each region in each label. Typically, this will
+be one region in, one region out.
+
+<P>
+This function will fail (return value of undef) if there is no collapsed
+label (the resulting label has some empty property in all Regions).
+
+<P>
+<HR>
+<H2><A NAME="match_Region_r_">match(Region r)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Region">Region r</A></STRONG>
+<P>
+- The region to match against.
+
+</UL>
+<P>
+Matches a region to every region in this label, returns a new Label that
+contains all the matching regions, or 0 (false) if no region matches.
+
+<P>
+<HR>
+<H2><A NAME="coalesce_String_propertyName_">coalesce(String propertyName)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_String">String propertyName</A></STRONG>
+<P>
+- The propertyName to coalesce on.
+
+</UL>
+<P>
+Coalesce all the Regions in this Label on the indicated property.
+
+</BODY>
+
+</HTML>

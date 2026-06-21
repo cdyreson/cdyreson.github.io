@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<TITLE>./SemiStructuredDB/Path.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Path">NAME Path </A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Edge_edge_">new(Edge edge)</A>
+		<LI><A HREF="#collapse_">collapse()</A>
+		<LI><A HREF="#dimensionExtract_string_dimensio">dimensionExtract(string dimension)</A>
+		<LI><A HREF="#clone_">clone()</A>
+		<LI><A HREF="#append_Edge_edge_">append(Edge edge)</A>
+		<LI><A HREF="#prepend_Edge_edge_">prepend(Edge edge)</A>
+		<LI><A HREF="#terminalNode_">terminalNode()</A>
+		<LI><A HREF="#startNode_">startNode()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#slice_Region_region_">slice(Region region)</A>
+		<LI><A HREF="#resultType_">resultType()</A>
+		<LI><A HREF="#getValue_">getValue()</A>
+		<LI><A HREF="#presentation_">presentation()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Path">NAME Path</A></H1>
+<P>
+Class representing a path value. 
+<FONT SIZE=-1>A</FONT> path is a sequence of <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A>s.
+
+<P>
+This package is part of <A HREF="././SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> Path is a sequence of <A HREF="././SemiStructuredDB/Edge.html#">the Edge manpage</A>s.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Edge_edge_">new(Edge edge)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_edge">edge</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> to start the path with, this edge is optional.
+
+</UL>
+<P>
+Construct an empty path, or a path with one edge.
+
+<P>
+<HR>
+<H2><A NAME="collapse_">collapse()</A></H2>
+<P>
+Fetch the collapsed path.
+
+<P>
+<HR>
+<H2><A NAME="dimensionExtract_string_dimensio">dimensionExtract(string dimension)</A></H2>
+<P>
+Fetch the dimension value from the collapsed area. Returns a list of
+values.
+
+<P>
+<HR>
+<H2><A NAME="clone_">clone()</A></H2>
+<P>
+Clone the path.
+
+<P>
+<HR>
+<H2><A NAME="append_Edge_edge_">append(Edge edge)</A></H2>
+<UL>
+<LI><STRONG>edge</STRONG>
+<P>
+- The <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> to append.
+
+</UL>
+<P>
+Adds an <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> to the path.
+
+<P>
+<HR>
+<H2><A NAME="prepend_Edge_edge_">prepend(Edge edge)</A></H2>
+<UL>
+<LI><STRONG>edge</STRONG>
+<P>
+- The <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> to prepend.
+
+</UL>
+<P>
+Prepends a <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> to the start of a path.
+
+<P>
+<HR>
+<H2><A NAME="terminalNode_">terminalNode()</A></H2>
+<P>
+Return the final node in the path.
+
+<P>
+<HR>
+<H2><A NAME="startNode_">startNode()</A></H2>
+<P>
+Return the starting node in the path.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Create a formatted string of all the edges in the path
+
+<P>
+<HR>
+<H2><A NAME="slice_Region_region_">slice(Region region)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_region">region</A></STRONG>
+<P>
+- The <A HREF="./SemiStructuredDB/Region.html">SemiStructuredDB::Region</A> to slice with.
+
+</UL>
+<P>
+Slice every edge in the path using the region. Return 0 if no valid path
+results. Return a new sliced path if a valid sliced path exists. Note that
+this will leave the path unchanged, it generates a new path (this method is
+not a mutator).
+
+<P>
+<HR>
+<H2><A NAME="resultType_">resultType()</A></H2>
+<P>
+Result type is path.
+
+<P>
+<HR>
+<H2><A NAME="getValue_">getValue()</A></H2>
+<P>
+The value of the path is the value of the final node in the path.
+
+<P>
+<HR>
+<H2><A NAME="presentation_">presentation()</A></H2>
+<P>
+Present this path as the final node in the path.
+
+</BODY>
+
+</HTML>

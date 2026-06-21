@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/SemiStructuredDB/Globals.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_SemiStructuredDB_Globals">NAME SemiStructuredDB::Globals</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_">new()</A>
+		<LI><A HREF="#close_">close()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_SemiStructuredDB_Globals">NAME SemiStructuredDB::Globals</A></H1>
+<P>
+The global state in the semistructured db.  
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Below is the list of instance variables in the global object.
+
+<UL>
+<LI><STRONG><A NAME="item_SSGraph">SSGraph</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./../lib/SemiStructuredDB/LabelledGraph.html#">the LabelledGraph manpage</A>. The SSGraph is the raw semistructured graph.
+
+</UL>
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_">new()</A></H2>
+<P>
+Allocate and intialize the necessary variables.
+
+<P>
+<HR>
+<H2><A NAME="close_">close()</A></H2>
+<P>
+Close and write all the persistent variables are written to disk. This
+should be called prior to exiting, but even if it not called, in theory,
+all the persistent variables should be maintained since Perl will clean
+them up nicely for us by doing the appropriate unties.
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Write all the persistent variables are written to disk.
+
+</BODY>
+
+</HTML>

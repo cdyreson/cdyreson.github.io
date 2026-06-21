@@ -1,0 +1,33 @@
+<result>
+      <book>
+          <title>DB</title>
+          <author>
+              <name>E.F. Codd</name>
+          </author>
+          <price>46.95</price>
+          <publisher>Addison Wesley</publisher>
+      </book>
+      <book>
+          <title>Automata</title>
+          <author>
+              <name>E.F. Codd</name>
+          </author>
+          <price>9.95</price>
+          <publisher>Academic Press</publisher>
+      </book>
+      <book>
+          <author>
+              <name>E.F. Codd</name>
+          </author>
+          <price>9.95</price>
+      </book>
+      <book>
+          <title>Theory</title>
+          <author>
+              <name>Jennifer Rose</name>
+          </author>
+          <price>20.95</price>
+          <publisher>Addison Wesley</publisher>
+          <publisher>Academic Press</publisher>
+      </book>
+</result>

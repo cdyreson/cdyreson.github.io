@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>./SemiStructuredDB/Region.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Region">NAME Region</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Hash_table_">new(Hash table)</A>
+		<LI><A HREF="#toString_">toString()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#properties_">properties()</A>
+		<LI><A HREF="#dimensionExtract_string_dimensio">dimensionExtract(string dimension)</A>
+		<LI><A HREF="#slice_Region_S_">slice(Region S)</A>
+		<LI><A HREF="#collapse_Region_S_">collapse(Region S)</A>
+		<LI><A HREF="#match_Region_S_">match(Region S)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Region">NAME Region</A></H1>
+<P>
+Class encapsulating a property space Region in a SemiStructured Database
+
+<P>
+This package is part of <A HREF="././SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> Region is an object that has a set of descriptive
+properties. This list is represented as a hash table internally to the
+Region.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Hash_table_">new(Hash table)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_table">table</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> hash table of the mapping from property names to
+values
+
+</UL>
+<P>
+
+<FONT SIZE=-1>A</FONT> Region is a hash table of objects, that maps
+property names to values.
+
+<P>
+<HR>
+<H2><A NAME="toString_">toString()</A></H2>
+<P>
+Returns a string image of an Region.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Return a string image of the Region.
+
+<P>
+<HR>
+<H2><A NAME="properties_">properties()</A></H2>
+<P>
+Return the hash table of properties from the Region.
+
+<P>
+<HR>
+<H2><A NAME="dimensionExtract_string_dimensio">dimensionExtract(string dimension)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string dimension</A></STRONG>
+<P>
+- The name of the dimension to extract
+
+</UL>
+<P>
+Extracts a value in the indicated dimension from this region. Returns undef
+if the property for that dimension is missing.
+
+<P>
+<HR>
+<H2><A NAME="slice_Region_S_">slice(Region S)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Region">Region S</A></STRONG>
+<P>
+- The region to slice with.
+
+</UL>
+<P>
+Slices a portion from the region, creating a new region.
+
+<P>
+<HR>
+<H2><A NAME="collapse_Region_S_">collapse(Region S)</A></H2>
+<UL>
+<LI><STRONG>Region S</STRONG>
+<P>
+- The region to collapse against.
+
+</UL>
+<P>
+Collapses a region creating a new region.
+
+<P>
+<HR>
+<H2><A NAME="match_Region_S_">match(Region S)</A></H2>
+<UL>
+<LI><STRONG>Region S</STRONG>
+<P>
+- The region to match against.
+
+</UL>
+<P>
+Matches a region, returns a boolean.
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<TITLE>./ModifiedHTML/FormatPS.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#SEE_ALSO">SEE ALSO</A>
+	<LI><A HREF="#COPYRIGHT">COPYRIGHT</A>
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+HTML::FormatPS - Format 
+<FONT SIZE=-1>HTML</FONT> as postscript
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>  require HTML::FormatPS;
+  $html = parse_htmlfile(&quot;test.html&quot;);
+  $formatter = new HTML::FormatPS
+                   FontFamily =&gt; 'Helvetica',
+                   PaperSize  =&gt; 'Letter';
+  print $formatter-&gt;format($html);
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+The HTML::FormatPS is a formatter that outputs PostScript code. Formatting of 
+<FONT SIZE=-1>HTML</FONT> tables and forms is not implemented.
+
+
+<P>
+You might specify the following parameters when constructing the formatter:
+
+<DL>
+<DT><STRONG><A NAME="item_PaperSize">PaperSize</A></STRONG><DD>
+<P>
+What kind of paper should we format for. The value can be one of these: 
+<FONT SIZE=-1>A3,</FONT> 
+<FONT SIZE=-1>A4,</FONT> 
+<FONT SIZE=-1>A5,</FONT> 
+<FONT SIZE=-1>B4,</FONT> 
+<FONT SIZE=-1>B5,</FONT> Letter, Legal, Executive, Tabloid, Statement, Folio, 10x14, Quarto.
+
+
+<P>
+The default is 
+<FONT SIZE=-1>``A4''.</FONT>
+
+<DT><STRONG><A NAME="item_PaperWidth">PaperWidth</A></STRONG><DD>
+<P>
+The width of the paper in points. Setting PaperSize also defines this
+value.
+
+<DT><STRONG><A NAME="item_PaperHeight">PaperHeight</A></STRONG><DD>
+<P>
+The height of the paper in points. Setting PaperSize also defines this
+value.
+
+<DT><STRONG><A NAME="item_LeftMargin">LeftMargin</A></STRONG><DD>
+<P>
+The left margin in points.
+
+<DT><STRONG><A NAME="item_RightMargin">RightMargin</A></STRONG><DD>
+<P>
+The right margin in points.
+
+<DT><STRONG><A NAME="item_HorizontalMargin">HorizontalMargin</A></STRONG><DD>
+<P>
+Both left and right margin at the same time. The default value is 4 cm.
+
+<DT><STRONG><A NAME="item_TopMargin">TopMargin</A></STRONG><DD>
+<P>
+The top margin in points.
+
+<DT><STRONG><A NAME="item_BottomMargin">BottomMargin</A></STRONG><DD>
+<P>
+The bottom margin in points.
+
+<DT><STRONG><A NAME="item_VerticalMargin">VerticalMargin</A></STRONG><DD>
+<P>
+Both top and bottom margin at the same time. The default value is 2 cm.
+
+<DT><STRONG><A NAME="item_PageNo">PageNo</A></STRONG><DD>
+<P>
+The parameter determines if we should put page numbers on the pages. The
+default is yes, so you have to set this value to 0 in order to suppress
+page numbers.
+
+<DT><STRONG><A NAME="item_FontFamily">FontFamily</A></STRONG><DD>
+<P>
+The parameter specifies which family of fonts to use for the formatting.
+Legal values are ``Courier'', ``Helvetica'' and ``Times''. The default is
+``Times''.
+
+<DT><STRONG><A NAME="item_FontScale">FontScale</A></STRONG><DD>
+<P>
+All fontsizes might be scaled by this factor.
+
+<DT><STRONG><A NAME="item_Leading">Leading</A></STRONG><DD>
+<P>
+How much space between lines. This is a factor of the fontsize used for
+that line. Default is 0.1.
+
+</DL>
+<P>
+<HR>
+<H1><A NAME="SEE_ALSO">SEE ALSO</A></H1>
+<P>
+<A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/HTML/Formatter.html">HTML::Formatter</A>
+
+
+
+<P>
+<HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT</A></H1>
+<P>
+Copyright (c) 1995 Gisle Aas. All rights reserved.
+
+<P>
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+<P>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<P>
+Gisle Aas &lt;<A HREF="mailto:aas@oslonett.no">aas@oslonett.no</A>&gt;
+
+</BODY>
+
+</HTML>

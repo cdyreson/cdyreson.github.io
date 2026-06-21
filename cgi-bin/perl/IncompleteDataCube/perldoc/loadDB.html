@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+<TITLE>./loadDB.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#EXAMPLE_USAGE">EXAMPLE USAGE</A>
+	<LI><A HREF="#OPTIONS">OPTIONS</A>
+	<LI><A HREF="#NAME_Main">NAME Main</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+<STRONG>loadDB</STRONG> - Create the SemiS database from a text file specification.
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>  loadDB
+    [-help] |
+    [-version] |
+    [-verbose] 
+    [-databaseName databaseName] 
+    [-databaseMode GDBM | DBM | BSD] 
+    &lt; CompanyDB
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+<STRONG>loadDB</STRONG> reads the text file representation of a semi-structured 
+<FONT SIZE=-1>DB</FONT> and creates the necessary 
+<FONT SIZE=-1>DB.</FONT>
+
+
+<P>
+<HR>
+<H1><A NAME="EXAMPLE_USAGE">EXAMPLE USAGE</A></H1>
+<P>
+Create the specifications.
+
+<P>
+<PRE> perl -I../lib loadDB -verbose CompanyDB 
+</PRE>
+<P>
+See also <A HREF="././SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="OPTIONS">OPTIONS</A></H1>
+<DL>
+<DT><STRONG><A NAME="item__help">-help</A></STRONG><DD>
+<P>
+Display a short help message with a reminder of supported command-line
+options.
+
+<DT><STRONG><A NAME="item__version">-version</A></STRONG><DD>
+<P>
+Display the version of <STRONG>loadDB</STRONG>.
+
+<DT><STRONG><A NAME="item__verbose">-verbose</A></STRONG><DD>
+<P>
+Enable verbose reporting.
+
+<DT><STRONG><A NAME="item__databaseName">-databaseName databaseName</A></STRONG><DD>
+<P>
+The name of the database, overides the default name in <A HREF="./SemiStructuredDB/Constants.html">SemiStructuredDB::Constants</A>.
+
+<DT><STRONG><A NAME="item__databaseMode">-databaseMode databaseMode</A></STRONG><DD>
+<P>
+The mode of the database, overides the default mode in <A HREF="./SemiStructuredDB/Constants.html">SemiStructuredDB::Constants</A>.
+
+</DL>
+<P>
+<HR>
+<H1><A NAME="NAME_Main_Parse_the_text_file_an">NAME Main
+ 
+Parse the text file and create the SemiS DB.
+ 
+=head1 DESCRIPTION
+ 
+This is the parser for the specification file.  It is a top-down
+recursive descent parser.
+ 
+=cut
+ 
+#-----------------------------------------------------------------------
+# Parse the command line
+#-----------------------------------------------------------------------
+  &amp;ParseCommandLine();
+  my $globals = new SemiStructuredDB::Globals();
+  $Global::SSGraph = $globals-&gt;{'SSGraph'};
+  my $parser = new Parser::LoadDB();
+  $parser-&gt;Run();
+  #&amp;dump('&amp;root', '', '');
+  
+  print &quot;alldone!\n&quot; if $VERBOSE;
+  #foreach (keys %Global::Paths) { print &quot;$_\n&quot;; }</A></H1>
+<P>
+#----------------------------------------------------------------------- #
+Dump the paths # No longer works, must fix the Globals
+#-----------------------------------------------------------------------
+sub dump { my ($current,$prefix,$cleanPrefix) = @_; die ``Undefined object
+$current'' unless defined $Global::Values{$current}; die ``Undefined object
+$current'' unless defined $Global::Objects{$current}; my
+<CODE>$values</CODE> = $Global::Values{$current}; my <CODE>$objects</CODE>
+= $Global::Objects{$current}; foreach (@$objects) { my ($edge, $rest) =
+@$_; #print ``$prefix.$current.$edge\n''; if ($current eq '&amp;root') {
+<CODE>&amp;dump</CODE> ($rest, ``$edge'', ``$edge''); } else {
+$Global::Paths{``$cleanPrefix.$edge''} = 1; <CODE>&amp;dump</CODE> ($rest,
+``$prefix.$current.$edge'', ``$cleanPrefix.$edge''); } } foreach (@$values)
+{ my ($edge, $rest) = @$_; $Global::Paths{``$cleanPrefix.$edge''} = 1;
+print ``$prefix.$current.$edge.$rest\n''; }
+
+<P>
+<PRE>  }
+</PRE>
+<P>
+#------------------------------------------------------------------------ # <CODE>ParseCommandLine()</CODE> - handle command line #------------------------------------------------------------------------ sub ParseCommandLine { my <CODE>@switches</CODE> = ( 'databaseMode=s', \$SemiStructuredDB::Constants::databaseMode, 'databaseName=s', \$SemiStructuredDB::Constants::databaseName, 'help', 
+<FONT SIZE=-1>\$HELP,</FONT> 'verbose', 
+<FONT SIZE=-1>\$VERBOSE,</FONT> 'version', 
+<FONT SIZE=-1>\$SHOW_VERSION,</FONT> );
+
+
+<P>
+<PRE>  &amp;GetOptions(@switches) || die &quot;use -help switch to display brief help\n&quot;;
+</PRE>
+<P>
+<PRE>  if ($SHOW_VERSION) {
+    print &quot;This is $COMMAND_NAME, version $VERSION\n&quot;;
+    exit 0;
+    }
+</PRE>
+<P>
+<PRE>  if ($HELP) {
+    print &lt;&lt;HelpEnd;
+    $COMMAND_NAME, v$VERSION - parse the Incomplete Data Cube specifications
+</PRE>
+<P>
+<PRE>    Usage: $COMMAND_NAME 
+                         [-help] |
+                         [-version] |
+                         [-verbose]
+                         [-databaseName databaseName]
+                         [-databaseMode GDBM | DBM | BSD]
+                         &lt; inputFile
+</PRE>
+<P>
+<PRE>        -help            : display this message
+        -verbose         : display verbose information as running
+        -databaseName name : name of the database
+        -databaseMode mode : mode for the database 
+</PRE>
+<P>
+HelpEnd exit 0; }
+
+<P>
+}
+
+</BODY>
+
+</HTML>

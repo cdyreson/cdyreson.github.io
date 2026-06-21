@@ -1,0 +1,67 @@
+:include[macros]
+:arg1[
+(<em>written by M. Tamer &Ouml;zsu, September 2007</em>)
+
+As you should have heard by now (there was a DBWORLD announcement), there 
+is a new Editor-in-Chief (EIC) of <i>ACM Transactions on Database Systems</i>
+(TODS). Z.&nbsp;Meral&nbsp;&Ouml;zsoyo&#287;lu 
+of Case Western Reserve University has replaced 
+Rick Snodgrass as TODS EIC as of September 17, 2007. In this short note, 
+I want to give the SIGMOD community information about the process 
+that was followed. 	 
+
+First let me provide some background. ACM headquarters is organized along 
+a number of directorates; the ones relevant for SIGMOD and TODS are 
+those of SIGs, and publications. For each of these, there are policy 
+boards that establish the policies that headquarters staff follow. 
+SIGMOD organization is on the SIG side and SIGMOD Chair is a member of 
+SIG Governing Board, ACM TODS is on the publications side, as are 
+all ACM publications. Therefore, although SIGMOD is an important 
+stakeholder and for the purposes of distributing ACM Digital Library income 
+is considered the "owner" of TODS, the appointment of TODS EIC is the 
+responsibility of the ACM Publications Board.
+
+The EIC selection process starts by the Publications Board selecting one 
+of its members to oversee the process. The Publications Board member 
+then forms a EIC Nominating Committee and obtains Publications Board 
+approval for the committee. The Nominating Committee then gathers a list 
+of possible candidates for the position, produces a short list, asks 
+for vision statements and other supporting material from the short-listed 
+candidates and makes a recommendation to the Publications Board. 
+The appointment is finalized when the Publications Board approves the 
+recommendation. 
+
+In this years process, I was the Publications Board member charged 
+with setting up the Nominating Committee and coordinating its work. 
+I also chaired the Nominating Committee that additionally included 
+Phil Bernstein (Microsoft Research), Mary Fernandez (AT&T Labs  Research), 
+Phokion Kolaitis (IBM Almaden Research Center), 
+Krithi Ramamritham (IIT Bombay), and Gerhard Weikum 
+(Max-Planc Institute for Informatics). We issued a public call for 
+nominations through DBWORLD, and consulted a phone interview with 
+Rick Snodgrass as out-going EIC, and an in-person interview during 
+SIGMOD/PODS 2007 with Raghu Ramakrishnan as SIGMOD
+Chair. Thus, the relevant stakeholders were consulted.
+
+As a result of these, the Nominating Committee gathered an initial list 
+of ten nominees. After discussions, the Nominating Committee reduced 
+this list to a short list of four. These colleagues were contacted to 
+check their availability and all but one let their names stand. These 
+three nominees were asked to supply statements responding to a set 
+of questions that the Nominating Committee posed as well as their 
+vision for TODS. We were very pleased with the depth and thoughtfulness 
+of these statements; it was clear that all of the nominees had spent 
+considerable time thinking about where TODS is and where they would 
+like it to go. Interestingly, there were overlaps between the 
+statements.
+
+Making the final choice from among three very able colleagues was 
+naturally difficult, but the Nominating Committee decided to recommend 
+Z.&nbsp;Meral&nbsp;&Ouml;zsoyo&#287;lu
+as the next EIC of TODS. The Publications Board 
+approved this recommendation with enthusiasm and appointed Meral to a 
+four year (renewable) term.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[ACM :journalAcronym[] EIC Selection]

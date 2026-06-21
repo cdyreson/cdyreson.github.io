@@ -1,0 +1,188 @@
+:include[macros]
+:arg1[<FONT
+        SIZE="3" face="helvetica">&nbsp;&nbsp;&nbsp;&nbsp;Editor-in-Chief: <a 
+         style="text-decoration:colon[]none"
+         href="http://www.cs.arizona.edu/~rts">Richard T. Snodgrass</a></FONT>
+]
+:macro[EditorInChief]
+:arg1[
+The <em>Transactions on Database Systems</em> (<em>TODS</em>)
+is part of the family of journals produced by the
+<A HREF="http://www.acm.org/">ACM</a>.
+TODS publishes one volume yearly.  
+Each volume is comprised of four issues, which appear in
+March, June, September and December.
+<ul>
+<table summary="TOC">
+ <tr>
+  <td valign=top>
+    <font face="helvetica">
+      <b>For readers</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0">
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign="center" src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Current.html">Current issue</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Upcoming.html">Upcoming issues</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="http://www.acm.org/pubs/contents/journals/tods/">Past issues</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="http://www.acm.org/sigmod/dblp/db/journals/tods/index.html">Past issues (from DBLP)</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Subscription.html">Subscribe to TODS</A>
+        </font>
+      </td></tr>
+%      <tr><td>
+%        <font face="helvetica">
+%        <img valign=center src="across.gif">&nbsp;&nbsp;<A 
+%         style="text-decoration:colon[]none" 
+%         HREF="Forum.html">TODS Forum</A>
+%        </font>
+%      </td></tr>
+    </table><br>
+    <font face="helvetica">
+      <b>Related ACM links</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0">
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="http://www.acm.org/dl/toc.html">All ACM journals</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="http://www.acm.org/dl">ACM Digital Library</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="http://www.acm.org/dl/Search.html">Search ACM Digital Library</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="http:colon[]//acm.org/sigmod/">SIGMOD</A>
+% Special Interest Group on
+%Management of Data<br>
+        </font>
+      </td></tr>
+     </table>
+   </td>
+   <td valign="top">
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   </td>
+   <td valign="top">
+    <font face="helvetica">
+      <b>About TODS</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Charter.html"
+         >Editorial charter and scope</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Editors.html">Editorial board</A>
+        </font>
+      </td></tr>
+    </table>
+    <br>
+    <font face="helvetica">
+      <b>For authors</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Authors.html#ManuscriptPreparation">Manuscript preparation</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Authors.html#SubmissionforEditorialReview">Submission instructions</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="COI.html">Conflict of interest policy</A>
+        </font>
+      </td></tr>
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Authors.html#ProceduresforAcceptedPapers">Procedures for accepted papers</A>
+        </font>
+      </td></tr>
+    </table>
+    <br>
+    <font face="helvetica">
+      <b>For referees</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <font face="helvetica">
+        <img alt="arrow" valign=center src="across.gif">&nbsp;&nbsp;<A 
+         style="text-decoration:colon[]none" 
+         HREF="Referees.html">Referee instructions</A>
+        </font>
+      </td></tr>
+     </table>
+   </td>
+ </tr>
+</table>
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Home Page]

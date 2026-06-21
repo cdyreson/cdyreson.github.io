@@ -1,0 +1,359 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, June 2003</em>)
+
+Reviewers are the unsung heroes of scientific publishing. They are unpaid
+and rarely acknowledged, yet they work hard reading initial drafts of
+papers, many of which will not appear in :journalAcronym[]. I want to 
+highlight their contributions and to publicly thank them for their time 
+and effort.
+
+As discussed in previous columns, :journalAcronym[] goes to great lengths to 
+ensure that reviewers (a) remain anonymous, (b) are sent only submissions 
+that meet submission guidelines and are relevant to their area of expertise, 
+(c) are provided clear guidelines on the review itself and on potential 
+conflicts of interest, (d) are not overloaded with reviews 
+of :journalAcronym[] submissions, (e) are provided a reasonable 
+time (at least two months) to do a review, and (f) are
+informed of the editorial decision, including the author-visible portion of
+reviews. :journalAcronym[] has the notable policy of not expecting more than 
+one formal review in any twelve-month period, though reviewers can elect to 
+do more reviews if they wish (and many in fact do so).
+
+:journalAcronym[] reviewers are the principal guarantors of the high quality and
+technical correctness that readers demand of this scientific journal. Most
+papers that referees review are rejected by :journalAcronym[], though a 
+modified version may appear in another venue. Those that appear in 
+:journalAcronym[] are often reviewed two or three times before they are 
+accepted. In both cases, the reviewers markedly improve the paper, though a 
+close, though anonymous to the authors, dialog.
+
+For some of the papers I've personally handled, and for some papers that
+Associate Editors have told me about, the reviews and the responses to the
+referees from the authors have been truly inspiring, with all parties
+obviously dedicated to configuring a paper that most effectively conveys its
+insights to its readers. When that happens, it is a joy to be part of this
+process. And perhaps more surprisingly, some authors of papers that are
+rejected convey their appreciation for the constructive comments of the
+reviewers.
+
+The community owes the following people a debt of gratitude for their
+responsive and generally quite detailed reviews. These reviewers (for papers
+whose editorial decisions were made between July 2001 through March 2003,
+almost 200 reviewers in all) are true professionals, participating in a
+meaningful way in the scholarly process.
+
+To each, please accept my personal and heartfelt thanks.
+
+<table>
+<tr>
+<td>Ashraf Aboulnaga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Swarup Acharya&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Dimitris Achlioptas</td>
+</tr>
+<tr>
+<td>Charu Aggarwal</td>
+<td>Gustavo Alonso</td>
+<td>Mehmet Altinel</td>
+</tr>
+<tr>
+<td>Walid Aref</td>
+<td>Marcelo Arenas</td>
+<td>Andrea C.&nbsp;Arpaci-Dusseau</td>
+</tr>
+<tr>
+<td>Ricardo Baeza-Yates</td>
+<td>Roberto Bayardo</td>
+<td>Catriel Beeri</td>
+</tr>
+<tr>
+<td>Zohra Bellahsene</td>
+<td>Michael Benedikt</td>
+<td>Stefan Berchtold</td>
+</tr>
+<tr>
+<td>Philip Bernstein</td>
+<td>Caludio Bettini</td>
+<td>Kevin Beyer</td>
+</tr>
+<tr>
+<td>Nicole Bidoit</td>
+<td>Alexandros Biliris</td>
+<td>Jos&eacute; Blakeley</td>
+</tr>
+<tr>
+<td>Michael B&ouml;hlen</td>
+<td>Christian B&ouml;hm</td>
+<td>Alex Borgida</td>
+</tr>
+<tr>
+<td>Tolga Bozkaya</td>
+<td>Thomas Brinkhoff</td>
+<td>Nicolas Bruno</td>
+</tr>
+<tr>
+<td>Diego Calvanese</td>
+<td>Selcuk Candan</td>
+<td>Soumen Chakrabarti</td>
+</tr>
+<tr>
+<td>Ed Chang</td>
+<td>Surajit Chaudhuri</td>
+<td>Sudarshan S.&nbsp;Chawathe</td>
+</tr>
+<tr>
+<td>Chung-Min Chen</td>
+<td>Mitch Cherniak</td>
+<td>Boris Chidlovskii</td>
+</tr>
+<tr>
+<td>Jan Chomicki</td>
+<td>Marek Chroback</td>
+<td>Paolo Ciaccia</td>
+</tr>
+<tr>
+<td>Gregory Cobena</td>
+<td>Christine Collet</td>
+<td>Sara Comai</td>
+</tr>
+<tr>
+<td>Antonio Corradi</td>
+<td>Andrea Corradini</td>
+<td>Stavros Cosmadakis</td>
+</tr>
+<tr>
+<td>Peter Danzig</td>
+<td>Gautam Das</td>
+<td>Prasad Deshpande</td>
+</tr>
+<tr>
+<td>Tharam Dillon</td>
+<td>Curtis E.&nbsp;Dyreson</td>
+<td>Funda Ergun</td>
+</tr>
+<tr>
+<td>Alexandre Evfimievski</td>
+<td>Ron Fagin</td>
+<td>Christos Faloutsos</td>
+</tr>
+<tr>
+<td>Wenfei Fan</td>
+<td>Leonidas Fegaras</td>
+<td>Hakan Ferhatosmanoglu</td>
+</tr>
+<tr>
+<td>Mary Fernandez</td>
+<td>Shashi Gadia</td>
+<td>Venky Ganti</td>
+</tr>
+<tr>
+<td>Johannes Gehrke</td>
+<td>Michael Gertz</td>
+<td>Philip Gibbons</td>
+</tr>
+<tr>
+<td>Aris Gionis</td>
+<td>Jonathan Goldstein</td>
+<td>St&eacute;phane Grumbach</td>
+</tr>
+<tr>
+<td>Giovanna Guerrini</td>
+<td>Dimitrios Gunopulos</td>
+<td>Oliver G&uuml;nther</td>
+</tr>
+<tr>
+<td>Peter Haas</td>
+<td>Joe Hellerstein</td>
+<td>Klaus Hinrichs</td>
+</tr>
+<tr>
+<td>Gisli R.&nbsp;Hjaltason</td>
+<td>Bruce Horowitz</td>
+<td>Piotr Indyk</td>
+</tr>
+<tr>
+<td>Bala Iyer</td>
+<td>Sushil Jajodia</td>
+<td>Matthias Jarke</td>
+</tr>
+<tr>
+<td>Arthur Keller</td>
+<td>Werner Kie&szlig;ling</td>
+<td>Jerry Kiernan</td>
+</tr>
+<tr>
+<td>George Kollios</td>
+<td>Christian Konig</td>
+<td>Flip Korn</td>
+</tr>
+<tr>
+<td>Hank Korth</td>
+<td>Donald Kossmann</td>
+<td>H.&nbsp;V.&nbsp;Jagadish</td>
+</tr>
+<tr>
+<td>Masaru Kitsuregawa</td>
+<td>Nick Koudas</td>
+<td>Alex Labrinidis</td>
+</tr>
+<tr>
+<td>Jintae Lee</td>
+<td>Leonid Libkin</td>
+<td>Stephen W.&nbsp;Liddle</td>
+</tr>
+<tr>
+<td>Tok Wang Ling</td>
+<td>David Lomet</td>
+<td>Bertram Lud&auml;scher</td>
+</tr>
+<tr>
+<td>Qiong Luo</td>
+<td>Emil C.&nbsp;Lupu</td>
+<td>David Maier</td>
+</tr>
+<tr>
+<td>Heikki Mannila</td>
+<td>Ioana Manolescu</td>
+<td>Volker Markl</td>
+</tr>
+<tr>
+<td>Sharad Mehrotra</td>
+<td>Sergey Melnik</td>
+<td>Alberto Mendelzon</td>
+</tr>
+<tr>
+<td>Wai Yin Mok</td>
+<td>Bongki Moon</td>
+<td>Richard Muntz</td>
+</tr>
+<tr>
+<td>Vivek Narasayya</td>
+<td>Mario Nascimento</td>
+<td>Jeffrey Naughton</td>
+</tr>
+<tr>
+<td>Sham Navathe</td>
+<td>Mattis Neiling</td>
+<td>Frank Neven</td>
+</tr>
+<tr>
+<td>Raymond Ng</td>
+<td>Sylvia Osborn</td>
+<td>Gultekin &Ouml;zsoyolu</td>
+</tr>
+<tr>
+<td>Meral &Ouml;zsoyolu</td>
+<td>Shankar Pal</td>
+<td>Yannis Papakonstantinou</td>
+</tr>
+<tr>
+<td>Stefano Paraboschi</td>
+<td>Jignesh M.&nbsp;Patel</td>
+<td>Peter Patel-Schneider</td>
+</tr>
+<tr>
+<td>Alain Pirotte</td>
+<td>Vishy Poosala </td>
+<td>Alexandra Poulovassilis</td>
+</tr>
+<tr>
+<td>Magda Procopiuc</td>
+<td>Octavian Procopiuc</td>
+<td>Sridhar Rajagopalan</td>
+</tr>
+<tr>
+<td>Krithi Ramamritham</td>
+<td>Peter Rathmann</td>
+<td>Rajmohan Rojaraman</td>
+</tr>
+<tr>
+<td>Kenneth Ross</td>
+<td>Pierangela Samarati</td>
+<td>Neal Sample</td>
+</tr>
+<tr>
+<td>Sunita Sarawagi</td>
+<td>Kai-Wue Sattler</td>
+<td>Klaus-Dieter Schewe</td>
+</tr>
+<tr>
+<td>Torsten Schlieder</td>
+<td>Albrecht Schmidt</td>
+<td>Markus Schneider</td>
+</tr>
+<tr>
+<td>Thomas Schwentick</td>
+<td>Bernhard Seeger</td>
+<td>Thomas Seidl</td>
+</tr>
+<tr>
+<td>Ken Sevcik</td>
+<td>Jayavel Shanmugasundaram</td>
+<td>Sujeet Shenoi</td>
+</tr>
+<tr>
+<td>Kuysoek Shim</td>
+<td>Richard Sidle</td>
+<td>Jerome Simeon</td>
+</tr>
+<tr>
+<td>Ambuj Singh</td>
+<td>Veda C.&nbsp;Storey</td>
+<td>Jianwen Su</td>
+</tr>
+<tr>
+<td>V.&nbsp;S.&nbsp;Subrahmanian</td>
+<td>Chengyu Sun</td>
+<td>Katsumi Tanaka</td>
+</tr>
+<tr>
+<td>Jun Tao</td>
+<td>Yufei Tao</td>
+<td>Hannu Toivonen</td>
+</tr>
+<tr>
+<td>David Toman</td>
+<td>Anthony Tomasic</td>
+<td>Riccardo Torlone</td>
+</tr>
+<tr>
+<td>Caetano Traina Jr.</td>
+<td>Vassilis Tsotras</td>
+<td>Jeffrey Ullman</td>
+</tr>
+<tr>
+<td>&Ouml;zg&uuml;r Ulusoy</td>
+<td>Jan Vahrenhold</td>
+<td>Alejandro Vaisman</td>
+</tr>
+<tr>
+<td>Jan Van den Bussche</td>
+<td>Victor Vianu</td>
+<td>Jeff Vitter</td>
+</tr>
+<tr>
+<td>Yair Wand</td>
+<td>Roger Weber</td>
+<td>Janet Wiener</td>
+</tr>
+<tr>
+<td>Jef Wijsen</td>
+<td>William Winsborough</td>
+<td>Peter Wood</td>
+</tr>
+<tr>
+<td>Avishi Wool</td>
+<td>Ting Yu</td>
+<td>Li-Yan Yuan</td>
+</tr>
+<tr>
+<td>Aidong Zhang</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+</table>
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[ACM TODS Reviewers]

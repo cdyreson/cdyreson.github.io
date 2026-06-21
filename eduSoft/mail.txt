@@ -1,0 +1,25 @@
+From nobody@cs.jcu.edu.au Wed May  6 13:58:03 1998
+Received: from cay.cs.jcu.edu.au (cay.cs.jcu.edu.au [137.219.47.18])
+	by atoll.cs.jcu.edu.au (8.8.6/8.8.6) with ESMTP id NAA16352
+	for <curtis@cs.jcu.edu.au>; Wed, 6 May 1998 13:58:02 +1000 (EST)
+From: uid no body <nobody@cs.jcu.edu.au>
+Received: (from nobody@localhost)
+	by cay.cs.jcu.edu.au (8.8.8/8.8.8) id NAA21457
+	for curtis; Wed, 6 May 1998 13:58:04 +1000 (EST)
+Date: Wed, 6 May 1998 13:58:04 +1000 (EST)
+Message-Id: <199805060358.NAA21457@cay.cs.jcu.edu.au>
+To: curtis@cs.jcu.edu.au
+Subject: Marks on Wed May  6 13:58:04 1998
+Content-Length: 390
+Status: O
+
+(basedirectory) /dev/null
+(kind) <text> <text> <text> <numeric> <numeric>
+(alignment) <left> <left> <left> <right> <right>
+(display) <10> <10> <10> <10> <10>
+(weight) <none> <none> <none> <10> <20>
+(maxscore) <none> <none> <none> <100> <50>
+(schema) <login> <First Name> <Last Name> <Assignment 1> <Quiz 1>
+(tuple) <coe-xxxx> <Jane> <Doe> <96> <44>
+(tuple) <sci-xxx> <John> <Doe> <80> <33>
+

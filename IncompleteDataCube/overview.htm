@@ -1,0 +1,282 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>An Incomplete Data Cube - Overview</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#DEFEDE" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/cube.gif" 
+                  alt="cube logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#DEFEDE">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#DEFEDE">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#DEFEDE"> 
+              <big>An Incomplete Data Cube - Overview</big>
+              <br>
+              <font color="#800000" size="2">
+              A Data Cube Tool for Missing Data
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#DEFEDE">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/index.htm">
+              Cube Home&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              Overview&nbsp;&nbsp;&nbsp;
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/publications.htm">
+              Publications
+             </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/code.htm">
+              Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#DEFEDE">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#DEFEDE">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+Data cubes are a relatively recent, and popular phenomenon.
+A brief description of a data cube is that it is a multidimensional 
+hierarchy of aggregate values.
+Values higher in the hierarchy are further aggregations of those lower in
+the hierarchy.
+The utility of the hierarchical organisation is that the user can easily
+navigate between high and low precision views of the same aggregate
+data.
+The hierarchical organisation supports <i>drill-down</i>,
+an operation that increases the precision of the aggregate
+data being viewed, and 
+<i>roll-up</i>,
+which decreases that precision.
+For instance, suppose that a store manager is using a data cube to look
+at monthly sales 
+for shoes and notices that sales in January were low.
+To analyse the poor sales the manager might drill-down to 
+look at monthly sales by type of shoe or she might roll-up to look at sales
+for all product types combined.
+Several vendors already have cube products on the market, either as 
+add-ons to existing databases or as stand-alone tools,
+and a ``cube'' operator has been proposed for inclusion in 
+future SQL standards.
+<P>
+An <i>incomplete</i> data cube is also a multidimensional hierarchy of
+aggregate values.  But in an incomplete data cube regions of the hierarchy,
+and the source data from which those regions are derived, 
+are missing.  For example, a data cube administrator may decide that
+hourly sales data from two years ago is no longer needed, daily 
+sales data will suffice.  The administrator can remove 
+the aged, hourly data from the cube.
+The missing region makes the data cube incomplete and some queries 
+(e.g., what are the hourly sales figures over the lifetime of the enterprise)
+can no longer be satisfied.
+Incomplete cubes have mechanisms for handling
+queries in the missing regions, such as
+suggesting alternative, complete queries and computing partial results.
+<P>
+In terms of storage, an incomplete cube has the same desirable behaviour
+as <i>lazy</i> and <i>semi-eager</i> cubes.
+Each materialises only part of what would be stored in 
+an eager cube; the incomplete or unmaterialised portions incur no 
+storage cost.  For example, assume that a regional sales officer wants
+aggregate data for sales at stores in her region
+for every hour in 1995, but
+for stores in other regions, aggregate data for each day will suffice.
+In an <i>eager</i> cube an aggregate value for every
+combination of store and hour must be stored resulting in 
+a much larger cube than needed.
+In contrast, an incomplete cube 
+only stores the relatively small amount
+of data specified as needed, the hourly data for the other stores 
+forms an incomplete region.
+Incomplete, lazy, and semi-eager cubes also scale well, 
+new dimensions can be added to the cube and existing dimensions can 
+increase in size (i.e., a more precise measure can be added to the dimension)
+with no adjustment to the existing cube storage.
+The resulting cube is merely incomplete in the new dimension, and can 
+be populated as needed later.
+<P>
+But in one important respect an incomplete data cube is like an 
+eager data cube, and unlike a lazy or semi-eager cube.
+Eager and incomplete cubes do not need the source data from which 
+aggregate values in the cube are derived.
+Both lazy and semi-eager cubes presume that the source data is 
+still available,
+so that an aggregate value which is not stored in the cube can be
+computed when needed.  
+Both strategies <i>tightly couple</i> the cube to a 
+data source.
+Eager and incomplete cubes, on the other hand, <i>uncouple</i>
+the cube from the source data.
+<P>
+In general, an incomplete cube is useful in situations where a 
+complete, eager cube would be unnecessarily large, but where a lazy 
+or semi-eager cube cannot be used because the source data is not 
+available or expensive to query.
+We conjecture that an incomplete data cube would
+be useful in the following scenarios, among others.
+<UL>
+<LI> One reason that data cubes are popular is that
+many data collections are characterised by the
+property that as data in the collection ages, each datum individually
+becomes less relevant, but remains relevant in aggregate.
+For such data collections, a data cube can be used to store
+the aggregated historical data, allowing the original data to be
+archived or deleted and resulting in considerable savings in space.
+<LI> A data cube is used to summarise data from a log file or
+flat file.
+For example, suppose that a data cube is used to store aggregate data
+from a log file of sales transactions rather than a sales relation. 
+To search a large log file and retrieve data during query evaluation 
+imposes a heavy burden on system resources, so the data cube's administrator
+decides to use an incomplete data cube and package requests for more 
+data in an overnight cron job.
+<LI> Aggregate data is broadcast on a network by various sites.
+The aggregate data from external sites is collected and inserted into
+a cube at each site, but the source data is not shipped across the
+network for a number of reasons (privacy, cost of broadcasting and
+duplicating the source data at each site, etc.).
+<LI> The cube contains regions of secret data and the authorisation to 
+view the secret data varies from user to user, that is, some users can 
+see all of the data, others only a portion, still others a different 
+portion, etc.
+In an incomplete cube, it is easy to 
+create a different, incomplete view of the same complete cube for 
+each class of authorised user.
+The data can be kept secret by hiding it in an incomplete region.  
+</UL> 
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>
+     &copy; 1995-2001. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#DEFEDE">&nbsp;</td>
+    <td colspan=2 bgColor="#DEFEDE" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

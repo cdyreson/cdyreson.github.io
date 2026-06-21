@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<TITLE>./OODatabase/Persistent.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Persistent">NAME Persistent</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#value_">value()</A>
+		<LI><A HREF="#swizzle_string_b_integer_index_">swizzle(string b, integer index)</A>
+		<LI><A HREF="#fromBytes_string_b_">fromBytes(string b)</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Persistent">NAME Persistent</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Routines to make an object persistent. All that has to happen is to keep
+the 'local' instance values in a 'value' field. Then this class will make
+the resulting object persistent.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="value_">value()</A></H2>
+<P>
+Return the value.
+
+<P>
+<HR>
+<H2><A NAME="swizzle_string_b_integer_index_">swizzle(string b, integer index)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_b">b</A></STRONG>
+<P>
+- The string to convert from
+
+<LI><STRONG><A NAME="item_index">index</A></STRONG>
+<P>
+- The swizzle index
+
+</UL>
+<P>
+Swizzle a stored value
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_string_b_">fromBytes(string b)</A></H2>
+<UL>
+<LI><STRONG>b</STRONG>
+<P>
+- The string to convert from.
+
+</UL>
+<P>
+Construct a new object from a byte image.
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Generate a byte image of this object
+
+</BODY>
+
+</HTML>

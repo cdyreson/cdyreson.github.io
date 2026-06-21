@@ -1,0 +1,18 @@
+<doc>
+    <book>x
+        <title>ti100</title>
+        <author name="jasdf">ne1</author>
+        <author name="fred">ne5</author>
+        <publisher>pub0</publisher>
+        <publisher>pub2</publisher>
+    </book>
+    <book>y
+        <title>ti99</title>
+        <author name="joe">ne1</author>
+        <publisher>pub19</publisher>
+    </book>
+    <book>
+        <title>ti1</title>
+        <publisher>pub1</publisher>
+    </book>
+</doc>

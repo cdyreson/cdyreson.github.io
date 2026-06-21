@@ -1,0 +1,83 @@
+#!/usr/local/bin/perl
+#=======================START OF CONFIGURATION=========================
+# What kind of directory slash?
+# unix
+$SLASH = '/';
+# windows/dos
+#$SLASH = '\\';
+
+# Set the following line to where your perl lives and put in flags so that
+# in can include the Bdbm.pm and CGI.pm packages
+# NOTE THIS MUST BE PERL VERSION 5.0 or above.
+$PERL = '#!/net/local/bin/perl -I/net/zeus/facstaff/cdyreson/public_html/cgi-bin/perl/pm';
+ 
+# Set the following line to where the quiz scripts will live
+$ROOT = "http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/QuizMaker";
+ 
+# Set the following line to where the mailto feature on HTML titles should
+# send mail (you can ignore this as it is unsupported anyways)
+$MAILTO = 'cdyreson@eecs.wsu.edu.au';
+ 
+# Where will the cgi-bin scripts live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the scripts that are located in this directory (for scripts marker, 
+# poster, reviewer, entry, starter, regrader, and stats) so make sure to
+# put all the quiz cgi-bin scripts in their own directory.
+$SCRIPTDIR = '/net/zeus/facstaff/cdyreson/public_html/cgi-bin/perl/QuizMaker';
+#$SCRIPTDIR = "cgi-bin";
+ 
+# What extension do you want the cgi-bin scripts to have?
+$SCRIPTEXTENSION = ".pl";
+
+# Where will QuizMaker live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the script QuizMaker that is located in this directory (which should be OK)
+$QUIZMAKERDIR = '/net/zeus/facstaff/cdyreson/bin/perl';
+ 
+# Absolute path - this is the place where the data files are written
+$ABSOLUTEPATH = '/net/zeus/facstaff/cdyreson/prweb/QuizMaker';
+
+# chmod and chgrp to set the protections appropriately
+$CHMOD= 'chmod a+rx';
+$CHGRP = '';
+#=======================END OF CONFIGURATION=========================
+
+configure("marker.proto", "$SCRIPTDIR/marker$SCRIPTEXTENSION");
+configure("poster.proto", "$SCRIPTDIR/poster$SCRIPTEXTENSION");
+configure("reviewer.proto", "$SCRIPTDIR/reviewer$SCRIPTEXTENSION");
+configure("starter.proto", "$SCRIPTDIR/starter$SCRIPTEXTENSION");
+configure("entry.proto", "$SCRIPTDIR/entry$SCRIPTEXTENSION");
+configure("stats.proto", "$SCRIPTDIR/stats$SCRIPTEXTENSION");
+configure("regrader.proto", "$SCRIPTDIR/regrader$SCRIPTEXTENSION");
+configure("MyDB.pm", "$SCRIPTDIR/MyDB.pm");
+configure("QuizMaker.proto", "$QUIZMAKERDIR/QuizMaker");
+configure("QuizMailer.proto", "$QUIZMAKERDIR/QuizMailer");
+
+print "\n\nI'm ALL DONE!!!!!\n";
+print "But you should please check for any errors above!\n";
+
+sub configure {
+  local ($filein, $fileout) = @_;
+
+  print "reading $filein\n";
+  open(PROTO, "<$filein") || die "no $filein\n";
+  
+  # slurp input 
+  @lines = <PROTO>;
+  close(PROTO);
+  $text = join("",@lines);
+  $text =~ s/&&&SLASH&&&/$SLASH/g;
+  $text =~ s/&&&PERL&&&/$PERL/g;
+  $text =~ s/&&&ROOT&&&/$ROOT/g;
+  $text =~ s/&&&MAILTO&&&/$MAILTO/g;
+  $text =~ s/&&&EXTENSION&&&/$SCRIPTEXTENSION/g;
+  $text =~ s/&&&ABSOLUTEPATH&&&/$ABSOLUTEPATH/g;
+
+  open(OUT, ">$fileout") || die "can't open $fileout\n";
+  print "creating $fileout\n";
+  print OUT $text;
+  close(OUT);
+
+  if ($CHMOD) {system("$CHMOD $fileout");}
+  if ($CHGRP) {system("$CHGRP $fileout");}
+}

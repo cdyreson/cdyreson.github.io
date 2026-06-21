@@ -1,0 +1,152 @@
+:arg1[
+<html>
+<head>
+<title>:journalTitle[] - ARG</title>
+</head>
+<body>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+  <td align=right valign=bottom rowspan=2><A 
+  HREF="/"><IMG SRC="http://www.acm.org/images/logo_gold.gif" 
+  ALT="ACM logo" BORDER="0"></A></TD><TD colspan=2 align=left><A 
+  HREF="/"><IMG SRC="http://www.acm.org/images/home-gold_p.gif" 
+  ALT="Home" BORDER="0" name="home"></A><A 
+  HREF="/feedback/"><IMG SRC="http://www.acm.org/images/feed-gold_p.gif" 
+  ALT="Feedback" BORDER="0" name="feedback"></A><A 
+  HREF="/catalog/join.html"><IMG 
+  SRC="http://www.acm.org/images/join.gif" ALT="Join" 
+  BORDER="0" name="join"></A><A 
+  HREF="/catalog/homepage.html"><IMG 
+  SRC="http://www.acm.org/images/shop.gif" ALT="Shop" 
+  BORDER="0" name="shop"></A><A HREF="/search/"><IMG 
+  SRC="http://www.acm.org/images/search.gif" ALT="Search" 
+  BORDER="0" name="search"></A></TD></TR><TR><TD 
+  valign=bottom align=left><IMG 
+  SRC="http://www.acm.org/pubs/images/pubhed.gif" ALT="Publications" 
+  BORDER="0"></td><td align=right valign=bottom><IMG SRC="newlogo5.jpg" 
+  ALT="Publications" BORDER="0"></td></tr><tr><td 
+%<td 
+%        height=35 bgcolor="#818181">&nbsp;</td><td 
+%        bgcolor="#D0D0D0"
+        height=35
+        colspan=2
+        bgcolor="#D0D0D0"
+        align="left"><FONT SIZE="5" face="helvetica" 
+        "arial">&nbsp;&nbsp;&nbsp;&nbsp;ARG</font></td><td align=right bgcolor="#D0D0D0"><FONT 
+        SIZE="3" face="helvetica" 
+        "arial">&nbsp;&nbsp;&nbsp;&nbsp;Editor-in-Chief: <a style="text-decoration:colon[]none" 
+        href="http://www.cs.arizona.edu/~rts">Richard T. Snodgrass</a>
+        </FONT></td></tr><tr valign=top><td width=80 align=center valign=top bgcolor="#818181">
+%%      <br>
+%%      <div align="center">
+%%      <address>
+%%        <br>
+%%        <small>Questions,</small><br>
+%%        <small>comments to</small><br>
+%%        <small>:mailtowebmaster[]</small><br>
+%%        &nbsp;<br>
+%%%       Updated: :todaysDate[]
+%%      </address>
+%%      </div>
+%       <tr><td>
+%         <font size="-1" face="helvetica" "arial">
+%         <img valign=center src="b.gif">&nbsp;&nbsp;<A
+%          style="text-decoration:colon[]none"
+%          HREF="Authors.html">Author info</A>
+%         </font>
+%       </td></tr>
+%       <tr><td></td></tr>
+%       <tr><td></td></tr>
+%       <tr><td>&nbsp;</td></tr>
+     <table cellspacing="1" border="0" cellpadding="1">
+       <tr>
+         <td bgcolor="#818181">
+           <font size="1" face="helvetica" "arial">&nbsp;</font>
+         </td>
+         <td bgcolor="#818181">
+           <font size="1" face="helvetica" "arial">&nbsp;</font>
+         </td>
+       </tr>  
+       <tr><td colspan=2 bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="index.html">Home</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor="#818181" align=top>
+         <font size="1" face="helvetica" color="#FFFFFF"
+           "arial">Articles</font>
+       </td></tr>
+       <tr><td bgcolor="#818181">
+         <font size="1" face="helvetica" "arial">&nbsp;
+         </font>
+         </td><td bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="Current.html">Current</A>
+         </font>
+       </td></tr>
+       <tr><td bgcolor="#818181">
+         <font size="1" face="helvetica" "arial">&nbsp;
+         </font>
+         </td><td bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="Upcoming.html">Upcoming</A>
+         </font>
+       </td></tr>
+       <tr><td bgcolor="#818181">
+         <font size="1" face="helvetica" "arial">&nbsp;
+         </font>
+         </td><td bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+         HREF="http://www.acm.org/pubs/contents/journals/tods/">Past</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="Authors.html">Author&nbsp;info</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="Editors.html">Editoral&nbsp;board</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="Charter.html">Charter</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor="#D0D0D0">
+         <font size="1" face="helvetica" "arial"><A
+          style="text-decoration:colon[]none"
+          HREF="Subscription.html">Subscribe</A>
+         </font>
+       </td></tr>
+     </table>
+    </td>
+    <td valign="top" colspan=2>
+      <table>
+        <tr><td> 
+          &nbsp;&nbsp;
+        </td><td> 
+          :pageContent[]
+        </td></tr> 
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height=35 bgcolor="#818181">&nbsp;</td><td 
+    align=right colspan=2 bgcolor="#D0D0D0"><FONT SIZE="2" 
+    face="helvetica" "arial"><i>E-mail questions or comments to</i>
+    :mailtowebmaster[].</td>
+  </tr>
+</table>
+</body>
+</html>
+]
+:macro[pageHeader]

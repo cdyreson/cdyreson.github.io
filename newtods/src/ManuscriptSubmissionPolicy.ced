@@ -1,0 +1,60 @@
+:include[macros]
+:arg1[
+<b>Adopted May 7, 2005</b>
+
+There are currently three ways to submit a paper to :journalAcronym[].
+
+<ul>
+<li> Submission by uploading a PostScript or PDF file is the preferred
+method.  To submit a paper, please use the
+<a href="http://acm.manuscriptcentral.com">file upload submission process</a>.
+</li>
+<li> One acceptable form of electronic submission is by posting the 
+paper first at the 
+<A HREF="http://www.acm.org/corr">Computing Research
+Repository (CoRR)</A> and subsequently sending the archive identifier
+by email to :mailtoEIC[].
+Please read <a href="SubmitByCoRR.html">the page of CoRR submissions</a>
+for more information.
+</li>
+<li> To submit by postal mail, five paper copies of the manuscript 
+intended for publication and a single, submittal letter signed by the author, 
+should be sent to the Editor-in-Chief at the following address.
+<ul>
+Richard T. Snodgrass
+<br>TODS Editor-in-Chief
+<br>Department of Computer Science
+<BR>University of Arizona
+<BR>P.O. Box 210077
+<BR>Tucson, AZ 85721-0077
+<BR>Tel: (520) 621-6370
+<BR>FAX: (520) 621-4246
+</ul>
+When appropriate, the paper should be accompanied by a customs 
+declaration reading "educational material - no commercial value."
+If a street address is needed for delivery, please use (in addition
+to the above address) "711 Gould Simpson Building, Fourth Street."
+</li>
+</ul>
+
+Given the good facilities of ManuscriptCentral for monitoring and
+logging interactions on submitted manuscripts, the option of postal
+submission has been removed, as has the option of using CORR. 
+All :journalAcronym[]
+submissions must now go through ManuscriptCentral.
+
+The submission instructions will be changed to the following.
+
+To submit a paper, please use the 
+<a href="http://acm.manuscriptcentral.com">file upload submission process</a>.
+PDF or postscript are the preferred formats.
+
+Before submitting their manuscript, authors should examine 
+<a href="http://www.acm.org/tods/Authors.html#PriorPublicationPolicy">the 
+Prior Publication Policy</a>
+to ensure that their manuscript adheres to
+both the novelty and disclosure requirements.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Manuscript Submission Policy]

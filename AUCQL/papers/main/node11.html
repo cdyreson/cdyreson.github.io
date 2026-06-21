@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Path Match </TITLE>
+<META NAME="description" CONTENT="Path Match ">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html159"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html157"
+ HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html151"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html160"
+ HREF="node12.html">Backwards Compatibility</A>
+<B> Up:</B> <A NAME="tex2html158"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Previous:</B> <A NAME="tex2html152"
+ HREF="node10.html">Path Validity</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00032200000000000000">&#160;</A>
+<A NAME="sec:pathMatch">&#160;</A>
+<BR>
+Path <I>Match</I> 
+</H3>
+In this section, we first provide a means of determining whether a user-given
+<EM>descriptor</EM>, specified in a query, matches a label.  
+The label matching operation is then incorporated into 
+an <I>Match</I> operation to match a path regular expression 
+to paths in the semistructure.
+
+<P>
+Label matching in existing semistructured query languages is
+straightforward.  The descriptor is typically a single word or phrase
+that is compared, using string comparison, to the label.  For
+example, in the regular expression <TT>(person | employee).name?</TT>,
+the descriptors, the basic building blocks of the regular expression,
+are <TT>person</TT>, <TT>employee</TT>, and <TT>name</TT>.  During evaluation
+of this expression, the descriptor <TT>person</TT> would only match a
+label <TT>person</TT> on an edge.  More flexible string comparisons
+between descriptors and labels are supported in some languages, such
+as Lorel&nbsp;[<A
+ HREF="node25.html#ABITEBOUL97">3</A>], which reuse the wildcard operator `<TT>%</TT>'
+from SQL. 
+The descriptor <TT>per%</TT> would match any label that
+starts with `per'.
+
+<P>
+The semantics of label matching is more involved in our model
+since each label is a set of properties.  In addition, string comparison
+is insufficient because many properties are not strings.
+These complications are addressed in the label match operation
+<I>LaMa</I> , defined below.  In general, operation <I>LaMa</I> 
+succeeds if every individual property in the descriptor has a match in
+the label or is missing from the label.  Extra properties in the label
+are ignored,
+and different 
+<!-- MATH: ${\it PrMa\/}\xspace_p$ -->
+<IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="${\it PrMa\/}\xspace_p$">
+operations are used for different
+properties, <I>p</I>.  Note that the descriptor is a label in the operator
+definition.
+
+<P>
+There are three cases to consider.  (1)&nbsp;A <EM>  required</EM> property in one label is <EM>missing</EM> from the other
+label.  In this case, the match does not succeed.  A required property
+must be present in both labels.  (2)&nbsp;A non-required property in one
+label is <EM>missing</EM> from the other label.  In this case, the
+match succeeds because missing properties are treated as don't care
+information.  (3)&nbsp;The property is present in both labels.  The
+predicate, 
+<!-- MATH: ${{\it PrMa\/}\xspace}_p$ -->
+<IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="${\it PrMa\/}\xspace_p$">
+specific to the property is used to
+determine if the property values match.  Required and non-required
+properties are treated the same.
+
+<P>
+[
+<!-- MATH: ${{\it LaMa\/}\xspace}_{\Gamma}:
+{\it LABEL} \times {\it LABEL} \rightarrow {\it BOOL}$ -->
+<IMG
+ WIDTH="264" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="${{\it LaMa\/}\xspace}_{\Gamma}:
+{\it LABEL} \times {\it LABEL} \rightarrow {\it BOOL}$">]
+
+<P>
+Label <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">
+is matched against label <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.gif"
+ ALT="${\cal S}$">
+as follows.
+<I>LaMa</I>  depends on the semantics of the properties
+as specified in <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">,
+since properties in the labels are
+individually matched.
+<PRE><TT>
+		<IMG
+ WIDTH="123" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="${\it LaMa\/}\xspace_{\Gamma}({\cal L},~{\cal S}) \stackrel{\scriptstyle \triangle}{=}~$">
+<BR>				<IMG
+ WIDTH="347" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\forall p, x [ (p{\rm !}~x) \in {\cal L} \Rightarrow \exists y [(p{\rm :}~y) \in {\cal S} \wedge {\it PrMa\/}\xspace_p(x, y)]]~\land$">
+<BR>				<IMG
+ WIDTH="347" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\forall p, y [ (p{\rm !}~y) \in {\cal S} \Rightarrow \exists x [(p{\rm :}~x) \in {\cal L} \wedge {\it PrMa\/}\xspace_p(x, y)]]~\land$">
+<BR>				<IMG
+ WIDTH="321" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\forall p, x, y [ (p{\rm :}~x) \in {\cal L} \wedge (p{\rm :}~y) \in {\cal S} \Rightarrow {\it PrMa\/}\xspace_p(x, y)]$">`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P>
+
+<P></P>
+
+<P>
+The property-specific predicate 
+<!-- MATH: ${{\it PrMa\/}\xspace}_p$ -->
+<IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="${\it PrMa\/}\xspace_p$">
+matches two 
+property values.
+For example, equality may
+be used for <B>name</B>, and time interval overlaps may be used for
+<B>transaction time</B>.  
+See Table&nbsp;<A HREF="node8.html#tab:propertyOps">1</A>.
+
+<P>
+label that follows requires a movie description.
+<PRE><TT>
+		 <IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="${\cal L}_{\it movie\/}$">
+:=&nbsp;{(<B>name!</B> movie)}
+</TT></PRE>In Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A>, 
+there are two labels with a <TT>movie</TT> name property.
+One describes <TT>&amp;Color of Night</TT>; the other,
+<TT>&amp;Star Wars IV</TT>.
+<PRE><TT>
+		 <IMG
+ WIDTH="20" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="${\cal S}_{\it c\/}$">
+:=&nbsp;  {(<B>name:</B> movie), (<B>security!</B> over 18)}
+<BR>		 <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="${\cal S}_{\it w\/}$">
+:=&nbsp;  {(<B>name:</B> movie), (<B>trans. time:</B> [31/Jul/1998 - uc])}
+</TT></PRE>These labels are matched as follows.
+<UL>
+<LI>
+<!-- MATH: ${\it LaMa\/}\xspace_{\Gamma}({\cal L}_{\it movie\/},~{\cal S}_{\it c\/})
+= {\it False\/}$ -->
+<IMG
+ WIDTH="197" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="${\it LaMa\/}\xspace_{\Gamma}({\cal L}_{\it movie\/},~{\cal S}_{\it c\/})
+= {\it False\/}$">;
+the required <B>security</B>, over 18, is missing from
+
+<!-- MATH: ${\cal L}_{\it movie\/}$ -->
+<IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="${\cal L}_{\it movie\/}$">.
+<LI>
+<!-- MATH: ${\it LaMa\/}\xspace_{\Gamma}({\cal L}_{\it movie\/},~{\cal S}_{\it w\/})
+= {\it True\/}$ -->
+<IMG
+ WIDTH="198" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="${\it LaMa\/}\xspace_{\Gamma}({\cal L}_{\it movie\/},~{\cal S}_{\it w\/})
+= {\it True\/}$">;
+the extra <B>transaction time</B> property in 
+
+<!-- MATH: ${\cal S}_{\it w\/}$ -->
+<IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="${\cal S}_{\it w\/}$">
+is ignored.&nbsp;
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</UL>
+<P></P>
+
+<P>
+Operation <I>LaMa</I>  is the basis for interpreting regular
+expressions of descriptors.  Generally, these regular expressions
+are interpreted exactly as in other semistructured query languages,
+and the usual regular expression operations (+, *, ?, |, and .&nbsp;for 
+sequencing) have their usual meaning.
+The only essential difference between our language and standard
+semistructured query languages is that the matched path is checked to
+ensure that it is valid.
+The following operation extends a set of paths in a semistructure, if
+the sequence of labels on an extended path matches the regular
+expression and the entire path is valid.
+
+<P>
+[
+<!-- MATH: ${\it Match\/}\xspace_{\it DB}:
+2^{\it PATHS} \times {\it REG} \rightarrow 2^{\it PATHS}$ -->
+<IMG
+ WIDTH="268" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="${\it Match\/}\xspace_{\it DB}:
+2^{\it PATHS} \times {\it REG} \rightarrow 2^{\it PATHS}$">]
+
+<P>
+Let <I>S</I> be a set of starting paths (typically the roots of the
+semistructure) and <I>X</I> be a regular expression
+over an alphabet of (extended) labels. Then <I>X</I> is said to 
+match a path in 
+<!-- MATH: ${\it DB\/} = (V,~E,~{\it\&root},~\Gamma)$ -->
+<IMG
+ WIDTH="168" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="${\it DB\/} = (V,~E,~{\it\&root},~\Gamma)$">
+by
+extending a path in <I>S</I> as follows.
+<PRE><TT>
+		<IMG
+ WIDTH="355" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="${\it Match\/}\xspace_{\it DB}(S,~X) \stackrel{\scriptstyle \triangle}{=} \{ x ~\vert~x \in M(S, X) ~\wedge~ {\it Valid\/}\xspace_{\Gamma}(x) \}$">,
+<BR>
+where the matcher, <I>M</I>, is defined as follows.
+<BR>		<IMG
+ WIDTH="244" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$M(S, {\cal L}) = \{ v_1~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_{m}}}~v_{m+1} ~\vert~$">
+<BR>						<IMG
+ WIDTH="182" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$v_1~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_{m - 1}}}~v_m \in S~\land$">
+<BR>						<IMG
+ WIDTH="261" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$v_{m}~{\mathop{\longrightarrow}\limits^{{\cal L}_{m}}}~v_{m+1} \in {\it E}~\land~ {\it LaMa\/}\xspace_{\Gamma}({\cal L}, {\cal L}_{m}) \}$">
+<BR>		<I>M</I>(<I>S</I>, <I>X</I>.<I>Y</I>) = <I>M</I>(<I>M</I>(<I>S</I>, <I>X</I>), <I>Y</I>)
+<BR>		<IMG
+ WIDTH="203" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$M(S, X*) = S~\cup~M(S, X+)$">
+<BR>		<I>M</I>(<I>S</I>, <I>X</I>+) = <I>M</I>(<I>S</I>, <I>X</I>.<I>X</I>*)
+<BR>		<IMG
+ WIDTH="173" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$M(S, X?) = S~\cup~M(X)$">
+<BR>		<IMG
+ WIDTH="248" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$M(S, X \vert Y) = M(S, X)~\cup~M(S, Y)$">`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>the definition, the matcher <I>M</I> extends a path in <I>S</I> by
+recursively decomposing a path regular expression (the expression
+unifies with the second argument).  The matcher extends a standard
+semistructured database matcher to use 
+<!-- MATH: ${\it LaMa\/}\xspace_\Gamma$ -->
+<IMG
+ WIDTH="53" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="${\it LaMa\/}\xspace_\Gamma$">
+to match
+individual labels, as discussed above.
+
+<P>
+We note that the presence of cycles in the semistructure can lead to
+an infinite result set, just like matching in any semistructured query
+language.  Consequently, when this operation is implemented, some
+strategy must be adopted to either break cycles (e.g., node marking is
+used for Lorel) or otherwise generate a finite result sets (e.g., stop
+after the first <I>N</I> matches).  Which strategy to use is a decision
+best left to a language designer; AUCQL uses node marking to break
+cycles.
+
+<P>
+The cost of <I>Match</I> is essentially the same as path matching in a
+normal semistructured database: at worst the entire semistructure is
+explored.  The path validity can be computed as each path is explored,
+although it costs an extra factor of 
+<!-- MATH: ${\cal O}(m)$ -->
+<IMG
+ WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="${\cal O}(m)$">,
+where <I>m</I> is
+the number of properties in a label.  
+
+<!-- MATH: ${\it LaMa\/}\xspace$ -->
+<IMG
+ WIDTH="44" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.gif"
+ ALT="${\it LaMa\/}\xspace$">
+is also an 
+<!-- MATH: ${\cal O}(m)$ -->
+<IMG
+ WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="${\cal O}(m)$">
+operation, assuming
+that the properties in a label are sorted or hashed.  So overall, the
+cost of matching in our framework grows by a factor of the size of
+each label.
+
+<P>
+Sometimes only the set of final nodes in a set of paths is desired.
+
+<P>
+[
+<!-- MATH: ${\it Nodes\/}\xspace:
+2^{\it PATHS} \rightarrow 2^{\it NODES}$ -->
+<IMG
+ WIDTH="192" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.gif"
+ ALT="${\it Nodes\/}\xspace:
+2^{\it PATHS} \rightarrow 2^{\it NODES}$">]
+
+<P>
+Let <I>P</I> be a set of paths.
+<PRE><TT>
+		<IMG
+ WIDTH="272" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="${\it Nodes\/}\xspace(P) \stackrel{\scriptstyle \triangle}{=}\{ w ~\vert~ v~{\ma...
+...s^{{\cal L}_1}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_m}}~w\in P \}$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P></P>
+
+<P>
+<BR>
+
+<P>
+<A NAME="example:emp1">&#160;</A>A user is interested in retrieving information about movie stars
+as of 31/Jul/1998.
+That set of nodes can be obtained as follows.
+<PRE><TT>
+		 <IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="${\cal L}_{\it movie\/}$">
+:=&nbsp;  {(<B>name!</B> movie),
+<BR>				(<B>trans. time:</B> [31/Jul/1998 - 31/Jul/1998])}
+<BR>		 <IMG
+ WIDTH="44" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="${\cal L}_{\it stars\/}$">
+:=&nbsp;  {(<B>name!</B> stars), <BR>				(<B>trans. time:</B> [31/Jul/1998 - 31/Jul/1998])}
+<BR>		 <IMG
+ WIDTH="47" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="${\cal L}_{\it name\/}$">
+:=&nbsp;  {(<B>name!</B> name), <BR>				(<B>trans. time:</B> [31/Jul/1998 - 31/Jul/1998])}
+<BR>		 <IMG
+ WIDTH="340" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="${\it Nodes\/}\xspace({\it Match\/}\xspace_{\it DB}({\it ROOTS\/}, ~{\cal L}_{\it movie\/}.{\cal L}_{\it stars\/}.{\cal L}_{\it name\/}))$">
+</TT></PRE>
+<P>
+Recall that <EM>ROOTS</EM> is the set of edges from 
+<!-- MATH: $\mathit{\&root}$ -->
+<IMG
+ WIDTH="44" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.gif"
+ ALT="$\mathit{\&root}$">to roots in the semistructure.  The regular expression in this
+example is a sequence of descriptors.  In each descriptor, the <B>  name</B> is required (so an edge without a <B>name</B> will not
+match), but the transaction time is not required (an edge that is
+missing a transaction time is presumed to exist at all transaction
+times).  Properties not mentioned in the descriptor are ignored in the
+path matching, unless the property is required, in which case the label
+is not matched.  
+
+<P>
+It is instructive to consider four paths in Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A>.
+(1)&nbsp;The path through <TT>&amp;Color of Night</TT> to the misspelled
+  value <EM>Bruce Wilis</EM> is not matched since the required level
+  of <B>security</B> (over 18) is missing from the descriptors.  The
+  user must have a digital certificate that
+  authenticates her or him as being over 18, and must add that to the first
+  descriptor to match that edge.
+(2)&nbsp;The path through <TT>&amp;Color of Night</TT> to the value <EM>    Bruce Willis</EM> is also not matched for the same reason.
+(3)&nbsp;The path through <TT>&amp;Star Wars IV</TT> to the misspelled value
+  <EM>Bruce Wilis</EM> matches the regular expression, but is not a
+  valid path (see Example&nbsp;<A HREF="node10.html#exa:invalidPath">3.7</A>).
+(4)&nbsp;The path through <TT>&amp;Star Wars IV</TT> to the value <EM>Bruce
+    Willis</EM> is the only path that both matches the regular
+  expression and is a valid path. 
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+<P></P>
+
+<P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html159"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html157"
+ HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html151"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html160"
+ HREF="node12.html">Backwards Compatibility</A>
+<B> Up:</B> <A NAME="tex2html158"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Previous:</B> <A NAME="tex2html152"
+ HREF="node10.html">Path Validity</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

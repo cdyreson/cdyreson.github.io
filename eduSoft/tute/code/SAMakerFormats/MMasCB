@@ -1,0 +1,15 @@
+(MM-FORMAT)
+ (OPTION)
+  <INPUT TYPE="checkbox" 
+     NAME="RBEGINanswer$RquestionIdREND"
+     VALUE="CBEGIN$CanswerTextCEND" 
+  > 
+  CBEGIN$CanswerTextCEND
+  <BR>
+ (ACTUALTEXT)
+  <H1> Question RBEGIN$RpageNumberREND Many Choice </H1>
+  <HR>
+  CBEGIN$CquestionTextCEND
+  <BR>
+  CBEGIN$CanswerTextCEND
+  <INPUT TYPE="submit" VALUE="Done" NAME="this">

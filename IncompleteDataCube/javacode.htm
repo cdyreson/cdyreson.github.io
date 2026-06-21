@@ -1,0 +1,256 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>An Incomplete Data Cube - Java Implementation</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#DEFEDE" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/cube.gif" 
+                  alt="cube logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#DEFEDE">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#DEFEDE">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#DEFEDE"> 
+              <big>An Incomplete Data Cube - Java Implementation</big>
+              <br>
+              <font color="#800000" size="2">
+              A Data Cube Tool for Missing Data
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#DEFEDE">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/index.htm">
+              Cube Home&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/overview.htm">
+              Overview&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/publications.htm">
+              Publications
+             </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/IncompleteDataCube/code.htm">
+              Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#DEFEDE">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#DEFEDE">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+<h1>Versions</h1>
+0.90 beta - Dec. 9, 1997 
+<BLOCKQUOTE>
+<a href="docs/packages.html">API documentation</a> - javadoc generated<BR>
+<a href="javacode/cube.tar.gz">cube.tar.gz</a> - tarred, gzipped JDK 1.02 classes and source (250KB)
+</BLOCKQUOTE>
+<h1>How to use the cube</h1>
+There are three phases to using an incomplete data cube.
+The code that you download is already configured to 
+build an example cube (the README file in the release package
+will provide more details).
+<OL>
+<LI> The dimensions of the cube must be constructed.
+A dimension consists of <i>units</i> and <i>measures</i>.
+The data cube implementor (DCI) writes one text file
+to describe each dimension.  These specifications are
+then parsed and (internally) stored as graphs and tables
+of names within the cube store.  
+<LI> The DCI edits a list of cubette specifications.
+These specifications are then parsed and (internally) stored
+within the cube store.  During the parsing, <i>flex</i> (flex
+is a lexical analyser generator) source is produced to sieve data
+from a text file and populate the incomplete data cube.
+The flex source is compiled and input data is passed
+through the resulting lexical analyser to populate the cube.
+(Only flex was up to the task of handling 
+the hundreds of thousands of regular expressions that are
+potentially produced during construction of the data sieve.  
+It is unfortunate because this introduces a non-Java and non-Perl
+dependency, hence the code for the sieve is not 100% pure Java or Perl).
+<LI> Queries can now be made on the populated cube either
+through a GUI or by calling the appropriate methods directly.
+</OL>
+Currently, the incomplete data cube is designed to obtain data from 
+a <em>text file</em>, the example cube parses an HTTPD access log.
+Specifications for units and measures in three dimension (Time,
+Machines, and Pages) are also provided.
+<P>
+Below we outline the current state of the implementation.
+While the cube is currently functional, much remains to be done.
+<H1>Dependencies</H1>
+<UL>
+<LI> JDK 1.0.2 - we use some deprecated methods so that Netscape can run the applet
+<LI> gdbm - Unix gdbm files are used to store the cube (you can configure it to 
+use any db however)
+<LI> flex (a lexical analyzer generator) - to sieve data, not for the cube per se
+<LI> development environment is UNIX (SunOS5) - untested in other environments
+<LI> JavaLex/JavaCup - only if you would like to change how the 
+specification files are parsed
+<LI> Jigsaw/jdbm - the Java implementation of gdbm is a (small) part of Jigsaw
+(but, it's Java so there should few portability issues!)
+</UL>
+<H1>Implemented Features</H1>
+<UL>
+<LI> unlimited number of dimensions
+<LI> unlimited number of measures (e.g., days, years, countries)
+<LI> unlimited number of units (e.g., '1 October 1997', 1995, Australia)
+<LI> any user-specified measures and units (none are "built-in")
+<LI> Unicode for all names of measures, units, etc. (a Java feature)
+<LI> input data parsed from a text file
+<LI> data is "filtered" through cubette specifications
+<LI> data cube data, units, and measures stored in generic database, 
+     for speed the database is currently configured to Unix dbm files
+<LI> query satisfaction algorithm
+<LI> sum queries
+<LI> GUI for query engine
+<LI> sparse storage of data, only points in the cube that have data
+are materialized
+</UL>
+<H1>Unimplemented features (wish list)</H1>
+<UL> 
+<LI> incomplete data cube store configured to use JDBC 
+<LI> input data to be retrieved from database using JDBC
+<LI> GUI to modify cubette store
+<LI> deletion/renaming of units/measures
+<LI> min - max queries
+<LI> upper - lower bounds on query results
+<LI> completeness measures for query results
+<LI> suggestion of alternate answers
+</UL> 
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>
+     &copy; 1995-2001. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#DEFEDE">&nbsp;</td>
+    <td colspan=2 bgColor="#DEFEDE" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Retrieving Information From Semistructures With Properties</TITLE>
+<META NAME="description" CONTENT="Retrieving Information From Semistructures With Properties">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html134"
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html128"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+ HREF="node10.html">Path Validity</A>
+<B> Up:</B> <A NAME="tex2html135"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<B> Previous:</B> <A NAME="tex2html129"
+ HREF="node8.html">A Semistructured Model With</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00032000000000000000">&#160;</A>
+<A NAME="sec:queryOperators">&#160;</A>
+<BR>
+Retrieving Information From Semistructures With Properties
+</H2>
+
+<P>
+This section extends the information retrieval 
+capability of an ordinary semistructured query language to 
+handle labels with properties.
+Emphasis is on the query language aspects that are affected by the new
+labels. These aspects are quite localized,
+since labels are used only in path regular expressions
+to traverse paths in the semistructure.
+There are two parts to the extension.
+First, when retrieving data, only <EM>valid</EM> paths should be followed, as
+discussed in Section&nbsp;<A HREF="node2.html#sec:motivation">2</A>.
+We define a <I>Valid</I> predicate to
+test whether a path is valid by determining whether
+the path can be <EM>collapsed</EM> to a single edge
+with a label that preserves the information content of all the
+labels along the path.
+Second, path regular expressions must be generalized to
+support labels with properties and required properties.
+This involves redefining how labels are matched in the
+evaluation of an expression.
+We conclude by observing that the extension is strictly additive--the
+extended retrieval mechanism works as expected on
+a semistructure with simple string labels.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html138"
+ HREF="node10.html">Path Validity</A>
+<LI><A NAME="tex2html139"
+ HREF="node11.html">Path <I>Match</I> </A>
+<LI><A NAME="tex2html140"
+ HREF="node12.html">Backwards Compatibility</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

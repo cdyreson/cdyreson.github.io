@@ -1,0 +1,40 @@
+<ul>
+<a href=":dblp[]/x/XXX:colon[]XXX.html">XXX</a>,
+<a href=":dblp[]/x/XXX:colon[]XXX.html">XXX</a>
+<br/>
+<i>
+Attribute and Object Selection Queries on Objects with Probabilistic Attributes
+</i>
+</ul>
+
+Rabia
+Nuray-Turan
+
+Dmitri
+Kalashnikov
+
+Sharad
+Mehrotra
+
+Yaming
+Yu
+
+Title: Multiple Query Optimization for Neighbor-Based Pattern Mining Requests over Data Streams
+Authors: Yang, Di; Rundensteiner, Elke; Ward, Matthew
+
+Title: Partial Evaluation for Distributed XPath Query Processing and Beyond
+Authors: Cong, Gao; Fan, Wenfei; Kementsietsidis, Anastasios; Li, Jianzhong; liu, xianmin
+
+Designing Fast Architecture Sensitive Tree Search on Modern
+Multi-Core/Many-Core Processors
+CHANGKYU KIM, Intel Corporation
+JATIN CHHUGANI, Intel Corporation
+NADATHUR SATISH, Intel Corporation
+ERIC SEDLAR, Oracle Corporation
+ANTHONY D. NGUYEN, Intel Corporation
+TIM KALDEWEY, Oracle Corporation
+VICTOR W. LEE, Intel Corporation
+SCOTT A. BRANDT, University of California, Santa Cruz
+PRADEEP DUBEY, Intel Corporation
+
+

@@ -1,0 +1,502 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>AUCQL Transaction Time Examples</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#D0AEFF" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/AUCQL/images/logo.gif" 
+                  alt="AUCQL logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#D0AEFF">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#D0AEFF">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#D0AEFF"> 
+              <big>AUCQL Transaction Time Examples</big>
+              <br>
+              <font color="#800000" size="2">
+              A Query Language for Semistructured Data with Metadata Properties
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#D0AEFF">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/doc.htm">
+              Publications&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/prototype.htm">
+              Prototype&nbsp;&nbsp;
+             </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/examples.htm">
+              Examples&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/database.htm">
+              The DB
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/basics.htm">
+              Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/defaults.htm">
+              Defaults
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/match.htm">
+              Match
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/property.htm">
+              Property
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/collapse.htm">
+              Collapse
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/coalesce.htm">
+             Coalesce
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/security.htm">
+             Security
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FF4444">
+<font color="#FFFFFF">             Time
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#D0AEFF">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#D0AEFF">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+<I>Transaction time</I> records when a datum is actually
+stored in a database, that is, it is the time between when
+the datum was inserted and when it was deleted.
+In our data model, edges can have transaction-time properties
+that record the lifetime of the edge in the database.
+<P>
+In the movie database, the transaction-time lifetime is missing from
+many of the edges.
+Please examine the 
+<a href="MovieDB.txt">sequence of transactions</a> that created the 
+movie database.
+<P>
+
+<a name="section01"></a>
+<H3>Legal paths</H3>
+
+To understand the important role of transaction time, 
+let's start with a simple query that does not explicitly 
+mention transaction time at all!
+(Note that we are 
+<a href="security.htm">setting the security</a>
+to reach all the nodes in the database.)
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the names of the movie stars?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT Name
+FROM   movie.stars.name Name;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT Name
+FROM   movie.stars.name Name;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+<P>
+The query result is duplicated below.
+<table summary="table" border=1 cellpadding=9 cellspacing=0>
+<tr>
+<th valign= %>Name
+</th></tr><tr>
+<td valign= %>Bruce Willis
+</td></tr><tr>
+<td valign= %>Bruce Wilis
+</td></tr><tr>
+<td valign= %>Bruce Willis
+</td></tr></table>
+</td></tr></table></blockquote>
+
+
+There are two similar names in the three result tuples.
+This is because Bruce's name was originally misspelled and was then
+corrected in the database.  
+The corrected name appears twice because there are two separate valid paths
+to his name.
+The curious thing about the result is that <I>Bruce Willis</I> is
+reachable twice and <I>Bruce Wilis</I> only once.
+<P>
+Let's try to figure out how each is reached by looking at 
+the nodes on the paths to these names.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the names of the movie stars?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT *
+FROM   movie Movie,
+       Movie.stars Stars, 
+       Stars.name Name,
+       PROPERTY(NAME, Name) Paths;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT *
+FROM   movie Movie,
+       Movie.stars Stars, 
+       Stars.name Name,
+       PROPERTY(NAME, Name) Paths;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+<P>
+The query result is duplicated below.
+<BLOCKQUOTE>
+ <table summary="table" border=1 cellpadding=9 cellspacing=0>
+ <tr>
+ <th>Movie</th>
+ <th>Stars</th>
+ <th>Name</th>
+ <th>Paths</th>
+ </tr>
+ <tr>
+ <td>
+ &amp;Star_Wars_IV</td>
+ <td>
+ &amp;Willis</td>
+ <td>
+ Bruce Willis</td>
+ <td>
+ movie.stars.name</td>
+ </tr>
+ <tr>
+ <td>
+ &amp;Color_of_Night</td>
+ <td>
+ &amp;Willis</td>
+ <td>
+ Bruce Wilis</td>
+ <td>
+ movie.stars.name</td>
+ </tr>
+ <tr>
+ <td>
+ &amp;Color_of_Night</td>
+ <td>
+ &amp;Willis</td>
+ <td>
+ Bruce Willis</td>
+ <td>
+ movie.stars.name</td>
+ </tr>
+ </table>
+</blockquote>
+</td></tr></table></blockquote>
+
+
+Interesting, but why isn't there a path from <I>&amp;Star_Wars_IV</I> to 
+<I>Bruce Wilis</I>?
+<P>
+If we look at the transaction times along the paths all will become clear.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the names of the movie stars?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT *
+FROM   movie Movie,
+       PROPERTY(TRANSACTION_TIME, movie) MovieTT,
+       Movie.stars Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) StarsTT,
+       Stars.name Name,
+       PROPERTY(TRANSACTION_TIME, Name) NameTT,
+       PROPERTY(NAME, Name) Paths;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT *
+FROM   movie Movie,
+       PROPERTY(TRANSACTION_TIME, movie) MovieTT,
+       Movie.stars Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) StarsTT,
+       Stars.name Name,
+       PROPERTY(TRANSACTION_TIME, Name) NameTT,
+       PROPERTY(NAME, Name) Paths;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+<P>
+Let's look at the transaction time, and the coalesced transaction
+time, for each name.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the names and transaction times of the movie stars?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT *
+FROM   movie.stars.name Name,
+       PROPERTY(TRANSACTION_TIME, Name) TT,
+       COALESCE(TRANSACTION_TIME, Name) CoalescedTT;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT *
+FROM   movie.stars.name Name,
+       PROPERTY(TRANSACTION_TIME, Name) TT,
+       COALESCE(TRANSACTION_TIME, Name) CoalescedTT;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+<P>
+To get the current names, we can slice at <I>now</I>.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the names of current movie stars?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT CurrentName, CoalescedTT
+FROM   movie.stars.name Name,
+       SLICE((TRANSACTION_TIME! [now - now]), Name) CurrentName,
+       COALESCE(TRANSACTION_TIME, CurrentName) CoalescedTT
+WHERE  NONNULL(CurrentName);
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (security: 'paid, subscriber, over 18');
+SELECT CurrentName, CoalescedTT
+FROM   movie.stars.name Name,
+       SLICE((TRANSACTION_TIME! [now - now]), Name) CurrentName,
+       COALESCE(TRANSACTION_TIME, CurrentName) CoalescedTT
+WHERE  NONNULL(CurrentName);">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>,
+               Michael H. Böhlen, and
+     <a style="text-decoration:none" 
+               href="http://www.cs.auc.dk/~csj">Christian S. Jensen</a>
+     &copy; 1998-2000. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#D0AEFF">&nbsp;</td>
+    <td colspan=2 bgColor="#D0AEFF" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+            <a href="http://validator.w3.org/check/referer"><img 
+               src="http://cs.usu.edu/people/CurtisDyreson/images/html401.gif" 
+             height="15"
+             alt="Valid HTML 4.01!" border="0"></a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

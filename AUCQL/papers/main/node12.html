@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Backwards Compatibility</TITLE>
+<META NAME="description" CONTENT="Backwards Compatibility">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html167"
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html165"
+ HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html161"
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html168"
+ HREF="node13.html">Additional Query Operators</A>
+<B> Up:</B> <A NAME="tex2html166"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Previous:</B> <A NAME="tex2html162"
+ HREF="node11.html">Path Match</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00032300000000000000">
+Backwards Compatibility</A>
+</H3>
+
+<P>
+Compatibility with current semistructured models is achieved by
+assuming that the string labels in those models default to <B>  name</B> properties.  Hence our framework can represent any existing
+semistructured database by modeling it as a database in which every
+label contains exactly one <B>name</B> property.  
+
+<P>
+Using the same default, retrieval queries also remain unchanged.  In
+existing semistructured databases all paths are valid.  In our
+framework, if every label consists of a single <B>name</B> property,
+then all paths are also valid (<B>name</B>s are collapsed using string
+concatenation, which never results in an <EM>undefined</EM> value).  In
+existing semistructured databases, the labels are matched using string
+comparison, just like in our framework, so path regular expressions
+match exactly the same paths in both models.
+
+<P>
+Finally, we observe that our framework seamlessly supports the mixing
+of data from existing semistructures with data that has richer
+meta-data since properties can vary from label to label.  Hence as
+much or as little data as desired can be migrated to use the new
+type of labels.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

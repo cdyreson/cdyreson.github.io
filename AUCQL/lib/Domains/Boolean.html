@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/Domains/Boolean.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Boolean">NAME Boolean</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_String_value_">new(String value)</A>
+		<LI><A HREF="#evaluate_State_state_">evaluate(State state)</A>
+		<LI><A HREF="#isMaybe_">isMaybe()</A>
+		<LI><A HREF="#isTrue_">isTrue()</A>
+		<LI><A HREF="#isFalse_">isFalse()</A>
+		<LI><A HREF="#not_">not()</A>
+		<LI><A HREF="#and_other_">and(other)</A>
+		<LI><A HREF="#or_other_">or(other)</A>
+		<LI><A HREF="#validate_">validate()</A>
+		<LI><A HREF="#match_">match()</A>
+		<LI><A HREF="#collapse_">collapse()</A>
+		<LI><A HREF="#coalesce_">coalesce()</A>
+		<LI><A HREF="#slice_">slice()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Boolean">NAME Boolean</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class represents a Boolean constant (in three-valued logic).
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_String_value_">new(String value)</A></H2>
+<UL>
+<LI>
+<P>
+value - 
+<FONT SIZE=-1>A</FONT> boolean value ('true', 'false', or 'maybe').
+
+</UL>
+<P>
+Create a new Boolean from the passed string value, if no string assume
+false.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_State_state_">evaluate(State state)</A></H2>
+<P>
+Self evaluating
+
+<P>
+<HR>
+<H2><A NAME="isMaybe_">isMaybe()</A></H2>
+<P>
+Is this a maybe value?
+
+<P>
+<HR>
+<H2><A NAME="isTrue_">isTrue()</A></H2>
+<P>
+Is this a true value?
+
+<P>
+<HR>
+<H2><A NAME="isFalse_">isFalse()</A></H2>
+<P>
+Is this a false value?
+
+<P>
+<HR>
+<H2><A NAME="not_">not()</A></H2>
+<P>
+Logical 
+<FONT SIZE=-1>NOT</FONT> operation
+
+<P>
+<HR>
+<H2><A NAME="and_other_">and(other)</A></H2>
+<P>
+Logical 
+<FONT SIZE=-1>AND</FONT> operation
+
+<P>
+<HR>
+<H2><A NAME="or_other_">or(other)</A></H2>
+<P>
+Logical 
+<FONT SIZE=-1>OR</FONT> operation
+
+<P>
+<HR>
+<H2><A NAME="validate_">validate()</A></H2>
+<P>
+Make sure Boolean is legal.
+
+<P>
+<HR>
+<H2><A NAME="match_">match()</A></H2>
+<P>
+Match this one against another.
+
+<P>
+<HR>
+<H2><A NAME="collapse_">collapse()</A></H2>
+<P>
+Collapse this one with another.
+
+<P>
+<HR>
+<H2><A NAME="coalesce_">coalesce()</A></H2>
+<P>
+Coalesce this one with another.
+
+<P>
+<HR>
+<H2><A NAME="slice_">slice()</A></H2>
+<P>
+Slice this one using another.
+
+</BODY>
+
+</HTML>

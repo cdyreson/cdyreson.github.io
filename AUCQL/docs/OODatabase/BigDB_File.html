@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./OODatabase/BigDB_File.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_bigdb_file">NAME BigDB_File</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#tiehash">TIEHASH</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_bigdb_file">NAME BigDB_File</a></h1>
+<p>A class that ties a hash table to two DBM files so that there
+is no length problem.</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+    use BigDB_File;
+    tie %dbm, BigDB_File, $fileName, $mode;
+    # Use the %dbm array.
+    untie %dbm;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p><strong>BigDB_File</strong> is a module which allows a dbm database to have no
+length limitations.</p>
+<p>
+</p>
+<hr />
+<h1><a name="tiehash">TIEHASH</a></h1>
+<p>Ties the big dbm file.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>./Evaluator/Select.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Evaluator_Select">NAME Evaluator::Select</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#evaluate_HashTable_codeHash_">evaluate(HashTable codeHash)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Evaluator_Select">NAME Evaluator::Select</A></H1>
+<P>
+This is the code for the query evaluation of the 
+<FONT SIZE=-1>SELECT</FONT> statement.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+The 
+<FONT SIZE=-1>SELECT</FONT> statement evaluation proceeds by first determining a tuple from the variable assignments in the From clause. Then the 
+<FONT SIZE=-1>WHERE</FONT> clause predicate is applied, and if the tuple passes, the 
+<FONT SIZE=-1>SELECT</FONT> clause attributes are projected.
+
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="evaluate_HashTable_codeHash_">evaluate(HashTable codeHash)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_codeHash">codeHash</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> hash table of the clauses.
+
+</UL>
+<P>
+Evaluate the select clause.
+
+</BODY>
+
+</HTML>

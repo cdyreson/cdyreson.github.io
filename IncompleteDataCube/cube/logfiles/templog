@@ -1,0 +1,15 @@
+soap.av.pa-x.dec.com - - [08/Dec/1997:05:54:41 +1000] "HEAD /~curtis/htmls/multical.html HTTP/1.0" 200 0
+chaotic.edu.au - - [08/Dec/1997:07:15:53 +1000] "GET /~curtis/htmls/IncompleteDataCube/javacode.html HTTP/1.0" 200 2937
+chaotic.ec.rhno.columbia.edu.au - - [08/Dec/1997:07:16:07 +1000] "GET /~curtis/htmls/IncompleteDataCube/demo.html HTTP/1.0" 200 913
+soap.av.pa-x.dec.com.au - - [08/Dec/1997:07:16:19 +1000] "GET /~tony/index.html HTTP/1.0" 200 0
+soap.av.pa-x.dec.com - - [08/Dec/1997:07:19:56 +1000] "HEAD /~nizam/course/cp3070b/1997/tut/tut.html HTTP/1.0" 200 0
+gtam.tezcat.com.au - - [08/Dec/1997:07:20:20 +1000] "GET / HTTP/1.0" 200 62830
+ppp-60.ts-10.nyc.idt.net - - [08/Dec/1997:07:21:42 +1000] "GET /~marianne/sicstus/sicstus_32.html HTTP/1.0" 304 0
+soap.av.pa-x.dec.com - - [08/Dec/1997:07:25:22 +1000] "HEAD /ftp/web/research/seminars/1997/jun18.html HTTP/1.0" 200 0
+soap.av.pa-x.dec.com - - [08/Dec/1997:07:26:37 +1000] "HEAD /ftp/web/teaching/Subjects/cp1500/1997/Lecture_Notes/databases/database.html HTTP/1.0" 200 0
+frm-ma3-10.ix.netcom.com - - [08/Dec/1997:07:27:48 +1000] "GET /ftp/web/teaching/Subjects/cp2003/1997/tutes/introToScheme.soln/introToScheme.soln.html HTTP/1.0" 200 6982
+ppp-60.ts-10.nyc.idt.net - - [08/Dec/1997:07:27:49 +1000] "GET /~marianne/sicstus/sicstus_toc.html HTTP/1.0" 304 0
+frm-ma3-10.ix.netcom.com - - [08/Dec/1997:07:27:58 +1000] "GET /ftp/web/teaching/Subjects/cp2003/1997/tutes/introToScheme.soln/introToScheme.soln.css HTTP/1.0" 200 344
+ppp-60.ts-10.nyc.idt.net - - [08/Dec/1997:07:28:19 +1000] "GET /~marianne/sicstus/sicstus_12.html HTTP/1.0" 200 20607
+hay-ca6-28.ix.netcom.com - - [08/Dec/1997:07:28:24 +1000] "GET /ftp/web/teaching/Subjects/cp1300/1997/systems/unixnotes.html HTTP/1.0" 200 1240
+ppp-60.ts-10.nyc.idt.net - - [08/Dec/1997:07:28:42 +1000] "GET /~marianne/sicstus/sicstus_13.html HTTP/1.0" 200 5193

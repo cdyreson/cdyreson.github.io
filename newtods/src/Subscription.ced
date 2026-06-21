@@ -1,0 +1,11 @@
+:include[macros]
+:arg1[
+
+To subscribe to :journalAcronym[], or other ACM journals and
+magazines, please 
+<a href="https://campus.acm.org/public/Estore_window/estore_foyer2.cfm?secid=19&orderidentifier=orderidentifierhomepage.html">visit the ACM e-store</a>.
+
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Subscribe to TODS]

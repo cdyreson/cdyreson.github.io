@@ -1,0 +1,69 @@
+&&&PERL&&&
+ 
+use MyTextDB;
+
+my $ROOT = '&&&ROOT&&&';
+ 
+die "use QuizMailer as follows\n  QuizMailer db_directory subject.\n"
+  unless defined $ARGV[1];
+my ($directory, $subject) = @ARGV;
+my $path = '&&&ABSOLUTEPATH&&&' . '&&&SLASH&&&' . $directory;
+# open the databases
+&openReadOnlydb(\%longpassworddb, "$path&&&SLASH&&&longpassworddb");
+&openReadOnlydb(\%classdb, "$path&&&SLASH&&&classdb");
+&openReadOnlydb(\%emaildb, "$path&&&SLASH&&&emaildb");
+ 
+foreach my $password (keys %longpassworddb) {
+  my $id = $longpassworddb{$password};
+  my $email = $emaildb{$id};
+  my $name = $classdb{$id};
+  my $message = <<"HEAD";
+
+Hello $name,
+
+At the end of this message is a link to start quiz.  DON'T START THE
+QUIZ YET.  READ THE RULES BELOW FIRST!
+
+1) The quiz is open notes and open book.  You may not however
+consult with your classmates or other students about the quiz.
+
+2) You may start the quiz at any time.  You have 24 hours 
+from when you first start the quiz to when you must 
+complete the quiz.  You may re-enter the quiz as many times
+as you like.  However, you may not enter the quiz 
+after 5PM Thursday, September 27.  The quiz has to end sometime!
+
+3) Have fun!
+
+     $ROOT/entry&&&EXTENSION&&&?entry=$password&path=$directory
+
+cheers, curtis
+HEAD
+
+  &sendAMailMessage($email, $subject, $message, '');
+}
+
+sub sendAMailMessage {
+  my ($to, $subject, $text, $attachment) = @_;
+  #print "sending $to $subject $text";
+  
+  my $pid = time;
+  if ($attachment ne '') {
+    open(F1, "> /tmp/quizzes$pid.htm") || 
+       die "could not open tmp/quizzes for write";
+    print F1 $attachment;
+    close F1;
+    open(MAIL, 
+          "| /net/local/bin/mutt -s \"$subject\" -a /tmp/quizzes$pid.htm $to"
+        ) || die "could not open mail for writing";
+    print MAIL $text;
+    close MAIL;
+    unlink "/tmp/quizzes$pid.htm";
+    }
+  else {
+    open(MAIL, "| /net/local/bin/mutt -s \"$subject\" $to") 
+       || die "could not open mail for writing";
+    print MAIL $text;
+    close MAIL;
+    }
+  }

@@ -1,0 +1,64 @@
+:include[macros]
+:arg1[
+<b>Approved December 19, 2001</b>
+
+The discussion and consensus can be summarized as follows.
+
+:uls
+:li It would be useful to be able to consider (much) shorter papers for :journalAcronym[].
+:li A paper of 30 pages is a reasonable length. 
+    In fact, :journalAcronym[] papers have
+  gotten longer over the years, and this is probably not a desirable trend.
+:li A concise paper is problematic if it was originally submitted as
+  a longer paper but then trimmed down as a compromise (which is indeed
+  what I think happens a lot in <i>TKDE</i>).
+:li A very short paper is easier to write when it is theoretical, but less
+  so for systems papers (though I might add that my one <i>IPL</i> paper is
+  a systems paper, with performance graphs and everything).
+:li It seems that having a separate category is problematic.
+:li Short technical comments are also problematic, because we need to
+  be cautious. Notes seem to be relevant for SIGMOD Record.
+:ule
+
+After this extensive email discussion, it is best <i>not</i> to have a separate
+section, for the many good reasons given. Rather, we should be open to
+submissions of any length, as long as they improve on the state-of-the-art in
+some significant way, perhaps as the iceberg paper may do.
+
+The challenge then is to get the word out that such shorter papers are
+relevant to :journalAcronym[]. We can do this in two ways, 
+:ols
+:li by example by processing
+and accepting (some of the) short submissions and 
+:li by emphasizing this in
+the editorial guidelines.
+:ole
+
+After item 6 in 
+<a href="http://www.acm.org/tods/Authors.html#SubmissionforEditorialReview">http://www.acm.org/tods/Authors.html#SubmissionforEditorialReview</a>
+
+:quote[
+6. :journalAcronym[] will discourage excessively long papers (longer than 50 double-spaced
+   pages including figures, references, etc.), and unnecessary digressions
+   even in shorter papers. This is to motivate the authors to bring out the
+   essence of their papers more clearly, to make it easier for the reviewers
+   and readers, and to allow :journalAcronym[] to publish more papers in any given
+   issue. 
+]
+
+the following item should be added.
+
+:quote[
+7. In a similar vein, :journalAcronym[] encourages shorter submissions, including even
+   very short (say, 5 page) submissions. The primary criterion for
+   acceptance is improving on the state-of-the-art in some significant way.
+]
+
+The questions of "archival-ness" and "self-containedness" should be left to
+the editor and referees. It might be useful though in this transition period
+to emphasize to referees that we now have an explicit policy allowing short
+submissions.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Short Papers]

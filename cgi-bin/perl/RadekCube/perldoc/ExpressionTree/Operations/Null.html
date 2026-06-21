@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>./ExpressionTree/Operations/Null.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_ExpressionTree_Operations_">NAME ExpressionTree::Operations::Null;</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_ExpressionTree_Variable_var">new(ExpressionTree::Variable var)</A>
+		<LI><A HREF="#validate_var_">validate(var)</A>
+		<LI><A HREF="#resultType_">resultType()</A>
+		<LI><A HREF="#dump_indent_">dump($indent)</A>
+		<LI><A HREF="#evaluate_State_state_">evaluate(State state)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_ExpressionTree_Operations_">NAME ExpressionTree::Operations::Null;</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class represents a 
+<FONT SIZE=-1>NULL</FONT> operation.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_ExpressionTree_Variable_var">new(ExpressionTree::Variable var)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_var">var</A></STRONG>
+<P>
+The variable to test.
+
+</UL>
+<P>
+Create a new 
+<FONT SIZE=-1>NULL</FONT> operation
+
+<P>
+<HR>
+<H2><A NAME="validate_var_">validate(var)</A></H2>
+<P>
+#--------------------------------------------------------------------- sub
+validate { my <CODE>$type</CODE> = shift;
+
+<P>
+<PRE>    return &quot;No variable for NULL.&quot; unless scalar(@_);
+    return undef; # successful validation!
+    }
+#---------------------------------------------------------------------
+</PRE>
+<P>
+<HR>
+<H2><A NAME="resultType_">resultType()</A></H2>
+<P>
+Return the type of result.
+
+<P>
+<HR>
+<H2><A NAME="dump_indent_">dump($indent)</A></H2>
+<P>
+Dump this node.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_State_state_">evaluate(State state)</A></H2>
+<P>
+Evaluate the 
+<FONT SIZE=-1>NULL</FONT> operation returning a boolean result.
+
+</BODY>
+
+</HTML>

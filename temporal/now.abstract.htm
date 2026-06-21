@@ -1,0 +1,226 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Abstract of On the Semantics of Now in Temporal Databases</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#C0F0E0" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/temporal/multical.color.gif" 
+                  alt="temporal logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#C0F0E0">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#C0F0E0">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#C0F0E0"> 
+              <big>Abstract of On the Semantics of Now in Temporal Databases</big>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#C0F0E0">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/spe.htm">
+              Fast I/O
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/granularity.htm">
+              Granularity
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/indeterminacy.htm">
+              Indeterminacy
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/multical.htm">
+              MultiCal
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/now.htm">
+              Now
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/ootadt.htm">
+              TADT
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/infosys.htm">
+              Timestamps
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/tsql2.htm">
+              TSQL2
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#C0F0E0">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#C0F0E0">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+While `<i>now</i>' is expressed in SQL as <tt>CURRENT_TIMESTAMP</tt> 
+within queries,
+this value cannot be stored in the database.
+However, this notion of an ever-increasing current-time value has been
+reflected in some temporal data models by inclusion of database-resident
+variables, such as `<i>now</i>,' `<i>until-changed</i>,'
+`<i>infinity</i>,' `@' and `--.' Time variables are
+very desirable, but their use also leads to a new type of database,
+consisting of tuples with variables, termed a <i>variable database</i>.
+<P>
+This paper proposes a framework for defining the semantics of the
+variable databases of the relational and temporal relational data models.  A 
+framework is
+presented because several reasonable meanings may be given to
+databases that use some of the specific temporal variables that have
+appeared in the literature. Using the framework, the paper defines a
+useful semantics for such databases.  Because situations occur where
+the existing time variables are inadequate, two new types of modeling
+entities that address these shortcomings, timestamps which we call
+<i>now-relative</i> and <i>now-relative indeterminate</i>, are
+introduced and defined within the framework.  Moreover, the paper
+provides a foundation, using algebraic <i>bind</i> operators, for the
+querying of variable databases via existing query languages.  This
+transition to variable databases presented here requires minimal
+change to the query processor.  Finally, to underline the practical
+feasibility of variable databases, we show that 
+database variables can be
+precisely specified and efficiently implemented in conventional query
+languages, such as SQL, and in temporal query languages, such as
+TSQL2.
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <em><a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>
+     &copy; 1993-2001. All rights reserved.</em>
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#C0F0E0">&nbsp;</td>
+    <td colspan=2 bgColor="#C0F0E0" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

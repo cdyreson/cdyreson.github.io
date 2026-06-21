@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./ExpressionTree/Operations/NonNull.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_expressiontree::operations::nonnull;">NAME ExpressionTree::Operations::NonNull;</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(expressiontree::variable_var)">new(ExpressionTree::Variable var)</a></li>
+		<li><a href="#validate(var)"><code>validate(var)</code></a></li>
+		<li><a href="#resulttype()"><code>resultType()</code></a></li>
+		<li><a href="#dump($indent)"><code>dump($indent)</code></a></li>
+		<li><a href="#evaluate(state_state)">evaluate(State state)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_expressiontree::operations::nonnull;">NAME ExpressionTree::Operations::NonNull;</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This class represents a NONNULL operation.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(expressiontree::variable_var)">new(ExpressionTree::Variable var)</a></h2>
+<ul>
+<li><strong><a name="item_var">var</a></strong><br />
+</li>
+The variable to test.
+<p></p></ul>
+<p>Create a new NONNULL operation</p>
+<p>
+</p>
+<h2><a name="validate(var)"><code>validate(var)</code></a></h2>
+<p>#---------------------------------------------------------------------
+  sub validate {
+    my $type = shift;</p>
+<pre>
+    return &quot;No variable for NONNULL.&quot; unless scalar(@_);
+    return undef; # successful validation!
+    }
+#---------------------------------------------------------------------</pre>
+<p>
+</p>
+<h2><a name="resulttype()"><code>resultType()</code></a></h2>
+<p>Return the type of result.</p>
+<p>
+</p>
+<h2><a name="dump($indent)"><code>dump($indent)</code></a></h2>
+<p>Dump this node.</p>
+<p>
+</p>
+<h2><a name="evaluate(state_state)">evaluate(State state)</a></h2>
+<p>Evaluate the NONNULL operation returning a boolean result.</p>
+
+</body>
+
+</html>

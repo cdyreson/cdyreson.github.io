@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Features of Properties in Labels</TITLE>
+<META NAME="description" CONTENT="Features of Properties in Labels">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html86"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html84"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html78"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html87"
+ HREF="node6.html">Contrast With Existing Semistructured</A>
+<B> Up:</B> <A NAME="tex2html85"
+ HREF="node2.html">Motivation and Background</A>
+<B> Previous:</B> <A NAME="tex2html79"
+ HREF="node4.html">Sample Properties</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00023000000000000000">
+Features of Properties in Labels</A>
+</H2>
+
+<P>
+Many labels consist of several properties.  For example, the two
+edges from the <TT>&amp;Willis</TT> node shown in
+Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A> have the same value for the <B>name</B>
+property, but different transaction times.  The most common property
+is <B>name</B>--only in unusual circumstances will an edge be unnamed.
+
+<P>
+The ability to accommodate the schema irregularities found in web data
+is an important feature of a semistructured (or unstructured) data model.
+In keeping with
+this requirement, the data model presented in the paper has several
+features worth mentioning.
+
+<P>
+One feature is that a property found in one label can be
+<EM>missing</EM> from other labels.  In Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A>,
+the transaction time property is in only a few of the labels.
+Generally, a property is missing because it is <EM>don't care</EM>
+information, as in, this property is missing because we don't care if
+it is present, it is not germane to or will not improve the
+description of the data.
+
+<P>
+Another feature is that
+a property can be specified as being <EM>required</EM>.  
+A required property is required to be matched in a query to gain
+access to nodes below that edge, but otherwise is just like any other
+property.<A NAME="tex2html3"
+ HREF="footnode.html#foot1312"><SUP>1</SUP></A>
+The <B>security</B> property on the edge
+to <TT>&amp;Color of Night</TT> is a required property (indicated by affixing an `!' to the property name).  It is meant to
+indicate that a user <EM>must</EM> have a matching security clearance,
+i.e., an appropriate certificate,
+to traverse that edge.  Further details on required properties are
+presented in Section&nbsp;<A HREF="node11.html#sec:pathMatch">3.2.2</A>.
+
+<P>
+There are few restrictions on the properties in labels.
+Common properties may be shared by a number of labels.
+Meta-data is often specified for a bag or container for a collection
+of objects&nbsp;[<A
+ HREF="node25.html#LASSILA99">21</A>].
+Since a label is a set, it can easily be shared, in part or in whole,
+among a number of labels.
+In addition, multiple edges may connect the same pair of nodes with
+overlapping or redundant labels.  
+Requiring labels to contain disjoint descriptions would be an 
+unnecessary restriction.
+
+<P>
+Multiple properties in a label can capture more data
+semantics, but they break existing query languages.  To take one example,
+consider the path from <TT>&amp;movies</TT> through <TT>&amp;Star Wars IV</TT>
+to the misspelled value <EM>Bruce Wilis</EM>.  It would be easy to
+retrieve that path by using an appropriate regular expression over the
+<B>name</B> property in each label (e.g., <TT>movie.stars.name</TT>).
+While this is a path, it is not a <EM>valid</EM> path since the
+transaction times of the first and last edges in the path are
+disjoint: when the first edge in the path was inserted, the final edge
+was already deleted.  So at no time did the two edges coexist in the
+current database state.
+
+<P>
+This paper offers a collection of query language
+operators that support a more correct manipulation of the extended edge labels.  Each
+operator is extensible in the sense that the semantics of properties
+are not fixed in the data model; rather, the meaning is supplied by a
+database designer.  For instance, to test the validity of a path, the
+<B>transaction time</B> property will be tested quite differently than
+the <B>name</B> property.  Several new query operators are also
+described.  <I>Match</I> matches a so-called <EM>path regular expression</EM>
+to the labels along a path in the semistructure.  <I>Collapse</I> collapses
+entire paths to single edges that have their labels computed from the
+labels on each edge in the path.  <I>Coalesce</I> computes the value of a
+property which is distributed among a number of different labels on
+edges between the same pair of nodes.  Finally, <I>Slice</I> restructures
+the labels along paths by slicing a portion from selected properties
+in each label.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html86"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html84"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html78"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html87"
+ HREF="node6.html">Contrast With Existing Semistructured</A>
+<B> Up:</B> <A NAME="tex2html85"
+ HREF="node2.html">Motivation and Background</A>
+<B> Previous:</B> <A NAME="tex2html79"
+ HREF="node4.html">Sample Properties</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

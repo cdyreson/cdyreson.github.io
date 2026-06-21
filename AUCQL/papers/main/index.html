@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Capturing and Querying Multiple Aspects of Semistructured Data</TITLE>
+<META NAME="description" CONTENT="Capturing and Querying Multiple Aspects of Semistructured Data">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html7"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html8"
+ HREF="node1.html">Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1 ALIGN="CENTER">Capturing and Querying Multiple Aspects of Semistructured Data</H1>
+<P ALIGN="CENTER"><STRONG>Curtis&nbsp;E.&nbsp;Dyreson <BR>
+Department of Computer Science <BR>
+James Cook University, Australia <BR> 
+<TT>curtis@cs.jcu.edu.au</TT>  - 
+Michael&nbsp;H.&nbsp;B&#246;hlen   Christian S.&nbsp;Jensen <BR>
+Department of Computer Science <BR>
+Aalborg University, Denmark
+<BR> 
+<TT>{boehlen,csj}@cs.auc.dk</TT></STRONG></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+
+<H3>Abstract:</H3>
+<DIV>
+Motivated to a large extent by the substantial and growing
+  prominence of the World-Wide Web and the potential benefits that may
+  be obtained by applying database concepts and techniques to web data
+  management, new data models and query languages have emerged that
+  contend with web data.
+  These models organize data in graphs where nodes denote
+  objects or values and edges are labeled with single words or
+  phrases.  Nodes are described by the labels of the paths that lead to
+  them, and these descriptions serve as the basis for querying.
+
+<P>
+This paper proposes an extensible framework for capturing and
+  querying meta-data <I>properties</I> in a semistructured data
+  model.  Properties such as temporal aspects of data, prices
+  associated with data access, quality ratings associated with the
+  data, and access restrictions on the data are considered.
+  Specifically, the paper defines an extensible data model and an
+  accompanying query language that provides new facilities for
+  matching, slicing, collapsing, and coalescing properties.  It also
+  briefly introduces an implemented, SQL-like query language for the
+  extended data model that includes additional constructs for the
+  effective querying of graphs with properties.
+</DIV>
+<P>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html9"
+ HREF="node1.html">Introduction</A>
+<LI><A NAME="tex2html10"
+ HREF="node2.html">Motivation and Background</A>
+<UL>
+<LI><A NAME="tex2html11"
+ HREF="node3.html">An Example Database</A>
+<LI><A NAME="tex2html12"
+ HREF="node4.html">Sample Properties</A>
+<LI><A NAME="tex2html13"
+ HREF="node5.html">Features of Properties in Labels</A>
+<LI><A NAME="tex2html14"
+ HREF="node6.html">Contrast With Existing Semistructured Data Models</A>
+</UL>
+<LI><A NAME="tex2html15"
+ HREF="node7.html">Extending a Semistructured Data Model With Properties</A>
+<UL>
+<LI><A NAME="tex2html16"
+ HREF="node8.html">A Semistructured Model With Properties</A>
+<LI><A NAME="tex2html17"
+ HREF="node9.html">Retrieving Information From Semistructures With Properties</A>
+<UL>
+<LI><A NAME="tex2html18"
+ HREF="node10.html">Path Validity</A>
+<LI><A NAME="tex2html19"
+ HREF="node11.html">Path <I>Match</I> </A>
+<LI><A NAME="tex2html20"
+ HREF="node12.html">Backwards Compatibility</A>
+</UL>
+<LI><A NAME="tex2html21"
+ HREF="node13.html">Additional Query Operators</A>
+<UL>
+<LI><A NAME="tex2html22"
+ HREF="node14.html"><I>Slice</I> </A>
+<LI><A NAME="tex2html23"
+ HREF="node15.html"><I>Collapse</I> </A>
+<LI><A NAME="tex2html24"
+ HREF="node16.html"><I>Coalesce</I> </A>
+</UL>
+<LI><A NAME="tex2html25"
+ HREF="node17.html">Updates</A>
+<UL>
+<LI><A NAME="tex2html26"
+ HREF="node18.html">Data Updates</A>
+<LI><A NAME="tex2html27"
+ HREF="node19.html">Adding and Removing Properties</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html28"
+ HREF="node20.html">AUCQL</A>
+<UL>
+<LI><A NAME="tex2html29"
+ HREF="node21.html">Variables in AUCQL</A>
+<LI><A NAME="tex2html30"
+ HREF="node22.html">Defaults</A>
+</UL>
+<LI><A NAME="tex2html31"
+ HREF="node23.html">Summary and Future Work</A>
+<LI><A NAME="tex2html32"
+ HREF="node24.html">Acknowledgements</A>
+<LI><A NAME="tex2html33"
+ HREF="node25.html">Bibliography</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html7"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html8"
+ HREF="node1.html">Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

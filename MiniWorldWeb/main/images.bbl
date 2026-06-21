@@ -1,0 +1,85 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MAG{\etalchar{+}}97}
+
+\bibitem[Alt]{ALTAVISTA}
+Altavista {H}ome {P}age.
+\newblock {\tt http://www.altavista.com}.
+
+\bibitem[AMM97]{AROCENA96}
+G.~Arocena, A.~Mendelzon, and G.~Mihaila.
+\newblock {A}pplications of a {W}eb {Q}uery {L}anguage.
+\newblock In {\em Sixth International World Wide Web Conference}, Santa Clara,
+  CA, April 1997.
+
+\bibitem[BDHS96]{BUNEMAN96}
+Peter Buneman, Susan~B. Davidson, Gerd~G. Hillebrand, and Dan Suciu.
+\newblock A {Q}uery {L}anguage and {O}ptimization {T}echniques for
+  {U}nstructured {D}ata.
+\newblock In H.~V. Jagadish and Inderpal~Singh Mumick, editors, {\em
+  Proceedings of the 1996 {ACM} {SIGMOD} International Conference on Management
+  of Data}, pages 505--516, Montreal, Quebec, Canada, 4--6~June 1996.
+
+\bibitem[Bun97]{BUNEMAN97}
+P.~Buneman.
+\newblock {S}emistructured {D}ata.
+\newblock In {\em SIGMOD/PODS '97 (tutorial notes)}, Tucson, AZ, May 1997.
+
+\bibitem[Dyr97]{DYRESON97}
+C.~Dyreson.
+\newblock Content-based {N}avigation in a {M}ini-{W}orld {W}eb.
+\newblock Technical Report 97/06, James Cook University, 1997.
+
+\bibitem[FFLS97]{FERNANDEZ97}
+M.~Fernandez, D.~Florescu, A.~Levy, and D.~Suciu.
+\newblock {A} {Q}uery {L}anguage for a {W}eb-{S}ite {M}anagement {S}ystem.
+\newblock {\em SIGMOD Record}, 26(3), September 1997.
+
+\bibitem[Inf]{Infoseek}
+Infoseek {H}ome {P}age.
+\newblock {\tt http://www.infoseek.com}.
+
+\bibitem[KS95]{KONOPNICKI95}
+D.~Konopnicki and O.~Shmueli.
+\newblock {W3QS}: {A} {Q}uery {S}ystem for the {W}orld {W}ide {W}eb.
+\newblock In {\em Proceedings of the International Conference on Very Large
+  Databases (VLDB '95)}, pages 54--65, Zurich, Switzerland, September 1995.
+
+\bibitem[LSCS97]{LACROIX97A}
+Z.~Lacroix, A.~Sahuguet, R.~Chandrasekar, and B.~Srinivas.
+\newblock A {N}ovel {A}pproach to {Q}uerying the {W}eb: {I}ntegrating
+  {R}etrieval and {B}rowsing.
+\newblock In {\em ER97 - Workshop on Conceptual Modeling for Multimedia
+  Information Seeking}, Los Angeles, CA, November 1997.
+
+\bibitem[LSS96]{LAKSHMANAN96}
+L.~Lakshmanan, F.~Sadri, and I.~Subramanian.
+\newblock {A} {D}eclarative {L}anguage for {Q}uerying and {R}estructuring the
+  {W}eb.
+\newblock In {\em Proceedings of the Sixth International Workshop on Research
+  Issues in Data Engineering (RIDE '96)}, New Orleans, February 1996.
+
+\bibitem[MAG{\etalchar{+}}97]{MCHUGH97}
+J.~McHugh, S.~Abiteboul, R.~Goldman, D.~Quass, and J.~Widom.
+\newblock Lore: {A} {D}atabase {M}anagement {S}ystem for {S}emistructured
+  {D}ata.
+\newblock {\em SIGMOD Record}, 26(3):54--66, September 1997.
+
+\bibitem[MMM96]{MENDELZON96}
+A.~Mendelzon, G.~Mihaila, and T.~Milo.
+\newblock Querying the {World Wide Web}.
+\newblock In {\em Proceedings of the Fourth International Conference on
+  Parallel and Distributed Information Systems}, pages 18--20, Miami, FL,
+  December 1996.
+
+\bibitem[MMM97]{MENDELZON97A}
+A.~Mendelzon, G.~Mihaila, and T.~Milo.
+\newblock {Q}uerying the {W}orld {W}ide {W}eb.
+\newblock {\em International Journal on Digital Libraries}, 1(1):54--67,
+  January 1997.
+
+\bibitem[MSB97]{MANBER97}
+U.~Manber, M.~Smith, and G.~Burra.
+\newblock Web{G}limpse --- {C}ombining {B}rowsing and {S}earching.
+\newblock In {\em Usenix Technical Conference}, pages 6--10, January 1997.
+
+\end{thebibliography}

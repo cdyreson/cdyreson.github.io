@@ -1,0 +1,28 @@
+From Curtis.Dyreson@jcu.edu.au Sun Apr  5 08:26:05 1998
+Received: from barra.jcu.edu.au (barra.jcu.edu.au [137.219.16.27])
+	by atoll.cs.jcu.edu.au (8.8.6/8.8.6) with ESMTP id IAA11422
+	for <curtis@cs.jcu.edu.au>; Sun, 5 Apr 1998 08:26:05 +1000 (EST)
+Received: (from cpced@localhost)
+	by barra.jcu.edu.au (8.8.8/8.8.8) id IAA11549
+	for curtis@cs.jcu.edu.au; Sun, 5 Apr 1998 08:26:06 +1000 (EST)
+From: Curtis Dyreson <Curtis.Dyreson@jcu.edu.au>
+Message-Id: <199804042226.IAA11549@barra.jcu.edu.au>
+Subject: curtis
+To: curtis@cs.jcu.edu.au
+Date: Sun, 5 Apr 1998 08:26:06 +1000 (EST)
+X-Mailer: ELM [version 2.4 PL24 PGP6]
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 4994
+Status: RO
+
+(basedirectory) /dev/null
+(kind) <text> <text> <text> <numeric> <numeric>
+(alignment) <left> <left> <left> <right> <right>
+(display) <10> <10> <10> <10> <10>
+(weight) <none> <none> <none> <10> <20>
+(maxscore) <none> <none> <none> <100> <50>
+(schema) <login> <First Name> <Last Name> <Assignment 1> <Quiz 1>
+(tuple) <coe-xxxx> <Jane> <Doe> <96> <44>
+(tuple) <sci-xxx> <John> <Doe> <80> <33>

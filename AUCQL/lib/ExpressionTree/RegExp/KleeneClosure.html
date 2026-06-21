@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/ExpressionTree/RegExp/KleeneClosure.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_ExpressionTree_RegExp_Kle">NAME ExpressionTree::RegExp::KleeneClosure</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Region_token_">new(Region token)</A>
+		<LI><A HREF="#resultType_">resultType()</A>
+		<LI><A HREF="#dump_indent_">dump($indent)</A>
+		<LI><A HREF="#evaluate_LabelledGraph_graph_Pa">evaluate(LabelledGraph graph, Path path)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_ExpressionTree_RegExp_Kle">NAME ExpressionTree::RegExp::KleeneClosure</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class represents the KleeneClosure (zero to infinity) matching of a
+single regular expression.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Region_token_">new(Region token)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_token">token</A></STRONG>
+<P>
+- The <A HREF="./../lib/SemiStructuredDB/Region.html#">the Region manpage</A> to match.
+
+</UL>
+<P>
+Create a new KleeneClosure operation.
+
+<P>
+<HR>
+<H2><A NAME="resultType_">resultType()</A></H2>
+<P>
+Return the type of result.
+
+<P>
+<HR>
+<H2><A NAME="dump_indent_">dump($indent)</A></H2>
+<P>
+Dump this node.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_LabelledGraph_graph_Pa">evaluate(LabelledGraph graph, Path path)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_graph">graph</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./SemiStructuredDB/LabelledGraph.html">SemiStructuredDB::LabelledGraph</A> that stores the semistructure.
+
+<LI><STRONG><A NAME="item_path">path</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./SemiStructuredDB/Path.html">SemiStructuredDB::Path</A>, the path to this point in the graph.
+
+</UL>
+<P>
+Compare the token against all the edges out of this node.
+
+</BODY>
+
+</HTML>

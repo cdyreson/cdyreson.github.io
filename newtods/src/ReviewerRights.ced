@@ -1,0 +1,395 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, December 2002</em>)
+
+About eighteen months ago the ACM Publications Board approved a sweeping
+policy, termed the 
+"<a href="http://www.acm.org/pubs/rights.html">Rights and Responsibilities in 
+ACM Publishing</a>"
+summarizing the rights and responsibilities of readers, 
+authors, reviewers, editors, program chairs and
+committees, and libraries vis-a-vis journals, transactions, magazines,
+conference proceedings, and SIG newsletters published by ACM
+[<a href="#SN02">SN02</a>].
+
+This policy document contains a mixture of current practice and goals for 
+the near
+future. I and the :journalAcronym[] Editorial Board take these stated rights very
+seriously and have been working for over a year on developing mechanisms,
+policies, and procedures to ensure each of these rights. As a result of
+these efforts, :journalAcronym[] is the <u>first</u> ACM transactions to fully
+implement all 42 (!) rights listed here.
+
+I'll discuss the steps we have and are taking. (I'll not get into
+rights of Editorial Board members, except to state that those rights have
+also been fully implemented.)
+
+Included are several new policies that you as a prospective author or reviewer may
+appreciate.
+:uls
+:li :journalAcronym[] now publishes its turn-around statistics.
+:li :journalAcronym[] now limits reviewers to one review per year.
+:li :journalAcronym[] now gives each reviewer at least two months to perform a review.
+:ule
+
+:section[Readers]
+
+Quotations from the ACM Rights and Responsibilities document are given in <em>italics</em>.
+
+<em>Readers can expect ACM to</em>
+
+:uls
+:li <em>Publish on time with the printed and Digital Library versions
+  available the first day of the issue month</em>
+
+  Readers know that for several years each issue of :journalAcronym[] has come out
+  months after its cover date. As I discussed in 
+  <a href="http://doi.acm.org/10.1145/502030.505049">my September 2001 
+  editorial</a>,
+  there were two primary underlying causes: an inadequate backlog 
+  and slow production. I'm pleased to report that both problems
+  have been solved, and that the December 2002 issue will be available in print
+  and in the digital library on December 1, 2002. In fact, articles are
+  placed on the :journalAcronym[] web site as soon as they are accepted. The December
+  articles have been present there since September.
+
+:li <em>Ensure that articles are accurate and of high quality</em>
+
+  The :journalAcronym[] Editorial Board does its part through rigorous reviewing of
+  submitted manuscripts, and ACM publication staff do their part through
+  careful copy-editing and close interaction with authors (see also
+  <a href="http://www.acm.org/pubs/quality.html">the ACM guidelines on 
+  publication quality</a>).
+
+:li <em>Ensure that the electronic and printed version of an article
+  match within the limits of the style guidelines of each format</em>
+
+  Starting a few issues ago, the electronic and printed versions of each
+  :journalAcronym[] article were and continue to be
+  generated from the same LaTeX source, to ensure that the contents match.
+
+:li <em>Ensure that journal, transactions, and magazine articles are
+  professionally copy-edited</em>
+
+  This is done for every :journalAcronym[] article.
+
+:li <em>Ensure consistent formatting of articles in each publication</em>
+
+  Authors of accepted manuscripts are provided with 
+  <a href="http://www.acm.org/pubs/submissions/submission.htm">style files</a> 
+  to ensure consistent
+  formatting. The final version the authors provide is identical to that
+  which appears, down even to the fonts employed, modulo subsequent copy editing.
+
+:li <em>Make publications available at low cost to individual
+  subscribers, for the current year and for all previous years</em>
+
+  :journalAcronym[] is available to individual subscribers for $39 per year (four
+  issues) for ACM Members, $34 per year for ACM Student Members, and $164
+  for nonmembers. An electronic subscription is $31 for members, $27 for
+  student members, and $131 for non-members. A combined print and online
+  subscription is $47 for ACM Members, $41 for ACM Student Members, and $197
+  for nonmembers. The online subscription includes all previous years: the
+  ACM Digital Library contains all issues back to issue 1 of volume 1, published in
+  March 1976.
+
+:li <em>Take into account the needs of readers in economically emerging
+  countries and in economically undeveloped countries</em>
+
+  Like all ACM publications, :journalAcronym[] has a sliding subscription rate for
+  such readers.
+
+:li <em>Enable fast access to the electronic version of each article,
+  throughout the world</em>
+
+  ACM has invested considerable funds so that all readers have fast access.
+
+:li <em>Permit low cost  purchasing of individual copies of articles
+  (printed or electronic version).</em>
+
+  Single print copies are $18 each to ACM members and $40 to nonmembers;
+  single electronic copies are $5 and $10, respectively.
+:ule
+
+:section[Authors]
+
+The policy partitions the right of authors into three parts, corresponding
+to the phases a submitted paper goes through: reviewing, processing of
+accepted works, and dissemination.
+
+:subsection[Reviewing]
+
+<em>When an author makes a submission, a confidential review process is
+initiated. The aim of the review process is to make an appropriate and
+timely decision on whether a submission should be published. ... Thus
+authors can expect ACM to</em>
+
+:uls
+:li <em>Keep them informed on the status of their submission</em>
+
+  Currently communication of progress of the review of a submission is
+  handled via email from the Associate Editor handling the submission.
+
+  :journalAcronym[] is implementing an online manuscript tracking system that will
+  afford authors more information on the status of the processing of
+  manuscripts they have submitted. 
+
+:li <em>Use impartial reviewers</em>
+
+  This has been a policy of :journalAcronym[] from the beginning.
+
+:li <em>Issue timely review and clear feedback</em>
+
+  Reducing the turn-around time for submitted manuscripts has been a priority.
+  For all manuscripts
+  submitted between July 1, 2001 and March 30, 2002 (the latest date for
+  which statistics are available, as I write this on October 2, 2002), the
+  average time required to process a manuscript, from submission to
+  editorial decision, is 4.3 months. This interval
+  has been quite constant over the past six months or so.
+
+  Also of interest is the <em>maximum</em> turn-around time. This value had jumped
+  around a lot, but is now settling down. We are committed to bounding the
+  maximum turn-around time to 6 months.
+
+:li <em>Maintain confidentiality.</em>
+
+  This has also been a policy of :journalAcronym[] from the beginning.
+
+:ule
+
+:subsection[Processing of Accepted Works]
+
+<em>Once a submission has been accepted, authors can expect ACM to publish the
+work in a timely and professional manner. Authors can expect to have
+approval of all changes to the work. In addition, ACM will strive to not
+cause authors to perform unnecessary work .... Thus authors can expect ACM to</em>
+
+:uls
+:li <em>Provide reasonable time to fix galleys for journal, transactions,
+  and magazine articles</em>
+
+  :journalAcronym[] keeps authors abreast of where their paper is in the production
+  process, and gives authors at least a week to check proofs.
+
+:li <em>Note all copy-editing changes for journals and transactions</em>
+
+  The production process for :journalAcronym[] provides a marked-up copy of the
+  original draft, along with the updated copy, so that authors know exactly
+  what changes were made to their paper.
+
+:li <em>Seek author approval of the final copy for journal, transactions,
+  and newsletter articles</em>
+
+  This has been a policy of :journalAcronym[] at least with the new production process
+  instituted several months ago.
+
+:li <em>Not introduce errors in the production process</em>
+
+  Now that :journalAcronym[] uses LaTeX (the formatter of choice for most
+  submissions) internally in its production process, the number of errors
+  introduced has gone down significantly, as most papers need not be
+  converted.
+
+:li <em>Add no material without the corresponding author's approval</em>
+
+  ACM always checks with authors on copy-editing changes to :journalAcronym[] articles.
+
+:li <em>Be financially responsible for its own internal preparation
+  costs</em>
+
+  The subscription rate for :journalAcronym[] has been kept low by careful selection of
+  vendors by the ACM publications staff.
+
+:li <em>Ensure metadata accuracy for journal, transactions, and magazine
+  articles.</em>
+
+  ACM goes to great lengths to ensure that the metadata in its Digital
+  Library is accurate.
+:ule
+
+:subsection[Dissemination]
+
+<em>Publication is only a part of the broader goal of disseminating ideas and
+results.  Authors can expect ACM to contribute to this wider goal, and in
+particular to encourage dissemination in multiple forums. ... Thus authors can
+expect ACM to</em> 
+
+:uls
+:li <em> Allow a submission to be posted on home pages and public
+  repositories before and after review</em>
+
+  <a href="http://info.acm.org/pubs/copyright_policy">The ACM Copyright 
+  Policy</a> is quite explicit (and
+  author-friendly) on this point: "As part of their retained rights,
+  authors may revise their ACM-copyrighted work and post the new version on
+  non-ACM servers (personal, employer, or CoRR.)"
+
+:li <em>Allow an authors' version of their own ACM-copyrighted work on
+  their personal server or on servers belonging to their employers</em>
+
+  The copyright policy is also explicit on this point. "Authors may post an
+  author-version of their own ACM-copyrighted work on a personal server or
+  on a server belonging to their employer, but they may not post a copy of
+  the definitive version that they downloaded from ACM's Digital
+  Library."
+
+:li <em>Allow metadata information, e.g., bibliographic,
+  abstract, and keywords, for their individual work to be openly available</em>
+
+  This holds for all ACM publications.
+
+:li <em>Allow authors the right to reuse their figures in their own
+  subsequent publications for which they have granted ACM copyright</em>
+
+  This holds for all ACM publications.
+
+:li <em>Provide statistics for each journal, transaction, and newsletter
+  on its average turn-around time and its current backlog of articles.</em>
+
+  :journalAcronym[] is the first database journal, the first ACM journal, and indeed
+  the first journal that I am aware of, that 
+  <a href="http://www.acm.org/tods/Statistics.html">publishes 
+  its turn-around performance</a>
+  for all to see.
+
+  The current backlog of articles is also maintained 
+  (<a href="http://www.acm.org/tods/Upcoming.html">here</a>). 
+  Authors can judge for themselves how responsive the journal is.
+:ule
+
+:section[Reviewers]
+
+<em>ACM recognizes that the quality of a refereed publication rests primarily on
+the impartial judgment of their volunteer reviewers. ... Thus reviewers can
+expect ACM to</em>
+
+:uls
+:li <em>Maintain their anonymity</em>
+
+  This has been :journalAcronym[] policy from the beginning.
+
+:li <em>Ask them if they are willing to review before the submission is
+  sent to them. The deadline for the review will accompany its request.</em>
+
+  Reviewers are always asked first if they would be willing to review a paper.
+
+:li <em>Provide guidelines on what constitutes a reviewing conflict of
+  interest</em>
+
+  There is a stated <a href="http://www.acm.org/tods/COI.html">conflict 
+  of interest policy on the :journalAcronym[] web site</a>.
+  This policy is consistent with general ACM guidelines.
+
+:li <em>Request them to review only submissions for which the editor
+  feels they have expertise, and request only a limited number of reviews
+  over the course of a year</em>
+
+   The :journalAcronym[] Editorial Board very carefully chooses reviewers for submitted
+   manuscripts.
+
+   :journalAcronym[] strives to not overload referees. Specifically, :journalAcronym[] now has an
+   explicit policy that referees will be expected to review at most one
+   :journalAcronym[] paper in any twelve-month period.
+
+   There are some provisos and exceptions to this policies. Informal
+reviews and reviews of revised manuscripts can be quicker than two
+months. Revised papers should be reviewed by the same referees, and this
+review will probably occur within the twelve months, but that will just
+extend the required interval before the next review. And referees are
+welcome to volunteer for more reviewing than the maximum of one formal
+review per year, if they wish.
+
+:li <em>Recognize that they have the right to decline a requested review</em>
+
+  The :journalAcronym[] Editorial Board policy is explicit on this right.
+
+:li <em>Give a reasonable length of time for a review, where the
+  particular length of time depends on the publication</em>
+
+   :journalAcronym[] now has an explicit policy to allow at least two months for an initial
+   formal review.
+
+:li <em>Not routinely ask them to make up for delays introduced by other
+  participants in the reviewing cycle</em>
+
+  :journalAcronym[] has procedures in place to ensure that delays do not occur in the
+  first place.
+
+:li <em>Not ask them to provide reviews for submissions that do not
+  satisfy either stated publications requirements (e.g., page count
+  restrictions) or which are obviously inappropriate for the publication</em>
+
+  The Editorial Board routinely desk rejects submissions that are
+  inappropriate or that do not satisfy stated requirements.
+
+:li <em>Acknowledge their efforts in the publication process, while
+  maintaining confidentiality of which submissions they reviewed</em>
+
+  :journalAcronym[] periodically publishes the collected names of reviewers.
+  :journalAcronym[] employs single-blind reviewing. The identity of the reviewers of a
+  manuscript will never be revealed to the authors or to the other reviewers.
+
+:li <em>Inform them of the editorial decisions for the submission,
+  including the author-visible portion of reviews</em>
+
+  It is explicit :journalAcronym[] policy that the author-visible portion of reviews as
+  well as the final editorial decision be provided to the reviewers once an
+  editorial decision has been made. 
+
+:li <em>Tell them who will see their review</em>
+
+  Other than those just listed, no one else will be shown the reviews. 
+
+:li <em>Recognize that reviewers own the copyright for their reviews.</em>
+
+  This holds for all ACM publications.
+:ule
+
+:section[Libraries]
+
+<em>In addition to reader rights, libraries can expect ACM to</em>
+
+:uls
+:li <em>Provide institutional access to electronic versions at a
+  reasonable price and take into account the needs of economically emerging
+  and economically undeveloped countries</em>
+
+  ACM has very reasonable institutional subscription rates, both for
+  individual journals and for the ACM Digital Library as a whole. These
+  rates are on a sliding scale.
+
+:li <em>Enable fast access to the electronic versions throughout the
+  world</em>
+
+  The effort that has gone into providing fast access to individual
+  subscribers also benefits patrons of libraries that have electronic subscriptions.
+
+:li <em>Provide ongoing access, upon request, to electronic content to
+  which a library has electronically subscribed, for the subscription
+  period, should the subscription ever be canceled or should ACM remove
+  titles from their electronic products, possibly for a fee</em>
+
+  This provides assurance that libraries will always have access to the
+  electronic content that they subscribed to.
+
+:li <em>Respect fair use provisions of US copyright law</em>
+
+  This has always been ACM policy.
+
+:li <em>Allow libraries to fill interlibrary loan requests, for teaching,
+  research, and other not-for-profit uses.</em>
+
+  This has always been ACM policy.
+:ule
+
+:section[References]
+<a name="SN02">
+Richard T.&nbsp;Snodgrass, 
+"<a href="http://doi.acm.org/10.1145/503124.503152">Progress on ACM's 
+Becoming the Preferred Publisher</a>,"
+<em>Communications of the ACM</em>, 45(2):colon[]97-98, February, 2002.</a>
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[Rights of TODS Readers, Authors and Reviewers]

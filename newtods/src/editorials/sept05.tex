@@ -1,0 +1,242 @@
+\documentclass[11pt]{article}
+
+\usepackage{multicol}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{epsfig}
+
+\textheight 9in
+\textwidth 6.5in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin -.5in
+\pagestyle{empty}
+\newcommand{\setspace}[1]{\renewcommand{\baselinestretch}{#1}\large\normalsize}
+\setspace{1.1}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\topfraction}{0.9}
+\newcommand{\tods}{{\em TODS\/}}
+
+\begin{document}
+\begin{center}
+{\Large\bf CMM and {\em TODS}}\\[2ex]
+{\large\it  Richard Snodgrass}\\[1ex]
+{\tt rts@cs.arizona.edu}\\[3ex]
+\end{center}
+
+The {\em Capability Maturity Model}~\cite{CMM} is an orderly way for
+organizations to determine the capabilities of their current processes for
+developing software and to establish priorities for improvement~\cite{Humphrey}. It
+defines five levels of progressively more mature process
+capability~\cite{Paulk}.
+
+\begin{description}
+\item[Level 1: Initial] The software process is characterized as ad hoc, and
+  occasionally even chaotic. Few processes are defined, and success depends
+  on individual effort.
+
+\item[Level 2: Repeatable] Basic project management processes are
+  established to track cost, schedule, and functionality. The necessary
+  process discipline is in place to repeat earlier successes on projects
+  with similar applications.
+
+\item[Level 3: Defined] The software process for both management and
+  engineering activities is documented, standardized, and integrated into an
+  organization-wide software process. All projects use a documented and
+  approved version of the organization's process for developing and
+  maintaining software. This level includes all the characteristics defined
+  for level 2.
+
+\item[Level 4: Managed] Detailed measures of the software process and
+  product quality are collected. Both the software process and products are
+  quantitatively understood and controlled using detailed measures. This
+  level includes all the characteristics defined for level 3.
+
+\item[Level 5: Optimizing] Continuous process improvement is enabled by
+  quantitative feedback from the process and from testing innovative ideas
+  and technologies. This level includes all the characteristics defined
+  for level 4.
+\end{description}
+
+You may be asking, what does a maturity model for software development have
+to do with databases generally and with \tods\ in particular? Well, CMM has
+been applied to personnel management, quality management, and even weapons
+system development. And it can be used as a framework for evaluating the
+journal review process, as we will do here.
+
+Manuscript review at \tods\ started, logically, at Level 1. In 2001, the ACM
+Publications Board approved a broad
+policy~\cite{ACMPubs,SnodgrassCACM,SnodgrassSIGMOD} that raised publishing
+of ACM journals and transactions to Level 2. In 2003 ACM adopted the
+Manuscript Central\footnote{\tt http://acm.manuscriptcentral.com} web-based
+manuscript tracking system~\cite{SnodgrassMC}, raising its manuscript
+reviewing process to Level 3.
+
+In parallel with these efforts at the ACM Publications Board level, I have
+been refining the reviewing process for \tods. In October 2003 I released
+the first edition of the {\bf {\em ACM TODS} Associate Editor Manual}, with
+revisions in April 2004 and October 2004. This manual, at 22 pages, is quite
+detailed. 
+
+I have also been collecting detailed statistics since
+July 2001. Some of these statistics are
+reported on the \tods\ web site\footnote{\tt
+http://www.acm.org/tods/TurnaroundTime.html}: turnaround time, article
+length, number of articles, and end-to-end time~\cite{SnodgrassSIGMOD}. I
+have also kept records on the turnaround time of individual Associate
+Editors, and have closely monitored the progress of individual papers.
+
+Through these efforts, and through a series of internal policies regarding
+the reviewing process that has been adopted by the \tods\ Editorial Board,
+all of the statistics has improved, some
+considerably~\cite{SnodgrassSept03}. Average turnaround time is now down to
+13 weeks, average article length has been brought down to levels last seen
+in the mid-1990s (under 40 pages), the number of articles per volume is back
+up to that last experienced in the early 1990's (21 articles per year), and
+average end-to-end time is down to 17 months, last experienced in the
+1970's.
+
+The result is that \tods\ is now operating at CMM Level 5.
+
+Why should you, dear reader, care about internal processes at \tods?
+The short answer is that by being at Level 5, \tods\ can provide assurances
+as to how {\em your} submission will be handled.
+
+Average turnaround and end-to-end times are nice, but what authors really
+care about is how long {\em their} submission will take to be
+reviewed. Addressing this concern involves both average and {\em maximum}
+times. A low average turnaround time is of little reassurance to someone
+experiencing an abnormally long turnaround time. As an example, while the
+average turnaround time for papers submitted in January 2002 to \tods\ was a
+quite reasonable 5.5 months, one paper submitted that month had to wait
+almost nine (!) months for a decision.
+
+By virtue of being at CMM Level 5, the variance of the turnaround time could
+be monitored and improved, as shown in Figure~\ref{fig:turnaround}.
+
+The turnaround time has been slowly decreasing over the past four years.
+This figure shows four sets of data. The bottom line is the {\em average
+turnaround time}, a moving average of the turnaround time for papers
+submitted in the indicated month. To smooth monthly variations, the moving
+average includes all of the submissions for the previous year. Each data
+point represents dozens of papers. The value for January 2005, 12.5 weeks,
+is the average turnaround time for all of the papers submitted between
+(inclusive) February 2004 and January 2005.
+
+The next line up is the average turnaround time for external reviews only, a
+moving average of the turnaround time for papers submitted in the indicated
+month. This includes only submissions that went out to external reviewers
+and specifically excludes desk rejects. The value for January
+2005, \hbox{15.6~weeks}, is the average turnaround time for external reviews
+of all the papers submitted during the year up through January 2005.
+
+The points, one per month, denote the maximum or peak turnaround time for
+submissions in the indicated month. Each point represents a single,
+unusually slow paper submitted during the indicated month. For all the
+papers submitted in January 2005, the longest turnaround time was 4.9
+months (21 weeks).
+
+In terms of turnaround time, \tods\ at 12.5 weeks is now equivalent to
+conferences (as exemplified by \hbox{SIGMOD} and PODS at 12 weeks), while
+being more flexible in not imposing a submission deadline.
+
+The straight line is the {\em committed maximum turnaround time}, the
+boundary that the Editorial Board has committed to not exceed, for any
+submission. Several years ago the Editorial Board established a formal
+policy stating its commitment to providing an editorial decision within 6
+months~\cite{SnodgrassSept03}. \tods\ thus joined conferences in
+guaranteeing a stated turnaround time.
+
+Due to the rigorous application of CMM Level 5, of continuous process
+improvement as exemplified by the steady lowering of average turnaround time
+and the compression of the variance in turnaround time by a factor of two,
+I can announce that the Editorial Board is now committed to providing an
+editorial decision within {\em five} months, starting with submissions in
+2004. As depicted in the figure., we have met this stated commitment for the
+past thirteen months. As of the writing of this column (June 29, 2005),
+all manuscripts submitted before February 1 of this year have been processed
+and editorial decisions rendered.
+
+\begin{figure}[t]
+\begin{center}
+\epsfig{figure=sep05tt.eps,width=4.5in}
+\end{center}
+\caption{ACM {\em TODS} Turnaround Time\label{fig:turnaround}}
+\end{figure}
+
+That \tods\ now matches conferences in terms of turnaround time is a
+testament to the hard work of two groups of people: reviewers and the
+editorial board. I will recognize the reviewers in a future column, but here
+I wish to thank the following people, who comprise the \tods\ Editorial
+Board, for their dedicated effort work in achieving very fast decisions
+while upholding very high standards.
+
+\vspace{4ex}
+
+\begin{multicols}{2}
+\noindent
+Surajit Chaudhuri, Microsoft Research\\
+Jan Chomicki, SUNY Buffalo\\
+Mary Fernandez, AT\&T Labs\\
+Michael Franklin, Univ.~of California at Berkeley\\
+Luis Gravano, Columbia University\\
+Ralf Hartmut G\"{u}ting, Fernuniversit\"{a}t Hagen\\
+Richard Hull, Bell Labs\\
+Christian S. Jensen, Aalborg University\\
+Hank Korth, Lehigh University\\
+\\
+Donald Kossmann, ETH Zurich\\
+Heikki Mannila, University of Helsinki\\
+Z. Meral \"Ozsoyo\v{g}lu, Case Western Reserve\\
+Raghu Ramakrishnan, University of Wisconsin
+Arnie Rosenthal, MITRE\\
+Betty Salzberg, Northeastern University\\
+Sunita Sarawagi, IIT Bombay\\
+Dan Suciu, University of Washington\\
+Jennifer Widom, Stanford University\\
+\end{multicols}
+
+\noindent
+These 18 people are providing a truly valuable service to readers, to
+authors, and to reviewers. When you see these people, please thank them
+personally for their role in achieving quick reviews of submitted papers.
+
+\pagebreak
+
+\begin{thebibliography}{[10]}
+
+\bibitem{ACMPubs}
+ACM Publications Board, ``Rights and Responsibilities in ACM Publishing,''
+approved June 27, 2001. ({\tt http://www.acm.org/pubs/rights.html})
+
+\bibitem{Humphrey}
+Watts S.~Humphrey, {\bf A Discipline for Software Engineering},
+Addison-Wesley, 1995.
+
+\bibitem{Paulk}
+M.~C.~Paulk, Bill Curtis, and M.~B.~Chrisis, ``Capability Maturity Model for
+Software, Version 1.1,'' Software Engineering Institute Technical Report,
+CMU/SEI-93-TR, February 24, 1993.
+
+\bibitem{CMM}
+SEI, {\bf The Capability Maturity Model: Guidelines for Improving the Software
+Process}, Software Engineering Inst. Carnegie Mellon Univ., Addison-Wesley,
+1995.
+
+\bibitem{SnodgrassCACM}
+Richard T.~Snodgrass, ``Rights and Responsibilities in ACM Publishing,''
+{\em CACM} 45(2): 97--101, February 2002.
+
+\bibitem{SnodgrassSIGMOD}
+Richard T.~Snodgrass, ``Rights of {\em TODS} Readers, Authors and
+Reviewers,'' {\em SIGMOD Record}, 31(4):5--9, December 2002.
+
+\bibitem{SnodgrassMC}
+Richard T.~Snodgrass, ``ACM {\em TODS} in this Internet Age,'' {\em
+  SIGMOD Record}, 32(1):4--5, March 2003.
+
+\bibitem{SnodgrassSept03}
+Richard T.~Snodgrass, ``Journal Relevance,'' {\em SIGMOD Record},
+31(3):11--15, September 2003.
+\end{thebibliography}
+\end{document}

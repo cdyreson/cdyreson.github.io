@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/Dimensions.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Dimensions">NAME Dimensions</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#convert_string_dimension_string">convert(string dimension, string value)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Dimensions">NAME Dimensions</A></H1>
+<P>
+This class encapsulates the conversions from literals to dimension values.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+The semistructure has various associated property space dimensions, which
+are defined over different domains. This package configures those domains
+by providing a method to convert constants in that domain to the
+appropriate type, e.g., 
+<A HREF="./Domains/Integer.html">Domains::Integer</A>. See <A HREF="./../lib/Domains.html#">the Domains manpage</A> for the supported types.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="convert_string_dimension_string">convert(string dimension, string value)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string dimension</A></STRONG>
+<P>
+- The name of the dimension.
+
+<LI><STRONG><A NAME="item_string">string value</A></STRONG>
+<P>
+- The string value to convert.
+
+</UL>
+<P>
+Creates a new value of the appropriate domain type from the passed string.
+Dies if there is no such dimension! This should be patched to an
+appropriate validation check.
+
+</BODY>
+
+</HTML>

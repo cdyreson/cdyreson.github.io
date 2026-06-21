@@ -1,0 +1,230 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Welcome to the Morph Query Language Home Page</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#E0E0E1" align=right valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td><a style="text-decoration:none"
+                 href="http://www.cs.usu.edu/~cdyreson/pub/Morph/images/closestGraph.png"><img 
+                    src="http://www.cs.usu.edu/~cdyreson/pub/Morph/images/closestLogo.png" 
+                    alt="TTXPath logo" 
+                    height="80"
+                    border="0"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#E0E0E1">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#E0E0E1">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#E0E0E1"> 
+              <big>Welcome to the Morph Query Language Home Page</big>
+              <br>
+              <font color="#800000" size="2">
+              Flexible Querying for XML<br>
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#E0E0E1">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/tutorial.htm">
+              Tutorial&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/demo/index.htm">
+              Demo&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/download.htm">
+              Download&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/publications.htm">
+              Publications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+<h3>Morph Overview</h3>
+By imposing a single hierarchy on data, XML makes queries brittle 
+in the sense that a query might fail to produce the desired result if 
+it is executed on the same data organized in a different hierarchy, or if 
+the hierarchy evolves during the lifetime of an application. 
+<P>
+Morph is a new, more flexible XML query language.
+Morph is a <i>shape polymorphic</i> query language, that is, 
+a single query can extract relevant data from a variety of 
+differently shaped hierarchies as illustrated in the following
+figure. The same <i>query</i> is evaluated over different 
+hierarchies to produce the same <i>result</i>.
+<P>
+<img src="images/shapePolymorphism.png"/>
+<P>
+The Morph data shredder distills an XML data collection into 
+a graph of closest relationships. These relationships are 
+exploited by the Morph query evaluation engine to construct 
+a data collection to the shape specified in a query. 
+<P>
+<h3>Morph Team</h3>
+<ul>
+<li>
+Assistant Professor <a href="http://www.cs.usu.edu/~cdyreson">Curtis Dyreson</a>,
+Utah State University
+</li>
+<li>
+Associate Professor <a href="http://www.ntu.edu.sg/home/assourav/">Sourav Bhowmick</a>, Nanyang Technological University
+</li>
+<li>
+Dr. Shuohao Zhang, Washington State University and now in industry
+</li>
+<li>
+Master's student Kirankanth Mallampalli, Utah State University
+</li>
+<li>
+Master's student Aswani Rao Jannu, Utah State University
+</li>
+</ul>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson">Curtis E. Dyreson</a> 
+     &copy; 2009. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#E0E0E1">&nbsp;</td>
+    <td colspan=2 bgColor="#E0E0E1" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

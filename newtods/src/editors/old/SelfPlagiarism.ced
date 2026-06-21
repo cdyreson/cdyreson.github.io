@@ -1,0 +1,175 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved April 14, 2003, amended March 15, 2005, amended April 20, 2005</b>
+
+(For context, 
+<a href="SelfPlagiarism_v2.html">here is the entire (older) Self-Plagiarism 
+policy</a> that became current on
+March 15, 2005, and which is amended here. This new April 20 policy
+adds the last three paragraphs, on the AE's role, with a new Prior
+Publication Policy Prescreen.)
+
+Self-plagiarism is when an author reuses portions of his or her previous
+writings in subsequent research papers. 
+It is important that :journalAcronym[] have a very clear policy on this. 
+In fact, :journalAcronym[] is in pretty good shape already.
+:uls
+
+:li :journalAcronym[]
+ has the 30% rule for submitting extensions of previous work:
+  <a href="http://www.acm.org/tods/editors/30PercentRule.html"
+  >http://www.acm.org/tods/editors/30PercentRule.html</a> 
+  (this is for editors only).
+
+:li :journalAcronym[]
+ has a carefully-worded prior publication policy:
+  <a href="http://www.acm.org/tods/Authors.html#PriorPublicationPolicy"
+  >http://www.acm.org/tods/Authors.html#PriorPublicationPolicy</a> 
+  (this is public).
+:ule
+
+There are several points that should be emphasized, but aren't.
+
+:uls
+:li The authors should tell the editor about any paper by authors of the
+  :journalAcronym[]
+ submission that overlaps significantly with the :journalAcronym[]
+ submission.
+
+     We don't want to overload either the AE or the reviewers with
+      additional expectations that they do a thorough search for
+      self-plagiarism. The benefit doesn't seem to outweigh the cost.
+
+:li The policy should be explicit on what kinds of papers should be
+    examined for overlap.
+
+:li We should be explicit on when the author is required to inform the
+  editor of overlap (it could be any time in-between the time of
+  submission and time of acceptance). For example, an invited paper
+  could be created and published after the :journalAcronym[]
+ paper is submitted,
+  so it is not enough to require the author to describe overlap
+  when a paper is submitted.
+
+:li We should also be explicit on how the author should inform the
+      editor of overlap.
+
+:li Such overlapping papers should be cited by the :journalAcronym[]
+ paper.
+
+:li The penalty for excessive self-plagiarism should be explicit.
+
+:li We should mention this requirement in the acknowledgment letter.
+
+:ule
+The following paragraph has been added to the acknowledgment letter sent
+to the corresponding author.
+
+:quote[
+The :journalAcronym[] web site has a
+ Prior Publication Policy at
+<a href="http://www.acm.org/tods/Authors.html#PriorPublicationPolicy"
+>http://www.acm.org/tods/Authors.html#PriorPublicationPolicy</a>.
+   which lists specific responsibilities that you have with regard to
+   papers by any author of this submission that are in submission, have
+   been accepted for publication, or have been published. Please read
+  that policy to ensure that you are meeting these responsibilities.
+]
+
+The following policy should replace that in the public web page on 
+Information for Authors
+(<a href="http://www.acm.org/tods/Authors.html#PriorPublicationPolicy"
+>http://www.acm.org/tods/Authors.html#PriorPublicationPolicy</a>).
+
+:quote[
+<b>Prior Publication Policy</b>
+
+The technical contributions appearing in ACM journals are normally
+original papers that have not been published elsewhere.
+
+A submission based on one or more papers that appeared elsewhere must
+have major value-added extensions over what appeared previously. For
+conference papers, there is little scientific merit in simply sending
+the submitted version to a journal after the paper has been accepted
+for the conference. The scientific community gains little from this.
+
+Widely disseminated refereed conference proceedings, in addition to
+journal papers, are considered publications, but technical reports and
+CORR articles (neither of which are peer reviewed) are not.  All
+overlapping papers appearing in workshop proceedings and newsletters
+should be brought to the editor's attention; they may be considered
+publications if they are peer reviewed and widely disseminated.
+
+<i>Novelty Requirement</i>
+
+A submitted manuscript that is based on one or more previous publications by
+one or more of the authors should have at least 30% new material. The new
+material should be content material: For example, it should not just be
+straightforward proofs or performance figures that do not offer substantial,
+new insights. The submitted manuscript affords an opportunity to present
+additional results, for example by considering new alternatives or by
+delving into some of the issues listed in the previous publication(s) as
+future work. At the same time, it is not required that the submitted
+manuscript contain all of the material from the published paper(s). To the
+contrary: only enough material need be included from the published paper to
+set the context and render the new material comprehensible.
+
+<i>Disclosure Requirement</i>
+
+This requirement concerns any paper by any
+author of the :journalAcronym[] submission that overlaps significantly with the :journalAcronym[] 
+submission and: (a) is in submission, (b) has been
+accepted for publication, or (c) has been published at the time of
+submission. An overlap is significant when it exceeds a page of the :journalAcronym[]
+submission or when the overlap concerns content material in the :journalAcronym[]
+submission, regardless of length.
+
+:ols
+:li Papers in categories (b) and (c) should be referenced by the :journalAcronym[]
+   submission and discussed in the related work section of the
+   submission at a level of detail similar to the level of detail used
+   in the coverage of related work by other authors. Papers that enter
+   into the categories (b) and (c) during the handling of the :journalAcronym[]
+   submission should be afforded the same coverage in the first
+   revision where this is possible.
+
+:li At the time of submission and in writing separate from the
+   submitted manuscript, the corresponding author must inform the
+   handling editor about all papers in categories (a)-(c). In
+   addition, the corresponding author should promptly inform the
+   editor about any papers that enter into categories (a)-(c) during
+   the handling of the submission.
+
+:li Should the submission be accepted for :journalAcronym[], it is good form to notify the
+   editor handling papers in category (a), for the other venues, of the
+   overlap.
+:ole
+
+Note that the novelty requirement applies to papers in categories (a)-(c).
+
+The likely outcome of a failure to comply with this Prior Publication
+Policy is rejection. In particular, the editor, at her or his
+discretion, may choose immediately to reject a submission when an
+overlapping paper is discovered about which the corresponding author
+did not adhere to the requirements stated above.
+
+AE's can help to catch cases of self-plagarism.
+The first thing an AE does when they get a paper is to do an 
+initial Prior Publication Policy Prescreen, generally as
+a quick Google or DBLP search (e.g., Google "dblp authorname").
+
+If the paper violates the prescreen, the AE has two choices.
+(1) The author is invited to rewrite the paper and resubmit,
+replacing the manuscript with one that doesn't violate the 
+policy. (2) The AE desk rejects the paper.  This would be
+totally the AE's decision.
+
+Either way, the AE would get credit for handling the paper, 
+towards their quota.
+]
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Self-Plagiarism Policy]

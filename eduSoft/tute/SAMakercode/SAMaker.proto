@@ -1,0 +1,848 @@
+&&&PERL&&& -I&&&SAMAKERDIR&&& -w
+
+#-----------------------------------------------------------------------
+
+=head1 NAME
+
+SAMaker - a program to create a Self-Assessment on the WWW
+
+=head1 SYNOPSIS
+
+ SAMaker \
+   [-help] \
+   [-verbose] \
+   [-version] \
+   [-verbatim_answers] \
+   [-embedded_text string] \
+   [-format format] \
+   -database directory \
+   -stats page \
+   -entry page < input
+
+=head1 DESCRIPTION
+
+B<SAMaker> is a program to create a self-assessment from an input
+file.
+
+=head1 EXAMPLE USAGE
+
+Create a self-assessment using the SinglePage format in the current directory
+
+ SAMaker \
+   [-help] \
+   [-verbose] \
+   [-version] \
+   [-verbatim_answers] \
+   [-embedded_text string] \
+   [-format SinglePage] \
+   -database ./dbs \
+   -stats types-stats.html \
+   -entry types.html < input
+
+=cut
+
+#-----------------------------------------------------------------------
+  use strict;
+  #require 5.002;
+ 
+  use Getopt::Long;
+  use English;
+
+  use TextDB;
+  require "SAMakerTags.pm";
+
+  require "cleanWS.pm";
+
+# Global variables
+  my $SAMAKERNAME = 'SAMaker';
+  my $VERSION = '1.2';
+  my $FORMAT = '&&&FORMATDIR&&&/SinglePage';
+  my $PATH = '';
+  my $VERBOSE = '';
+  my $SHOW_VERSION = '';
+  my $HTML_IN_ANSWERS = '';
+  my $STATS_PAGE = '';
+  my $ENTRY_PAGE = '';
+  my $SHOW_HELP = '';
+  my $HTMLBASE = '';
+  my $ROOT = '&&&ROOT&&&';
+  my $EXTENSION = '&&&EXTENSION&&&';
+  my $EMBEDDED_TEXT = '';
+
+  my @tokens = ();
+
+# Global counters
+  my $question = 0;
+  my $pageCounter = 0;
+  my $questionCounter = 0;
+  my $questionSetCounter = 0;
+
+# Assume one question per page
+  my $individualPages = 0;
+
+# Assume no parsing pattern
+  my $Pattern = "";
+
+  &ParseCommandLine();
+
+  #check to see if test directory exists
+  (-e $PATH) || die "no test directory $PATH\n";
+  #open global databases
+  my $randomdb = new TextDB();
+  $randomdb->STORE('values', []);
+
+  # Initialize the current page state;
+  my %currentPage = {};
+  $currentPage{'root'} = $ROOT;
+  $currentPage{'extension'} = $EXTENSION;
+  $currentPage{'embeddedText'} = $EMBEDDED_TEXT;
+  $currentPage{'headerText'} = '';
+  $currentPage{'returnText'} = '';
+  $currentPage{'footerText'} = '';
+  $currentPage{'questionText'} = " ";
+  $currentPage{'collectStatistics'} = 1;
+  $currentPage{'hiddenText'} = "";
+  $currentPage{'returnToWhereText'} = " ";
+  $currentPage{'caseInsensitive'} = 1;
+
+  # Initialise the default formats
+  my %formats = {};
+
+  # Initialize the lexical analyzer
+  &initTokenizer();
+  # Parse it
+  &parse();
+ 
+  # Set up hidden variables
+  my $hidden = new TextDB();
+  $hidden->STORE('path', $PATH);
+  $hidden->STORE('page', 1);
+  $hidden->STORE('collectStatistics', $currentPage{'collectStatistics'});
+  $currentPage{'hiddenText'} = $hidden->toString();
+ 
+  # Emit the entry pages
+  &emitEntryPage();
+  if ($currentPage{'collectStatistics'}) {&emitStatsPage();}
+  &emitExitPage();
+  #&emitMasterControlPage();}
+  &emitEmbeddedPage() if ($EMBEDDED_TEXT);
+ 
+  # Save the global Databases!
+  $randomdb->save("$PATH/randomdb", 0640);
+  my $statsdb = new TextDB;
+  $statsdb->STORE('statsQuestionFormat', 
+      &format($formats{'StatsQuestionFormat'}, new TextDB()));
+  $statsdb->STORE('statsPresentationFormat', 
+      &format($formats{'StatsPresentationFormat'}, new TextDB()));
+  $statsdb->save("$PATH/statsQuestiondb", 0640);
+  $randomdb->save("$PATH/randomdb", 0640);
+
+#------------------------------------------------------------------------
+# Print out the page that is the master controller
+#------------------------------------------------------------------------
+#sub emitMasterControlPage {
+#  my ($format) = $formats{'MasterControlFormat'};
+#  open(OUTMC,">$MC_PAGE") || die "Sorry, couldn't create $MC_PAGE\n";
+#  print OUTMC &format($formats{'MasterControlFormat'}, new TextDB());
+#  close(OUTMC);
+#}
+
+#------------------------------------------------------------------------
+# Print out the file with the embedded form 
+#------------------------------------------------------------------------
+sub emitEmbeddedPage {
+  my ($format) = $formats{'EmbeddedFormat'};
+  my ($thisPage) = new TextDB;
+  $thisPage->STORE('embedded', &format($formats{'EmbeddedFormat'}, new TextDB()));
+  open(FILE,">$PATH/embedded");
+  print FILE $thisPage->FETCH('embedded');
+  close FILE;
+}
+
+#------------------------------------------------------------------------
+# Print out the page that ends the whole self-assessment
+#------------------------------------------------------------------------
+sub emitExitPage {
+  my ($format) = $formats{'ExitFormat'};
+  my ($thisPage) = new TextDB;
+  $thisPage->STORE('exit', &format($formats{'ExitFormat'}, new TextDB()));
+  $thisPage->save("$PATH/exit", 0640);
+}
+
+#------------------------------------------------------------------------
+# Print out the page that begins the whole self-assessment
+#------------------------------------------------------------------------
+sub emitEntryPage {
+  my ($format) = $formats{'EntryFormat'};
+  open(OUT,">$ENTRY_PAGE") || die "Sorry, couldn't create $ENTRY_PAGE\n";
+  print OUT &format($formats{'EntryFormat'}, new TextDB());
+  print OUT "\n";
+  close(OUT);
+}
+
+#------------------------------------------------------------------------
+# Print out the page that for statistics on the self-assessment
+#------------------------------------------------------------------------
+sub emitStatsPage {
+  open(OUTS,">$STATS_PAGE") || die "Sorry, couldn't create $STATS_PAGE\n";
+  print OUTS &format($formats{'StatsFormat'}, new TextDB());
+  print OUTS "\n";
+  close(OUTS);
+}
+
+#------------------------------------------------------------------------
+# Split an individual question
+#------------------------------------------------------------------------
+sub splitQuestion {
+  my ($thisQuestion, $answerValuesRef) = @_;
+
+  # loop until we hit the next question
+  while () {
+    $_ = &cleanWS(&getToken());
+    # Do we have an explanation tag?
+    if (/$Tags::ETag/i) { $thisQuestion->STORE('explanation', &getToken());}
+    # Do we have a hint tag?
+    elsif (/$Tags::HTag/i) { $thisQuestion->STORE('hint', &getToken());}
+    # Do we have a correct answer tag?
+    elsif (/$Tags::RTag/i) { 
+      my $answerText = &cleanWS(&getToken());
+      my @text = @{ $thisQuestion->FETCH('correctAnswer') };
+      my $answerValue = $answerText;
+      $answerValue = shift @$answerValuesRef if scalar @$answerValuesRef;
+      push (@text, $answerValue);
+      $thisQuestion->STORE('correctAnswer', [ @text ]);
+      @text = @{ $thisQuestion->FETCH('answerOptions') };
+      push (@text, $answerText);
+      $thisQuestion->STORE('answerOptions', [ @text ]);
+      }
+    # Do we have an incorrect answer tag?
+    elsif (/$Tags::WTag/i) { 
+      my $answerText = &cleanWS(&getToken());
+      my @text = @{ $thisQuestion->FETCH('answerOptions') };
+      shift @$answerValuesRef if scalar @$answerValuesRef;
+      push (@text, $answerText);
+      $thisQuestion->STORE('answerOptions', [ @text ]);
+      }
+    # All other tags
+    else {
+      # put this token back
+      &ungetToken($_); 
+      # exit the loop
+      return;
+      }
+    }
+  }
+
+#------------------------------------------------------------------------
+# Construct a new page
+#------------------------------------------------------------------------
+sub buildAPage {
+  # create a new page object
+  my $thisPage = new TextDB;
+
+  # format the page
+  $thisPage->STORE('text', ' ');
+  &buildPageActions($thisPage);
+
+  # save it to disk
+  $thisPage->save("$PATH/page$pageCounter", 0640);
+}  
+
+#------------------------------------------------------------------------
+# Construct a new question
+#------------------------------------------------------------------------
+sub buildAQuestion {
+  my ($format, $multiple) = @_;
+
+  my $thisQuestion = new TextDB();
+
+  # The thing is case-sensitive
+  $thisQuestion->STORE('caseInsensitive',$currentPage{'caseInsensitive'});
+
+  # question text must be the first thing in question
+  $thisQuestion->STORE('text', &cleanWS(&getToken()));
+
+  # make the correct Answer empty
+  $thisQuestion->STORE('correctAnswer', []);
+  $thisQuestion->STORE('answerOptions', []);
+ 
+  my ($optionFormat, $questionFormat) = ('','','','');
+
+  my @answerValues = ();
+  my @toks = split(/($Tags::ValuesTag|$Tags::OptionTag|$Tags::ActualTextTag|$Tags::DefaultAnswerTag)/, $format);
+  $questionFormat = shift @toks;
+  while (@toks) {
+    my $token = shift @toks;
+    if ($token =~ /^$Tags::ValuesTag$/i) {
+      my $answerLine = &cleanWS(shift @toks);
+      @answerValues = split(",", $answerLine);
+      }
+    elsif ($token =~ /^$Tags::OptionTag$/i) {
+      $optionFormat = &cleanWS(shift @toks);
+      }
+    elsif ($token =~ /^$Tags::DefaultAnswerTag$/i) {
+      my $defaultAnswer = &cleanWS(shift @toks);
+      $thisQuestion->STORE('correctAnswer', [ $defaultAnswer ]);
+      }
+    elsif ($token =~ /^$Tags::ActualTextTag$/i) {
+      $questionFormat = &cleanWS(shift @toks);
+      }
+    }
+
+  # rest of question remains
+  &splitQuestion($thisQuestion, [ @answerValues ]);
+ 
+  # format the answer
+  my $thing;
+  my $total = '';
+  foreach $thing (@{ $thisQuestion->FETCH('answerOptions') }) {
+    $currentPage{'answerValue'} = (shift @answerValues) || '';
+    $currentPage{'answerText'} = $thing;
+    $total .= &format($optionFormat, $thisQuestion);
+    }
+
+  # multiple answers could be correct
+  my @text = @{ $thisQuestion->FETCH('correctAnswer') };
+  if ($multiple) {
+    my @correctAnswers = ();
+    foreach $thing (@text) {
+      if (!$HTML_IN_ANSWERS) { 
+        $thing = &removeHTMLfrom($thing);
+        }
+      push @correctAnswers, [ $thing ];
+      } 
+    $thisQuestion->STORE('correctAnswer', [ @correctAnswers ]);
+    }
+  else {
+    $thisQuestion->STORE('correctAnswer', [ [@text] ]);
+    }
+
+  $currentPage{'answerText'} = $total;
+  $currentPage{'answerSize'} = scalar(@{$thisQuestion->FETCH('answerOptions')});
+
+  # format question text
+  $thisQuestion->STORE('text', &format($questionFormat, $thisQuestion));
+ 
+  # set up the Standard Question stuff
+  &buildQuestionActions($thisQuestion);
+ 
+  # dump it to disk
+  $thisQuestion->save("$PATH/question$question", 0640);
+
+}
+
+#------------------------------------------------------------------------
+# strip out the HTML "special chars" like '&lt;' from a string
+#------------------------------------------------------------------------
+sub removeHTMLfrom {
+  my ($s) = @_;
+  $s =~ s/\&quot;/"/g;
+  $s =~ s/\&gt;/>/g;
+  $s =~ s/\&lt;/</g;
+  return $s;
+}
+
+#------------------------------------------------------------------------
+# build all the actions for a page
+#------------------------------------------------------------------------
+sub buildPageActions {
+  my ($thisPage) = @_;
+  $thisPage->STORE('normalAction', 
+                       &format($formats{'NormalPageFormat'},$thisPage));
+}
+
+#------------------------------------------------------------------------
+# build all the actions for a question
+#------------------------------------------------------------------------
+sub buildQuestionActions {
+  my ($thisQuestion) = @_;
+
+  $thisQuestion->STORE('normalFormat', 
+                       &format($formats{'NormalFormat'},$thisQuestion));
+  $thisQuestion->STORE('incorrectFormat', 
+                       &format($formats{'IncorrectFormat'},$thisQuestion));
+  $thisQuestion->STORE('correctFormat', 
+                       &format($formats{'CorrectFormat'},$thisQuestion));
+  $thisQuestion->STORE('hintFormat', 
+                       &format($formats{'HintFormat'},$thisQuestion));
+  $thisQuestion->STORE('explanationFormat', 
+                       &format($formats{'ExplanationFormat'},$thisQuestion));
+}
+
+#------------------------------------------------------------------------
+# parse all the CBEGIN - CEND tags, and replace if necessary
+#------------------------------------------------------------------------
+sub format {
+  my ($format, $thisQuestion) = @_;
+  my ($cbegin, $cend) = ('CBEGIN', 'CEND');
+  my %questionState = (
+    'questionNum' => $question,
+    'questionText' => $thisQuestion->FETCH('text'),
+    'hintText' => $thisQuestion->FETCH('hint'),
+    #'existsHint' => ($thisQuestion->FETCH('hint')? ' ' : '')
+    );
+  if ($thisQuestion->FETCH('hint')) {
+    $questionState{'hintText'} = $thisQuestion->FETCH('hint');
+    $questionState{'existsHint'} = ' ';
+    }
+
+  my (@tokens) = split("$cbegin|$cend", $format);
+  my $total = "";
+
+  while (@tokens) {
+    $total .= shift @tokens;
+    my ($text) = shift @tokens;
+    $total .= &substitute($text, \%questionState);
+    }
+  return $total;
+  }
+
+#------------------------------------------------------------------------
+# substitute text on a page
+#------------------------------------------------------------------------
+sub substitute {
+  my ($text, $sub) = @_;
+  
+  # exit if nothing to format
+  return '' if !$text;
+
+  my $result = '';
+  my $thing = '';
+  my @locations = ();
+  @locations = split(/\$C([A-Za-z]+)/, $text);
+
+  while (@locations) {
+    $result .= shift @locations;
+    return $result unless @locations;
+    $thing = shift @locations;
+    if (defined $$sub{$thing}) { $result .= $$sub{$thing}; }
+    elsif (defined $currentPage{$thing}) { $result .= $currentPage{$thing}; }
+    else { 
+      print "Undefined $thing\n" if $VERBOSE;
+      return ""; 
+      }  
+    }
+  return $result;
+} 
+
+#------------------------------------------------------------------------
+# parse the input
+#------------------------------------------------------------------------
+sub parse { 
+  &header(); 
+  &questions();
+  if (@tokens) { parseError("Reached end of parsing, but tokens are left?"); }
+}
+
+#------------------------------------------------------------------------
+# parse the header 
+#------------------------------------------------------------------------
+sub header { 
+  $_ = &cleanWS(&getToken()); 
+  if (/$Tags::DirectionsTag/i) {
+    # ignore this tag, only there for historical purposes
+    print "\n\nThe $Tags::DirectionsTag tag is no longer supported.\n\n";
+    # skip dummy token
+    &getToken();
+    }
+  if (/$Tags::ReturnToWhereTag/i) {
+    $currentPage{'returnText'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::RandomOrderTag/i) {
+    # ignore this tag, only there for historical purposes
+    print "\n\nThe $Tags::RandomOrderTag tag is no longer needed.\n\n";
+    # skip dummy token
+    &getToken();
+    }
+  elsif (/$Tags::TuteListTag/i) {
+    # ignore this tag, only there for historical purposes
+    print "\n\nThe $Tags::TuteListTag tag is no longer supported.\n\n";
+    # skip dummy token
+    &getToken();
+    }
+  elsif (/$Tags::HTMLBaseTag/i) {
+    $HTMLBASE = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::ClassTag/i) {
+    $ROOT .= '/' . &cleanWS(&getToken()); 
+    $currentPage{'root'} = $ROOT;
+    }
+  elsif (/$Tags::HeaderTag/i) {
+    $currentPage{'headerText'} = $HTMLBASE . &cleanWS(&getToken());
+    }
+  elsif (/$Tags::FooterTag/i) {
+    $currentPage{'footerText'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::EnableCollectStatisticsTag/i) {
+    $currentPage{'collectStatistics'} = 1;
+    # skip dummy token
+    &getToken();
+    }
+  elsif (/$Tags::DisableCollectStatisticsTag/i) {
+    $currentPage{'collectStatistics'} = 0;
+    # skip dummy token
+    &getToken();
+    }
+  elsif (/$Tags::EntryFormatTag/i) {
+    $formats{'EntryFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::StatsFormatTag/i) {
+    $formats{'StatsFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::StatsPresentationFormatTag/i) {
+    $formats{'StatsPresentationFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::StatsQuestionFormatTag/i) {
+    $formats{'StatsQuestionFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::EmbeddedFormatTag/i) {
+    $formats{'EmbeddedFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::ExitFormatTag/i) {
+    $formats{'ExitFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::CorrectFormatTag/i) {
+    $formats{'CorrectFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::IncorrectFormatTag/i) {
+    $formats{'IncorrectFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::HintFormatTag/i) {
+    $formats{'HintFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::ExplanationFormatTag/i) {
+    $formats{'ExplanationFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::QuestionFormatTag/i) {
+    $formats{'NormalFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::PageFormatTag/i) {
+    $formats{'NormalPageFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::TFormatTag/i) {
+    $formats{'TFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::FFormatTag/i) {
+    $formats{'FFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::MCFormatTag/i) {
+    $formats{'MCFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::MMFormatTag/i) {
+    $formats{'MMFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::EAFormatTag/i) {
+    $formats{'EAFormat'} = &cleanWS(&getToken());
+    }
+  elsif (/$Tags::SAFormatTag/i) {
+    $formats{'SAFormat'} = &cleanWS(&getToken());
+    }
+  else {
+    &ungetToken($_); 
+    return;
+    }
+  &header();
+}  
+  
+#------------------------------------------------------------------------
+# Print out an error message and die
+#------------------------------------------------------------------------
+sub parseError { 
+  my ($errorMessage) = @_;
+  print "\nERROR: $errorMessage";
+  print join("\n",@tokens);
+  exit(1);
+}
+
+#------------------------------------------------------------------------
+# parse questions
+#------------------------------------------------------------------------
+sub questions { 
+  # Initialize the page counter
+  $pageCounter = 0;
+  # Assume one question per page
+  $individualPages = 0;
+  # Initialize the question set counter
+  $questionSetCounter = 1;
+
+  # Expecting a questions tag 
+  $_ = &cleanWS(&getToken());
+  if (/$Tags::QuestionsTag/i) { 
+    # skip Junk token!
+    &getToken();
+    &pages(); 
+    }
+  else { parseError("$_ found when $Tags::QuestionsTag expected"); }
+  }
+
+#------------------------------------------------------------------------
+# parse each page
+#------------------------------------------------------------------------
+sub pages {
+  # Expecting a pages tag or a question set tag (first page assumed)
+  $_ = &cleanWS(&getToken());
+  if (/$Tags::PageTag/i) {
+    # we have a page
+    $individualPages = 1;
+    $pageCounter++;
+
+    # skip Junk token!
+    &getToken();
+
+    # go do questions on this page
+    &questionSets(); 
+
+    # format the page
+    &buildAPage();
+    &pages();
+    }
+  else {
+    # Assume question set tag, and one question per page
+    &ungetToken($_);
+    $individualPages = 0;
+
+    &questionSets();
+    }
+}
+
+#------------------------------------------------------------------------
+# parse all the question sets
+#------------------------------------------------------------------------
+sub questionSets {
+  # Initialize the (within a set) question counter
+  $questionCounter = 0;
+
+  # Expecting a question set tag
+  $_ = &cleanWS(&getToken());
+  if (/$Tags::QuestionsSetTag/i) { 
+    # skip Junk token!
+    &getToken();
+    # Increment the page number unless we are doing individual pages
+    $pageCounter++ unless $individualPages;
+    $questionCounter = 0;
+
+    &questionSet();
+    $questionSetCounter++;
+
+    # is it a new page per QuestionSet?
+    &buildAPage() unless $individualPages;
+    $questionSetCounter = 1 unless $individualPages;
+    &questionSets();
+    }
+  # Perhaps we've hit the end of the file?
+  else {if ($_) {&ungetToken($_);} return 1};
+  }
+
+#------------------------------------------------------------------------
+# parse a question set
+#------------------------------------------------------------------------
+sub questionSet {
+  # Increment the (within a set) question counter
+  $questionCounter++;
+  
+  # Initialize the question identifier
+  $question = "$pageCounter.$questionSetCounter.$questionCounter";
+  $_ = &cleanWS(&getToken());
+  if (/$Tags::TTag/i) {
+    &buildAQuestion($formats{'TFormat'}, 0);
+    &questionSet();
+    }
+  elsif (/$Tags::FTag/i) {
+    &buildAQuestion($formats{'FFormat'}, 0);
+    &questionSet();
+    }
+  elsif (/$Tags::MCTag/i) {
+    &buildAQuestion($formats{'MCFormat'}, 1);
+    &questionSet();
+    }
+  elsif (/$Tags::EATag/i) {
+    &buildAQuestion($formats{'EAFormat'}, 1);
+    &questionSet();
+    }
+  elsif (/$Tags::SATag/i) {
+    &buildAQuestion($formats{'SAFormat'}, 1);
+    &questionSet();
+    }
+  elsif (/$Tags::MMTag/i) {
+    &buildAQuestion($formats{'MMFormat'}, 0);
+    &questionSet();
+    }
+  else {
+    if ($questionCounter == 0) { 
+      &parseError("no questions in this question set");
+      }
+    my @tempList = @{ $randomdb->FETCH('values') };
+    @tempList[$pageCounter] = [] unless defined @tempList[$pageCounter];
+    my $listref = @tempList[$pageCounter];
+    push (@$listref, $questionCounter - 1);
+    $randomdb->STORE('values', [ @tempList ]);
+    &ungetToken($_); 
+    return;
+    }
+  }
+
+#------------------------------------------------------------------------
+# replace a token in the token queue
+#------------------------------------------------------------------------
+sub ungetToken {
+  my ($token) = @_;
+  print "UNGETTING $token\n" if ($VERBOSE);
+  unshift @tokens, $token;
+} 
+ 
+#------------------------------------------------------------------------
+# get the next token from token queue
+#------------------------------------------------------------------------
+sub getToken {
+  my ($token);
+  $token = shift @tokens;
+  return $token unless $token;
+  while ($token =~ /^\s*$Tags::IncludeTag\s*$/i) {
+    my $stream = &cleanWS(shift @tokens);
+    open(STREAM, "<$stream") || die "could not open $stream\n";
+    my $message = "\n";
+    while (<STREAM>) {
+      if (!/^%/) {$message .= $_;}
+      }
+    my @temp = @tokens;
+    @tokens = split(/$Pattern/i,$message);
+    shift @tokens;
+    foreach (@temp) {
+      push @tokens, $_;
+      }
+    $token = shift @tokens;
+    close STREAM;
+    }
+  print "--------\n$token\n" if ($VERBOSE);
+  return $token;
+} 
+ 
+#------------------------------------------------------------------------
+# tokenize the input
+#------------------------------------------------------------------------
+sub initTokenizer {
+  # set up tags
+  my $newblank = '\n\s*';
+  
+  $Pattern = "$newblank($Tags::HTMLBaseTag" .
+             "|$Tags::ExplanationFormatTag" . 
+             "|$Tags::HintFormatTag" . 
+             "|$Tags::IncorrectFormatTag" . 
+             "|$Tags::CorrectFormatTag" . 
+             "|$Tags::EntryFormatTag" .
+             "|$Tags::StatsFormatTag" .
+             "|$Tags::StatsPresentationFormatTag" .
+             "|$Tags::StatsQuestionFormatTag" .
+             "|$Tags::ExitFormatTag" .
+             "|$Tags::EmbeddedFormatTag" .
+             "|$Tags::PageFormatTag" .
+             "|$Tags::QuestionFormatTag" .
+             "|$Tags::MCFormatTag" .
+             "|$Tags::TFormatTag" .
+             "|$Tags::FFormatTag" .
+             "|$Tags::MMFormatTag" .
+             "|$Tags::SAFormatTag" .
+             "|$Tags::EAFormatTag" .
+             "|$Tags::ReturnToWhereTag" .
+             "|$Tags::DirectionsTag" .
+             "|$Tags::ClassTag" .
+             "|$Tags::RandomOrderTag" .
+             "|$Tags::TuteListTag" .
+             "|$Tags::QuestionsTag" .
+             "|$Tags::QuestionsSetTag" .
+             "|$Tags::WTag" .
+             "|$Tags::RTag" .
+             "|$Tags::HTag" .
+             "|$Tags::ETag" .
+             "|$Tags::TTag" .
+             "|$Tags::FTag" .
+             "|$Tags::MMTag" .
+             "|$Tags::MCTag" .
+             "|$Tags::SATag" .
+             "|$Tags::EATag" .
+             "|$Tags::PageTag" .
+             "|$Tags::HeaderTag" .
+             "|$Tags::FooterTag" .
+             "|$Tags::IncludeTag" .
+             "|$Tags::DisableCollectStatisticsTag" .
+             "|$Tags::EnableCollectStatisticsTag)";
+
+  # slurp standard in, ignoring comments (lines that start with %)
+  my $message = "\n";
+  while (<STDIN>) {
+    if (!/^%/) {$message .= $_;}
+    }
+
+  # gobble the bit at the end in latex2html
+  # should probably have a latex2html flag for this!!!
+  $message =~ s/<P>\s*<BR>\s*<HR>\s*<\/BODY>\s*<\/HTML>$// if !$HTML_IN_ANSWERS;
+  $message =~ s/<BR>\s*<HR>\s*<\/BODY>\s*<\/HTML>$// if !$HTML_IN_ANSWERS;
+
+  @tokens = split(/$Pattern/i,$message);
+  # ignore anything before the first tag
+  shift @tokens;
+  unshift @tokens, $FORMAT;
+  unshift @tokens, '(INCLUDE)';
+
+}
+
+#------------------------------------------------------------------------
+# ParseCommandLine() - This function parses the command line.
+#------------------------------------------------------------------------
+sub ParseCommandLine {
+  my @switches = (
+    'verbatim_answers', \$HTML_IN_ANSWERS,
+    'database=s',     \$PATH,
+    'format=s',       \$FORMAT,
+    'verbose',      \$VERBOSE,
+    'version',      \$SHOW_VERSION,
+    'stats=s',        \$STATS_PAGE,
+    'entry=s',        \$ENTRY_PAGE,
+    'embedded_text=s', \$EMBEDDED_TEXT,
+    'help',         \$SHOW_HELP,
+    );
+ 
+  &GetOptions(@switches) || die "use -help switch to display brief help\n";
+ 
+  if ($SHOW_VERSION) {
+    print "This is $SAMAKERNAME, version $VERSION\n\n";
+    exit 0;
+    }
+ 
+  if ($SHOW_HELP) {
+    print <<EofHelp;
+    $SAMAKERNAME, v$VERSION - Create a self-assessment.
+
+    Usage: 
+
+      $SAMAKERNAME  \
+         [-help] \
+         [-version] \
+         [-verbose] \
+         [-verbatim_answers] \
+         [-format format] \
+         [-embedded_text string] \
+         -database directory \
+         -stats pageName \
+         -entry pageName < input
+ 
+    Options: 
+ 
+        -help            : display this message
+        -verbose         : display verbose information as running
+        -version         : display the version of $SAMAKERNAME
+        -verbatim_answers: do not de-HTMLize correct answers
+        -format format   : the default formats to use
+        -embedded_text string: the string to but in the button 
+        -database directory  : the directory where the SA database will live
+        -stats page      : the name of the SA stats page 
+        -entry page      : the name of the SA entry page 
+EofHelp
+    exit 0;
+    }
+ 
+  $STATS_PAGE = $ARGV[2] unless $STATS_PAGE;
+  $ENTRY_PAGE = $ARGV[1] unless $ENTRY_PAGE;
+  $PATH = $ARGV[0] unless $PATH;
+ 
+}

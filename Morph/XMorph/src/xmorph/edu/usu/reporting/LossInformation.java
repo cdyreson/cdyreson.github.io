@@ -1,0 +1,62 @@
+package xmorph.edu.usu.reporting;
+
+/* 
+ * The LossInformation class holds static information related to a single
+ * evaluation of a query. The information is used for reporting purposes
+ * about error loss.
+ * 
+ * @author Curtis
+ */
+public class LossInformation {
+
+    static String information = "";
+    static public Boolean captureErrorInformation = true;
+    static public Boolean nonAdditive = true;
+    static public Boolean inclusive = true;
+
+    /* 
+     * The constructor should never be called, all methods will be static.
+     */
+    public LossInformation() {
+    }
+
+
+    /*
+     * Adds to the type information string.
+     */
+    static public void appendLn(String s) {
+        information += s + "\n";
+    }
+
+    /*
+     * Adds to the type information string.
+     */
+    static public void append(String s) {
+        information += s;
+    }
+
+    /*
+     * Get the type report information.
+     */
+    static public String report() {
+        return information;
+    }
+
+    /*
+     * Get the type report information. And clear
+     * the report.
+     */
+    static public String reportAndReset() {
+        String s = report();
+        reset();
+        return s;
+    }
+    
+    /* Reset the loss report information.
+     */
+    static public void reset() {
+        information = "";
+        nonAdditive = true;
+        inclusive = true;
+    }
+}

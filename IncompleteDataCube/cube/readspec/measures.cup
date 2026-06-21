@@ -1,0 +1,162 @@
+// JavaCup specification for a simple expression evaluator (w/ actions)
+
+//package me;
+
+import java.io.*;
+import java.util.*;
+import java_cup.runtime.*;
+import cube.globals.*;
+import cube.database.*;
+import cube.tools.*;
+import cube.persistent.*;
+
+action code {:
+  protected CupFileWriter cupFile = Main.cupFile;
+  protected LexFileWriter lexFile = Main.lexFile;
+  protected String unitName = "";
+  protected String measureName = "";
+  protected IdSet measureSet = new IdSet();
+  protected IdSet subunitSet = new IdSet();
+  public int dimension = Main.whichDimension;
+:};
+
+/* Preliminaries to set up and use the scanner.  */
+init with {: 
+  lexer.init(Main.fileName); 
+  :};
+scan with {: return lexer.next_token(); :};
+
+/* Terminals (tokens returned by the scanner). */
+terminal token     
+  PERIOD,
+  EQUALS,
+  MEASURE,
+  UNIT,
+  SEMICOLON,
+  FILTERS, 
+  AT;
+
+terminal str_token  
+  IDENTIFIER, 
+  REGULAR_EXPRESSION;
+
+/* Non terminals */
+non terminal symbol 
+  prog, 
+  measures, 
+  measure, 
+  units, 
+  unitstart, 
+  unit, 
+  unit_list, 
+  filter,
+  filters,
+  subunit, 
+  subunits;
+
+/*------------------------------------------------------------------------*/
+prog ::= 
+  measures 
+  filters 
+  SEMICOLON
+  ;
+
+/*------------------------------------------------------------------------*/
+filters ::= 
+  filter filters
+  | 
+  ;
+
+filter ::= 
+  FILTERS unit_list {:
+    cupFile.filter(Main.global.filterTable, 
+                   Main.global.filterUnitTable, 
+                   Main.global.filterMeasureTable);
+  :}
+  ;
+
+unit_list ::= 
+  IDENTIFIER:unit AT IDENTIFIER:measure {:
+    cupFile.addFilter(unit.str_val, measure.str_val);
+  :}
+  unit_list
+  |
+  ;
+
+
+/*------------------------------------------------------------------------*/
+measures ::= 
+  measure measures 
+    | 
+    ;
+
+measure ::= 
+  MEASURE IDENTIFIER:mezzz {: 
+    measureName = mezzz.str_val;
+    Id id = Convert.toId(measureName);
+    Tuple t1 = new Tuple(id, id);
+    Main.global.measureTables[dimension].insertTuple(t1);
+    measureSet = new IdSet();
+    :}
+  units {:
+    Id id = Convert.toId(measureName);
+    for (Enumeration e = measureSet.enumerate(); e.hasMoreElements(); ) {
+      Id i = (Id)e.nextElement();
+      Main.global.coarserMeasureGraphs[dimension].addEdge(i, id);
+      Main.global.finerMeasureGraphs[dimension].addEdge(id, i);
+      }
+    :}
+    ;
+
+/*------------------------------------------------------------------------*/
+units ::= 
+  unitstart unit units
+  | 
+  ;
+
+unitstart ::=   
+  UNIT IDENTIFIER:unit {:
+    unitName = unit.str_val;
+    :}
+  ;
+
+unit ::=   
+  EQUALS REGULAR_EXPRESSION:regex {:
+    cupFile.unitToMeasure(unitName, 
+                          measureName, 
+                          Main.global.unitToMeasureTables[dimension]);
+    lexFile.emitTokenRule(regex.str_val, unitName);
+    :}
+  |
+    {:
+    cupFile.unitToMeasure(unitName, 
+                          measureName, 
+                          Main.global.unitToMeasureTables[dimension]);
+    subunitSet = new IdSet();
+    :}
+  subunits {:
+    cupFile.unitToSubunits(unitName, 
+                           subunitSet, 
+                           Main.global.finerUnitGraphs[dimension]);
+    Id unitId = Convert.toId(unitName);
+    for (Enumeration e = subunitSet.enumerate(); e.hasMoreElements();) {
+      Id i = (Id)e.nextElement();
+      Main.global.coarserUnitGraphs[dimension].addEdge(i,unitId);
+      }
+    :}
+  ;
+
+/*------------------------------------------------------------------------*/
+subunits ::= 
+  subunit subunits
+  | 
+  ;
+
+subunit ::= 
+  IDENTIFIER:subunitmeasure {: 
+    measureSet.insert(Convert.toId(subunitmeasure.str_val));
+    :}
+  PERIOD IDENTIFIER:subunitunit {: 
+    subunitSet.insert(Convert.toId(subunitunit.str_val));
+    :}
+  ;

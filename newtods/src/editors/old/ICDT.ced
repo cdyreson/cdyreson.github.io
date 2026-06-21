@@ -1,0 +1,41 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved December 6, 2002</b>
+<OL>
+:li Selection of the invited ICDT papers will be done by the ICDT PC chair,
+    on the bases of high quality and perceived feasibility of being extended
+    into submissions to :journalAcronym[]. A minimum of 0 and a maximum of 
+    2 papers will be selected in December preceding the conference.
+   Additional papers could be selected for invitation to a special issue or
+   section of <i>TCS</i>.
+ 
+:li The :journalAcronym[] EiC will then invite submission of extended versions
+    of the selected papers, or a subset thereof.  Papers not invited for
+   submission in :journalAcronym[] could still be invited for the 
+   <i>TCS</i> special issue.
+ 
+    Note that :journalAcronym[] requires at least 30% new material. The new material
+    should be content material, not just the addition of obvious proofs or a
+    few more straightforward performance figures. (See the
+   <a href="http://www.acm.org/tods/Authors.html#TypesofPapers">relevant
+   :journalAcronym[] guidelines for authors</a>).
+   The invitation would go out in December, requesting a revision and
+   extension by the following June.
+ 
+:li  These submissions will be reviewed in the normal manner, but reviewers
+   will be told that the submission was invited upon the recommendation of
+    the ICDT PC chair. Acceptance is not guaranteed.  The editor handling the
+    paper will be responsible for choosing the reviewers; however, it is
+    expected that at least two of the reviewers will be ones who reviewed the
+   original ICDT submission.
+ 
+:li The papers will appear together in a :journalAcronym[] issue and 
+    will be clearly visible as being selected from ICDT.
+
+</ol>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Inviting ICDT Papers to TODS]

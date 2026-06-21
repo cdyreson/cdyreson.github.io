@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./SemiStructuredDB/Path.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_path">NAME Path</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(edge_edge)">new(Edge edge)</a></li>
+		<li><a href="#collapse()"><code>collapse()</code></a></li>
+		<li><a href="#dimensionextract(string_dimension)">dimensionExtract(string dimension)</a></li>
+		<li><a href="#clone()"><code>clone()</code></a></li>
+		<li><a href="#append(edge_edge)">append(Edge edge)</a></li>
+		<li><a href="#prepend(edge_edge)">prepend(Edge edge)</a></li>
+		<li><a href="#terminalnode()"><code>terminalNode()</code></a></li>
+		<li><a href="#startnode()"><code>startNode()</code></a></li>
+		<li><a href="#image()"><code>image()</code></a></li>
+		<li><a href="#slice(region_region)">slice(Region region)</a></li>
+		<li><a href="#resulttype()"><code>resultType()</code></a></li>
+		<li><a href="#getvalue()"><code>getValue()</code></a></li>
+		<li><a href="#presentation()"><code>presentation()</code></a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_path">NAME Path</a></h1>
+<p>Class representing a path value.
+A path is a sequence of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a>s.</p>
+<p>This package is part of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB.html">the SemiStructuredDB manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A Path is a sequence of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the Edge manpage</a>s.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(edge_edge)">new(Edge edge)</a></h2>
+<ul>
+<li><strong><a name="item_edge">edge</a></strong><br />
+</li>
+- A <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> to start the path with, this edge is
+optional.
+<p></p></ul>
+<p>Construct an empty path, or a path with one edge.</p>
+<p>
+</p>
+<h2><a name="collapse()"><code>collapse()</code></a></h2>
+<p>Fetch the collapsed path.</p>
+<p>
+</p>
+<h2><a name="dimensionextract(string_dimension)">dimensionExtract(string dimension)</a></h2>
+<p>Fetch the dimension value from the collapsed area.
+Returns a list of values.</p>
+<p>
+</p>
+<h2><a name="clone()"><code>clone()</code></a></h2>
+<p>Clone the path.</p>
+<p>
+</p>
+<h2><a name="append(edge_edge)">append(Edge edge)</a></h2>
+<ul>
+<li><strong>edge</strong><br />
+</li>
+- The <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> to append.
+<p></p></ul>
+<p>Adds an <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> to the path.</p>
+<p>
+</p>
+<h2><a name="prepend(edge_edge)">prepend(Edge edge)</a></h2>
+<ul>
+<li><strong>edge</strong><br />
+</li>
+- The <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> to prepend.
+<p></p></ul>
+<p>Prepends a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> to the start of a path.</p>
+<p>
+</p>
+<h2><a name="terminalnode()"><code>terminalNode()</code></a></h2>
+<p>Return the final node in the path.</p>
+<p>
+</p>
+<h2><a name="startnode()"><code>startNode()</code></a></h2>
+<p>Return the starting node in the path.</p>
+<p>
+</p>
+<h2><a name="image()"><code>image()</code></a></h2>
+<p>Create a formatted string of all the edges in the path</p>
+<p>
+</p>
+<h2><a name="slice(region_region)">slice(Region region)</a></h2>
+<ul>
+<li><strong><a name="item_region">region</a></strong><br />
+</li>
+- The <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the SemiStructuredDB::Region manpage</a> to slice with.
+<p></p></ul>
+<p>Slice every edge in the path using the region.
+Return 0 if no valid path results.
+Return a new sliced path if a valid sliced path exists.
+Note that this will leave the path unchanged, it generates
+a new path (this method is not a mutator).</p>
+<p>
+</p>
+<h2><a name="resulttype()"><code>resultType()</code></a></h2>
+<p>Result type is path.</p>
+<p>
+</p>
+<h2><a name="getvalue()"><code>getValue()</code></a></h2>
+<p>The value of the path is the value of the final node in the path.</p>
+<p>
+</p>
+<h2><a name="presentation()"><code>presentation()</code></a></h2>
+<p>Present this path as the final node in the path.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./ExpressionTree/Operations/Comparison.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_expressiontree::operations::comparison">NAME ExpressionTree::Operations::Comparison</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new($op,_$left,_$right)">new($op, $left, $right)</a></li>
+		<li><a href="#validate(op,_lefttype,_righttype)">validate(op, leftType, rightType)</a></li>
+		<li><a href="#resulttype()"><code>resultType()</code></a></li>
+		<li><a href="#dump($indent)"><code>dump($indent)</code></a></li>
+		<li><a href="#evaluate(state_state)">evaluate(State state)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_expressiontree::operations::comparison">NAME ExpressionTree::Operations::Comparison</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This class represents any comparison operation.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new($op,_$left,_$right)">new($op, $left, $right)</a></h2>
+<ul>
+<li><strong><a name="item_op">op</a></strong><br />
+</li>
+The comparison operation.
+<p></p>
+<li><strong><a name="item_left">left</a></strong><br />
+</li>
+<a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./ExpressionTree.html">the ExpressionTree manpage</a> - The left child
+<p></p>
+<li><strong><a name="item_right">right</a></strong><br />
+</li>
+<a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./ExpressionTree.html">the ExpressionTree manpage</a> - The right child
+<p></p></ul>
+<p>Create a new comparison operation</p>
+<p>
+</p>
+<h2><a name="validate(op,_lefttype,_righttype)">validate(op, leftType, rightType)</a></h2>
+<p>#---------------------------------------------------------------------
+  sub validate {
+    my $type = shift;
+    return ``No operation for comparison.'' unless scalar(@_);
+    my ($op) = shift;
+    return ``No left operand in comparison.'' unless scalar(@_);
+    my ($leftType) = shift;
+    return ``No right operand in comparison.'' unless scalar(@_);
+    my ($rightType) = shift;
+    return ``invalid operation $op'' unless defined $Operations{$op};
+    return undef; # passed validation!
+    }
+#---------------------------------------------------------------------</p>
+<p>
+</p>
+<h2><a name="resulttype()"><code>resultType()</code></a></h2>
+<p>Return the type of result.</p>
+<p>
+</p>
+<h2><a name="dump($indent)"><code>dump($indent)</code></a></h2>
+<p>Dump this node.</p>
+<p>
+</p>
+<h2><a name="evaluate(state_state)">evaluate(State state)</a></h2>
+<p>Evaluate the comparison operation returning a Boolean result.</p>
+
+</body>
+
+</html>

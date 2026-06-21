@@ -1,0 +1,128 @@
+:include[macros]
+:arg1[
+<b>Adopted May 7, 2005</b>
+
+The 
+<a href="http://www.acm.org/tods/Authors.html">Information to Authors page</a>
+states the following.
+<ul>
+<li>6. :journalAcronym[] will discourage excessively long papers (longer than 50
+    double-spaced pages including figures, references, etc.), and
+    unnecessary digressions even in shorter papers. This is to motivate
+    the authors to bring out the essence of their papers more clearly, to
+    make it easier for the reviewers and readers, and to allow :journalAcronym[] to
+    publish more papers in any given issue.
+</li>
+<li>7. In a similar vein, :journalAcronym[] encourages shorter submissions, including
+    even very short (say, five page) submissions. The primary criterion
+    for acceptance is improving on the state-of-the-art in some
+    significant way."
+</li>
+</ul>
+The longest article in 2003 was 63 pages long. This is longer than any
+article in the first fifteen years of :journalAcronym[], and is the fifth 
+longest article ever to appear in :journalAcronym[]. 
+The average article in 2003 was 38.7 pages.
+
+In comparison, in 1976 (volume 1), the average paper was 19.2 pages long,
+and the longest was 41 pages (!!)
+ 
+It is important to keep working to get papers down to a more manageable
+length. Readers nowadays are reticent to wade through long
+articles. Reviewers are also reticent to carefully study long submissions.
+ 
+The general approach of this policy is to gradually move submissions
+towards the final paper we would like to see.
+<ul> 
+<li>
+ The policy of 50 double-spaced pages for submissions is retained. The EiC
+  will continue to be flexible with regard to what double-spaced means (in
+  LaTeX, double spacing really generates 1.5 spacing), and also will allow
+  appendices beyond the 50 page limit.
+</li>
+<li> For papers that pass the first hurdle, that is, are not rejected after the
+  first review, the associate editor will request that the revision be
+  formatted according to :journalAcronym[] format, with a body (paper plus references,
+  but without appendices) no longer than 45 pages, with most papers given a
+  tighter limit, based on the AE's sense for the core contribution of the
+  paper.  Remaining material can be in one or more appendices, without a
+  page restriction. The AE will make this reduction of the core be a
+  requirement for the revision
+</li>
+<li>
+ When the paper is accepted, the acceptance email from the AE will state
+  that both the core of the paper (including bibliography) and the appendix
+  will appear in the ACM DL, but that only the core of the paper will appear
+  in the print copy, with a pointer to the electronic appendix. Examples
+  from the March 2004 issue include
+<ul> 
+<li>
+<a href="http://doi.acm.org/10.1145/974750.974754">Torsten Grust's paper</a>,
+      which has a four page electronic appendix
+</li>
+<li>
+<a href="http://doi.acm.org/10.1145/974750.974752">Peter Buneman's paper</a>, 
+      which has an 11-page electronic appendix,
+</li>
+<li>
+<a href="http://doi.acm.org/10.1145/974750.974756">Jennifer Widom's paper</a>,
+      which has a 13-page EA, and 
+</li>
+<li>
+<a href="http://doi.acm.org/10.1145/974750.974757">Marcelo Arenas's paper</a>,
+      which has a 7-page EA.
+</li>
+</ul>
+   This will be a requirement for acceptance of the paper.
+</li>
+<li>
+ The maximum paper length will thus be reduced to 45 pages, with most
+  papers around 25-30 pages long, through aggressive use of electronic
+  appendices. This will help reduce the average paper length, towards
+  an eventual goal of 33 pages. Electronic appendices will be of
+  unbounded length, allowing for thorough exposition of the material,
+  in an economically-feasible way.
+</li>
+<li> The ACM citation page affords the opportunity to provide access through
+  the ACM Digital Library to related materials such as technical reports,
+  experimental results, and source code. For each paper with relevant
+  associated material, either the material is added directly to the citation
+  page, or a link will be added to a separate page providing additional
+  material and links, depending on the authors' preference. It is important
+  to note that these materials and additional links are different than an
+  electronic appendix, in that the latter is refereed and the former is not.
+</li>
+</ul>
+This policy requires no changes to the public submission instructions.
+<p/>
+On October 15, 2005 the first sentence of item 6 of the Editorial Guidelines,
+which now reads
+<blockquote>
+    :journalAcronym[] will discourage excessively long papers (longer than 50
+    double-spaced pages including figures, references, etc.),
+    and unnecessary digressions even in shorter papers.
+</blockquote>
+was replaced with
+<blockquote>
+    :journalAcronym[] will discourage excessively long papers (longer than 50
+    double-spaced pages---or 50 pages in :journalAcronym[]
+    format---including figures, references, etc. but not including
+    any appendices), and unnecessary digressions even in shorter papers.
+</blockquote>
+<hr/>
+<b>Addendum of August 3, 2006</b>
+
+The following two sentences were added to "How to Prepare Final Version"
+of the Information for Authors public page.
+<blockquote>
+  	     The final version of the paper can be no longer than 45 pages
+	     in ACM format. Additional material can be placed in an electronic
+	     appendix, for which there is no a priori length restriction.
+</blockquote>
+This is a maximum. The Associate Editor handling the paper
+is encouraged to specify a shorter page limit should the paper
+warrant it.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Page Length Policy]

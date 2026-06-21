@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./SemiStructuredDB/LabelledGraph.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_labelledgraph">NAME LabelledGraph</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new($db,_$name)">new($db, $name)</a></li>
+		<li><a href="#adddimension(name,_type)">addDimension(name, type)</a></li>
+		<li><a href="#keysimage()"><code>KeysImage()</code></a></li>
+		<li><a href="#addedge(edge_edge)">addEdge(Edge edge)</a></li>
+		<li><a href="#nodesfrommatch(fromnode,_testregion)">nodesFromMatch(fromNode, testRegion)</a></li>
+		<li><a href="#match(fromnode,_testregion)">match(fromNode, testRegion)</a></li>
+		<li><a href="#roots()"><code>roots()</code></a></li>
+		<li><a href="#enumerate()"><code>enumerate()</code></a></li>
+		<li><a href="#save()"><code>save()</code></a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_labelledgraph">NAME LabelledGraph</a></h1>
+<p>Class encapsulating a persistent labelled graph.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A persistent labelled graph is a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Table.html">the OODatabase::Table manpage</a> mapping from nodes to 
+to nodes.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new($db,_$name)">new($db, $name)</a></h2>
+<ul>
+<li><strong><a name="item_%24db">$db</a></strong><br />
+</li>
+- A <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Database.html">the OODatabase::Database manpage</a>, the database where the graph will live
+<p>-item * $name</p>
+<p>- A string, the name of the graph</p>
+<p></p></ul>
+<p>Create a new persistent graph.</p>
+<p>
+</p>
+<h2><a name="adddimension(name,_type)">addDimension(name, type)</a></h2>
+<p>Add a dimension</p>
+<p>
+</p>
+<h2><a name="keysimage()"><code>KeysImage()</code></a></h2>
+<p>Return an image of all the keys in the graph.</p>
+<p>
+</p>
+<h2><a name="addedge(edge_edge)">addEdge(Edge edge)</a></h2>
+<ul>
+<li><strong><a name="item_edge">edge</a></strong><br />
+</li>
+- A labelled edge.
+<p></p></ul>
+<p>Add an edge.</p>
+<p>
+</p>
+<h2><a name="nodesfrommatch(fromnode,_testregion)">nodesFromMatch(fromNode, testRegion)</a></h2>
+<pre>
+
+=over 4</pre>
+<pre>
+
+=item * fromNode</pre>
+<pre>
+
+- A L&lt;Domains::Node&gt;, the node to start from</pre>
+<pre>
+
+=item * testRegion</pre>
+<pre>
+
+- The L&lt;Region&gt; to check</pre>
+<pre>
+
+=back</pre>
+<pre>
+
+Get the set of nodes that match the testRegion from the fromNode.
+Returns an L&lt;Domains::NodeSet&gt;, the set of nodes.</pre>
+<pre>
+
+=cut</pre>
+<pre>
+
+#---------------------------------------------------------------------
+  sub nodesFromMatch {
+    my ($self, $fromNode, $testRegion) = @_;</pre>
+<pre>
+    # retrieve the set of edges from fromNode out of the edge table
+    my ($edges);
+    my ($edgeTable) = $self-&gt;{'edges'};
+    my ($t) = $edgeTable-&gt;retrieveTuple($fromNode);
+    if ($t) { $edges = EdgeList-&gt;fromBytes($t-&gt;getValue()); }
+    else { $edges = new EdgeList($fromNode, []); }
+    my ($toSet) = new NodeSet();</pre>
+<pre>
+    # Test each edge out of this node
+    my $edgeList = $edges-&gt;enumerateEdges();
+    foreach my $edge (@{$edgeList}) {</pre>
+<pre>
+      # if it matches...
+      if ($edge-&gt;match($fromNode, $testRegion)) {</pre>
+<pre>
+        # add the to node to the result set
+        $toSet-&gt;insert($edge-&gt;toNode());
+        }
+      }</pre>
+<pre>
+    return $toSet;
+    }
+#---------------------------------------------------------------------</pre>
+<p>
+</p>
+<h2><a name="match(fromnode,_testregion)">match(fromNode, testRegion)</a></h2>
+<ul>
+<li><strong><a name="item_fromnode">fromNode</a></strong><br />
+</li>
+- An <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/Domains/Node.html">the Domains::Node manpage</a>, the node to start from
+<p></p>
+<li><strong><a name="item_testregion">testRegion</a></strong><br />
+</li>
+- The <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a> to check
+<p></p></ul>
+<p>Matches the testRegion against the regions in the labels on edges out 
+of fromNode.  Returns a list of edges!</p>
+<p>
+</p>
+<h2><a name="roots()"><code>roots()</code></a></h2>
+<p>Return the EdgeList of root nodes.</p>
+<p>
+</p>
+<h2><a name="enumerate()"><code>enumerate()</code></a></h2>
+<p>Return a reference to the dbm file.
+
+</p>
+<p>
+</p>
+<h2><a name="save()"><code>save()</code></a></h2>
+<p>Save any changes to the persistent graph to disk.  
+
+</p>
+
+</body>
+
+</html>

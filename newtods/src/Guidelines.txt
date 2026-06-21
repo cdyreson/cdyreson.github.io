@@ -1,0 +1,86 @@
+		    ACM Transactions on Database Systems
+
+			  Guidelines for Reviewers
+
+ACM TODS recognizes that reviewing is a service to the profession; this
+publication endeavors to treat reviewers with courtesy and respect. The TODS
+web site
+
+	http://www.acm.org/tods/Referees.html#Rights
+
+lists many guarantees that TODS provides reviewers.
+
+Papers for the ACM Transactions on Database Systems (TODS) must be of high
+quality and fall within the scope of the journal. There are four main
+ingredients to an acceptable paper:
+
+(1) The technical quality is high. 
+(2) The relevance to significant computations is high. 
+(3) Interest and novelty is high. 
+(4) The presentation is effective. 
+
+Few papers excel in all of these, but a substandard level in any is
+sufficient ground for rejection. Many papers require substantial revisions
+before acceptance, and reviewers should not hesitate to recommend that a
+paper be rejected pending changes that are required for completeness,
+correctness, or to substantially improve clarity.
+
+The following is a list of other considerations to be taken into account
+when reviewing a submission.
+
+1. TODS will publish outstanding papers which are "major value-added
+   extensions" of papers previously published in conferences; that is,
+   TODS will not automatically reject papers that are substantial
+   extensions of previously published conference papers. These papers
+   will go through the normal review process.
+
+   The submitted manuscript should thoroughly consolidate the material,
+   should extend it to be broader, and should more carefully cover related
+   research. It should have at least 30% new material. The new material
+   should be content material, not just the addition of proofs or a few more
+   performance figures. This affords an opportunity to describe the novel
+   approach in more depth, to consider the alternatives more
+   comprehensively, and to delve into some of the issues listed in the other
+   paper as future work.
+
+2. TODS would like to foster closer fusion of theory and systems by
+   strongly encouraging the authors of theory papers to indicate
+   applications and implementation considerations/ consequences, and
+   the authors of systems papers to indicate the use of existing
+   theoretical results and to point to possible theoretical research
+   issues. Please determine if the paper you review satisfies this
+   criterion, and, if it does not, make notes for the authors and
+   editor as to how the paper may be revised to meet the criterion.
+
+3. TODS would like to make papers it publishes more easily readable. TODS
+   strongly encourages authors to include examples where appropriate and to
+   make greater efforts to target their presentation to a broader audience
+   than specialists doing current research in the topical areas of the
+   papers.  Please determine if the paper is readable. If it is not, suggest
+   how it may be improved (e.g., by requesting illustrative examples,
+   expanded discussions on key points that are not clear, etc.)
+
+4. TODS would like to discourage excessively long papers (longer than
+   50 double-spaced pages including figures, references, etc.) and
+   unnecessary digressions even in shorter papers. This is to help the
+   authors to focus on the most important aspects of their submission,
+   to make it easier for the reviewers and readers, and to allow more
+   papers to be published in any given issue. Please determine if the
+   paper you review can be shortened without materially compromising
+   the completeness and worthiness of the paper.
+
+5. In a similar vein, TODS now encourages shorter submissions, including even
+   very short (say, five page) submissions. The primary criterion for
+   acceptance is improving on the state-of-the-art in some significant way.
+
+6. TODS also publishes focused surveys. These should be deep and will
+    sometimes be quite narrow, but would make a contribution to our
+    understanding of an important area or subarea of databases, broadly
+    defined. More general surveys that are intended for a broad-based
+    Computer Science audience or surveys that may influence other areas of
+    computing research should continue to go to ACM Computing Surveys. Brief
+    surveys on recent developments in database research are more appropriate
+    for SIGMOD Record. TODS surveys should be educational to database
+    audiences by presenting a relatively well-established body of database
+    research.
+

@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<TITLE>./Domains/CNF.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_value_">new($value)</A>
+		<LI><A HREF="#satisfiedBy_other_">satisfiedBy(other)</A>
+		<LI><A HREF="#OR_other_">OR(other)</A>
+		<LI><A HREF="#contains_">contains()</A>
+		<LI><A HREF="#dump_">dump()</A>
+		<LI><A HREF="#_initialize_string_s_">_initialize(string s)</A>
+		<LI><A HREF="#match_">match()</A>
+		<LI><A HREF="#collapse_">collapse()</A>
+		<LI><A HREF="#coalesce_">coalesce()</A>
+		<LI><A HREF="#slice_">slice()</A>
+		<LI><A HREF="#presentation_">presentation()</A>
+		<LI><A HREF="#evaluate_State_state_">evaluate(State state)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> formula in Conjunctive Normal Form.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_value_">new($value)</A></H2>
+<P>
+Create a new formula from either a string or a list of conjucts, if no
+values assume false formula.
+
+<P>
+<HR>
+<H2><A NAME="satisfiedBy_other_">satisfiedBy(other)</A></H2>
+<P>
+Does the other assignment of variables satisfy this one?
+
+<P>
+<HR>
+<H2><A NAME="OR_other_">OR(other)</A></H2>
+<P>
+Put all the conjuncts together.
+
+<P>
+<HR>
+<H2><A NAME="contains_">contains()</A></H2>
+<P>
+Does this contain the other
+
+<P>
+<HR>
+<H2><A NAME="dump_">dump()</A></H2>
+<P>
+Return a formatted dump of the object.
+
+<P>
+<HR>
+<H2><A NAME="_initialize_string_s_">_initialize(string s)</A></H2>
+<P>
+Initialize 
+<FONT SIZE=-1>CNF</FONT> structure with the passed string value. We assume
+the formula is of the form xxx, yyy, zzz, ...
+
+<P>
+<HR>
+<H2><A NAME="match_">match()</A></H2>
+<P>
+Match this one against another.
+
+<P>
+<HR>
+<H2><A NAME="collapse_">collapse()</A></H2>
+<P>
+Collapse this one with another.
+
+<P>
+<HR>
+<H2><A NAME="coalesce_">coalesce()</A></H2>
+<P>
+Coalesce this one with another.
+
+<P>
+<HR>
+<H2><A NAME="slice_">slice()</A></H2>
+<P>
+Slice this one using another.
+
+<P>
+<HR>
+<H2><A NAME="presentation_">presentation()</A></H2>
+<P>
+Present this string value.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_State_state_">evaluate(State state)</A></H2>
+<P>
+Self evaluating
+
+</BODY>
+
+</HTML>

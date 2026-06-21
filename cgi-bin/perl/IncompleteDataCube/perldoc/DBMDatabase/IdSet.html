@@ -1,0 +1,225 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/IdSet.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_IdSet">NAME IdSet</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Id_ids_">new(Id[] \@ids)</A>
+		<LI><A HREF="#fromBytes_string_b_">fromBytes(string $b)</A>
+		<LI><A HREF="#numberOfElements_">numberOfElements()</A>
+		<LI><A HREF="#memberOf_Id_id_">memberOf(Id $id)</A>
+		<LI><A HREF="#delete_Id_id_">delete(Id $id)</A>
+		<LI><A HREF="#insert_Id_id_">insert(Id $id)</A>
+		<LI><A HREF="#enumerate_">enumerate()</A>
+		<LI><A HREF="#union_IdSet_other_">union(IdSet $other)</A>
+		<LI><A HREF="#unionSelf_IdSet_other_">unionSelf(IdSet $other)</A>
+		<LI><A HREF="#intersect_IdSet_other_">intersect(IdSet $other)</A>
+		<LI><A HREF="#intersectSelf_IdSet_other_">intersectSelf(IdSet $other)</A>
+		<LI><A HREF="#toIdArrayReference_">toIdArrayReference()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+		<LI><A HREF="#import_">import()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_IdSet">NAME IdSet</A></H1>
+<P>
+Class encapsulating a set of <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>.
+
+<P>
+This package is part of <A HREF="././DBMDatabase.html#">the DBMDatabase manpage</A>. For more information on the database see the <A HREF="./DBMDatabase/Overview.html">DBMDatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="./DBMDatabase/Licence.html">DBMDatabase::Licence</A> and <A HREF="./DBMDatabase/Version.html">DBMDatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An IdSet is a data type for columns in a database <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. An IdSet cannot be used as a key.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Id_ids_">new(Id[] \@ids)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__ids">\@ids</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> reference to a list of Ids.
+
+</UL>
+<P>
+Construct a Set from a list of Ids
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_string_b_">fromBytes(string $b)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__b">$b</A></STRONG>
+<P>
+- The string to convert from (a byte image of an IdSet or <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A>).
+
+</UL>
+<P>
+Construct a new IdSet from a byte image of an <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A>
+or IdSet.
+
+<UL>
+<LI><STRONG><A NAME="item__ls">$ls</A></STRONG>
+<P>
+- An <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A> 
+
+ 
+
+</UL>
+<P>
+Construct a new IdSet from an <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A> (basically, convert the list to a set).
+
+<P>
+<HR>
+<H2><A NAME="numberOfElements_">numberOfElements()</A></H2>
+<P>
+Return the number of Ids in the set.
+
+<P>
+<HR>
+<H2><A NAME="memberOf_Id_id_">memberOf(Id $id)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__id">$id</A></STRONG>
+<P>
+- Check if this <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A> is in the set.
+
+</UL>
+<P>
+Returns true if it is, false otherwise.
+
+<P>
+<HR>
+<H2><A NAME="delete_Id_id_">delete(Id $id)</A></H2>
+<UL>
+<LI><STRONG>$id</STRONG>
+<P>
+- The <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A> to remove from the set.
+
+</UL>
+<P>
+Delete an Id from the set.
+
+<P>
+<HR>
+<H2><A NAME="insert_Id_id_">insert(Id $id)</A></H2>
+<UL>
+<LI><STRONG>$id</STRONG>
+<P>
+- The <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A> to insert.
+
+</UL>
+<P>
+Inserts an <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A> into this set.
+
+<P>
+<HR>
+<H2><A NAME="enumerate_">enumerate()</A></H2>
+<P>
+Return an enumeration of the IdSet. 
+<FONT SIZE=-1>OK,</FONT> we have to fake it in Perl since this is a Java concept (although now that 
+<FONT SIZE=-1>I</FONT> understand hash tables 
+<FONT SIZE=-1>I</FONT> think 
+<FONT SIZE=-1>I</FONT> can do it with each). So we will return the list of values in the table. Currently, only small sets should be enumerated.
+
+
+<P>
+<HR>
+<H2><A NAME="union_IdSet_other_">union(IdSet $other)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__other">$other</A></STRONG>
+<P>
+- The other <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>.
+
+</UL>
+<P>
+Union this set with the other set, and update this set with the result.
+
+<P>
+<HR>
+<H2><A NAME="unionSelf_IdSet_other_">unionSelf(IdSet $other)</A></H2>
+<UL>
+<LI><STRONG>$other</STRONG>
+<P>
+- The other <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>.
+
+</UL>
+<P>
+Union this set with the other set, and update this set with the result.
+
+<P>
+<HR>
+<H2><A NAME="intersect_IdSet_other_">intersect(IdSet $other)</A></H2>
+<UL>
+<LI><STRONG>$other</STRONG>
+<P>
+- The other <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>.
+
+</UL>
+<P>
+Intersect this set with the other set, and return the result.
+
+<P>
+<HR>
+<H2><A NAME="intersectSelf_IdSet_other_">intersectSelf(IdSet $other)</A></H2>
+<UL>
+<LI><STRONG>$other</STRONG>
+<P>
+- The other <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>.
+
+</UL>
+<P>
+Intersect this set with the other set, and update this set with the result.
+
+<P>
+<HR>
+<H2><A NAME="toIdArrayReference_">toIdArrayReference()</A></H2>
+<P>
+Returns a reference to an array of Ids from the Set.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Create a formatted string of all the elements in the set
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Convert to a byte array
+
+<P>
+<HR>
+<H2><A NAME="import_">import()</A></H2>
+<P>
+Is this still needed? Just for requires.
+
+</BODY>
+
+</HTML>

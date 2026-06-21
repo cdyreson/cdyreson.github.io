@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="main.html">
+<LINK REL="up" HREF="main.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="main.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+ HREF="node2.html">Motivation and Background</A>
+<B> Up:</B> <A NAME="tex2html41"
+ HREF="main.html">Capturing and Querying Multiple</A>
+<B> Previous:</B> <A NAME="tex2html35"
+ HREF="main.html">Capturing and Querying Multiple</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+Introduction</A>
+</H1>
+
+<P>
+The World-Wide Web (``web'') is arguably the world's most frequently
+used information resource.  While current web data has little and
+mostly local structure, web data will likely have far more in the near
+future.  Specifically, the eXtended Markup Language (XML) is expected
+to replace the Hypertext Markup
+Language&nbsp;[<A
+ HREF="node25.html#CONNOLLY97">12</A>,<A
+ HREF="node25.html#BERNERSLEE98">4</A>].  An XML web page can have a
+schema of how the data in the page is structured.  XML will at best
+only provide some structure for data since the page-level schemas may
+(and likely will) vary from page to page.  The ability of
+semistructured data models to accommodate data that lacks a
+well-defined schema makes them attractive candidates for querying and
+managing XML data&nbsp;[<A
+ HREF="node25.html#FLORESCU98">14</A>,<A
+ HREF="node25.html#SUCIU98">26</A>].  XML-like representation
+of web meta-data has also been proposed, cf. the RDF
+standard&nbsp;[<A
+ HREF="node25.html#LASSILA99">21</A>].  Somewhat unlike database meta-data, web
+meta-data is typically taken to mean additional information about a
+document, such as the author, subject, language, or URL.  In this
+paper we use the term `meta-data' to encompass both database and web
+meta-data.
+
+<P>
+Semistructured data models organize data in
+graphs&nbsp;[<A
+ HREF="node25.html#BUNEMAN97">8</A>,<A
+ HREF="node25.html#FLORESCU98">14</A>] where each node represents an
+object or a value, and each edge represents a relationship between the
+objects or values represented by the edge's nodes.  Edges are both
+directed and labeled.  The labels are important because they make
+nodes <EM>self-describing</EM> in the sense that a node is described by
+the sequences of labels on paths through the graph that lead to the
+node&nbsp;[<A
+ HREF="node25.html#BUNEMAN97">8</A>].
+
+<P>
+This paper introduces an extensible, semistructured data model that
+generalizes existing semistructured models.  In this model, each label
+is a set of descriptive <EM>properties</EM>.  A property is a kind of
+meta-data.  Typical properties are the name of the edge and the level
+of security that protects the edge, but any property can be used in a
+label to describe the nodes that are reachable through that edge.
+
+<P>
+To exemplify edge labels, consider Figure&nbsp;<A HREF="node1.html#fig:generalLabel">1</A>.
+Part&nbsp;(a) shows a conventional edge that is labeled <TT>employee</TT> and
+connects nodes <TT>&amp;ACME</TT> and <TT>&amp;joe</TT>.  In contrast, part&nbsp;(b)
+shows the kind of label introduced in this paper.  This label is a set
+of `<B>property name</B>: <EM>property value</EM>' pairs.  Each pair is
+collectively referred to as a property.  This label has two
+properties: <B>name</B> and <B>transaction time</B>.  This generalizes
+existing semistructures since the label in part&nbsp;(a) can be assumed to
+specify an implicit <B>name</B> property, with the value <EM>  employee</EM>.
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:generalLabel">&#160;</A><A NAME="218">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 1:</STRONG>
+The New Kind of Edge Labels</CAPTION>
+<TR><TD><TABLE CELLPADDING=3 ALIGN="CENTER">
+<TR><TD ALIGN="CENTER"><P>
+<BR>
+<BR>
+ 
+
+<!-- MATH: $\scalebox{.7}{\includegraphics{idraw/edgeStandard.ps}}$ -->
+<IMG
+ WIDTH="85" HEIGHT="135" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\scalebox{.7}{\includegraphics{idraw/edgeStandard.ps}}"></TD>
+<TD ALIGN="CENTER">
+<!-- MATH: $\scalebox{.7}{\includegraphics{idraw/edgeList.ps}}$ -->
+<IMG
+ WIDTH="218" HEIGHT="135" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="\scalebox{.7}{\includegraphics{idraw/edgeList.ps}}"></TD>
+</TR>
+<TR><TD ALIGN="CENTER">(a) a typical edge</TD>
+<TD ALIGN="CENTER">(b) a label with properties</TD>
+</TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+The paradigm of using labels with properties can be recursively
+applied.  For instance, the property <B>name</B> in
+Figure&nbsp;<A HREF="node1.html#fig:generalLabel">1</A>(b) could itself be transformed into a
+label with two properties: <B>name</B> and <B>language</B>, e.g.,
+English, indicating that <B>name</B> is an English word.  While the
+recursive nature of labels with properties is theoretically appealing,
+it is of limited utility since meta-meta-data (and
+meta-meta-meta-data, etc.)  is uncommon in the real-world.  So although this
+framework could capture and query recursively nested properties,
+we focus exclusively on a single level of meta-data in this paper.
+
+<P>
+Previous research in semistructured and unstructured data models has
+focussed on basic issues such as query language
+design&nbsp;[<A
+ HREF="node25.html#BUNEMAN95B">6</A>,<A
+ HREF="node25.html#BUNEMAN96">7</A>,<A
+ HREF="node25.html#QUASS97">25</A>,<A
+ HREF="node25.html#ABITEBOUL97">3</A>,<A
+ HREF="node25.html#LUDASCHER98">20</A>],
+restructuring of query results&nbsp;[<A
+ HREF="node25.html#FERNANDEZ97">13</A>,<A
+ HREF="node25.html#AROCENA98">2</A>], tools to
+help naive users query unknown
+semistructures&nbsp;[<A
+ HREF="node25.html#GOLDMAN97">16</A>,<A
+ HREF="node25.html#GOLDMAN98">17</A>], techniques for improving
+implementation efficiency&nbsp;[<A
+ HREF="node25.html#QUASS97">25</A>,<A
+ HREF="node25.html#FERNANDEZ98">15</A>,<A
+ HREF="node25.html#MILO99">23</A>], and
+methods for extracting semistructured data from the
+web&nbsp;[<A
+ HREF="node25.html#HAMMER97">18</A>,<A
+ HREF="node25.html#NESTOROV97">24</A>].  Several well-designed languages have
+also been
+presented&nbsp;[<A
+ HREF="node25.html#BUNEMAN95B">6</A>,<A
+ HREF="node25.html#ABITEBOUL97">3</A>,<A
+ HREF="node25.html#LUDASCHER98">20</A>,<A
+ HREF="node25.html#FERNANDEZ97">13</A>,<A
+ HREF="node25.html#FLORESCU98">14</A>].
+
+<P>
+Our paper is different, in part, because it treats edge labels as
+something other than single words or strings.  Buneman et al.&nbsp;also
+propose a semistructured model with complex labels&nbsp;[<A
+ HREF="node25.html#BUNEMAN99">9</A>].
+In their model, key information from objects in the database is added
+to labels making each path in the database unique.  We focus on adding
+meta-data rather than data to the labels and on the additional
+operations necessary to manipulate the meta-data in labels.  Another
+paper with augmented labels presents the Chlorel query language for
+the DOEM data model&nbsp;[<A
+ HREF="node25.html#CHAWATHE98">10</A>].  DOEM extends OEM with special
+annotations on edges to record information about updates; in
+particular, the (transaction) time and kind of update.  This permits a
+history of changes to a semistructure to be maintained.  We further
+extend the scope and power of the annotations on edge labels into a
+more general framework.  Chlorel is a language for querying the
+extended data model.  Chlorel supports a limited kind of temporal
+query, which lacks both coalescing and collapsing.  We believe these
+operations are important to correctly supporting temporal
+semantics&nbsp;[<A
+ HREF="node25.html#BOEHLEN96V">5</A>].
+
+<P>
+The paper is organized as follows.  Section&nbsp;<A HREF="node2.html#sec:motivation">2</A>
+motivates the extended semistructured model, arguing the utility of
+introducing a richer structure for labels.
+Section&nbsp;<A HREF="node7.html#sec:dataModel">3</A> presents the extended model.  Initially,
+the format of a database is defined. An important feature is that the
+set of properties present may vary from label to label.
+Section&nbsp;<A HREF="node9.html#sec:queryOperators">3.2</A> proceeds to introduce several new or
+extended query operators to contend with properties in labels.
+Section&nbsp;<A HREF="node20.html#sec:AUCQL">4</A> incorporates the new query operations into a
+derivative of the SQL-like Lorel query
+language&nbsp;[<A
+ HREF="node25.html#QUASS97">25</A>,<A
+ HREF="node25.html#MCHUGH97">22</A>,<A
+ HREF="node25.html#ABITEBOUL97">3</A>], called AUCQL, for
+querying semistructured data with properties.  The last section
+covers future work and summarizes the paper.
+
+<P>
+The URL &lt;<TT>www.cs.auc.dk/<TT>~</TT>curtis/AUCQL</TT>&gt; provides an
+interactive query engine for the example database given in this paper,
+documentation and examples on using AUCQL, and a freely-available
+implementation package.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html40"
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html34"
+ HREF="main.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+ HREF="node2.html">Motivation and Background</A>
+<B> Up:</B> <A NAME="tex2html41"
+ HREF="main.html">Capturing and Querying Multiple</A>
+<B> Previous:</B> <A NAME="tex2html35"
+ HREF="main.html">Capturing and Querying Multiple</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

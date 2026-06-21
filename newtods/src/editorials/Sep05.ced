@@ -1,0 +1,293 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, September 2005</em>)
+
+The <i>Capability Maturity Model</i> [<a href="#CMM">4</a>] is an orderly 
+way for
+organizations to determine the capabilities of their current processes for
+developing software and to establish priorities for 
+improvement [<a href="#Humphrey">2</a>]. It
+defines five levels of progressively more mature process
+capability [<a href="#Paulk">3</a>].
+
+<ul>
+  <b>Level 1: Initial</b> The software process is characterized as ad hoc, and
+  occasionally even chaotic. Few processes are defined, and success depends
+  on individual effort.
+
+<b>Level 2: Repeatable</b> Basic project management processes are
+  established to track cost, schedule, and functionality. The necessary
+  process discipline is in place to repeat earlier successes on projects
+  with similar applications.
+
+<b>Level 3: Defined</b> The software process for both management and
+  engineering activities is documented, standardized, and integrated into an
+  organization-wide software process. All projects use a documented and
+  approved version of the organization's process for developing and
+  maintaining software. This level includes all the characteristics defined
+  for level 2.
+
+<b>Level 4: Managed</b> Detailed measures of the software process and
+  product quality are collected. Both the software process and products are
+  quantitatively understood and controlled using detailed measures. This
+  level includes all the characteristics defined for level 3.
+
+<b>Level 5: Optimizing</b> Continuous process improvement is enabled by
+  quantitative feedback from the process and from testing innovative ideas
+  and technologies. This level includes all the characteristics defined
+  for level 4.
+</ul>
+
+You may be asking, what does a maturity model for software development have
+to do with databases generally and 
+with :journalAcronym[] in particular? Well, CMM has
+been applied to personnel management, quality management, and even weapons
+system development. And it can be used as a framework for evaluating the
+journal review process, as we will do here.
+
+Manuscript review at :journalAcronym[] started, logically, 
+at Level 1. In 2001, the ACM
+Publications Board approved a broad
+policy [<a href="#ACMPubs">1</a>,
+<a href="#SnodgrassCACM">5</a>,
+<a href="#SnodgrassSIGMOD">6</a>]
+that raised publishing
+of ACM journals and transactions to Level 2. In 2003 ACM adopted 
+<a href="http://acm.manuscriptcentral.com">the Manuscript Central</a>
+web-based manuscript tracking system [<a href="#SnodgrassMC">7</a>], 
+raising its manuscript reviewing process to Level 3.
+
+In parallel with these efforts at the ACM Publications Board level, I have
+been refining the reviewing process for :journalAcronym[]. 
+In October 2003 I released
+the first edition of the <b><i>ACM TODS</i> Associate Editor Manual</b>, with
+revisions in April 2004 and October 2004. This manual, at 22 pages, is quite
+detailed. 
+
+I have also been collecting detailed statistics since
+July 2001. Some of these statistics are
+reported on 
+<a href="http://www.acm.org/tods/Statistics.html">the 
+:journalAcronym[] web site</a>: turnaround time, article
+length, number of articles, and end-to-end 
+time [<a href="#SnodgrassSIGMOD">6</a>]. I
+have also kept records on the turnaround time of individual Associate
+Editors, and have closely monitored the progress of individual papers.
+
+Through these efforts, and through a series of internal policies regarding
+the reviewing process that has been adopted by 
+the :journalAcronym[] Editorial Board,
+all of the statistics has improved, some
+considerably [<a href="#SnodgrassSept03">8</a>].
+Average turnaround time is now down to
+13 weeks, average article length has been brought down to levels last seen
+in the mid-1990s (under 40 pages), the number of articles per volume is back
+up to that last experienced in the early 1990's (21 articles per year), and
+average end-to-end time is down to 17 months, last experienced in the
+1970's.
+
+The result is that :journalAcronym[] is now operating at CMM Level 5.
+
+Why should you, dear reader, care about internal processes at :journalAcronym[]?
+The short answer is that by being at Level 5, :journalAcronym[] can 
+provide assurances as to how <i>your</i> submission will be handled.
+
+Average turnaround and end-to-end times are nice, but what authors really
+care about is how long <i>their</i> submission will take to be
+reviewed. Addressing this concern involves both average and <i>maximum</i>
+times. A low average turnaround time is of little reassurance to someone
+experiencing an abnormally long turnaround time. As an example, while the
+average turnaround time for papers submitted in January 2002 
+to :journalAcronym[] was a
+quite reasonable 5.5 months, one paper submitted that month had to wait
+almost nine (!) months for a decision.
+
+By virtue of being at CMM Level 5, the variance of the turnaround time could
+be monitored and improved, as shown in <a href="#turn">Figure 1</a>.
+
+The turnaround time has been slowly decreasing over the past four years.
+This figure shows four sets of data. The bottom line is the <i>average
+turnaround time</i>, a moving average of the turnaround time for papers
+submitted in the indicated month. To smooth monthly variations, the moving
+average includes all of the submissions for the previous year. Each data
+point represents dozens of papers. The value for January 2005, 12.5 weeks,
+is the average turnaround time for all of the papers submitted between
+(inclusive) February 2004 and January 2005.
+
+The next line up is the average turnaround time for external reviews only, a
+moving average of the turnaround time for papers submitted in the indicated
+month. This includes only submissions that went out to external reviewers
+and specifically excludes desk rejects. The value for January
+2005, 15.6 weeks, is the average turnaround time for external reviews
+of all the papers submitted during the year up through January 2005.
+
+The points, one per month, denote the maximum or peak turnaround time for
+submissions in the indicated month. Each point represents a single,
+unusually slow paper submitted during the indicated month. For all the
+papers submitted in January 2005, the longest turnaround time was 4.9
+months (21 weeks).
+
+In terms of turnaround time, :journalAcronym[] at 12.5 weeks is now 
+equivalent to
+conferences (as exemplified by SIGMOD and PODS at 12 weeks), while
+being more flexible in not imposing a submission deadline.
+
+The straight line is the <i>committed maximum turnaround time</i>, the
+boundary that the Editorial Board has committed to not exceed, for any
+submission. Several years ago the Editorial Board established a formal
+policy stating its commitment to providing an editorial decision within 6
+months [<a href="#SnodgrassSept03">8</a>].
+:journalAcronym[] thus joined conferences in
+guaranteeing a stated turnaround time.
+
+Due to the rigorous application of CMM Level 5, of continuous process
+improvement as exemplified by the steady lowering of average turnaround time
+and the compression of the variance in turnaround time by a factor of two,
+I can announce that the Editorial Board is now committed to providing an
+editorial decision within <i>five</i> months, starting with submissions in
+2004. As depicted in the figure., we have met this stated commitment for the
+past thirteen months. As of the writing of this column (June 29, 2005),
+all manuscripts submitted before February 1 of this year have been processed
+and editorial decisions rendered.
+
+<a name="turn"></a>
+<img src="../images/ttJune2005.gif">
+
+That :journalAcronym[] now matches conferences in terms of turnaround time is a
+testament to the hard work of two groups of people: reviewers and the
+editorial board. I will recognize the reviewers in a future column, but here
+I wish to thank the following people, who 
+comprise the :journalAcronym[] Editorial
+Board, for their dedicated effort work in achieving very fast decisions
+while upholding very high standards.
+
+<table>
+<tr>
+<td>
+Surajit Chaudhuri, Microsoft Research
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Donald Kossmann, ETH Zurich
+</td>
+</tr>
+<tr>
+<td>
+Jan Chomicki, SUNY Buffalo
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Heikki Mannila, University of Helsinki
+</td>
+</tr>
+<tr>
+<td>
+Mary Fernandez, AT&T Labs
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Z. Meral &Ouml;zsoyoglu, Case Western Reserve
+</td>
+</tr>
+<tr>
+<td>
+Michael Franklin, Univ. of California at Berkeley
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Raghu Ramakrishnan, University of Wisconsin
+</td>
+</tr>
+<tr>
+<td>
+Luis Gravano, Columbia University
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Arnie Rosenthal, MITRE
+</td>
+</tr>
+<tr>
+<td>
+Ralf Hartmut G&uuml;ting, Fernuniversit&auml;t Hagen
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Betty Salzberg, Northeastern University
+</td>
+</tr>
+<tr>
+<td>
+Richard Hull, Bell Labs
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Sunita Sarawagi, IIT Bombay
+</td>
+</tr>
+<tr>
+<td>
+Christian S. Jensen, Aalborg University
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Dan Suciu, University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Hank Korth, Lehigh University
+</td>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Jennifer Widom, Stanford University
+</td>
+</tr>
+</table>
+
+These 18 people are providing a truly valuable service to readers, to
+authors, and to reviewers. When you see these people, please thank them
+personally for their role in achieving quick reviews of submitted papers.
+
+
+<h3>References</h3>
+<a name="ACMPubs">[1]</a>
+ACM Publications Board, 
+"<a href="http://www.acm.org/pubs/rights.html">Rights and 
+Responsibilities in ACM Publishing</a>,"
+approved June 27, 2001. 
+
+<a name="Humphrey">[2]</a>
+Watts S. Humphrey, <b>A Discipline for Software Engineering</b>,
+Addison-Wesley, 1995.
+
+<a name="Paulk">[3]</a>
+M. C. Paulk, Bill Curtis, and M. B. Chrisis, "Capability Maturity Model for
+Software, Version 1.1," Software Engineering Institute Technical Report,
+CMU/SEI-93-TR, February 24, 1993.
+
+<a name="CMM">[4]</a>
+SEI, <b>The Capability Maturity Model: Guidelines for Improving the Software
+Process</b>, Software Engineering Inst. Carnegie Mellon Univ., Addison-Wesley,
+1995.
+
+<a name="SnodgrassCACM">[5]</a>
+Richard T. Snodgrass, "Rights and Responsibilities in ACM Publishing,"
+<i>CACM</i> 45(2):colon[] 97-101, February 2002.
+
+<a name="SnodgrassSIGMOD">[6]</a>
+Richard T. Snodgrass, "Rights of <i>TODS</i> Readers, Authors and
+Reviewers," <i>SIGMOD Record</i>, 31(4):colon[]5-9, December 2002.
+
+<a name="SnodgrassMC">[7]</a>
+Richard T. Snodgrass, "ACM <i>TODS</i> in this Internet Age," 
+  <i>SIGMOD Record</i>, 32(1):colon[]4-5, March 2003.
+
+<a name="SnodgrassSept03">[8]</a>
+Richard T. Snodgrass, "Journal Relevance," <i>SIGMOD Record</i>,
+31(3):colon[]11-15, September 2003.
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[September 2005 CMM and ACM :journalAcronym[]]
+

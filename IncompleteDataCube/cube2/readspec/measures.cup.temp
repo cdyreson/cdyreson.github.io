@@ -1,0 +1,182 @@
+// JavaCup specification for a simple expression evaluator (w/ actions)
+
+//package me;
+
+import java.io.*;
+import java.util.*;
+import java_cup.runtime.*;
+import cube.database.*;
+import cube.tools.*;
+
+action code {:
+  /*
+  protected CupFileWriter cupFile = new CupFileWriter("/home/curtis/classes/cube/parser/parser.cup");
+  protected LexFileWriter lexFile = new LexFileWriter("/home/curtis/classes/cube/parser/parser.lex");
+  protected Database myDatabase = new Database("/nobu/curtis/dbs");
+  protected Table unitTable = myDatabase.createTable("units");
+  protected Table measureTable = myDatabase.createTable("measures");
+  protected Table filterTable = myDatabase.createTable("filters");
+  //protected Table baseTable = myDatabase.createTable("baseunits");
+  protected String unitName = "";
+  protected String measureName = "";
+  protected IntSet measureSet = new IntSet();
+  protected IntSet unitSet = new IntSet();
+  */
+:};
+
+/* Preliminaries to set up and use the scanner.  */
+init with {: 
+  lexer.init(); 
+  :};
+scan with {: return lexer.next_token(); :};
+
+/* Terminals (tokens returned by the scanner). */
+terminal token     
+  PERIOD,
+  EQUALS,
+  VERTICALBAR,
+  MEASURE,
+  UNIT,
+  SEMICOLON,
+  FILTERS;
+
+terminal str_token  
+  IDENTIFIER, 
+  REGULAR_EXPRESSION;
+
+/* Non terminals */
+non terminal symbol 
+  prog, 
+  measures, 
+  measure, 
+  units, 
+  unit, 
+  unit_list, 
+  filter,
+  filters,
+  subunit, 
+  subunits;
+
+/*------------------------------------------------------------------------*/
+prog ::= 
+  {:
+    /*
+    cupFile.header();
+    lexFile.header();
+    */
+  :}
+  filters
+  measures {:
+    /*
+    cupFile.tail();
+    lexFile.tail();
+    */
+  :}
+  SEMICOLON
+  ;
+
+/*------------------------------------------------------------------------*/
+filters ::= 
+  filter filters
+  | 
+  ;
+
+filter ::= 
+  FILTERS unit_list {:
+    /*
+    cupFile.filter(filterTable);
+    */
+  :}
+  ;
+
+unit_list ::= 
+  IDENTIFIER:unit {:
+    /*
+    cupFile.addFilterUnit(unit.str_val);
+    */
+  :}
+  unit_list
+  |
+  ;
+
+
+/*------------------------------------------------------------------------*/
+measures ::= 
+  measure measures 
+    | 
+    ;
+
+measure ::= 
+  MEASURE IDENTIFIER:measure {: 
+    /*
+    measureName = measure.str_val;
+    measureSet = new IntSet();
+    */
+    :}
+  units {:
+    /*
+    IntSet s;
+    for (Enumeration e = measureSet.enumerate(); e.hasMoreElements(); ) {
+      Integer i = (Integer)e.nextElement();
+      Tuple r = new Tuple(new IntColumn(i.intValue()), new IntSetColumn(new IntSet()));
+      Tuple t = measureTable.retrieveTuple(r);
+      if (t == null) s = new IntSet();
+      else s = ((IntSetColumn)t.getValue()).getValue();
+      s.insert(Convert.ToInt(measureName));
+      measureTable.insertTuple(new Tuple(new IntColumn(i.intValue()), new IntSetColumn(s)));
+      }
+      */
+    :}
+    ;
+
+/*------------------------------------------------------------------------*/
+units ::= 
+  unit units
+  | 
+  ;
+
+unit ::=   
+  UNIT IDENTIFIER:unit {:
+    /*
+    unitName = unit.str_val;
+    cupFile.nonterminal(unit.str_val);
+    unitSet = new IntSet();
+    */
+    :}
+  subunits {:
+    /*
+    IntSet s;
+    for (Enumeration e = unitSet.enumerate(); e.hasMoreElements();) {
+      Integer i = (Integer)e.nextElement();
+      Tuple r = new Tuple(new IntColumn(i.intValue()), new IntSetColumn(new IntSet()));
+      Tuple t = unitTable.retrieveTuple(r);
+      if (t == null) s = new IntSet();
+      else s = ((IntSetColumn)t.getValue()).getValue();
+      s.insert(Convert.ToInt(unitName));
+      unitTable.insertTuple(new Tuple(new IntColumn(i.intValue()), new IntSetColumn(s)));
+      }
+     */
+    :}
+  |
+  UNIT IDENTIFIER:unit EQUALS REGULAR_EXPRESSION:regex {:
+    /*
+    cupFile.terminal(unit.str_val);
+    lexFile.emitTokenRule(regex.str_val, unit.str_val);
+    */
+    :}
+  ;
+
+/*------------------------------------------------------------------------*/
+subunits ::= 
+  subunit subunits
+  | 
+  ;
+
+subunit ::= 
+  IDENTIFIER:measure PERIOD IDENTIFIER:unit {: 
+    /*
+    unitSet.insert(Convert.ToInt(unit.str_val));
+    measureSet.insert(Convert.ToInt(measure.str_val));
+    */
+    :}
+  ;

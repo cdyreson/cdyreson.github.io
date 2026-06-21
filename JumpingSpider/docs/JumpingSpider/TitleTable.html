@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>./JumpingSpider/TitleTable.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#PUBLIC_METHODS">PUBLIC METHODS</A>
+	<UL>
+
+		<LI><A HREF="#addTitle_string_url_structure">addTitle(string $url, $structure)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+TitleTable - 
+<FONT SIZE=-1>A</FONT> class encapsulating the title table actions
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Output the title of the corresponding page.
+
+<P>
+<HR>
+<H1><A NAME="PUBLIC_METHODS">PUBLIC METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="addTitle_string_url_structure">addTitle(string $url, $structure)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $url</A></STRONG>
+<P>
+- The 
+<FONT SIZE=-1>URL</FONT> of the page.
+
+</UL>
+<P>
+Extract the title from the parsed page, and output the combination of 
+<FONT SIZE=-1>URL</FONT> and title.  
+
+<P>
+Barf if this is an 'Index of' page since we don't want to traverse the
+silly file directory structures. How can we detect these otherwise?
+
+</BODY>
+
+</HTML>

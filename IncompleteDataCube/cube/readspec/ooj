@@ -1,0 +1,685 @@
+MEASURE:world
+  UNIT:World 
+    continents.'North America'
+    continents.'Europe'
+    continents.'South America'
+    continents.'Asia'
+    continents.'Africa'
+    continents.'Australian Continent'
+    continents.'Antartica Continent'
+    continents.'Oceania'
+    continents.'Unresolved'
+
+MEASURE:countrydivisions
+  UNIT:'United States (us extension)' = (".us"$)
+  UNIT:'US government' = (".gov"$)
+  UNIT:'US organization' = (".org"$)
+  UNIT:'US commercial' = (".com"$)
+  UNIT:'US educational' = (".edu"$)
+  UNIT:'US military' = (".mil"$)
+  UNIT:'US network' = (".net"$)
+
+MEASURE:continents
+  UNIT:'Antartica Continent'
+    countries.'Antarctica'
+  UNIT:'North America'
+    countries.'Belize'
+    countries.'Canada'
+    countries.'El Salvador'
+    countries.'Guatemala'
+    countries.'Honduras'
+    countries.'Mexico'
+    countries.'Nicaragua'
+    countries.'Panama'
+    countries.'United States'
+  UNIT:'South America'
+    countries.'Argentina'
+    countries.'Australia'
+    countries.'Bolivia'
+    countries.'Brazil'
+    countries.'Chile'
+    countries.'Colombia'
+    countries.'Costa Rica'
+    countries.'Ecuador'
+    countries.'French Guiana'
+    countries.'Guyana'
+    countries.'Paraguay'
+    countries.'Peru'
+    countries.'Suriname'
+    countries.'Urugauy'
+    countries.'Venezuela'
+  UNIT:'Australian Continent'
+    countries.'Australia'
+  UNIT:'Europe'
+    countries.'Albania'
+    countries.'Andorra'
+    countries.'Armenia'
+    countries.'Austria'
+    countries.'Belarus'
+    countries.'Belgium'
+    countries.'Bosnia and Herzegovina'
+    countries.'Bulgaria'
+    countries.'Channel Islands, Guernsey'
+    countries.'Channel Islands, Jersey'
+    countries.'Croatia'
+    countries.'Cyprus'
+    countries.'Czech Republic'
+    countries.'Denmark'
+    countries.'Estonia'
+    countries.'Finland'
+    countries.'France'
+    countries.'French, Metropolitan'
+    countries.'Germany'
+    countries.'Gibraltar'
+    countries.'Greece'
+    countries.'Hungary'
+    countries.'Ireland'
+    countries.'Italy'
+    countries.'Latvia'
+    countries.'Liechtenstein'
+    countries.'Lithuania'
+    countries.'Luxembourg'
+    countries.'Macedonia'
+    countries.'Malta'
+    countries.'Moldova'
+    countries.'Monaco'
+    countries.'Netherlands'
+    countries.'Norway'
+    countries.'Poland'
+    countries.'Portugal'
+    countries.'Romania'
+    countries.'Russia'
+    countries.'San Marino'
+    countries.'Slovakia'
+    countries.'Slovenia'
+    countries.'Spain'
+    countries.'Sweden'
+    countries.'Switzerland'
+    countries.'Turkey'
+    countries.'Ukraine'
+    countries.'United Kingdom'
+    countries.'Vatican City State'
+    countries.'Yugoslavia'
+  UNIT:'Asia'
+    countries.'Afghanistan'
+    countries.'Azerbaijan'
+    countries.'Bangladesh'
+    countries.'Bhutan'
+    countries.'Cambodia'
+    countries.'China'
+    countries."Cote d'Ivoire"
+    countries.'Georgia'
+    countries.'Hong Kong'
+    countries.'India'
+    countries.'Iran'
+    countries.'Japan'
+    countries.'Kazakhstan'
+    countries."Korea, Democratic People's Republic of"
+    countries.'Korea, Republic of'
+    countries.'Kuwait'
+    countries.'Kyrgyzstan'
+    countries.'Laos'
+    countries.'Lesotho'
+    countries.'Liberia'
+    countries.'Libyan Arab Jamahiriya'
+    countries.'Macao'
+    countries.'Malaysia'
+    countries.'Mongolia'
+    countries.'Myanmar'
+    countries.'Nepal'
+    countries.'Pakistan'
+    countries.'Sri Lanka'
+    countries.'Taiwan'
+    countries.'Tajikistan'
+    countries.'Thailand'
+    countries.'Turkmenistan'
+    countries.'Uzbekistan'
+    countries.'Vietnam'
+  UNIT:'Africa'
+    countries.'Algeria'
+    countries.'Angola'
+    countries.'Bahrain'
+    countries.'Benin'
+    countries.'Botswana'
+    countries.'Burkina Faso'
+    countries.'Burundi'
+    countries.'Cameroon'
+    countries.'Cape Verde'
+    countries.'Central African Republic'
+    countries.'Chad'
+    countries.'Congo'
+    countries.'Djibouti'
+    countries.'Egypt'
+    countries.'Equatorial Guinea'
+    countries.'Eritrea'
+    countries.'Ethiopia'
+    countries.'French Southern Territories'
+    countries.'Gabon'
+    countries.'Ghana'
+    countries.'Guinea'
+    countries.'Iraq'
+    countries.'Israel'
+    countries.'Jordan'
+    countries.'Kenya'
+    countries.'Lebanon'
+    countries.'Malawi'
+    countries.'Mali'
+    countries.'Mauritania'
+    countries.'Morocco'
+    countries.'Mozambique'
+    countries.'Namibia'
+    countries.'Niger'
+    countries.'Nigeria'
+    countries.'Oman'
+    countries.'Qatar'
+    countries.'Rwanda'
+    countries.'Saudi Arabia'
+    countries.'Senegal'
+    countries.'Sierra Leone'
+    countries.'Somalia'
+    countries.'South Africa'
+    countries.'Sudan'
+    countries.'Swaziland'
+    countries.'Syria'
+    countries.'Tanzania'
+    countries.'Togo'
+    countries.'Tunisia'
+    countries.'Uganda'
+    countries.'United Arab Emirates'
+    countries.'Western Sahara'
+    countries.'Yemen'
+    countries.'Zaire'
+    countries.'Zambia'
+    countries.'Zimbabwe'
+  UNIT:'Oceania'
+    countries.'American Somoa' 
+    countries.'Anguilla'
+    countries.'Antigua and Barbuda'
+    countries.'Aruba'
+    countries.'Barbados'
+    countries.'Bermuda'
+    countries.'Bouvet Island'
+    countries.'British Indian Ocean Territory'
+    countries.'Brunei'
+    countries.'Christmas Island'
+    countries.'Cocos (Keeling) Islands'
+    countries.'Comoros'
+    countries.'Cook Islands'
+    countries.'Cuba'
+    countries.'Dominica'
+    countries.'Dominican Republic'
+    countries.'East Timor'
+    countries.'Falklands Islands'
+    countries.'Faroe Islands'
+    countries.'Fiji'
+    countries.'French Polynesia'
+    countries.'Greenland'
+    countries.'Grenada'
+    countries.'Guadeloupe'
+    countries.'Guam'
+    countries.'Haiti'
+    countries.'Heard and McDonald Islands'
+    countries.'Iceland'
+    countries.'Indonesia'
+    countries.'Jamaica'
+    countries.'Kiribati'
+    countries.'Marshall Islands'
+    countries.'Martinique'
+    countries.'Mauritius'
+    countries.'Mayotte'
+    countries.'Micronesia'
+    countries.'Montserrat'
+    countries.'Nauru'
+    countries.'Netherlands Antilles'
+    countries.'New Caledonia'
+    countries.'New Zealand'
+    countries.'Niue'
+    countries.'Norfolk Island'
+    countries.'Northern Mariana Islands'
+    countries.'Palau'
+    countries.'Papua New Guinea'
+    countries.'Philippines'
+    countries.'Pitcairn'
+    countries.'Puerto Rico'
+    countries.'Reunion'
+    countries.'Saint Kitts and Nevis'
+    countries.'Saint Lucia'
+    countries.'Saint Vincent and the Grenadines'
+    countries.'Samoa'
+    countries.'Sao Tome and Principe'
+    countries.'Seychelles'
+    countries.'Singapore'
+    countries.'Solomon Islands'
+    countries.'South Georgia and the South Sandwich Islands'
+    countries.'St. Helena'
+    countries.'St. Pierre and Miquelon'
+    countries.'Svalbard and Jan Mayen Islands'
+    countries.'The Bahamas'
+    countries.'The Cayman Islands'
+    countries.'Trinidad and Tobago'
+    countries.'Turks and Caicos Islands'
+    countries.'Tuvalu'
+    countries.'United States Minor Outlying Islands'
+    countries.'Vanuatu'
+    countries.'Virgin Islands (British)'
+    countries.'Virgin Islands (US)'
+    countries.'Wallis and Futuna Islands'
+  UNIT:Unresolved
+    countries.'unresolved IP'
+
+MEASURE:countries
+  UNIT:'Afghanistan' = (".af"$)
+  UNIT:'Albania' = (".al"$)
+  UNIT:'Algeria' = (".dz"$)
+  UNIT:'American Somoa' = (".as"$) 
+  UNIT:'Andorra' = (".ad"$)
+  UNIT:'Angola' = (".ao"$)
+  UNIT:'Anguilla' = (".ai"$)
+  UNIT:'Antarctica' = (".aq"$)
+  UNIT:'Antigua and Barbuda' = (".ag"$)
+  UNIT:'Argentina' = (".ar"$)
+  UNIT:'Armenia' = (".am"$)
+  UNIT:'Aruba' = (".aw"$)
+  UNIT:'Australia' = (".au"$)
+  UNIT:'Austria' = (".at"$)
+  UNIT:'Azerbaijan' = (".az"$)
+  UNIT:'Bahrain' = (".bh"$)
+  UNIT:'Bangladesh' = (".bd"$)
+  UNIT:'Barbados' = (".bb"$)
+  UNIT:'Belarus' = (".by"$)
+  UNIT:'Belgium' = (".be"$)
+  UNIT:'Belize' = (".bz"$)
+  UNIT:'Benin' = (".bj"$)
+  UNIT:'Bermuda' = (".bm"$)
+  UNIT:'Bhutan' = (".bt"$)
+  UNIT:'Bolivia' = (".bo"$)
+  UNIT:'Bosnia and Herzegovina' = (".ba"$)
+  UNIT:'Botswana' = (".bw"$)
+  UNIT:'Bouvet Island' = (".bv"$)
+  UNIT:'Brazil' = (".br"$)
+  UNIT:'British Indian Ocean Territory' = (".io"$)
+  UNIT:'Brunei' = (".bn"$)
+  UNIT:'Bulgaria' = (".bg"$)
+  UNIT:'Burkina Faso' = (".bf"$)
+  UNIT:'Burundi' = (".bi"$)
+  UNIT:'Cambodia' = (".kh"$)
+  UNIT:'Cameroon' = (".cm"$)
+  UNIT:'Canada' = (".ca"$)
+  UNIT:'Cape Verde' = (".cv"$)
+  UNIT:'Central African Republic' = (".cf"$)
+  UNIT:'Chad' = (".td"$)
+  UNIT:'Channel Islands, Guernsey' = (".gg"$)
+  UNIT:'Channel Islands, Jersey' = (".je"$)
+  UNIT:'Chile' = (".cl"$)
+  UNIT:'China' = (".cn"$)
+  UNIT:'Christmas Island' = (".cx"$)
+  UNIT:'Cocos (Keeling) Islands' = (".cc"$)
+  UNIT:'Colombia' = (".co"$)
+  UNIT:'Comoros' = (".km"$)
+  UNIT:'Congo' = (".cg"$)
+  UNIT:'Cook Islands' = (".ck"$)
+  UNIT:'Costa Rica' = (".cr"$)
+  UNIT:"Cote d'Ivoire" = (".ci"$)
+  UNIT:'Croatia' = (".hr"$)
+  UNIT:'Cuba' = (".cu"$)
+  UNIT:'Cyprus' = (".cy"$)
+  UNIT:'Czech Republic' = (".cz"$)
+  UNIT:'Denmark' = (".dk"$)
+  UNIT:'Djibouti' = (".dj"$)
+  UNIT:'Dominica' = (".dm"$)
+  UNIT:'Dominican Republic' = (".do"$)
+  UNIT:'East Timor' = (".tp"$)
+  UNIT:'Ecuador' = (".ec"$)
+  UNIT:'Egypt' = (".eg"$)
+  UNIT:'El Salvador' = (".sv"$)
+  UNIT:'Equatorial Guinea' = (".gq"$)
+  UNIT:'Eritrea' = (".er"$)
+  UNIT:'Estonia' = (".ee"$)
+  UNIT:'Ethiopia' = (".et"$)
+  UNIT:'Falklands Islands' = (".fk"$)
+  UNIT:'Faroe Islands' = (".fo"$)
+  UNIT:'Fiji' = (".fj"$)
+  UNIT:'Finland' = (".fi"$)
+  UNIT:'France' = (".fr"$)
+  UNIT:'French Guiana' = (".gf"$)
+  UNIT:'French Polynesia' = (".pf"$)
+  UNIT:'French Southern Territories' = (".tf"$)
+  UNIT:'French, Metropolitan' = (".fx"$)
+  UNIT:'Gabon' = (".ga"$)
+  UNIT:'Georgia' = (".ge"$)
+  UNIT:'Germany' = (".de"$)
+  UNIT:'Ghana' = (".gh"$)
+  UNIT:'Gibraltar' = (".gi"$)
+  UNIT:'Greece' = (".gr"$)
+  UNIT:'Greenland' = (".gl"$)
+  UNIT:'Grenada' = (".gd"$)
+  UNIT:'Guadeloupe' = (".gp"$)
+  UNIT:'Guam' = (".gu"$)
+  UNIT:'Guatemala' = (".gt"$)
+  UNIT:'Guinea' = (".gn"$)
+  UNIT:'Guyana' = (".gy"$)
+  UNIT:'Haiti' = (".ht"$)
+  UNIT:'Heard and McDonald Islands' = (".hm"$)
+  UNIT:'Honduras' = (".hn"$)
+  UNIT:'Hong Kong' = (".hk"$)
+  UNIT:'Hungary' = (".hu"$)
+  UNIT:'Iceland' = (".is"$)
+  UNIT:'India' = (".in"$)
+  UNIT:'Indonesia' = (".id"$)
+  UNIT:'Iran' = (".ir"$)
+  UNIT:'Iraq' = (".iq"$)
+  UNIT:'Ireland' = (".ie"$)
+  UNIT:'Israel' = (".il"$)
+  UNIT:'Italy' = (".it"$)
+  UNIT:'Jamaica' = (".jm"$)
+  UNIT:'Japan' = (".jp"$)
+  UNIT:'Jordan' = (".jo"$)
+  UNIT:'Kazakhstan' = (".kz"$)
+  UNIT:'Kenya' = (".ke"$)
+  UNIT:'Kiribati' = (".ki"$)
+  UNIT:"Korea, Democratic People's Republic of" = (".kp"$)
+  UNIT:'Korea, Republic of' = (".kr"$)
+  UNIT:'Kuwait' = (".kw"$)
+  UNIT:'Kyrgyzstan' = (".kg"$)
+  UNIT:'Laos' = (".la"$)
+  UNIT:'Latvia' = (".lv"$)
+  UNIT:'Lebanon' = (".lb"$)
+  UNIT:'Lesotho' = (".ls"$)
+  UNIT:'Liberia' = (".lr"$)
+  UNIT:'Libyan Arab Jamahiriya' = (".ly"$)
+  UNIT:'Liechtenstein' = (".li"$)
+  UNIT:'Lithuania' = (".lt"$)
+  UNIT:'Luxembourg' = (".lu"$)
+  UNIT:'Macao' = (".mo"$)
+  UNIT:'Macedonia' = (".mk"$)
+  UNIT:'Malawi' = (".mw"$)
+  UNIT:'Malaysia' = (".my"$)
+  UNIT:'Mali' = (".ml"$)
+  UNIT:'Malta' = (".mt"$)
+  UNIT:'Marshall Islands' = (".mh"$)
+  UNIT:'Martinique' = (".mq"$)
+  UNIT:'Mauritania' = (".mr"$)
+  UNIT:'Mauritius' = (".mu"$)
+  UNIT:'Mayotte' = (".yt"$)
+  UNIT:'Mexico' = (".mx"$)
+  UNIT:'Micronesia' = (".fm"$)
+  UNIT:'Moldova' = (".md"$)
+  UNIT:'Monaco' = (".mc"$)
+  UNIT:'Mongolia' = (".mn"$)
+  UNIT:'Montserrat' = (".ms"$)
+  UNIT:'Morocco' = (".ma"$)
+  UNIT:'Mozambique' = (".mz"$)
+  UNIT:'Myanmar' = (".mm"$)
+  UNIT:'Namibia' = (".na"$)
+  UNIT:'Nauru' = (".nr"$)
+  UNIT:'Nepal' = (".np"$)
+  UNIT:'Netherlands' = (".nl"$)
+  UNIT:'Netherlands Antilles' = (".an"$)
+  UNIT:'New Caledonia' = (".nc"$)
+  UNIT:'New Zealand' = (".nz"$)
+  UNIT:'Nicaragua' = (".ni"$)
+  UNIT:'Niger' = (".ne"$)
+  UNIT:'Nigeria' = (".ng"$)
+  UNIT:'Niue' = (".nu"$)
+  UNIT:'Norfolk Island' = (".nf"$)
+  UNIT:'Northern Mariana Islands' = (".mp"$)
+  UNIT:'Norway' = (".no"$)
+  UNIT:'Oman' = (".om"$)
+  UNIT:'Pakistan' = (".pk"$)
+  UNIT:'Palau' = (".pw"$)
+  UNIT:'Panama' = (".pa"$)
+  UNIT:'Papua New Guinea' = (".pq"$)
+  UNIT:'Paraguay' = (".py"$)
+  UNIT:'Peru' = (".pe"$)
+  UNIT:'Philippines' = (".ph"$)
+  UNIT:'Pitcairn' = (".pn"$)
+  UNIT:'Poland' = (".pl"$)
+  UNIT:'Portugal' = (".pt"$)
+  UNIT:'Puerto Rico' = (".pr"$)
+  UNIT:'Qatar' = (".qa"$)
+  UNIT:'Reunion' = (".re"$)
+  UNIT:'Romania' = (".ro"$)
+  UNIT:'Russia' = (".ru"$)
+  UNIT:'Rwanda' = (".rw"$)
+  UNIT:'Saint Kitts and Nevis' = (".kn"$)
+  UNIT:'Saint Lucia' = (".lc"$)
+  UNIT:'Saint Vincent and the Grenadines' = (".vc"$)
+  UNIT:'Samoa' = (".ws"$)
+  UNIT:'San Marino' = (".sm"$)
+  UNIT:'Sao Tome and Principe' = (".st"$)
+  UNIT:'Saudi Arabia' = (".sa"$)
+  UNIT:'Senegal' = (".sn"$)
+  UNIT:'Seychelles' = (".sc"$)
+  UNIT:'Sierra Leone' = (".sl"$)
+  UNIT:'Singapore' = (".sg"$)
+  UNIT:'Slovakia' = (".sk"$)
+  UNIT:'Slovenia' = (".si"$)
+  UNIT:'Solomon Islands' = (".sb"$)
+  UNIT:'Somalia' = (".so"$)
+  UNIT:'South Africa' = (".za"$)
+  UNIT:'South Georgia and the South Sandwich Islands' = (".gs"$)
+  UNIT:'Spain' = (".es"$)
+  UNIT:'Sri Lanka' = (".lk"$)
+  UNIT:'St. Helena' = (".sh"$)
+  UNIT:'St. Pierre and Miquelon' = (".pm"$)
+  UNIT:'Sudan' = (".sd"$)
+  UNIT:'Suriname' = (".sr"$)
+  UNIT:'Svalbard and Jan Mayen Islands' = (".sj"$)
+  UNIT:'Swaziland' = (".sz"$)
+  UNIT:'Sweden' = (".se"$)
+  UNIT:'Switzerland' = (".ch"$)
+  UNIT:'Syria' = (".sy"$)
+  UNIT:'Taiwan' = (".tw"$)
+  UNIT:'Tajikistan' = (".tj"$)
+  UNIT:'Tanzania' = (".tz"$)
+  UNIT:'Thailand' = (".th"$)
+  UNIT:'The Bahamas' = (".bs"$)
+  UNIT:'The Cayman Islands' = (".ky"$)
+  UNIT:'Togo' = (".to"$)
+  UNIT:'Trinidad and Tobago' = (".tt"$)
+  UNIT:'Tunisia' = (".tn"$)
+  UNIT:'Turkey' = (".tr"$)
+  UNIT:'Turkmenistan' = (".tm"$)
+  UNIT:'Turks and Caicos Islands' = (".tc"$)
+  UNIT:'Tuvalu' = (".tv"$)
+  UNIT:'Uganda' = (".ug"$)
+  UNIT:'Ukraine' = (".ua"$)
+  UNIT:'United Arab Emirates' = (".ae"$)
+  UNIT:'United Kingdom' = (".uk"$)
+  UNIT:'United States'
+    countrydivisions.'United States (us extension)'
+    countrydivisions.'US government'
+    countrydivisions.'US organization'
+    countrydivisions.'US commercial'
+    countrydivisions.'US educational'
+    countrydivisions.'US military'
+    countrydivisions.'US network'
+  UNIT:'United States Minor Outlying Islands' = (".um"$)
+  UNIT:'Urugauy' = (".uy"$)
+  UNIT:'Uzbekistan' = (".uz"$)
+  UNIT:'Vanuatu' = (".vu"$)
+  UNIT:'Vatican City State' = (".va"$)
+  UNIT:'Venezuela' = (".ve"$)
+  UNIT:'Vietnam' = (".vn"$)
+  UNIT:'Virgin Islands (British)' = (".vg"$)
+  UNIT:'Virgin Islands (US)' = (".vi"$)
+  UNIT:'Wallis and Futuna Islands' = (".wf"$)
+  UNIT:'Western Sahara' = (".eh"$)
+  UNIT:'Yemen' = (".ye"$)
+  UNIT:'Yugoslavia' = (".yu"$)
+  UNIT:'Zaire' = (".zr"$)
+  UNIT:'Zambia' = (".zm"$)
+  UNIT:'Zimbabwe' = (".zw"$)
+  UNIT:'unresolved IP' = (^[0-9][0-9\.]*$)
+;
+MEASURE:all
+  UNIT:'All of Time'
+    years.1997
+    years.1996
+    years.1995
+
+MEASURE:years
+  UNIT:1997
+    months.'January 1997'
+    months.'February 1997'
+    months.'March 1997'
+    months.'April 1997'
+    months.'May 1997'
+    months.'June 1997'
+    months.'July 1997'
+    months.'August 1997'
+    months.'September 1997'
+    months.'October 1997'
+    months.'November 1997'
+    months.'December 1997'
+  UNIT:1996
+    months.'January 1996'
+    months.'February 1996'
+    months.'March 1996'
+    months.'April 1996'
+    months.'May 1996'
+    months.'June 1996'
+    months.'July 1996'
+    months.'August 1996'
+    months.'September 1996'
+    months.'October 1996'
+    months.'November 1996'
+    months.'December 1996'
+  UNIT:1995
+    months.'January 1995'
+    months.'February 1995'
+    months.'March 1995'
+    months.'April 1995'
+    months.'May 1995'
+    months.'June 1995'
+    months.'July 1995'
+    months.'August 1995'
+    months.'September 1995'
+    months.'October 1995'
+    months.'November 1995'
+    months.'December 1995'
+
+MEASURE:months
+  UNIT:'January 1997' = ("/Jan/1997")
+  UNIT:'February 1997' = ("/Feb/1997")
+  UNIT:'March 1997' = ("/Mar/1997")
+  UNIT:'April 1997' = ("/Apr/1997")
+  UNIT:'May 1997' = ("/May/1997")
+  UNIT:'June 1997' = ("/Jun/1997")
+  UNIT:'July 1997' = ("/Jul/1997")
+  UNIT:'August 1997' = ("/Aug/1997")
+  UNIT:'September 1997' = ("/Sep/1997")
+  UNIT:'October 1997' = ("/Oct/1997")
+  UNIT:'November 1997' = ("/Nov/1997")
+  UNIT:'December 1997' = ("/Dec/1997")
+  UNIT:'January 1996' = ("/Jan/1996")
+  UNIT:'February 1996' = ("/Feb/1996")
+  UNIT:'March 1996' = ("/Mar/1996")
+  UNIT:'April 1996' = ("/Apr/1996")
+  UNIT:'May 1996' = ("/May/1996")
+  UNIT:'June 1996' = ("/Jun/1996")
+  UNIT:'July 1996' = ("/Jul/1996")
+  UNIT:'August 1996' = ("/Aug/1996")
+  UNIT:'September 1996' = ("/Sep/1996")
+  UNIT:'October 1996' = ("/Oct/1996")
+  UNIT:'November 1996' = ("/Nov/1996")
+  UNIT:'December 1996' = ("/Dec/1996")
+  UNIT:'January 1995' = ("/Jan/1995")
+  UNIT:'February 1995' = ("/Feb/1995")
+  UNIT:'March 1995' = ("/Mar/1995")
+  UNIT:'April 1995' = ("/Apr/1995")
+  UNIT:'May 1995' = ("/May/1995")
+  UNIT:'June 1995' = ("/Jun/1995")
+  UNIT:'July 1995' = ("/Jul/1995")
+  UNIT:'August 1995' = ("/Aug/1995")
+  UNIT:'September 1995' = ("/Sep/1995")
+  UNIT:'October 1995' = ("/Oct/1995")
+  UNIT:'November 1995' = ("/Nov/1995")
+  UNIT:'December 1995' = ("/Dec/1995")
+;
+MEASURE:all
+  UNIT:'All Pages' = (^.*$)
+
+MEASURE:'cgi-bin scripts'
+  UNIT:'SAMaker'
+    SAMaker.'starter'
+    SAMaker.'marker' 
+    SAMaker.'stats' 
+    SAMaker.'next' 
+    SAMaker.'skip' 
+  UNIT:'all scripts' = ("/cgi-bin/")
+
+MEASURE:'SAMaker'
+  UNIT:'starter' = ("/cgi-bin/perl/""icon/"?"tute".*"/starter")
+  UNIT:'marker' = ("/cgi-bin/perl/""icon/"?"tute".*"/marker")
+  UNIT:'stats' = ("/cgi-bin/""icon/"?"tute".*"/stats")
+  UNIT:'next' = ("/cgi-bin/""icon/"?"tute".*"/next")
+  UNIT:'skip' = ("/cgi-bin/""icon/"?"tute".*"/skip")
+
+MEASURE:subjects
+  UNIT:'CP1500 Introduction to Databases'
+    subjectsBySemester.'CP1500 I/1995'
+    subjectsBySemester.'CP1500 I/1996'
+    subjectsBySemester.'CP1500 I/1997'
+  UNIT:'CP2001 Data Structures'
+    subjectsBySemester.'CP2000 I/1995'
+    subjectsBySemester.'CP2001 I/1996'
+    subjectsBySemester.'CP2001 I/1997'
+
+MEASURE:subjectsBySemester
+  UNIT:'CP1500 I/1995' = ("/cp1500/1995")
+  UNIT:'CP1500 I/1996' = ("/cp1500/1996")
+  UNIT:'CP1500 I/1997' = ("/cp1500/1997")
+  UNIT:'CP2000 I/1995' = ("/cp2000/1995")
+  UNIT:'CP2001 I/1996' = ("/cp2001/1996")
+  UNIT:'CP2001 I/1997' = ("/cp2001/1997")
+  UNIT:'CP2003 II/1996' = ("/cp2003/1996")
+  UNIT:'CP2003 II/1997' = ("/cp2003/1997")
+  UNIT:'CP1010 II/1997' = ("/cp1010/1997")
+
+MEASURE:people
+  UNIT:'Curtis Dyreson'
+    pages.'Curtis Incomplete Data Cube'
+    pages.'Curtis Home Page'
+  UNIT:'Olivier de Vel'
+    pages.'Olivier Home Page'
+  UNIT:'Anthony Sloane'
+    pages.'Tony Home Page'
+
+MEASURE:pages
+  UNIT:'CS Home Page' = (" / HT")
+  UNIT:"Curtis Home Page" = {" /~curtis"(\/|"/index.html")?" HT"}
+  UNIT:'Curtis Incomplete Data Cube' = ("curtis/""htmls/"?"Incomplete")
+  UNIT:"Olivier Home Page" = {" /~olivier"(\/|"/index.html")?" HT"}
+  UNIT:"Tony Home Page" = {" /~tony"(\/|"/index.html")?" HT"}
+;
+FILTERS:
+  Australia@countries 
+  'December 1997'@months 
+  'CS Home Page'@pages
+FILTERS:
+  World@countries 
+  'December 1997'@months 
+  'CP 1500 Home Page'@pages
+FILTERS:
+  'Australian Continent'@countries 
+  1997@months 
+  'CP 1500 Home Page'@pages
+FILTERS:
+  World@countries 
+  1997@'months'
+  'CS Home Page'@pages
+FILTERS:
+  World@world
+  1997@months
+  'Curtis Dyreson'@people
+FILTERS:
+  'World'@world
+  'All of Time'@all
+  'All Pages'@all
+FILTERS:
+  'World'@countries 
+  '1997'@'months'
+  'Anthony Sloane'@people
+;
+alldone!

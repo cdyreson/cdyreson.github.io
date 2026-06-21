@@ -1,0 +1,1720 @@
+:include[macros]
+:arg1[
+
+<h3>Editor-in-Chief</h3>
+<table summary="EditorInChief" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Christian S. Jensen</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/csj.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Obel Professor of Computer Science
+<BR>Department of Computer Science
+<BR>Aalborg University
+<BR>9220 Aalborg &Oslash;st
+<BR>Denmark
+<BR>Tel: +45 9940 8900
+<BR>csj at cs dot aau dot dk
+<BR><A
+href="http://www.cs.aau.dk/~csj">http:colon[]//www.cs.aau.dk/~csj</A>
+</font>
+</td>
+</tr>
+</table>
+%
+<HR noshade>
+<h3>Associate Editors</h3>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Divyakant Agrawal</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/DivyAgrawal.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Harold Frank Hall Room 3117
+<br/>Department of Computer Science
+<br/>University of California at Santa Barbara
+<br/>Santa Barbara, CA 93106-5110
+<br/>USA
+<br/>Tel: +1 805 893 4385
+<br/>FAX: +1 805 893 8553
+<BR>lastname At cs ucsb edu
+<BR><A
+HREF="http://www.cs.ucsb.edu/~agrawal">http:colon[]//www.cs.ucsb.edu/~agrawal</A>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Anastasia Ailamaki</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/AnastasiaAilamaki.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Ecole Polytechnique F&eacute;d&eacute;rale de Lausanne
+%<br/>EPFL-IC-IIF-DIAS
+%<br/>Station 14                
+%<br/>CH-1015 Lausanne
+%<br/>France
+%<br/>Tel: +41 21 693 7564
+%<BR>anastasia dot ailamaki at epfl dot ch 
+%<BR><A
+%HREF="http://dias.epfl.ch">http:colon[]//dias.epfl.ch</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Sihem Amer-Yahia</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/SihemAmerYahia.gif">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Laboratoire d'Informatique de Grenoble (LIG)
+<BR> Centre National de Recherche scientifique (CNRS) 
+<BR> 681 rue de la passerelle
+<BR> 38401 Saint-Martin dHres - France
+<BR> Building D Office D308
+<BR>sihem dot Amer-Yahia at imag dot fr
+<BR><A
+HREF="http://lig-membres.imag.fr/amery/">http:colon[]//lig-membres.imag.fr/amery/</A>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Walid G. Aref</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/aref.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Purdue University
+<BR>Department of Computer Science
+<BR>305 N. University Street
+<BR>West Lafayette, Indiana, 47907-2107
+<BR>USA
+<BR>Tel: +1 765 494 1997
+<BR>Fax: +1 765 494 0739
+<BR>aref at cs dot purdue dot edu
+<BR><A
+HREF="http://www.cs.purdue.edu/homes/aref/">http:colon[]//www.cs.purdue.edu/homes/aref</A>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Marcelo Arenas</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/marcelo.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science
+<BR> School of Engineering
+<BR> Pontificia Universidad Catolica de Chile
+<BR> Vicuna Mackenna 4860
+<BR> Edificio San Agustin, 4to piso
+<BR> Macul 7820436
+<BR> Santiago
+<BR> Chile
+<BR> phone: +56 2 23545821
+<BR> fax: +56 2 23544444
+<BR> marenas at ing dot puc dot cl
+<BR> <a href="http://web.ing.puc.cl/~marenas">http://web.ing.puc.cl/~marenas</a>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Associate Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Michael B&ouml;hlen</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/MichaelBohlen.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Institut f&uuml;r Informatik
+%<BR>Binzm&uuml;hlestrasse 14
+%<BR>University of Z&uuml;rich 
+%<BR>8050 Z&uuml;rich 
+%<BR>Switzerland
+%<BR>Tel: +41 44 635 4333
+%<BR>Fax: +41 44 635 6809
+%<BR>boehlen at ifi dot uzh dot ch
+%<BR><A
+%HREF="http://www.ifi.uzh.ch/dbtg/Staff/Boehlen/">http://www.ifi.uzh.ch/dbtg/Staff/Boehlen</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Jan Chomicki</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/chomicki.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Department of Computer Science and Engineering
+%<BR>226 Bell Hall, Box 602000
+%<BR>SUNY at Buffalo
+%<BR>Buffalo, NY 14260-2000
+%<BR>USA
+%<BR>Tel: (716) 645-3180 ext.103
+%<BR>Fax: (732) 645-3464
+%<BR>chomicki at cse dot buffalo dot edu
+%<BR><A
+%HREF="http://www.cse.buffalo.edu/~chomicki/">http:colon[]//www.cse.buffalo.edu/~chomicki</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>K. Sel&ccedil;uk Candan</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/selcuk.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td> 
+<td valign=top>
+<font face=":myFont[]">
+School of Computing, Informatics, and Decision Systems Engineering
+<BR>Ira Fulton School of Engineering
+<BR>Arizona State University
+<BR>Box 878809
+<BR>Tempe, AZ 85287-8809
+<BR>USA
+<BR>Tel: +1 (480) 965-2770
+<BR>Fax: +1 (480) 965-2751
+<BR>candan at asu dot edu
+<BR><A
+HREF="http://aria.asu.edu/candan/">http:colon[]//aria.asu.edu/candan</A>
+</font>
+</td> 
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Paolo Ciaccia</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/ciaccia.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td> 
+<td valign=top>
+<font face=":myFont[]">
+DEIS
+<BR>University of Bologna
+<BR>Viale Risorgimento, 2
+<BR>20136 Bologna 
+<BR>Italy
+<BR>Tel: +39 051 20 93070
+<BR>Fax: +39 051 20 93540
+<BR>paolo dot ciaccia at unibo dot it
+<BR><A
+HREF="http://www-db.deis.unibo.it/~pciaccia/">http:colon[]//www-db.deis.unibo.it/~pciaccia</A>
+</font>
+</td> 
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Gao Cong</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/gao.cong.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td> 
+<td valign=top>
+<font face=":myFont[]">
+Nanyang Technological University
+<BR>School of Computer Engineering
+<BR>Blk N4, 50 Nanyang Avenue, Singapore 639798
+<BR>Tel: +65 6790 5045
+<BR>Tax: +65 6792 6559
+<BR>gaocong at ntu dot edu dot sg
+<BR><a href="http://www.ntu.edu.sg/home/gaocong/">http://www.ntu.edu.sg/home/gaocong/</a>
+</font>
+</td> 
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Graham Cormode</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/cormode.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td> 
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science
+<BR>University of Warwick
+<BR>Coventry
+<BR>CV4 7AL
+<BR>United Kingdom
+%<BR>Tel: +39 051 20 93070
+%<BR>Fax: +39 051 20 93540
+<BR>G dot Cormode at warwick dot ac dot uk
+<BR><A
+HREF="http://www2.warwick.ac.uk/fac/sci/dcs/people/graham_cormode/">http://www2.warwick.ac.uk/fac/sci/dcs/people/graham_cormode/</A>
+</font>
+</td> 
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Gautam Das</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/das.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Computer Science and Engineering Department
+<BR>University of Texas at Arlington
+<BR>500 UTA Blvd., 626, Engineering Research Building
+<BR>Arlington, TX 76019
+<BR>USA
+<BR>Tel: +1 (817) 272-7595
+%<BR>Fax: (215) 898-0587
+<BR>uta dot edu, gdas
+<BR><A
+HREF="http://ranger.uta.edu/~gdas/">http://ranger.uta.edu/~gdas</A>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Yanlei Diao</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/YanleiDiao.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science
+<BR>University of Massachusetts Amherst
+<BR>140 Governors Drive
+<BR>Amherst, MA 01003-9264
+<BR>USA
+<BR>Tel: +1 (413) 545-1135
+<BR>Fax: (413) 545-1249
+<BR>last-name at cs dot umass dot edu
+<BR><A
+HREF="http://people.cs.umass.edu/~yanlei/">http://people.cs.umass.edu/~yanlei/</A>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Sabrina De Capitani di Vimercati</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/sabrina.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+DTI - Dipartimento di Tecnologie dell'Informazione
+<BR>Universit&agrave degli Studi di Milano
+<BR>Via Bramante 65
+<BR>26013 Crema
+<BR>Italy
+<BR>Tel: +39-02-50330057
+<BR>Fax: +39-02-50330010
+<BR>sabrina dot decapitani -at- unimi dot it
+<BR><A
+HREF="http://www.dti.unimi.it/decapita/index.html">http://www.dti.unimi.it/decapita</A>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Amol Deshpande</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/amol.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+3221 A.V. Williams Bldg.
+<BR>Department of Computer Science
+<BR>University of Maryland
+<BR>College Park, MD 20742
+<BR>USA
+<BR>Tel: +1 (301) 405-2703 (office)
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+1 (301) 539-9422 (Google voice - preferred)
+<BR>Fax: +1 (301) 405-6707
+<BR>amol at cs dot umd dot edu
+<BR><A
+HREF="http://www.cs.umd.edu/~amol/">http://www.cs.umd.edu/~amol</A>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Wenfei Fan  <span
+%  lang=ZH-CN 
+%%  style='font-size:colon[]18.0pt'
+%>(&#27146&#25991&#39134)</span>
+%</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/WenfeiFan.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%School of Informatics
+%<BR>University of Edinburgh
+%<BR>10 Crichton Street
+%<BR>Edinburgh, EH8 9AB
+%<BR>Scotland, UK
+%<BR>Tel: +44 (0) 131 651-3877
+%<BR>Fax: +44 (0) 131 651-3815
+%<BR>wenfei -at- inf dot ed dot ac dot uk
+%<BR><A
+%HREF="http://homepages.inf.ed.ac.uk/wenfei">http://homepages.inf.ed.ac.uk/wenfei</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Minos Garofalakis</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/MinosGarofalakis.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Department of Electronic and Computer Engineering
+%<BR>Technical University of Crete
+%<BR>University Campus - Kounoupidiana
+%<BR>73100 Chania
+%<BR>Hellas (Greece)
+%<BR>Tel: +30-6974-785418
+%<BR>Fax: +30-2821-037542
+%<BR>minos at acm dot org
+%<BR><A
+%HREF="http://www.softnet.tuc.gr/~minos">http://www.softnet.tuc.gr/~minos</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Floris Geerts</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/FlorisGeerts.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+ADReM research group
+<BR> University of Antwerp
+<BR> Department of Mathematics and Computer Science
+<BR> Middelheimlaan 1
+<BR> B-2020 Antwerpen
+<BR> Belgium
+<BR> phone: +32 3 265 39 07
+<BR> fax: +32 3 265 37 77
+<BR> floris dot geerts at ua dot ac dot be
+<BR> <a href="http://adrem.ua.ac.be/floris.geerts">http://adrem.ua.ac.be/floris.geerts</a>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Torsten Grust</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/Torsten-Grust.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science 
+<BR> University of Tübingen
+<BR> Sand 13
+<BR> 72076 Tübingen
+<BR> Germany
+<BR> Tel: +49 7071 29-75477
+<BR> Fax: +49 7071 29-5958
+<BR> torsten dot grust at uni dash tuebingen dot de
+<BR> <a href="http://db.inf.uni-tuebingen.de/team/grust">http://db.inf.uni-tuebingen.de/team/grust</a>
+</font>
+</td>
+</tr>
+</table>
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Peter J. Haas</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/peter.haas.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+IBM Almaden Research Center 
+<BR> San Jose, CA, USA
+<BR> Tel: +1 408 927 1702
+<BR> phaas at us dot ibm dot com      
+<BR> <a href="http://researcher.watson.ibm.com/researcher/view.php?person=us-phaas">http://researcher.watson.ibm.com/researcher/view.php?person=us-phaas</a>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Johannes Gehrke</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/JohannesGehrke.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Department of Computer Science 
+%<BR> 4105B Upson Hall
+%<BR> Cornell University
+%<BR> Ithaca, NY 14853
+%<BR> USA
+%<BR> Tel: +1-607-821-1685
+%<BR> Fax: +1-607-255-4428
+%<BR> johannes at cs dot cornell dot edu
+%<BR> <a href="http://www.cs.cornell.edu/johannes">http:colon[]//www.cs.cornell.edu/johannes/</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp; 
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Luis Gravano</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/gravano.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Computer Science Department
+%<BR> Columbia University
+%<BR> 1214 Amsterdam Avenue
+%<BR> New York, NY 10027
+%<BR> USA 	
+%<BR> Tel: +1-212-939-7064
+%<BR> Fax: +1-212-666-0140
+%<BR> gravano at cs dot columbia dot edu
+%<BR> <a href="http://www.cs.columbia.edu/~gravano">http:colon[]//www.cs.columbia.edu/~gravano</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp; 
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Ralf Hartmut G&uuml;ting</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/Hartmut2.jpeg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%LG Datenbanksysteme f&uuml;r neue Anwendungen
+%<BR> Fernuniversit&auml;t Hagen
+%<BR> D-58084 Hagen 
+%<BR> Germany
+%<BR> Tel: +49-2331-987-4279 
+%<BR> Fax: +49-2331-987-4278 
+%<BR> rhg at fernuni-hagen.de
+%<BR><A HREF="http:colon[]//www.informatik.fernuni-hagen.de/pi4/gueting/home.html">http:colon[]//www.informatik.fernuni-hagen.de/pi4/gueting/home.html</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Ihab Ilyas</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/IhabIlyas.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Cheriton School of Computer Science
+<BR> University of Waterloo
+<BR> 200 University Ave. West
+<BR> Waterloo, Ontario, Canada N2L 3G1
+<BR> Phone: +1 (519) 888-4567
+<BR> <img src="images/Ihabemail.gif">
+<BR> <a href="https://cs.uwaterloo.ca/~ilyas/">https://cs.uwaterloo.ca/~ilyas/</a>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp; 
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Chris Jermaine</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/jermaine.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%%<td valign=top>
+%<font face=":myFont[]">
+%Department of Computer Science
+%<BR> Rice University 
+%<BR> P.O. Box 1892, MS 132
+%<BR> Houston, TX 77251
+%<BR> USA
+%<BR> Phone: (713) 348-4834 
+%<BR> Fax:   (713) 348-5930
+%<BR> Christopher dot M dot Jermaine -at- rice dot edu
+%<BR> <a href="http://www.cs.rice.edu/~cmj4">http://www.cs.rice.edu/~cmj4</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Martin Kersten</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/MartinKersten.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Centrum Wiskunde & Informatica (CWI)
+%<BR>Kruislaan 413
+%<BR>P.O. Box 94079
+%<BR>1090 GB Amsterdam
+%<BR>The Netherlands
+%<BR> Phone: +31 20 5924066
+%<BR> Fax:   +31 20 5924199
+%<BR> Martin dot Kersten -at-  cwi dot nl
+%<BR><A HREF="http://homepages.cwi.nl/~mk/">http://homepages.cwi.nl/~mk/</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Phokion G. Kolaitis</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/kolaitis.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%IBM Almaden Research Center
+%<BR>Computer Science Principles and Methodologies
+%<BR>650 Harry Road 
+%<BR>San Jose, California 95120-6099
+%<BR> USA 	
+%<BR> Phone: (408) 927-1810 
+%<BR> Fax:      (408) 927-3215
+%<BR> kolaitis  -at-  almaden.ibm.com 
+%<BR><A HREF="http://www.almaden.ibm.com/cs/people/kolaitis">http://www.almaden.ibm.com/cs/people/kolaitis</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Daniel Kifer</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/kifer.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science & Engineering
+<BR>Penn State
+<BR>360F IST Building
+<BR>University Park, PA 16802
+<BR> USA 	
+<BR> Fax: +1 814-865-7647
+<BR><img width=150 src="images/kiferem.png">
+<BR><A HREF="http://www.cse.psu.edu/~dkifer">http://www.cse.psu.edu/~dkifer</A>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>George Kollios</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/GeorgeKollios.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Department of Computer Science
+%<BR> Boston University
+%<BR> 111 Cummington Street
+%<BR> Boston, MA, 02215
+%<BR> USA 	
+%<BR> Tel: +1 617 358-1835
+%<BR> Fax: +1 617 353-6457
+%<BR>gkollios at cs dot bu dot edu
+%<BR><A HREF="http://www.cs.bu.edu/~gkollios">http://www.cs.bu.edu/~gkollios</A>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Nick Koudas</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/NickKoudas.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science
+<BR> Bahen Center for Information Technology
+<BR> University of Toronto
+<BR> 40 St. George Street Rm BA5240
+<BR> Toronto ON M5S 2E4
+<BR> Canada
+<BR> Office: +1 416 946 5819
+<BR> Fax : +1 416 978 4765
+<BR> koudas at cs dot toronto dot edu
+<BR><A HREF="http://queens.db.toronto.edu/~koudas/">http://queens.db.toronto.edu/~koudas/</A>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Mohamed F.&nbsp;Mokbel</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/Mokbel.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science and Engineering
+<BR>University of Minnesota - Twin Cities
+<BR>4-192 KHKH Building 
+<BR>200 Union Street SE, Minneapolis, MN, 55455
+<BR>USA
+<BR>Tel: +1 (612)-262-3025
+<BR>mokbel AT cs dot umn dot edu
+<BR><A
+HREF="http://www-users.cs.umn.edu/~mokbel/">http:colon[]//www-users.cs.umn.edu/~mokbel</A>
+<BR>
+<BR>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Guido Moerkotte</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/GuidoMoerkotte.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%University of Mannheim
+%<BR>Chair of Practical Computer Science III
+%<BR>B6, 29, Geb&auml;udeteil C Room: Raum C0.10
+%<BR>68131 Mannheim
+%<BR>Germany
+%<BR>Tel: +49 621 181 2582
+%<BR>Fax: +49 621 181 2588
+%<BR>moerkotte at informatik dot uni-mannheim dot de
+%<BR><A
+%HREF="http://pi3.informatik.uni-mannheim.de/moerkotte.html.en">http://pi3.informatik.uni-mannheim.de/moerkotte.html.en</A>
+%<BR>
+%<BR>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Lucian Popa</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top> 
+%<img width=100 src="images/LucianPopa.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%IBM Almaden Research Center
+%<BR>Dept. 8CC/B1
+%<BR>650 Harry Road
+%%<BR>San Jose, California 95120
+%<BR>USA
+%<BR>Tel: +1 (408) 927-1914
+%<BR>Fax: +1 (408) 927-3215
+%<BR>lucian at almaden dot ibm dot com
+%<BR><A
+%HREF="http://www.almaden.ibm.com/cs/people/lucian/">http://www.almaden.ibm.com/cs/people/lucian/</A>
+%%<BR>
+%<BR>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Christopher R&eacute;</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top> 
+<img width=100 src="images/ChrisRe.png">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science
+<BR>Stanford University
+<BR>353 Serra Mall
+<BR>Stanford University, California 94395-9025
+<BR>USA
+<BR>Tel: +1 (650) 725-3331
+<BR>chrismre at cs dot stanford dot edu
+<BR><A HREF="http://cs.stanford.edu/people/chrismre/">http://cs.stanford.edu/people/chrismre/</A>
+<BR>
+<BR>
+</font>
+</td>
+</tr>
+</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Kenneth Ross</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/karbw.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Columbia University 
+%<BR>Department of Computer Science 
+%<BR>450 Computer Science Building 
+%<BR>1214 Amsterdam Avenue, Mailcode: 0401 
+%<BR> New York, New York 10027-7003
+%<BR>USA
+%<BR> Tel: 1.212.939.7058 
+%<BR> Fax: 1.212.666.0140
+%<BR>kar at cs dot columbia dot edu
+%<BR><A 
+%HREF="http://www.cs.columbia.edu/~kar">http://www.cs.columbia.edu/~kar</A>
+%<BR>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Betty Salzberg</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/salzberg.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%College of Computer and Information Science
+%<BR> Northeastern University
+%<BR> 360 Huntington Avenue #202 WVH,
+%<BR> Boston, MA 02115
+%<BR>USA
+%<BR> Tel: (617) 373-2229 
+%<BR> Fax: (617) 373-5121
+%<BR>salzberg at ccs dot neu dot edu
+%<BR><A href="http://www.ccs.neu.edu/home/salzberg/">http:colon[]//www.ccs.neu.edu/home/salzberg/</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Pierangela Samarati</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/samarati.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Universit&agrave degli Studi di Milano
+%<BR>Dipartimento di Tecnologie dell'Informazione
+%<BR> Via Bramante 65 - 26013, Crema
+%<BR>Italy
+%<BR> Voice: +39-02-503.30061 &nbsp &nbsp or &nbsp &nbsp +39-0373-898061
+%<BR> Fax: +39-02-503.30010 &nbsp &nbsp or &nbsp &nbsp  +39-0373-898010
+%<BR> samarati at dti dot unimi dot it
+%<BR> <A HREF="http://www.dti.unimi.it/~samarati">http://www.dti.unimi.it/~samarati</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Divesh Srivastava</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/DiveshSrivastava.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%AT&T Labs - Research
+%<BR>Room A-115
+%<BR>180 Park Ave Bldg 103
+%<BR>Florham Park, NJ 07932
+%<BR>USA
+%<BR>Tel: +1 (973) 360-8776
+%<BR>Fax: +1 (973) 360-8871
+%<BR>divesh at research dot att dot com
+%<BR><A href="http://www.research.att.com/~divesh">http:colon[]//www.research.att.com/~divesh</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+ 
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Dan Suciu</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/suciu.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Computer Science & Engineering
+%<BR>University of Washington Box 352350 
+%<BR>Seattle, WA 98195-2350 
+%<BR>USA
+%<BR>Tel: +1 (206) 685-1934
+%<BR>Fax: +1 (206) 543-2969
+%%<BR>suciu at cs dot washington dot edu
+%<BR><A href="http://www.cs.washington.edu/homes/suciu/">http:colon[]//www.cs.washington.edu/homes/suciu</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+%<table summary="Editor" border=0>
+%<tr>
+%<td>
+%&nbsp;&nbsp;
+%&nbsp;&nbsp;
+%</td>
+%<td colspan=3>
+%<font face=":myFont[]">
+%<b>Yufei Tao</b>
+%</font>
+%</td>
+%</tr>
+%<tr>
+%<td>
+%</td>
+%<td valign=top>
+%<img width=100 src="images/YufeiTao.jpg">
+%</td>
+%<td>
+%&nbsp;&nbsp;&nbsp;
+%</td>
+%<td valign=top>
+%<font face=":myFont[]">
+%Room 1019
+%<BR>Ho Sin-Hang Engineering Building
+%<BR>Department of Computer Science
+%<BR>Chinese University of Hong Kong
+%<BR>Sha Tin, New Territories, Hong Kong SAR
+%<BR>China
+%<BR>Tel: +852 26098437
+%<BR>Fax: +852 26035024
+%<BR>taoyf at cse dot cuhk dot edu dot hk
+%<BR><A href="http://www.cse.cuhk.edu.hk/~taoyf">http://www.cse.cuhk.edu.hk/~taoyf</a>
+%</font>
+%</td>
+%</tr>
+%</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Dirk Van Gucht</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/dirk.gif">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Indiana University
+<BR>Computer Science Department
+<BR>Lindley Hall 215
+<BR>150 S. Woodlawn Ave.
+<BR>Bloomington, IN 47405-710
+<BR>USA
+<BR>Tel: +1 (812) 855-6429
+<BR>Fax: +1 (812) 855-4829
+<BR>vgucht at cs dot indiana dot edu
+<BR><A href="https://www.cs.indiana.edu/~vgucht/">https:colon[]//www.cs.indiana.edu/~vgucht/</a>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Jun Yang</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/JunYang.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Duke University
+<BR>Department of Computer Science
+<BR>D327 Levine Science Research Center
+<BR>Box 90129
+<BR>Durham, North Carolina 27708-0129
+<BR>USA
+<BR>Tel: +1 919-660-6587
+<BR>Fax: +1 919-660-6519
+<BR><LT/>cs.duke.edu, junyang<GT/>, "<LT/>domain,user<GT/>" represents the email address "user@domain"
+<BR><A href="http://www.cs.duke.edu/~junyang/">http:colon[]//www.cs.duke.edu/~junyang/</a>
+</font>
+</td>
+</tr>
+</table>
+
+<table summary="Associate Editor" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Ke Yi</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/KeYi.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science and Engineering
+<BR>Hong Kong University of Science and Technology
+<BR>Clear Water Bay, Hong Kong, China
+<BR>Tel: +852-2358 8770
+<BR>Fax: +852-2358 1477
+<BR>yike at cse dot ust dot hk
+<BR><A href="http://www.cse.ust.hk/~yike/">http:colon[]//www.cse.ust.hk/~yike/</a>
+</font>
+</td>
+</tr>
+</table>
+
+Please see the <a href="History.html">history page</a>
+for past members of the Editorial Board.
+
+<HR noshade>
+<h3>:journalAcronym[] Information Director</h3>
+<table summary="Info Director" border=0>
+<tr>
+<td>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+</td>
+<td colspan=3>
+<font face=":myFont[]">
+<b>Curtis E. Dyreson</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td valign=top>
+<img width=100 src="images/dyreson.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td valign=top>
+<font face=":myFont[]">
+Department of Computer Science
+<BR>Utah State University
+<BR>Logan, UT 84321
+<BR>USA
+<BR>Tel: (435) 797-0742
+<BR>:mailtowebmaster[] or Curtis dot Dyreson at usu.edu
+<BR><A href="http://www.cs.usu.edu/~cdyreson">http:colon[]//www.cs.usu.edu/~cdyreson</A>
+</font>
+</td>
+</tr>
+</table>
+%
+<HR noshade>
+%
+<H3>Headquarters Quarterlies Staff</H3>
+<ul>
+<b>Laura Lander</b>
+<ul>
+ACM Journals Manager
+<BR><A href="mailto:colon[]lander@hq.acm.org">lander@hq.acm.org</A>
+</ul>
+
+<b>Bernard Rous</b>
+<ul>
+Director, ACM Publications
+<BR><A href="mailto:colon[]rous@acm.org">rous@acm.org</A>
+</ul>
+
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Editorial Board]

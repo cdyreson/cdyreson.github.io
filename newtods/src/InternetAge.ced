@@ -1,0 +1,177 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, March 2003</em>)
+
+It is a clich&eacute; that the Internet has revolutionized many aspects
+of life in the past decade. Scientific publishing is but one of the many
+enterprises that have been impacted by the connectivity and high bandwidth
+afforded by the World Wide Web. Most scientific journals now have a web
+presence. That said, it is still remarkable the degree to which ACM in
+general and :journalAcronym[] in particular have embraced the unique capabilities of
+the web to aid in the propagation of knowledge.
+
+Here I summarize the disparate and broad ways in which :journalAcronym[] utilizes
+the web, in all phases of publishing.
+
+<dl>
+<dt><strong>Journal information </strong></dt><dd>The 
+  <a href="http://www.acm.org/tods/">:journalAcronym[] web site</a>
+  provides on-line editorial
+  guidelines, charter, and scope of the publication, as well as listing the
+  editorial board, editorials, and links to these columns.</dd>
+
+<dt><strong>Manuscript submission </strong></dt><dd>Manuscripts are
+  submitted by filling out an on-line form. The Editor-in-Chief is
+  immediately notified of this submission by email, enabling an Associate
+  Editor to be located and assigned quickly, generally within a week.
+
+  A manuscript tracking system affords authors
+  the status of their submission, turnaround statistics for all submissions,
+  and the current backlog of accepted, to-be-published papers.</dd>
+
+<dt><strong>Manuscript reviewing </strong></dt><dd> The tracking system
+  provides access for reviewers to the paper assigned to them and
+  allows them to enter their review on-line. It also maintains
+  confidentiality in the review process via elaborate system
+  controls. Referee rights and guidelines are provided on the :journalAcronym[] web site.</dd>
+
+<dt><strong>Editorial oversight </strong></dt><dd>The tracking system maintains information on each
+  paper assigned to an Associate Editor, and notifies that editor by email
+  whenever the paper changes status, such as when reviews have been
+  received. This system provides an extensive set of reports to allow the
+  Editor-in-Chief to assess the editorial process and quickly locate
+  bottlenecks. This enables each submission to be efficiently and
+  expeditiously handled.</dd>
+
+<dt><strong>Article dissemination </strong></dt><dd>Once a paper is accepted, the author can access
+  style files on the :journalAcronym[] web site, as well as information on how to
+  prepare the final version. The electronic version of the paper 
+  <a href="http://www.acm.org/tods/Upcoming.html">is
+  available from the web</a>
+  as soon as it is provided by the author, generally
+  several months before the paper appears in print.</dd>
+
+<dt><strong>Article citation page </strong></dt><dd>The citation page for each :journalAcronym[] article
+  contains a wealth of information. Consider 
+  <a href="http://doi.acm.org/10.1145/42201.42203">Timos Sellis' seminal paper
+  on multiple-query optimization in the March 1988 issue</a>.</dd>
+<ul>
+
+<li> The journal, volume, issue, and author(s) are all links, to obtain
+lists of other papers of that journal, author, etc. in the ACM Portal.
+
+<li> The <em>Digital Object Identifier</em> (DOI) for this paper is 
+10.1145/42201.42203. ACM is a member of  PILA, the Publishers International 
+Linking Association, known as <a href="http://www.crossref.org/">CrossRef</a>, 
+as are many other publishers and scientific societies. ACM deposits DOIs for each article ACM publishes together with a 
+core set of metadata for the article, in the shared CrossRef metadata
+database.  
+Other publishers with references to ACM works then send their reference
+metadata to CrossRef to look up the ACM-supplied DOI and thereby establish
+permanent links to the works referenced on ACM's site. ACM, in turn, takes
+the
+metadata of the references authors supply in article bibliographies, and
+queries the CrossRef metadata database to retrieve DOIs deposited by other
+publishers and thereby establish links to articles held on other 
+participating publisher sites.
+
+<li> A link provides the meta-data in BibTex format. Other links identify
+  similar papers, allow the user to create or join a discussion forum on the
+  paper, or add it to a "binder" (a collection of Portal
+  entities that interest the user). (Access to binders and other Guide facilities are
+  available to all ACM Professional, Student, and SIG (including SIGMOD!)
+  members as a basic membership benefit---see 
+  <a href="http://portal.acm.org/info/">the ACM Portal</a> for details.)
+
+<li> The paper itself is available as a PDF file. Older papers, like
+  this one, are scanned, and thus are longer (this 46-page paper is over 3MB
+  in size). More recent papers are in native PDF. Wolfgang May and
+  Bertram Lud&auml;scher's 
+  <a href="http://doi.acm.org/10.1145/582410.582411">December 2002 paper</a>
+  at 54 pages requires only 634KB, about
+  one-fifth as big. Every :journalAcronym[] article, from the first 
+  issue of Volume 1 published in 1976, is available online. 
+
+<li> The full abstract is given on the citation page.
+
+<li> This paper has 31 references, which are listed on the citation
+  page. Some, in this case almost half, are links to citation pages in the
+  ACM Portal (which include many papers not published by ACM). ACM has
+  collected almost half a million of these links, and regularly
+  expands the coverage. All references are linked through their DOIs.
+Older papers were scanned and OCRed and
+the references extracted from the PDFs before they
+could be looked up. For recent and future articles, the references are
+  captured as part of the extended metadata itself, so extraction from PDFs
+  is no longer a required step.
+
+<li> Also listed on this paper's citation page are thirty papers that reference this
+paper, providing forward pointers into the literature. Thus works in the
+Portal have links that are traversable in both directions, allowing one to move backward in
+time to a paper's predecessors, or forward in time to a paper's successors.
+
+<li> The index terms are provided by the 
+  <a href="http://www.acm.org/class">ACM Computing Classification System</a>, 
+  a hierarchical taxonomy. Most :journalAcronym[] 
+  papers are classified in a subcategory of H.2 
+  Database Management. Also included are general terms.
+
+<li> Some papers include an electronic appendix or supplement; see for
+  example the recent May and Lud&auml;scher paper.
+
+  <li> Pointers to materials directly related to the paper are
+  included in the paper's citation page. Examples
+  can be found at the following links. After going
+  to each, click on the "additional resources" link. (These are distinct
+  from "Appendices and Supplements" in that "Additional Resources" point
+  to resources available from external sites over which ACM has no control;
+  ACM guarantees perpetual access to the former.)
+
+<ul>
+<li> <a href="http://doi.acm.org/10.1145/502030.502031">http://doi.acm.org/10.1145/502030.502031</a> (a technical report)
+<li> <a href="http://doi.acm.org/10.1145/503099.503102">http://doi.acm.org/10.1145/503099.503102</a> (a URL to a project)
+<li> <a href="http://doi.acm.org/10.1145/352958.352963">http://doi.acm.org/10.1145/352958.352963</a> (an extended version of 
+   the paper as well as citations for two additional papers)
+<li> <a href="http://doi.acm.org/10.1145/383734.383737">http://doi.acm.org/10.1145/383734.383737</a> (another URL with 
+   related technical reports and data)
+<li> <a href="http://doi.acm.org/10.1145/288086.288087">http://doi.acm.org/10.1145/288086.288087</a> (additional documentation 
+  and code)
+</ul>
+
+<li> A "Peer-to-Peer" section lists articles (and links) that readers of
+  this article have also accessed.
+
+<li> Finally, this citation page contains a review of the paper from <em>ACM
+  Computing Reviews</em>.
+
+</ul>
+
+<dt><strong>Searching the Portal </strong></dt><dd>The ACM Portal can be directly searched by
+  anyone for terms in the 
+  title, author list, abstract, or review, by ISBN/ISSN, publisher, date,
+  journal, type of publication, DOI, conference sponsor, conference location,
+  classification, subject and/or keyword. Under an Agreement, 
+  <a href="http://www.google.com">Google</a> 
+  now indexes the entire contents of the ACM Digital
+  Library, and :journalAcronym[] articles in
+  <a href="http://www.acm.org/sigmod/dblp/db/index.html">DBLP</a> are linked 
+  to their ACM citation page.</dd>
+
+<dt><strong>Table of contents by email </strong></dt><dd>ACM, Student and SIG members can request
+  an email alert of the table of contents of new :journalAcronym[] issues.</dd>
+
+</dl>
+
+As this list indicates, ACM in the last decade has augmented :journalAcronym[] with an extensive
+array of web-based 
+facilities to aid the author, reviewer, Associate Editor, and especially,
+the reader. This effort has cost several million dollars and greatly
+benefits the scientific community.
+
+(I thank Bernard Rous, Deputy Director and Electronic Publisher at ACM, for
+comments and corrections to this column. Bernie has expertly shepherded the
+ACM Digital Library and the Portal since their inception.)
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[ACM TODS in this Internet Age]

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Collapse </TITLE>
+<META NAME="description" CONTENT="Collapse ">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html200"
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html198"
+ HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html192"
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html201"
+ HREF="node16.html">Coalesce</A>
+<B> Up:</B> <A NAME="tex2html199"
+ HREF="node13.html">Additional Query Operators</A>
+<B> Previous:</B> <A NAME="tex2html193"
+ HREF="node14.html">Slice</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00033200000000000000">&#160;</A>
+<A NAME="sec:pathCollapse">&#160;</A>
+<BR>
+<I>Collapse</I> 
+</H3>
+
+<P>
+In this section, the 
+<!-- MATH: $Path{\it Collapse\/}\xspace_{\Gamma}$ -->
+<IMG
+ WIDTH="108" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$Path{\it Collapse\/}\xspace_{\Gamma}$">
+operation introduced in
+Section&nbsp;<A HREF="node10.html#sec:pathValid">3.2.1</A> is trivially generalized to collapse every
+path in a set of paths.  Typically, 
+<!-- MATH: ${\it Match\/}\xspace_{\it DB\/}$ -->
+<IMG
+ WIDTH="69" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="${\it Match\/}\xspace_{\it DB\/}$">
+first chooses
+a set of paths that match some regular expression, then the paths are
+collapsed, and a property is coalesced from the collapsed paths.
+
+<P>
+<BR>
+
+<P>
+[
+<!-- MATH: ${{\it Collapse\/}\xspace}_{\Gamma}:
+2^{\it PATHS\/} \rightarrow 2^{\it EDGES\/}$ -->
+<IMG
+ WIDTH="218" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="${{\it Collapse\/}\xspace}_{\Gamma}:
+2^{\it PATHS\/} \rightarrow 2^{\it EDGES\/}$">]
+
+<P>
+A set of paths, <I>S</I>, is collapsed by collapsing each path independently.
+<PRE><TT>
+		<IMG
+ WIDTH="347" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="${\it Collapse\/}\xspace_{\Gamma}(S) \stackrel{\scriptstyle \triangle}{=}\{ {\it...
+...t\/}\xspace_{\Gamma}(P)~\vert~ P \in S~\land~{\it Valid\/}\xspace_{\Gamma}(P)\}$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE> 
+<P></P>
+
+<P>
+<BR>
+
+<P>
+The utility of an operation like <I>Collapse</I> has been investigated in 
+other semistructured
+query languages where it has been called ``pull-up''&nbsp;[<A
+ HREF="node25.html#AGGARWAL94">1</A>].
+In Lorel, <I>Collapse</I> is not an operation at the query language level; rather,
+it is used in the implementation to compute the value 
+of a <EM>path variable</EM>.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

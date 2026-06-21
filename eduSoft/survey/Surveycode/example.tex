@@ -1,0 +1,97 @@
+% The first few tags are directions to surveymaker control construction of
+% the survey.  The actual questions start with the (QUESTIONS) tag.  
+% Everything up to the (QUESTIONS) remains essentially the same for each 
+% survey, so you just create it once and reuse it.
+
+% Put in any entry text you want.
+(ENTRY-TEXT) 
+  Hiya!  This is a fake subject evaluation survey, just to show what kinds
+  of questions can be asked.
+
+% Put in what you want for an exit message.
+(EXIT-TEXT) 
+  Thank you for taking the time to complete this survey.
+  The results will be made available shortly on the WWW.
+  <P> 
+  <A HREF="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/survey.html">
+  Return to SurveyMaker
+  </A>
+
+% This is the password to the statistics page, so only you can look
+% at the collected statistics, change it to whatever you want
+(STATS-PASSWORD) 
+872r43knsdvf09u87tr43bkjhllref098uftr4e3klnjbfreqfdsakljljkfdsa
+
+% Make up a list of random passwords and put them in here, in the fake
+% survey we ignore these
+(CLASS-LIST)
+12950
+6564
+9430
+27199
+5665
+23682
+12734
+
+% Questions start here
+(QUESTIONS)
+
+% Each QUESTIONSET is a set of questions.  One is randomly chosen as the 
+% question to ask
+(QUESTIONSET)
+% Multiple choice question
+(MC) Please rate the organisation of lecture content.
+(r) excellent
+(r) good
+(r) average
+(r) poor
+(r) very poor
+(r) not applicable
+
+% RB is a radio box, multiple choice question
+(QUESTIONSET)
+(RB) (An alternative format for a multiple choice question).
+Please rate the lecturer's ability to hold your interest.
+(r) excellent
+(r) good
+(r) average
+(r) poor
+(r) very poor
+(r) not applicable
+
+% MB is a menu with only one possible choice. (r) is a menu option 
+% the end of the menu list.
+(QUESTIONSET)
+(MB) (Yet another kind of multiple choice question).
+What year of study are you doing?
+(r) 1st Year
+(r) 2nd Year
+(r) 3rd Year
+(r) 4th Year
+(r) other
+
+% Many choice question using checkbox
+(QUESTIONSET)
+(CB) What were some bad things about the course (many choices possible)?
+(r) lectures
+(r) quizzes
+(r) assignments
+(r) nothing!
+
+% MM is a menu allowing multiple selection. 
+(QUESTIONSET)
+(MM) What were some good things about the course (many choices possible)?
+(r) lectures
+(r) quizzes
+(r) assignments
+(r) nothing!
+
+% EA is a small text area answer
+(QUESTIONSET)
+(EA) What is your major?
+(r) any
+
+% SA is a large scrolling text area answer
+(QUESTIONSET)
+(SA) Would you like to make any written comments on the lecture programme?
+(r) any

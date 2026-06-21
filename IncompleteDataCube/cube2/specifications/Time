@@ -1,0 +1,3035 @@
+MEASURE:all
+  UNIT:'All of Time'
+    years.1998
+    years.1997
+    years.1996
+    years.1995
+
+MEASURE:years
+  UNIT:1998
+    months.'January 1998'
+    months.'February 1998'
+    months.'March 1998'
+    months.'April 1998'
+    months.'May 1998'
+    months.'June 1998'
+    months.'July 1998'
+    months.'August 1998'
+    months.'September 1998'
+    months.'October 1998'
+    months.'November 1998'
+    months.'December 1998'
+  UNIT:1997
+    months.'January 1997'
+    months.'February 1997'
+    months.'March 1997'
+    months.'April 1997'
+    months.'May 1997'
+    months.'June 1997'
+    months.'July 1997'
+    months.'August 1997'
+    months.'September 1997'
+    months.'October 1997'
+    months.'November 1997'
+    months.'December 1997'
+  UNIT:1996
+    months.'January 1996'
+    months.'February 1996'
+    months.'March 1996'
+    months.'April 1996'
+    months.'May 1996'
+    months.'June 1996'
+    months.'July 1996'
+    months.'August 1996'
+    months.'September 1996'
+    months.'October 1996'
+    months.'November 1996'
+    months.'December 1996'
+  UNIT:1995
+    months.'January 1995'
+    months.'February 1995'
+    months.'March 1995'
+    months.'April 1995'
+    months.'May 1995'
+    months.'June 1995'
+    months.'July 1995'
+    months.'August 1995'
+    months.'September 1995'
+    months.'October 1995'
+    months.'November 1995'
+    months.'December 1995'
+
+MEASURE:months
+  UNIT:'January 1998'
+    days.'1 January 1998'
+    days.'2 January 1998'
+    days.'3 January 1998'
+    days.'4 January 1998'
+    days.'5 January 1998'
+    days.'6 January 1998'
+    days.'7 January 1998'
+    days.'8 January 1998'
+    days.'9 January 1998'
+    days.'10 January 1998'
+    days.'11 January 1998'
+    days.'12 January 1998'
+    days.'13 January 1998'
+    days.'14 January 1998'
+    days.'15 January 1998'
+    days.'16 January 1998'
+    days.'17 January 1998'
+    days.'18 January 1998'
+    days.'19 January 1998'
+    days.'20 January 1998'
+    days.'21 January 1998'
+    days.'22 January 1998'
+    days.'23 January 1998'
+    days.'24 January 1998'
+    days.'25 January 1998'
+    days.'26 January 1998'
+    days.'27 January 1998'
+    days.'28 January 1998'
+    days.'29 January 1998'
+    days.'30 January 1998'
+    days.'31 January 1998'
+  UNIT:'February 1998'
+    days.'1 February 1998'
+    days.'2 February 1998'
+    days.'3 February 1998'
+    days.'4 February 1998'
+    days.'5 February 1998'
+    days.'6 February 1998'
+    days.'7 February 1998'
+    days.'8 February 1998'
+    days.'9 February 1998'
+    days.'10 February 1998'
+    days.'11 February 1998'
+    days.'12 February 1998'
+    days.'13 February 1998'
+    days.'14 February 1998'
+    days.'15 February 1998'
+    days.'16 February 1998'
+    days.'17 February 1998'
+    days.'18 February 1998'
+    days.'19 February 1998'
+    days.'20 February 1998'
+    days.'21 February 1998'
+    days.'22 February 1998'
+    days.'23 February 1998'
+    days.'24 February 1998'
+    days.'25 February 1998'
+    days.'26 February 1998'
+    days.'27 February 1998'
+    days.'28 February 1998'
+  UNIT:'March 1998'
+    days.'1 March 1998'
+    days.'2 March 1998'
+    days.'3 March 1998'
+    days.'4 March 1998'
+    days.'5 March 1998'
+    days.'6 March 1998'
+    days.'8 March 1998'
+    days.'8 March 1998'
+    days.'9 March 1998'
+    days.'10 March 1998'
+    days.'11 March 1998'
+    days.'12 March 1998'
+    days.'13 March 1998'
+    days.'14 March 1998'
+    days.'15 March 1998'
+    days.'16 March 1998'
+    days.'17 March 1998'
+    days.'18 March 1998'
+    days.'19 March 1998'
+    days.'20 March 1998'
+    days.'21 March 1998'
+    days.'22 March 1998'
+    days.'23 March 1998'
+    days.'24 March 1998'
+    days.'25 March 1998'
+    days.'26 March 1998'
+    days.'27 March 1998'
+    days.'28 March 1998'
+    days.'29 March 1998'
+    days.'30 March 1998'
+    days.'31 March 1998'
+  UNIT:'April 1998'
+    days.'1 April 1998'
+    days.'2 April 1998'
+    days.'3 April 1998'
+    days.'4 April 1998'
+    days.'5 April 1998'
+    days.'6 April 1998'
+    days.'7 April 1998'
+    days.'8 April 1998'
+    days.'9 April 1998'
+    days.'10 April 1998'
+    days.'11 April 1998'
+    days.'12 April 1998'
+    days.'13 April 1998'
+    days.'14 April 1998'
+    days.'15 April 1998'
+    days.'16 April 1998'
+    days.'17 April 1998'
+    days.'18 April 1998'
+    days.'19 April 1998'
+    days.'20 April 1998'
+    days.'21 April 1998'
+    days.'22 April 1998'
+    days.'23 April 1998'
+    days.'24 April 1998'
+    days.'25 April 1998'
+    days.'26 April 1998'
+    days.'27 April 1998'
+    days.'28 April 1998'
+    days.'29 April 1998'
+    days.'30 April 1998'
+  UNIT:'May 1998'
+    days.'1 May 1998'
+    days.'2 May 1998'
+    days.'3 May 1998'
+    days.'4 May 1998'
+    days.'5 May 1998'
+    days.'6 May 1998'
+    days.'7 May 1998'
+    days.'8 May 1998'
+    days.'9 May 1998'
+    days.'10 May 1998'
+    days.'11 May 1998'
+    days.'12 May 1998'
+    days.'13 May 1998'
+    days.'14 May 1998'
+    days.'15 May 1998'
+    days.'16 May 1998'
+    days.'17 May 1998'
+    days.'18 May 1998'
+    days.'19 May 1998'
+    days.'20 May 1998'
+    days.'21 May 1998'
+    days.'22 May 1998'
+    days.'23 May 1998'
+    days.'24 May 1998'
+    days.'25 May 1998'
+    days.'26 May 1998'
+    days.'27 May 1998'
+    days.'28 May 1998'
+    days.'29 May 1998'
+    days.'30 May 1998'
+    days.'31 May 1998'
+  UNIT:'June 1998'
+    days.'1 June 1998'
+    days.'2 June 1998'
+    days.'3 June 1998'
+    days.'4 June 1998'
+    days.'5 June 1998'
+    days.'6 June 1998'
+    days.'7 June 1998'
+    days.'8 June 1998'
+    days.'9 June 1998'
+    days.'10 June 1998'
+    days.'11 June 1998'
+    days.'12 June 1998'
+    days.'13 June 1998'
+    days.'14 June 1998'
+    days.'15 June 1998'
+    days.'16 June 1998'
+    days.'17 June 1998'
+    days.'18 June 1998'
+    days.'19 June 1998'
+    days.'20 June 1998'
+    days.'21 June 1998'
+    days.'22 June 1998'
+    days.'23 June 1998'
+    days.'24 June 1998'
+    days.'25 June 1998'
+    days.'26 June 1998'
+    days.'27 June 1998'
+    days.'28 June 1998'
+    days.'29 June 1998'
+    days.'30 June 1998'
+  UNIT:'July 1998'
+    days.'1 July 1998'
+    days.'2 July 1998'
+    days.'3 July 1998'
+    days.'4 July 1998'
+    days.'5 July 1998'
+    days.'6 July 1998'
+    days.'7 July 1998'
+    days.'8 July 1998'
+    days.'9 July 1998'
+    days.'10 July 1998'
+    days.'11 July 1998'
+    days.'12 July 1998'
+    days.'13 July 1998'
+    days.'14 July 1998'
+    days.'15 July 1998'
+    days.'16 July 1998'
+    days.'17 July 1998'
+    days.'18 July 1998'
+    days.'19 July 1998'
+    days.'20 July 1998'
+    days.'21 July 1998'
+    days.'22 July 1998'
+    days.'23 July 1998'
+    days.'24 July 1998'
+    days.'25 July 1998'
+    days.'26 July 1998'
+    days.'27 July 1998'
+    days.'28 July 1998'
+    days.'29 July 1998'
+    days.'30 July 1998'
+    days.'31 July 1998'
+  UNIT:'August 1998'
+    days.'1 August 1998'
+    days.'2 August 1998'
+    days.'3 August 1998'
+    days.'4 August 1998'
+    days.'5 August 1998'
+    days.'6 August 1998'
+    days.'7 August 1998'
+    days.'8 August 1998'
+    days.'9 August 1998'
+    days.'10 August 1998'
+    days.'11 August 1998'
+    days.'12 August 1998'
+    days.'13 August 1998'
+    days.'14 August 1998'
+    days.'15 August 1998'
+    days.'16 August 1998'
+    days.'17 August 1998'
+    days.'18 August 1998'
+    days.'19 August 1998'
+    days.'20 August 1998'
+    days.'21 August 1998'
+    days.'22 August 1998'
+    days.'23 August 1998'
+    days.'24 August 1998'
+    days.'25 August 1998'
+    days.'26 August 1998'
+    days.'27 August 1998'
+    days.'28 August 1998'
+    days.'29 August 1998'
+    days.'30 August 1998'
+    days.'31 August 1998'
+  UNIT:'September 1998'
+    days.'1 September 1998'
+    days.'2 September 1998'
+    days.'3 September 1998'
+    days.'4 September 1998'
+    days.'5 September 1998'
+    days.'6 September 1998'
+    days.'7 September 1998'
+    days.'8 September 1998'
+    days.'9 September 1998'
+    days.'10 September 1998'
+    days.'11 September 1998'
+    days.'12 September 1998'
+    days.'13 September 1998'
+    days.'14 September 1998'
+    days.'15 September 1998'
+    days.'16 September 1998'
+    days.'17 September 1998'
+    days.'18 September 1998'
+    days.'19 September 1998'
+    days.'20 September 1998'
+    days.'21 September 1998'
+    days.'22 September 1998'
+    days.'23 September 1998'
+    days.'24 September 1998'
+    days.'25 September 1998'
+    days.'26 September 1998'
+    days.'27 September 1998'
+    days.'28 September 1998'
+    days.'29 September 1998'
+    days.'30 September 1998'
+  UNIT:'October 1998'
+    days.'1 October 1998'
+    days.'2 October 1998'
+    days.'3 October 1998'
+    days.'4 October 1998'
+    days.'5 October 1998'
+    days.'6 October 1998'
+    days.'7 October 1998'
+    days.'8 October 1998'
+    days.'9 October 1998'
+    days.'10 October 1998'
+    days.'11 October 1998'
+    days.'12 October 1998'
+    days.'13 October 1998'
+    days.'14 October 1998'
+    days.'15 October 1998'
+    days.'16 October 1998'
+    days.'17 October 1998'
+    days.'18 October 1998'
+    days.'19 October 1998'
+    days.'20 October 1998'
+    days.'21 October 1998'
+    days.'22 October 1998'
+    days.'23 October 1998'
+    days.'24 October 1998'
+    days.'25 October 1998'
+    days.'26 October 1998'
+    days.'27 October 1998'
+    days.'28 October 1998'
+    days.'29 October 1998'
+    days.'30 October 1998'
+    days.'31 October 1998'
+  UNIT:'November 1998'
+    days.'1 November 1998'
+    days.'2 November 1998'
+    days.'3 November 1998'
+    days.'4 November 1998'
+    days.'5 November 1998'
+    days.'6 November 1998'
+    days.'7 November 1998'
+    days.'8 November 1998'
+    days.'9 November 1998'
+    days.'10 November 1998'
+    days.'11 November 1998'
+    days.'12 November 1998'
+    days.'13 November 1998'
+    days.'14 November 1998'
+    days.'15 November 1998'
+    days.'16 November 1998'
+    days.'17 November 1998'
+    days.'18 November 1998'
+    days.'19 November 1998'
+    days.'20 November 1998'
+    days.'21 November 1998'
+    days.'22 November 1998'
+    days.'23 November 1998'
+    days.'24 November 1998'
+    days.'25 November 1998'
+    days.'26 November 1998'
+    days.'27 November 1998'
+    days.'28 November 1998'
+    days.'29 November 1998'
+    days.'30 November 1998'
+  UNIT:'December 1998'
+    days.'1 December 1998'
+    days.'2 December 1998'
+    days.'3 December 1998'
+    days.'4 December 1998'
+    days.'5 December 1998'
+    days.'6 December 1998'
+    days.'7 December 1998'
+    days.'8 December 1998'
+    days.'9 December 1998'
+    days.'10 December 1998'
+    days.'11 December 1998'
+    days.'12 December 1998'
+    days.'13 December 1998'
+    days.'14 December 1998'
+    days.'15 December 1998'
+    days.'16 December 1998'
+    days.'17 December 1998'
+    days.'18 December 1998'
+    days.'19 December 1998'
+    days.'20 December 1998'
+    days.'21 December 1998'
+    days.'22 December 1998'
+    days.'23 December 1998'
+    days.'24 December 1998'
+    days.'25 December 1998'
+    days.'26 December 1998'
+    days.'27 December 1998'
+    days.'28 December 1998'
+    days.'29 December 1998'
+    days.'30 December 1998'
+    days.'31 December 1998'
+  UNIT:'January 1997'
+    days.'1 January 1997'
+    days.'2 January 1997'
+    days.'3 January 1997'
+    days.'4 January 1997'
+    days.'5 January 1997'
+    days.'6 January 1997'
+    days.'7 January 1997'
+    days.'8 January 1997'
+    days.'9 January 1997'
+    days.'10 January 1997'
+    days.'11 January 1997'
+    days.'12 January 1997'
+    days.'13 January 1997'
+    days.'14 January 1997'
+    days.'15 January 1997'
+    days.'16 January 1997'
+    days.'17 January 1997'
+    days.'18 January 1997'
+    days.'19 January 1997'
+    days.'20 January 1997'
+    days.'21 January 1997'
+    days.'22 January 1997'
+    days.'23 January 1997'
+    days.'24 January 1997'
+    days.'25 January 1997'
+    days.'26 January 1997'
+    days.'27 January 1997'
+    days.'28 January 1997'
+    days.'29 January 1997'
+    days.'30 January 1997'
+    days.'31 January 1997'
+  UNIT:'February 1997'
+    days.'1 February 1997'
+    days.'2 February 1997'
+    days.'3 February 1997'
+    days.'4 February 1997'
+    days.'5 February 1997'
+    days.'6 February 1997'
+    days.'7 February 1997'
+    days.'8 February 1997'
+    days.'9 February 1997'
+    days.'10 February 1997'
+    days.'11 February 1997'
+    days.'12 February 1997'
+    days.'13 February 1997'
+    days.'14 February 1997'
+    days.'15 February 1997'
+    days.'16 February 1997'
+    days.'17 February 1997'
+    days.'18 February 1997'
+    days.'19 February 1997'
+    days.'20 February 1997'
+    days.'21 February 1997'
+    days.'22 February 1997'
+    days.'23 February 1997'
+    days.'24 February 1997'
+    days.'25 February 1997'
+    days.'26 February 1997'
+    days.'27 February 1997'
+    days.'28 February 1997'
+  UNIT:'March 1997'
+    days.'1 March 1997'
+    days.'2 March 1997'
+    days.'3 March 1997'
+    days.'4 March 1997'
+    days.'5 March 1997'
+    days.'6 March 1997'
+    days.'7 March 1997'
+    days.'8 March 1997'
+    days.'9 March 1997'
+    days.'10 March 1997'
+    days.'11 March 1997'
+    days.'12 March 1997'
+    days.'13 March 1997'
+    days.'14 March 1997'
+    days.'15 March 1997'
+    days.'16 March 1997'
+    days.'17 March 1997'
+    days.'18 March 1997'
+    days.'19 March 1997'
+    days.'20 March 1997'
+    days.'21 March 1997'
+    days.'22 March 1997'
+    days.'23 March 1997'
+    days.'24 March 1997'
+    days.'25 March 1997'
+    days.'26 March 1997'
+    days.'27 March 1997'
+    days.'28 March 1997'
+    days.'29 March 1997'
+    days.'30 March 1997'
+    days.'31 March 1997'
+  UNIT:'April 1997'
+    days.'1 April 1997'
+    days.'2 April 1997'
+    days.'3 April 1997'
+    days.'4 April 1997'
+    days.'5 April 1997'
+    days.'6 April 1997'
+    days.'7 April 1997'
+    days.'8 April 1997'
+    days.'9 April 1997'
+    days.'10 April 1997'
+    days.'11 April 1997'
+    days.'12 April 1997'
+    days.'13 April 1997'
+    days.'14 April 1997'
+    days.'15 April 1997'
+    days.'16 April 1997'
+    days.'17 April 1997'
+    days.'18 April 1997'
+    days.'19 April 1997'
+    days.'20 April 1997'
+    days.'21 April 1997'
+    days.'22 April 1997'
+    days.'23 April 1997'
+    days.'24 April 1997'
+    days.'25 April 1997'
+    days.'26 April 1997'
+    days.'27 April 1997'
+    days.'28 April 1997'
+    days.'29 April 1997'
+    days.'30 April 1997'
+  UNIT:'May 1997'
+    days.'1 May 1997'
+    days.'2 May 1997'
+    days.'3 May 1997'
+    days.'4 May 1997'
+    days.'5 May 1997'
+    days.'6 May 1997'
+    days.'7 May 1997'
+    days.'8 May 1997'
+    days.'9 May 1997'
+    days.'10 May 1997'
+    days.'11 May 1997'
+    days.'12 May 1997'
+    days.'13 May 1997'
+    days.'14 May 1997'
+    days.'15 May 1997'
+    days.'16 May 1997'
+    days.'17 May 1997'
+    days.'18 May 1997'
+    days.'19 May 1997'
+    days.'20 May 1997'
+    days.'21 May 1997'
+    days.'22 May 1997'
+    days.'23 May 1997'
+    days.'24 May 1997'
+    days.'25 May 1997'
+    days.'26 May 1997'
+    days.'27 May 1997'
+    days.'28 May 1997'
+    days.'29 May 1997'
+    days.'30 May 1997'
+    days.'31 May 1997'
+  UNIT:'June 1997'
+    days.'1 June 1997'
+    days.'2 June 1997'
+    days.'3 June 1997'
+    days.'4 June 1997'
+    days.'5 June 1997'
+    days.'6 June 1997'
+    days.'7 June 1997'
+    days.'8 June 1997'
+    days.'9 June 1997'
+    days.'10 June 1997'
+    days.'11 June 1997'
+    days.'12 June 1997'
+    days.'13 June 1997'
+    days.'14 June 1997'
+    days.'15 June 1997'
+    days.'16 June 1997'
+    days.'17 June 1997'
+    days.'18 June 1997'
+    days.'19 June 1997'
+    days.'20 June 1997'
+    days.'21 June 1997'
+    days.'22 June 1997'
+    days.'23 June 1997'
+    days.'24 June 1997'
+    days.'25 June 1997'
+    days.'26 June 1997'
+    days.'27 June 1997'
+    days.'28 June 1997'
+    days.'29 June 1997'
+    days.'30 June 1997'
+  UNIT:'July 1997'
+    days.'1 July 1997'
+    days.'2 July 1997'
+    days.'3 July 1997'
+    days.'4 July 1997'
+    days.'5 July 1997'
+    days.'6 July 1997'
+    days.'7 July 1997'
+    days.'8 July 1997'
+    days.'9 July 1997'
+    days.'10 July 1997'
+    days.'11 July 1997'
+    days.'12 July 1997'
+    days.'13 July 1997'
+    days.'14 July 1997'
+    days.'15 July 1997'
+    days.'16 July 1997'
+    days.'17 July 1997'
+    days.'18 July 1997'
+    days.'19 July 1997'
+    days.'20 July 1997'
+    days.'21 July 1997'
+    days.'22 July 1997'
+    days.'23 July 1997'
+    days.'24 July 1997'
+    days.'25 July 1997'
+    days.'26 July 1997'
+    days.'27 July 1997'
+    days.'28 July 1997'
+    days.'29 July 1997'
+    days.'30 July 1997'
+    days.'31 July 1997'
+  UNIT:'August 1997'
+    days.'1 August 1997'
+    days.'2 August 1997'
+    days.'3 August 1997'
+    days.'4 August 1997'
+    days.'5 August 1997'
+    days.'6 August 1997'
+    days.'7 August 1997'
+    days.'8 August 1997'
+    days.'9 August 1997'
+    days.'10 August 1997'
+    days.'11 August 1997'
+    days.'12 August 1997'
+    days.'13 August 1997'
+    days.'14 August 1997'
+    days.'15 August 1997'
+    days.'16 August 1997'
+    days.'17 August 1997'
+    days.'18 August 1997'
+    days.'19 August 1997'
+    days.'20 August 1997'
+    days.'21 August 1997'
+    days.'22 August 1997'
+    days.'23 August 1997'
+    days.'24 August 1997'
+    days.'25 August 1997'
+    days.'26 August 1997'
+    days.'27 August 1997'
+    days.'28 August 1997'
+    days.'29 August 1997'
+    days.'30 August 1997'
+    days.'31 August 1997'
+  UNIT:'September 1997'
+    days.'1 September 1997'
+    days.'2 September 1997'
+    days.'3 September 1997'
+    days.'4 September 1997'
+    days.'5 September 1997'
+    days.'6 September 1997'
+    days.'7 September 1997'
+    days.'8 September 1997'
+    days.'9 September 1997'
+    days.'10 September 1997'
+    days.'11 September 1997'
+    days.'12 September 1997'
+    days.'13 September 1997'
+    days.'14 September 1997'
+    days.'15 September 1997'
+    days.'16 September 1997'
+    days.'17 September 1997'
+    days.'18 September 1997'
+    days.'19 September 1997'
+    days.'20 September 1997'
+    days.'21 September 1997'
+    days.'22 September 1997'
+    days.'23 September 1997'
+    days.'24 September 1997'
+    days.'25 September 1997'
+    days.'26 September 1997'
+    days.'27 September 1997'
+    days.'28 September 1997'
+    days.'29 September 1997'
+    days.'30 September 1997'
+  UNIT:'October 1997'
+    days.'1 October 1997'
+    days.'2 October 1997'
+    days.'3 October 1997'
+    days.'4 October 1997'
+    days.'5 October 1997'
+    days.'6 October 1997'
+    days.'7 October 1997'
+    days.'8 October 1997'
+    days.'9 October 1997'
+    days.'10 October 1997'
+    days.'11 October 1997'
+    days.'12 October 1997'
+    days.'13 October 1997'
+    days.'14 October 1997'
+    days.'15 October 1997'
+    days.'16 October 1997'
+    days.'17 October 1997'
+    days.'18 October 1997'
+    days.'19 October 1997'
+    days.'20 October 1997'
+    days.'21 October 1997'
+    days.'22 October 1997'
+    days.'23 October 1997'
+    days.'24 October 1997'
+    days.'25 October 1997'
+    days.'26 October 1997'
+    days.'27 October 1997'
+    days.'28 October 1997'
+    days.'29 October 1997'
+    days.'30 October 1997'
+    days.'31 October 1997'
+  UNIT:'November 1997'
+    days.'1 November 1997'
+    days.'2 November 1997'
+    days.'3 November 1997'
+    days.'4 November 1997'
+    days.'5 November 1997'
+    days.'6 November 1997'
+    days.'7 November 1997'
+    days.'8 November 1997'
+    days.'9 November 1997'
+    days.'10 November 1997'
+    days.'11 November 1997'
+    days.'12 November 1997'
+    days.'13 November 1997'
+    days.'14 November 1997'
+    days.'15 November 1997'
+    days.'16 November 1997'
+    days.'17 November 1997'
+    days.'18 November 1997'
+    days.'19 November 1997'
+    days.'20 November 1997'
+    days.'21 November 1997'
+    days.'22 November 1997'
+    days.'23 November 1997'
+    days.'24 November 1997'
+    days.'25 November 1997'
+    days.'26 November 1997'
+    days.'27 November 1997'
+    days.'28 November 1997'
+    days.'29 November 1997'
+    days.'30 November 1997'
+  UNIT:'December 1997'
+    days.'1 December 1997'
+    days.'2 December 1997'
+    days.'3 December 1997'
+    days.'4 December 1997'
+    days.'5 December 1997'
+    days.'6 December 1997'
+    days.'7 December 1997'
+    days.'8 December 1997'
+    days.'9 December 1997'
+    days.'10 December 1997'
+    days.'11 December 1997'
+    days.'12 December 1997'
+    days.'13 December 1997'
+    days.'14 December 1997'
+    days.'15 December 1997'
+    days.'16 December 1997'
+    days.'17 December 1997'
+    days.'18 December 1997'
+    days.'19 December 1997'
+    days.'20 December 1997'
+    days.'21 December 1997'
+    days.'22 December 1997'
+    days.'23 December 1997'
+    days.'24 December 1997'
+    days.'25 December 1997'
+    days.'26 December 1997'
+    days.'27 December 1997'
+    days.'28 December 1997'
+    days.'29 December 1997'
+    days.'30 December 1997'
+    days.'31 December 1997'
+  UNIT:'January 1996'
+    days.'1 January 1996'
+    days.'2 January 1996'
+    days.'3 January 1996'
+    days.'4 January 1996'
+    days.'5 January 1996'
+    days.'6 January 1996'
+    days.'7 January 1996'
+    days.'8 January 1996'
+    days.'9 January 1996'
+    days.'10 January 1996'
+    days.'11 January 1996'
+    days.'12 January 1996'
+    days.'13 January 1996'
+    days.'14 January 1996'
+    days.'15 January 1996'
+    days.'16 January 1996'
+    days.'17 January 1996'
+    days.'18 January 1996'
+    days.'19 January 1996'
+    days.'20 January 1996'
+    days.'21 January 1996'
+    days.'22 January 1996'
+    days.'23 January 1996'
+    days.'24 January 1996'
+    days.'25 January 1996'
+    days.'26 January 1996'
+    days.'27 January 1996'
+    days.'28 January 1996'
+    days.'29 January 1996'
+    days.'30 January 1996'
+    days.'31 January 1996'
+  UNIT:'February 1996'
+    days.'1 February 1996'
+    days.'2 February 1996'
+    days.'3 February 1996'
+    days.'4 February 1996'
+    days.'5 February 1996'
+    days.'6 February 1996'
+    days.'7 February 1996'
+    days.'8 February 1996'
+    days.'9 February 1996'
+    days.'10 February 1996'
+    days.'11 February 1996'
+    days.'12 February 1996'
+    days.'13 February 1996'
+    days.'14 February 1996'
+    days.'15 February 1996'
+    days.'16 February 1996'
+    days.'17 February 1996'
+    days.'18 February 1996'
+    days.'19 February 1996'
+    days.'20 February 1996'
+    days.'21 February 1996'
+    days.'22 February 1996'
+    days.'23 February 1996'
+    days.'24 February 1996'
+    days.'25 February 1996'
+    days.'26 February 1996'
+    days.'27 February 1996'
+    days.'28 February 1996'
+    days.'29 February 1996'
+  UNIT:'March 1996'
+    days.'1 March 1996'
+    days.'2 March 1996'
+    days.'3 March 1996'
+    days.'4 March 1996'
+    days.'5 March 1996'
+    days.'6 March 1996'
+    days.'7 March 1996'
+    days.'8 March 1996'
+    days.'9 March 1996'
+    days.'10 March 1996'
+    days.'11 March 1996'
+    days.'12 March 1996'
+    days.'13 March 1996'
+    days.'14 March 1996'
+    days.'15 March 1996'
+    days.'16 March 1996'
+    days.'17 March 1996'
+    days.'18 March 1996'
+    days.'19 March 1996'
+    days.'20 March 1996'
+    days.'21 March 1996'
+    days.'22 March 1996'
+    days.'23 March 1996'
+    days.'24 March 1996'
+    days.'25 March 1996'
+    days.'26 March 1996'
+    days.'27 March 1996'
+    days.'28 March 1996'
+    days.'29 March 1996'
+    days.'30 March 1996'
+    days.'31 March 1996'
+  UNIT:'April 1996'
+    days.'1 April 1996'
+    days.'2 April 1996'
+    days.'3 April 1996'
+    days.'4 April 1996'
+    days.'5 April 1996'
+    days.'6 April 1996'
+    days.'7 April 1996'
+    days.'8 April 1996'
+    days.'9 April 1996'
+    days.'10 April 1996'
+    days.'11 April 1996'
+    days.'12 April 1996'
+    days.'13 April 1996'
+    days.'14 April 1996'
+    days.'15 April 1996'
+    days.'16 April 1996'
+    days.'17 April 1996'
+    days.'18 April 1996'
+    days.'19 April 1996'
+    days.'20 April 1996'
+    days.'21 April 1996'
+    days.'22 April 1996'
+    days.'23 April 1996'
+    days.'24 April 1996'
+    days.'25 April 1996'
+    days.'26 April 1996'
+    days.'27 April 1996'
+    days.'28 April 1996'
+    days.'29 April 1996'
+    days.'30 April 1996'
+  UNIT:'May 1996'
+    days.'1 May 1996'
+    days.'2 May 1996'
+    days.'3 May 1996'
+    days.'4 May 1996'
+    days.'5 May 1996'
+    days.'6 May 1996'
+    days.'7 May 1996'
+    days.'8 May 1996'
+    days.'9 May 1996'
+    days.'10 May 1996'
+    days.'11 May 1996'
+    days.'12 May 1996'
+    days.'13 May 1996'
+    days.'14 May 1996'
+    days.'15 May 1996'
+    days.'16 May 1996'
+    days.'17 May 1996'
+    days.'18 May 1996'
+    days.'19 May 1996'
+    days.'20 May 1996'
+    days.'21 May 1996'
+    days.'22 May 1996'
+    days.'23 May 1996'
+    days.'24 May 1996'
+    days.'25 May 1996'
+    days.'26 May 1996'
+    days.'27 May 1996'
+    days.'28 May 1996'
+    days.'29 May 1996'
+    days.'30 May 1996'
+    days.'31 May 1996'
+  UNIT:'June 1996'
+    days.'1 June 1996'
+    days.'2 June 1996'
+    days.'3 June 1996'
+    days.'4 June 1996'
+    days.'5 June 1996'
+    days.'6 June 1996'
+    days.'7 June 1996'
+    days.'8 June 1996'
+    days.'9 June 1996'
+    days.'10 June 1996'
+    days.'11 June 1996'
+    days.'12 June 1996'
+    days.'13 June 1996'
+    days.'14 June 1996'
+    days.'15 June 1996'
+    days.'16 June 1996'
+    days.'17 June 1996'
+    days.'18 June 1996'
+    days.'19 June 1996'
+    days.'20 June 1996'
+    days.'21 June 1996'
+    days.'22 June 1996'
+    days.'23 June 1996'
+    days.'24 June 1996'
+    days.'25 June 1996'
+    days.'26 June 1996'
+    days.'27 June 1996'
+    days.'28 June 1996'
+    days.'29 June 1996'
+    days.'30 June 1996'
+  UNIT:'July 1996'
+    days.'1 July 1996'
+    days.'2 July 1996'
+    days.'3 July 1996'
+    days.'4 July 1996'
+    days.'5 July 1996'
+    days.'6 July 1996'
+    days.'7 July 1996'
+    days.'8 July 1996'
+    days.'9 July 1996'
+    days.'10 July 1996'
+    days.'11 July 1996'
+    days.'12 July 1996'
+    days.'13 July 1996'
+    days.'14 July 1996'
+    days.'15 July 1996'
+    days.'16 July 1996'
+    days.'17 July 1996'
+    days.'18 July 1996'
+    days.'19 July 1996'
+    days.'20 July 1996'
+    days.'21 July 1996'
+    days.'22 July 1996'
+    days.'23 July 1996'
+    days.'24 July 1996'
+    days.'25 July 1996'
+    days.'26 July 1996'
+    days.'27 July 1996'
+    days.'28 July 1996'
+    days.'29 July 1996'
+    days.'30 July 1996'
+    days.'31 July 1996'
+  UNIT:'August 1996'
+    days.'1 August 1996'
+    days.'2 August 1996'
+    days.'3 August 1996'
+    days.'4 August 1996'
+    days.'5 August 1996'
+    days.'6 August 1996'
+    days.'7 August 1996'
+    days.'8 August 1996'
+    days.'9 August 1996'
+    days.'10 August 1996'
+    days.'11 August 1996'
+    days.'12 August 1996'
+    days.'13 August 1996'
+    days.'14 August 1996'
+    days.'15 August 1996'
+    days.'16 August 1996'
+    days.'17 August 1996'
+    days.'18 August 1996'
+    days.'19 August 1996'
+    days.'20 August 1996'
+    days.'21 August 1996'
+    days.'22 August 1996'
+    days.'23 August 1996'
+    days.'24 August 1996'
+    days.'25 August 1996'
+    days.'26 August 1996'
+    days.'27 August 1996'
+    days.'28 August 1996'
+    days.'29 August 1996'
+    days.'30 August 1996'
+    days.'31 August 1996'
+  UNIT:'September 1996'
+    days.'1 September 1996'
+    days.'2 September 1996'
+    days.'3 September 1996'
+    days.'4 September 1996'
+    days.'5 September 1996'
+    days.'6 September 1996'
+    days.'7 September 1996'
+    days.'8 September 1996'
+    days.'9 September 1996'
+    days.'10 September 1996'
+    days.'11 September 1996'
+    days.'12 September 1996'
+    days.'13 September 1996'
+    days.'14 September 1996'
+    days.'15 September 1996'
+    days.'16 September 1996'
+    days.'17 September 1996'
+    days.'18 September 1996'
+    days.'19 September 1996'
+    days.'20 September 1996'
+    days.'21 September 1996'
+    days.'22 September 1996'
+    days.'23 September 1996'
+    days.'24 September 1996'
+    days.'25 September 1996'
+    days.'26 September 1996'
+    days.'27 September 1996'
+    days.'28 September 1996'
+    days.'29 September 1996'
+    days.'30 September 1996'
+  UNIT:'October 1996'
+    days.'1 October 1996'
+    days.'2 October 1996'
+    days.'3 October 1996'
+    days.'4 October 1996'
+    days.'5 October 1996'
+    days.'6 October 1996'
+    days.'7 October 1996'
+    days.'8 October 1996'
+    days.'9 October 1996'
+    days.'10 October 1996'
+    days.'11 October 1996'
+    days.'12 October 1996'
+    days.'13 October 1996'
+    days.'14 October 1996'
+    days.'15 October 1996'
+    days.'16 October 1996'
+    days.'17 October 1996'
+    days.'18 October 1996'
+    days.'19 October 1996'
+    days.'20 October 1996'
+    days.'21 October 1996'
+    days.'22 October 1996'
+    days.'23 October 1996'
+    days.'24 October 1996'
+    days.'25 October 1996'
+    days.'26 October 1996'
+    days.'27 October 1996'
+    days.'28 October 1996'
+    days.'29 October 1996'
+    days.'30 October 1996'
+    days.'31 October 1996'
+  UNIT:'November 1996'
+    days.'1 November 1996'
+    days.'2 November 1996'
+    days.'3 November 1996'
+    days.'4 November 1996'
+    days.'5 November 1996'
+    days.'6 November 1996'
+    days.'7 November 1996'
+    days.'8 November 1996'
+    days.'9 November 1996'
+    days.'10 November 1996'
+    days.'11 November 1996'
+    days.'12 November 1996'
+    days.'13 November 1996'
+    days.'14 November 1996'
+    days.'15 November 1996'
+    days.'16 November 1996'
+    days.'17 November 1996'
+    days.'18 November 1996'
+    days.'19 November 1996'
+    days.'20 November 1996'
+    days.'21 November 1996'
+    days.'22 November 1996'
+    days.'23 November 1996'
+    days.'24 November 1996'
+    days.'25 November 1996'
+    days.'26 November 1996'
+    days.'27 November 1996'
+    days.'28 November 1996'
+    days.'29 November 1996'
+    days.'30 November 1996'
+  UNIT:'December 1996'
+    days.'1 December 1996'
+    days.'2 December 1996'
+    days.'3 December 1996'
+    days.'4 December 1996'
+    days.'5 December 1996'
+    days.'6 December 1996'
+    days.'7 December 1996'
+    days.'8 December 1996'
+    days.'9 December 1996'
+    days.'10 December 1996'
+    days.'11 December 1996'
+    days.'12 December 1996'
+    days.'13 December 1996'
+    days.'14 December 1996'
+    days.'15 December 1996'
+    days.'16 December 1996'
+    days.'17 December 1996'
+    days.'18 December 1996'
+    days.'19 December 1996'
+    days.'20 December 1996'
+    days.'21 December 1996'
+    days.'22 December 1996'
+    days.'23 December 1996'
+    days.'24 December 1996'
+    days.'25 December 1996'
+    days.'26 December 1996'
+    days.'27 December 1996'
+    days.'28 December 1996'
+    days.'29 December 1996'
+    days.'30 December 1996'
+    days.'31 December 1996'
+  UNIT:'January 1995'
+    days.'1 January 1995'
+    days.'2 January 1995'
+    days.'3 January 1995'
+    days.'4 January 1995'
+    days.'5 January 1995'
+    days.'6 January 1995'
+    days.'7 January 1995'
+    days.'8 January 1995'
+    days.'9 January 1995'
+    days.'10 January 1995'
+    days.'11 January 1995'
+    days.'12 January 1995'
+    days.'13 January 1995'
+    days.'14 January 1995'
+    days.'15 January 1995'
+    days.'16 January 1995'
+    days.'17 January 1995'
+    days.'18 January 1995'
+    days.'19 January 1995'
+    days.'20 January 1995'
+    days.'21 January 1995'
+    days.'22 January 1995'
+    days.'23 January 1995'
+    days.'24 January 1995'
+    days.'25 January 1995'
+    days.'26 January 1995'
+    days.'27 January 1995'
+    days.'28 January 1995'
+    days.'29 January 1995'
+    days.'30 January 1995'
+    days.'31 January 1995'
+  UNIT:'February 1995'
+    days.'1 February 1995'
+    days.'2 February 1995'
+    days.'3 February 1995'
+    days.'4 February 1995'
+    days.'5 February 1995'
+    days.'6 February 1995'
+    days.'7 February 1995'
+    days.'8 February 1995'
+    days.'9 February 1995'
+    days.'10 February 1995'
+    days.'11 February 1995'
+    days.'12 February 1995'
+    days.'13 February 1995'
+    days.'14 February 1995'
+    days.'15 February 1995'
+    days.'16 February 1995'
+    days.'17 February 1995'
+    days.'18 February 1995'
+    days.'19 February 1995'
+    days.'20 February 1995'
+    days.'21 February 1995'
+    days.'22 February 1995'
+    days.'23 February 1995'
+    days.'24 February 1995'
+    days.'25 February 1995'
+    days.'26 February 1995'
+    days.'27 February 1995'
+    days.'28 February 1995'
+  UNIT:'March 1995'
+    days.'1 March 1995'
+    days.'2 March 1995'
+    days.'3 March 1995'
+    days.'4 March 1995'
+    days.'5 March 1995'
+    days.'6 March 1995'
+    days.'7 March 1995'
+    days.'8 March 1995'
+    days.'9 March 1995'
+    days.'10 March 1995'
+    days.'11 March 1995'
+    days.'12 March 1995'
+    days.'13 March 1995'
+    days.'14 March 1995'
+    days.'15 March 1995'
+    days.'16 March 1995'
+    days.'17 March 1995'
+    days.'18 March 1995'
+    days.'19 March 1995'
+    days.'20 March 1995'
+    days.'21 March 1995'
+    days.'22 March 1995'
+    days.'23 March 1995'
+    days.'24 March 1995'
+    days.'25 March 1995'
+    days.'26 March 1995'
+    days.'27 March 1995'
+    days.'28 March 1995'
+    days.'29 March 1995'
+    days.'30 March 1995'
+    days.'31 March 1995'
+  UNIT:'April 1995'
+    days.'1 April 1995'
+    days.'2 April 1995'
+    days.'3 April 1995'
+    days.'4 April 1995'
+    days.'5 April 1995'
+    days.'6 April 1995'
+    days.'7 April 1995'
+    days.'8 April 1995'
+    days.'9 April 1995'
+    days.'10 April 1995'
+    days.'11 April 1995'
+    days.'12 April 1995'
+    days.'13 April 1995'
+    days.'14 April 1995'
+    days.'15 April 1995'
+    days.'16 April 1995'
+    days.'17 April 1995'
+    days.'18 April 1995'
+    days.'19 April 1995'
+    days.'20 April 1995'
+    days.'21 April 1995'
+    days.'22 April 1995'
+    days.'23 April 1995'
+    days.'24 April 1995'
+    days.'25 April 1995'
+    days.'26 April 1995'
+    days.'27 April 1995'
+    days.'28 April 1995'
+    days.'29 April 1995'
+    days.'30 April 1995'
+  UNIT:'May 1995'
+    days.'1 May 1995'
+    days.'2 May 1995'
+    days.'3 May 1995'
+    days.'4 May 1995'
+    days.'5 May 1995'
+    days.'6 May 1995'
+    days.'7 May 1995'
+    days.'8 May 1995'
+    days.'9 May 1995'
+    days.'10 May 1995'
+    days.'11 May 1995'
+    days.'12 May 1995'
+    days.'13 May 1995'
+    days.'14 May 1995'
+    days.'15 May 1995'
+    days.'16 May 1995'
+    days.'17 May 1995'
+    days.'18 May 1995'
+    days.'19 May 1995'
+    days.'20 May 1995'
+    days.'21 May 1995'
+    days.'22 May 1995'
+    days.'23 May 1995'
+    days.'24 May 1995'
+    days.'25 May 1995'
+    days.'26 May 1995'
+    days.'27 May 1995'
+    days.'28 May 1995'
+    days.'29 May 1995'
+    days.'30 May 1995'
+    days.'31 May 1995'
+  UNIT:'June 1995'
+    days.'1 June 1995'
+    days.'2 June 1995'
+    days.'3 June 1995'
+    days.'4 June 1995'
+    days.'5 June 1995'
+    days.'6 June 1995'
+    days.'7 June 1995'
+    days.'8 June 1995'
+    days.'9 June 1995'
+    days.'10 June 1995'
+    days.'11 June 1995'
+    days.'12 June 1995'
+    days.'13 June 1995'
+    days.'14 June 1995'
+    days.'15 June 1995'
+    days.'16 June 1995'
+    days.'17 June 1995'
+    days.'18 June 1995'
+    days.'19 June 1995'
+    days.'20 June 1995'
+    days.'21 June 1995'
+    days.'22 June 1995'
+    days.'23 June 1995'
+    days.'24 June 1995'
+    days.'25 June 1995'
+    days.'26 June 1995'
+    days.'27 June 1995'
+    days.'28 June 1995'
+    days.'29 June 1995'
+    days.'30 June 1995'
+  UNIT:'July 1995'
+    days.'1 July 1995'
+    days.'2 July 1995'
+    days.'3 July 1995'
+    days.'4 July 1995'
+    days.'5 July 1995'
+    days.'6 July 1995'
+    days.'7 July 1995'
+    days.'8 July 1995'
+    days.'9 July 1995'
+    days.'10 July 1995'
+    days.'11 July 1995'
+    days.'12 July 1995'
+    days.'13 July 1995'
+    days.'14 July 1995'
+    days.'15 July 1995'
+    days.'16 July 1995'
+    days.'17 July 1995'
+    days.'18 July 1995'
+    days.'19 July 1995'
+    days.'20 July 1995'
+    days.'21 July 1995'
+    days.'22 July 1995'
+    days.'23 July 1995'
+    days.'24 July 1995'
+    days.'25 July 1995'
+    days.'26 July 1995'
+    days.'27 July 1995'
+    days.'28 July 1995'
+    days.'29 July 1995'
+    days.'30 July 1995'
+    days.'31 July 1995'
+  UNIT:'August 1995'
+    days.'1 August 1995'
+    days.'2 August 1995'
+    days.'3 August 1995'
+    days.'4 August 1995'
+    days.'5 August 1995'
+    days.'6 August 1995'
+    days.'7 August 1995'
+    days.'8 August 1995'
+    days.'9 August 1995'
+    days.'10 August 1995'
+    days.'11 August 1995'
+    days.'12 August 1995'
+    days.'13 August 1995'
+    days.'14 August 1995'
+    days.'15 August 1995'
+    days.'16 August 1995'
+    days.'17 August 1995'
+    days.'18 August 1995'
+    days.'19 August 1995'
+    days.'20 August 1995'
+    days.'21 August 1995'
+    days.'22 August 1995'
+    days.'23 August 1995'
+    days.'24 August 1995'
+    days.'25 August 1995'
+    days.'26 August 1995'
+    days.'27 August 1995'
+    days.'28 August 1995'
+    days.'29 August 1995'
+    days.'30 August 1995'
+    days.'31 August 1995'
+  UNIT:'September 1995'
+    days.'1 September 1995'
+    days.'2 September 1995'
+    days.'3 September 1995'
+    days.'4 September 1995'
+    days.'5 September 1995'
+    days.'6 September 1995'
+    days.'7 September 1995'
+    days.'8 September 1995'
+    days.'9 September 1995'
+    days.'10 September 1995'
+    days.'11 September 1995'
+    days.'12 September 1995'
+    days.'13 September 1995'
+    days.'14 September 1995'
+    days.'15 September 1995'
+    days.'16 September 1995'
+    days.'17 September 1995'
+    days.'18 September 1995'
+    days.'19 September 1995'
+    days.'20 September 1995'
+    days.'21 September 1995'
+    days.'22 September 1995'
+    days.'23 September 1995'
+    days.'24 September 1995'
+    days.'25 September 1995'
+    days.'26 September 1995'
+    days.'27 September 1995'
+    days.'28 September 1995'
+    days.'29 September 1995'
+    days.'30 September 1995'
+  UNIT:'October 1995'
+    days.'1 October 1995'
+    days.'2 October 1995'
+    days.'3 October 1995'
+    days.'4 October 1995'
+    days.'5 October 1995'
+    days.'6 October 1995'
+    days.'7 October 1995'
+    days.'8 October 1995'
+    days.'9 October 1995'
+    days.'10 October 1995'
+    days.'11 October 1995'
+    days.'12 October 1995'
+    days.'13 October 1995'
+    days.'14 October 1995'
+    days.'15 October 1995'
+    days.'16 October 1995'
+    days.'17 October 1995'
+    days.'18 October 1995'
+    days.'19 October 1995'
+    days.'20 October 1995'
+    days.'21 October 1995'
+    days.'22 October 1995'
+    days.'23 October 1995'
+    days.'24 October 1995'
+    days.'25 October 1995'
+    days.'26 October 1995'
+    days.'27 October 1995'
+    days.'28 October 1995'
+    days.'29 October 1995'
+    days.'30 October 1995'
+    days.'31 October 1995'
+  UNIT:'November 1995'
+    days.'1 November 1995'
+    days.'2 November 1995'
+    days.'3 November 1995'
+    days.'4 November 1995'
+    days.'5 November 1995'
+    days.'6 November 1995'
+    days.'7 November 1995'
+    days.'8 November 1995'
+    days.'9 November 1995'
+    days.'10 November 1995'
+    days.'11 November 1995'
+    days.'12 November 1995'
+    days.'13 November 1995'
+    days.'14 November 1995'
+    days.'15 November 1995'
+    days.'16 November 1995'
+    days.'17 November 1995'
+    days.'18 November 1995'
+    days.'19 November 1995'
+    days.'20 November 1995'
+    days.'21 November 1995'
+    days.'22 November 1995'
+    days.'23 November 1995'
+    days.'24 November 1995'
+    days.'25 November 1995'
+    days.'26 November 1995'
+    days.'27 November 1995'
+    days.'28 November 1995'
+    days.'29 November 1995'
+    days.'30 November 1995'
+  UNIT:'December 1995'
+    days.'1 December 1995'
+    days.'2 December 1995'
+    days.'3 December 1995'
+    days.'4 December 1995'
+    days.'5 December 1995'
+    days.'6 December 1995'
+    days.'7 December 1995'
+    days.'8 December 1995'
+    days.'9 December 1995'
+    days.'10 December 1995'
+    days.'11 December 1995'
+    days.'12 December 1995'
+    days.'13 December 1995'
+    days.'14 December 1995'
+    days.'15 December 1995'
+    days.'16 December 1995'
+    days.'17 December 1995'
+    days.'18 December 1995'
+    days.'19 December 1995'
+    days.'20 December 1995'
+    days.'21 December 1995'
+    days.'22 December 1995'
+    days.'23 December 1995'
+    days.'24 December 1995'
+    days.'25 December 1995'
+    days.'26 December 1995'
+    days.'27 December 1995'
+    days.'28 December 1995'
+    days.'29 December 1995'
+    days.'30 December 1995'
+    days.'31 December 1995'
+
+MEASURE:days
+  UNIT:'1 January 1998' = (^"01/Jan/1998")
+  UNIT:'2 January 1998' = (^"02/Jan/1998")
+  UNIT:'3 January 1998' = (^"03/Jan/1998")
+  UNIT:'4 January 1998' = (^"04/Jan/1998")
+  UNIT:'5 January 1998' = (^"05/Jan/1998")
+  UNIT:'6 January 1998' = (^"06/Jan/1998")
+  UNIT:'7 January 1998' = (^"07/Jan/1998")
+  UNIT:'8 January 1998' = (^"08/Jan/1998")
+  UNIT:'9 January 1998' = (^"09/Jan/1998")
+  UNIT:'10 January 1998' = (^"10/Jan/1998")
+  UNIT:'11 January 1998' = (^"11/Jan/1998")
+  UNIT:'12 January 1998' = (^"12/Jan/1998")
+  UNIT:'13 January 1998' = (^"13/Jan/1998")
+  UNIT:'14 January 1998' = (^"14/Jan/1998")
+  UNIT:'15 January 1998' = (^"15/Jan/1998")
+  UNIT:'16 January 1998' = (^"16/Jan/1998")
+  UNIT:'17 January 1998' = (^"17/Jan/1998")
+  UNIT:'18 January 1998' = (^"18/Jan/1998")
+  UNIT:'19 January 1998' = (^"19/Jan/1998")
+  UNIT:'20 January 1998' = (^"20/Jan/1998")
+  UNIT:'21 January 1998' = (^"21/Jan/1998")
+  UNIT:'22 January 1998' = (^"22/Jan/1998")
+  UNIT:'23 January 1998' = (^"23/Jan/1998")
+  UNIT:'24 January 1998' = (^"24/Jan/1998")
+  UNIT:'25 January 1998' = (^"25/Jan/1998")
+  UNIT:'26 January 1998' = (^"26/Jan/1998")
+  UNIT:'27 January 1998' = (^"27/Jan/1998")
+  UNIT:'28 January 1998' = (^"28/Jan/1998")
+  UNIT:'29 January 1998' = (^"29/Jan/1998")
+  UNIT:'30 January 1998' = (^"30/Jan/1998")
+  UNIT:'31 January 1998' = (^"31/Jan/1998")
+  UNIT:'1 February 1998' = (^"01/Feb/1998")
+  UNIT:'2 February 1998' = (^"02/Feb/1998")
+  UNIT:'3 February 1998' = (^"03/Feb/1998")
+  UNIT:'4 February 1998' = (^"04/Feb/1998")
+  UNIT:'5 February 1998' = (^"05/Feb/1998")
+  UNIT:'6 February 1998' = (^"06/Feb/1998")
+  UNIT:'7 February 1998' = (^"07/Feb/1998")
+  UNIT:'8 February 1998' = (^"08/Feb/1998")
+  UNIT:'9 February 1998' = (^"09/Feb/1998")
+  UNIT:'10 February 1998' = (^"10/Feb/1998")
+  UNIT:'11 February 1998' = (^"11/Feb/1998")
+  UNIT:'12 February 1998' = (^"12/Feb/1998")
+  UNIT:'13 February 1998' = (^"13/Feb/1998")
+  UNIT:'14 February 1998' = (^"14/Feb/1998")
+  UNIT:'15 February 1998' = (^"15/Feb/1998")
+  UNIT:'16 February 1998' = (^"16/Feb/1998")
+  UNIT:'17 February 1998' = (^"17/Feb/1998")
+  UNIT:'18 February 1998' = (^"18/Feb/1998")
+  UNIT:'19 February 1998' = (^"19/Feb/1998")
+  UNIT:'20 February 1998' = (^"20/Feb/1998")
+  UNIT:'21 February 1998' = (^"21/Feb/1998")
+  UNIT:'22 February 1998' = (^"22/Feb/1998")
+  UNIT:'23 February 1998' = (^"23/Feb/1998")
+  UNIT:'24 February 1998' = (^"24/Feb/1998")
+  UNIT:'25 February 1998' = (^"25/Feb/1998")
+  UNIT:'26 February 1998' = (^"26/Feb/1998")
+  UNIT:'27 February 1998' = (^"27/Feb/1998")
+  UNIT:'28 February 1998' = (^"28/Feb/1998")
+  UNIT:'1 March 1998' = (^"01/Mar/1998")
+  UNIT:'2 March 1998' = (^"02/Mar/1998")
+  UNIT:'3 March 1998' = (^"03/Mar/1998")
+  UNIT:'4 March 1998' = (^"04/Mar/1998")
+  UNIT:'5 March 1998' = (^"05/Mar/1998")
+  UNIT:'6 March 1998' = (^"06/Mar/1998")
+  UNIT:'7 March 1998' = (^"07/Mar/1998")
+  UNIT:'8 March 1998' = (^"08/Mar/1998")
+  UNIT:'9 March 1998' = (^"09/Mar/1998")
+  UNIT:'10 March 1998' = (^"10/Mar/1998")
+  UNIT:'11 March 1998' = (^"11/Mar/1998")
+  UNIT:'12 March 1998' = (^"12/Mar/1998")
+  UNIT:'13 March 1998' = (^"13/Mar/1998")
+  UNIT:'14 March 1998' = (^"14/Mar/1998")
+  UNIT:'15 March 1998' = (^"15/Mar/1998")
+  UNIT:'16 March 1998' = (^"16/Mar/1998")
+  UNIT:'17 March 1998' = (^"17/Mar/1998")
+  UNIT:'18 March 1998' = (^"18/Mar/1998")
+  UNIT:'19 March 1998' = (^"19/Mar/1998")
+  UNIT:'20 March 1998' = (^"20/Mar/1998")
+  UNIT:'21 March 1998' = (^"21/Mar/1998")
+  UNIT:'22 March 1998' = (^"22/Mar/1998")
+  UNIT:'23 March 1998' = (^"23/Mar/1998")
+  UNIT:'24 March 1998' = (^"24/Mar/1998")
+  UNIT:'25 March 1998' = (^"25/Mar/1998")
+  UNIT:'26 March 1998' = (^"26/Mar/1998")
+  UNIT:'27 March 1998' = (^"27/Mar/1998")
+  UNIT:'28 March 1998' = (^"28/Mar/1998")
+  UNIT:'29 March 1998' = (^"29/Mar/1998")
+  UNIT:'30 March 1998' = (^"30/Mar/1998")
+  UNIT:'31 March 1998' = (^"31/Mar/1998")
+  UNIT:'1 April 1998' = (^"01/Apr/1998")
+  UNIT:'2 April 1998' = (^"02/Apr/1998")
+  UNIT:'3 April 1998' = (^"03/Apr/1998")
+  UNIT:'4 April 1998' = (^"04/Apr/1998")
+  UNIT:'5 April 1998' = (^"05/Apr/1998")
+  UNIT:'6 April 1998' = (^"06/Apr/1998")
+  UNIT:'7 April 1998' = (^"07/Apr/1998")
+  UNIT:'8 April 1998' = (^"08/Apr/1998")
+  UNIT:'9 April 1998' = (^"09/Apr/1998")
+  UNIT:'10 April 1998' = (^"10/Apr/1998")
+  UNIT:'11 April 1998' = (^"11/Apr/1998")
+  UNIT:'12 April 1998' = (^"12/Apr/1998")
+  UNIT:'13 April 1998' = (^"13/Apr/1998")
+  UNIT:'14 April 1998' = (^"14/Apr/1998")
+  UNIT:'15 April 1998' = (^"15/Apr/1998")
+  UNIT:'16 April 1998' = (^"16/Apr/1998")
+  UNIT:'17 April 1998' = (^"17/Apr/1998")
+  UNIT:'18 April 1998' = (^"18/Apr/1998")
+  UNIT:'19 April 1998' = (^"19/Apr/1998")
+  UNIT:'20 April 1998' = (^"20/Apr/1998")
+  UNIT:'21 April 1998' = (^"21/Apr/1998")
+  UNIT:'22 April 1998' = (^"22/Apr/1998")
+  UNIT:'23 April 1998' = (^"23/Apr/1998")
+  UNIT:'24 April 1998' = (^"24/Apr/1998")
+  UNIT:'25 April 1998' = (^"25/Apr/1998")
+  UNIT:'26 April 1998' = (^"26/Apr/1998")
+  UNIT:'27 April 1998' = (^"27/Apr/1998")
+  UNIT:'28 April 1998' = (^"28/Apr/1998")
+  UNIT:'29 April 1998' = (^"29/Apr/1998")
+  UNIT:'30 April 1998' = (^"30/Apr/1998")
+  UNIT:'1 May 1998' = (^"01/May/1998")
+  UNIT:'2 May 1998' = (^"02/May/1998")
+  UNIT:'3 May 1998' = (^"03/May/1998")
+  UNIT:'4 May 1998' = (^"04/May/1998")
+  UNIT:'5 May 1998' = (^"05/May/1998")
+  UNIT:'6 May 1998' = (^"06/May/1998")
+  UNIT:'7 May 1998' = (^"07/May/1998")
+  UNIT:'8 May 1998' = (^"08/May/1998")
+  UNIT:'9 May 1998' = (^"09/May/1998")
+  UNIT:'10 May 1998' = (^"10/May/1998")
+  UNIT:'11 May 1998' = (^"11/May/1998")
+  UNIT:'12 May 1998' = (^"12/May/1998")
+  UNIT:'13 May 1998' = (^"13/May/1998")
+  UNIT:'14 May 1998' = (^"14/May/1998")
+  UNIT:'15 May 1998' = (^"15/May/1998")
+  UNIT:'16 May 1998' = (^"16/May/1998")
+  UNIT:'17 May 1998' = (^"17/May/1998")
+  UNIT:'18 May 1998' = (^"18/May/1998")
+  UNIT:'19 May 1998' = (^"19/May/1998")
+  UNIT:'20 May 1998' = (^"20/May/1998")
+  UNIT:'21 May 1998' = (^"21/May/1998")
+  UNIT:'22 May 1998' = (^"22/May/1998")
+  UNIT:'23 May 1998' = (^"23/May/1998")
+  UNIT:'24 May 1998' = (^"24/May/1998")
+  UNIT:'25 May 1998' = (^"25/May/1998")
+  UNIT:'26 May 1998' = (^"26/May/1998")
+  UNIT:'27 May 1998' = (^"27/May/1998")
+  UNIT:'28 May 1998' = (^"28/May/1998")
+  UNIT:'29 May 1998' = (^"29/May/1998")
+  UNIT:'30 May 1998' = (^"30/May/1998")
+  UNIT:'31 May 1998' = (^"31/May/1998")
+  UNIT:'1 June 1998' = (^"01/Jun/1998")
+  UNIT:'2 June 1998' = (^"02/Jun/1998")
+  UNIT:'3 June 1998' = (^"03/Jun/1998")
+  UNIT:'4 June 1998' = (^"04/Jun/1998")
+  UNIT:'5 June 1998' = (^"05/Jun/1998")
+  UNIT:'6 June 1998' = (^"06/Jun/1998")
+  UNIT:'7 June 1998' = (^"07/Jun/1998")
+  UNIT:'8 June 1998' = (^"08/Jun/1998")
+  UNIT:'9 June 1998' = (^"09/Jun/1998")
+  UNIT:'10 June 1998' = (^"10/Jun/1998")
+  UNIT:'11 June 1998' = (^"11/Jun/1998")
+  UNIT:'12 June 1998' = (^"12/Jun/1998")
+  UNIT:'13 June 1998' = (^"13/Jun/1998")
+  UNIT:'14 June 1998' = (^"14/Jun/1998")
+  UNIT:'15 June 1998' = (^"15/Jun/1998")
+  UNIT:'16 June 1998' = (^"16/Jun/1998")
+  UNIT:'17 June 1998' = (^"17/Jun/1998")
+  UNIT:'18 June 1998' = (^"18/Jun/1998")
+  UNIT:'19 June 1998' = (^"19/Jun/1998")
+  UNIT:'20 June 1998' = (^"20/Jun/1998")
+  UNIT:'21 June 1998' = (^"21/Jun/1998")
+  UNIT:'22 June 1998' = (^"22/Jun/1998")
+  UNIT:'23 June 1998' = (^"23/Jun/1998")
+  UNIT:'24 June 1998' = (^"24/Jun/1998")
+  UNIT:'25 June 1998' = (^"25/Jun/1998")
+  UNIT:'26 June 1998' = (^"26/Jun/1998")
+  UNIT:'27 June 1998' = (^"27/Jun/1998")
+  UNIT:'28 June 1998' = (^"28/Jun/1998")
+  UNIT:'29 June 1998' = (^"29/Jun/1998")
+  UNIT:'30 June 1998' = (^"30/Jun/1998")
+  UNIT:'1 July 1998' = (^"01/Jul/1998")
+  UNIT:'2 July 1998' = (^"02/Jul/1998")
+  UNIT:'3 July 1998' = (^"03/Jul/1998")
+  UNIT:'4 July 1998' = (^"04/Jul/1998")
+  UNIT:'5 July 1998' = (^"05/Jul/1998")
+  UNIT:'6 July 1998' = (^"06/Jul/1998")
+  UNIT:'7 July 1998' = (^"07/Jul/1998")
+  UNIT:'8 July 1998' = (^"08/Jul/1998")
+  UNIT:'9 July 1998' = (^"09/Jul/1998")
+  UNIT:'10 July 1998' = (^"10/Jul/1998")
+  UNIT:'11 July 1998' = (^"11/Jul/1998")
+  UNIT:'12 July 1998' = (^"12/Jul/1998")
+  UNIT:'13 July 1998' = (^"13/Jul/1998")
+  UNIT:'14 July 1998' = (^"14/Jul/1998")
+  UNIT:'15 July 1998' = (^"15/Jul/1998")
+  UNIT:'16 July 1998' = (^"16/Jul/1998")
+  UNIT:'17 July 1998' = (^"17/Jul/1998")
+  UNIT:'18 July 1998' = (^"18/Jul/1998")
+  UNIT:'19 July 1998' = (^"19/Jul/1998")
+  UNIT:'20 July 1998' = (^"20/Jul/1998")
+  UNIT:'21 July 1998' = (^"21/Jul/1998")
+  UNIT:'22 July 1998' = (^"22/Jul/1998")
+  UNIT:'23 July 1998' = (^"23/Jul/1998")
+  UNIT:'24 July 1998' = (^"24/Jul/1998")
+  UNIT:'25 July 1998' = (^"25/Jul/1998")
+  UNIT:'26 July 1998' = (^"26/Jul/1998")
+  UNIT:'27 July 1998' = (^"27/Jul/1998")
+  UNIT:'28 July 1998' = (^"28/Jul/1998")
+  UNIT:'29 July 1998' = (^"29/Jul/1998")
+  UNIT:'30 July 1998' = (^"30/Jul/1998")
+  UNIT:'31 July 1998' = (^"31/Jul/1998")
+  UNIT:'1 August 1998' = (^"01/Aug/1998")
+  UNIT:'2 August 1998' = (^"02/Aug/1998")
+  UNIT:'3 August 1998' = (^"03/Aug/1998")
+  UNIT:'4 August 1998' = (^"04/Aug/1998")
+  UNIT:'5 August 1998' = (^"05/Aug/1998")
+  UNIT:'6 August 1998' = (^"06/Aug/1998")
+  UNIT:'7 August 1998' = (^"07/Aug/1998")
+  UNIT:'8 August 1998' = (^"08/Aug/1998")
+  UNIT:'9 August 1998' = (^"09/Aug/1998")
+  UNIT:'10 August 1998' = (^"10/Aug/1998")
+  UNIT:'11 August 1998' = (^"11/Aug/1998")
+  UNIT:'12 August 1998' = (^"12/Aug/1998")
+  UNIT:'13 August 1998' = (^"13/Aug/1998")
+  UNIT:'14 August 1998' = (^"14/Aug/1998")
+  UNIT:'15 August 1998' = (^"15/Aug/1998")
+  UNIT:'16 August 1998' = (^"16/Aug/1998")
+  UNIT:'17 August 1998' = (^"17/Aug/1998")
+  UNIT:'18 August 1998' = (^"18/Aug/1998")
+  UNIT:'19 August 1998' = (^"19/Aug/1998")
+  UNIT:'20 August 1998' = (^"20/Aug/1998")
+  UNIT:'21 August 1998' = (^"21/Aug/1998")
+  UNIT:'22 August 1998' = (^"22/Aug/1998")
+  UNIT:'23 August 1998' = (^"23/Aug/1998")
+  UNIT:'24 August 1998' = (^"24/Aug/1998")
+  UNIT:'25 August 1998' = (^"25/Aug/1998")
+  UNIT:'26 August 1998' = (^"26/Aug/1998")
+  UNIT:'27 August 1998' = (^"27/Aug/1998")
+  UNIT:'28 August 1998' = (^"28/Aug/1998")
+  UNIT:'29 August 1998' = (^"29/Aug/1998")
+  UNIT:'30 August 1998' = (^"30/Aug/1998")
+  UNIT:'31 August 1998' = (^"31/Aug/1998")
+  UNIT:'1 September 1998' = (^"01/Sep/1998")
+  UNIT:'2 September 1998' = (^"02/Sep/1998")
+  UNIT:'3 September 1998' = (^"03/Sep/1998")
+  UNIT:'4 September 1998' = (^"04/Sep/1998")
+  UNIT:'5 September 1998' = (^"05/Sep/1998")
+  UNIT:'6 September 1998' = (^"06/Sep/1998")
+  UNIT:'7 September 1998' = (^"07/Sep/1998")
+  UNIT:'8 September 1998' = (^"08/Sep/1998")
+  UNIT:'9 September 1998' = (^"09/Sep/1998")
+  UNIT:'10 September 1998' = (^"10/Sep/1998")
+  UNIT:'11 September 1998' = (^"11/Sep/1998")
+  UNIT:'12 September 1998' = (^"12/Sep/1998")
+  UNIT:'13 September 1998' = (^"13/Sep/1998")
+  UNIT:'14 September 1998' = (^"14/Sep/1998")
+  UNIT:'15 September 1998' = (^"15/Sep/1998")
+  UNIT:'16 September 1998' = (^"16/Sep/1998")
+  UNIT:'17 September 1998' = (^"17/Sep/1998")
+  UNIT:'18 September 1998' = (^"18/Sep/1998")
+  UNIT:'19 September 1998' = (^"19/Sep/1998")
+  UNIT:'20 September 1998' = (^"20/Sep/1998")
+  UNIT:'21 September 1998' = (^"21/Sep/1998")
+  UNIT:'22 September 1998' = (^"22/Sep/1998")
+  UNIT:'23 September 1998' = (^"23/Sep/1998")
+  UNIT:'24 September 1998' = (^"24/Sep/1998")
+  UNIT:'25 September 1998' = (^"25/Sep/1998")
+  UNIT:'26 September 1998' = (^"26/Sep/1998")
+  UNIT:'27 September 1998' = (^"27/Sep/1998")
+  UNIT:'28 September 1998' = (^"28/Sep/1998")
+  UNIT:'29 September 1998' = (^"29/Sep/1998")
+  UNIT:'30 September 1998' = (^"30/Sep/1998")
+  UNIT:'1 October 1998' = (^"01/Oct/1998")
+  UNIT:'2 October 1998' = (^"02/Oct/1998")
+  UNIT:'3 October 1998' = (^"03/Oct/1998")
+  UNIT:'4 October 1998' = (^"04/Oct/1998")
+  UNIT:'5 October 1998' = (^"05/Oct/1998")
+  UNIT:'6 October 1998' = (^"06/Oct/1998")
+  UNIT:'7 October 1998' = (^"07/Oct/1998")
+  UNIT:'8 October 1998' = (^"08/Oct/1998")
+  UNIT:'9 October 1998' = (^"09/Oct/1998")
+  UNIT:'10 October 1998' = (^"10/Oct/1998")
+  UNIT:'11 October 1998' = (^"11/Oct/1998")
+  UNIT:'12 October 1998' = (^"12/Oct/1998")
+  UNIT:'13 October 1998' = (^"13/Oct/1998")
+  UNIT:'14 October 1998' = (^"14/Oct/1998")
+  UNIT:'15 October 1998' = (^"15/Oct/1998")
+  UNIT:'16 October 1998' = (^"16/Oct/1998")
+  UNIT:'17 October 1998' = (^"17/Oct/1998")
+  UNIT:'18 October 1998' = (^"18/Oct/1998")
+  UNIT:'19 October 1998' = (^"19/Oct/1998")
+  UNIT:'20 October 1998' = (^"20/Oct/1998")
+  UNIT:'21 October 1998' = (^"21/Oct/1998")
+  UNIT:'22 October 1998' = (^"22/Oct/1998")
+  UNIT:'23 October 1998' = (^"23/Oct/1998")
+  UNIT:'24 October 1998' = (^"24/Oct/1998")
+  UNIT:'25 October 1998' = (^"25/Oct/1998")
+  UNIT:'26 October 1998' = (^"26/Oct/1998")
+  UNIT:'27 October 1998' = (^"27/Oct/1998")
+  UNIT:'28 October 1998' = (^"28/Oct/1998")
+  UNIT:'29 October 1998' = (^"29/Oct/1998")
+  UNIT:'30 October 1998' = (^"30/Oct/1998")
+  UNIT:'31 October 1998' = (^"31/Oct/1998")
+  UNIT:'1 November 1998' = (^"01/Nov/1998")
+  UNIT:'2 November 1998' = (^"02/Nov/1998")
+  UNIT:'3 November 1998' = (^"03/Nov/1998")
+  UNIT:'4 November 1998' = (^"04/Nov/1998")
+  UNIT:'5 November 1998' = (^"05/Nov/1998")
+  UNIT:'6 November 1998' = (^"06/Nov/1998")
+  UNIT:'7 November 1998' = (^"07/Nov/1998")
+  UNIT:'8 November 1998' = (^"08/Nov/1998")
+  UNIT:'9 November 1998' = (^"09/Nov/1998")
+  UNIT:'10 November 1998' = (^"10/Nov/1998")
+  UNIT:'11 November 1998' = (^"11/Nov/1998")
+  UNIT:'12 November 1998' = (^"12/Nov/1998")
+  UNIT:'13 November 1998' = (^"13/Nov/1998")
+  UNIT:'14 November 1998' = (^"14/Nov/1998")
+  UNIT:'15 November 1998' = (^"15/Nov/1998")
+  UNIT:'16 November 1998' = (^"16/Nov/1998")
+  UNIT:'17 November 1998' = (^"17/Nov/1998")
+  UNIT:'18 November 1998' = (^"18/Nov/1998")
+  UNIT:'19 November 1998' = (^"19/Nov/1998")
+  UNIT:'20 November 1998' = (^"20/Nov/1998")
+  UNIT:'21 November 1998' = (^"21/Nov/1998")
+  UNIT:'22 November 1998' = (^"22/Nov/1998")
+  UNIT:'23 November 1998' = (^"23/Nov/1998")
+  UNIT:'24 November 1998' = (^"24/Nov/1998")
+  UNIT:'25 November 1998' = (^"25/Nov/1998")
+  UNIT:'26 November 1998' = (^"26/Nov/1998")
+  UNIT:'27 November 1998' = (^"27/Nov/1998")
+  UNIT:'28 November 1998' = (^"28/Nov/1998")
+  UNIT:'29 November 1998' = (^"29/Nov/1998")
+  UNIT:'30 November 1998' = (^"30/Nov/1998")
+  UNIT:'1 December 1998' = (^"01/Dec/1998")
+  UNIT:'2 December 1998' = (^"02/Dec/1998")
+  UNIT:'3 December 1998' = (^"03/Dec/1998")
+  UNIT:'4 December 1998' = (^"04/Dec/1998")
+  UNIT:'5 December 1998' = (^"05/Dec/1998")
+  UNIT:'6 December 1998' = (^"06/Dec/1998")
+  UNIT:'7 December 1998' = (^"07/Dec/1998")
+  UNIT:'8 December 1998' = (^"08/Dec/1998")
+  UNIT:'9 December 1998' = (^"09/Dec/1998")
+  UNIT:'10 December 1998' = (^"10/Dec/1998")
+  UNIT:'11 December 1998' = (^"11/Dec/1998")
+  UNIT:'12 December 1998' = (^"12/Dec/1998")
+  UNIT:'13 December 1998' = (^"13/Dec/1998")
+  UNIT:'14 December 1998' = (^"14/Dec/1998")
+  UNIT:'15 December 1998' = (^"15/Dec/1998")
+  UNIT:'16 December 1998' = (^"16/Dec/1998")
+  UNIT:'17 December 1998' = (^"17/Dec/1998")
+  UNIT:'18 December 1998' = (^"18/Dec/1998")
+  UNIT:'19 December 1998' = (^"19/Dec/1998")
+  UNIT:'20 December 1998' = (^"20/Dec/1998")
+  UNIT:'21 December 1998' = (^"21/Dec/1998")
+  UNIT:'22 December 1998' = (^"22/Dec/1998")
+  UNIT:'23 December 1998' = (^"23/Dec/1998")
+  UNIT:'24 December 1998' = (^"24/Dec/1998")
+  UNIT:'25 December 1998' = (^"25/Dec/1998")
+  UNIT:'26 December 1998' = (^"26/Dec/1998")
+  UNIT:'27 December 1998' = (^"27/Dec/1998")
+  UNIT:'28 December 1998' = (^"28/Dec/1998")
+  UNIT:'29 December 1998' = (^"29/Dec/1998")
+  UNIT:'30 December 1998' = (^"30/Dec/1998")
+  UNIT:'31 December 1998' = (^"31/Dec/1998")
+  UNIT:'1 January 1997' = (^"01/Jan/1997")
+  UNIT:'2 January 1997' = (^"02/Jan/1997")
+  UNIT:'3 January 1997' = (^"03/Jan/1997")
+  UNIT:'4 January 1997' = (^"04/Jan/1997")
+  UNIT:'5 January 1997' = (^"05/Jan/1997")
+  UNIT:'6 January 1997' = (^"06/Jan/1997")
+  UNIT:'7 January 1997' = (^"07/Jan/1997")
+  UNIT:'8 January 1997' = (^"08/Jan/1997")
+  UNIT:'9 January 1997' = (^"09/Jan/1997")
+  UNIT:'10 January 1997' = (^"10/Jan/1997")
+  UNIT:'11 January 1997' = (^"11/Jan/1997")
+  UNIT:'12 January 1997' = (^"12/Jan/1997")
+  UNIT:'13 January 1997' = (^"13/Jan/1997")
+  UNIT:'14 January 1997' = (^"14/Jan/1997")
+  UNIT:'15 January 1997' = (^"15/Jan/1997")
+  UNIT:'16 January 1997' = (^"16/Jan/1997")
+  UNIT:'17 January 1997' = (^"17/Jan/1997")
+  UNIT:'18 January 1997' = (^"18/Jan/1997")
+  UNIT:'19 January 1997' = (^"19/Jan/1997")
+  UNIT:'20 January 1997' = (^"20/Jan/1997")
+  UNIT:'21 January 1997' = (^"21/Jan/1997")
+  UNIT:'22 January 1997' = (^"22/Jan/1997")
+  UNIT:'23 January 1997' = (^"23/Jan/1997")
+  UNIT:'24 January 1997' = (^"24/Jan/1997")
+  UNIT:'25 January 1997' = (^"25/Jan/1997")
+  UNIT:'26 January 1997' = (^"26/Jan/1997")
+  UNIT:'27 January 1997' = (^"27/Jan/1997")
+  UNIT:'28 January 1997' = (^"28/Jan/1997")
+  UNIT:'29 January 1997' = (^"29/Jan/1997")
+  UNIT:'30 January 1997' = (^"30/Jan/1997")
+  UNIT:'31 January 1997' = (^"31/Jan/1997")
+  UNIT:'1 February 1997' = (^"01/Feb/1997")
+  UNIT:'2 February 1997' = (^"02/Feb/1997")
+  UNIT:'3 February 1997' = (^"03/Feb/1997")
+  UNIT:'4 February 1997' = (^"04/Feb/1997")
+  UNIT:'5 February 1997' = (^"05/Feb/1997")
+  UNIT:'6 February 1997' = (^"06/Feb/1997")
+  UNIT:'7 February 1997' = (^"07/Feb/1997")
+  UNIT:'8 February 1997' = (^"08/Feb/1997")
+  UNIT:'9 February 1997' = (^"09/Feb/1997")
+  UNIT:'10 February 1997' = (^"10/Feb/1997")
+  UNIT:'11 February 1997' = (^"11/Feb/1997")
+  UNIT:'12 February 1997' = (^"12/Feb/1997")
+  UNIT:'13 February 1997' = (^"13/Feb/1997")
+  UNIT:'14 February 1997' = (^"14/Feb/1997")
+  UNIT:'15 February 1997' = (^"15/Feb/1997")
+  UNIT:'16 February 1997' = (^"16/Feb/1997")
+  UNIT:'17 February 1997' = (^"17/Feb/1997")
+  UNIT:'18 February 1997' = (^"18/Feb/1997")
+  UNIT:'19 February 1997' = (^"19/Feb/1997")
+  UNIT:'20 February 1997' = (^"20/Feb/1997")
+  UNIT:'21 February 1997' = (^"21/Feb/1997")
+  UNIT:'22 February 1997' = (^"22/Feb/1997")
+  UNIT:'23 February 1997' = (^"23/Feb/1997")
+  UNIT:'24 February 1997' = (^"24/Feb/1997")
+  UNIT:'25 February 1997' = (^"25/Feb/1997")
+  UNIT:'26 February 1997' = (^"26/Feb/1997")
+  UNIT:'27 February 1997' = (^"27/Feb/1997")
+  UNIT:'28 February 1997' = (^"28/Feb/1997")
+  UNIT:'1 March 1997' = (^"01/Mar/1997")
+  UNIT:'2 March 1997' = (^"02/Mar/1997")
+  UNIT:'3 March 1997' = (^"03/Mar/1997")
+  UNIT:'4 March 1997' = (^"04/Mar/1997")
+  UNIT:'5 March 1997' = (^"05/Mar/1997")
+  UNIT:'6 March 1997' = (^"06/Mar/1997")
+  UNIT:'7 March 1997' = (^"07/Mar/1997")
+  UNIT:'8 March 1997' = (^"08/Mar/1997")
+  UNIT:'9 March 1997' = (^"09/Mar/1997")
+  UNIT:'10 March 1997' = (^"10/Mar/1997")
+  UNIT:'11 March 1997' = (^"11/Mar/1997")
+  UNIT:'12 March 1997' = (^"12/Mar/1997")
+  UNIT:'13 March 1997' = (^"13/Mar/1997")
+  UNIT:'14 March 1997' = (^"14/Mar/1997")
+  UNIT:'15 March 1997' = (^"15/Mar/1997")
+  UNIT:'16 March 1997' = (^"16/Mar/1997")
+  UNIT:'17 March 1997' = (^"17/Mar/1997")
+  UNIT:'18 March 1997' = (^"18/Mar/1997")
+  UNIT:'19 March 1997' = (^"19/Mar/1997")
+  UNIT:'20 March 1997' = (^"20/Mar/1997")
+  UNIT:'21 March 1997' = (^"21/Mar/1997")
+  UNIT:'22 March 1997' = (^"22/Mar/1997")
+  UNIT:'23 March 1997' = (^"23/Mar/1997")
+  UNIT:'24 March 1997' = (^"24/Mar/1997")
+  UNIT:'25 March 1997' = (^"25/Mar/1997")
+  UNIT:'26 March 1997' = (^"26/Mar/1997")
+  UNIT:'27 March 1997' = (^"27/Mar/1997")
+  UNIT:'28 March 1997' = (^"28/Mar/1997")
+  UNIT:'29 March 1997' = (^"29/Mar/1997")
+  UNIT:'30 March 1997' = (^"30/Mar/1997")
+  UNIT:'31 March 1997' = (^"31/Mar/1997")
+  UNIT:'1 April 1997' = (^"01/Apr/1997")
+  UNIT:'2 April 1997' = (^"02/Apr/1997")
+  UNIT:'3 April 1997' = (^"03/Apr/1997")
+  UNIT:'4 April 1997' = (^"04/Apr/1997")
+  UNIT:'5 April 1997' = (^"05/Apr/1997")
+  UNIT:'6 April 1997' = (^"06/Apr/1997")
+  UNIT:'7 April 1997' = (^"07/Apr/1997")
+  UNIT:'8 April 1997' = (^"08/Apr/1997")
+  UNIT:'9 April 1997' = (^"09/Apr/1997")
+  UNIT:'10 April 1997' = (^"10/Apr/1997")
+  UNIT:'11 April 1997' = (^"11/Apr/1997")
+  UNIT:'12 April 1997' = (^"12/Apr/1997")
+  UNIT:'13 April 1997' = (^"13/Apr/1997")
+  UNIT:'14 April 1997' = (^"14/Apr/1997")
+  UNIT:'15 April 1997' = (^"15/Apr/1997")
+  UNIT:'16 April 1997' = (^"16/Apr/1997")
+  UNIT:'17 April 1997' = (^"17/Apr/1997")
+  UNIT:'18 April 1997' = (^"18/Apr/1997")
+  UNIT:'19 April 1997' = (^"19/Apr/1997")
+  UNIT:'20 April 1997' = (^"20/Apr/1997")
+  UNIT:'21 April 1997' = (^"21/Apr/1997")
+  UNIT:'22 April 1997' = (^"22/Apr/1997")
+  UNIT:'23 April 1997' = (^"23/Apr/1997")
+  UNIT:'24 April 1997' = (^"24/Apr/1997")
+  UNIT:'25 April 1997' = (^"25/Apr/1997")
+  UNIT:'26 April 1997' = (^"26/Apr/1997")
+  UNIT:'27 April 1997' = (^"27/Apr/1997")
+  UNIT:'28 April 1997' = (^"28/Apr/1997")
+  UNIT:'29 April 1997' = (^"29/Apr/1997")
+  UNIT:'30 April 1997' = (^"30/Apr/1997")
+  UNIT:'1 May 1997' = (^"01/May/1997")
+  UNIT:'2 May 1997' = (^"02/May/1997")
+  UNIT:'3 May 1997' = (^"03/May/1997")
+  UNIT:'4 May 1997' = (^"04/May/1997")
+  UNIT:'5 May 1997' = (^"05/May/1997")
+  UNIT:'6 May 1997' = (^"06/May/1997")
+  UNIT:'7 May 1997' = (^"07/May/1997")
+  UNIT:'8 May 1997' = (^"08/May/1997")
+  UNIT:'9 May 1997' = (^"09/May/1997")
+  UNIT:'10 May 1997' = (^"10/May/1997")
+  UNIT:'11 May 1997' = (^"11/May/1997")
+  UNIT:'12 May 1997' = (^"12/May/1997")
+  UNIT:'13 May 1997' = (^"13/May/1997")
+  UNIT:'14 May 1997' = (^"14/May/1997")
+  UNIT:'15 May 1997' = (^"15/May/1997")
+  UNIT:'16 May 1997' = (^"16/May/1997")
+  UNIT:'17 May 1997' = (^"17/May/1997")
+  UNIT:'18 May 1997' = (^"18/May/1997")
+  UNIT:'19 May 1997' = (^"19/May/1997")
+  UNIT:'20 May 1997' = (^"20/May/1997")
+  UNIT:'21 May 1997' = (^"21/May/1997")
+  UNIT:'22 May 1997' = (^"22/May/1997")
+  UNIT:'23 May 1997' = (^"23/May/1997")
+  UNIT:'24 May 1997' = (^"24/May/1997")
+  UNIT:'25 May 1997' = (^"25/May/1997")
+  UNIT:'26 May 1997' = (^"26/May/1997")
+  UNIT:'27 May 1997' = (^"27/May/1997")
+  UNIT:'28 May 1997' = (^"28/May/1997")
+  UNIT:'29 May 1997' = (^"29/May/1997")
+  UNIT:'30 May 1997' = (^"30/May/1997")
+  UNIT:'31 May 1997' = (^"31/May/1997")
+  UNIT:'1 June 1997' = (^"01/Jun/1997")
+  UNIT:'2 June 1997' = (^"02/Jun/1997")
+  UNIT:'3 June 1997' = (^"03/Jun/1997")
+  UNIT:'4 June 1997' = (^"04/Jun/1997")
+  UNIT:'5 June 1997' = (^"05/Jun/1997")
+  UNIT:'6 June 1997' = (^"06/Jun/1997")
+  UNIT:'7 June 1997' = (^"07/Jun/1997")
+  UNIT:'8 June 1997' = (^"08/Jun/1997")
+  UNIT:'9 June 1997' = (^"09/Jun/1997")
+  UNIT:'10 June 1997' = (^"10/Jun/1997")
+  UNIT:'11 June 1997' = (^"11/Jun/1997")
+  UNIT:'12 June 1997' = (^"12/Jun/1997")
+  UNIT:'13 June 1997' = (^"13/Jun/1997")
+  UNIT:'14 June 1997' = (^"14/Jun/1997")
+  UNIT:'15 June 1997' = (^"15/Jun/1997")
+  UNIT:'16 June 1997' = (^"16/Jun/1997")
+  UNIT:'17 June 1997' = (^"17/Jun/1997")
+  UNIT:'18 June 1997' = (^"18/Jun/1997")
+  UNIT:'19 June 1997' = (^"19/Jun/1997")
+  UNIT:'20 June 1997' = (^"20/Jun/1997")
+  UNIT:'21 June 1997' = (^"21/Jun/1997")
+  UNIT:'22 June 1997' = (^"22/Jun/1997")
+  UNIT:'23 June 1997' = (^"23/Jun/1997")
+  UNIT:'24 June 1997' = (^"24/Jun/1997")
+  UNIT:'25 June 1997' = (^"25/Jun/1997")
+  UNIT:'26 June 1997' = (^"26/Jun/1997")
+  UNIT:'27 June 1997' = (^"27/Jun/1997")
+  UNIT:'28 June 1997' = (^"28/Jun/1997")
+  UNIT:'29 June 1997' = (^"29/Jun/1997")
+  UNIT:'30 June 1997' = (^"30/Jun/1997")
+  UNIT:'1 July 1997' = (^"01/Jul/1997")
+  UNIT:'2 July 1997' = (^"02/Jul/1997")
+  UNIT:'3 July 1997' = (^"03/Jul/1997")
+  UNIT:'4 July 1997' = (^"04/Jul/1997")
+  UNIT:'5 July 1997' = (^"05/Jul/1997")
+  UNIT:'6 July 1997' = (^"06/Jul/1997")
+  UNIT:'7 July 1997' = (^"07/Jul/1997")
+  UNIT:'8 July 1997' = (^"08/Jul/1997")
+  UNIT:'9 July 1997' = (^"09/Jul/1997")
+  UNIT:'10 July 1997' = (^"10/Jul/1997")
+  UNIT:'11 July 1997' = (^"11/Jul/1997")
+  UNIT:'12 July 1997' = (^"12/Jul/1997")
+  UNIT:'13 July 1997' = (^"13/Jul/1997")
+  UNIT:'14 July 1997' = (^"14/Jul/1997")
+  UNIT:'15 July 1997' = (^"15/Jul/1997")
+  UNIT:'16 July 1997' = (^"16/Jul/1997")
+  UNIT:'17 July 1997' = (^"17/Jul/1997")
+  UNIT:'18 July 1997' = (^"18/Jul/1997")
+  UNIT:'19 July 1997' = (^"19/Jul/1997")
+  UNIT:'20 July 1997' = (^"20/Jul/1997")
+  UNIT:'21 July 1997' = (^"21/Jul/1997")
+  UNIT:'22 July 1997' = (^"22/Jul/1997")
+  UNIT:'23 July 1997' = (^"23/Jul/1997")
+  UNIT:'24 July 1997' = (^"24/Jul/1997")
+  UNIT:'25 July 1997' = (^"25/Jul/1997")
+  UNIT:'26 July 1997' = (^"26/Jul/1997")
+  UNIT:'27 July 1997' = (^"27/Jul/1997")
+  UNIT:'28 July 1997' = (^"28/Jul/1997")
+  UNIT:'29 July 1997' = (^"29/Jul/1997")
+  UNIT:'30 July 1997' = (^"30/Jul/1997")
+  UNIT:'31 July 1997' = (^"31/Jul/1997")
+  UNIT:'1 August 1997' = (^"01/Aug/1997")
+  UNIT:'2 August 1997' = (^"02/Aug/1997")
+  UNIT:'3 August 1997' = (^"03/Aug/1997")
+  UNIT:'4 August 1997' = (^"04/Aug/1997")
+  UNIT:'5 August 1997' = (^"05/Aug/1997")
+  UNIT:'6 August 1997' = (^"06/Aug/1997")
+  UNIT:'7 August 1997' = (^"07/Aug/1997")
+  UNIT:'8 August 1997' = (^"08/Aug/1997")
+  UNIT:'9 August 1997' = (^"09/Aug/1997")
+  UNIT:'10 August 1997' = (^"10/Aug/1997")
+  UNIT:'11 August 1997' = (^"11/Aug/1997")
+  UNIT:'12 August 1997' = (^"12/Aug/1997")
+  UNIT:'13 August 1997' = (^"13/Aug/1997")
+  UNIT:'14 August 1997' = (^"14/Aug/1997")
+  UNIT:'15 August 1997' = (^"15/Aug/1997")
+  UNIT:'16 August 1997' = (^"16/Aug/1997")
+  UNIT:'17 August 1997' = (^"17/Aug/1997")
+  UNIT:'18 August 1997' = (^"18/Aug/1997")
+  UNIT:'19 August 1997' = (^"19/Aug/1997")
+  UNIT:'20 August 1997' = (^"20/Aug/1997")
+  UNIT:'21 August 1997' = (^"21/Aug/1997")
+  UNIT:'22 August 1997' = (^"22/Aug/1997")
+  UNIT:'23 August 1997' = (^"23/Aug/1997")
+  UNIT:'24 August 1997' = (^"24/Aug/1997")
+  UNIT:'25 August 1997' = (^"25/Aug/1997")
+  UNIT:'26 August 1997' = (^"26/Aug/1997")
+  UNIT:'27 August 1997' = (^"27/Aug/1997")
+  UNIT:'28 August 1997' = (^"28/Aug/1997")
+  UNIT:'29 August 1997' = (^"29/Aug/1997")
+  UNIT:'30 August 1997' = (^"30/Aug/1997")
+  UNIT:'31 August 1997' = (^"31/Aug/1997")
+  UNIT:'1 September 1997' = (^"01/Sep/1997")
+  UNIT:'2 September 1997' = (^"02/Sep/1997")
+  UNIT:'3 September 1997' = (^"03/Sep/1997")
+  UNIT:'4 September 1997' = (^"04/Sep/1997")
+  UNIT:'5 September 1997' = (^"05/Sep/1997")
+  UNIT:'6 September 1997' = (^"06/Sep/1997")
+  UNIT:'7 September 1997' = (^"07/Sep/1997")
+  UNIT:'8 September 1997' = (^"08/Sep/1997")
+  UNIT:'9 September 1997' = (^"09/Sep/1997")
+  UNIT:'10 September 1997' = (^"10/Sep/1997")
+  UNIT:'11 September 1997' = (^"11/Sep/1997")
+  UNIT:'12 September 1997' = (^"12/Sep/1997")
+  UNIT:'13 September 1997' = (^"13/Sep/1997")
+  UNIT:'14 September 1997' = (^"14/Sep/1997")
+  UNIT:'15 September 1997' = (^"15/Sep/1997")
+  UNIT:'16 September 1997' = (^"16/Sep/1997")
+  UNIT:'17 September 1997' = (^"17/Sep/1997")
+  UNIT:'18 September 1997' = (^"18/Sep/1997")
+  UNIT:'19 September 1997' = (^"19/Sep/1997")
+  UNIT:'20 September 1997' = (^"20/Sep/1997")
+  UNIT:'21 September 1997' = (^"21/Sep/1997")
+  UNIT:'22 September 1997' = (^"22/Sep/1997")
+  UNIT:'23 September 1997' = (^"23/Sep/1997")
+  UNIT:'24 September 1997' = (^"24/Sep/1997")
+  UNIT:'25 September 1997' = (^"25/Sep/1997")
+  UNIT:'26 September 1997' = (^"26/Sep/1997")
+  UNIT:'27 September 1997' = (^"27/Sep/1997")
+  UNIT:'28 September 1997' = (^"28/Sep/1997")
+  UNIT:'29 September 1997' = (^"29/Sep/1997")
+  UNIT:'30 September 1997' = (^"30/Sep/1997")
+  UNIT:'1 October 1997' = (^"01/Oct/1997")
+  UNIT:'2 October 1997' = (^"02/Oct/1997")
+  UNIT:'3 October 1997' = (^"03/Oct/1997")
+  UNIT:'4 October 1997' = (^"04/Oct/1997")
+  UNIT:'5 October 1997' = (^"05/Oct/1997")
+  UNIT:'6 October 1997' = (^"06/Oct/1997")
+  UNIT:'7 October 1997' = (^"07/Oct/1997")
+  UNIT:'8 October 1997' = (^"08/Oct/1997")
+  UNIT:'9 October 1997' = (^"09/Oct/1997")
+  UNIT:'10 October 1997' = (^"10/Oct/1997")
+  UNIT:'11 October 1997' = (^"11/Oct/1997")
+  UNIT:'12 October 1997' = (^"12/Oct/1997")
+  UNIT:'13 October 1997' = (^"13/Oct/1997")
+  UNIT:'14 October 1997' = (^"14/Oct/1997")
+  UNIT:'15 October 1997' = (^"15/Oct/1997")
+  UNIT:'16 October 1997' = (^"16/Oct/1997")
+  UNIT:'17 October 1997' = (^"17/Oct/1997")
+  UNIT:'18 October 1997' = (^"18/Oct/1997")
+  UNIT:'19 October 1997' = (^"19/Oct/1997")
+  UNIT:'20 October 1997' = (^"20/Oct/1997")
+  UNIT:'21 October 1997' = (^"21/Oct/1997")
+  UNIT:'22 October 1997' = (^"22/Oct/1997")
+  UNIT:'23 October 1997' = (^"23/Oct/1997")
+  UNIT:'24 October 1997' = (^"24/Oct/1997")
+  UNIT:'25 October 1997' = (^"25/Oct/1997")
+  UNIT:'26 October 1997' = (^"26/Oct/1997")
+  UNIT:'27 October 1997' = (^"27/Oct/1997")
+  UNIT:'28 October 1997' = (^"28/Oct/1997")
+  UNIT:'29 October 1997' = (^"29/Oct/1997")
+  UNIT:'30 October 1997' = (^"30/Oct/1997")
+  UNIT:'31 October 1997' = (^"31/Oct/1997")
+  UNIT:'1 November 1997' = (^"01/Nov/1997")
+  UNIT:'2 November 1997' = (^"02/Nov/1997")
+  UNIT:'3 November 1997' = (^"03/Nov/1997")
+  UNIT:'4 November 1997' = (^"04/Nov/1997")
+  UNIT:'5 November 1997' = (^"05/Nov/1997")
+  UNIT:'6 November 1997' = (^"06/Nov/1997")
+  UNIT:'7 November 1997' = (^"07/Nov/1997")
+  UNIT:'8 November 1997' = (^"08/Nov/1997")
+  UNIT:'9 November 1997' = (^"09/Nov/1997")
+  UNIT:'10 November 1997' = (^"10/Nov/1997")
+  UNIT:'11 November 1997' = (^"11/Nov/1997")
+  UNIT:'12 November 1997' = (^"12/Nov/1997")
+  UNIT:'13 November 1997' = (^"13/Nov/1997")
+  UNIT:'14 November 1997' = (^"14/Nov/1997")
+  UNIT:'15 November 1997' = (^"15/Nov/1997")
+  UNIT:'16 November 1997' = (^"16/Nov/1997")
+  UNIT:'17 November 1997' = (^"17/Nov/1997")
+  UNIT:'18 November 1997' = (^"18/Nov/1997")
+  UNIT:'19 November 1997' = (^"19/Nov/1997")
+  UNIT:'20 November 1997' = (^"20/Nov/1997")
+  UNIT:'21 November 1997' = (^"21/Nov/1997")
+  UNIT:'22 November 1997' = (^"22/Nov/1997")
+  UNIT:'23 November 1997' = (^"23/Nov/1997")
+  UNIT:'24 November 1997' = (^"24/Nov/1997")
+  UNIT:'25 November 1997' = (^"25/Nov/1997")
+  UNIT:'26 November 1997' = (^"26/Nov/1997")
+  UNIT:'27 November 1997' = (^"27/Nov/1997")
+  UNIT:'28 November 1997' = (^"28/Nov/1997")
+  UNIT:'29 November 1997' = (^"29/Nov/1997")
+  UNIT:'30 November 1997' = (^"30/Nov/1997")
+  UNIT:'1 December 1997' = (^"01/Dec/1997")
+  UNIT:'2 December 1997' = (^"02/Dec/1997")
+  UNIT:'3 December 1997' = (^"03/Dec/1997")
+  UNIT:'4 December 1997' = (^"04/Dec/1997")
+  UNIT:'5 December 1997' = (^"05/Dec/1997")
+  UNIT:'6 December 1997' = (^"06/Dec/1997")
+  UNIT:'7 December 1997' = (^"07/Dec/1997")
+  UNIT:'8 December 1997' = (^"08/Dec/1997")
+  UNIT:'9 December 1997' = (^"09/Dec/1997")
+  UNIT:'10 December 1997' = (^"10/Dec/1997")
+  UNIT:'11 December 1997' = (^"11/Dec/1997")
+  UNIT:'12 December 1997' = (^"12/Dec/1997")
+  UNIT:'13 December 1997' = (^"13/Dec/1997")
+  UNIT:'14 December 1997' = (^"14/Dec/1997")
+  UNIT:'15 December 1997' = (^"15/Dec/1997")
+  UNIT:'16 December 1997' = (^"16/Dec/1997")
+  UNIT:'17 December 1997' = (^"17/Dec/1997")
+  UNIT:'18 December 1997' = (^"18/Dec/1997")
+  UNIT:'19 December 1997' = (^"19/Dec/1997")
+  UNIT:'20 December 1997' = (^"20/Dec/1997")
+  UNIT:'21 December 1997' = (^"21/Dec/1997")
+  UNIT:'22 December 1997' = (^"22/Dec/1997")
+  UNIT:'23 December 1997' = (^"23/Dec/1997")
+  UNIT:'24 December 1997' = (^"24/Dec/1997")
+  UNIT:'25 December 1997' = (^"25/Dec/1997")
+  UNIT:'26 December 1997' = (^"26/Dec/1997")
+  UNIT:'27 December 1997' = (^"27/Dec/1997")
+  UNIT:'28 December 1997' = (^"28/Dec/1997")
+  UNIT:'29 December 1997' = (^"29/Dec/1997")
+  UNIT:'30 December 1997' = (^"30/Dec/1997")
+  UNIT:'31 December 1997' = (^"31/Dec/1997")
+  UNIT:'1 January 1996' = (^"01/Jan/1996")
+  UNIT:'2 January 1996' = (^"02/Jan/1996")
+  UNIT:'3 January 1996' = (^"03/Jan/1996")
+  UNIT:'4 January 1996' = (^"04/Jan/1996")
+  UNIT:'5 January 1996' = (^"05/Jan/1996")
+  UNIT:'6 January 1996' = (^"06/Jan/1996")
+  UNIT:'7 January 1996' = (^"07/Jan/1996")
+  UNIT:'8 January 1996' = (^"08/Jan/1996")
+  UNIT:'9 January 1996' = (^"09/Jan/1996")
+  UNIT:'10 January 1996' = (^"10/Jan/1996")
+  UNIT:'11 January 1996' = (^"11/Jan/1996")
+  UNIT:'12 January 1996' = (^"12/Jan/1996")
+  UNIT:'13 January 1996' = (^"13/Jan/1996")
+  UNIT:'14 January 1996' = (^"14/Jan/1996")
+  UNIT:'15 January 1996' = (^"15/Jan/1996")
+  UNIT:'16 January 1996' = (^"16/Jan/1996")
+  UNIT:'17 January 1996' = (^"17/Jan/1996")
+  UNIT:'18 January 1996' = (^"18/Jan/1996")
+  UNIT:'19 January 1996' = (^"19/Jan/1996")
+  UNIT:'20 January 1996' = (^"20/Jan/1996")
+  UNIT:'21 January 1996' = (^"21/Jan/1996")
+  UNIT:'22 January 1996' = (^"22/Jan/1996")
+  UNIT:'23 January 1996' = (^"23/Jan/1996")
+  UNIT:'24 January 1996' = (^"24/Jan/1996")
+  UNIT:'25 January 1996' = (^"25/Jan/1996")
+  UNIT:'26 January 1996' = (^"26/Jan/1996")
+  UNIT:'27 January 1996' = (^"27/Jan/1996")
+  UNIT:'28 January 1996' = (^"28/Jan/1996")
+  UNIT:'29 January 1996' = (^"29/Jan/1996")
+  UNIT:'30 January 1996' = (^"30/Jan/1996")
+  UNIT:'31 January 1996' = (^"31/Jan/1996")
+  UNIT:'1 February 1996' = (^"01/Feb/1996")
+  UNIT:'2 February 1996' = (^"02/Feb/1996")
+  UNIT:'3 February 1996' = (^"03/Feb/1996")
+  UNIT:'4 February 1996' = (^"04/Feb/1996")
+  UNIT:'5 February 1996' = (^"05/Feb/1996")
+  UNIT:'6 February 1996' = (^"06/Feb/1996")
+  UNIT:'7 February 1996' = (^"07/Feb/1996")
+  UNIT:'8 February 1996' = (^"08/Feb/1996")
+  UNIT:'9 February 1996' = (^"09/Feb/1996")
+  UNIT:'10 February 1996' = (^"10/Feb/1996")
+  UNIT:'11 February 1996' = (^"11/Feb/1996")
+  UNIT:'12 February 1996' = (^"12/Feb/1996")
+  UNIT:'13 February 1996' = (^"13/Feb/1996")
+  UNIT:'14 February 1996' = (^"14/Feb/1996")
+  UNIT:'15 February 1996' = (^"15/Feb/1996")
+  UNIT:'16 February 1996' = (^"16/Feb/1996")
+  UNIT:'17 February 1996' = (^"17/Feb/1996")
+  UNIT:'18 February 1996' = (^"18/Feb/1996")
+  UNIT:'19 February 1996' = (^"19/Feb/1996")
+  UNIT:'20 February 1996' = (^"20/Feb/1996")
+  UNIT:'21 February 1996' = (^"21/Feb/1996")
+  UNIT:'22 February 1996' = (^"22/Feb/1996")
+  UNIT:'23 February 1996' = (^"23/Feb/1996")
+  UNIT:'24 February 1996' = (^"24/Feb/1996")
+  UNIT:'25 February 1996' = (^"25/Feb/1996")
+  UNIT:'26 February 1996' = (^"26/Feb/1996")
+  UNIT:'27 February 1996' = (^"27/Feb/1996")
+  UNIT:'28 February 1996' = (^"28/Feb/1996")
+  UNIT:'29 February 1996' = (^"29/Feb/1996")
+  UNIT:'1 March 1996' = (^"01/Mar/1996")
+  UNIT:'2 March 1996' = (^"02/Mar/1996")
+  UNIT:'3 March 1996' = (^"03/Mar/1996")
+  UNIT:'4 March 1996' = (^"04/Mar/1996")
+  UNIT:'5 March 1996' = (^"05/Mar/1996")
+  UNIT:'6 March 1996' = (^"06/Mar/1996")
+  UNIT:'7 March 1996' = (^"07/Mar/1996")
+  UNIT:'8 March 1996' = (^"08/Mar/1996")
+  UNIT:'9 March 1996' = (^"09/Mar/1996")
+  UNIT:'10 March 1996' = (^"10/Mar/1996")
+  UNIT:'11 March 1996' = (^"11/Mar/1996")
+  UNIT:'12 March 1996' = (^"12/Mar/1996")
+  UNIT:'13 March 1996' = (^"13/Mar/1996")
+  UNIT:'14 March 1996' = (^"14/Mar/1996")
+  UNIT:'15 March 1996' = (^"15/Mar/1996")
+  UNIT:'16 March 1996' = (^"16/Mar/1996")
+  UNIT:'17 March 1996' = (^"17/Mar/1996")
+  UNIT:'18 March 1996' = (^"18/Mar/1996")
+  UNIT:'19 March 1996' = (^"19/Mar/1996")
+  UNIT:'20 March 1996' = (^"20/Mar/1996")
+  UNIT:'21 March 1996' = (^"21/Mar/1996")
+  UNIT:'22 March 1996' = (^"22/Mar/1996")
+  UNIT:'23 March 1996' = (^"23/Mar/1996")
+  UNIT:'24 March 1996' = (^"24/Mar/1996")
+  UNIT:'25 March 1996' = (^"25/Mar/1996")
+  UNIT:'26 March 1996' = (^"26/Mar/1996")
+  UNIT:'27 March 1996' = (^"27/Mar/1996")
+  UNIT:'28 March 1996' = (^"28/Mar/1996")
+  UNIT:'29 March 1996' = (^"29/Mar/1996")
+  UNIT:'30 March 1996' = (^"30/Mar/1996")
+  UNIT:'31 March 1996' = (^"31/Mar/1996")
+  UNIT:'1 April 1996' = (^"01/Apr/1996")
+  UNIT:'2 April 1996' = (^"02/Apr/1996")
+  UNIT:'3 April 1996' = (^"03/Apr/1996")
+  UNIT:'4 April 1996' = (^"04/Apr/1996")
+  UNIT:'5 April 1996' = (^"05/Apr/1996")
+  UNIT:'6 April 1996' = (^"06/Apr/1996")
+  UNIT:'7 April 1996' = (^"07/Apr/1996")
+  UNIT:'8 April 1996' = (^"08/Apr/1996")
+  UNIT:'9 April 1996' = (^"09/Apr/1996")
+  UNIT:'10 April 1996' = (^"10/Apr/1996")
+  UNIT:'11 April 1996' = (^"11/Apr/1996")
+  UNIT:'12 April 1996' = (^"12/Apr/1996")
+  UNIT:'13 April 1996' = (^"13/Apr/1996")
+  UNIT:'14 April 1996' = (^"14/Apr/1996")
+  UNIT:'15 April 1996' = (^"15/Apr/1996")
+  UNIT:'16 April 1996' = (^"16/Apr/1996")
+  UNIT:'17 April 1996' = (^"17/Apr/1996")
+  UNIT:'18 April 1996' = (^"18/Apr/1996")
+  UNIT:'19 April 1996' = (^"19/Apr/1996")
+  UNIT:'20 April 1996' = (^"20/Apr/1996")
+  UNIT:'21 April 1996' = (^"21/Apr/1996")
+  UNIT:'22 April 1996' = (^"22/Apr/1996")
+  UNIT:'23 April 1996' = (^"23/Apr/1996")
+  UNIT:'24 April 1996' = (^"24/Apr/1996")
+  UNIT:'25 April 1996' = (^"25/Apr/1996")
+  UNIT:'26 April 1996' = (^"26/Apr/1996")
+  UNIT:'27 April 1996' = (^"27/Apr/1996")
+  UNIT:'28 April 1996' = (^"28/Apr/1996")
+  UNIT:'29 April 1996' = (^"29/Apr/1996")
+  UNIT:'30 April 1996' = (^"30/Apr/1996")
+  UNIT:'1 May 1996' = (^"01/May/1996")
+  UNIT:'2 May 1996' = (^"02/May/1996")
+  UNIT:'3 May 1996' = (^"03/May/1996")
+  UNIT:'4 May 1996' = (^"04/May/1996")
+  UNIT:'5 May 1996' = (^"05/May/1996")
+  UNIT:'6 May 1996' = (^"06/May/1996")
+  UNIT:'7 May 1996' = (^"07/May/1996")
+  UNIT:'8 May 1996' = (^"08/May/1996")
+  UNIT:'9 May 1996' = (^"09/May/1996")
+  UNIT:'10 May 1996' = (^"10/May/1996")
+  UNIT:'11 May 1996' = (^"11/May/1996")
+  UNIT:'12 May 1996' = (^"12/May/1996")
+  UNIT:'13 May 1996' = (^"13/May/1996")
+  UNIT:'14 May 1996' = (^"14/May/1996")
+  UNIT:'15 May 1996' = (^"15/May/1996")
+  UNIT:'16 May 1996' = (^"16/May/1996")
+  UNIT:'17 May 1996' = (^"17/May/1996")
+  UNIT:'18 May 1996' = (^"18/May/1996")
+  UNIT:'19 May 1996' = (^"19/May/1996")
+  UNIT:'20 May 1996' = (^"20/May/1996")
+  UNIT:'21 May 1996' = (^"21/May/1996")
+  UNIT:'22 May 1996' = (^"22/May/1996")
+  UNIT:'23 May 1996' = (^"23/May/1996")
+  UNIT:'24 May 1996' = (^"24/May/1996")
+  UNIT:'25 May 1996' = (^"25/May/1996")
+  UNIT:'26 May 1996' = (^"26/May/1996")
+  UNIT:'27 May 1996' = (^"27/May/1996")
+  UNIT:'28 May 1996' = (^"28/May/1996")
+  UNIT:'29 May 1996' = (^"29/May/1996")
+  UNIT:'30 May 1996' = (^"30/May/1996")
+  UNIT:'31 May 1996' = (^"31/May/1996")
+  UNIT:'1 June 1996' = (^"01/Jun/1996")
+  UNIT:'2 June 1996' = (^"02/Jun/1996")
+  UNIT:'3 June 1996' = (^"03/Jun/1996")
+  UNIT:'4 June 1996' = (^"04/Jun/1996")
+  UNIT:'5 June 1996' = (^"05/Jun/1996")
+  UNIT:'6 June 1996' = (^"06/Jun/1996")
+  UNIT:'7 June 1996' = (^"07/Jun/1996")
+  UNIT:'8 June 1996' = (^"08/Jun/1996")
+  UNIT:'9 June 1996' = (^"09/Jun/1996")
+  UNIT:'10 June 1996' = (^"10/Jun/1996")
+  UNIT:'11 June 1996' = (^"11/Jun/1996")
+  UNIT:'12 June 1996' = (^"12/Jun/1996")
+  UNIT:'13 June 1996' = (^"13/Jun/1996")
+  UNIT:'14 June 1996' = (^"14/Jun/1996")
+  UNIT:'15 June 1996' = (^"15/Jun/1996")
+  UNIT:'16 June 1996' = (^"16/Jun/1996")
+  UNIT:'17 June 1996' = (^"17/Jun/1996")
+  UNIT:'18 June 1996' = (^"18/Jun/1996")
+  UNIT:'19 June 1996' = (^"19/Jun/1996")
+  UNIT:'20 June 1996' = (^"20/Jun/1996")
+  UNIT:'21 June 1996' = (^"21/Jun/1996")
+  UNIT:'22 June 1996' = (^"22/Jun/1996")
+  UNIT:'23 June 1996' = (^"23/Jun/1996")
+  UNIT:'24 June 1996' = (^"24/Jun/1996")
+  UNIT:'25 June 1996' = (^"25/Jun/1996")
+  UNIT:'26 June 1996' = (^"26/Jun/1996")
+  UNIT:'27 June 1996' = (^"27/Jun/1996")
+  UNIT:'28 June 1996' = (^"28/Jun/1996")
+  UNIT:'29 June 1996' = (^"29/Jun/1996")
+  UNIT:'30 June 1996' = (^"30/Jun/1996")
+  UNIT:'1 July 1996' = (^"01/Jul/1996")
+  UNIT:'2 July 1996' = (^"02/Jul/1996")
+  UNIT:'3 July 1996' = (^"03/Jul/1996")
+  UNIT:'4 July 1996' = (^"04/Jul/1996")
+  UNIT:'5 July 1996' = (^"05/Jul/1996")
+  UNIT:'6 July 1996' = (^"06/Jul/1996")
+  UNIT:'7 July 1996' = (^"07/Jul/1996")
+  UNIT:'8 July 1996' = (^"08/Jul/1996")
+  UNIT:'9 July 1996' = (^"09/Jul/1996")
+  UNIT:'10 July 1996' = (^"10/Jul/1996")
+  UNIT:'11 July 1996' = (^"11/Jul/1996")
+  UNIT:'12 July 1996' = (^"12/Jul/1996")
+  UNIT:'13 July 1996' = (^"13/Jul/1996")
+  UNIT:'14 July 1996' = (^"14/Jul/1996")
+  UNIT:'15 July 1996' = (^"15/Jul/1996")
+  UNIT:'16 July 1996' = (^"16/Jul/1996")
+  UNIT:'17 July 1996' = (^"17/Jul/1996")
+  UNIT:'18 July 1996' = (^"18/Jul/1996")
+  UNIT:'19 July 1996' = (^"19/Jul/1996")
+  UNIT:'20 July 1996' = (^"20/Jul/1996")
+  UNIT:'21 July 1996' = (^"21/Jul/1996")
+  UNIT:'22 July 1996' = (^"22/Jul/1996")
+  UNIT:'23 July 1996' = (^"23/Jul/1996")
+  UNIT:'24 July 1996' = (^"24/Jul/1996")
+  UNIT:'25 July 1996' = (^"25/Jul/1996")
+  UNIT:'26 July 1996' = (^"26/Jul/1996")
+  UNIT:'27 July 1996' = (^"27/Jul/1996")
+  UNIT:'28 July 1996' = (^"28/Jul/1996")
+  UNIT:'29 July 1996' = (^"29/Jul/1996")
+  UNIT:'30 July 1996' = (^"30/Jul/1996")
+  UNIT:'31 July 1996' = (^"31/Jul/1996")
+  UNIT:'1 August 1996' = (^"01/Aug/1996")
+  UNIT:'2 August 1996' = (^"02/Aug/1996")
+  UNIT:'3 August 1996' = (^"03/Aug/1996")
+  UNIT:'4 August 1996' = (^"04/Aug/1996")
+  UNIT:'5 August 1996' = (^"05/Aug/1996")
+  UNIT:'6 August 1996' = (^"06/Aug/1996")
+  UNIT:'7 August 1996' = (^"07/Aug/1996")
+  UNIT:'8 August 1996' = (^"08/Aug/1996")
+  UNIT:'9 August 1996' = (^"09/Aug/1996")
+  UNIT:'10 August 1996' = (^"10/Aug/1996")
+  UNIT:'11 August 1996' = (^"11/Aug/1996")
+  UNIT:'12 August 1996' = (^"12/Aug/1996")
+  UNIT:'13 August 1996' = (^"13/Aug/1996")
+  UNIT:'14 August 1996' = (^"14/Aug/1996")
+  UNIT:'15 August 1996' = (^"15/Aug/1996")
+  UNIT:'16 August 1996' = (^"16/Aug/1996")
+  UNIT:'17 August 1996' = (^"17/Aug/1996")
+  UNIT:'18 August 1996' = (^"18/Aug/1996")
+  UNIT:'19 August 1996' = (^"19/Aug/1996")
+  UNIT:'20 August 1996' = (^"20/Aug/1996")
+  UNIT:'21 August 1996' = (^"21/Aug/1996")
+  UNIT:'22 August 1996' = (^"22/Aug/1996")
+  UNIT:'23 August 1996' = (^"23/Aug/1996")
+  UNIT:'24 August 1996' = (^"24/Aug/1996")
+  UNIT:'25 August 1996' = (^"25/Aug/1996")
+  UNIT:'26 August 1996' = (^"26/Aug/1996")
+  UNIT:'27 August 1996' = (^"27/Aug/1996")
+  UNIT:'28 August 1996' = (^"28/Aug/1996")
+  UNIT:'29 August 1996' = (^"29/Aug/1996")
+  UNIT:'30 August 1996' = (^"30/Aug/1996")
+  UNIT:'31 August 1996' = (^"31/Aug/1996")
+  UNIT:'1 September 1996' = (^"01/Sep/1996")
+  UNIT:'2 September 1996' = (^"02/Sep/1996")
+  UNIT:'3 September 1996' = (^"03/Sep/1996")
+  UNIT:'4 September 1996' = (^"04/Sep/1996")
+  UNIT:'5 September 1996' = (^"05/Sep/1996")
+  UNIT:'6 September 1996' = (^"06/Sep/1996")
+  UNIT:'7 September 1996' = (^"07/Sep/1996")
+  UNIT:'8 September 1996' = (^"08/Sep/1996")
+  UNIT:'9 September 1996' = (^"09/Sep/1996")
+  UNIT:'10 September 1996' = (^"10/Sep/1996")
+  UNIT:'11 September 1996' = (^"11/Sep/1996")
+  UNIT:'12 September 1996' = (^"12/Sep/1996")
+  UNIT:'13 September 1996' = (^"13/Sep/1996")
+  UNIT:'14 September 1996' = (^"14/Sep/1996")
+  UNIT:'15 September 1996' = (^"15/Sep/1996")
+  UNIT:'16 September 1996' = (^"16/Sep/1996")
+  UNIT:'17 September 1996' = (^"17/Sep/1996")
+  UNIT:'18 September 1996' = (^"18/Sep/1996")
+  UNIT:'19 September 1996' = (^"19/Sep/1996")
+  UNIT:'20 September 1996' = (^"20/Sep/1996")
+  UNIT:'21 September 1996' = (^"21/Sep/1996")
+  UNIT:'22 September 1996' = (^"22/Sep/1996")
+  UNIT:'23 September 1996' = (^"23/Sep/1996")
+  UNIT:'24 September 1996' = (^"24/Sep/1996")
+  UNIT:'25 September 1996' = (^"25/Sep/1996")
+  UNIT:'26 September 1996' = (^"26/Sep/1996")
+  UNIT:'27 September 1996' = (^"27/Sep/1996")
+  UNIT:'28 September 1996' = (^"28/Sep/1996")
+  UNIT:'29 September 1996' = (^"29/Sep/1996")
+  UNIT:'30 September 1996' = (^"30/Sep/1996")
+  UNIT:'1 October 1996' = (^"01/Oct/1996")
+  UNIT:'2 October 1996' = (^"02/Oct/1996")
+  UNIT:'3 October 1996' = (^"03/Oct/1996")
+  UNIT:'4 October 1996' = (^"04/Oct/1996")
+  UNIT:'5 October 1996' = (^"05/Oct/1996")
+  UNIT:'6 October 1996' = (^"06/Oct/1996")
+  UNIT:'7 October 1996' = (^"07/Oct/1996")
+  UNIT:'8 October 1996' = (^"08/Oct/1996")
+  UNIT:'9 October 1996' = (^"09/Oct/1996")
+  UNIT:'10 October 1996' = (^"10/Oct/1996")
+  UNIT:'11 October 1996' = (^"11/Oct/1996")
+  UNIT:'12 October 1996' = (^"12/Oct/1996")
+  UNIT:'13 October 1996' = (^"13/Oct/1996")
+  UNIT:'14 October 1996' = (^"14/Oct/1996")
+  UNIT:'15 October 1996' = (^"15/Oct/1996")
+  UNIT:'16 October 1996' = (^"16/Oct/1996")
+  UNIT:'17 October 1996' = (^"17/Oct/1996")
+  UNIT:'18 October 1996' = (^"18/Oct/1996")
+  UNIT:'19 October 1996' = (^"19/Oct/1996")
+  UNIT:'20 October 1996' = (^"20/Oct/1996")
+  UNIT:'21 October 1996' = (^"21/Oct/1996")
+  UNIT:'22 October 1996' = (^"22/Oct/1996")
+  UNIT:'23 October 1996' = (^"23/Oct/1996")
+  UNIT:'24 October 1996' = (^"24/Oct/1996")
+  UNIT:'25 October 1996' = (^"25/Oct/1996")
+  UNIT:'26 October 1996' = (^"26/Oct/1996")
+  UNIT:'27 October 1996' = (^"27/Oct/1996")
+  UNIT:'28 October 1996' = (^"28/Oct/1996")
+  UNIT:'29 October 1996' = (^"29/Oct/1996")
+  UNIT:'30 October 1996' = (^"30/Oct/1996")
+  UNIT:'31 October 1996' = (^"31/Oct/1996")
+  UNIT:'1 November 1996' = (^"01/Nov/1996")
+  UNIT:'2 November 1996' = (^"02/Nov/1996")
+  UNIT:'3 November 1996' = (^"03/Nov/1996")
+  UNIT:'4 November 1996' = (^"04/Nov/1996")
+  UNIT:'5 November 1996' = (^"05/Nov/1996")
+  UNIT:'6 November 1996' = (^"06/Nov/1996")
+  UNIT:'7 November 1996' = (^"07/Nov/1996")
+  UNIT:'8 November 1996' = (^"08/Nov/1996")
+  UNIT:'9 November 1996' = (^"09/Nov/1996")
+  UNIT:'10 November 1996' = (^"10/Nov/1996")
+  UNIT:'11 November 1996' = (^"11/Nov/1996")
+  UNIT:'12 November 1996' = (^"12/Nov/1996")
+  UNIT:'13 November 1996' = (^"13/Nov/1996")
+  UNIT:'14 November 1996' = (^"14/Nov/1996")
+  UNIT:'15 November 1996' = (^"15/Nov/1996")
+  UNIT:'16 November 1996' = (^"16/Nov/1996")
+  UNIT:'17 November 1996' = (^"17/Nov/1996")
+  UNIT:'18 November 1996' = (^"18/Nov/1996")
+  UNIT:'19 November 1996' = (^"19/Nov/1996")
+  UNIT:'20 November 1996' = (^"20/Nov/1996")
+  UNIT:'21 November 1996' = (^"21/Nov/1996")
+  UNIT:'22 November 1996' = (^"22/Nov/1996")
+  UNIT:'23 November 1996' = (^"23/Nov/1996")
+  UNIT:'24 November 1996' = (^"24/Nov/1996")
+  UNIT:'25 November 1996' = (^"25/Nov/1996")
+  UNIT:'26 November 1996' = (^"26/Nov/1996")
+  UNIT:'27 November 1996' = (^"27/Nov/1996")
+  UNIT:'28 November 1996' = (^"28/Nov/1996")
+  UNIT:'29 November 1996' = (^"29/Nov/1996")
+  UNIT:'30 November 1996' = (^"30/Nov/1996")
+  UNIT:'1 December 1996' = (^"01/Dec/1996")
+  UNIT:'2 December 1996' = (^"02/Dec/1996")
+  UNIT:'3 December 1996' = (^"03/Dec/1996")
+  UNIT:'4 December 1996' = (^"04/Dec/1996")
+  UNIT:'5 December 1996' = (^"05/Dec/1996")
+  UNIT:'6 December 1996' = (^"06/Dec/1996")
+  UNIT:'7 December 1996' = (^"07/Dec/1996")
+  UNIT:'8 December 1996' = (^"08/Dec/1996")
+  UNIT:'9 December 1996' = (^"09/Dec/1996")
+  UNIT:'10 December 1996' = (^"10/Dec/1996")
+  UNIT:'11 December 1996' = (^"11/Dec/1996")
+  UNIT:'12 December 1996' = (^"12/Dec/1996")
+  UNIT:'13 December 1996' = (^"13/Dec/1996")
+  UNIT:'14 December 1996' = (^"14/Dec/1996")
+  UNIT:'15 December 1996' = (^"15/Dec/1996")
+  UNIT:'16 December 1996' = (^"16/Dec/1996")
+  UNIT:'17 December 1996' = (^"17/Dec/1996")
+  UNIT:'18 December 1996' = (^"18/Dec/1996")
+  UNIT:'19 December 1996' = (^"19/Dec/1996")
+  UNIT:'20 December 1996' = (^"20/Dec/1996")
+  UNIT:'21 December 1996' = (^"21/Dec/1996")
+  UNIT:'22 December 1996' = (^"22/Dec/1996")
+  UNIT:'23 December 1996' = (^"23/Dec/1996")
+  UNIT:'24 December 1996' = (^"24/Dec/1996")
+  UNIT:'25 December 1996' = (^"25/Dec/1996")
+  UNIT:'26 December 1996' = (^"26/Dec/1996")
+  UNIT:'27 December 1996' = (^"27/Dec/1996")
+  UNIT:'28 December 1996' = (^"28/Dec/1996")
+  UNIT:'29 December 1996' = (^"29/Dec/1996")
+  UNIT:'30 December 1996' = (^"30/Dec/1996")
+  UNIT:'31 December 1996' = (^"31/Dec/1996")
+  UNIT:'1 January 1995' = (^"01/Jan/1995")
+  UNIT:'2 January 1995' = (^"02/Jan/1995")
+  UNIT:'3 January 1995' = (^"03/Jan/1995")
+  UNIT:'4 January 1995' = (^"04/Jan/1995")
+  UNIT:'5 January 1995' = (^"05/Jan/1995")
+  UNIT:'6 January 1995' = (^"06/Jan/1995")
+  UNIT:'7 January 1995' = (^"07/Jan/1995")
+  UNIT:'8 January 1995' = (^"08/Jan/1995")
+  UNIT:'9 January 1995' = (^"09/Jan/1995")
+  UNIT:'10 January 1995' = (^"10/Jan/1995")
+  UNIT:'11 January 1995' = (^"11/Jan/1995")
+  UNIT:'12 January 1995' = (^"12/Jan/1995")
+  UNIT:'13 January 1995' = (^"13/Jan/1995")
+  UNIT:'14 January 1995' = (^"14/Jan/1995")
+  UNIT:'15 January 1995' = (^"15/Jan/1995")
+  UNIT:'16 January 1995' = (^"16/Jan/1995")
+  UNIT:'17 January 1995' = (^"17/Jan/1995")
+  UNIT:'18 January 1995' = (^"18/Jan/1995")
+  UNIT:'19 January 1995' = (^"19/Jan/1995")
+  UNIT:'20 January 1995' = (^"20/Jan/1995")
+  UNIT:'21 January 1995' = (^"21/Jan/1995")
+  UNIT:'22 January 1995' = (^"22/Jan/1995")
+  UNIT:'23 January 1995' = (^"23/Jan/1995")
+  UNIT:'24 January 1995' = (^"24/Jan/1995")
+  UNIT:'25 January 1995' = (^"25/Jan/1995")
+  UNIT:'26 January 1995' = (^"26/Jan/1995")
+  UNIT:'27 January 1995' = (^"27/Jan/1995")
+  UNIT:'28 January 1995' = (^"28/Jan/1995")
+  UNIT:'29 January 1995' = (^"29/Jan/1995")
+  UNIT:'30 January 1995' = (^"30/Jan/1995")
+  UNIT:'31 January 1995' = (^"31/Jan/1995")
+  UNIT:'1 February 1995' = (^"01/Feb/1995")
+  UNIT:'2 February 1995' = (^"02/Feb/1995")
+  UNIT:'3 February 1995' = (^"03/Feb/1995")
+  UNIT:'4 February 1995' = (^"04/Feb/1995")
+  UNIT:'5 February 1995' = (^"05/Feb/1995")
+  UNIT:'6 February 1995' = (^"06/Feb/1995")
+  UNIT:'7 February 1995' = (^"07/Feb/1995")
+  UNIT:'8 February 1995' = (^"08/Feb/1995")
+  UNIT:'9 February 1995' = (^"09/Feb/1995")
+  UNIT:'10 February 1995' = (^"10/Feb/1995")
+  UNIT:'11 February 1995' = (^"11/Feb/1995")
+  UNIT:'12 February 1995' = (^"12/Feb/1995")
+  UNIT:'13 February 1995' = (^"13/Feb/1995")
+  UNIT:'14 February 1995' = (^"14/Feb/1995")
+  UNIT:'15 February 1995' = (^"15/Feb/1995")
+  UNIT:'16 February 1995' = (^"16/Feb/1995")
+  UNIT:'17 February 1995' = (^"17/Feb/1995")
+  UNIT:'18 February 1995' = (^"18/Feb/1995")
+  UNIT:'19 February 1995' = (^"19/Feb/1995")
+  UNIT:'20 February 1995' = (^"20/Feb/1995")
+  UNIT:'21 February 1995' = (^"21/Feb/1995")
+  UNIT:'22 February 1995' = (^"22/Feb/1995")
+  UNIT:'23 February 1995' = (^"23/Feb/1995")
+  UNIT:'24 February 1995' = (^"24/Feb/1995")
+  UNIT:'25 February 1995' = (^"25/Feb/1995")
+  UNIT:'26 February 1995' = (^"26/Feb/1995")
+  UNIT:'27 February 1995' = (^"27/Feb/1995")
+  UNIT:'28 February 1995' = (^"28/Feb/1995")
+  UNIT:'1 March 1995' = (^"01/Mar/1995")
+  UNIT:'2 March 1995' = (^"02/Mar/1995")
+  UNIT:'3 March 1995' = (^"03/Mar/1995")
+  UNIT:'4 March 1995' = (^"04/Mar/1995")
+  UNIT:'5 March 1995' = (^"05/Mar/1995")
+  UNIT:'6 March 1995' = (^"06/Mar/1995")
+  UNIT:'7 March 1995' = (^"07/Mar/1995")
+  UNIT:'8 March 1995' = (^"08/Mar/1995")
+  UNIT:'9 March 1995' = (^"09/Mar/1995")
+  UNIT:'10 March 1995' = (^"10/Mar/1995")
+  UNIT:'11 March 1995' = (^"11/Mar/1995")
+  UNIT:'12 March 1995' = (^"12/Mar/1995")
+  UNIT:'13 March 1995' = (^"13/Mar/1995")
+  UNIT:'14 March 1995' = (^"14/Mar/1995")
+  UNIT:'15 March 1995' = (^"15/Mar/1995")
+  UNIT:'16 March 1995' = (^"16/Mar/1995")
+  UNIT:'17 March 1995' = (^"17/Mar/1995")
+  UNIT:'18 March 1995' = (^"18/Mar/1995")
+  UNIT:'19 March 1995' = (^"19/Mar/1995")
+  UNIT:'20 March 1995' = (^"20/Mar/1995")
+  UNIT:'21 March 1995' = (^"21/Mar/1995")
+  UNIT:'22 March 1995' = (^"22/Mar/1995")
+  UNIT:'23 March 1995' = (^"23/Mar/1995")
+  UNIT:'24 March 1995' = (^"24/Mar/1995")
+  UNIT:'25 March 1995' = (^"25/Mar/1995")
+  UNIT:'26 March 1995' = (^"26/Mar/1995")
+  UNIT:'27 March 1995' = (^"27/Mar/1995")
+  UNIT:'28 March 1995' = (^"28/Mar/1995")
+  UNIT:'29 March 1995' = (^"29/Mar/1995")
+  UNIT:'30 March 1995' = (^"30/Mar/1995")
+  UNIT:'31 March 1995' = (^"31/Mar/1995")
+  UNIT:'1 April 1995' = (^"01/Apr/1995")
+  UNIT:'2 April 1995' = (^"02/Apr/1995")
+  UNIT:'3 April 1995' = (^"03/Apr/1995")
+  UNIT:'4 April 1995' = (^"04/Apr/1995")
+  UNIT:'5 April 1995' = (^"05/Apr/1995")
+  UNIT:'6 April 1995' = (^"06/Apr/1995")
+  UNIT:'7 April 1995' = (^"07/Apr/1995")
+  UNIT:'8 April 1995' = (^"08/Apr/1995")
+  UNIT:'9 April 1995' = (^"09/Apr/1995")
+  UNIT:'10 April 1995' = (^"10/Apr/1995")
+  UNIT:'11 April 1995' = (^"11/Apr/1995")
+  UNIT:'12 April 1995' = (^"12/Apr/1995")
+  UNIT:'13 April 1995' = (^"13/Apr/1995")
+  UNIT:'14 April 1995' = (^"14/Apr/1995")
+  UNIT:'15 April 1995' = (^"15/Apr/1995")
+  UNIT:'16 April 1995' = (^"16/Apr/1995")
+  UNIT:'17 April 1995' = (^"17/Apr/1995")
+  UNIT:'18 April 1995' = (^"18/Apr/1995")
+  UNIT:'19 April 1995' = (^"19/Apr/1995")
+  UNIT:'20 April 1995' = (^"20/Apr/1995")
+  UNIT:'21 April 1995' = (^"21/Apr/1995")
+  UNIT:'22 April 1995' = (^"22/Apr/1995")
+  UNIT:'23 April 1995' = (^"23/Apr/1995")
+  UNIT:'24 April 1995' = (^"24/Apr/1995")
+  UNIT:'25 April 1995' = (^"25/Apr/1995")
+  UNIT:'26 April 1995' = (^"26/Apr/1995")
+  UNIT:'27 April 1995' = (^"27/Apr/1995")
+  UNIT:'28 April 1995' = (^"28/Apr/1995")
+  UNIT:'29 April 1995' = (^"29/Apr/1995")
+  UNIT:'30 April 1995' = (^"30/Apr/1995")
+  UNIT:'1 May 1995' = (^"01/May/1995")
+  UNIT:'2 May 1995' = (^"02/May/1995")
+  UNIT:'3 May 1995' = (^"03/May/1995")
+  UNIT:'4 May 1995' = (^"04/May/1995")
+  UNIT:'5 May 1995' = (^"05/May/1995")
+  UNIT:'6 May 1995' = (^"06/May/1995")
+  UNIT:'7 May 1995' = (^"07/May/1995")
+  UNIT:'8 May 1995' = (^"08/May/1995")
+  UNIT:'9 May 1995' = (^"09/May/1995")
+  UNIT:'10 May 1995' = (^"10/May/1995")
+  UNIT:'11 May 1995' = (^"11/May/1995")
+  UNIT:'12 May 1995' = (^"12/May/1995")
+  UNIT:'13 May 1995' = (^"13/May/1995")
+  UNIT:'14 May 1995' = (^"14/May/1995")
+  UNIT:'15 May 1995' = (^"15/May/1995")
+  UNIT:'16 May 1995' = (^"16/May/1995")
+  UNIT:'17 May 1995' = (^"17/May/1995")
+  UNIT:'18 May 1995' = (^"18/May/1995")
+  UNIT:'19 May 1995' = (^"19/May/1995")
+  UNIT:'20 May 1995' = (^"20/May/1995")
+  UNIT:'21 May 1995' = (^"21/May/1995")
+  UNIT:'22 May 1995' = (^"22/May/1995")
+  UNIT:'23 May 1995' = (^"23/May/1995")
+  UNIT:'24 May 1995' = (^"24/May/1995")
+  UNIT:'25 May 1995' = (^"25/May/1995")
+  UNIT:'26 May 1995' = (^"26/May/1995")
+  UNIT:'27 May 1995' = (^"27/May/1995")
+  UNIT:'28 May 1995' = (^"28/May/1995")
+  UNIT:'29 May 1995' = (^"29/May/1995")
+  UNIT:'30 May 1995' = (^"30/May/1995")
+  UNIT:'31 May 1995' = (^"31/May/1995")
+  UNIT:'1 June 1995' = (^"01/Jun/1995")
+  UNIT:'2 June 1995' = (^"02/Jun/1995")
+  UNIT:'3 June 1995' = (^"03/Jun/1995")
+  UNIT:'4 June 1995' = (^"04/Jun/1995")
+  UNIT:'5 June 1995' = (^"05/Jun/1995")
+  UNIT:'6 June 1995' = (^"06/Jun/1995")
+  UNIT:'7 June 1995' = (^"07/Jun/1995")
+  UNIT:'8 June 1995' = (^"08/Jun/1995")
+  UNIT:'9 June 1995' = (^"09/Jun/1995")
+  UNIT:'10 June 1995' = (^"10/Jun/1995")
+  UNIT:'11 June 1995' = (^"11/Jun/1995")
+  UNIT:'12 June 1995' = (^"12/Jun/1995")
+  UNIT:'13 June 1995' = (^"13/Jun/1995")
+  UNIT:'14 June 1995' = (^"14/Jun/1995")
+  UNIT:'15 June 1995' = (^"15/Jun/1995")
+  UNIT:'16 June 1995' = (^"16/Jun/1995")
+  UNIT:'17 June 1995' = (^"17/Jun/1995")
+  UNIT:'18 June 1995' = (^"18/Jun/1995")
+  UNIT:'19 June 1995' = (^"19/Jun/1995")
+  UNIT:'20 June 1995' = (^"20/Jun/1995")
+  UNIT:'21 June 1995' = (^"21/Jun/1995")
+  UNIT:'22 June 1995' = (^"22/Jun/1995")
+  UNIT:'23 June 1995' = (^"23/Jun/1995")
+  UNIT:'24 June 1995' = (^"24/Jun/1995")
+  UNIT:'25 June 1995' = (^"25/Jun/1995")
+  UNIT:'26 June 1995' = (^"26/Jun/1995")
+  UNIT:'27 June 1995' = (^"27/Jun/1995")
+  UNIT:'28 June 1995' = (^"28/Jun/1995")
+  UNIT:'29 June 1995' = (^"29/Jun/1995")
+  UNIT:'30 June 1995' = (^"30/Jun/1995")
+  UNIT:'1 July 1995' = (^"01/Jul/1995")
+  UNIT:'2 July 1995' = (^"02/Jul/1995")
+  UNIT:'3 July 1995' = (^"03/Jul/1995")
+  UNIT:'4 July 1995' = (^"04/Jul/1995")
+  UNIT:'5 July 1995' = (^"05/Jul/1995")
+  UNIT:'6 July 1995' = (^"06/Jul/1995")
+  UNIT:'7 July 1995' = (^"07/Jul/1995")
+  UNIT:'8 July 1995' = (^"08/Jul/1995")
+  UNIT:'9 July 1995' = (^"09/Jul/1995")
+  UNIT:'10 July 1995' = (^"10/Jul/1995")
+  UNIT:'11 July 1995' = (^"11/Jul/1995")
+  UNIT:'12 July 1995' = (^"12/Jul/1995")
+  UNIT:'13 July 1995' = (^"13/Jul/1995")
+  UNIT:'14 July 1995' = (^"14/Jul/1995")
+  UNIT:'15 July 1995' = (^"15/Jul/1995")
+  UNIT:'16 July 1995' = (^"16/Jul/1995")
+  UNIT:'17 July 1995' = (^"17/Jul/1995")
+  UNIT:'18 July 1995' = (^"18/Jul/1995")
+  UNIT:'19 July 1995' = (^"19/Jul/1995")
+  UNIT:'20 July 1995' = (^"20/Jul/1995")
+  UNIT:'21 July 1995' = (^"21/Jul/1995")
+  UNIT:'22 July 1995' = (^"22/Jul/1995")
+  UNIT:'23 July 1995' = (^"23/Jul/1995")
+  UNIT:'24 July 1995' = (^"24/Jul/1995")
+  UNIT:'25 July 1995' = (^"25/Jul/1995")
+  UNIT:'26 July 1995' = (^"26/Jul/1995")
+  UNIT:'27 July 1995' = (^"27/Jul/1995")
+  UNIT:'28 July 1995' = (^"28/Jul/1995")
+  UNIT:'29 July 1995' = (^"29/Jul/1995")
+  UNIT:'30 July 1995' = (^"30/Jul/1995")
+  UNIT:'31 July 1995' = (^"31/Jul/1995")
+  UNIT:'1 August 1995' = (^"01/Aug/1995")
+  UNIT:'2 August 1995' = (^"02/Aug/1995")
+  UNIT:'3 August 1995' = (^"03/Aug/1995")
+  UNIT:'4 August 1995' = (^"04/Aug/1995")
+  UNIT:'5 August 1995' = (^"05/Aug/1995")
+  UNIT:'6 August 1995' = (^"06/Aug/1995")
+  UNIT:'7 August 1995' = (^"07/Aug/1995")
+  UNIT:'8 August 1995' = (^"08/Aug/1995")
+  UNIT:'9 August 1995' = (^"09/Aug/1995")
+  UNIT:'10 August 1995' = (^"10/Aug/1995")
+  UNIT:'11 August 1995' = (^"11/Aug/1995")
+  UNIT:'12 August 1995' = (^"12/Aug/1995")
+  UNIT:'13 August 1995' = (^"13/Aug/1995")
+  UNIT:'14 August 1995' = (^"14/Aug/1995")
+  UNIT:'15 August 1995' = (^"15/Aug/1995")
+  UNIT:'16 August 1995' = (^"16/Aug/1995")
+  UNIT:'17 August 1995' = (^"17/Aug/1995")
+  UNIT:'18 August 1995' = (^"18/Aug/1995")
+  UNIT:'19 August 1995' = (^"19/Aug/1995")
+  UNIT:'20 August 1995' = (^"20/Aug/1995")
+  UNIT:'21 August 1995' = (^"21/Aug/1995")
+  UNIT:'22 August 1995' = (^"22/Aug/1995")
+  UNIT:'23 August 1995' = (^"23/Aug/1995")
+  UNIT:'24 August 1995' = (^"24/Aug/1995")
+  UNIT:'25 August 1995' = (^"25/Aug/1995")
+  UNIT:'26 August 1995' = (^"26/Aug/1995")
+  UNIT:'27 August 1995' = (^"27/Aug/1995")
+  UNIT:'28 August 1995' = (^"28/Aug/1995")
+  UNIT:'29 August 1995' = (^"29/Aug/1995")
+  UNIT:'30 August 1995' = (^"30/Aug/1995")
+  UNIT:'31 August 1995' = (^"31/Aug/1995")
+  UNIT:'1 September 1995' = (^"01/Sep/1995")
+  UNIT:'2 September 1995' = (^"02/Sep/1995")
+  UNIT:'3 September 1995' = (^"03/Sep/1995")
+  UNIT:'4 September 1995' = (^"04/Sep/1995")
+  UNIT:'5 September 1995' = (^"05/Sep/1995")
+  UNIT:'6 September 1995' = (^"06/Sep/1995")
+  UNIT:'7 September 1995' = (^"07/Sep/1995")
+  UNIT:'8 September 1995' = (^"08/Sep/1995")
+  UNIT:'9 September 1995' = (^"09/Sep/1995")
+  UNIT:'10 September 1995' = (^"10/Sep/1995")
+  UNIT:'11 September 1995' = (^"11/Sep/1995")
+  UNIT:'12 September 1995' = (^"12/Sep/1995")
+  UNIT:'13 September 1995' = (^"13/Sep/1995")
+  UNIT:'14 September 1995' = (^"14/Sep/1995")
+  UNIT:'15 September 1995' = (^"15/Sep/1995")
+  UNIT:'16 September 1995' = (^"16/Sep/1995")
+  UNIT:'17 September 1995' = (^"17/Sep/1995")
+  UNIT:'18 September 1995' = (^"18/Sep/1995")
+  UNIT:'19 September 1995' = (^"19/Sep/1995")
+  UNIT:'20 September 1995' = (^"20/Sep/1995")
+  UNIT:'21 September 1995' = (^"21/Sep/1995")
+  UNIT:'22 September 1995' = (^"22/Sep/1995")
+  UNIT:'23 September 1995' = (^"23/Sep/1995")
+  UNIT:'24 September 1995' = (^"24/Sep/1995")
+  UNIT:'25 September 1995' = (^"25/Sep/1995")
+  UNIT:'26 September 1995' = (^"26/Sep/1995")
+  UNIT:'27 September 1995' = (^"27/Sep/1995")
+  UNIT:'28 September 1995' = (^"28/Sep/1995")
+  UNIT:'29 September 1995' = (^"29/Sep/1995")
+  UNIT:'30 September 1995' = (^"30/Sep/1995")
+  UNIT:'1 October 1995' = (^"01/Oct/1995")
+  UNIT:'2 October 1995' = (^"02/Oct/1995")
+  UNIT:'3 October 1995' = (^"03/Oct/1995")
+  UNIT:'4 October 1995' = (^"04/Oct/1995")
+  UNIT:'5 October 1995' = (^"05/Oct/1995")
+  UNIT:'6 October 1995' = (^"06/Oct/1995")
+  UNIT:'7 October 1995' = (^"07/Oct/1995")
+  UNIT:'8 October 1995' = (^"08/Oct/1995")
+  UNIT:'9 October 1995' = (^"09/Oct/1995")
+  UNIT:'10 October 1995' = (^"10/Oct/1995")
+  UNIT:'11 October 1995' = (^"11/Oct/1995")
+  UNIT:'12 October 1995' = (^"12/Oct/1995")
+  UNIT:'13 October 1995' = (^"13/Oct/1995")
+  UNIT:'14 October 1995' = (^"14/Oct/1995")
+  UNIT:'15 October 1995' = (^"15/Oct/1995")
+  UNIT:'16 October 1995' = (^"16/Oct/1995")
+  UNIT:'17 October 1995' = (^"17/Oct/1995")
+  UNIT:'18 October 1995' = (^"18/Oct/1995")
+  UNIT:'19 October 1995' = (^"19/Oct/1995")
+  UNIT:'20 October 1995' = (^"20/Oct/1995")
+  UNIT:'21 October 1995' = (^"21/Oct/1995")
+  UNIT:'22 October 1995' = (^"22/Oct/1995")
+  UNIT:'23 October 1995' = (^"23/Oct/1995")
+  UNIT:'24 October 1995' = (^"24/Oct/1995")
+  UNIT:'25 October 1995' = (^"25/Oct/1995")
+  UNIT:'26 October 1995' = (^"26/Oct/1995")
+  UNIT:'27 October 1995' = (^"27/Oct/1995")
+  UNIT:'28 October 1995' = (^"28/Oct/1995")
+  UNIT:'29 October 1995' = (^"29/Oct/1995")
+  UNIT:'30 October 1995' = (^"30/Oct/1995")
+  UNIT:'31 October 1995' = (^"31/Oct/1995")
+  UNIT:'1 November 1995' = (^"01/Nov/1995")
+  UNIT:'2 November 1995' = (^"02/Nov/1995")
+  UNIT:'3 November 1995' = (^"03/Nov/1995")
+  UNIT:'4 November 1995' = (^"04/Nov/1995")
+  UNIT:'5 November 1995' = (^"05/Nov/1995")
+  UNIT:'6 November 1995' = (^"06/Nov/1995")
+  UNIT:'7 November 1995' = (^"07/Nov/1995")
+  UNIT:'8 November 1995' = (^"08/Nov/1995")
+  UNIT:'9 November 1995' = (^"09/Nov/1995")
+  UNIT:'10 November 1995' = (^"10/Nov/1995")
+  UNIT:'11 November 1995' = (^"11/Nov/1995")
+  UNIT:'12 November 1995' = (^"12/Nov/1995")
+  UNIT:'13 November 1995' = (^"13/Nov/1995")
+  UNIT:'14 November 1995' = (^"14/Nov/1995")
+  UNIT:'15 November 1995' = (^"15/Nov/1995")
+  UNIT:'16 November 1995' = (^"16/Nov/1995")
+  UNIT:'17 November 1995' = (^"17/Nov/1995")
+  UNIT:'18 November 1995' = (^"18/Nov/1995")
+  UNIT:'19 November 1995' = (^"19/Nov/1995")
+  UNIT:'20 November 1995' = (^"20/Nov/1995")
+  UNIT:'21 November 1995' = (^"21/Nov/1995")
+  UNIT:'22 November 1995' = (^"22/Nov/1995")
+  UNIT:'23 November 1995' = (^"23/Nov/1995")
+  UNIT:'24 November 1995' = (^"24/Nov/1995")
+  UNIT:'25 November 1995' = (^"25/Nov/1995")
+  UNIT:'26 November 1995' = (^"26/Nov/1995")
+  UNIT:'27 November 1995' = (^"27/Nov/1995")
+  UNIT:'28 November 1995' = (^"28/Nov/1995")
+  UNIT:'29 November 1995' = (^"29/Nov/1995")
+  UNIT:'30 November 1995' = (^"30/Nov/1995")
+  UNIT:'1 December 1995' = (^"01/Dec/1995")
+  UNIT:'2 December 1995' = (^"02/Dec/1995")
+  UNIT:'3 December 1995' = (^"03/Dec/1995")
+  UNIT:'4 December 1995' = (^"04/Dec/1995")
+  UNIT:'5 December 1995' = (^"05/Dec/1995")
+  UNIT:'6 December 1995' = (^"06/Dec/1995")
+  UNIT:'7 December 1995' = (^"07/Dec/1995")
+  UNIT:'8 December 1995' = (^"08/Dec/1995")
+  UNIT:'9 December 1995' = (^"09/Dec/1995")
+  UNIT:'10 December 1995' = (^"10/Dec/1995")
+  UNIT:'11 December 1995' = (^"11/Dec/1995")
+  UNIT:'12 December 1995' = (^"12/Dec/1995")
+  UNIT:'13 December 1995' = (^"13/Dec/1995")
+  UNIT:'14 December 1995' = (^"14/Dec/1995")
+  UNIT:'15 December 1995' = (^"15/Dec/1995")
+  UNIT:'16 December 1995' = (^"16/Dec/1995")
+  UNIT:'17 December 1995' = (^"17/Dec/1995")
+  UNIT:'18 December 1995' = (^"18/Dec/1995")
+  UNIT:'19 December 1995' = (^"19/Dec/1995")
+  UNIT:'20 December 1995' = (^"20/Dec/1995")
+  UNIT:'21 December 1995' = (^"21/Dec/1995")
+  UNIT:'22 December 1995' = (^"22/Dec/1995")
+  UNIT:'23 December 1995' = (^"23/Dec/1995")
+  UNIT:'24 December 1995' = (^"24/Dec/1995")
+  UNIT:'25 December 1995' = (^"25/Dec/1995")
+  UNIT:'26 December 1995' = (^"26/Dec/1995")
+  UNIT:'27 December 1995' = (^"27/Dec/1995")
+  UNIT:'28 December 1995' = (^"28/Dec/1995")
+  UNIT:'29 December 1995' = (^"29/Dec/1995")
+  UNIT:'30 December 1995' = (^"30/Dec/1995")
+  UNIT:'31 December 1995' = (^"31/Dec/1995")
+;

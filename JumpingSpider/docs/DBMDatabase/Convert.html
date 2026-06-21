@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/Convert.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Convert">NAME Convert</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#PUBLIC_METHODS">PUBLIC METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_string_databaseName_">new(string $databaseName)</A>
+		<LI><A HREF="#toString_Id_key_">toString(Id $key)</A>
+		<LI><A HREF="#toId_string_key_">toId(string $key)</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+	<LI><A HREF="#PRIVATE_METHODS">PRIVATE METHODS</A>
+	<UL>
+
+		<LI><A HREF="#_stringToIdMapping_string_s_">_stringToIdMapping(string $s)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Convert">NAME Convert</A></H1>
+<P>
+This package is part of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/./DBMDatabase.html#">the DBMDatabase manpage</A>. For more information on the database see the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Overview.html">DBMDatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Licence.html">DBMDatabase::Licence</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Version.html">DBMDatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class provides conversion routines, for use in the
+<A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Database.html">DBMDatabase::Database</A>. For efficiency, strings are mapped to
+<A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A>s. That mapping is done by the conversion routines in this class.
+
+<P>
+<HR>
+<H1><A NAME="PUBLIC_METHODS">PUBLIC METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_string_databaseName_">new(string $databaseName)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $databaseName</A></STRONG>
+<P>
+- The name of the database that stores the tools database. It is probably
+not really needed since the database name is a global
+<A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/globals/Constants.html">globals::Constants</A>.
+
+</UL>
+<P>
+Initialize the conversion tools
+
+<P>
+<HR>
+<H2><A NAME="toString_Id_key_">toString(Id $key)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Id">Id $key</A></STRONG>
+<P>
+- The <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> to convert.
+
+</UL>
+<P>
+Convert an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> to a String by doing a table lookup. This returns the string.
+
+<P>
+<HR>
+<H2><A NAME="toId_string_key_">toId(string $key)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $key</A></STRONG>
+<P>
+- The string to convert.
+
+</UL>
+<P>
+Convert a string to a <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> by doing a table lookup. This returns the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A>.
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Close the mapping tables (is this needed?) Deprecated...
+
+<P>
+<HR>
+<H1><A NAME="PRIVATE_METHODS">PRIVATE METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="_stringToIdMapping_string_s_">_stringToIdMapping(string $s)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $s</A></STRONG>
+<P>
+- The string to convert.
+
+</UL>
+<P>
+Add a new mapping to the string to Id table. This returns an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A>.
+
+</BODY>
+
+</HTML>

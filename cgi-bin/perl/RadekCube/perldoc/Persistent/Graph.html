@@ -1,0 +1,257 @@
+<HTML>
+<HEAD>
+<TITLE>./Persistent/Graph.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Persistent_Graph">NAME Persistent::Graph </A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_db_name_">new($db, $name)</A>
+		<LI><A HREF="#IdIdListImage_">IdIdListImage()</A>
+		<LI><A HREF="#IdKeysImage_">IdKeysImage()</A>
+		<LI><A HREF="#addEdge_from_to_">addEdge($from, $to)</A>
+		<LI><A HREF="#toNodeSet_from_">toNodeSet($from)</A>
+		<LI><A HREF="#reachableSetWithCaching_from_ca">reachableSetWithCaching(from, cache)</A>
+		<LI><A HREF="#reachableSet_from_">reachableSet($from)</A>
+		<LI><A HREF="#reachableSetStopAtMeasure_from_">reachableSetStopAtMeasure($from, $stopMeasure, $unitToMeasureTable)</A>
+		<LI><A HREF="#enumerate_">enumerate()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+	<LI><A HREF="#PRIVATE_METHODS">PRIVATE METHODS</A>
+	<UL>
+
+		<LI><A HREF="#_reachableSetInner_result_fro">_reachableSetInner($result, $from)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Persistent_Graph">NAME Persistent::Graph</A></H1>
+<P>
+Class encapsulating a persistent graph.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="././IncompleteDataCube/Licence.html#">the Licence manpage</A> and <A HREF="././IncompleteDataCube/Version.html#">the Version manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> persistent graph is a <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A> mapping from nodes to to nodes.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_db_name_">new($db, $name)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__db">$db</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Database.html">DBMDatabase::Database</A>, the database where the graph will live
+
+<P>
+-item * <CODE>$name</CODE>
+
+<P>
+- 
+<FONT SIZE=-1>A</FONT> string, the name of the graph
+
+</UL>
+<P>
+Create a new persistent graph.
+
+<P>
+<HR>
+<H2><A NAME="IdIdListImage_">IdIdListImage()</A></H2>
+<P>
+Return an Id to IdList image of the graph.
+
+<P>
+<HR>
+<H2><A NAME="IdKeysImage_">IdKeysImage()</A></H2>
+<P>
+Return an Id to IdList image of the graph.
+
+<P>
+<HR>
+<H2><A NAME="addEdge_from_to_">addEdge($from, $to)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__from">$from</A></STRONG>
+<P>
+- An <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>, the from node.
+
+<LI><STRONG><A NAME="item__to">$to</A></STRONG>
+<P>
+- An <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>, the to node.
+
+</UL>
+<P>
+Add an edge. 
+
+<P>
+<HR>
+<H2><A NAME="toNodeSet_from_over_4_item_">toNodeSet($from)
+ 
+=over 4
+ 
+=item * $from
+ 
+- An &lt;A HREF=&quot;./DBMDatabase/Id.html&quot;&gt;DBMDatabase::Id&lt;/A&gt;, the node to start from
+ 
+=back
+ 
+Get the set of nodes that are the 'to' set for this edge.
+Returns an &lt;A HREF=&quot;./DBMDatabase/IdSet.html&quot;&gt;DBMDatabase::IdSet&lt;/A&gt;, the set of nodes.
+ 
+=cut
+ 
+#---------------------------------------------------------------------
+  sub toNodeSet {
+    my ($self, $from) = @_;
+    my ($edges) = $self-&gt;{'edges'};
+    my ($t) = $edges-&gt;retrieveTuple($from);
+    if ($t) { return $t-&gt;getValueAsIdSet(); }
+    else { return new IdSet(); }
+    }
+#---------------------------------------------------------------------</A></H2>
+<P>
+<HR>
+<H2><A NAME="reachableSetWithCaching_from_ca">reachableSetWithCaching(from, cache)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_from">from</A></STRONG>
+<P>
+- An <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>, the node to start from
+
+<LI><STRONG><A NAME="item_cache">cache</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> hash table reference, the cache of which nodes are
+reachable from which
+
+</UL>
+<P>
+Get the set of nodes that are reachable from this node. Allow cycles, and
+cache intermediate results to build a complete table of reachable nodes.
+Returns an <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>, the set of reachable nodes.
+
+<P>
+<HR>
+<H2><A NAME="reachableSet_from_over_4_ite">reachableSet($from)
+ 
+=over 4
+ 
+=item * $from
+ 
+- An &lt;A HREF=&quot;./DBMDatabase/Id.html&quot;&gt;DBMDatabase::Id&lt;/A&gt;, the node to start from
+ 
+=back
+ 
+Get the set of nodes that are reachable from this node.
+And allow cycles!
+Returns an &lt;A HREF=&quot;./DBMDatabase/IdSet.html&quot;&gt;DBMDatabase::IdSet&lt;/A&gt;, the set of reachable nodes.
+ 
+=cut
+ 
+#---------------------------------------------------------------------
+  sub reachableSet {
+    my ($self, $from) = @_;
+    #// the result set
+    my ($result) = new IdSet();
+    #// put the current node into the result
+    $result-&gt;insert($from);
+    #// get the nodes reachable from this node
+    my ($edges) = $self-&gt;{'edges'};
+    my ($t) = $edges-&gt;retrieveTuple($from);
+    if ($t) {
+      #// for each reachable node
+      my $toSet = $t-&gt;getValueAsIdSet();
+      my ($id);
+      foreach $id ($toSet-&gt;enumerate()) {
+        #// is it a member already of the result?
+        if (!$result-&gt;memberOf($id)) {
+          #// follow the node
+          $self-&gt;_reachableSetInner($result,$id);
+          }
+        }
+      }
+    return $result;
+    }
+#---------------------------------------------------------------------</A></H2>
+<P>
+<HR>
+<H2><A NAME="reachableSetStopAtMeasure_from_">reachableSetStopAtMeasure($from, $stopMeasure, $unitToMeasureTable)</A></H2>
+<UL>
+<LI><STRONG>$from</STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>, the unit to begin searching from.
+
+<LI><STRONG><A NAME="item__stopMeasure">$stopMeasure</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>, the measure at which to stop.
+
+<LI><STRONG><A NAME="item__unitToMeasureTable">$unitToMeasureTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>, the table that associates units with their measures.
+
+</UL>
+<P>
+Get the set of nodes at the indicated measure that are reachable from this
+initial node. Assume for now that the graph is a strict hierarchy, in
+future we will relax this assumption.
+
+<P>
+<HR>
+<H2><A NAME="enumerate_">enumerate()</A></H2>
+<P>
+Return a reference to the dbm file.
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Save any changes to the persistent graph to disk.  
+
+<P>
+<HR>
+<H1><A NAME="PRIVATE_METHODS">PRIVATE METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="_reachableSetInner_result_fro">_reachableSetInner($result, $from)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__result">$result</A></STRONG>
+<P>
+- An <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>, the set of reachable nodes.
+
+<LI><STRONG>$from</STRONG>
+<P>
+- An <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>, the node to start from
+
+</UL>
+<P>
+Get the set of nodes that are reachable from this node. And allow cycles! Build the resulting set in the <CODE>$result</CODE> variable. 
+<FONT SIZE=-1>A</FONT> helper function for reachableSet.
+
+
+</BODY>
+
+</HTML>

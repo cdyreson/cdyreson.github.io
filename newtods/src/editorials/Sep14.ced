@@ -1,0 +1,41 @@
+:include[macros]
+:arg1[
+I have always viewed ACM <i>Transactions on Database Systems</i>, TODS, as the top journal
+in the area of data management so I am very happy, but also humbled, to have been
+given the opportunity to serve as Editor-in-Chief for the journal. In brief, I have served
+as an Associate Editor of TODS, and I have authored half a dozen articles published in
+the journal. I am ending a 6+-year term as an Editor-in-Chief of <i>The VLDB Journal</i>. I
+hope to benefit from this experience. I view the job of an Editor-in-Chief as having two
+main aspects: the day-to-day operation of the journal and the strategic development of
+the journal.
+
+Since I took over from Meral&nbsp;&Ouml;zsoyo&#287;lu at the beginning of June, I have been hard at
+work learning about the journals web-based system, its procedures, and its workflows
+for article evaluation and production of accepted articles. There is much to learn, but
+with the help of the TODS team, including Meral, the Associate Editors, and ACM
+staff, I am confident that I will soon be up to speed. I am already impressed by the
+dedication, professionalism, and insight of the TODS team. While this aspect involves
+a lot of hard work, it is also rewarding to work with smart and committed people.
+
+TODS must serve the data management community and the activity of research and
+publication in its topic area in the best possible way. As data management research
+and publication evolve, TODS must also evolve, and I intend to continually consider
+and assess possible improvements. Thus, I welcome any suggestions you may have. I
+can always be reached via email. This said, I also believe in being cautious; and I believe
+that it is important to benefit from the insights and views of the entire TODS team
+and of anybody else who is willing to contribute. I am looking forward to the process
+of seeking out and understanding the opportunities and of managing the evolution of
+TODS.
+
+Last but certainly not least, I want to thank Meral for her service to TODS during
+the past 6+ years. I am only starting to understand the scope of the commitment
+she accepted some 6 years ago and the amount of work, care, and dedication she has
+contributed in order to ensure the well-being of the journal. I am hoping that I can
+keep up the good work.
+
+Christian S. Jensen
+<br/><i>Editor-in-Chief</i>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[September 2014 ACM :journalAcronym[] Editorial]

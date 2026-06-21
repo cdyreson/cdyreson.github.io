@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<TITLE>./OODatabase/Tuple.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Tuple">NAME Tuple</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Object_key_Object_value_">new(Object key, Object value)</A>
+		<LI><A HREF="#newAlreadySwizzled_ByteString_ke">newAlreadySwizzled(ByteString key, ByteString value)</A>
+		<LI><A HREF="#getKey">getKey</A>
+		<LI><A HREF="#getValue">getValue</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Tuple">NAME Tuple</A></H1>
+<P>
+This package is part of <A HREF="././OODatabase.html#">the OODatabase manpage</A>. For more information on the database see the <A HREF="./OODatabase/Overview.html">OODatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="./OODatabase/Licence.html">OODatabase::Licence</A> and <A HREF="./OODatabase/Version.html">OODatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> tuple is a pairing of a key and a value.  
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Object_key_Object_value_">new(Object key, Object value)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_key">key</A></STRONG>
+<P>
+- The key for the tuple, a <A HREF="./OODatabase/Persistent.html">OODatabase::Persistent</A> object.
+
+<LI><STRONG><A NAME="item_value">value</A></STRONG>
+<P>
+- The value for the tuple, a <A HREF="./OODatabase/Persistent.html">OODatabase::Persistent</A> object.
+
+</UL>
+<P>
+Create a tuple with the given key, value pair.
+
+<P>
+<HR>
+<H2><A NAME="newAlreadySwizzled_ByteString_ke">newAlreadySwizzled(ByteString key, ByteString value)</A></H2>
+<UL>
+<LI><STRONG>key</STRONG>
+<P>
+- The key for the tuple, an already swizzled <A HREF="./OODatabase/Persistent.html">OODatabase::Persistent</A> object.
+
+<LI><STRONG>value</STRONG>
+<P>
+- The value for the tuple, an already swizzled <A HREF="./OODatabase/Persistent.html">OODatabase::Persistent</A> object.
+
+</UL>
+<P>
+Create a tuple with the given key, value pair.
+
+<P>
+<HR>
+<H2><A NAME="getKey">getKey</A></H2>
+<P>
+Retrieve the key.
+
+<P>
+<HR>
+<H2><A NAME="getValue">getValue</A></H2>
+<P>
+Retrieve the value.
+
+</BODY>
+
+</HTML>

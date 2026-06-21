@@ -1,0 +1,319 @@
+<HTML>
+<HEAD>
+<TITLE>../YAPP/lex/ParseLex-2.02/doc/Token.fr.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<UL>
+
+		<LI><A HREF="#Méthodes">Méthodes</A>
+	</UL>
+
+	<LI><A HREF="#GESTION_DES_ERREURS">GESTION DES ERREURS</A>
+	<LI><A HREF="#AUTEUR">AUTEUR</A>
+	<LI><A HREF="#REMERCIEMENTS">REMERCIEMENTS</A>
+	<LI><A HREF="#REFERENCES">REFERENCES</A>
+	<LI><A HREF="#COPYRIGHT">COPYRIGHT</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+<CODE>Parse::Token</CODE> - Classe définissant les tokens utilisés par Parse::Lex.pm (Beta 2.02).
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>        require 5.000;
+</PRE>
+<P>
+<PRE>        use Parse::Lex;
+        @token = qw(
+            ADDOP    [-+]
+            INTEGER  [1-9][0-9]*
+           );
+</PRE>
+<P>
+<PRE>        $lexer = Parse::Lex-&gt;new(@token);
+        $lexer-&gt;from(\*DATA);
+</PRE>
+<P>
+<PRE>        $content = $INTEGER-&gt;next;
+        if ($INTEGER-&gt;status) {
+          print &quot;$content\n&quot;;
+        }
+        $content = $ADDOP-&gt;next;
+        if ($ADDOP-&gt;status) {
+          print &quot;$content\n&quot;;
+        }
+        if ($INTEGER-&gt;isnext(\$content)) {
+          print &quot;$content\n&quot;;
+        }
+        __END__
+        1+2
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Le package <CODE>Token</CODE> permet de définir les tokens utilisés par
+<CODE>Parse::Lex</CODE> ou par <CODE>Parse::CLex</CODE>. La méthode <CODE>Lex::new()</CODE> du package <CODE>Parse::Lex</CODE> crée indirectement un objet de type <CODE>Token</CODE> par token à reconnaître. Les méthodes <A HREF="#item_next">next()</A> ou <A HREF="#item_isnext">isnext()</A> du package
+<CODE>Token</CODE> permettent d'interfacer l'analyseur lexical avec un analyseur syntaxique de
+type récursif descendant. Pour un interfaçage avec byacc voir le package <CODE>Parse::YYLex</CODE>.
+
+<P>
+Le package <CODE>Parse::Token</CODE> n'est pas destiné à être directement utilisé. L'inclusion de ce package se
+fait par le biais d'un
+<CODE>use Parse::Lex</CODE>.
+
+<P>
+<HR>
+<H2><A NAME="Méthodes">Méthodes</A></H2>
+<DL>
+<DT><STRONG><A NAME="item_action">action</A></STRONG><DD>
+<P>
+Retourne la fonction anonyme définie dans l'objet <CODE>Parse::Token</CODE>.
+
+<DT><STRONG><A NAME="item_factory">factory LISTE</A></STRONG><DD>
+<P>
+Créer une liste d'objets <CODE>Parse::Token</CODE> à partir d'une liste de spécifications de tokens. La liste peut également
+inclure des objets de la classe <CODE>Parse::Token</CODE> ou d'une classe qui en dérive. Peut s'utiliser comme méthode de classe ou
+d'instance.
+
+<P>
+La méthode <A HREF="#item_factory">factory(LISTE)</A> peut être utilisée pour créer un ensemble de tokens qui ne sont pas dans l'automate d'analyse. Cette méthode effectue deux opérations : 1) elle crée les objets en fonction des spécifications figurant dans 
+<FONT SIZE=-1>LISTE</FONT> (voir la méthode
+ <A HREF="#item_new">new()</A>), 2) elle importe les objets créés dans le package d'appel.
+
+<P>
+On pourra pas exemple écrire :
+
+<P>
+<PRE>        %keywords = 
+          qw (
+              PROC  undef
+              FUNC  undef
+              RETURN undef
+              IF    undef
+              ELSE  undef
+              WHILE undef
+              PRINT undef
+              READ  undef
+             );
+        Parse::Token-&gt;factory(%keywords);
+</PRE>
+<P>
+et installer ces tokens dans une table des symboles de la manière suivante
+:
+
+<P>
+<PRE>        foreach $name (keys %keywords) {
+          $symbol{&quot;\L$name&quot;} = [${$name}, ''];
+        }
+</PRE>
+<P>
+<A HREF="#item__name_">${$name}</A> est l'objet Token.
+
+<P>
+Lors de la phase d'analyse lexicale on pourra utiliser les tokens de la
+manière suivante :
+
+<P>
+<PRE>        qw(IDENT [a-zA-Z][a-zA-Z0-9]*),  sub {                
+           $symbol{$_[1]} = [] unless defined $symbol{$_[1]};
+           my $type = $symbol{$_[1]}[0];
+           $lexer-&gt;setToken((not defined $type) ? $VAR : $type);
+           $_[1];  # THE TOKEN TEXT
+         }
+</PRE>
+<P>
+Ce qui permet d'indiquer que tout symbole dont le type est inconnu est une
+variable.
+
+<P>
+Dans cet exemple nous avons utilisé <CODE>$_[1]</CODE> qui correspond au texte reconnu par l'expression régulière. Ce texte
+constitue le retour de la fonction anonyme.
+
+<DT><STRONG><A NAME="item_get">get EXPR</A></STRONG><DD>
+<P>
+Permet d'obtenir la valeur de l'attribut résultant de l'évaluation d'EXPR.
+Il est également possible d'utiliser le nom de l'attribut comme nom de
+méthode.
+
+<DT><STRONG><A NAME="item_getText">getText</A></STRONG><DD>
+<P>
+Retourne la chaîne de caractères reconnue au moyen de l'objet
+<CODE>Parse::Token</CODE>.
+
+<P>
+Synonyme de la méthode <A HREF="#item_text">text()</A>.
+
+<DT><STRONG><A NAME="item_isnext">isnext EXPR</A></STRONG><DD>
+<DT><STRONG>isnext</STRONG><DD>
+<P>
+Retourne le statut du token. La chaîne consommée est disponible dans 
+<FONT SIZE=-1>EXPR</FONT> s'il s'agit d'une référence à un scalaire.
+
+<DT><STRONG><A NAME="item_name">name</A></STRONG><DD>
+<P>
+Retourne le nom symbolique de l'objet <CODE>Parse::Token</CODE>.
+
+<DT><STRONG><A NAME="item_next">next</A></STRONG><DD>
+<P>
+Active la recherche du token défini par l'expression régulière contenue
+dans l'objet. Si ce token est reconnu sur le flot de caractère à analyser
+alors <A HREF="#item_next">next()</A> retourne la chaîne trouvée et met le statut de l'objet à vrai.
+
+<DT><STRONG><A NAME="item_new">new SYMBOL_NAME, REGEXP, SUB</A></STRONG><DD>
+<P>
+Crée un objet de type <CODE>Parse::Token</CODE>. Les arguments de la méthode <A HREF="#item_new">new()</A> sont dans l'ordre : un nom symbolique, une expression régulière et une
+fonction anonyme.
+
+<P>
+
+<FONT SIZE=-1>REGEXP</FONT> est soit une expression régulière simple, soit une référence à un tableau contenant de une à trois expressions régulières. Dans ce dernier cas le token peut être réparti sur plusieurs enregistrements. Ce peut être par exemple une chaîne de caractères délimitée par des guillemets, des commentaires d'un programme 
+<FONT SIZE=-1>C,</FONT> etc.
+
+
+<P>
+Les expressions régulières sont utilisées pour reconnaître :
+
+<P>
+1. le début du token, 
+
+<P>
+2. le ``corps'' du token, si cette seconde expression est absente
+<CODE>Parse::Lex</CODE> utilise <CODE>(?:.*?)</CODE>,
+
+<P>
+3. la fin du token, si cette dernière expression est absente on utilise la
+première. (Attention ! La fin du token ne peut être à cheval sur plusieurs
+enregistrements).
+
+<P>
+Exemple.
+
+<P>
+<PRE>          qw(STRING), [qw(&quot; (?:[^&quot;\\\\]+|\\\\(?:.|\n))* &quot;)],
+</PRE>
+<P>
+Les expressions régulières peuvent reconnaître des chaînes multilignes
+délimitées par des guillemets, sachant que le contre-oblique est utilisé
+pour littéraliser les guillemets qui apparaissent au sein de la chaîne.
+Remarquez le quadruplement du contre-oblique.
+
+<P>
+Voici une variante de l'exemple précédent qui utilise l'option <CODE>s</CODE>
+pour inclure la nouvelle-ligne dans les caractères reconnus par ``<CODE>.</CODE>'' :
+
+<P>
+<PRE>          qw(STRING), [qw(&quot; (?s)(?:[^&quot;\\\\]+|\\\\.)* &quot;)],
+</PRE>
+<P>
+(Remarques. Il est possible d'écrire des expressions régulières plus
+performantes en terme de temps d'exécution, mais ce n'est pas notre
+objectif ici.)
+
+<P>
+La fonction anonyme est exécutée au moment ou le token est reconnu par
+l'analyseur lexical. Cette fonction possède deux arguments : <CODE>$_[0]</CODE>
+contient l'objet <CODE>Parse::Token</CODE>, <CODE>$_[1]</CODE> la chaîne reconnue par l'expression régulière. Le scalaire retourné par la
+fonction anonyme définit la chaîne de caractères placée dans l'objet <CODE>Parse::Token</CODE>.
+
+<P>
+Dans la fonction anonyme vous pouvez utiliser les variables positionnelles <CODE>$1</CODE>, <CODE>$2</CODE>, ... qui correspondent aux parenthèses placées dans l'expression
+régulière.
+
+<DT><STRONG><A NAME="item_regexp">regexp</A></STRONG><DD>
+<P>
+Retourne l'expression régulière définie dans l'objet <CODE>Parse::Token</CODE>.
+
+<DT><STRONG><A NAME="item_set">set LISTE</A></STRONG><DD>
+<P>
+Permet de décorer un objet Token au moyen d'une liste d'attribut-valeurs.
+
+<P>
+Un nom d'attribut peut être utilisé comme nom de méthode.
+
+<DT><STRONG><A NAME="item_setText">setText EXPR</A></STRONG><DD>
+<P>
+La valeur de 
+<FONT SIZE=-1>EXPR</FONT> définit la chaîne de caractères associée au
+token.
+
+<P>
+Synonyme de la méthode <A HREF="#item_text">text(EXPR)</A>.
+
+<DT><STRONG><A NAME="item_status">status EXPR</A></STRONG><DD>
+<DT><STRONG>status</STRONG><DD>
+<P>
+Indique si la dernière recherche du token a réussie ou échouée.
+<CODE>status EXPR</CODE> permet de forcer le statut à la valeur dénotée par 
+<FONT SIZE=-1>EXPR.</FONT>
+
+<DT><STRONG><A NAME="item_text">text EXPR</A></STRONG><DD>
+<DT><STRONG>text</STRONG><DD>
+<P>
+<A HREF="#item_text">text()</A> Retourne la chaîne de caractères reconnue au moyen de l'objet <CODE>Parse::Token</CODE>. La valeur de 
+<FONT SIZE=-1>EXPR</FONT> permet de définir la chaîne de caractères
+associée au token.
+
+<DT><STRONG><A NAME="item_trace">trace OUTPUT</A></STRONG><DD>
+<DT><STRONG>trace</STRONG><DD>
+<P>
+Méthode de classe qui active/désactive une trace de l'analyse lexicale. 
+
+<P>
+<CODE>OUTPUT</CODE> peut être un nom de fichier ou une référence à un filehandle vers laquelle
+la trace va être dirigée.
+
+<H1><A NAME="GESTION_DES_ERREURS">GESTION DES ERREURS</A></H1>
+<P>
+Pour traiter les cas de non reconnaissance de token vous pouvez définir un
+token spécifique en fin de la liste des tokens composant notre analyseur
+lexical. Si la recherche de ce token réussie il est alors possible
+d'appeler une fonction dévolue au traitement des erreurs.
+
+<H1><A NAME="AUTEUR">AUTEUR</A></H1>
+<P>
+Philippe Verdret
+
+<H1><A NAME="REMERCIEMENTS">REMERCIEMENTS</A></H1>
+<P>
+La version 2.0 doit beaucoup aux suggestions de Vladimir Alexiev. Ocrat a
+largement contribué à l'amélioration de cette documentation.
+
+<H1><A NAME="REFERENCES">REFERENCES</A></H1>
+<P>
+Friedl, 
+<FONT SIZE=-1>J.E.F.</FONT> Mastering Regular Expressions. O'Reilly &amp;
+Associates 1996.
+
+<P>
+Mason, 
+<FONT SIZE=-1>T.</FONT> &amp; Brown, 
+<FONT SIZE=-1>D.</FONT> - Lex &amp; Yacc. O'Reilly &amp; Associates, Inc. 1990.
+
+
+<H1><A NAME="COPYRIGHT">COPYRIGHT</A></H1>
+<P>
+Copyright (c) 1995-1998 Philippe Verdret. All rights reserved. This module
+is free software; you can redistribute it and/or modify it under the same
+terms as Perl itself.
+
+</DL>
+</BODY>
+
+</HTML>

@@ -1,0 +1,43 @@
+<head>
+<title>Marks_Spreadsheet</title>
+</head>
+<body>
+<h1>Marks_Spreadsheet </h1>
+Available only at JCU CS department.
+<hr>
+<a href="example_spreadsheet.html">
+<B>Example Spreadsheet</B>
+</a> 
+<P>
+<a href="about_spreadsheet.html">
+<B>About the spreadsheet</B>
+</a> 
+<P>
+<a href="mail.txt">
+Example e-mail folder
+</a> 
+<P>
+To start the grader create a shell script, e.g., grader.sh, 
+with the following:
+<BLOCKQUOTE>
+  /home/curtis/bin/perl/startreporter -out $1.html $1
+</BLOCKQUOTE>
+You invoke it the same way, e.g., 
+<BLOCKQUOTE>
+  sh grader.sh grades
+</BLOCKQUOTE>
+where grades is the name of the mail folder containing grades, 
+but now the grader.sh will automatically
+generate a grades.html page, but not start netscape on it.  
+This is so you can start netscape at your
+leisure (and bookmark the entry page if you like, so 
+that you can reload it after doing a 'sh grader.sh grades').
+Note that the create page will have only your read privileges set,
+so only you can read it (the bookmark will be to a file:// type).
+<P>
+As usual, you can automatically generate the initial mail folder as follows
+<PRE>
+  ~cpced/bin/generategradeslist cpXXXX | mail -s "initial folder cpXXX" YYYY@cs.jcu.edu.au
+</PRE>
+where XXX is the subject code and YYYY is your login.
+</body>

@@ -1,0 +1,1228 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 11">
+<link id=Main-File rel=Main-File href="../sliceturnaroundTime.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Edit-Time-Data href=editdata.mso>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-page-orientation:landscape;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(1);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../sliceturnaroundTime.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]><!--[if gte mso 9]><xml>
+ <x:WorksheetOptions>
+  <x:FitToPage/>
+  <x:FitToPage/>
+  <x:Print>
+   <x:ValidPrinterInfo/>
+   <x:Scale>74</x:Scale>
+   <x:HorizontalResolution>600</x:HorizontalResolution>
+   <x:VerticalResolution>600</x:VerticalResolution>
+  </x:Print>
+  <x:FreezePanes/>
+  <x:FrozenNoSplit/>
+  <x:SplitHorizontal>2</x:SplitHorizontal>
+  <x:TopRowBottomPane>2</x:TopRowBottomPane>
+  <x:SplitVertical>2</x:SplitVertical>
+  <x:LeftColumnRightPane>2</x:LeftColumnRightPane>
+  <x:ActivePane>0</x:ActivePane>
+  <x:Panes>
+   <x:Pane>
+    <x:Number>3</x:Number>
+   </x:Pane>
+   <x:Pane>
+    <x:Number>1</x:Number>
+   </x:Pane>
+   <x:Pane>
+    <x:Number>2</x:Number>
+   </x:Pane>
+   <x:Pane>
+    <x:Number>0</x:Number>
+    <x:ActiveRow>68</x:ActiveRow>
+    <x:ActiveCol>0</x:ActiveCol>
+    <x:RangeSelection>$A$1:$M$69</x:RangeSelection>
+   </x:Pane>
+  </x:Panes>
+  <x:ProtectContents>False</x:ProtectContents>
+  <x:ProtectObjects>False</x:ProtectObjects>
+  <x:ProtectScenarios>False</x:ProtectScenarios>
+ </x:WorksheetOptions>
+ <x:QueryTable>
+  <x:Name>output</x:Name>
+  <x:AutoFormatFont/>
+  <x:AutoFormatPattern/>
+  <x:QuerySource>
+   <x:QueryType>Text</x:QueryType>
+   <x:TextWizardSettings>
+    <x:Name HRef="Z:\tods\graphs\code\output.txt"/>
+    <x:Source>437</x:Source>
+    <x:Decimal>.</x:Decimal>
+    <x:ThousandSeparator>,</x:ThousandSeparator>
+    <x:TrailingMinusNumbers/>
+    <x:FormatSettings>
+     <x:FieldType>AutoFormat</x:FieldType>
+     <x:FieldType>AutoFormat</x:FieldType>
+     <x:FieldType>AutoFormat</x:FieldType>
+     <x:FieldType>AutoFormat</x:FieldType>
+     <x:FieldType>AutoFormat</x:FieldType>
+     <x:FieldType>AutoFormat</x:FieldType>
+     <x:FieldType>AutoFormat</x:FieldType>
+    </x:FormatSettings>
+    <x:Delimiters>
+     <x:Tab/>
+     <x:Comma/>
+    </x:Delimiters>
+   </x:TextWizardSettings>
+   <x:VersionLastEdit>2</x:VersionLastEdit>
+   <x:VersionLastRefresh>2</x:VersionLastRefresh>
+  </x:QuerySource>
+ </x:QueryTable>
+</xml><![endif]-->
+</head>
+
+<body link=blue vlink=purple>
+
+<table x:str border=0 cellpadding=0 cellspacing=0 width=964 style='border-collapse:
+ collapse;table-layout:fixed;width:723pt'>
+ <col width=35 style='mso-width-source:userset;mso-width-alt:1280;width:26pt'>
+ <col width=36 style='mso-width-source:userset;mso-width-alt:1316;width:27pt'>
+ <col width=96 style='mso-width-source:userset;mso-width-alt:3510;width:72pt'>
+ <col width=66 style='mso-width-source:userset;mso-width-alt:2413;width:50pt'>
+ <col width=67 style='mso-width-source:userset;mso-width-alt:2450;width:50pt'>
+ <col width=117 style='mso-width-source:userset;mso-width-alt:4278;width:88pt'>
+ <col width=82 style='mso-width-source:userset;mso-width-alt:2998;width:62pt'>
+ <col width=83 span=2 style='mso-width-source:userset;mso-width-alt:3035;
+ width:62pt'>
+ <col width=79 style='mso-width-source:userset;mso-width-alt:2889;width:59pt'>
+ <col width=75 style='mso-width-source:userset;mso-width-alt:2742;width:56pt'>
+ <col width=81 style='mso-width-source:userset;mso-width-alt:2962;width:61pt'>
+ <col width=64 style='width:48pt'>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl28 width=35 style='height:12.75pt;width:26pt'><a
+  name="Print_Area">Year</a></td>
+  <td class=xl28 width=36 style='width:27pt'>Month</td>
+  <td class=xl28 width=96 style='width:72pt'>Number</td>
+  <td class=xl28 width=66 style='width:50pt'>Total Days</td>
+  <td class=xl28 width=67 style='width:50pt'>Number</td>
+  <td class=xl28 width=117 style='width:88pt'>Total Days</td>
+  <td class=xl28 width=82 style='width:62pt'>Longest</td>
+  <td class=xl28 width=83 style='width:62pt'>Longest</td>
+  <td class=xl28 width=83 style='width:62pt'>Average</td>
+  <td class=xl28 width=79 style='width:59pt'>NonDesk</td>
+  <td class=xl28 width=75 style='width:56pt'>Longest</td>
+  <td class=xl28 width=81 style='width:61pt'>Average</td>
+  <td class=xl28 width=64 style='width:48pt'>NonDesk</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 colspan=2 class=xl28 style='height:12.75pt;mso-ignore:colspan'></td>
+  <td class=xl28>Desk Rejections</td>
+  <td class=xl28>Desk Rejections</td>
+  <td class=xl28>NonDesk Rejections</td>
+  <td class=xl28>NonDesk Rejections</td>
+  <td class=xl28>for Month</td>
+  <td class=xl28>(in months)</td>
+  <td class=xl28>Turnaround</td>
+  <td class=xl28>Average</td>
+  <td class=xl28>(in weeks)</td>
+  <td class=xl28>Turnaround</td>
+  <td class=xl28>Average</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>517</td>
+  <td class=xl29 x:num>140</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G3/30,1)">4.7</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>18</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>1111</td>
+  <td class=xl29 x:num>170</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G4/30,1)">5.7</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>21</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>432</td>
+  <td class=xl29 x:num>114</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G5/30,1)">3.8</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>502</td>
+  <td class=xl29 x:num>147</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G6/30,1)">4.9</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>84</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>136</td>
+  <td class=xl29 x:num>136</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G7/30,1)">4.5</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>1349</td>
+  <td class=xl29 x:num>194</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G8/30,1)">6.5</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>758</td>
+  <td class=xl29 x:num>189</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G9/30,1)">6.3</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>90</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>239</td>
+  <td class=xl29 x:num>130</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G10/30,1)">4.3</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>135</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1362</td>
+  <td class=xl29 x:num>170</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G11/30,1)">5.7</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>991</td>
+  <td class=xl29 x:num>159</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G12/30,1)">5.3</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2003</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>35</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>22</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G13/30,1)">0.7</td>
+  <td colspan=2 class=xl29 style='mso-ignore:colspan'></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>24</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>586</td>
+  <td class=xl29 x:num>132</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G14/30,1)">4.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D3:D14)+SUM(F3:F14))/(SUM(C3:C14)+SUM(E3:E14)))/30,2)">3.12</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F3:F14)/SUM(E3:E14))/30,2)">3.97</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>19</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>328</td>
+  <td class=xl29 x:num>119</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G15/30,1)">4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D4:D15)+SUM(F4:F15))/(SUM(C4:C15)+SUM(E4:E15)))/30,2)">3.02</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F4:F15)/SUM(E4:E15))/30,2)">3.94</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>265</td>
+  <td class=xl29 x:num>147</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G16/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D5:D16)+SUM(F5:F16))/(SUM(C5:C16)+SUM(E5:E16)))/30,2)">3</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F5:F16)/SUM(E5:E16))/30,2)">3.93</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>1149</td>
+  <td class=xl29 x:num>128</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G17/30,1)">4.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D6:D17)+SUM(F6:F17))/(SUM(C6:C17)+SUM(E6:E17)))/30,2)">2.99</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F6:F17)/SUM(E6:E17))/30,2)">3.81</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>496</td>
+  <td class=xl29 x:num>128</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G18/30,1)">4.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D7:D18)+SUM(F7:F18))/(SUM(C7:C18)+SUM(E7:E18)))/30,2)">2.92</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F7:F18)/SUM(E7:E18))/30,2)">3.75</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>28</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>878</td>
+  <td class=xl29 x:num>126</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G19/30,1)">4.2</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D8:D19)+SUM(F8:F19))/(SUM(C8:C19)+SUM(E8:E19)))/30,2)">3.01</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F8:F19)/SUM(E8:E19))/30,2)">3.73</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>27</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1295</td>
+  <td class=xl29 x:num>149</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G20/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D9:D20)+SUM(F9:F20))/(SUM(C9:C20)+SUM(E9:E20)))/30,2)">2.88</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F9:F20)/SUM(E9:E20))/30,2)">3.66</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>588</td>
+  <td class=xl29 x:num>144</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G21/30,1)">4.8</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D10:D21)+SUM(F10:F21))/(SUM(C10:C21)+SUM(E10:E21)))/30,2)">2.82</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F10:F21)/SUM(E10:E21))/30,2)">3.63</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G21/7,1)">20.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D10:D21)+SUM(F10:F21))/(SUM(C10:C21)+SUM(E10:E21)))/7,1)">12.1</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F10:F21)/SUM(E10:E21))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>20</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>322</td>
+  <td class=xl29 x:num>125</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G22/30,1)">4.2</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D11:D22)+SUM(F11:F22))/(SUM(C11:C22)+SUM(E11:E22)))/30,2)">2.8</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F11:F22)/SUM(E11:E22))/30,2)">3.58</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G22/7,1)">17.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D11:D22)+SUM(F11:F22))/(SUM(C11:C22)+SUM(E11:E22)))/7,1)">12</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F11:F22)/SUM(E11:E22))/7,1)">15.3</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>1514</td>
+  <td class=xl29 x:num>149</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G23/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D12:D23)+SUM(F12:F23))/(SUM(C12:C23)+SUM(E12:E23)))/30,2)">2.86</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F12:F23)/SUM(E12:E23))/30,2)">3.59</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G23/7,1)">21.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D12:D23)+SUM(F12:F23))/(SUM(C12:C23)+SUM(E12:E23)))/7,1)">12.3</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F12:F23)/SUM(E12:E23))/7,1)">15.4</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>28</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>612</td>
+  <td class=xl29 x:num>139</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G24/30,1)">4.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D13:D24)+SUM(F13:F24))/(SUM(C13:C24)+SUM(E13:E24)))/30,2)">2.8</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F13:F24)/SUM(E13:E24))/30,2)">3.62</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G24/7,1)">19.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D13:D24)+SUM(F13:F24))/(SUM(C13:C24)+SUM(E13:E24)))/7,1)">12</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F13:F24)/SUM(E13:E24))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2004</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>20</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1194</td>
+  <td class=xl29 x:num>139</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G25/30,1)">4.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D14:D25)+SUM(F14:F25))/(SUM(C14:C25)+SUM(E14:E25)))/30,2)">2.93</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F14:F25)/SUM(E14:E25))/30,2)">3.62</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G25/7,1)">19.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D14:D25)+SUM(F14:F25))/(SUM(C14:C25)+SUM(E14:E25)))/7,1)">12.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F14:F25)/SUM(E14:E25))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>831</td>
+  <td class=xl29 x:num>148</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G26/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D15:D26)+SUM(F15:F26))/(SUM(C15:C26)+SUM(E15:E26)))/30,2)">2.92</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F15:F26)/SUM(E15:E26))/30,2)">3.63</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G26/7,1)">21.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D15:D26)+SUM(F15:F26))/(SUM(C15:C26)+SUM(E15:E26)))/7,1)">12.5</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F15:F26)/SUM(E15:E26))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>629</td>
+  <td class=xl29 x:num>139</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G27/30,1)">4.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D16:D27)+SUM(F16:F27))/(SUM(C16:C27)+SUM(E16:E27)))/30,2)">3.03</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F16:F27)/SUM(E16:E27))/30,2)">3.62</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G27/7,1)">19.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D16:D27)+SUM(F16:F27))/(SUM(C16:C27)+SUM(E16:E27)))/7,1)">13</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F16:F27)/SUM(E16:E27))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>19</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>779</td>
+  <td class=xl29 x:num>124</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G28/30,1)">4.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D17:D28)+SUM(F17:F28))/(SUM(C17:C28)+SUM(E17:E28)))/30,2)">3.03</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F17:F28)/SUM(E17:E28))/30,2)">3.61</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G28/7,1)">17.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D17:D28)+SUM(F17:F28))/(SUM(C17:C28)+SUM(E17:E28)))/7,1)">13</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F17:F28)/SUM(E17:E28))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>22</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1110</td>
+  <td class=xl29 x:num>131</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G29/30,1)">4.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D18:D29)+SUM(F18:F29))/(SUM(C18:C29)+SUM(E18:E29)))/30,2)">3.05</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F18:F29)/SUM(E18:E29))/30,2)">3.63</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G29/7,1)">18.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D18:D29)+SUM(F18:F29))/(SUM(C18:C29)+SUM(E18:E29)))/7,1)">13.1</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F18:F29)/SUM(E18:E29))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>1102</td>
+  <td class=xl29 x:num>150</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G30/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D19:D30)+SUM(F19:F30))/(SUM(C19:C30)+SUM(E19:E30)))/30,2)">3.11</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F19:F30)/SUM(E19:E30))/30,2)">3.62</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G30/7,1)">21.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D19:D30)+SUM(F19:F30))/(SUM(C19:C30)+SUM(E19:E30)))/7,1)">13.3</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F19:F30)/SUM(E19:E30))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>981</td>
+  <td class=xl29 x:num>152</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G31/30,1)">5.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D20:D31)+SUM(F20:F31))/(SUM(C20:C31)+SUM(E20:E31)))/30,2)">3.16</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F20:F31)/SUM(E20:E31))/30,2)">3.65</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G31/7,1)">21.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D20:D31)+SUM(F20:F31))/(SUM(C20:C31)+SUM(E20:E31)))/7,1)">13.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F20:F31)/SUM(E20:E31))/7,1)">15.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>72</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1181</td>
+  <td class=xl29 x:num>149</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G32/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D21:D32)+SUM(F21:F32))/(SUM(C21:C32)+SUM(E21:E32)))/30,2)">3.09</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F21:F32)/SUM(E21:E32))/30,2)">3.61</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G32/7,1)">21.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D21:D32)+SUM(F21:F32))/(SUM(C21:C32)+SUM(E21:E32)))/7,1)">13.2</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F21:F32)/SUM(E21:E32))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>1326</td>
+  <td class=xl29 x:num>151</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G33/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D22:D33)+SUM(F22:F33))/(SUM(C22:C33)+SUM(E22:E33)))/30,2)">3.19</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F22:F33)/SUM(E22:E33))/30,2)">3.64</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G33/7,1)">21.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D22:D33)+SUM(F22:F33))/(SUM(C22:C33)+SUM(E22:E33)))/7,1)">13.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F22:F33)/SUM(E22:E33))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>827</td>
+  <td class=xl29 x:num>128</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G34/30,1)">4.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D23:D34)+SUM(F23:F34))/(SUM(C23:C34)+SUM(E23:E34)))/30,2)">3.24</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F23:F34)/SUM(E23:E34))/30,2)">3.66</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G34/7,1)">18.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D23:D34)+SUM(F23:F34))/(SUM(C23:C34)+SUM(E23:E34)))/7,1)">13.9</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F23:F34)/SUM(E23:E34))/7,1)">15.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>1327</td>
+  <td class=xl29 x:num>148</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G35/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D24:D35)+SUM(F24:F35))/(SUM(C24:C35)+SUM(E24:E35)))/30,2)">3.12</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F24:F35)/SUM(E24:E35))/30,2)">3.61</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G35/7,1)">21.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D24:D35)+SUM(F24:F35))/(SUM(C24:C35)+SUM(E24:E35)))/7,1)">13.4</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F24:F35)/SUM(E24:E35))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>41</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>768</td>
+  <td class=xl29 x:num>133</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G36/30,1)">4.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D25:D36)+SUM(F25:F36))/(SUM(C25:C36)+SUM(E25:E36)))/30,2)">3.19</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F25:F36)/SUM(E25:E36))/30,2)">3.62</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G36/7,1)">19</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D25:D36)+SUM(F25:F36))/(SUM(C25:C36)+SUM(E25:E36)))/7,1)">13.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F25:F36)/SUM(E25:E36))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2005</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>620</td>
+  <td class=xl29 x:num>147</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G37/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D26:D37)+SUM(F26:F37))/(SUM(C26:C37)+SUM(E26:E37)))/30,2)">3.19</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F26:F37)/SUM(E26:E37))/30,2)">3.64</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G37/7,1)">21</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D26:D37)+SUM(F26:F37))/(SUM(C26:C37)+SUM(E26:E37)))/7,1)">13.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F26:F37)/SUM(E26:E37))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>589</td>
+  <td class=xl29 x:num>135</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G38/30,1)">4.5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D27:D38)+SUM(F27:F38))/(SUM(C27:C38)+SUM(E27:E38)))/30,2)">3.2</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F27:F38)/SUM(E27:E38))/30,2)">3.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G38/7,1)">19.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D27:D38)+SUM(F27:F38))/(SUM(C27:C38)+SUM(E27:E38)))/7,1)">13.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F27:F38)/SUM(E27:E38))/7,1)">15.4</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>835</td>
+  <td class=xl29 x:num>148</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G39/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D28:D39)+SUM(F28:F39))/(SUM(C28:C39)+SUM(E28:E39)))/30,2)">3.18</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F28:F39)/SUM(E28:E39))/30,2)">3.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G39/7,1)">21.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D28:D39)+SUM(F28:F39))/(SUM(C28:C39)+SUM(E28:E39)))/7,1)">13.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F28:F39)/SUM(E28:E39))/7,1)">15.4</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>499</td>
+  <td class=xl29 x:num>148</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G40/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D29:D40)+SUM(F29:F40))/(SUM(C29:C40)+SUM(E29:E40)))/30,2)">3.12</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F29:F40)/SUM(E29:E40))/30,2)">3.54</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G40/7,1)">21.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D29:D40)+SUM(F29:F40))/(SUM(C29:C40)+SUM(E29:E40)))/7,1)">13.4</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F29:F40)/SUM(E29:E40))/7,1)">15.2</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>530</td>
+  <td class=xl29 x:num>106</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G41/30,1)">3.5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D30:D41)+SUM(F30:F41))/(SUM(C30:C41)+SUM(E30:E41)))/30,2)">3.06</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F30:F41)/SUM(E30:E41))/30,2)">3.49</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G41/7,1)">15.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D30:D41)+SUM(F30:F41))/(SUM(C30:C41)+SUM(E30:E41)))/7,1)">13.1</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F30:F41)/SUM(E30:E41))/7,1)">15</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>962</td>
+  <td class=xl29 x:num>109</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G42/30,1)">3.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D31:D42)+SUM(F31:F42))/(SUM(C31:C42)+SUM(E31:E42)))/30,2)">2.99</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F31:F42)/SUM(E31:E42))/30,2)">3.48</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G42/7,1)">15.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D31:D42)+SUM(F31:F42))/(SUM(C31:C42)+SUM(E31:E42)))/7,1)">12.8</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F31:F42)/SUM(E31:E42))/7,1)">14.9</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1225</td>
+  <td class=xl29 x:num>153</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G43/30,1)">5.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D32:D43)+SUM(F32:F43))/(SUM(C32:C43)+SUM(E32:E43)))/30,2)">2.97</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F32:F43)/SUM(E32:E43))/30,2)">3.46</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G43/7,1)">21.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D32:D43)+SUM(F32:F43))/(SUM(C32:C43)+SUM(E32:E43)))/7,1)">12.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F32:F43)/SUM(E32:E43))/7,1)">14.8</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>529</td>
+  <td class=xl29 x:num>148</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G44/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D33:D44)+SUM(F33:F44))/(SUM(C33:C44)+SUM(E33:E44)))/30,2)">3.04</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F33:F44)/SUM(E33:E44))/30,2)">3.45</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G44/7,1)">21.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D33:D44)+SUM(F33:F44))/(SUM(C33:C44)+SUM(E33:E44)))/7,1)">13</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F33:F44)/SUM(E33:E44))/7,1)">14.8</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>13</td>
+  <td class=xl29 x:num>1404</td>
+  <td class=xl29 x:num>153</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G45/30,1)">5.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D34:D45)+SUM(F34:F45))/(SUM(C34:C45)+SUM(E34:E45)))/30,2)">2.99</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F34:F45)/SUM(E34:E45))/30,2)">3.44</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G45/7,1)">21.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D34:D45)+SUM(F34:F45))/(SUM(C34:C45)+SUM(E34:E45)))/7,1)">12.8</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F34:F45)/SUM(E34:E45))/7,1)">14.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>56</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>702</td>
+  <td class=xl29 x:num>149</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G46/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D35:D46)+SUM(F35:F46))/(SUM(C35:C46)+SUM(E35:E46)))/30,2)">3.02</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F35:F46)/SUM(E35:E46))/30,2)">3.51</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G46/7,1)">21.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D35:D46)+SUM(F35:F46))/(SUM(C35:C46)+SUM(E35:E46)))/7,1)">12.9</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F35:F46)/SUM(E35:E46))/7,1)">15</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>871</td>
+  <td class=xl29 x:num>142</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G47/30,1)">4.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D36:D47)+SUM(F36:F47))/(SUM(C36:C47)+SUM(E36:E47)))/30,2)">3.07</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F36:F47)/SUM(E36:E47))/30,2)">3.49</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G47/7,1)">20.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D36:D47)+SUM(F36:F47))/(SUM(C36:C47)+SUM(E36:E47)))/7,1)">13.2</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F36:F47)/SUM(E36:E47))/7,1)">15</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>576</td>
+  <td class=xl29 x:num>121</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G48/30,1)">4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D37:D48)+SUM(F37:F48))/(SUM(C37:C48)+SUM(E37:E48)))/30,2)">3.06</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F37:F48)/SUM(E37:E48))/30,2)">3.42</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G48/7,1)">17.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D37:D48)+SUM(F37:F48))/(SUM(C37:C48)+SUM(E37:E48)))/7,1)">13.1</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F37:F48)/SUM(E37:E48))/7,1)">14.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2006</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>58</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>551</td>
+  <td class=xl29 x:num>149</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G49/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D38:D49)+SUM(F38:F49))/(SUM(C38:C49)+SUM(E38:E49)))/30,2)">2.99</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F38:F49)/SUM(E38:E49))/30,2)">3.43</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G49/7,1)">21.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D38:D49)+SUM(F38:F49))/(SUM(C38:C49)+SUM(E38:E49)))/7,1)">12.8</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F38:F49)/SUM(E38:E49))/7,1)">14.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>1113</td>
+  <td class=xl29 x:num>161</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G50/30,1)">5.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D39:D50)+SUM(F39:F50))/(SUM(C39:C50)+SUM(E39:E50)))/30,2)">3.04</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F39:F50)/SUM(E39:E50))/30,2)">3.51</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G50/7,1)">23</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D39:D50)+SUM(F39:F50))/(SUM(C39:C50)+SUM(E39:E50)))/7,1)">13</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F39:F50)/SUM(E39:E50))/7,1)">15</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>871</td>
+  <td class=xl29 x:num>150</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G51/30,1)">5</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D40:D51)+SUM(F40:F51))/(SUM(C40:C51)+SUM(E40:E51)))/30,2)">3.11</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F40:F51)/SUM(E40:E51))/30,2)">3.56</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G51/7,1)">21.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D40:D51)+SUM(F40:F51))/(SUM(C40:C51)+SUM(E40:E51)))/7,1)">13.3</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F40:F51)/SUM(E40:E51))/7,1)">15.3</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>277</td>
+  <td class=xl29 x:num>112</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G52/30,1)">3.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D41:D52)+SUM(F41:F52))/(SUM(C41:C52)+SUM(E41:E52)))/30,2)">3.07</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F41:F52)/SUM(E41:E52))/30,2)">3.56</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G52/7,1)">16</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D41:D52)+SUM(F41:F52))/(SUM(C41:C52)+SUM(E41:E52)))/7,1)">13.1</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F41:F52)/SUM(E41:E52))/7,1)">15.3</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>39</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>505</td>
+  <td class=xl29 x:num>109</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G53/30,1)">3.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D42:D53)+SUM(F42:F53))/(SUM(C42:C53)+SUM(E42:E53)))/30,2)">2.99</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F42:F53)/SUM(E42:E53))/30,2)">3.59</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G53/7,1)">15.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D42:D53)+SUM(F42:F53))/(SUM(C42:C53)+SUM(E42:E53)))/7,1)">12.8</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F42:F53)/SUM(E42:E53))/7,1)">15.4</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>29</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>966</td>
+  <td class=xl29 x:num>180</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G54/30,1)">6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D43:D54)+SUM(F43:F54))/(SUM(C43:C54)+SUM(E43:E54)))/30,2)">2.97</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F43:F54)/SUM(E43:E54))/30,2)">3.67</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G54/7,1)">25.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D43:D54)+SUM(F43:F54))/(SUM(C43:C54)+SUM(E43:E54)))/7,1)">12.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F43:F54)/SUM(E43:E54))/7,1)">15.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>1156</td>
+  <td class=xl29 x:num>189</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G55/30,1)">6.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D44:D55)+SUM(F44:F55))/(SUM(C44:C55)+SUM(E44:E55)))/30,2)">3.06</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F44:F55)/SUM(E44:E55))/30,2)">3.78</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G55/7,1)">27</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D44:D55)+SUM(F44:F55))/(SUM(C44:C55)+SUM(E44:E55)))/7,1)">13.1</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F44:F55)/SUM(E44:E55))/7,1)">16.2</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>635</td>
+  <td class=xl29 x:num>175</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G56/30,1)">5.8</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D45:D56)+SUM(F45:F56))/(SUM(C45:C56)+SUM(E45:E56)))/30,2)">3.03</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F45:F56)/SUM(E45:E56))/30,2)">3.78</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G56/7,1)">25</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D45:D56)+SUM(F45:F56))/(SUM(C45:C56)+SUM(E45:E56)))/7,1)">13</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F45:F56)/SUM(E45:E56))/7,1)">16.2</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>15</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>875</td>
+  <td class=xl29 x:num>172</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G57/30,1)">5.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D46:D57)+SUM(F46:F57))/(SUM(C46:C57)+SUM(E46:E57)))/30,2)">2.95</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F46:F57)/SUM(E46:E57))/30,2)">3.74</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G57/7,1)">24.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D46:D57)+SUM(F46:F57))/(SUM(C46:C57)+SUM(E46:E57)))/7,1)">12.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F46:F57)/SUM(E46:E57))/7,1)">16</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>936</td>
+  <td class=xl29 x:num>192</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G58/30,1)">6.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D47:D58)+SUM(F47:F58))/(SUM(C47:C58)+SUM(E47:E58)))/30,2)">2.87</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F47:F58)/SUM(E47:E58))/30,2)">3.62</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G58/7,1)">27.4</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D47:D58)+SUM(F47:F58))/(SUM(C47:C58)+SUM(E47:E58)))/7,1)">12.3</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F47:F58)/SUM(E47:E58))/7,1)">15.5</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>9</td>
+  <td class=xl29 x:num>1185</td>
+  <td class=xl29 x:num>210</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G59/30,1)">7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D48:D59)+SUM(F48:F59))/(SUM(C48:C59)+SUM(E48:E59)))/30,2)">2.94</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F48:F59)/SUM(E48:E59))/30,2)">3.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G59/7,1)">30</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D48:D59)+SUM(F48:F59))/(SUM(C48:C59)+SUM(E48:E59)))/7,1)">12.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F48:F59)/SUM(E48:E59))/7,1)">15.8</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>11</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>30</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>214</td>
+  <td class=xl29 x:num>95</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G60/30,1)">3.2</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D49:D60)+SUM(F49:F60))/(SUM(C49:C60)+SUM(E49:E60)))/30,2)">2.87</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F49:F60)/SUM(E49:E60))/30,2)">3.64</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G60/7,1)">13.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D49:D60)+SUM(F49:F60))/(SUM(C49:C60)+SUM(E49:E60)))/7,1)">12.3</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F49:F60)/SUM(E49:E60))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 class=xl29 style='height:12.75pt' x:num>2007</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>654</td>
+  <td class=xl29 x:num>155</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G61/30,1)">5.2</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D50:D61)+SUM(F50:F61))/(SUM(C50:C61)+SUM(E50:E61)))/30,2)">2.96</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F50:F61)/SUM(E50:E61))/30,2)">3.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G61/7,1)">22.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D50:D61)+SUM(F50:F61))/(SUM(C50:C61)+SUM(E50:E61)))/7,1)">12.7</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F50:F61)/SUM(E50:E61))/7,1)">15.4</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num><a name=output>2008</a></td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>12</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>1140</td>
+  <td class=xl29 x:num>180</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G62/30,1)">6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D54:D62)+SUM(F54:F62))/(SUM(C54:C62)+SUM(E54:E62)))/30,2)">3.08</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F54:F62)/SUM(E54:E62))/30,2)">3.64</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G62/7,1)">25.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D54:D62)+SUM(F54:F62))/(SUM(C54:C62)+SUM(E54:E62)))/7,1)">13.2</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F54:F62)/SUM(E54:E62))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num>2008</td>
+  <td class=xl29 x:num>2</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>27</td>
+  <td class=xl29 x:num>13</td>
+  <td class=xl29 x:num>1466</td>
+  <td class=xl29 x:num>190</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G63/30,1)">6.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D55:D63)+SUM(F55:F63))/(SUM(C55:C63)+SUM(E55:E63)))/30,2)">3.27</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F55:F63)/SUM(E55:E63))/30,2)">3.67</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G63/7,1)">27.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D55:D63)+SUM(F55:F63))/(SUM(C55:C63)+SUM(E55:E63)))/7,1)">14</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F55:F63)/SUM(E55:E63))/7,1)">15.7</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num>2008</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>8</td>
+  <td class=xl29 x:num>837</td>
+  <td class=xl29 x:num>140</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G64/30,1)">4.7</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D56:D64)+SUM(F56:F64))/(SUM(C56:C64)+SUM(E56:E64)))/30,2)">3.15</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F56:F64)/SUM(E56:E64))/30,2)">3.53</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G64/7,1)">20</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D56:D64)+SUM(F56:F64))/(SUM(C56:C64)+SUM(E56:E64)))/7,1)">13.5</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F56:F64)/SUM(E56:E64))/7,1)">15.1</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num>2008</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>1</td>
+  <td class=xl29 x:num>13</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>375</td>
+  <td class=xl29 x:num>169</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G65/30,1)">5.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D57:D65)+SUM(F57:F65))/(SUM(C57:C65)+SUM(E57:E65)))/30,2)">3.16</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F57:F65)/SUM(E57:E65))/30,2)">3.56</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G65/7,1)">24.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D57:D65)+SUM(F57:F65))/(SUM(C57:C65)+SUM(E57:E65)))/7,1)">13.6</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F57:F65)/SUM(E57:E65))/7,1)">15.2</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num>2008</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>10</td>
+  <td class=xl29 x:num>1185</td>
+  <td class=xl29 x:num>158</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G66/30,1)">5.3</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D58:D66)+SUM(F58:F66))/(SUM(C58:C66)+SUM(E58:E66)))/30,2)">3.37</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F58:F66)/SUM(E58:E66))/30,2)">3.65</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G66/7,1)">22.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D58:D66)+SUM(F58:F66))/(SUM(C58:C66)+SUM(E58:E66)))/7,1)">14.4</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F58:F66)/SUM(E58:E66))/7,1)">15.6</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num>2008</td>
+  <td class=xl29 x:num>6</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>0</td>
+  <td class=xl29 x:num>5</td>
+  <td class=xl29 x:num>481</td>
+  <td class=xl29 x:num>169</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G67/30,1)">5.6</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D59:D67)+SUM(F59:F67))/(SUM(C59:C67)+SUM(E59:E67)))/30,2)">3.48</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F59:F67)/SUM(E59:E67))/30,2)">3.69</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G67/7,1)">24.1</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D59:D67)+SUM(F59:F67))/(SUM(C59:C67)+SUM(E59:E67)))/7,1)">14.9</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F59:F67)/SUM(E59:E67))/7,1)">15.8</td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 align=right style='height:12.75pt' x:num>2008</td>
+  <td class=xl29 x:num>7</td>
+  <td class=xl29 x:num>3</td>
+  <td class=xl29 x:num>128</td>
+  <td class=xl29 x:num>4</td>
+  <td class=xl29 x:num>336</td>
+  <td class=xl29 x:num>147</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G68/30,1)">4.9</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D60:D68)+SUM(F60:F68))/(SUM(C60:C68)+SUM(E60:E68)))/30,2)">3.24</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F60:F68)/SUM(E60:E68))/30,2)">3.54</td>
+  <td class=xl29 x:num x:fmla="=ROUND(G68/7,1)">21</td>
+  <td class=xl29 x:num
+  x:fmla="=ROUND(((SUM(D60:D68)+SUM(F60:F68))/(SUM(C60:C68)+SUM(E60:E68)))/7,1)">13.9</td>
+  <td class=xl29 x:num x:fmla="=ROUND((SUM(F60:F68)/SUM(E60:E68))/7,1)">15.2</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=35 style='width:26pt'></td>
+  <td width=36 style='width:27pt'></td>
+  <td width=96 style='width:72pt'></td>
+  <td width=66 style='width:50pt'></td>
+  <td width=67 style='width:50pt'></td>
+  <td width=117 style='width:88pt'></td>
+  <td width=82 style='width:62pt'></td>
+  <td width=83 style='width:62pt'></td>
+  <td width=83 style='width:62pt'></td>
+  <td width=79 style='width:59pt'></td>
+  <td width=75 style='width:56pt'></td>
+  <td width=81 style='width:61pt'></td>
+  <td width=64 style='width:48pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

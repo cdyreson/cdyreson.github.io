@@ -1,0 +1,476 @@
+:include[macros]
+:arg1[<td align="right" bgcolor="#D0D0D0"><FONT
+        SIZE="3" face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;Editor-in-Chief:&nbsp;<a 
+         style="text-decoration:colon[]none"
+         href="http://www.cs.arizona.edu/~rts">Richard&nbsp;T.&nbsp;Snodgrass</a></FONT></td>
+]
+:macro[EditorInChief]
+:arg1[ ]
+:macro[NoEICinTitleRow]
+:arg1[
+The <em>Transactions on Database Systems</em> (:journalAcronym[])
+is part of the family of journals produced by the
+<A HREF="http://www.acm.org/">ACM</a>.
+:journalAcronym[] publishes one volume yearly.  
+Each volume is comprised of four issues, which appear in
+March, June, September and December.
+<ul>
+<table summary="TOC">
+ <tr>
+  <td valign=top>
+    <font face=":myFont[]">
+      <b>About :journalAcronym[]</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <A 
+          HREF="Charter.html"
+          onMouseOver="Charter.src=backArrow.src"
+          onMouseOut="Charter.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Charter"
+           name="Charter"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Charter and scope
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Editors.html"
+          onMouseOver="EditorsTOC.src=backArrow.src"
+          onMouseOut="EditorsTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Editorial Board" 
+           name="EditorsTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial Board
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Editorials.html"
+          onMouseOver="EditorialsTOC.src=backArrow.src"
+          onMouseOut="EditorialsTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Editorials"
+           name="EditorialsTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           :journalAcronym[] editorials
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Editorials.html#SIGMODRecordColumns"
+          onMouseOver="SIGMODRecordColumns.src=backArrow.src"
+          onMouseOut="SIGMODRecordColumns.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGMOD Record Column" 
+           name="SIGMODRecordColumns"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGMOD Record column
+        </font>
+        </A>
+      </td></tr>
+    </table>
+    <br>
+    <font face=":myFont[]">
+      <b>For readers</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0">
+      <tr><td>
+        <A 
+          HREF="Upcoming.html"
+          onMouseOver="UpcomingTOC.src=backArrow.src"
+          onMouseOut="UpcomingTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Upcoming issue" 
+           name="UpcomingTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Upcoming issues
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://portal.acm.org/tods/current"
+          onMouseOver="CurrentTOC.src=backArrow.src"
+          onMouseOut="CurrentTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Current issue" 
+           name="CurrentTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Current issue
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://portal.acm.org/tods"
+          onMouseOver="PastPortalTOC.src=backArrow.src"
+          onMouseOut="PastPortalTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Archive of issues (ACM Portal)" 
+           name="PastPortalTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Archive of issues (ACM Portal)
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://www.acm.org/sigmod/dblp/db/journals/tods/index.html"
+          onMouseOver="PastDBLPTOC.src=backArrow.src"
+          onMouseOut="PastDBLPTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Archive of issues (DBLP)" 
+           name="PastDBLPTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Archive of issues (DBLP)</A>
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Subscription.html"
+          onMouseOver="SubscribeTOC.src=backArrow.src"
+          onMouseOut="SubscribeTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Subscribe to TODS" 
+           name="SubscribeTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Subscribe to :journalAcronym[]
+        </font>
+        </A>
+      </td></tr>
+    </table><br>
+    <font face=":myFont[]">
+      <b>For referees</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <A 
+          HREF="Referees.html#Rights"
+          onMouseOver="RefereeRights.src=backArrow.src"
+          onMouseOut="RefereeRights.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Referee rights" 
+           name="RefereeRights"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Referee rights
+        </font>
+        </A>
+      </td></tr>
+%      <tr><td>
+%        <A 
+%          HREF="Referees.html#Instructions"
+%          onMouseOver="RefereeInstructions.src=backArrow.src"
+%          onMouseOut="RefereeInstructions.src=forwardArrow.src"
+%          style="text-decoration:colon[]none">
+%        <img 
+%           alt="Referee instructions" 
+%           name="RefereeInstructions"
+%           border=0
+%           valign="center" 
+%           src="across.gif">&nbsp;
+%        <font face=":myFont[]">
+%           Referee instructions
+%        </font>
+%        </A>
+%      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Referees.html#Guidelines"
+          onMouseOver="RefereeGuidelines.src=backArrow.src"
+          onMouseOut="RefereeGuidelines.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Referee guidelines" 
+           name="RefereeGuidelines"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Referee guidelines
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Referees.html#Forms"
+          onMouseOver="RefereeForms.src=backArrow.src"
+          onMouseOut="RefereeForms.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="TODS review form" 
+           name="RefereeForms"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           :journalAcronym[] review form
+        </font>
+        </A>
+      </td></tr>
+     </table>
+   </td>
+   <td valign="top">
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   </td>
+   <td valign="top">
+    <font face=":myFont[]">
+      <b>For authors</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <A 
+          HREF="Authors.html#ManuscriptPreparation"
+          onMouseOver="ManuTOC.src=backArrow.src"
+          onMouseOut="ManuTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Author Instructions - Manuscript Preparation" 
+           name="ManuTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Manuscript preparation
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Authors.html#SubmissionforEditorialReview"
+          onMouseOver="SubmitTOC.src=backArrow.src"
+          onMouseOut="SubmitTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Submission instructions"
+           name="SubmitTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Submission instructions
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A
+          HREF="TurnaroundTime.html"
+          onMouseOver="TurnaroundTOC.src=backArrow.src"
+          onMouseOut="TurnaroundTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Publication statistics"
+           name="TurnaroundTOC"
+           border=0
+           valign="center"
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Publication statistics
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="COI.html"
+          onMouseOver="COITOC.src=backArrow.src"
+          onMouseOut="COITOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Conflict of interest policy" 
+           name="COITOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Conflict of interest policy
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Authors.html#ProceduresforAcceptedPapers"
+          onMouseOver="ProcTOC.src=backArrow.src"
+          onMouseOut="ProcTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Procedures for accepted papers"
+           name="ProcTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Procedures for accepted papers
+        </font>
+        </A>
+      </td></tr>
+    </table>
+    <br>
+    <font face=":myFont[]">
+      <b>Related ACM links</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0">
+      <tr><td>
+        <A 
+          HREF="http://www.acm.org/dl/toc.html"
+          onMouseOver="ACMTOC.src=backArrow.src"
+          onMouseOut="ACMTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="All ACM journals"
+           name="ACMTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           All ACM journals
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://www.acm.org/dl"
+          onMouseOver="DLTOC.src=backArrow.src"
+          onMouseOut="DLTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="ACM Digital Library"
+           name="DLTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           ACM Digital Library
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://www.acm.org/dl/Search.html"
+          onMouseOver="DLSearchTOC.src=backArrow.src"
+          onMouseOut="DLSearchTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Search ACM Digital Library"
+           name="DLSearchTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Search ACM Digital Library
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//www.informatik.uni-trier.de/~ley/db/indices/query.html"
+          onMouseOver="SIGMODDBLP.src=backArrow.src"
+          onMouseOut="SIGMODDBLP.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Search SIGMOD DBLP" 
+           name="SIGMODDBLP"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Search SIGMOD DBLP
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//acm.org/sigmod/"
+          onMouseOver="SIGMODTOC.src=backArrow.src"
+          onMouseOut="SIGMODTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGMOD home page" 
+           name="SIGMODTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGMOD
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//acm.org/sigkdd/"
+          onMouseOver="SIGKDD.src=backArrow.src"
+          onMouseOut="SIGKDD.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGKDD home page" 
+           name="SIGKDD"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGKDD
+        </font>
+        </A>
+      </td></tr>
+     </table>
+   </td>
+ </tr>
+</table>
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Home Page]

@@ -1,0 +1,1072 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 99.7.20)  13 SEP 1999 11:34
+**./images.tex
+(images.tex
+LaTeX2e <1996/12/01> patch level 1
+Babel <v3.6h> and hyphenation patterns for american, danish, german, loaded.
+
+(/pack/tetex-0.4/texmf/tex/latex/base/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/pack/tetex-0.4/texmf/tex/latex/base/size10.clo
+File: size10.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/pack/tetex-0.4/texmf/tex/latex/psnfss/times.sty
+Package: times 1995/08/16 5.2 Times PSNFSS2e package
+) (/pack/tetex-0.4/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1996/10/31 v1.0c Standard LaTeX Graphics (DPC,SPQR)
+(/pack/tetex-0.4/texmf/tex/latex/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+) (/pack/tetex-0.4/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 82.
+(/pack/tetex-0.4/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1996/12/12 v3.0d Driver-dependant file (DPC,SPQR)
+)) (/pack/tetex-0.4/texmf/tex/latex/tools/xspace.sty
+Package: xspace 1996/12/06 v1.05 Space after command names (DPC)
+) (/pack/tetex-0.4/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1996/11/20 v2.2d Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 85.
+) (/user/curtis/vldb/vldb.sty
+Document Style Option 'vldb'.
+) (/pack/tetex-0.4/texmf/tex/latex/graphics/color.sty
+Package: color 1997/01/07 v1.0d Standard LaTeX Color (DPC)
+(/pack/tetex-0.4/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 128.
+(/pack/tetex-0.4/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1996/12/12 v3.0d Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box26
+\lthtmlwrite=\write3
+(images.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 135.
+
+(/pack/tetex-0.4/texmf/tex/latex/psnfss/ot1ptm.fd
+File: OT1ptm.fd 1996/01/28 Fontinst v1.504 font definitions for OT1/ptm.
+)
+latex2htmlLength hsize=166.55026pt
+latex2htmlLength vsize=701.46375pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00003pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=-7.22743pt
+latex2htmlLength evensidemargin=-7.22743pt
+File: idraw/edgeStandard.ps Graphic file (type eps)
+<idraw/edgeStandard.ps>
+l2hSize :tex2html_wrap2749:95.55656pt::0.0pt::166.55026pt.
+[1
+
+
+
+
+]
+File: idraw/edgeList.ps Graphic file (type eps)
+<idraw/edgeList.ps>
+Overfull \hbox (11.21307pt too wide) in paragraph at lines 160--161
+[][] 
+ []
+
+l2hSize :tex2html_wrap2751:95.55656pt::0.0pt::166.55026pt.
+[2
+
+
+
+]
+File: idraw/movieHalf.ps Graphic file (type eps)
+<idraw/movieHalf.ps>
+Overfull \hbox (313.3405pt too wide) in paragraph at lines 168--169
+[][] 
+ []
+
+l2hSize :tex2html_wrap2801:202.35512pt::0.0pt::166.55026pt.
+[3
+
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 179.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 179.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 179.
+(/pack/tetex-0.4/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1996/11/20 v2.2dLaTeX symbol font definitions
+)
+l2hSize :tex2html_wrap_inline2117:8.0pt::8.0pt::103.62111pt.
+[4
+
+
+
+]
+l2hSize :tex2html_wrap_inline2123:6.94444pt::0.0pt::25.46515pt.
+[5
+
+
+
+]
+l2hSize :tex2html_wrap_inline2125:6.83331pt::0.0pt::6.25002pt.
+[6
+
+
+
+]
+l2hSize :tex2html_wrap_inline2127:7.33331pt::7.33331pt::57.63853pt.
+[7
+
+
+
+]
+l2hSize :tex2html_wrap_inline2129:6.94444pt::0.0pt::25.46515pt.
+[8
+
+
+
+]
+l2hSize :tex2html_wrap_inline2137:6.83331pt::0.0pt::6.89725pt.
+[9
+
+
+
+]
+l2hSize :tex2html_wrap_inline2139:11.45207pt::0.0pt::33.74545pt.
+[10
+
+
+
+]
+l2hSize :tex2html_wrap_inline2147:8.0pt::8.0pt::152.8762pt.
+[11
+
+
+
+]
+l2hSize :tex2html_wrap_inline2153:8.0pt::8.0pt::70.37196pt.
+[12
+
+
+
+]
+l2hSize :tex2html_wrap_inline2159:8.0pt::8.0pt::93.87625pt.
+[13
+
+
+
+]
+l2hSize :tex2html_wrap_inline2165:8.0pt::8.0pt::30.46068pt.
+[14
+
+
+
+]
+l2hSize :tex2html_wrap_inline2167:9.15pt::9.15pt::5.0pt.
+[15
+
+
+
+]
+l2hSize :tex2html_wrap_inline2171:6.94444pt::0.0pt::21.74431pt.
+[16
+
+
+
+]
+l2hSize :tex2html_wrap_inline2173:6.83331pt::0.0pt::25.84476pt.
+[17
+
+
+
+]
+l2hSize :tex2html_wrap_inline2175:6.83331pt::0.0pt::23.06511pt.
+[18
+
+
+
+]
+l2hSize :tex2html_wrap_inline2177:6.94444pt::0.0pt::20.211pt.
+[19
+
+
+
+]
+l2hSize :tex2html_wrap_inline2187:8.0pt::8.0pt::45.77602pt.
+[20
+
+
+
+]
+l2hSize :tex2html_wrap_inline2189:8.0pt::8.0pt::152.46396pt.
+[21
+
+
+
+]
+l2hSize :tex2html_wrap_inline2191:7.33331pt::7.33331pt::132.97621pt.
+[22
+
+
+
+]
+l2hSize :tex2html_wrap_inline2193:9.37892pt::9.37892pt::191.72511pt.
+
+Overfull \hbox (28.6749pt too wide) in paragraph at lines 311--312
+[]|[] 
+ []
+
+[23
+
+
+
+]
+l2hSize :tex2html_wrap_inline2195:8.0pt::8.0pt::150.93065pt.
+[24
+
+
+
+]
+l2hSize :tex2html_wrap_inline384:6.74997pt::0.0pt::5.00002pt.
+[25
+
+
+
+]
+l2hSize :tex2html_wrap_inline2199:7.33331pt::7.33331pt::30.4671pt.
+[26
+
+
+
+]
+l2hSize :tex2html_wrap_inline2201:7.24997pt::7.24997pt::7.7778pt.
+[27
+
+
+
+]
+l2hSize :tex2html_wrap_inline2203:7.24997pt::7.24997pt::7.7778pt.
+[28
+
+
+
+]
+l2hSize :tex2html_wrap_inline2205:7.44444pt::7.44444pt::26.36665pt.
+[29
+
+
+
+]
+l2hSize :tex2html_wrap_inline2207:7.33331pt::7.33331pt::27.68745pt.
+[30
+
+
+
+]
+l2hSize :tex2html_wrap_inline2209:6.74997pt::0.0pt::16.66672pt.
+[31
+
+
+
+]
+l2hSize :tex2html_wrap_inline2211:7.44444pt::7.44444pt::24.83334pt.
+[32
+
+
+
+]
+File: idraw/virtualEdge.ps Graphic file (type eps)
+<idraw/virtualEdge.ps>
+Overfull \hbox (25.56943pt too wide) in paragraph at lines 373--374
+[][] 
+ []
+
+l2hSize :tex2html_wrap3251:139.7234pt::0.0pt::166.55026pt.
+[33
+
+
+
+]
+l2hSize :tex2html_wrap_inline2217:7.44444pt::7.44444pt::109.06454pt.
+[34
+
+
+
+]
+l2hSize :tex2html_wrap_inline2219:7.44444pt::7.44444pt::26.2096pt.
+[35
+
+
+
+]
+l2hSize :tex2html_wrap_inline2229:12.50206pt::12.50206pt::114.81152pt.
+[36
+
+
+
+]
+l2hSize :tex2html_wrap_inline2231:12.50206pt::12.50206pt::110.40184pt.
+[37
+
+
+
+]
+l2hSize :tex2html_wrap_inline2235:6.83331pt::0.0pt::17.45276pt.
+[38
+
+
+
+]
+l2hSize :tex2html_wrap_inline2237:8.0pt::8.0pt::203.68071pt.
+
+Overfull \hbox (40.6305pt too wide) in paragraph at lines 411--412
+[]|[] 
+ []
+
+[39
+
+
+
+]
+l2hSize :tex2html_wrap_inline2239:8.0pt::8.0pt::161.21915pt.
+[40
+
+
+
+]
+l2hSize :tex2html_wrap_inline2241:8.0pt::8.0pt::151.59879pt.
+[41
+
+
+
+]
+l2hSize :tex2html_wrap_inline2243:12.50206pt::12.50206pt::141.23518pt.
+[42
+
+
+
+]
+l2hSize :tex2html_wrap_inline2245:12.0632pt::12.0632pt::164.65776pt.
+
+Overfull \hbox (1.60754pt too wide) in paragraph at lines 435--436
+[]|[] 
+ []
+
+[43
+
+
+
+]
+l2hSize :tex2html_wrap_inline2253:7.44444pt::7.44444pt::133.72139pt.
+[44
+
+
+
+]
+l2hSize :tex2html_wrap_inline2257:12.50206pt::12.50206pt::162.32373pt.
+[45
+
+
+
+]
+l2hSize :tex2html_wrap_inline2259:8.0pt::8.0pt::86.0504pt.
+[46
+
+
+
+]
+l2hSize :tex2html_wrap_inline2261:11.95207pt::11.95207pt::93.87506pt.
+[47
+
+
+
+]
+l2hSize :tex2html_wrap_inline2267:8.0pt::8.0pt::38.02133pt.
+[48
+
+
+
+]
+l2hSize :tex2html_wrap_inline2283:7.33331pt::7.33331pt::163.51602pt.
+[49
+
+
+
+]
+l2hSize :tex2html_wrap_inline2287:6.83331pt::0.0pt::6.80551pt.
+[50
+
+
+
+]
+l2hSize :tex2html_wrap_inline2291:12.50206pt::12.50206pt::75.41962pt.
+[51
+
+
+
+]
+l2hSize :tex2html_wrap_inline2293:8.0pt::8.0pt::217.47166pt.
+
+Overfull \hbox (54.42145pt too wide) in paragraph at lines 491--492
+[]|[] 
+ []
+
+[52
+
+
+
+]
+l2hSize :tex2html_wrap_inline2295:8.0pt::8.0pt::217.47166pt.
+
+Overfull \hbox (54.42145pt too wide) in paragraph at lines 497--498
+[]|[] 
+ []
+
+[53
+
+
+
+]
+l2hSize :tex2html_wrap_inline2297:8.0pt::8.0pt::201.63824pt.
+
+Overfull \hbox (38.58803pt too wide) in paragraph at lines 503--504
+[]|[] 
+ []
+
+[54
+
+
+
+]
+l2hSize :tex2html_wrap_inline2303:7.33331pt::7.33331pt::29.01895pt.
+[55
+
+
+
+]
+l2hSize :tex2html_wrap_inline2305:7.33331pt::7.33331pt::10.70908pt.
+[56
+
+
+
+]
+l2hSize :tex2html_wrap_inline2307:7.33331pt::7.33331pt::12.76466pt.
+[57
+
+
+
+]
+l2hSize :tex2html_wrap_inline2309:8.0pt::8.0pt::121.81279pt.
+[58
+
+
+
+]
+l2hSize :tex2html_wrap_inline2313:8.0pt::8.0pt::122.32393pt.
+[59
+
+
+
+]
+l2hSize :tex2html_wrap_inline2321:8.87476pt::8.87476pt::166.24747pt.
+
+Overfull \hbox (3.19725pt too wide) in paragraph at lines 542--543
+[]|[] 
+ []
+
+[60
+
+
+
+]
+l2hSize :tex2html_wrap_inline2329:8.0pt::8.0pt::103.62111pt.
+[61
+
+
+
+]
+l2hSize :tex2html_wrap_inline2333:12.50206pt::12.50206pt::222.53436pt.
+
+Overfull \hbox (59.48415pt too wide) in paragraph at lines 554--555
+[]|[] 
+ []
+
+[62
+
+
+
+]
+l2hSize :tex2html_wrap_inline2337:12.0632pt::12.0632pt::151.29889pt.
+[63
+
+
+
+]
+l2hSize :tex2html_wrap_inline2339:12.89656pt::12.89656pt::111.98654pt.
+[64
+
+
+
+]
+l2hSize :tex2html_wrap_inline2341:12.0632pt::12.0632pt::162.21638pt.
+[65
+
+
+
+]
+l2hSize :tex2html_wrap_inline2345:8.0pt::8.0pt::125.40248pt.
+[66
+
+
+
+]
+l2hSize :tex2html_wrap_inline2349:8.0pt::8.0pt::106.74973pt.
+[67
+
+
+
+]
+l2hSize :tex2html_wrap_inline2351:8.0pt::8.0pt::153.91634pt.
+[68
+
+
+
+]
+l2hSize :tex2html_wrap_inline2359:7.33331pt::7.33331pt::31.16142pt.
+[69
+
+
+
+]
+l2hSize :tex2html_wrap_inline2363:8.0pt::8.0pt::24.79686pt.
+[70
+
+
+
+]
+l2hSize :tex2html_wrap_inline2367:6.83331pt::0.0pt::25.71696pt.
+[71
+
+
+
+]
+l2hSize :tex2html_wrap_inline2371:8.37476pt::0.0pt::118.74883pt.
+[72
+
+
+
+]
+l2hSize :tex2html_wrap_inline2375:12.50206pt::12.50206pt::170.66776pt.
+
+Overfull \hbox (7.61754pt too wide) in paragraph at lines 621--622
+[]|[] 
+ []
+
+[73
+
+
+
+]
+l2hSize :tex2html_wrap_inline2381:7.33331pt::7.33331pt::25.25363pt.
+[74
+
+
+
+]
+l2hSize :tex2html_wrap_inline2383:7.33331pt::7.33331pt::27.2634pt.
+[75
+
+
+
+]
+l2hSize :tex2html_wrap_inline2385:8.0pt::8.0pt::213.58989pt.
+
+Overfull \hbox (50.53967pt too wide) in paragraph at lines 639--640
+[]|[] 
+ []
+
+[76
+
+
+
+]
+l2hSize :tex2html_wrap_inline2387:6.94444pt::0.0pt::25.46515pt.
+[77
+
+
+
+]
+l2hSize :tex2html_wrap_inline2391:8.87476pt::8.87476pt::162.49295pt.
+[78
+
+
+
+]
+l2hSize :tex2html_wrap_inline2397:14.07542pt::14.07542pt::151.52505pt.
+[79
+
+
+
+]
+l2hSize :tex2html_wrap_inline2399:12.0632pt::12.0632pt::105.99867pt.
+[80
+
+
+
+]
+l2hSize :tex2html_wrap_inline2401:8.01782pt::8.01782pt::210.76952pt.
+
+Overfull \hbox (47.7193pt too wide) in paragraph at lines 674--675
+[]|[] 
+ []
+
+[81
+
+
+
+]
+l2hSize :tex2html_wrap_inline2403:14.07542pt::14.07542pt::106.6231pt.
+[82
+
+
+
+]
+l2hSize :tex2html_wrap_inline2407:7.44444pt::7.44444pt::163.03777pt.
+[83
+
+
+
+]
+l2hSize :tex2html_wrap_inline2413:12.50206pt::12.50206pt::69.78586pt.
+[84
+
+
+
+]
+l2hSize :tex2html_wrap_inline2415:8.0pt::8.0pt::81.39706pt.
+[85
+
+
+
+]
+l2hSize :tex2html_wrap_inline2417:8.0pt::8.0pt::171.84012pt.
+
+Overfull \hbox (8.7899pt too wide) in paragraph at lines 705--706
+[]|[] 
+ []
+
+[86
+
+
+
+]
+l2hSize :tex2html_wrap_inline2421:8.0pt::8.0pt::172.38553pt.
+
+Overfull \hbox (9.33531pt too wide) in paragraph at lines 711--712
+[]|[] 
+ []
+
+[87
+
+
+
+]
+l2hSize :tex2html_wrap_inline2423:8.0pt::8.0pt::191.9723pt.
+
+Overfull \hbox (28.92209pt too wide) in paragraph at lines 717--718
+[]|[] 
+ []
+
+[88
+
+
+
+]
+l2hSize :tex2html_wrap_inline2425:8.0pt::8.0pt::224.22707pt.
+
+Overfull \hbox (61.17685pt too wide) in paragraph at lines 723--724
+[]|[] 
+ []
+
+[89
+
+
+
+]
+l2hSize :tex2html_wrap_inline2427:8.0pt::8.0pt::223.86513pt.
+
+Overfull \hbox (60.81491pt too wide) in paragraph at lines 729--730
+[]|[] 
+ []
+
+[90
+
+
+
+]
+l2hSize :tex2html_wrap_inline2429:8.0pt::8.0pt::212.01497pt.
+
+Overfull \hbox (48.96475pt too wide) in paragraph at lines 735--736
+[]|[] 
+ []
+
+[91
+
+
+
+]
+l2hSize :tex2html_wrap_inline2435:7.33331pt::7.33331pt::14.68878pt.
+[92
+
+
+
+]
+l2hSize :tex2html_wrap_inline2437:7.33331pt::7.33331pt::11.34517pt.
+[93
+
+
+
+]
+l2hSize :tex2html_wrap_inline2439:7.33331pt::7.33331pt::12.6332pt.
+[94
+
+
+
+]
+l2hSize :tex2html_wrap_inline2441:7.33331pt::7.33331pt::22.46198pt.
+[95
+
+
+
+]
+l2hSize :tex2html_wrap_inline2443:8.0pt::8.0pt::197.1025pt.
+
+Overfull \hbox (34.05228pt too wide) in paragraph at lines 765--766
+[]|[] 
+ []
+
+[96
+
+
+
+]
+l2hSize :tex2html_wrap_inline2445:7.44444pt::7.44444pt::26.12903pt.
+[97
+
+
+
+]
+l2hSize :tex2html_wrap_inline2451:7.44444pt::7.44444pt::65.46324pt.
+[98
+
+
+
+]
+l2hSize :tex2html_wrap_inline2453:7.44444pt::7.44444pt::40.99734pt.
+[99
+
+
+
+]
+l2hSize :tex2html_wrap_inline2455:8.87476pt::8.87476pt::134.63077pt.
+[100
+
+
+
+]
+l2hSize :tex2html_wrap_inline2459:12.50206pt::12.50206pt::217.8153pt.
+
+Overfull \hbox (54.76509pt too wide) in paragraph at lines 797--798
+[]|[] 
+ []
+
+[101
+
+
+
+]
+File: idraw/j.ps Graphic file (type eps)
+<idraw/j.ps>
+Overfull \hbox (72.33966pt too wide) in paragraph at lines 803--804
+[][] 
+ []
+
+l2hSize :tex2html_wrap4327:113.30206pt::0.0pt::166.55026pt.
+[102
+
+
+
+]
+l2hSize :tex2html_wrap_inline2463:8.87476pt::8.87476pt::180.98131pt.
+
+Overfull \hbox (17.93109pt too wide) in paragraph at lines 811--812
+[]|[] 
+ []
+
+[103
+
+
+
+]
+l2hSize :tex2html_wrap_inline2471:12.50206pt::12.50206pt::112.97806pt.
+[104
+
+
+
+]
+l2hSize :tex2html_wrap_inline2473:11.95207pt::11.95207pt::217.28958pt.
+
+Overfull \hbox (54.23936pt too wide) in paragraph at lines 823--824
+[]|[] 
+ []
+
+[105
+
+
+
+]
+l2hSize :tex2html_wrap_inline2475:8.0pt::8.0pt::180.7981pt.
+
+Overfull \hbox (17.74788pt too wide) in paragraph at lines 829--830
+[]|[] 
+ []
+
+[106
+
+
+
+]
+l2hSize :tex2html_wrap_inline2477:11.95207pt::11.95207pt::62.67593pt.
+[107
+
+
+
+]
+l2hSize :tex2html_wrap_inline2485:7.33331pt::7.33331pt::30.70926pt.
+[108
+
+
+
+]
+l2hSize :tex2html_wrap_inline2487:8.0pt::8.0pt::231.9153pt.
+
+Overfull \hbox (68.86508pt too wide) in paragraph at lines 847--848
+[]|[] 
+ []
+
+[109
+
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 852.
+l2hSize :tex2html_wrap_inline2489:8.0pt::8.0pt::112.37553pt.
+[110
+
+
+
+]
+l2hSize :tex2html_wrap_inline2493:8.0pt::8.0pt::82.57733pt.
+[111
+
+
+
+]
+l2hSize :tex2html_wrap_inline2497:8.0pt::8.0pt::104.65038pt.
+[112
+
+
+
+]
+l2hSize :tex2html_wrap_inline2499:12.50206pt::12.50206pt::102.97353pt.
+[113
+
+
+
+]
+l2hSize :tex2html_wrap_inline2501:12.96431pt::12.96431pt::181.8863pt.
+
+Overfull \hbox (18.83609pt too wide) in paragraph at lines 879--880
+[]|[] 
+ []
+
+[114
+
+
+
+]
+l2hSize :tex2html_wrap_inline2503:7.51782pt::0.0pt::46.0443pt.
+[115
+
+
+
+]
+l2hSize :tex2html_wrap_inline2505:8.0pt::8.0pt::49.17708pt.
+[116
+
+
+
+]
+l2hSize :tex2html_wrap_inline2513:12.50206pt::12.50206pt::106.7985pt.
+[117
+
+
+
+]
+l2hSize :tex2html_wrap_inline2515:12.96431pt::12.96431pt::203.27533pt.
+
+Overfull \hbox (40.22511pt too wide) in paragraph at lines 903--904
+[]|[] 
+ []
+
+[118
+
+
+
+]
+l2hSize :tex2html_wrap_inline2517:7.51782pt::0.0pt::9.7028pt.
+[119
+
+
+
+]
+l2hSize :tex2html_wrap_inline2525:8.01782pt::8.01782pt::51.04433pt.
+[120
+
+
+
+]
+l2hSize :tex2html_wrap_inline2527:8.0pt::8.0pt::33.21521pt.
+[121
+
+
+
+]
+l2hSize :tex2html_wrap_inline2529:8.0pt::8.0pt::8.88892pt.
+[122
+
+
+
+]
+l2hSize :tex2html_wrap_inline2531:8.0pt::8.0pt::111.42015pt.
+[123
+
+
+
+]
+l2hSize :tex2html_wrap_inline2535:8.01782pt::8.01782pt::54.93321pt.
+[124
+
+
+
+]
+l2hSize :tex2html_wrap_inline2537:8.0pt::8.0pt::81.81606pt.
+[125
+
+
+
+]
+l2hSize :tex2html_wrap_inline2545:8.0pt::8.0pt::39.9944pt.
+[126
+
+
+
+]
+l2hSize :tex2html_wrap_inline2547:8.0pt::8.0pt::39.9944pt.
+[127
+
+
+
+]
+l2hSize :tex2html_wrap_inline2549:8.0pt::8.0pt::43.66216pt.
+[128
+
+
+
+]
+l2hSize :tex2html_wrap_inline2551:12.0632pt::12.0632pt::37.63435pt.
+[129
+
+
+
+]
+l2hSize :tex2html_wrap_inline2553:8.0pt::8.0pt::44.98712pt.
+[130
+
+
+
+]
+l2hSize :tex2html_wrap_inline2559:12.0632pt::12.0632pt::37.63435pt.
+[131
+
+
+
+]
+l2hSize :tex2html_wrap_inline2577:8.0pt::8.0pt::106.57487pt.
+[132
+
+
+
+]
+l2hSize :tex2html_wrap_inline2579:8.0pt::8.0pt::134.8835pt.
+[133
+
+
+
+]
+l2hSize :tex2html_wrap_inline2581:8.0pt::8.0pt::53.25005pt.
+[134
+
+
+
+]
+l2hSize :tex2html_wrap_inline2583:8.0pt::8.0pt::84.83904pt.
+[135
+
+
+
+]
+l2hSize :tex2html_wrap_inline2603:8.0pt::8.0pt::180.16545pt.
+
+Overfull \hbox (17.11523pt too wide) in paragraph at lines 1014--1015
+[]|[] 
+ []
+
+[136
+
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 865 strings out of 10895
+ 10082 string characters out of 72140
+ 52271 words of memory out of 262141
+ 3718 multiletter control sequences out of 9500
+ 6028 words of font info for 22 fonts, out of 150000 for 255
+ 14 hyphenation exceptions out of 607
+ 23i,8n,19p,262b,216s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on images.dvi (136 pages, 38372 bytes).

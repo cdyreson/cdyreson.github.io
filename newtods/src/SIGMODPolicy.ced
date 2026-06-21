@@ -1,0 +1,84 @@
+:include[macros]
+:arg1[
+<b>Approved August 14, 2002</b>
+<BR>
+<b>Amended October 22, 2003</b>
+<BR>
+<b>Amended May 15, 2012</b>
+<OL>
+:li Selection of the invited SIGMOD papers will be done by the SIGMOD PC
+chair,
+   on the bases of high quality and perceived feasibility of being extended
+   into submissions to :journalAcronym[]. A minimum of 0 and a maximum of 4 papers will
+   be selected for invitation.
+
+:li The :journalAcronym[] EiC will then invite submission of extended versions
+   of the selected papers, or a subset thereof.
+
+   Note that :journalAcronym[] requires at least 30% new material. The new material
+   should be content material, not just the addition of obvious proofs or a
+   few more straightforward performance figures. (See the
+   <a href="http://www.acm.org/tods/Authors.html#TypesofPapers">relevant
+   :journalAcronym[] guidelines for authors</a>).
+
+:li 
+These submissions will be reviewed in the normal manner, but
+reviewers will be told that the submission was invited upon the
+recommendation of the SIGMOD PC chair and :journalAcronym[] Editor-in-Chief, 
+and single-blind reviewing will be used.
+   Acceptance is not guaranteed.  The
+   editor handling the paper will be responsible for choosing the reviewers;
+   however, it is expected that at least two of the reviewers will be ones
+   who reviewed the original SIGMOD submission.
+
+:li There will be an accelerated review and resubmission schedule with the
+   goal of having the papers appear together not too distant from the
+   original conference.
+
+   :quote[
+   <table summary="list of dates" cellpadding="1" cellspacing="1" border="0">
+   <tr>
+      <td><font face="Arial">April 7</font></td><td><font face="Arial">
+          SIGMOD Program Chair forwards nominated papers to TODS EiC
+      </font></td>
+   </tr><tr>
+   <tr>
+      <td><font face="Arial">April 15</font></td><td><font face="Arial">
+          TODS EiC invites submissions, due October 1
+      </font></td>
+   </tr><tr>
+      <td><font face="Arial">October 1</font></td><td><font face="Arial">
+          Receive submission
+      </font></td>
+   </tr><tr>
+      <td><font face="Arial">February</font></td><td><font face="Arial">First review completed, taking four months</font></td>
+   </tr><tr>
+      <td><font face="Arial">May</font></td><td><font face="Arial">Second submission, within three months of receiving the review</font></td>
+   </tr><tr>
+      <td><font face="Arial">August</font></td><td><font face="Arial">Second review completed, taking three months</font></td>
+   </tr><tr>
+      <td><font face="Arial">September</font></td><td><font face="Arial">Final revision, within a month of the review</font></td>
+   </tr><tr>
+      <td><font face="Arial">December</font></td><td><font face="Arial">Paper appears, with a production of three months</font></td>
+   </tr>
+   </table>
+   ]
+
+   This is a very tight schedule. Any paper not meeting this schedule can
+   appear in a subsequent issue. It is hoped that the December
+   issue will be a joint SIGMOD/PODS special issue/section.
+
+   At some point ACM will adopt a completely online publication
+   process, in which papers can be "published" (i.e., put on the DL)
+   as they are accepted. This will allow the schedule to be relaxed.
+   We expect that all the papers in the issue will be in one
+   virtual volume.
+
+<li> The special issue (or special section of this issue) may include a
+   short foreword by the SIGMOD PC chair, perhaps jointly authored
+   by the PODS PC chair.
+</ol>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Inviting SIGMOD Papers to TODS]

@@ -1,0 +1,60 @@
+:include[macros]
+:arg1[
+
+(for Papers Authored by ACM :journalAcronym[] Editor-in-Chief)
+
+<ol>
+:li The EiC will submit the paper to an Associate Editor who is specifically
+designated for this purpose and explicitly identified in the web pages for
+that journal. The designated Associate Editor must have agreed to accept
+this
+responsibility and should not be a collaborator of the EiC or from the same
+organization as the EiC.
+
+:li The Associate Editor designated in step 1 (say Alice) will not process
+the
+paper herself, but will hand it to another Associate Editor (say Bob) whose
+identity will not be disclosed to the EiC. Bob will obtain reviews and make
+all decisions regarding processing of the paper (such as reject, requires
+major revision and second review, conditional accept, accept, etc.) and will
+convey these decisions to the EiC by way of Alice. Alice will keep the
+identity of Bob anonymous from the EiC, and Bob will keep the identity of
+the
+reviewers anonymous from Alice.
+
+:li In case of guest edited special issues, such as based on papers invited
+from conferences, the guest editor will make the final decision directly but
+will annonymize all reviewer information in corresponding with the authors,
+including the EiC.
+
+:li In order to avoid the appearance of impropriety, existing standards of
+acceptability must be rigorously applied when considering papers
+(co-)authored
+by EiCs. Papers which are marginal in any way should be rejected.
+</ol>
+
+(This policy is that recommended by the ACM Publications Board; see <A
+href="http://www.acm.org/pubs/conflict_of_interest.html">Conflict of
+Interest
+Policy For Papers Authored By ACM Editors-in-Chief</a>.)
+
+The EiC has appointed  Professor Gerhard Weikum as the designated Associate
+Editor.
+
+(for Papers (co-)Authored by ACM :journalAcronym[] Associate Editors)
+
+:ols
+:li The EiC will submit the paper to an Associate Editor to handle, as is
+   the normal procedure. However, the identity of the AE handling
+   the paper will not be revealed to the authors. Instead, the EiC will
+   serve as an intermediator in all communications between the AE
+   handling the submission and the authors.
+
+:li All other aspects of the handling of such submissions will follow
+   normal procedure.
+:ole
+
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Conflict of Interest Policy]

@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <title>
+      Getting Started with AUCQL
+    </title>
+  </head>
+  <body>
+    <table summary="table" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#E0F0F1" align="left" valign="top">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td>
+                <img src="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/images/logo.gif" alt="Boomerang logo" width="90" height="68" border="2"> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td align="left" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td bgcolor="#E0F0F1">
+                <big>Getting Started with AUCQL</big> <br>
+                 <font color="#800000" size="2">A Dynamic Page-Reconfiguration System</font> 
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellpadding="2" cellspacing="2">
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/index.htm">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/talk.htm">Talk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                Curtis Dyreson
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/">Home</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/publications.htm">Publications</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/projects.htm">Projects</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/code.htm">Software</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/demos.htm">Demos</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/teaching.htm">Teaching</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/contact.htm">Contact me</a> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+        </td>
+        <td valign="top">
+          <br>
+           This section provides an overview of the Aalborg University College Query Language (AUCQL). 
+          <p>
+            <a name="section01"></a>
+          </p>
+          <h3>
+            The Importance of Variables
+          </h3>
+          The key to understanding AUCQL is to understand the use of <i>variables</i>. Variables are established in the FROM clause. The FROM clause is essentially just a list of variable assignments. The value assigned to each variable is the result of one of AUCQL's operations: MATCH, NODES, COLLAPSE, SLICE, PROPERTY, or COALESCE. 
+          <p>
+            <a name="section02"></a>
+          </p>
+          <h3>
+            MATCH
+          </h3>
+          The MATCH operation matches a regular expression to the labels along a path. It is a common semistructured operation, but is typically an implicit operation. Let's start with a simple example that you can edit and/or submit directly to AUCQL's query engine. 
+          <p>
+          </p>
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 1</b>: The following query determines <i>which nodes are reachable from a root via an edge named 'movie'?</i> 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie
+FROM   MATCH(ROOTS, (NAME: movie)) Movie;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie FROM MATCH(ROOTS, (NAME: movie)) Movie;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  The query result is duplicated below. 
+                  <blockquote>
+                    <table summary="table" border="1" cellpadding="9" cellspacing="0">
+                      <tr>
+                        <th>
+                          Movie
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          &amp;Star_Wars_IV
+                        </td>
+                      </tr>
+                    </table>
+                  </blockquote>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          There are actually two movie nodes in the database that match the <i>name</i> property. However, there is a <i>required</i> security property on one of those edges (to <i>Color of Night</i>). This prevents the edge from being matched (because the appropriate security was not given in the query, please see the <a href="security.htm">security examples</a>). 
+          <p>
+            Let's extend the query with an appropriate level of security (note that in general, the security property is an encrypted string!).
+          </p>
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 2</b>: The following query determines <i>which movies are available to someone who is over 18?</i> 
+                  <p>
+                  </p>
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie
+FROM   MATCH(ROOTS, (NAME: movie, SECURITY: 'over 18')) Movie;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie FROM MATCH(ROOTS, (NAME: movie, SECURITY: 'over 18')) Movie;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  The query result is duplicated below. 
+                  <blockquote>
+                    <table summary="table" border="1" cellpadding="9" cellspacing="0">
+                      <tr>
+                        <th>
+                          Movie
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          &amp;Star_Wars_IV
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          &amp;Color_of_Night
+                        </td>
+                      </tr>
+                    </table>
+                  </blockquote>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section03"></a>
+          </p>
+          <h3>
+            Regular expressions
+          </h3>
+          A regular expression is permitted in a MATCH operation. This regular expression is built using the usual rules for regular expressions. The following query uses a Kleene closure (the '*' operator). 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 3</b>: This query retrieves all the nodes that are reachable to a user who is over 18. 
+                  <p>
+                  </p>
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie
+FROM   MATCH(ROOTS, (SECURITY: 'over 18')*) Movie;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie FROM MATCH(ROOTS, (SECURITY: 'over 18')*) Movie;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section04"></a>
+          </p>
+          <h3>
+            Default MATCH operation
+          </h3>
+          Because a MATCH(ROOTS, ...) operation is so common, it is the default operation if an operation is not specified. Here is the same query as that listed above. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 4</b>: This query retrieves all the nodes that are reachable to a user who is over 18. 
+                  <p>
+                  </p>
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Reachable
+FROM   (SECURITY: 'over 18')* Reachable;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Reachable FROM (SECURITY: 'over 18')* Reachable;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section05"></a>
+          </p>
+          <h3>
+            Extending the paths from a variable in a MATCH
+          </h3>
+          The MATCH operation can extend a path from a previous reached node. The first argument is the node to from which to start matching. Frequently, this node is specified by the variable ROOTS; ROOTS represents the roots of the semistructure. In general, any previously assigned variable can be used. 
+          <p>
+          </p>
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 5</b>: <i>What are all the nodes that are reachable from a root?</i> 
+                  <p>
+                  </p>
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18')* Reachable,
+       MATCH(Reachable, (NAME: name)) Name;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18')* Reachable, MATCH(Reachable, (NAME: name)) Name;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  There are a lot of null values for the names since few of the nodes have 'name' edges hanging off of them.
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            Since extending previously matched paths will be common, AUCQL has some useful syntactic sugar. A regular expression of the form
+          </p>
+          <blockquote>
+            Variable.regExp Xvariable
+          </blockquote>
+          is interpreted as follows. 
+          <blockquote>
+            MATCH(Variable, regExp) Xvariable
+          </blockquote>
+          So the query given above can be rewritten more concisely as follows. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 6</b>: <i>What are all the nodes that are reachable from a root?</i> 
+                  <p>
+                  </p>
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18')* Reachable,
+       Reachable.(NAME: name) Name;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18')* Reachable, Reachable.(NAME: name) Name;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section06"></a>
+          </p>
+          <h3>
+            Where clause
+          </h3>
+          In the previous example there were many null values. We can eliminate the nulls in the WHERE clause as follows. 
+          <p>
+          </p>
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Query 7</b>: Which <i>non-null names are reachable from a root?</i> 
+                  <p>
+                  </p>
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18')* Reachable,
+       Reachable.(NAME: name) Name
+WHERE  NONNULL(Name);
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18')* Reachable, Reachable.(NAME: name) Name WHERE NONNULL(Name);"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section07"></a>
+          </p>
+          <h3>
+            Next
+          </h3>
+          Continue with the <a href="defaults.htm">next example</a> to find out more about AUCQL.<br>
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          <hr noshade size="1">
+          <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson">Curtis E. Dyreson</a> and <a style="text-decoration:none" href="http://www.comp.mq.edu.au/~asloane">Anthony Sloane</a> &copy; 1995-2001. All rights reserved.
+        </td>
+      </tr>
+      <tr>
+        <td height="20" bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td colspan="2" bgcolor="#E0F0F1" align="right">
+          <small><i>E-mail questions or comments to <a href="mailto:cdyreson@eecs.wsu.edu">Curtis Dyreson</a></i></small> 
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

@@ -1,0 +1,214 @@
+:include[macros]
+:arg1
+This page documents the history of ACM <i>Transactions on Database Systems</i>
+for future generations.
+
+<h2>Articles</h2>
+<ul>
+<A href="PreviousEditorials.html#HsiaoDec"
+          style="text-decoration:colon[]none">
+        <img
+           alt="December 1980"
+           name="HsiaoDec"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           December 1980, TODS - The First Three Years (1976-1978)
+        </font>
+        </A>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by David K. Hsiao
+        (Also
+           <a style="text-decoration:colon[]none"
+                 href="http://doi.acm.org/10.1145/320610.320611">in PDF from the ACM Digital Library</a>)
+        </font>
+</ul>
+
+<h2>Position Statements</h2>
+<ul>
+<a 
+         style="text-decoration:colon[]none"
+href="2007vision.pdf"
+><img border="none" align="top" src="images/pdf_icon.gif"></a>
+July 27, 2007 
+<a 
+style="text-decoration:colon[]none"
+href="2007vision.pdf">
+A Vision 
+for ACM <i>Transactions on Database Systems</i></a>, 
+by Z. Meral &Ouml;zsoyo&#287;lu
+</ul>
+<ul>
+<a 
+         style="text-decoration:colon[]none"
+href="2004vision.pdf"
+><img border="none" align="top" src="images/pdf_icon.gif"></a>
+June 7, 2004 
+<a 
+style="text-decoration:colon[]none"
+href="2004vision.pdf">
+Status of ACM <i>Transactions on Database Systems</i></a>, 
+by Richard T. Snodgrass
+</ul>
+<ul> 
+<a 
+style="text-decoration:colon[]none"
+href="2001vision.pdf" 
+><img border="none" align="top" src="images/pdf_icon.gif"></a>
+January 29, 2001 
+<a 
+style="text-decoration:colon[]none"
+href="2001vision.pdf">
+A Vision for the ACM <i>Transactions on Database Systems</i></a>,
+        by Richard T. Snodgrass
+</ul>
+
+<h2>Editorials</h2>
+<ul>
+<A href="Editorials.html"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Editorials"
+           name="Editorials"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorials
+        </font>
+        </A>
+</ul>
+
+<h2>People</h2>
+<ul>
+<A href="Editors.html"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Editorial Board"
+           name="EB"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Current Editorial Board
+        </font>
+        </A>
+</ul>
+<ul>
+<A href="PeopleHistory.html#EICs"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Past EiCs"
+           name="EB"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Time-line of Editors-in-Chief, past and present
+        </font>
+        </A>
+</ul>
+<ul>
+<A href="PeopleHistory.html#AEs"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Past Associate Editors"
+           name="EB"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Time-line of Associate Editors, past and present
+        </font>
+        </A>
+</ul>
+<ul>
+<A href="PeopleHistory.html#IDs"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Past Information Directors"
+           name="EB"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Time-line of Information Directors, past and present
+        </font>
+        </A>
+</ul>
+
+<h2>Web Site</h2>
+
+<ul>
+Below is a time-line of the major versions of 
+the <i>TODS</i> web site, as captured
+in the <a href="www.archive.org"
+          style="text-decoration:colon[]none"
+>Internet Archive</a>.
+Click on the page image to surf the site as of the indicated time.
+(For pages prior to 2009, only the entry page is cached locally, with
+links pointing back in time using the 
+<a href="http://web.archive.org/web/web.php"
+          style="text-decoration:colon[]none"
+>WayBack Machine</a>
+at the Internet Archive.)
+Using the WayBack Machine
+<a href="http://web.archive.org/web/*/http://www.acm.org/tods"
+          style="text-decoration:colon[]none"
+>a more complete history of the site, including minor versions, 
+can be accessed</a>.
+
+<table bgcolor="black" border="1" cellspacing="1" cellpadding="10">
+<tr>
+<td bgcolor="white" align="center">
+<b>December 2, 1998</b><br/>The earliest known version of the site
+</td>
+<td bgcolor="white" align="center">
+<b>December 20, 2002</b><br/>A new design of the site goes live
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="history/120298.htm">
+<img height="350" 
+src="history/120298.gif"/>
+</a>
+</td>
+<td align="center">
+<a href="history/121202.htm">
+<img height="350" 
+src="history/122002.gif"/>
+</a>
+</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center">
+<b>June 8, 2007</b><br/><i>TODS</i> news section is added
+</td>
+<td bgcolor="white" align="center">
+<b>Today</b><br/>Current version, Policies and History were added
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="history/060807.htm">
+<img height="350" 
+src="history/060807.gif"/>
+</a>
+</td>
+<td align="center">
+<a href="index.html">
+<img height="350" 
+src="history/090909.gif"/>
+</a>
+</td>
+</tr>
+</table>
+</ul>
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[History of ACM Transactions on Database Systems]
+

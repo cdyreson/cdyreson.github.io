@@ -1,0 +1,102 @@
+<html>
+<head>
+<title> An Incomplete Data Cube : A Perl Implementation </title>
+</head>
+<META NAME="ROBOTS" CONTENT="NOFOLLOW">
+
+<H1> An Incomplete Data Cube : A Perl Implementation</H1>
+
+<hr>
+<h1>Versions</h1>
+0.90 - December 7, 1997
+<UL>
+<a href="perldoc/cube.html">POD Documenation</a> - on-line documentation for every package<BR>
+<a href="perlcode/IncompleteDataCube.tar.gz">IncompleteDataCube.tar.gz</a> - tarred, gzipped Perl 5 modules 
+</UL>
+
+<h1>How to use the cube</h1>
+There are three phases to using an incomplete data cube.
+The code that you download is already configured to 
+build an example cube (the README file in the release package
+will provide more details).
+<OL>
+<LI> The dimensions of the cube must be constructed.
+A dimension consists of <i>units</i> and <i>measures</i>.
+The data cube implementor (DCI) writes one text file
+to describe each dimension.  These specifications are
+then parsed and (internally) stored as graphs and tables
+of names within the cube store.  
+ 
+<LI> The DCI edits a list of cubette specifications.
+These specifications are then parsed and (internally) stored
+within the cube store.  During the parsing, <i>flex</i> (flex
+is a lexical analyser generator) source is produced to sieve data
+from a text file and populate the incomplete data cube.
+The flex source is compiled and input data is passed
+through the resulting lexical analyser to populate the cube.
+(Only flex was up to the task of handling 
+the hundreds of thousands of regular expressions that are
+potentially produced during construction of the data sieve.  
+It is unfortunate because this introduces a non-Java and non-Perl
+dependency, hence the code for the sieve is not 100% pure Java or Perl).
+ 
+<LI> Queries can now be made on the populated cube either
+through a GUI or by calling the appropriate methods directly.
+</OL>
+Currently, the incomplete data cube is designed to obtain data from 
+a <em>text file</em>, the example cube parses an HTTPD access log.
+Specifications for units and measures in three dimension (Time,
+Machines, and Pages) are also provided.
+<P>
+Below we outline the current state of the implementation.
+While the cube is currently functional, much remains to be done.
+<H1>Dependencies</H1>
+<UL>
+<LI> Perl 5 - the code is Object-oriented
+<LI> dbm - Unix dbm files are used to store the cube
+<LI> flex (a lexical analyzer generator) - to sieve data, not for the cube per se
+<LI> development environment is UNIX (SunOS5) - untested in other environments
+(but, it's Perl so there should few portability issues!)
+</UL>
+<H1>Implemented Features</H1>
+<UL>
+<LI> unlimited number of dimensions
+<LI> unlimited number of measures (e.g., days, years, countries)
+<LI> unlimited number of units (e.g., '1 October 1997', 1995, Australia)
+<LI> any user-specified measures and units (none are "built-in")
+<LI> input data parsed from a text file
+<LI> data is "filtered" through cubette specifications
+<LI> data cube data, units, and measures stored in generic database, 
+     for speed the database is currently configured to Unix dbm files
+<LI> query satisfaction algorithm
+<LI> sum queries
+<LI> CGI-bin GUI for query engine
+<LI> sparse storage of data, only points in the cube that have data
+are materialized
+</UL>
+
+<H1>Unimplemented features (wish list)</H1>
+<UL> 
+<LI> incomplete data cube store configured to use Perl DB API
+<LI> input data to be retrieved from database using Perl DB API
+<LI> GUI to modify cubette store
+<LI> deletion/renaming of units/measures
+<LI> min - max queries
+<LI> upper - lower bounds on query results
+<LI> completeness measures for query results
+<LI> suggestion of alternate answers
+</UL> 
+
+<hr>
+
+<a href="index.html">Home</a> |
+<a href="overview.html">Overview</a> |
+<a href="publications.html">Papers</a> |
+<a href="code.html">Implementation</a> |
+<a href="javademo.html">Java Applet demo</a> |
+<a href="perldemo.html">Perl CGI demo</a> 
+<P>
+<em><a href="http://www.it.bond.edu.au/cdyreson">Curtis Dyreson</a> &copy; 1997. 
+All rights reserved. </em>
+</html>
+

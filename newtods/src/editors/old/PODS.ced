@@ -1,0 +1,110 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved August 14, 2002</b>
+<BR>
+<b>Amended October 22, 2003</b>
+<OL>
+:li Selection of the invited PODS papers will be done by the PODS PC chair,
+   on the bases of high quality and perceived feasibility of being extended
+   into submissions to JACM and :journalAcronym[].
+
+:li Following selection of the papers, the distribution of the invited papers
+   between JACM and :journalAcronym[] will be decided jointly by the PODS PC chair and
+   designated area editors from JACM and :journalAcronym[]. It is possible that a paper
+   may be dropped from the list in this discussion. Authors will not be
+   given a choice between being invited by JACM or by :journalAcronym[], but an author
+   can certainly decide to ignore the invited submission and submit their
+   paper somewhere else.
+
+   Roughly speaking, two criteria will be used to make the decision.
+    <OL>
+    :li Papers in JACM are intended to be of broad general appeal and papers
+        in :journalAcronym[] are intended primarily for a database audience.
+    :li The more theoretical papers are more appropriate for JACM and the
+        more systems-ish papers are appropriate for :journalAcronym[].
+    </OL>
+   The first criterion will be given more weight than the second.
+
+   A minimum of 0 and a maximum of 8 papers will be selected for invitation.
+
+:li The JACM and :journalAcronym[] EiCs will then invite submission of extended versions
+   of the selected papers. The invitation will be co-signed by the PODS PC
+   chair, and will state that the papers were selected in consultation with
+   the PC chair.
+
+   Note that :journalAcronym[] requires at least 30% new material. The new material
+   should be content material, not just the addition of obvious proofs or a
+   few more straightforward performance figures. (See the
+   <a href="http://www.acm.org/tods/Authors.html#TypesofPapers">relevant
+   :journalAcronym[] guidelines for authors</a>).
+
+:li These submissions will be reviewed in the normal manner, but reviewers
+   will be told that the submission was invited upon the recommendation of
+   the PODS PC chair and the Area Editor. Acceptance is not guaranteed.  The
+   review will be handled by the Area Editor or other associate editor of
+   the journal. The editor handling the paper will be responsible for
+   choosing the reviewers; however, it is expected that at least two of the
+   reviewers will be ones who reviewed the original PODS submission.
+
+:li There will be an accelerated review and resubmission schedule with the
+   goal of having the papers appear together not too distant from the
+   original conference.
+
+   For :journalAcronym[] the schedule is given below.
+   :quote[
+   <table summary="list of dates" cellpadding="1" cellspacing="1" border="0">
+   <tr>
+      <td><font face="Arial">June 22</font></td><td><font face="Arial">
+         PODS Program Chair forwards nominated papers to TODS EiC,
+               immediately after the conference
+       </font></td>
+   </tr><tr>
+      <td><font face="Arial">June 29</font></td><td><font face="Arial">
+         TODS EiC invites submissions, due October 1
+       </font></td>
+   </tr><tr>
+      <td><font face="pArial">October 1</font></td><td><font face="Arial">Receive submission</font></td>
+   </tr><tr>
+      <td><font face="Arial">February</font></td><td><font face="Arial">First review completed, taking four months</font></td>
+   </tr><tr>
+      <td><font face="Arial">May</font></td><td><font face="Arial">Second submission, within three months of receiving the review</font></td>
+   </tr><tr>
+      <td><font face="Arial">August</font></td><td><font face="Arial">Second review completed, taking three months</font></td>
+   </tr><tr>
+      <td><font face="Arial">September</font></td><td><font face="Arial">Final revision, within a month of the review</font></td>
+   </tr><tr>
+      <td><font face="Arial">December</font></td><td><font face="Arial">Paper appears, with a production of three months</font></td>
+   </tr>
+   </table>
+   ]
+
+   This is a very tight schedule. Any paper not meeting this schedule can
+   appear in a subsequent issue. For :journalAcronym[] it is hoped that the December
+   issue will be a joint SIGMOD/PODS special issue/section.
+
+   At some point ACM will adopt a completely online publication
+   process, in which papers can be "published" (i.e., put on the DL)
+   as they are accepted. This will allow the schedule to be relaxed.
+   We expect that all the papers in the issue will be in one
+   virtual volume.
+
+:li The special issue (or special section of this issue) can include a
+   short foreword by the PODS PC chair (for :journalAcronym[], perhaps jointly authored
+   by the SIGMOD PC chair).
+
+:li A paper rejected from one journal may be considered for the other
+   journal only if the author, the PODS PC chair, and both area editors
+   agree. Generally this will be done only if the technical quality was
+   not questioned and if the main reason for rejection was that the paper
+   was in some way inappropriate for the original journal.
+
+:li Conflicts of interest will be handled as usual -- if an area editor
+   has a conflict with an invited paper, then the paper will be handled by the
+   editor-in-chief or by another editor designated by the EiC.
+</ol>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Inviting PODS Papers to TODS]

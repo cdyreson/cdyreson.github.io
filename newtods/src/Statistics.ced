@@ -1,0 +1,150 @@
+:arg1[1/14]
+:macro[latestMonth]
+:arg1[12/13]
+:macro[previousYear]
+:arg1[3.2 months (13.9 weeks)]
+:macro[maxInLatestMonth]
+:arg1[3.4 months (14.5 weeks)]
+:macro[averageDeskInLatestMonth]
+:arg1[3.7 months (15.8 weeks)]
+:macro[averageInLatestMonth]
+:arg1[2012]
+:macro[latestYearForTotals]
+:arg1[36]
+:macro[averageArticleLengthForYear]
+:arg1[59]
+:macro[maxArticleLengthForYear]
+:arg1[22]
+:macro[minArticleLengthForYear]
+:arg1[31]
+:macro[articlesForYear]
+:arg1[15]
+:macro[EndToEndTime]
+:arg1[2012]
+:macro[EndToEndYear]
+
+:include[macros]
+:arg1[
+This page has several charts that depict trends in publication
+metrics for <I>ACM Transactions on Database Systems</I> (:journalAcronym[]).
+:uls
+:li The <a href="#turnaround">turnaround time chart</a> 
+plots the turnaround time for recent submissions.  
+The remaining charts plot a metric over the entire history of 
+:journalAcronym[].
+:li The <a href="#length">article length chart</a> 
+shows the average article length per volume (there is
+one volume per year, published in quarterly issues).  
+The length of the longest and shortest articles within
+a volume are also plotted.
+:li The <a href="#perVolume">number of articles chart</a> 
+shows the total number of articles per volume.
+:li The <a href="#endToEnd">average end-to-end time chart</a> 
+plots the average end-to-end time for articles within a volume.
+The end-to-end time is the duration from the initial submission to the
+on paper printing of an article in :journalAcronym[].
+:ule
+
+<a name="turnaround"/>
+<h2>Turnaround Time</h2>
+The chart shown below plots the turnaround time for submissions to 
+<I>ACM Transactions on Database Systems</I> (:journalAcronym[]).
+
+<img src="images/turnaroundTime.gif">
+
+The Y-axis represents the time, in months.
+The X-axis shows the month in which a paper was submitted to TODS
+for an editorial decision.
+Data collection began in July, 2001 and continues to the current time.
+The <i>turnaround time</i> is roughly defined as the interval of time 
+between when the manuscript was received and when the editorial
+decision was sent. 
+The chart plots four statistics.
+:ols
+:li The <b><font color="#ff0000">Committed Maximum Turnaround Time</font></b> 
+is the boundary that the Editorial
+Board is committed to not exceed, for any submission. 
+For papers submitted prior to January 2004, the Editorial Board committed 
+to providing an editorial decision within 6 months.
+For papers submitted in or after January 2004, the commitment was strengthened 
+to providing an editorial decision within 5 months.
+(The other lines,
+unlike this line, are based on the turnaround times of submissions.)
+:li The <b><font color="#153e7e">Maximum Turnaround Time</font></b> is the maximum or peak turnaround 
+time for submissions in the indicated month.
+Each triangle represents a single, unusually slow paper submitted
+during the indicated month.
+For all the papers submitted in :latestMonth[], the longest turnaround time 
+was :maxInLatestMonth[].
+:li The <b><font color="#f43eff">Average Turnaround Time (external reviews only)</font></b> is
+a moving average of the turnaround time for papers submitted in 
+the indicated month.
+This includes only submissions that went out to external reviewers,
+and specifically excludes desk accepts and rejects.
+To smooth monthly variations, the average is a moving average
+of the entire previous year's submissions.  
+Hence, each square represents the dozens of papers submitted
+in the year up to and including the indicated month.
+The value for :latestMonth[], :averageInLatestMonth[], 
+is the average turnaround time for
+external reviews of all the papers submitted between (inclusive) 
+:previousYear[] and :latestMonth[].
+:li The <b><font color="4e9258">Average Turnaround Time</font></b> is a moving average of
+the turnaround time for papers submitted in the indicated month.
+To smooth monthly variations, the moving average includes 
+all of the submissions for the previous year, as with the pink line.  
+Also, as with the pink line, each diamond represents dozens of 
+papers.
+The value for :latestMonth[], :averageDeskInLatestMonth[], 
+is the average turnaround time for
+for all of the papers submitted between (inclusive)
+:previousYear[] and :latestMonth[].
+:ole
+Note that a data point for a particular month implies that an editorial
+decision for all of the submissions through that month has been made.
+Also note that prior to 6/02, the months shown 
+did not yet have twelve months of history since data
+has been collected only since 7/01.
+
+<a name="length"/>
+<h2>Article Length per Volume</h2>
+The chart shown below plots the article length in pages for each
+volume of :journalAcronym[].
+
+<img src="images/articleLength.gif">
+
+:uls
+:li The <b><font color="ff0000">Longest</font></b> is the length of the 
+longest article in the volume.
+The longest article published in :latestYearForTotals[] was
+:maxArticleLengthForYear[] pages.
+:li The <b><font color="0000ff">Average</font></b> is a moving average of
+the length of an article for papers appearing in the indicated volume.
+Each data point represents many articles.
+The articles published in :latestYearForTotals[] averaged
+:averageArticleLengthForYear[] pages.
+:li The <b><font color="4e9258">Shortest</font></b> is the length of the 
+shortest article in the volume.
+The shortest article published in :latestYearForTotals[] was
+:minArticleLengthForYear[] pages.
+:ule
+
+<a name="perVolume"/>
+<h2>Number of Articles per Volume</h2>
+The chart below shows the total number of articles per volume.
+:articlesForYear[] articles were published in :latestYearForTotals[].
+
+<img src="images/perVolume.gif">
+
+<a name="endToEnd"/>
+<h2>Average End-to-End Time per Volume</h2>
+The end-to-end time is the duration from the initial submission to the
+paper printing of an article in :journalAcronym[].
+The average end-to-end time per article is plotted in the chart given below.
+In :EndToEndYear[], the end-to-end time was :EndToEndTime[] months.
+
+<img src="images/endToEnd.gif">
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[TODS Publication Statistics]

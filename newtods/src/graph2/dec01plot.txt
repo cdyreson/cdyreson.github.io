@@ -1,0 +1,19 @@
+#set xdata time
+#set timefmt "%y"
+#set xrange [ "1976":"2001" ]
+set xrange [ 1976:2001 ]
+set yrange [ 0:85 ]
+#set format x "%y"
+set key left
+set function style lines
+#set terminal x11
+set data style lines
+set xlabel "Year"
+set ylabel "Number of Pages per Volume"
+set terminal postscript eps
+plot 'ave.dat' using 1:2 t '' with lines lw 3 \
+, 'ave.dat' using 1:2 t 'Average length' with points \
+, 'max.dat' using 1:2 t '' \
+, 'max.dat' using 1:2 t 'Longest paper' with points \
+, 'shortest.dat' using 1:2 t '' \
+, 'shortest.dat' using 1:2 t 'Shortest paper' with points

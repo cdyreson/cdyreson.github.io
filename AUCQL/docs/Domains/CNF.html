@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./Domains/CNF.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new($value)"><code>new($value)</code></a></li>
+		<li><a href="#satisfiedby(other)"><code>satisfiedBy(other)</code></a></li>
+		<li><a href="#or(other)"><code>OR(other)</code></a></li>
+		<li><a href="#contains()"><code>contains()</code></a></li>
+		<li><a href="#dump()"><code>dump()</code></a></li>
+		<li><a href="#_initialize(string_s)">_initialize(string s)</a></li>
+		<li><a href="#match()"><code>match()</code></a></li>
+		<li><a href="#collapse()"><code>collapse()</code></a></li>
+		<li><a href="#coalesce()"><code>coalesce()</code></a></li>
+		<li><a href="#slice()"><code>slice()</code></a></li>
+		<li><a href="#presentation()"><code>presentation()</code></a></li>
+		<li><a href="#evaluate(state_state)">evaluate(State state)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A formula in Conjunctive Normal Form.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new($value)"><code>new($value)</code></a></h2>
+<p>Create a new formula from either a string or a list of conjucts, 
+if no values assume false formula.</p>
+<p>
+</p>
+<h2><a name="satisfiedby(other)"><code>satisfiedBy(other)</code></a></h2>
+<p>Does the other assignment of variables satisfy this one?</p>
+<p>
+</p>
+<h2><a name="or(other)"><code>OR(other)</code></a></h2>
+<p>Put all the conjuncts together.</p>
+<p>
+</p>
+<h2><a name="contains()"><code>contains()</code></a></h2>
+<p>Does this contain the other</p>
+<p>
+</p>
+<h2><a name="dump()"><code>dump()</code></a></h2>
+<p>Return a formatted dump of the object.</p>
+<p>
+</p>
+<h2><a name="_initialize(string_s)">_initialize(string s)</a></h2>
+<p>Initialize CNF structure with the passed string value.
+We assume the formula is of the form xxx, yyy, zzz, ...</p>
+<p>
+</p>
+<h2><a name="match()"><code>match()</code></a></h2>
+<p>Match this one against another.</p>
+<p>
+</p>
+<h2><a name="collapse()"><code>collapse()</code></a></h2>
+<p>Collapse this one with another.</p>
+<p>
+</p>
+<h2><a name="coalesce()"><code>coalesce()</code></a></h2>
+<p>Coalesce this one with another.</p>
+<p>
+</p>
+<h2><a name="slice()"><code>slice()</code></a></h2>
+<p>Slice this one using another.</p>
+<p>
+</p>
+<h2><a name="presentation()"><code>presentation()</code></a></h2>
+<p>Present this string value.</p>
+<p>
+</p>
+<h2><a name="evaluate(state_state)">evaluate(State state)</a></h2>
+<p>Self evaluating</p>
+
+</body>
+
+</html>

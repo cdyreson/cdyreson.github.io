@@ -1,0 +1,879 @@
+<HTML>
+<HEAD>
+<TITLE>./ModifiedWWW/Robot.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#QUESTIONS">QUESTIONS</A>
+	<LI><A HREF="#CONSTRUCTOR">CONSTRUCTOR</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#run">run</A>
+		<LI><A HREF="#setAttribute">setAttribute</A>
+		<LI><A HREF="#getAttribute">getAttribute</A>
+		<LI><A HREF="#addUrl">addUrl</A>
+		<LI><A HREF="#addHook">addHook</A>
+		<LI><A HREF="#proxy_no_proxy_env_proxy">proxy, no_proxy, env_proxy</A>
+	</UL>
+
+	<LI><A HREF="#ROBOT_ATTRIBUTES">ROBOT ATTRIBUTES</A>
+	<LI><A HREF="#SUPPORTED_HOOKS">SUPPORTED HOOKS</A>
+	<UL>
+
+		<LI><A HREF="#restore_state">restore-state</A>
+		<LI><A HREF="#invoke_on_all_url">invoke-on-all-url</A>
+		<LI><A HREF="#follow_url_test">follow-url-test</A>
+		<LI><A HREF="#invoke_on_followed_url">invoke-on-followed-url</A>
+		<LI><A HREF="#invoke_on_get_error">invoke-on-get-error</A>
+		<LI><A HREF="#invoke_on_contents">invoke-on-contents</A>
+		<LI><A HREF="#invoke_on_link">invoke-on-link</A>
+		<LI><A HREF="#continue_test">continue-test</A>
+		<LI><A HREF="#save_state">save-state</A>
+		<LI><A HREF="#generate_report">generate-report</A>
+		<LI><A HREF="#modified_since">modified-since</A>
+		<LI><A HREF="#invoke_after_get">invoke-after-get</A>
+	</UL>
+
+	<LI><A HREF="#EXAMPLES">EXAMPLES</A>
+	<UL>
+
+		<LI><A HREF="#Validating_Robot">Validating Robot</A>
+	</UL>
+
+	<LI><A HREF="#MODULE_DEPENDENCIES">MODULE DEPENDENCIES</A>
+	<LI><A HREF="#SEE_ALSO">SEE ALSO</A>
+	<LI><A HREF="#VERSION">VERSION</A>
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
+	<LI><A HREF="#COPYRIGHT">COPYRIGHT</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+ModifiedWWW::Robot - configurable web traversal engine (for web robots
+&amp; agents)
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>   use ModifiedWWW::Robot;
+   
+   $robot = new ModifiedWWW::Robot('NAME'     =&gt; 'MyRobot',
+                           'VERSION'  =&gt; '1.000',
+                           'EMAIL'    =&gt; 'fred@foobar.com');
+   
+   # ... configure the robot's operation ...
+   
+   $robot-&gt;run('<A HREF="http://www.foobar.com/">http://www.foobar.com/</A>');
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This module implements a configurable web traversal engine, for a <EM>robot</EM> or other web agent. Given an initial web page (<EM>URL</EM>), the Robot will get the contents of that page, and extract all links on
+the page, adding them to a list of URLs to visit.
+
+<P>
+Features of the Robot module include:
+
+<UL>
+<LI>
+<P>
+Follows the <EM>Robot Exclusion Protocol</EM>.
+
+<LI>
+<P>
+Supports the 
+<FONT SIZE=-1>META</FONT> element proposed extensions to the Protocol.
+
+<LI>
+<P>
+Implements many of the <EM>Guidelines for Robot Writers</EM>.
+
+<LI>
+<P>
+Configurable.
+
+<LI>
+<P>
+Builds on standard Perl 5 modules for ModifiedWWW, 
+<FONT SIZE=-1>HTTP,</FONT> ModifiedHTML, etc.
+
+</UL>
+<P>
+
+<FONT SIZE=-1>A</FONT> particular application (robot instance) has to
+configure the engine using <EM>hooks</EM>, which are perl functions invoked by the Robot engine at specific points
+in the control loop.
+
+<P>
+The robot engine obeys the Robot Exclusion protocol, as well as a proposed
+addition. See <A HREF="#SEE_ALSO">SEE ALSO</A> for references to documents describing the Robot Exclusion protocol and web
+robots.
+
+<P>
+<HR>
+<H1><A NAME="QUESTIONS">QUESTIONS</A></H1>
+<P>
+This section contains a number of questions. I'm interested in hearing what
+people think, and what you've done faced with similar questions.
+
+<UL>
+<LI>
+<P>
+What style of 
+<FONT SIZE=-1>API</FONT> is preferable for setting attributes? Maybe
+something like the following:
+
+<P>
+<PRE>    $robot-&gt;verbose(1);
+    $traversal = $robot-&gt;traversal();
+</PRE>
+<P>
+I.e. a method for setting and getting each attribute, depending on whether
+you passed an argument?
+
+<LI>
+<P>
+Should the robot module support a standard logging mechanism? For example, an 
+<FONT SIZE=-1>LOGFILE</FONT> attribute, which is set to either a filename, or a filehandle reference. This would need a useful file format.
+
+
+<LI>
+<P>
+Should the 
+<FONT SIZE=-1>AGENT</FONT> be an attribute, so you can set this to whatever
+UserAgent object you want to use? Then if the attribute is not set by the
+first time the <CODE>run()</CODE>
+method is invoked, we'd fall back on the default.
+
+<LI>
+<P>
+Should the module also support an 
+<FONT SIZE=-1>ERRLOG</FONT> attribute, with all warnings and error messages
+sent there?
+
+<LI>
+<P>
+At the moment the robot will print warnings and error messages to stderr,
+as well as returning error status. Should this behaviour be configurable?
+I.e. the ability to turn off warnings.
+
+</UL>
+<P>
+The basic architecture of the Robot is as follows:
+
+<P>
+<PRE>    Hook: restore-state
+    Get Next URL
+        Hook: invoke-on-all-url
+        Hook: follow-url-test
+        Hook: invoke-on-follow-url
+        Get contents of URL
+        Hook: invoke-on-contents
+        Skip if not HTML
+        Foreach link on page:
+            Hook: invoke-on-link
+            Add link to robot's queue
+    Continue? Hook: continue-test
+    Hook: save-state
+    Hook: generate-report
+</PRE>
+<P>
+Each of the hook procedures and functions is described below. 
+<FONT SIZE=-1>A</FONT> robot must provide a <CODE>follow-url-test</CODE> hook, and at least one of the following:
+
+<UL>
+<LI>
+<P>
+<CODE>invoke-on-all-url</CODE>
+
+
+
+<LI>
+<P>
+<CODE>invoke-on-followed-url</CODE>
+
+
+
+<LI>
+<P>
+<CODE>invoke-on-contents</CODE>
+
+
+
+<LI>
+<P>
+<CODE>invoke-on-link</CODE>
+
+
+
+</UL>
+<P>
+<HR>
+<H1><A NAME="CONSTRUCTOR">CONSTRUCTOR</A></H1>
+<P>
+<PRE>   $robot = new ModifiedWWW::Robot( &lt;attribute-value-pairs&gt; );
+</PRE>
+<P>
+Create a new robot engine instance. If the constructor fails for any
+reason, a warning message will be printed, and <CODE>undef</CODE> will be returned.
+
+<P>
+Having created a new robot, it should be configured using the methods
+described below. Certain attributes of the Robot can be set during
+creation; they can be (re)set after creation, using the <CODE>setAttribute()</CODE> method.
+
+<P>
+The attributes of the Robot are described below, in the <EM>Robot Attributes</EM> section.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="run">run</A></H2>
+<P>
+<PRE>    $robot-&gt;run( LIST );
+</PRE>
+<P>
+Invokes the robot, initially traversing the root URLs provided in 
+<FONT SIZE=-1>LIST,</FONT> and any which have been provided with the <CODE>addUrl()</CODE> method before invoking <CODE>run()</CODE>. If you have not correctly configured the robot, the method will return <CODE>undef</CODE>.
+
+<P>
+The initial set of URLs can either be passed as arguments to the
+<STRONG>run()</STRONG> method, or with the <STRONG>addUrl()</STRONG> method before you invoke <STRONG>run()</STRONG>. Each 
+<FONT SIZE=-1>URL</FONT> can be specified either as a string, or as a 
+<FONT SIZE=-1>URI::URL</FONT> object.
+
+
+<P>
+Before invoking this method, you should have provided at least some of the hook functions. See the example given in the 
+<FONT SIZE=-1>EXAMPLES</FONT> section below.
+
+
+<P>
+By default the <STRONG>run()</STRONG> method will iterate until there are no more URLs in the queue. You can
+override this behavior by providing a <CODE>continue-test</CODE> hook function, which checks for the termination conditions. This particular
+hook function, and use of hook functions in general, are described below.
+
+<P>
+<HR>
+<H2><A NAME="setAttribute">setAttribute</A></H2>
+<P>
+<PRE>  $robot-&gt;setAttribute( ... attribute-value-pairs ... );
+</PRE>
+<P>
+Change the value of one or more robot attributes. Attributes are identified
+using a string, and take scalar values. For example, to specify the name of
+your robot, you set the <A HREF="#item_NAME">NAME</A> attribute:
+
+<P>
+<PRE>   $robot-&gt;setAttribute('NAME' =&gt; 'WebStud');
+</PRE>
+<P>
+The supported attributes for the Robot module are listed below, in the <EM>ROBOT ATTRIBUTES</EM> section.
+
+<P>
+<HR>
+<H2><A NAME="getAttribute">getAttribute</A></H2>
+<P>
+<PRE>  $value = $robot-&gt;getAttribute('attribute-name');
+</PRE>
+<P>
+Queries a Robot for the value of an attribute. For example, to query the
+version number of your robot, you would get the <A HREF="#item_VERSION">VERSION</A> attribute:
+
+<P>
+<PRE>   $version = $robot-&gt;getAttribute('VERSION');
+</PRE>
+<P>
+The supported attributes for the Robot module are listed below, in the <EM>ROBOT ATTRIBUTES</EM> section.
+
+<P>
+<HR>
+<H2><A NAME="addUrl">addUrl</A></H2>
+<P>
+<PRE>  $robot-&gt;addUrl( $url1, ..., $urlN );
+</PRE>
+<P>
+Used to add one or more URLs to the queue for the robot. Each 
+<FONT SIZE=-1>URL</FONT> can be passed as a simple string, or as a 
+<FONT SIZE=-1>URI::URL</FONT> object.
+
+
+<P>
+Returns True (non-zero) if all URLs were successfully added, False (zero)
+if at least one of the URLs could not be added.
+
+<P>
+<HR>
+<H2><A NAME="addHook">addHook</A></H2>
+<P>
+<PRE>  $robot-&gt;addHook($hook_name, \&amp;hook_function);
+  
+  sub hook_function { ... }
+</PRE>
+<P>
+Register a <EM>hook</EM> function which should be invoked by the robot at a specific point in the
+control flow. There are a number of
+<EM>hook points</EM> in the robot, which are identified by a string. For a list of hook points,
+see the <STRONG>SUPPORTED HOOKS</STRONG> section below.
+
+<P>
+If you provide more than one function for a particular hook, then the hook
+functions will be invoked in the order they were added. I.e. the first hook
+function called will be the first hook function you added.
+
+<P>
+<HR>
+<H2><A NAME="proxy_no_proxy_env_proxy">proxy, no_proxy, env_proxy</A></H2>
+<P>
+These are convenience functions are setting proxy information on the User
+agent being used to make the requests.
+
+<P>
+<PRE>    $robot-&gt;proxy( protocol, proxy );
+</PRE>
+<P>
+Used to specify a proxy for the given scheme. The protocol argument can be
+a reference to a list of protocols.
+
+<P>
+<PRE>    $robot-&gt;no_proxy(domain1, ... domainN);
+</PRE>
+<P>
+Specifies that proxies should not be used for the specified domains or
+hosts.
+
+<P>
+<PRE>    $robot-&gt;env_proxy();
+</PRE>
+<P>
+Load proxy settings from <EM>protocol</EM><STRONG>_proxy</STRONG> environment variables:
+<CODE>ftp_proxy</CODE>, <CODE>http_proxy</CODE>, <CODE>no_proxy</CODE>, etc.
+
+<P>
+<HR>
+<H1><A NAME="ROBOT_ATTRIBUTES">ROBOT ATTRIBUTES</A></H1>
+<P>
+This section lists the attributes used to configure a Robot object.
+Attributes are set using the <CODE>setAttribute()</CODE> method, and queried using the <CODE>getAttribute()</CODE> method.
+
+<P>
+Some of the attributes <STRONG>must</STRONG> be set before you start the Robot (with the <CODE>run()</CODE> method). These are marked as <STRONG>mandatory</STRONG> in the list below.
+
+<DL>
+<DT><STRONG><A NAME="item_NAME">NAME</A></STRONG><DD>
+<P>
+The name of the Robot. This should be a sequence of alphanumeric
+characters, and is used to identify your Robot. This is used to set the <CODE>User-Agent</CODE> field of 
+<FONT SIZE=-1>HTTP</FONT> requests, and so will appear in server logs.
+
+<P>
+<STRONG>mandatory</STRONG>
+
+
+
+<DT><STRONG><A NAME="item_VERSION">VERSION</A></STRONG><DD>
+<P>
+The version number of your Robot. This should be a floating point number,
+in the format <STRONG>N.NNN</STRONG>.
+
+<P>
+<STRONG>mandatory</STRONG>
+
+
+
+<DT><STRONG><A NAME="item_EMAIL">EMAIL</A></STRONG><DD>
+<P>
+
+<FONT SIZE=-1>A</FONT> valid email address which can be used to contact the
+Robot's owner, for example by someone who wishes to complain about the
+behavior of your robot.
+
+<P>
+<STRONG>mandatory</STRONG>
+
+
+
+<DT><STRONG><A NAME="item_VERBOSE">VERBOSE</A></STRONG><DD>
+<P>
+
+<FONT SIZE=-1>A</FONT> boolean flag which specifies whether the Robot
+should display verbose status information as it runs.
+
+<P>
+Default: 0 (false)
+
+<DT><STRONG><A NAME="item_TRAVERSAL">TRAVERSAL</A></STRONG><DD>
+<P>
+Specifies what traversal style should be adopted by the Robot. Valid values
+are <EM>depth</EM> and <EM>breadth</EM>.
+
+<P>
+Default: depth
+
+<DT><STRONG><A NAME="item_REQUEST_DELAY">REQUEST_DELAY</A></STRONG><DD>
+<P>
+Specifies whether the delay (in minutes) between successive GETs from the
+same server.
+
+<P>
+Default: 1
+
+<DT><STRONG><A NAME="item_IGNORE_TEXT">IGNORE_TEXT</A></STRONG><DD>
+<P>
+Specifies whether the 
+<FONT SIZE=-1>HTML</FONT> structure passed to the <EM>invoke-on-contents</EM>
+hook function should include the textual content of the page, or just the 
+<FONT SIZE=-1>HTML</FONT> elements.
+
+<P>
+Default: 1 (true)
+
+</DL>
+<P>
+<HR>
+<H1><A NAME="SUPPORTED_HOOKS">SUPPORTED HOOKS</A></H1>
+<P>
+This section lists the hooks which are supported by the ModifiedWWW::Robot
+module. The first two arguments passed to a hook function are always the
+Robot object followed by the name of the hook being invoked. I.e. the start
+of a hook function should look something like:
+
+<P>
+<PRE>    sub my_hook_function
+    {
+        my $robot = shift;
+        my $hook  = shift;
+        # ... other, hook-specific, arguments
+</PRE>
+<P>
+Wherever a hook function is passed a <CODE>$url</CODE> argument, this will be a 
+<FONT SIZE=-1>URI::URL</FONT> object, with the 
+<FONT SIZE=-1>URL</FONT> fully specified. I.e. even if the 
+<FONT SIZE=-1>URL</FONT> was seen in a relative link, it will be passed as an absolute 
+<FONT SIZE=-1>URL.</FONT>
+
+
+<P>
+<HR>
+<H2><A NAME="restore_state">restore-state</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook_name) = @_; }
+</PRE>
+<P>
+This hook is invoked just before entering the main iterative loop of the
+robot. The intention is that the hook will be used to restore state, if
+such an operation is required.
+
+<P>
+This can be helpful if the robot is running in an incremental mode, where
+state is saved between each run of the robot.
+
+<P>
+<HR>
+<H2><A NAME="invoke_on_all_url">invoke-on-all-url</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook_name, $url) = @_; }
+</PRE>
+<P>
+This hook is invoked on all URLs seen by the robot, regardless of whether the 
+<FONT SIZE=-1>URL</FONT> is actually traversed. In addition to the standard
+ <CODE>$robot</CODE> and <CODE>$hook</CODE> arguments, the third argument is <CODE>$url</CODE>, which is the 
+<FONT SIZE=-1>URL</FONT> being travered by the robot.
+
+<P>
+For a given 
+<FONT SIZE=-1>URL,</FONT> the hook function will be invoked at most once, regardless of how many times the 
+<FONT SIZE=-1>URL</FONT> is seen by the Robot. If you are interested in seeing the 
+<FONT SIZE=-1>URL</FONT> every time, you can use the
+ <STRONG>invoke-on-link</STRONG> hook.
+
+<P>
+<HR>
+<H2><A NAME="follow_url_test">follow-url-test</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook_name, $url) = @_; return $boolean; }
+</PRE>
+<P>
+This hook is invoked to determine whether the robot should traverse the given 
+<FONT SIZE=-1>URL.</FONT> If the hook function returns 0 (zero), then the robot will do nothing further with the 
+<FONT SIZE=-1>URL.</FONT> If the hook function returns non-zero, then the robot will get the contents of the 
+<FONT SIZE=-1>URL,</FONT> invoke further hooks, and extract links if the contents are 
+<FONT SIZE=-1>HTML.</FONT>
+
+
+<P>
+<HR>
+<H2><A NAME="invoke_on_followed_url">invoke-on-followed-url</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook_name, $url) = @_; }
+</PRE>
+<P>
+This hook is invoked on URLs which are about to be traversed by the robot;
+i.e. URLs which have passed the follow-url-test hook.
+
+<P>
+<HR>
+<H2><A NAME="invoke_on_get_error">invoke-on-get-error</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook_name, $url, $response) = @_; }
+</PRE>
+<P>
+This hook is invoked if the Robot ever fails to get the contents of a 
+<FONT SIZE=-1>URL.</FONT> The <CODE>$response</CODE> argument is an object of type HTTP::Response.
+
+<P>
+<HR>
+<H2><A NAME="invoke_on_contents">invoke-on-contents</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook, $url, $response, $structure, $filename) = @_; }
+</PRE>
+<P>
+This hook function is invoked for all URLs for which the contents are
+successfully retrieved.
+
+<P>
+The <CODE>$url</CODE> argument is a 
+<FONT SIZE=-1>URI::URL</FONT> object for the 
+<FONT SIZE=-1>URL</FONT> currently being processed by the Robot engine.
+
+
+<P>
+The <CODE>$response</CODE> argument is an HTTP::Response object, the result of the 
+<FONT SIZE=-1>GET</FONT> request on the 
+<FONT SIZE=-1>URL.</FONT>
+
+
+<P>
+The <CODE>$structure</CODE> argument is an ModifiedHTML::Element object which is the root of a tree structure constructed from the contents of the 
+<FONT SIZE=-1>URL.</FONT> You can set the
+ <A HREF="#item_IGNORE_TEXT">IGNORE_TEXT</A> attribute to specify whether the structure passed includes the textual content of the page, or just the 
+<FONT SIZE=-1>HTML</FONT> elements.
+
+
+<P>
+The <CODE>$filename</CODE> argument is the path to a local temporary file which contains a local copy of the 
+<FONT SIZE=-1>URL</FONT> contents. You cannot assume that the file will exist after control has returned from your hook function.
+
+
+<P>
+<HR>
+<H2><A NAME="invoke_on_link">invoke-on-link</A></H2>
+<P>
+<PRE>   sub hook { my($robot, $hook_name, $from_url, $to_url) = @_; }
+</PRE>
+<P>
+This hook function is invoked for all links seen as the robot traverses.
+When the robot is parsing a page (<STRONG>$from_url</STRONG>) for links, for every link seen the <EM>invoke-on-link</EM> hook is invoked with the 
+<FONT SIZE=-1>URL</FONT> of the source page, and the destination 
+<FONT SIZE=-1>URL.</FONT> The destination 
+<FONT SIZE=-1>URL</FONT> is in canonical form.
+
+
+<P>
+<HR>
+<H2><A NAME="continue_test">continue-test</A></H2>
+<P>
+<PRE>   sub hook { my($robot) = @_; }
+</PRE>
+<P>
+This hook is invoked at the end of the robot's main iterative loop. If the hook function returns non-zero, then the robot will continue execution with the next 
+<FONT SIZE=-1>URL.</FONT> If the hook function returns zero, then the Robot will terminate the main loop, and close down after invoking the following two hooks.
+
+
+<P>
+If no <CODE>continue-test</CODE> hook function is provided, then the robot will always loop.
+
+<P>
+<HR>
+<H2><A NAME="save_state">save-state</A></H2>
+<P>
+<PRE>   sub hook { my($robot) = @_; }
+</PRE>
+<P>
+This hook is used to save any state information required by the robot
+application.
+
+<P>
+<HR>
+<H2><A NAME="generate_report">generate-report</A></H2>
+<P>
+<PRE>   sub hook { my($robot) = @_; }
+</PRE>
+<P>
+This hook is used to generate a report for the run of the robot, if such is
+desired.
+
+<P>
+<HR>
+<H2><A NAME="modified_since">modified-since</A></H2>
+<P>
+If you provide this hook function, it will be invoked for each 
+<FONT SIZE=-1>URL</FONT> before the robot actually requests it. The function can return a time to use with the If-Modified-Since 
+<FONT SIZE=-1>HTTP</FONT> header. This can be used by a robot to only process those pages which have changed since the last visit.
+
+
+<P>
+Your hook function should be declared as follows:
+
+<P>
+<PRE>    sub modifed_since_hook
+    {
+        my $robot = shift;        # instance of Robot module
+        my $hook  = shift;        # name of hook invoked
+        my $url   = shift;        # URI::URL for the url in question
+    
+        # ... calculate time ...
+        return $time;
+    }
+</PRE>
+<P>
+If your function returns anything other than <CODE>undef</CODE>, then a <STRONG>If-Modified-Since:</STRONG> field will be added to the request header.
+
+<P>
+<HR>
+<H2><A NAME="invoke_after_get">invoke-after-get</A></H2>
+<P>
+This hook function is invoked immediately after the robot makes each 
+<FONT SIZE=-1>GET</FONT> request. This means your hook function will see
+every type of response, not just successful GETs. The hook function is
+passed two arguments: the <CODE>$url</CODE> we tried to 
+<FONT SIZE=-1>GET,</FONT> and the <CODE>$response</CODE> which resulted.
+
+<P>
+If you provided a <EM>modified-since</EM> hook, then provide an invoke-after-get function, and look for error code 304 (or 
+<FONT SIZE=-1>RC_NOT_MODIFIED</FONT> if you are using HTTP::Status, which you should be :-):
+
+
+<P>
+<PRE>    sub after_get_hook
+    {
+        my($robot, $hook, $url, $response) = @_;
+        
+        if ($response-&gt;code == RC_NOT_MODIFIED)
+        {
+        }
+    }
+</PRE>
+<P>
+<HR>
+<H1><A NAME="EXAMPLES">EXAMPLES</A></H1>
+<P>
+This section illustrates use of the Robot module, with code snippets from several sample Robot applications. The code here is not intended to show the right way to code a web robot, but just illustrates the 
+<FONT SIZE=-1>API</FONT> for using the Robot.
+
+
+<P>
+<HR>
+<H2><A NAME="Validating_Robot">Validating Robot</A></H2>
+<P>
+This is a simple robot which you could use to validate your web site. The
+robot uses <STRONG>weblint</STRONG> to check the contents of URLs of type
+<STRONG>text/html</STRONG>
+
+
+
+<P>
+<PRE>   #!/usr/bin/perl
+   require 5.002;
+   use ModifiedWWW::Robot;
+   
+   $rootDocument = $ARGV[0];
+   
+   $robot = new ModifiedWWW::Robot('NAME'     =&gt;  'Validator',
+                           'VERSION'  =&gt;  1.000,
+                           'EMAIL'    =&gt;  'fred@foobar.com');
+   
+   $robot-&gt;addHook('follow-url-test', \&amp;follow_test);
+   $robot-&gt;addHook('invoke-on-contents', \&amp;validate_contents);
+   
+   $robot-&gt;run($rootDocument);
+   
+   #-------------------------------------------------------
+   sub follow_test {
+      my($robot, $hook, $url) = @_;
+   
+      return 0 unless $url-&gt;scheme eq 'http';
+      return 0 
+        if $url =~ /\.(gz|ps|gif|jpg|png|xbm|wav|mpg|zip|pdf|txt)[/]?$/;
+  
+      #---- we're only interested in pages on our site ----
+      return $url =~ /^$rootDocument/;
+   }
+   
+   #-------------------------------------------------------
+   sub validate_contents {
+      my($robot, $hook, $url, $response, $filename) = @_;
+   
+      return unless $response-&gt;content_type eq 'text/html';
+   
+      print STDERR &quot;\n$url\n&quot;;
+   
+      #---- run weblint on local copy of URL contents -----
+      system(&quot;weblint -s $filename&quot;);
+   }
+</PRE>
+<P>
+If you are behind a firewall, then you will have to add something like the
+following, just before calling the <CODE>run()</CODE> method:
+
+<P>
+<PRE>   $robot-&gt;proxy(['ftp', 'http', 'wais', 'gopher'],
+                 '<A HREF="http://firewall:8080/">http://firewall:8080/</A>');
+</PRE>
+<P>
+<HR>
+<H1><A NAME="MODULE_DEPENDENCIES">MODULE DEPENDENCIES</A></H1>
+<P>
+The Robot.pm module builds on a lot of existing Net, ModifiedWWW and other Perl modules. Some of the modules are part of the core Perl distribution, and the latest versions of all modules are available from the Comprehensive Perl Archive Network 
+<FONT SIZE=-1>(CPAN).</FONT> The modules used are:
+
+
+<DL>
+<DT><STRONG><A NAME="item_HTTP">HTTP::Request</A></STRONG><DD>
+<P>
+This module is used to construct 
+<FONT SIZE=-1>HTTP</FONT> requests, when retrieving the contents of a 
+<FONT SIZE=-1>URL,</FONT> or using the 
+<FONT SIZE=-1>HEAD</FONT> request to see if a 
+<FONT SIZE=-1>URL</FONT> exists.
+
+
+<DT><STRONG><A NAME="item_ModifiedHTML">ModifiedHTML::Parse</A></STRONG><DD>
+<P>
+This module builds a tree data structure from the contents of an 
+<FONT SIZE=-1>HTML</FONT> page. This is used to extract the URLs from the links on a page. This is also used to check for page-specific Robot exclusion commands, using the 
+<FONT SIZE=-1>META</FONT> element.
+
+
+<DT><STRONG><A NAME="item_URI">URI::URL</A></STRONG><DD>
+<P>
+This module implements a class for 
+<FONT SIZE=-1>URL</FONT> objects, providing resolution of relative URLs, and access to the different components of a 
+<FONT SIZE=-1>URL.</FONT>
+
+
+<DT><STRONG><A NAME="item_LWP">LWP::RobotUA</A></STRONG><DD>
+<P>
+This is a wrapper around the LWP::UserAgent class. 
+<FONT SIZE=-1>A</FONT> <EM>UserAgent</EM> is used to connect to servers over the network, and make requests. The
+RobotUA module provides transparent compliance with the
+<EM>Robot Exclusion Protocol</EM>.
+
+<DT><STRONG><A NAME="item_HTTP">HTTP::Status</A></STRONG><DD>
+<P>
+This has definitions for 
+<FONT SIZE=-1>HTTP</FONT> response codes, so you can say 
+<FONT SIZE=-1>RC_NOT_MODIFIED</FONT> instead of 304.
+
+
+</DL>
+<P>
+All of these modules are available as part of the libwww-perl5 distribution, which is also available from 
+<FONT SIZE=-1>CPAN.</FONT>
+
+
+<P>
+<HR>
+<H1><A NAME="SEE_ALSO">SEE ALSO</A></H1>
+<DL>
+<DT><STRONG><A NAME="item_The">The SAS Group Home Page</A></STRONG><DD>
+<P>
+<A
+HREF="http://www.cre.canon.co.uk/sas.html">http://www.cre.canon.co.uk/sas.html</A>
+
+
+<P>
+This is the home page of the Group at Canon Research Centre Europe who are
+responsible for Robot.pm.
+
+<DT><STRONG><A NAME="item_Robot">Robot Exclusion Protocol</A></STRONG><DD>
+<P>
+<A
+HREF="http://info.webcrawler.com/mak/projects/robots/norobots.html">http://info.webcrawler.com/mak/projects/robots/norobots.html</A>
+
+
+<P>
+This is a <EM>de facto</EM> standard which defines how a `well behaved' Robot client should interact
+with web servers and web pages.
+
+<DT><STRONG><A NAME="item_Guidelines">Guidelines for Robot Writers</A></STRONG><DD>
+<P>
+<A
+HREF="http://info.webcrawler.com/mak/projects/robots/guidelines.html">http://info.webcrawler.com/mak/projects/robots/guidelines.html</A>
+
+
+<P>
+Guidelines and suggestions for those who are (considering) developing a web
+robot.
+
+<DT><STRONG><A NAME="item_Weblint">Weblint Home Page</A></STRONG><DD>
+<P>
+<A
+HREF="http://www.cre.canon.co.uk/~neilb/weblint/">http://www.cre.canon.co.uk/~neilb/weblint/</A>
+
+
+<P>
+Weblint is a perl script which is used to check 
+<FONT SIZE=-1>HTML</FONT> for syntax errors and stylistic problems, in the
+same way <STRONG>lint</STRONG> is used to check 
+<FONT SIZE=-1>C.</FONT>
+
+<DT><STRONG><A NAME="item_Comprehensive">Comprehensive Perl Archive Network (CPAN)</A></STRONG><DD>
+<P>
+<A HREF="http://www.perl.com/perl/CPAN/">http://www.perl.com/perl/CPAN/</A>
+
+<P>
+This is a well-organized collection of Perl resources, such as modules, documents, and scripts. 
+<FONT SIZE=-1>CPAN</FONT> is mirrored at 
+<FONT SIZE=-1>FTP</FONT> sites around the world.
+
+
+</DL>
+<P>
+<HR>
+<H1><A NAME="VERSION">VERSION</A></H1>
+<P>
+This documentation describes version 0.011 of the Robot module. The module
+requires at least version 5.002 of Perl.
+
+<P>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<DL>
+<DT><STRONG><A NAME="item_Neil">Neil Bowers ltneilb@cre.canon.co.ukgt</A></STRONG><DD>
+</DL>
+<P>
+
+<FONT SIZE=-1>SAS</FONT> Group, Canon Research Centre Europe
+
+<P>
+<HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT</A></H1>
+<P>
+Copyright 
+<FONT SIZE=-1>(C)</FONT> 1997, Canon Research Centre Europe.
+
+<P>
+This module is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+</BODY>
+
+</HTML>

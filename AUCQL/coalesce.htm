@@ -1,0 +1,406 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Using AUCQL's COALESCE Operation</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#D0AEFF" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/images/logo.gif" 
+                  alt="AUCQL logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#D0AEFF">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#D0AEFF">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#D0AEFF"> 
+              <big>Using AUCQL's COALESCE Operation</big>
+              <br>
+              <font color="#800000" size="2">
+              A Query Language for Semistructured Data with Metadata Properties
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#D0AEFF">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/doc.htm">
+              Publications&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+              Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/prototype.htm">
+              Prototype&nbsp;&nbsp;
+             </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/examples.htm">
+              Examples&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/database.htm">
+              The DB
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/basics.htm">
+              Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/defaults.htm">
+              Defaults
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/match.htm">
+              Match
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/property.htm">
+              Property
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/collapse.htm">
+              Collapse
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FF4444">
+<font color="#FFFFFF">             Coalesce
+</font>        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/security.htm">
+             Security
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/transactionTime.htm">
+             Time
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#D0AEFF">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#D0AEFF">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+The COALESCE operation 
+extracts and coalesces the value of a <I>property</I> that
+is distributed over a number of individual paths.
+<P>
+
+<a name="section01"></a>
+<H3>Syntax</H3>
+
+The general form of a COALESCE is given below.
+<BLOCKQUOTE>
+
+  COALESCE(<I>property</I>, <I>variable</I>)
+</BLOCKQUOTE>
+
+The COALESCE operation
+extracts and coalesces the value of the <I>property</I> for the 
+set of paths that connect two nodes in 
+the (<b>collapsed</b>) paths represented by the variable.
+<P>
+The paths are implicitly collapsed prior to evaluating the COALESCE
+if the user forgets to explicitly collapse the path.
+<P>
+
+<a name="section02"></a>
+<H3>Extracting the TRANSACTION TIME</H3>
+
+Let's start with a simple example to extract the transaction time 
+all the 'movie' edges to a star name.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>Get movie stars and their transaction times.</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   movie.stars.name Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) TT;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   movie.stars.name Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) TT;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+The interesting feature about the result is that
+the Bruce Willis node appears twice.
+This is because there are two paths
+to that node, and each has a different transaction time.
+(Bruce Wilis, note the spelling, also appears once).
+</td></tr></table></blockquote>
+
+
+<P>
+
+<a name="section03"></a>
+<H3>Coalescing the TRANSACTION TIME</H3>
+
+Coalescing computes the transaction time over all possible paths.
+Let's do the same query as above, except this time we will coalesce the
+transaction time rather than just extracting it.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>Tell me about movie stars and their transaction times.</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   movie.stars.name Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) TT,
+       COALESCE(TRANSACTION_TIME, Stars) CoalescedTT;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   movie.stars.name Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) TT,
+       COALESCE(TRANSACTION_TIME, Stars) CoalescedTT;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+The result illustrates the difference between the 
+coalesced transaction time and the extracted transaction time.
+</td></tr></table></blockquote>
+
+
+<P>
+
+<a name="section04"></a>
+<H3>Coalescing other properties</H3>
+
+Any property can be coalesced.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>The coalesced names, security, and transaction time of all nodes.</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   ()* All,
+       COALESCE(NAME, All) Name,
+       COALESCE(SECURITY, All) Security,
+       COALESCE(TRANSACTION_TIME, All) TT;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   ()* All,
+       COALESCE(NAME, All) Name,
+       COALESCE(SECURITY, All) Security,
+       COALESCE(TRANSACTION_TIME, All) TT;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://digital.cs.usu.edu/~cdyreson">Curtis E. Dyreson</a>,
+               Michael H. Böhlen, and
+     <a style="text-decoration:none" 
+               href="http://www.cs.auc.dk/~csj">Christian S. Jensen</a>
+     &copy; 1998-2000. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#D0AEFF">&nbsp;</td>
+    <td colspan=2 bgColor="#D0AEFF" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+            <a href="http://validator.w3.org/check/referer"><img 
+               src="http://digital.cs.usu.edu/~cdyreson/pub/images/html401.gif" 
+             height="15"
+             alt="Valid HTML 4.01!" border="0"></a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

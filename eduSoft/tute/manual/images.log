@@ -1,0 +1,87 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 97.2.28)  10 OCT 1997 12:17
+**images.tex
+(images.tex
+LaTeX2e <1996/12/01>
+
+(/usr/local/lib/texmf/tex/latex2e/base/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/local/lib/texmf/tex/latex2e/base/size11.clo
+File: size11.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/lib/texmf/tex/misc/fullpage.sty) (/usr/local/lib/texmf/tex/latex2
+e/packages/latex2html/html.sty
+Package: html 1996/02/01 v1.0 hypertext commands for latex2html (nd, hs)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lsubsubparagraph=\count94
+\c@lequation=\count95
+) (/usr/local/lib/texmf/tex/latex2e/packages/graphics/epsfig.sty
+Package: epsfig 1996/04/11 v1.6 (e)psfig emulation (SPQR)
+(/usr/local/lib/texmf/tex/latex2e/packages/graphics/graphicx.sty
+Package: graphicx 1996/05/29 v1.0 Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/lib/texmf/tex/latex2e/packages/graphics/keyval.sty
+Package: keyval 1995/09/21 v1.09 key=value parser (DPC)
+) (/usr/local/lib/texmf/tex/latex2e/packages/graphics/graphics.sty
+Package: graphics 1996/05/29 v1.0 Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/lib/texmf/tex/latex2e/packages/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+) (/usr/local/lib/texmf/tex/latex2e/packages/graphics/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 82.
+(/usr/local/lib/texmf/tex/latex2e/packages/graphics/dvips.def
+File: dvips.def 1996/05/29 v3.00 Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+\lthtmlwrite=\write3
+\sizebox=\box26
+No file images.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+File: idraw/overall.ps Graphic file (type eps)
+<idraw/overall.ps> [1]
+File: idraw/marker.ps Graphic file (type eps)
+<idraw/marker.ps> [2] (images.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 663 strings out of 10945
+ 7136 string characters out of 73271
+ 50848 words of memory out of 262141
+ 3519 multiletter control sequences out of 9500
+ 3940 words of font info for 15 fonts, out of 100000 for 255
+ 14 hyphenation exceptions out of 607
+ 32i,4n,21p,198b,331s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on images.dvi (2 pages, 376 bytes).

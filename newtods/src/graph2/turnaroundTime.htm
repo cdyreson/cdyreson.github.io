@@ -1,0 +1,1004 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 10">
+<link rel=File-List href="turnaroundTime_files/filelist.xml">
+<link rel=Edit-Time-Data href="turnaroundTime_files/editdata.mso">
+<link rel=OLE-Object-Data href="turnaroundTime_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+x\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Curtis</o:Author>
+  <o:LastAuthor>curt</o:LastAuthor>
+  <o:LastPrinted>2002-09-12T22:00:44Z</o:LastPrinted>
+  <o:Created>2002-05-03T18:09:34Z</o:Created>
+  <o:LastSaved>2007-05-15T16:01:56Z</o:LastSaved>
+  <o:Company>wsu</o:Company>
+  <o:Version>10.6626</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:DownloadComponents/>
+  <o:LocationOfComponents HRef="file:///\\"/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;}
+tr
+	{mso-height-source:auto;}
+col
+	{mso-width-source:auto;}
+br
+	{mso-data-placement:same-cell;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:Normal;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding:0px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl24
+	{mso-style-parent:style0;
+	color:#333399;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;}
+.xl25
+	{mso-style-parent:style0;
+	color:fuchsia;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;}
+.xl26
+	{mso-style-parent:style0;
+	color:green;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;}
+.xl27
+	{mso-style-parent:style0;
+	font-size:11.0pt;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:"\@";
+	text-align:left;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <x:ExcelWorkbook>
+  <x:ExcelWorksheets>
+   <x:ExcelWorksheet>
+    <x:Name>Sheet1</x:Name>
+    <x:WorksheetOptions>
+     <x:DefaultRowHeight>285</x:DefaultRowHeight>
+     <x:Selected/>
+     <x:TopRowVisible>45</x:TopRowVisible>
+     <x:Panes>
+      <x:Pane>
+       <x:Number>3</x:Number>
+       <x:ActiveRow>69</x:ActiveRow>
+       <x:ActiveCol>12</x:ActiveCol>
+      </x:Pane>
+     </x:Panes>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+   <x:ExcelWorksheet>
+    <x:Name>Sheet3</x:Name>
+    <x:WorksheetOptions>
+     <x:Panes>
+      <x:Pane>
+       <x:Number>3</x:Number>
+       <x:ActiveRow>25</x:ActiveRow>
+       <x:ActiveCol>4</x:ActiveCol>
+      </x:Pane>
+     </x:Panes>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+  </x:ExcelWorksheets>
+  <x:WindowHeight>10695</x:WindowHeight>
+  <x:WindowWidth>12300</x:WindowWidth>
+  <x:WindowTopX>120</x:WindowTopX>
+  <x:WindowTopY>15</x:WindowTopY>
+  <x:ProtectStructure>False</x:ProtectStructure>
+  <x:ProtectWindows>False</x:ProtectWindows>
+ </x:ExcelWorkbook>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="22529" fillcolor="none [9]">
+  <v:fill color="none [9]"/>
+  <o:colormenu v:ext="edit" fillcolor="none [31]" strokecolor="none"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body link=blue vlink=purple>
+
+<table x:str border=0 cellpadding=0 cellspacing=0 width=1088 style='border-collapse:
+ collapse;table-layout:fixed;width:816pt'>
+ <col class=xl27 width=64 style='width:48pt'>
+ <col width=64 span=16 style='width:48pt'>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 width=64 style='height:14.25pt;width:48pt'></td>
+  <td class=xl24 width=64 style='width:48pt'>Maximum <span style='display:none'>turnaround
+  time (for that month)</span></td>
+  <td class=xl25 width=64 style='width:48pt'
+  x:str="Average turnaround time (external reviews only)                                    ">Average
+  tu<span style='display:none'>rnaround time (external reviews only)<span
+  style='mso-spacerun:yes'>                                    </span></span></td>
+  <td class=xl26 width=64 style='width:48pt'>Average tu<span style='display:
+  none'>rnaround time</span></td>
+  <td colspan=4 width=256 style='mso-ignore:colspan;width:192pt'>Committed
+  maximum turnaround time</td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt' x:str="Jul --- 2001  ">Jul
+  --- 20<span style='display:none'>01<span style='mso-spacerun:yes'>  </span></span></td>
+  <td align=right x:num>6.7</td>
+  <td align=right x:num>5.5</td>
+  <td align=right x:num>4.7</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Aug</td>
+  <td align=right x:num>6.5</td>
+  <td align=right x:num>5.5</td>
+  <td align=right x:num>4.6</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt' x:str="Sep ">Sep<span
+  style='mso-spacerun:yes'> </span></td>
+  <td align=right x:num>6.1</td>
+  <td align=right x:num>5.3</td>
+  <td align=right x:num>4.7</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Oct</td>
+  <td align=right x:num>5.5</td>
+  <td align=right x:num>5.3</td>
+  <td align=right x:num>3.8</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Nov</td>
+  <td align=right x:num>5.6</td>
+  <td align=right x:num>5.3</td>
+  <td align=right x:num>4</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Dec</td>
+  <td align=right x:num>8.4</td>
+  <td align=right x:num>5.4</td>
+  <td align=right x:num>4.2</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jan -- 20<span
+  style='display:none'>02</span></td>
+  <td align=right x:num>4.3</td>
+  <td align=right x:num>5.2</td>
+  <td align=right x:num>4</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Feb</td>
+  <td align=right x:num>7.1</td>
+  <td align=right x:num>5.3</td>
+  <td align=right x:num>4.2</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Mar</td>
+  <td align=right x:num>6.2</td>
+  <td align=right x:num>5.3</td>
+  <td align=right x:num>4.3</td>
+  <td colspan=13 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Apr</td>
+  <td align=right x:num>5.8</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>4.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>May</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jun</td>
+  <td align=right x:num>6</td>
+  <td align=right x:num>4.7</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jul</td>
+  <td align=right x:num>5.9</td>
+  <td align=right x:num>4.7</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Aug</td>
+  <td align=right x:num>6</td>
+  <td align=right x:num>4.6</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt' x:str="Sep  ">Sep<span
+  style='mso-spacerun:yes'>  </span></td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>4.5</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Oct</td>
+  <td align=right x:num>6</td>
+  <td align=right x:num>4.5</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Nov</td>
+  <td align=right x:num>4.8</td>
+  <td align=right x:num>4.4</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Dec</td>
+  <td align=right x:num>5.9</td>
+  <td align=right x:num>4.2</td>
+  <td align=right x:num>3.4</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jan -- 20<span
+  style='display:none'>03</span></td>
+  <td align=right x:num>5.4</td>
+  <td align=right x:num>4.2</td>
+  <td align=right x:num>3.3</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Feb</td>
+  <td align=right x:num>4.7</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Mar</td>
+  <td align=right x:num>5.7</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Apr</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>May</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jun</td>
+  <td align=right x:num>4.5</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jul</td>
+  <td align=right x:num>6.5</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Aug</td>
+  <td align=right x:num>6.3</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Sep</td>
+  <td align=right x:num>4.3</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Oct</td>
+  <td align=right x:num>5.7</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Nov</td>
+  <td align=right x:num>5.3</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Dec</td>
+  <td align=right x:num>0.7</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>2.9</td>
+  <td align=right x:num>6</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jan -- 20<span
+  style='display:none'>04</span></td>
+  <td align=right x:num>4.4</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Feb</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Mar</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.9</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Apr</td>
+  <td align=right x:num>4.3</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>May</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.8</td>
+  <td align=right x:num>2.9</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jun</td>
+  <td align=right x:num>4.2</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jul</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>2.9</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Aug</td>
+  <td align=right x:num>4.8</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>2.8</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Sep</td>
+  <td align=right x:num>4.2</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>2.8</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Oct</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>2.9</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Nov</td>
+  <td align=right x:num>4.6</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>2.8</td>
+  <td align=right x:num>5</td>
+  <td colspan=12 rowspan=26 height=494 width=768 style='mso-ignore:colspan-rowspan;
+  height:370.5pt;width:576pt'><!--[if gte vml 1]><v:shapetype id="_x0000_t201"
+   coordsize="21600,21600" o:spt="201" path="m,l,21600r21600,l21600,xe">
+   <v:stroke joinstyle="miter"/>
+   <v:path shadowok="f" o:extrusionok="f" strokeok="f" fillok="f"
+    o:connecttype="rect"/>
+   <o:lock v:ext="edit" shapetype="t"/>
+  </v:shapetype><v:shape id="_x0000_s1027" type="#_x0000_t201" style='position:absolute;
+   margin-left:15pt;margin-top:12pt;width:543.75pt;height:354pt;z-index:1'
+   fillcolor="window [78]" strokecolor="windowText [77]" strokeweight="3e-5mm"
+   o:insetmode="auto">
+   <v:fill color2="windowText [77]"/>
+   <o:lock v:ext="edit" rotation="t" text="t"/>
+   <x:ClientData ObjectType="Chart">
+    <x:MoveWithCells/>
+    <x:SizeWithCells/>
+    <x:WebChart>
+     <x:Scaling>
+      <x:ScaleID>0</x:ScaleID>
+      <x:Orientation>MinMax</x:Orientation>
+     </x:Scaling>
+     <x:Scaling>
+      <x:ScaleID>1</x:ScaleID>
+      <x:Orientation>MinMax</x:Orientation>
+      <x:Minimum>0</x:Minimum>
+      <x:Maximum>9</x:Maximum>
+     </x:Scaling>
+     <x:Chart>
+      <x:Name>Chart 3</x:Name>
+      <x:Title>
+       <x:Caption>
+        <x:DataSource>-1</x:DataSource>
+        <x:Data>&quot;<x:B><x:I>TODS</x:I><x:Font> Turnaround Time </x:Font></x:B>&quot;</x:Data>
+       </x:Caption>
+       <x:Font>
+        <x:FontName>Arial</x:FontName>
+        <x:Size>15.75</x:Size>
+        <x:B/>
+        <x:I/>
+        <x:AutoScale/>
+       </x:Font>
+       <x:Border>
+        <x:ColorIndex>None</x:ColorIndex>
+       </x:Border>
+       <x:Interior>
+        <x:ColorIndex>None</x:ColorIndex>
+       </x:Interior>
+       <x:Left>40.837499999999999</x:Left>
+       <x:Top>212.26441772460939</x:Top>
+       <x:Width>672.45749999999998</x:Width>
+       <x:Height>74.092296752929684</x:Height>
+      </x:Title>
+      <x:Options>
+       <x:SizeWithWindow/>
+      </x:Options>
+      <x:PageSetup>
+       <x:ChartSize>FullPage</x:ChartSize>
+       <x:Layout Orientation="Landscape"/>
+      </x:PageSetup>
+      <x:Font>
+       <x:FontName>Arial</x:FontName>
+       <x:Size>12</x:Size>
+       <x:AutoScale/>
+      </x:Font>
+      <x:Left>0</x:Left>
+      <x:Top>-914.9853515625</x:Top>
+      <x:Width>10890</x:Width>
+      <x:Height>8009.97802734375</x:Height>
+      <x:ChartGrowth>
+       <x:HorzGrowth>1</x:HorzGrowth>
+       <x:VertGrowth>1</x:VertGrowth>
+      </x:ChartGrowth>
+      <x:PlotArea>
+       <x:Left>664.29</x:Left>
+       <x:Top>1277.591495361328</x:Top>
+       <x:Width>7160.1750000000002</x:Width>
+       <x:Height>5582.9546850585939</x:Height>
+       <x:Border>
+        <x:ColorIndex>None</x:ColorIndex>
+       </x:Border>
+       <x:Interior>
+        <x:ColorIndex>None</x:ColorIndex>
+       </x:Interior>
+       <x:Font>
+        <x:FontName>Arial</x:FontName>
+        <x:Size>12</x:Size>
+        <x:AutoScale/>
+       </x:Font>
+       <x:Graph>
+        <x:Type>Line</x:Type>
+        <x:SubType>Standard</x:SubType>
+        <x:SubType>Marker</x:SubType>
+        <x:ScaleID>0</x:ScaleID>
+        <x:ScaleID>1</x:ScaleID>
+        <x:Series>
+         <x:Index>3</x:Index>
+         <x:Caption>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$E$1</x:Data>
+         </x:Caption>
+         <x:Name>Committed maximum turnaround time</x:Name>
+         <x:Line>
+          <x:ColorIndex>2</x:ColorIndex>
+          <x:LineStyle>Solid</x:LineStyle>
+          <x:Weight>Wide</x:Weight>
+         </x:Line>
+         <x:Marker>
+          <x:Symbol>None</x:Symbol>
+         </x:Marker>
+         <x:Category>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$A$2:$A$67</x:Data>
+         </x:Category>
+         <x:Value>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$E$2:$E$67</x:Data>
+         </x:Value>
+        </x:Series>
+        <x:Series>
+         <x:Index>0</x:Index>
+         <x:Caption>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$B$1</x:Data>
+         </x:Caption>
+         <x:Name>Maximum turnaround time (for that month)</x:Name>
+         <x:Line>
+          <x:ColorIndex>None</x:ColorIndex>
+         </x:Line>
+         <x:Marker>
+          <x:Symbol>Triangle</x:Symbol>
+          <x:Size>5</x:Size>
+         </x:Marker>
+         <x:Category>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$A$2:$A$67</x:Data>
+         </x:Category>
+         <x:Value>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$B$2:$B$67</x:Data>
+         </x:Value>
+        </x:Series>
+        <x:Series>
+         <x:Index>1</x:Index>
+         <x:Caption>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$C$1</x:Data>
+         </x:Caption>
+         <x:Name>Average turnaround time (external reviews only)                                    </x:Name>
+         <x:Category>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$A$2:$A$67</x:Data>
+         </x:Category>
+         <x:Value>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$C$2:$C$67</x:Data>
+         </x:Value>
+        </x:Series>
+        <x:Series>
+         <x:Index>2</x:Index>
+         <x:Caption>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$D$1</x:Data>
+         </x:Caption>
+         <x:Name>Average turnaround time</x:Name>
+         <x:Line>
+          <x:ColorIndex>49</x:ColorIndex>
+          <x:LineStyle>Solid</x:LineStyle>
+          <x:Weight>Narrow</x:Weight>
+         </x:Line>
+         <x:Marker>
+          <x:Symbol>Circle</x:Symbol>
+          <x:Size>5</x:Size>
+          <x:Border>
+           <x:ColorIndex>49</x:ColorIndex>
+          </x:Border>
+          <x:Interior>
+           <x:ColorIndex>49</x:ColorIndex>
+          </x:Interior>
+         </x:Marker>
+         <x:Category>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$A$2:$A$67</x:Data>
+         </x:Category>
+         <x:Value>
+          <x:DataSource>0</x:DataSource>
+          <x:Data>Sheet1!$D$2:$D$67</x:Data>
+         </x:Value>
+        </x:Series>
+        <x:PlotVisible/>
+       </x:Graph>
+       <x:Axis>
+        <x:Placement>Bottom</x:Placement>
+        <x:AxisID>0</x:AxisID>
+        <x:ScaleID>0</x:ScaleID>
+        <x:CrossingAxis>1</x:CrossingAxis>
+        <x:Alignment>
+         <x:Rotation>-90</x:Rotation>
+        </x:Alignment>
+        <x:Font>
+         <x:FontName>Arial</x:FontName>
+         <x:Size>12</x:Size>
+         <x:AutoScale/>
+        </x:Font>
+        <x:Number>
+         <x:FormatString>@</x:FormatString>
+        </x:Number>
+        <x:MinorTick>Outside</x:MinorTick>
+        <x:TickLabelPosition>Low</x:TickLabelPosition>
+        <x:TickLabelSkip>2</x:TickLabelSkip>
+        <x:TickMarkSkip>2</x:TickMarkSkip>
+        <x:Type>Automatic</x:Type>
+       </x:Axis>
+       <x:Axis>
+        <x:Placement>Left</x:Placement>
+        <x:AxisID>1</x:AxisID>
+        <x:ScaleID>1</x:ScaleID>
+        <x:Title>
+         <x:Caption>
+          <x:DataSource>-1</x:DataSource>
+          <x:Data>&quot;<x:B>Turnaround (in months)</x:B>&quot;</x:Data>
+         </x:Caption>
+         <x:Font>
+          <x:FontName>Arial</x:FontName>
+          <x:Size>12</x:Size>
+          <x:B/>
+          <x:AutoScale/>
+         </x:Font>
+         <x:Border>
+          <x:ColorIndex>None</x:ColorIndex>
+         </x:Border>
+         <x:Interior>
+          <x:ColorIndex>None</x:ColorIndex>
+         </x:Interior>
+        </x:Title>
+        <x:CrossingAxis>0</x:CrossingAxis>
+        <x:CrossesAt>Minimum</x:CrossesAt>
+        <x:CrossBetween>Between</x:CrossBetween>
+        <x:Font>
+         <x:FontName>Arial</x:FontName>
+         <x:Size>12</x:Size>
+         <x:AutoScale/>
+        </x:Font>
+        <x:Number>
+         <x:SourceLinked/>
+         <x:BuiltInFormat>0</x:BuiltInFormat>
+        </x:Number>
+        <x:Type>Value</x:Type>
+        <x:MinorUnit>1</x:MinorUnit>
+       </x:Axis>
+      </x:PlotArea>
+      <x:Legend>
+       <x:Type>Horizontal</x:Type>
+       <x:Placement>Right</x:Placement>
+       <x:Left>7971.48</x:Left>
+       <x:Top>1159.4443194580078</x:Top>
+       <x:Width>2880</x:Width>
+       <x:Height>3700</x:Height>
+       <x:Font>
+        <x:FontName>Arial</x:FontName>
+        <x:Size>11</x:Size>
+       </x:Font>
+      </x:Legend>
+     </x:Chart>
+    </x:WebChart>
+   </x:ClientData>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=20 height=16></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td><![endif]><![if !excel]><img width=726 height=473
+    src="turnaroundTime_files/image001.gif" v:shapes="_x0000_s1027"
+    class=shape v:dpi="96"><![endif]><![if !vml]></td>
+    <td width=22></td>
+   </tr>
+   <tr>
+    <td height=5></td>
+   </tr>
+  </table>
+  </span><![endif]><!--[if !mso & vml]><span style='width:576.0pt;height:370.5pt'></span><![endif]--></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Dec</td>
+  <td align=right x:num>4.6</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>2.9</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jan -- 20<span
+  style='display:none'>05</span></td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>2.9</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Feb</td>
+  <td align=right x:num>4.6</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Mar</td>
+  <td align=right x:num>4.1</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Apr</td>
+  <td align=right x:num>4.4</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>May</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jun</td>
+  <td align=right x:num>5.1</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jul</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Aug</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Sep</td>
+  <td align=right x:num>4.3</td>
+  <td align=right x:num>3.7</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Oct</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Nov</td>
+  <td align=right x:num>4.4</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Dec</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jan -- 20<span
+  style='display:none'>06</span></td>
+  <td align=right x:num>4.5</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Feb</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.2</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Mar</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.5</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Apr</td>
+  <td align=right x:num>3.5</td>
+  <td align=right x:num>3.5</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>May</td>
+  <td align=right x:num>3.6</td>
+  <td align=right x:num>3.5</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jun</td>
+  <td align=right x:num>5.1</td>
+  <td align=right x:num>3.5</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Jul</td>
+  <td align=right x:num>4.9</td>
+  <td align=right x:num>3.4</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Aug</td>
+  <td align=right x:num>5.1</td>
+  <td align=right x:num>3.4</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Sep</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.5</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Oct</td>
+  <td align=right x:num>4.7</td>
+  <td align=right x:num>3.4</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Nov</td>
+  <td align=right x:num>4</td>
+  <td align=right x:num>3.4</td>
+  <td align=right x:num>3.1</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl27 style='height:14.25pt'>Dec</td>
+  <td align=right x:num>5</td>
+  <td align=right x:num>3.4</td>
+  <td align=right x:num>3</td>
+  <td align=right x:num>5</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

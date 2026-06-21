@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>./SemiStructuredDB/LabelList.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_LabelList">NAME LabelList</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Label_labels_">new(Label[] \@labels)</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+		<LI><A HREF="#fromBytes_Byte_b_">fromBytes(Byte[] $b)</A>
+		<LI><A HREF="#toLabelArrayRef_">toLabelArrayRef()</A>
+		<LI><A HREF="#insert_">insert()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_LabelList">NAME LabelList</A></H1>
+<P>
+Class encapsulating an <A HREF="./SemiStructuredDB/Label.html">SemiStructuredDB::Label</A> list in a Database.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An LabelList is a list of <A HREF="././SemiStructuredDB/Label.html#">the Label manpage</A>s.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Label_labels_">new(Label[] \@labels)</A></H2>
+<P>
+Construct a list from an array of Labels
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Convert to a nice String image for dumping
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Returns a byte image of LabelList.
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_Byte_b_">fromBytes(Byte[] $b)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Byte">Byte[] $b</A></STRONG>
+<P>
+- The sequence of bytes
+
+</UL>
+<P>
+Build a new LabelList from a byte image.
+
+<P>
+<HR>
+<H2><A NAME="toLabelArrayRef_">toLabelArrayRef()</A></H2>
+<P>
+Build an array of Labels that is the sequence.
+
+<P>
+<HR>
+<H2><A NAME="insert_">insert()</A></H2>
+<P>
+Add a label to the end of the list
+
+</BODY>
+
+</HTML>

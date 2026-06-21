@@ -1,0 +1,40 @@
+#!/net/local/bin/perl -w
+
+open(PAGE, "< Page.out") || die "could not open Page.out\n";
+open(MACHINE , "< Machine.out") || die "could not open Machine.out\n";
+open(TIME , "< Time.out") || die "could not open Time.out\n";
+
+my (@a);
+while () {
+  $x = <MACHINE> || exit(0);
+  @x = split(/\s+/, $x);
+  pop @x;
+  next unless @x;
+  $a[0] = [ @x ];
+
+  $x = <TIME>;
+  @x = split(/\s+/, $x);
+  pop @x;
+  next unless @x;
+  $a[1] = [ @x ];
+
+  $x = <PAGE>;
+  @x = split(/\s+/, $x);
+  pop @x;
+  next unless @x;
+  $a[2] = [ @x ];
+
+  for ($i0 = 0; $a[0][$i0]; $i0++) {
+    for ($i1 = 0; $a[1][$i1]; $i1++) {
+      for ($i2 = 0; $a[2][$i2]; $i2++) {
+        print $a[0][$i0] . " ";
+        print $a[1][$i1] . " ";
+        print $a[2][$i2] . " n\n";
+        }
+      }
+    }
+  print "t\n";
+}
+close PAGE;
+close MACHINE;
+close TIME;

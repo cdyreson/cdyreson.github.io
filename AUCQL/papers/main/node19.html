@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Adding and Removing Properties</TITLE>
+<META NAME="description" CONTENT="Adding and Removing Properties">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node17.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html236"
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html234"
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html230"
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html237"
+ HREF="node20.html">AUCQL</A>
+<B> Up:</B> <A NAME="tex2html235"
+ HREF="node17.html">Updates</A>
+<B> Previous:</B> <A NAME="tex2html231"
+ HREF="node18.html">Data Updates</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00034200000000000000">&#160;</A>
+<A NAME="sec:propertyChanges">&#160;</A>
+<BR>
+Adding and Removing Properties
+</H3>
+
+<P>
+Just as data evolves over time, properties can also be added and
+(logically) deleted.
+
+<P>
+A property may be added to a label at any time.
+For all existing labels, the new property is simply missing.
+When a label is subsequently inserted or updated, 
+the new property can be used as needed.
+Each property consists of a 
+unique <EM>name</EM>, a <EM>domain</EM> or type, 
+and four operations: 
+<!-- MATH: ${\it PrCl\/}\xspace_p$ -->
+<IMG
+ WIDTH="45" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="${\it PrCl\/}\xspace_p$">
+(collapse), 
+
+<!-- MATH: ${\it PrMa\/}\xspace_p$ -->
+<IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="${\it PrMa\/}\xspace_p$">
+(match),
+
+<!-- MATH: ${\it PrSl\/}\xspace_p$ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="${\it PrSl\/}\xspace_p$">
+(slice), and 
+<!-- MATH: ${\it PrCs\/}\xspace_p$ -->
+<IMG
+ WIDTH="47" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="${\it PrCs\/}\xspace_p$">
+(coalesce).
+A database designer adds this information
+to the semantics of properties, <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">,
+within <I>DB</I>.
+For most properties, the default semantics for operations
+given below will suffice.
+
+<P>
+[Default property semantics]
+
+<P>
+Let <I>t</I><SUB>1</SUB> and <I>t</I><SUB>2</SUB> be any values for the property.
+<PRE><TT>
+		 <IMG
+ WIDTH="173" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="${\it PrCl\/}\xspace_p(t_1, t_2) = \lambda t_1 \; t_2 . \; t_2$">
+<BR>		 <IMG
+ WIDTH="218" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.gif"
+ ALT="${\it PrMa\/}\xspace_p(t_1, t_2) = \lambda t_1 \; t_2 . \; \; t_1 = t_2$">
+<BR>		 <IMG
+ WIDTH="88" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.gif"
+ ALT="${\it PrSl\/}\xspace_p(t_1, t_2)$">
+= Semantic Error <BR>		 <IMG
+ WIDTH="138" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.gif"
+ ALT="${\it PrCs\/}\xspace_p(\{t_1, \ldots, t_n\})$">
+= Semantic Error `<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>properties are by default collapsed to the second
+since paths are collapsed top-down, from a root to a leaf.
+The ``closest'' or most recent property to a leaf is taken to be
+the relevant property.
+Consider a <B>URL</B> property that gives the URL at which a
+datum resides.
+The URL of the page that contains the datum is more relevant 
+than the URL of a parent page, and this is exactly what is 
+computed by the default collapse constructor.
+Two properties match only if they are equal.
+No defaults are provided for and 
+<!-- MATH: ${\it PrSl\/}\xspace_p$ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="${\it PrSl\/}\xspace_p$">
+and 
+<!-- MATH: ${\it PrCs\/}\xspace_p$ -->
+<IMG
+ WIDTH="47" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="${\it PrCs\/}\xspace_p$">since no reasonable, general defaults exists.
+Furthermore, these operations are only invoked by mentioning the
+property name in an additional, specific query language 
+operation (they are in some sense optional).
+
+<P>
+A property can be deleted by removing the property semantics 
+from <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">.
+Although existing labels in the data store will mention the
+property, the property is ignored in all subsequent operations
+(except for labels with a required property in the deleted 
+property, which will fail to match any subsequent query).
+To save space, and remove required properties, the property should
+also be deleted from each edge, but this might be costly and disruptive.
+
+<P>
+This simple support for properties can be enhanced by maintaining a
+history of property insertions and deletions as meta-meta-data.
+This can be accomplished by using name and transaction time properties
+within each label in the meta-data.
+Then previous database states can be queried with the properties
+available as of that previous state, but this issue of transaction time 
+support for property changes is beyond the scope of this paper.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html236"
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html234"
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html230"
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html237"
+ HREF="node20.html">AUCQL</A>
+<B> Up:</B> <A NAME="tex2html235"
+ HREF="node17.html">Updates</A>
+<B> Previous:</B> <A NAME="tex2html231"
+ HREF="node18.html">Data Updates</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

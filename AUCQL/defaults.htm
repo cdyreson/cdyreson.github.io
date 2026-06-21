@@ -1,0 +1,509 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Using AUCQL's Syntactic Sugar</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#D0AEFF" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/AUCQL/images/logo.gif" 
+                  alt="AUCQL logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#D0AEFF">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#D0AEFF">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#D0AEFF"> 
+              <big>Using AUCQL's Syntactic Sugar</big>
+              <br>
+              <font color="#800000" size="2">
+              A Query Language for Semistructured Data with Metadata Properties
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#D0AEFF">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/doc.htm">
+              Publications&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/prototype.htm">
+              Prototype&nbsp;&nbsp;
+             </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/examples.htm">
+              Examples&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/database.htm">
+              The DB
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/basics.htm">
+              Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FF4444">
+<font color="#FFFFFF">              Defaults
+</font>        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/match.htm">
+              Match
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/property.htm">
+              Property
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/collapse.htm">
+              Collapse
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/coalesce.htm">
+             Coalesce
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/security.htm">
+             Security
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL/transactionTime.htm">
+             Time
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#D0AEFF">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#D0AEFF">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+AUCQL has several useful syntactic shortcuts that can be utilized
+to significantly reduce verbose queries.
+In this section, we first give a simple query and then show
+how to use AUCQL's defaults to significantly shorten the query.
+<P>
+
+<a name="section01"></a>
+<H3>A verbose query</H3>
+
+First, let's look at a very verbose query.
+Below is a query to find the names of movie stars.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are movie star names?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM   MATCH(ROOTS, (NAME! movie)) Movie,
+       MATCH(Movie, (NAME! stars).(NAME! name)) Name;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SELECT Movie, Name
+FROM   MATCH(ROOTS, (NAME! movie)) Movie,
+       MATCH(Movie, (NAME! stars).(NAME! name)) Name;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+The query result is duplicated below.
+<BLOCKQUOTE>
+
+
+<table summary="table" border=1 cellpadding=9 cellspacing=0>
+<tr>
+<th valign= %>Movie
+</th><th valign= %>Name
+</th></tr><tr>
+<td valign= %>&amp;Star_Wars_IV
+</td><td valign= %>Bruce Willis
+</td></tr></table>
+</BLOCKQUOTE>
+
+</td></tr></table></blockquote>
+
+
+<P>
+
+<a name="section02"></a>
+<H3>Default MATCHs</H3>
+
+A regular expression that appears alone in a FROM clause,
+by default, is assumed to be the regular expression in a 
+MATCH(ROOTS, ...) operation.
+For instance, 
+the query given above can be shortened by using the default MATCH
+operation as follows.  (Note that the second MATCH cannot be removed since it
+is from Movie rather than ROOTS.)
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are movie star names?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM   (NAME! movie) Movie,
+       MATCH(Movie, (NAME! stars).(NAME! name)) Name;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SELECT Movie, Name
+FROM   (NAME! movie) Movie,
+       MATCH(Movie, (NAME! stars).(NAME! name)) Name;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+<P>
+
+<a name="section03"></a>
+<H3>Variables can start regular expressions</H3>
+
+Now let's remove that second MATCH!
+If a variable starts a regular expression, an implicit MATCH that
+extends the paths represented by the variable is assumed.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are movie star names?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM   (NAME! movie) Movie,
+       Movie.(NAME! stars).(NAME! name) Name;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SELECT Movie, Name
+FROM   (NAME! movie) Movie,
+       Movie.(NAME! stars).(NAME! name) Name;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+<P>
+
+<a name="section04"></a>
+<H3>Required NAME properties</H3>
+
+Since searching on required <B>NAMEs</B> will be common, 
+property lists that are just a single word are assumed to be
+a required NAME property with that word.
+So the above query can be rewritten, more concisely, as follows.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are movie star names?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM movie Movie,
+     Movie.stars.name Name;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SELECT Movie, Name
+FROM movie Movie,
+     Movie.stars.name Name;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+Note that the variable namespace is not distinct from the <B>NAME</B> property 
+valuespace, which can be a potential source of confusion!
+<P>
+
+<a name="section05"></a>
+<H3>An expression in a SELECT or WHERE clause</H3>
+
+An implicit variable assignment is generated for
+expressions that appear in the SELECT or WHERE clause.
+So the above query can be rewritten, more concisely, as follows.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are movie star names?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Movie.stars.name
+FROM movie Movie;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SELECT Movie, Movie.stars.name
+FROM movie Movie;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+The even shorter query
+<PRE>
+
+   SELECT movie, movie.stars.name;
+</PRE>
+
+is a perfectly legal query, but determines all the combinations
+of <tt>movies</tt> and <tt>movie.stars.names</tt> in the database, rather than
+associating a <tt>star.name</tt> with a particular <tt>movie</tt>.
+So it has a very different meaning than the previous queries.
+<P>
+
+<a name="section06"></a>
+<H3>SETting DEFAULT PROPERTYs</H3>
+
+Often it is useful to establish default properties for all the 
+descriptors in a query.
+Setting the <a href="security.htm">security</a> 
+certificates owned by the user, or setting
+the <a href="transactionTime.htm">transaction time</a> 
+to <I>now</I> are common defaults.
+Defaults can be set using the following syntax.
+<BLOCKQUOTE>
+
+   SET DEFAULT PROPERTY <I>property list</I>
+</BLOCKQUOTE>
+
+Below is a query to set the default transaction time.
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the current nodes?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (TRANSACTION_TIME: [now - now]);
+SELECT ()*;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (TRANSACTION_TIME: [now - now]);
+SELECT ()*;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+<P>
+Another common default is to set all the security certificates
+available to the user.  (Note, in general the certificate is
+an encrypted string.)
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>What are the nodes that I can access with my security certificates?</b>:
+
+
+<FORM METHOD="POST" ACTION="http://www.cs.usu.edu/cgi-bin/cgiwrap/~cdyreson/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (SECURITY: 'paid, subscriber, over 18');
+SELECT ()*;
+</pre>
+<BR>
+<INPUT TYPE="hidden" NAME="query" VALUE="SET DEFAULT PROPERTY (SECURITY: 'paid, subscriber, over 18');
+SELECT ()*;">
+<INPUT TYPE="submit" NAME="submit" VALUE="submit">
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>,
+               Michael H. Böhlen, and
+     <a style="text-decoration:none" 
+               href="http://www.cs.auc.dk/~csj">Christian S. Jensen</a>
+     &copy; 1998-2000. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#D0AEFF">&nbsp;</td>
+    <td colspan=2 bgColor="#D0AEFF" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+            <a href="http://validator.w3.org/check/referer"><img 
+               src="http://cs.usu.edu/people/CurtisDyreson/images/html401.gif" 
+             height="15"
+             alt="Valid HTML 4.01!" border="0"></a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

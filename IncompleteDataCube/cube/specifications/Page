@@ -1,0 +1,56 @@
+MEASURE:all
+  UNIT:'All Pages' = (^.*$)
+
+MEASURE:'cgi-bin scripts'
+  UNIT:'SAMaker'
+    SAMaker.'starter'
+    SAMaker.'marker' 
+    SAMaker.'stats' 
+    SAMaker.'next' 
+    SAMaker.'skip' 
+  UNIT:'all scripts' = ("/cgi-bin/")
+
+MEASURE:'SAMaker'
+  UNIT:'starter' = ("/cgi-bin/perl/""icon/"?"tute".*"/starter")
+  UNIT:'marker' = ("/cgi-bin/perl/""icon/"?"tute".*"/marker")
+  UNIT:'stats' = ("/cgi-bin/""icon/"?"tute".*"/stats")
+  UNIT:'next' = ("/cgi-bin/""icon/"?"tute".*"/next")
+  UNIT:'skip' = ("/cgi-bin/""icon/"?"tute".*"/skip")
+
+MEASURE:subjects
+  UNIT:'CP1500 Introduction to Databases'
+    subjectsBySemester.'CP1500 I/1995'
+    subjectsBySemester.'CP1500 I/1996'
+    subjectsBySemester.'CP1500 I/1997'
+  UNIT:'CP2001 Data Structures'
+    subjectsBySemester.'CP2000 I/1995'
+    subjectsBySemester.'CP2001 I/1996'
+    subjectsBySemester.'CP2001 I/1997'
+
+MEASURE:subjectsBySemester
+  UNIT:'CP1500 I/1995' = ("/cp1500/1995")
+  UNIT:'CP1500 I/1996' = ("/cp1500/1996")
+  UNIT:'CP1500 I/1997' = ("/cp1500/1997")
+  UNIT:'CP2000 I/1995' = ("/cp2000/1995")
+  UNIT:'CP2001 I/1996' = ("/cp2001/1996")
+  UNIT:'CP2001 I/1997' = ("/cp2001/1997")
+  UNIT:'CP2003 II/1996' = ("/cp2003/1996")
+  UNIT:'CP2003 II/1997' = ("/cp2003/1997")
+  UNIT:'CP1010 II/1997' = ("/cp1010/1997")
+
+MEASURE:people
+  UNIT:'Curtis Dyreson'
+    pages.'Curtis Incomplete Data Cube'
+    pages.'Curtis Home Page'
+  UNIT:'Olivier de Vel'
+    pages.'Olivier Home Page'
+  UNIT:'Anthony Sloane'
+    pages.'Tony Home Page'
+
+MEASURE:pages
+  UNIT:'CS Home Page' = (" / HT")
+  UNIT:"Curtis Home Page" = {" /~curtis"(\/|"/index.html")?" HT"}
+  UNIT:'Curtis Incomplete Data Cube' = ("curtis/""htmls/"?"Incomplete")
+  UNIT:"Olivier Home Page" = {" /~olivier"(\/|"/index.html")?" HT"}
+  UNIT:"Tony Home Page" = {" /~tony"(\/|"/index.html")?" HT"}
+;

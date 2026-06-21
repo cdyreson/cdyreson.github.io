@@ -1,0 +1,492 @@
+<HTML>
+<HEAD>
+<TITLE>../YAPP/yapp/Parse-Yapp-0.15/Parse/Yapp.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<UL>
+
+		<LI><A HREF="#The_Grammar_file">The Grammar file</A>
+	</UL>
+
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
+	<LI><A HREF="#SEE_ALSO">SEE ALSO</A>
+	<LI><A HREF="#COPYRIGHT">COPYRIGHT</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+Parse::Yapp - Perl extension for generating and using 
+<FONT SIZE=-1>LALR</FONT> parsers. 
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>  yapp.pl -m MyParser grammar_file.yp
+</PRE>
+<P>
+<PRE>  ...
+</PRE>
+<P>
+<PRE>  use MyParser;
+</PRE>
+<P>
+<PRE>  $parser=new MyParser();
+  $value=$parser-&gt;YYParse(yylex =&gt; \&amp;lexer_sub, yyerror =&gt; \&amp;error_sub);
+</PRE>
+<P>
+<PRE>  $nberr=$parser-&gt;YYNberr();
+</PRE>
+<P>
+<PRE>  $parser-&gt;YYData-&gt;{DATA}= [ 'Anything', 'You Want' ];
+</PRE>
+<P>
+<PRE>  $data=$parser-&gt;YYData-&gt;{DATA}[0];
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Parse::Yapp (Yet Another Perl Parser compiler) is a collection of modules
+that let you generate and use yacc like parsers with perl object oriented
+interface.
+
+<P>
+The script yapp.pl is a front-end to the Parse::Yapp module and let you easily create a Perl 
+<FONT SIZE=-1>OO</FONT> parser from an input grammar file.
+
+
+<P>
+<HR>
+<H2><A NAME="The_Grammar_file">The Grammar file</A></H2>
+<DL>
+<DT><STRONG><A NAME="item_Comments">Comments</A></STRONG><DD>
+<P>
+Through all your files, comments are either Perl style, introduced by <EM>#</EM>
+up to the end of line, or 
+<FONT SIZE=-1>C</FONT> style, enclosed between  <EM>/*</EM> and <EM>*/</EM>.
+
+<DT><STRONG><A NAME="item_Tokens">Tokens and string literals</A></STRONG><DD>
+<P>
+Through all the grammar files, two kind of symbols may appear:
+<EM>Non-terminals</EM> symbols, also called <EM>left-hand-side</EM> symbols, which are the names of your rules, and <EM>Terminal</EM> symbols, also called <EM>Tokens</EM>.
+
+<P>
+Tokens are the symbols your lexer function will pass to your parser (see
+below). They come in two flavours: symbolic tokens and string literals.
+
+<P>
+Non-terminals and symbolic tokens share the same identifier syntax:
+
+<P>
+<PRE>                [A-Za-z][A-Za-z0-9_]*
+</PRE>
+<P>
+String literals are enclosed in single quotes and can contain almost
+anything. They will be output to your parser file double-quoted, making any
+special character be as is. '``', '$' and '@' will be automatically quoted
+with '\', making their writing more natural. On the other hand, if you need
+a single quote inside your literal, just quote it with '\'.
+
+<P>
+You cannot have a literal <EM>'error'</EM> in your grammar as it would confuse the driver with the <EM>error</EM> token. Use a symbolic token instead. Using it anyway will produce a warning
+telling you you should have wrote it <EM>error</EM> and will treat it as if it were the <EM>error</EM> token.
+
+<DT><STRONG><A NAME="item_Grammar">Grammar file syntax</A></STRONG><DD>
+<P>
+It is very close to yacc's one (in fact, <EM>Parse::Yapp</EM> should compile a <EM>yacc</EM> grammar without any modification, whereas the opposit is no true).
+
+<P>
+It is divided in three sections separated by <CODE>%%</CODE>:
+
+<P>
+<PRE>        header section
+        %%
+        rules section
+        %%
+        footer section
+</PRE>
+<DL>
+<DT><STRONG><A NAME="item_The">The Header Section section may contain:</A></STRONG><DD>
+<LI>
+<P>
+One ore more code blocks enclosed inside <CODE>%{</CODE> and <CODE>%}</CODE> just like in yacc. They may contain any valid Perl code and will be copied
+verbatim at the very beginning of the parser module. They are not as useful
+as they are in yacc, but you may use them, for example, for global
+variables declaration, though you will see later that such global variables
+can avoided to make reentrant parser modules.
+
+<LI>
+<P>
+Precedence declarations, introduced by <CODE>%left</CODE>, <CODE>%right</CODE> and <CODE>%nonassoc</CODE>
+specifying associativity, followed by the list of tokens or litterals
+having the same precedence and associativity. The precedence beeing the
+later declared have the highest level. (see the yacc or bison manuals for a
+full explanation of how they work, as they are implemented exactly the same
+way in Parse::Yapp)
+
+<LI>
+<P>
+<A HREF="#item__start">%start</A> followed by a rule's left hand side, declaring this rule to be the starting
+rule of your grammar. The default if <A HREF="#item__start">%start</A> is not declared is the first rule in your grammar section.
+
+<LI>
+<P>
+<A HREF="#item__token">%token</A> followed by a list of symbols, forcing them to be recognized as tokens,
+generating a syntax error if used in the left hand side of a rule
+declaration. Note that in Parse::Yapp, you <EM>don't</EM> need to declare tokens as in yacc: any symbol not appearing as a left hand
+side of a rule is considered to be a token. Other yacc declarations or
+constructs such as <CODE>%type</CODE> and <CODE>%union</CODE> are parsed but (almost) ignored.
+
+<DT><STRONG>The Rule Section contains your grammar rules:</STRONG><DD>
+<P>
+
+<FONT SIZE=-1>A</FONT> rule is made of a left-hand-side symbol, followed by
+a <CODE>':'</CODE> and one or more right hand sides separated by <CODE>'|'</CODE> and terminated by a <CODE>';'</CODE>:
+
+<P>
+<PRE>    exp:    exp '+' exp
+        |   exp '-' exp
+        ;
+</PRE>
+<P>
+
+<FONT SIZE=-1>A</FONT> right hand side may be empty:
+
+<P>
+<PRE>    input:  #empty
+        |   input line
+        ;
+</PRE>
+<P>
+(if you have more than one empty rhs, Parse::Yapp will issue a warning, as
+this is usually a mistake, and you sure will have a reduce/reduce conflict)
+
+<P>
+
+<FONT SIZE=-1>A</FONT> rhs may be followed by an optionnal <CODE>%prec</CODE> directive, followed by a token, giving the rule and explicit precedence
+(see yacc manuals for its precise meaning) and optionnal semantic action
+code block (see below).
+
+<P>
+<PRE>    exp:   '-' exp %prec NEG { -$_[1] }
+        |  exp '+' exp       { $_[1] + $_[3] }
+        |  NUM
+        ;
+</PRE>
+<P>
+Note that in Parse::Yapp, a lhs <EM>cannot</EM> appear more than once as a rule name (This differs from yacc).
+
+<DT><STRONG>The footer section</STRONG><DD>
+<P>
+may contain any valid Perl code and will be appended at the very end of
+your parser module. Here you can write your lexer, error report subs and
+anything relevant to you parser.
+
+<DT><STRONG><A NAME="item_Semantic">Semantic actions</A></STRONG><DD>
+<P>
+Semantic actions are run every time a <EM>reduction</EM> occurs in the parsing flow and they must return a semantic value.
+
+<P>
+They are (usually, but see below <CODE>In rule actions</CODE>) written at the very end of the rhs, enclosed with <CODE>{ }</CODE>, and are copied verbatim to your parser file, inside of the rules table.
+
+<P>
+Be aware that matching braces in Perl is much more difficult than in 
+<FONT SIZE=-1>C:</FONT> inside strings they don't need to match. While in 
+<FONT SIZE=-1>C</FONT> it is very easy to detect the beginning of a string construct, or a single character, it is much more difficult in Perl, as there are so many ways of writing such literals. So there is no check for that today. If you need a brace in a string, quote it (
+<CODE>\{</CODE> or
+<CODE>\}</CODE>) that should work. Or (weird) make a comment matching it. Sorry.
+
+<P>
+<PRE>    {
+        &quot;{ My string block }&quot;.
+        &quot;\{ My other string block \}&quot;.
+        qq/ My unmatched brace \} /.
+        #Force the match: {
+        q/  My last brace } /
+    }
+</PRE>
+<P>
+All of these constructs should work.
+
+<P>
+In Parse::Yapp, semantic actions are called like normal Perl sub calls,
+with their arguments passed in <CODE>@_</CODE>, and their semantic value are their return values.
+
+<P>
+$_[1] to $_[n] are the parameters just as <CODE>$1</CODE> to
+<CODE>$n</CODE> in yacc, while $_[0] is the parser object itself.
+
+<P>
+Having $_[0] beeing the parser object itself allows you to call parser
+methods. Thats how the yacc macros are implemented:
+
+<P>
+<PRE>        yyerrok is done by calling $_[0]-&gt;YYErrok
+        YYERROR is done by calling $_[0]-&gt;YYError
+        YYACCEPT is done by calling $_[0]-&gt;YYAccept
+        YYABORT is done by calling $_[0]-&gt;YYAbort
+</PRE>
+<P>
+All those methods explicitly return <EM>undef</EM>, for convenience.
+
+<P>
+<PRE>    YYRECOVERING is done by calling $_[0]-&gt;YYRecovering
+</PRE>
+<P>
+Two useful methods in error recovery sub
+
+<P>
+<PRE>    $_[0]-&gt;YYCurtok
+    $_[0]-&gt;YYCurval
+</PRE>
+<P>
+returns respectivly the current token and its semantic value that made the
+parse fail (they can be used to modify their values, too, but know what you
+do !).
+
+<P>
+Accessing semantics values on the left of your reducing rule is done
+through the method
+
+<P>
+<PRE>    $_[0]-&gt;YYSemval( index )
+</PRE>
+<P>
+where index is an integer. Its value beeing <EM>1 .. n</EM> returns the same values than <EM>$_[1] .. $_[n]</EM>, but <EM>-n .. 0</EM> returns values on the left of the rule beeing reduced (It is related to <EM>$-n .. $0 .. $n</EM> in yacc, but you cannot use <EM>$_[0]</EM> or <EM>$_[-n]</EM> constructs in Parse::Yapp for obvious reasons)
+
+<P>
+There is also a provision for user data area in the parser object, accessed
+by the method:
+
+<P>
+<PRE>    $_[0]-&gt;YYData
+</PRE>
+<P>
+which returns a reference to an anonymous hash, letting you have all of
+your parsing data held inside the object (see the Calc.yp or the test.pl
+file in the distribution for some examples). That's how you can make you
+parser module reentrant: all of your module states and variables are held
+inside the parser object.
+
+<P>
+If no action is specified for a rule, a default action is run, which
+returns the first parameter:
+
+<P>
+<PRE>   { $_[1] }
+</PRE>
+<DT><STRONG><A NAME="item_In">In rule actions</A></STRONG><DD>
+<P>
+It is also possible to embbed semantic actions inside of a rule:
+
+<P>
+<PRE>    typedef:    TYPE { $type = $_[1] } identlist { ... } ;
+</PRE>
+<P>
+When the Parse::Yapp's parser encounter such an embeded action, it modifies
+the grammar as if you wrote (although @x-1 is not a legal lhs value):
+
+<P>
+<PRE>    @x-1:   /* empty */ { $type = $_[1] };
+    typedef:    TYPE @x-1 identlist { ... } ;
+</PRE>
+<P>
+where <EM>x</EM> is a sequential number incremented for each ``in rule'' action, and <EM>-1</EM> represents the ``dot position'' in the rule where the action arises.
+
+<P>
+In such actions, you can use <EM>$_[1]..$_[n]</EM> variables, which are the semantic values on the left of your action.
+
+<DT><STRONG><A NAME="item_Generating">Generating the Parser Module</A></STRONG><DD>
+<P>
+Now that you grammar file is written, you can use yapp.pl on it to generate
+your parser module:
+
+<P>
+<PRE>    yapp.pl -v Calc.yp
+</PRE>
+<P>
+will create two files <EM>Calc.pm</EM>, your parser module, and <EM>Calc.output</EM>
+a verbose output of your parser rules, conflicts, warnings, states and
+summary.
+
+<P>
+What your are missing now is a lexer routine.
+
+<DT><STRONG>The Lexer sub</STRONG><DD>
+<P>
+is called each time the parser need to read the next token.
+
+<P>
+It is called with only one argument that is the parser object itself, so
+you can access its methods, specially the
+
+<P>
+<PRE>    $_[0]-&gt;YYData
+</PRE>
+<P>
+data area.
+
+<P>
+It is its duty to return the next token and value to the parser. They <CODE>must</CODE> be returned as a list of two variables, the first one beeing the token
+known by the parser (symbolic or literal), and the second one beeing
+anything you want (usualy the text of the next token, or the literal value)
+from a simple scalar value to any complex reference, as the parsing driver
+never use it but to call semantic actions:
+
+<P>
+<PRE>    ( NUMBER, $num )
+or
+    ( '&gt;=', '&gt;=' )
+or
+    ( 'ARRAY', [ @values ] )
+</PRE>
+<P>
+When the lexer reach the end of input, it must return the <CODE>''</CODE>
+empty token with an undef value:
+
+<P>
+<PRE>     ( '', undef )
+</PRE>
+<P>
+Note that your lexer should <EM>never</EM> return <CODE>'error'</CODE> as token value: for the driver, this is the error token used for error
+recovery and would lead to odd reactions.
+
+<P>
+You now have your lexer written, maybe you will need to output meaningful error messages, instead of the default which is to print 'Parse error.' on 
+<FONT SIZE=-1>STDERR.</FONT>
+
+
+<P>
+So you will need an Error reporting sub.
+
+<P>
+item <CODE>Error reporting routine</CODE>
+
+
+
+<P>
+If you want one, write it knowing that it is passed as parameter the parser
+object. So you can share information whith the lexer routine quite easily.
+
+<DT><STRONG><A NAME="item_Parsing">Parsing</A></STRONG><DD>
+<P>
+Now you've got everything to do the parsing.
+
+<P>
+First, use the parser module:
+
+<P>
+<PRE>    use Calc;
+</PRE>
+<P>
+Then create the parser object:
+
+<P>
+<PRE>    $parser=new Calc;
+</PRE>
+<P>
+Now, call the YYParse method, telling it where to find the lexer and error
+report subs:
+
+<P>
+<PRE>    $result=$parser-&gt;YYParse(yylex =&gt; \&amp;Lexer,
+                           yyerror =&gt; \&amp;ErrorReport);
+</PRE>
+<P>
+(assuming Lexer and ErrorReport subs have been written in your current
+package)
+
+<P>
+The order in which parameters appear is unimportant.
+
+<P>
+Et voila.
+
+<P>
+The YYParse method will do the parse, then return the last semantic value
+returned, or undef if error recovery cannot recover.
+
+<P>
+If you need to be sure the parse has been successful (in case your last
+returned semantic value <EM>is</EM> undef) make a call to:
+
+<P>
+<PRE>    $parser-&gt;YYNberr()
+</PRE>
+<P>
+which returns the total number of time the error reporting sub has been
+called.
+
+<DT><STRONG><A NAME="item_Error">Error Recovery</A></STRONG><DD>
+<P>
+in Parse::Yapp is implemented the same way it is in yacc.
+
+<DT><STRONG><A NAME="item_Debugging">Debugging Parser</A></STRONG><DD>
+<P>
+To debug your parser, you can call the YYParse method with a debug
+parameter:
+
+<P>
+<PRE>    $parser-&gt;YYParse( ... , yydebug =&gt; value, ... )
+</PRE>
+<P>
+where value is a bitfield, each bit representing a specific debug output:
+
+<P>
+<PRE>    Bit Value    Outputs
+    0x01         Token reading (useful for Lexer debugging)
+    0x02         States information
+    0x04         Driver actions (shifts, reduces, accept...)
+    0x08         Parse Stack dump
+    0x10         Error Recovery tracing
+</PRE>
+<P>
+To have a full debugging ouput, use
+
+<P>
+<PRE>    debug =&gt; 0x1F
+</PRE>
+<P>
+Debugging output is sent to 
+<FONT SIZE=-1>STDERR,</FONT> and be aware that it can produce
+<CODE>huge</CODE> outputs.
+
+</DL>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<P>
+Francois Desarmenien <A
+HREF="mailto:desar@club-internet.fr">desar@club-internet.fr</A>
+
+<H1><A NAME="SEE_ALSO">SEE ALSO</A></H1>
+<P>
+<CODE>perl(1)</CODE> <CODE>yacc(1)</CODE> <CODE>bison(1).</CODE>
+
+<H1><A NAME="COPYRIGHT">COPYRIGHT</A></H1>
+<P>
+The Parse::Yapp module and its related modules and shell scripts are
+copyright (c) 1998 Francois Desarmenien, France. All rights reserved.
+
+<P>
+You may use and distribute them under the terms of either the 
+<FONT SIZE=-1>GNU</FONT> General Public License or the Artistic License, as specified in the Perl 
+<FONT SIZE=-1>README</FONT> file.
+
+
+</DL>
+</BODY>
+
+</HTML>

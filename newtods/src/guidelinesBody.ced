@@ -1,0 +1,154 @@
+ACM :journalAcronym[] recognizes that reviewing is a service to 
+the profession; this publication endeavors to treat reviewers 
+with courtesy and respect. 
+The :journalAcronym[] web site <a href="Referees.html#Rights">lists 
+many guarantees that :journalAcronym[] provides reviewers</a>.
+
+Papers for the ACM Transactions on Database Systems (:journalAcronym[]) must be of high
+quality and fall within the <a href="Charter.html">scope of the journal</a>. 
+There are four main ingredients to an acceptable paper.
+:ols 
+:li The technical quality is high. 
+:li The relevance to significant computations is high. 
+:li Interest and novelty is high. 
+:li The presentation is effective. 
+:ole
+
+Few papers excel in all of these, but a substandard level in any is
+sufficient ground for rejection. Many papers require substantial revisions
+before acceptance, and reviewers should not hesitate to recommend that a
+paper be rejected pending changes that are required for completeness,
+correctness, or to substantially improve clarity.
+
+More specific criteria apply to papers presenting theoretical results, which
+has been a particular issue in distributed or parallel computing.  
+ACM :journalAcronym[]
+does not accept papers that belong in more theoretical journals
+(e.g. JACM). This does not imply that all theoretical papers are to be
+rejected; rather it implies that theoretical papers that cannot establish
+their direct relevance to current issues in the development of computer
+systems will generally be rejected.  An acceptable paper of this type should
+contain: (a) motivation and technical analysis of the method, (b) evidence
+of effectiveness and practicality, and (c) demonstration of superiority
+compared to alternative approaches.  In addition, reviewers should be aware
+that because of the relative rarity with which such papers are accepted,
+the standards for originality and impact are unusually stringent in these
+cases
+
+The following is a list of other considerations to be taken into account
+when reviewing a submission.
+:ols
+:li :journalAcronym[] will publish outstanding papers which are "major value-added
+   extensions" of papers previously published in conferences; that is,
+   :journalAcronym[] will not automatically reject papers that are substantial
+   extensions of previously published conference papers. These papers
+   will go through the normal review process.
+:br[]
+:br[]
+   The submitted manuscript should thoroughly consolidate the material,
+   should extend it to be broader, and should more carefully cover related
+   research. It should have at least 30% new material. The new material
+   should be content material, not just the addition of proofs or a few more
+   performance figures. This affords an opportunity to describe the novel
+   approach in more depth, to consider the alternatives more
+   comprehensively, and to delve into some of the issues listed in the other
+   paper as future work.
+:br[]&nbsp;
+:li :journalAcronym[] would like to foster closer fusion of theory and systems by
+   strongly encouraging the authors of theory papers to indicate
+   applications and implementation considerations/ consequences, and
+   the authors of systems papers to indicate the use of existing
+   theoretical results and to point to possible theoretical research
+   issues. Please determine if the paper you review satisfies this
+   criterion, and, if it does not, make notes for the authors and
+   editor as to how the paper may be revised to meet the criterion.
+:br[]&nbsp;
+:li :journalAcronym[] would like to make papers it publishes more easily readable. :journalAcronym[]
+   strongly encourages authors to include examples where appropriate and to
+   make greater efforts to target their presentation to a broader audience
+   than specialists doing current research in the topical areas of the
+   papers.  Please determine if the paper is readable. If it is not, suggest
+   how it may be improved (e.g., by requesting illustrative examples,
+   expanded discussions on key points that are not clear, etc.)
+:br[]&nbsp;
+:li :journalAcronym[] would like to discourage 
+   excessively long papers (the main body of a paper cannot exceed
+   45 double-spaced pages including figures, references, etc.) and
+   unnecessary digressions even in shorter papers. This is to help the
+   authors to focus on the most important aspects of their submission,
+   to make it easier for the reviewers and readers, and to allow more
+   papers to be published in any given issue. Please determine if the
+   paper you review can be shortened without materially compromising
+   the completeness and worthiness of the paper.
+:br[]&nbsp;
+:li In a similar vein, :journalAcronym[] now encourages 
+   shorter submissions, including even
+   very short (say, five page) submissions. The primary criterion for
+   acceptance is improving on the state-of-the-art in some significant way.
+:br[]&nbsp;
+:li :journalAcronym[] also publishes focused surveys. 
+    These should be deep and will
+    sometimes be quite narrow, but would make a contribution to our
+    understanding of an important area or subarea of databases, broadly
+    defined. More general surveys that are intended for a broad-based
+    Computer Science audience or surveys that may influence other areas of
+    computing research should continue to go to 
+    <a href="http://www.acm.org/surveys/">ACM Computing Surveys</a>. 
+    Brief
+    surveys on recent developments in database research are more appropriate
+   for <a href="http://www.sigmod.org/publications/sigmod-record">SIGMOD Record</a>. 
+    :journalAcronym[] surveys should be educational to database
+    audiences by presenting a relatively well-established body of database
+    research.
+    Surveys can summarize prior literature on a theoretical or
+    systems research topic, or can explain approaches implemented
+    in commercial systems.  A survey of the former type summarizes
+    a literature on a particular subject, presenting a new way of
+    understanding how the papers in this literature fit together.
+    A survey of the latter type summarizes the best industrial art,
+    and can be acceptable even if it represents no new contribution
+    over what has been used in industry for years, if the paper's
+    content is not to be found in the published literature.
+:br[]&nbsp;
+:li Consistent with the 
+    <A href="http://www.acm.org/pubs/reviewer_anonymity.html">
+    ACM Policy on Reviewer Anonymity</A>, reviewers must maintain the
+    confidentiality of reviewer identities, as well as the reviews themselves,
+    that are communicated to them at any time.
+
+:ole
+
+<A NAME="DoubleBlind">
+<H2>Referee Guidelines for Double-Blind Reviewing</H1></A>
+
+It is :journalAcronym[] policy to use <i>double-blind reviewing</i> 
+for all papers, in
+which authors and reviewers are unaware of each other's identities.
+It is :journalAcronym[] policy that every submission should be judged solely
+on its own merits. The identity and affiliation of the authors should not
+influence, either positively or negatively, the evaluation of submissions to
+:journalAcronym[]. In particular, you are asked not to go
+to unusual lengths to try to discover the identity of the author. On the
+other hand, you should still be diligent in determining the contribution of
+the submission over previously-published work by the author or by others.
+
+Authors have been given <a href="Authors.html#DoubleBlind">guidelines</a> 
+on how to approach double-blind
+reviewing. Please review the submission page to familiarize yourself with
+these guidelines. If authors have not made reasonable effort to conform to
+double-blind reviewing, the paper could be rejected.  "Reasonable effort"
+means the author followed the guidelines in the submission page. Your
+ability to guess/discover an author's identity based on your past
+experience, extensive web search, non-obvious "clues" in the submitted
+paper, and other exploratory means are not necessarily grounds for
+rejection.
+
+Should you need access to the material referenced by anonymous citations
+(those stating "details omitted due to double-blind reviewing"), say to
+judge the novelty requirement, simply notify the Associate Editor handling
+this paper and give your reason and the full citation will be revealed to
+you. If you have any other questions about double-blind reviewing, please
+also contact the Associate Editor.
+
+More information can be found in the
+<a href="editorials/doubleblindfaq.pdf">DBR FAQ</a>.

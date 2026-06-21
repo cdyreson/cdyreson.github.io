@@ -1,0 +1,267 @@
+:arg1
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>:journalTitle[] On-line - ARG</title>
+</head>
+<script language="JavaScript">
+<!--
+  forwardArrow=new Image
+  backArrow=new Image
+  backLinkArrow=new Image
+  forwardLinkArrow=new Image
+  forwardArrow.src=":baseURL[]across.gif"
+  backArrow.src=":baseURL[]b.gif"
+  backLinkArrow.src=":baseURL[]back.gif"
+  forwardLinkArrow.src=":baseURL[]backBlue.gif"
+// -->
+</script>
+<body bgcolor="#ffffff">
+<TABLE SUMMARY="frame" BORDER=0 CELLPADDING="0" CELLSPACING="0">
+  <tr><td align=left bgcolor="#818181" valign=top><IMG SRC=":baseURL[]logotods7.gif" 
+  ALT="ACM logo" BORDER="0"></TD><TD 
+   bgcolor="#818181" 
+   valign=bottom
+   ><img
+   SRC=":baseURL[]logotods8.gif" 
+   ALT="TODS" 
+   BORDER="0"></td><td bgcolor="#818181" align=right>
+&nbsp;
+      </td></tr><tr><td height="35" bgcolor="#818181">&nbsp;</td><td 
+        bgcolor="#D0D0D0" :NoEICinTitleRow[]
+        align="left"><font SIZE="6" 
+         face=":myFont[]">&nbsp;&nbsp;<i>ARG</i></font></td>:EditorInChief[]</tr><tr 
+        valign="top"><td width="80" align="center" valign="top" bgcolor="#818181">
+     <table summary="frame" cellspacing="2" border="0" cellpadding="2">
+       <tr>
+         <td bgcolor="#818181">
+           <font size="2" face=":myFont[]">&nbsp;</font>
+         </td>
+         <td bgcolor="#818181">
+           <font size="2" face=":myFont[]">&nbsp;</font>
+         </td>
+       </tr>  
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Home.src=backArrow.src"
+          onMouseOut="Home.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]index.html">
+          <img alt="TODS Home" border=0 name="Home" SRC=":baseURL[]across.gif"><!--
+          -->&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor="#818181" align=top>
+         <font size="2" face=":myFont[]" color="#FFFFFF"
+           >Articles</font>
+       </td></tr>
+       <tr><td bgcolor="#818181">
+         <font size="2" face=":myFont[]">&nbsp;
+         </font>
+         </td><td bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Current.src=backArrow.src"
+          onMouseOut="Current.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF="http://portal.acm.org/tods">
+          <img alt="Current issue" name="Current" border=0 SRC=":baseURL[]across.gif"><!--
+          -->&nbsp;Current&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td bgcolor="#818181">
+         <font size="2" face=":myFont[]">&nbsp;
+         </font>
+         </td><td bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Upcoming.src=backArrow.src"
+          onMouseOut="Upcoming.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Upcoming.html">
+          <img name="Upcoming" alt="Future issues" border=0 SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Upcoming&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td bgcolor="#818181">
+         <font size="2" face=":myFont[]">&nbsp;
+         </font>
+         </td><td bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Past.src=backArrow.src"
+          onMouseOut="Past.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+         HREF="http://portal.acm.org/tods">
+          <img border=0 name="Past" alt="Past issues" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Past&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Charter.src=backArrow.src"
+          onMouseOut="Charter.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Charter.html">
+          <img border=0 alt="Charter" name="Charter" SRC=":baseURL[]across.gif"><!-- 
+         -->&nbsp;Charter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Editors.src=backArrow.src"
+          onMouseOut="Editors.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Editors.html">
+          <img border=0 alt="Editors" name="Editors" SRC=":baseURL[]across.gif"><!-- 
+         -->&nbsp;Editorial&nbsp;Board</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Authors.src=backArrow.src"
+          onMouseOut="Authors.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Authors.html">
+          <img border=0 name="Authors" alt="Author instructions" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Author&nbsp;info&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Referees.src=backArrow.src"
+          onMouseOut="Referees.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Referees.html">
+          <img border=0 name="Referees" alt="Referee instructions" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Referee&nbsp;info&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Editorials.src=backArrow.src"
+          onMouseOut="Editorials.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Editorials.html">
+          <img border=0 alt="TODS charter" name="Editorials" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Editorials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Subscribe.src=backArrow.src"
+          onMouseOut="Subscribe.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Subscription.html">
+          <img border=0 alt="Subscribe to TODS" name="Subscribe" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Subscribe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="Policies.src=backArrow.src"
+          onMouseOut="Policies.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]Policies.html">
+          <img border=0 alt="TODS Policies" name="Policies" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Policies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="History.src=backArrow.src"
+          onMouseOut="History.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]History.html">
+          <img border=0 alt="History of TODS" name="History" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;History&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</A>
+         </font>
+       </td></tr>
+       <tr><td colspan=2 bgcolor=:buttonColor[]>
+         <font size="2" face=":myFont[]">
+         <A
+          onMouseOver="EditorsOnly.src=backArrow.src"
+          onMouseOut="EditorsOnly.src=forwardArrow.src"
+          style="text-decoration:colon[]none"
+          HREF=":baseURL[]editors/index.html">
+          <img border=0 alt="Editors only" name="EditorsOnly" SRC=":baseURL[]across.gif"><!-- 
+          -->&nbsp;Editors only&nbsp;</A>
+         </font>
+       </td></tr>
+     </table>
+    </td>
+    <td valign="top" colspan=2>
+      <table summary="frame">
+        <tr><td> 
+          &nbsp;&nbsp;
+        </td><td> 
+          <font face=":myFont[]">
+          :pageContent[]
+          </font>
+        </td></tr> 
+      </table>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#818181">&nbsp;</td><td colspan=2><hr noshade size=1></td>
+  </tr>
+  <tr>
+    <td height=20 bgcolor="#818181">&nbsp;</td><td 
+%bgcolor=:buttonColor[]
+    >&nbsp;&nbsp;<a
+        href="javascript:colon[]history.back()"
+        onMouseOver="backLink.src=forwardLinkArrow.src"
+        onMouseOut="backLink.src=backLinkArrow.src"
+        style="text-decoration:colon[]none"
+      ><img 
+       alt="Return to previous page" 
+       border=0
+       name="backLink" 
+       valign=center SRC=":baseURL[]back.gif">&nbsp;
+    <font size="-1" face=":myFont[]" "arial">back</font></a>
+    </td><td align=right><font size="2" 
+    face=":myFont[]"><i>E-mail questions or comments to </i>:mailtowebmaster[].</font></td>
+%    face=":myFont[]"><i>E-mail questions or comments to </i>:mailtowebmaster[].</font><a href="http://validator.w3.org/check/referer"><img 
+%               src=":baseURL[]html401.gif" 
+%%               width="88" height="31" 
+%             height="15"
+%             alt="Valid HTML 4.01!" border="0"></a></td>
+  </tr>
+</table>
+</body>
+</html>
+
+:macro[pageHeader]

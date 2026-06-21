@@ -1,0 +1,409 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Observant Systems Talk, EECS Seminar</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#E0E0E1" align=right valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td><a style="text-decoration:none"
+                 href="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/images/full.jpg"><img 
+                    src="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/images/logo.gif" 
+                    alt="TTXPath logo" 
+                    width="90" 
+                    height="68"
+                    border="2"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#E0E0E1">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#E0E0E1">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#E0E0E1"> 
+              <big>Observant Systems Talk, EECS Seminar</big>
+              <br>
+              <font color="#800000" size="2">
+              Transaction-time Semantics for the Web<br>
+              by Curtis Dyreson and Hui-Ling Lin
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#E0E0E1">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/ttserver.htm">
+              <font size="-1" face="helvetica"><i>TT</i></font>Server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/ttxpath.htm">
+              <font size="-1" face="helvetica"><i>TT</i></font>XPath&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/ChangeDetection">
+              Change Detection&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/ObservantSystems/publications.htm">
+              Publications&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr><td>
+      <img src="ttapachetalk/Slide1.JPG" 
+         alt="Slide1" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide2.JPG" 
+         alt="Slide2" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide3.JPG" 
+         alt="Slide3" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide4.JPG" 
+         alt="Slide4" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide5.JPG" 
+         alt="Slide5" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide6.JPG" 
+         alt="Slide6" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide7.JPG" 
+         alt="Slide7" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide8.JPG" 
+         alt="Slide8" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide9.JPG" 
+         alt="Slide9" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide10.JPG" 
+         alt="Slide10" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide11.JPG" 
+         alt="Slide11" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide12.JPG" 
+         alt="Slide12" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide13.JPG" 
+         alt="Slide13" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide14.JPG" 
+         alt="Slide14" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide15.JPG" 
+         alt="Slide15" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide16.JPG" 
+         alt="Slide16" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide17.JPG" 
+         alt="Slide17" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide18.JPG" 
+         alt="Slide18" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide19.JPG" 
+         alt="Slide19" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide20.JPG" 
+         alt="Slide20" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide21.JPG" 
+         alt="Slide21" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide22.JPG" 
+         alt="Slide22" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide23.JPG" 
+         alt="Slide23" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide24.JPG" 
+         alt="Slide24" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide25.JPG" 
+         alt="Slide25" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide26.JPG" 
+         alt="Slide26" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide27.JPG" 
+         alt="Slide27" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide28.JPG" 
+         alt="Slide28" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide29.JPG" 
+         alt="Slide29" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide30.JPG" 
+         alt="Slide30" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide31.JPG" 
+         alt="Slide31" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide32.JPG" 
+         alt="Slide32" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide33.JPG" 
+         alt="Slide33" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide34.JPG" 
+         alt="Slide34" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide35.JPG" 
+         alt="Slide35" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide36.JPG" 
+         alt="Slide36" 
+         border="1"/>
+</td></tr>
+  <tr><td>
+      <img src="ttapachetalk/Slide37.JPG" 
+         alt="Slide37" 
+         border="1"/>
+</td></tr>
+</table>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a> and
+               Hui-Ling Lin</a>
+     &copy; 2001. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#E0E0E1">&nbsp;</td>
+    <td colspan=2 bgColor="#E0E0E1" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

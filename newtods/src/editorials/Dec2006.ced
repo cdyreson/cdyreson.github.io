@@ -1,0 +1,36 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, December 2006</em>)
+
+Mary Fernandez, Raghu Ramakrishnan, and Jennifer Widom rotated off 
+the Editorial Board last month.
+All have been active on the editorial board, handling dozens of 
+submissions and participating in policy
+discussions. In particular, Jennifer was a prime architect of 
+<i>TODS</i> prior publication policy (referred to
+affectionately as <i>P</i><sup>3</sup>), which has had a salutary 
+effect on papers and on the reviewing process.
+
+We as a community are extremely fortunate that scholars of the 
+stature of Mary, Raghu, and Jennifer
+are willing to devote hours every week to shepherd submissions through 
+the reviewing cycle thoroughly yet
+quickly. The Associate Editors, along with the reviewers and authors 
+they work with, are the primary reason
+that <i>TODS</i> is so prominent.
+
+Thank you, Mary, Raghu, and Jennifer, for your selfless, highly capable 
+work over the last few years.
+
+In other news, the December 2006 issue should be out by the time you read 
+this. This is the much anticipated
+SIGMOD/PODS special issue, along with several other regular papers, 
+nine papers in all, another mega-issue.
+
+This issue rounds out the most prolific year in <i>TODS</i> history, 
+with 36 papers in all, five more than the
+largest of the past thirty volumes. Enjoy!
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[Changes to the :journalAcronym[] Editorial Board]

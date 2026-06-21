@@ -1,0 +1,27 @@
+It is of paramount importance for a scholarly journal such as ACM Transactions on
+Database Systems to have a strong editorial board of respected, world-class scholars.
+The editorial board plays a fundamental role in attracting the best submissions, in
+ensuring insightful and timely handling of submissions, in maintaining the high technical
+standards of the journal, and in maintaining the reputation of the journal. Indeed,
+the journal’s Associate Editors, along with the reviewers and authors they work with,
+are the primary reason that TODS is such a respected journal.
+As of February 1, 2015, four Associate Editors, George Kollios, Paul Larson, Yufei
+Tao, and Johannes Gehrke, have ended their terms, having served on the editorial
+board for seven, seven, seven, and four years, respectively. (They will stay on until they
+complete their current loads.) They have each provided very substantial high-quality
+service to the journal and the database community. Specifically, I have never seen
+them compromise on quality when handling submissions, and I believe that they have
+uniformly made sound technical decisions. We are fortunate that they have donated
+their time and world-class expertise during these years.
+Also as of February 1, 2015, six new Associate Editors have joined the editorial board.
+• K. Selcuk Candan (http://aria.asu.edu/candan/)
+• Amol Deshpande (http://www.cs.umd.edu/~amol)
+• Daniel Kifer (http://www.cse.psu.edu/~dkifer)
+• Mohamed Mokbel (http://www-users.cs.umn.edu/~mokbel)
+• Jun Yang (http://www.cs.duke.edu/~junyang)
+• Ke Yi (http://www.cse.ust.hk/~yike)
+All six are highly regarded scholars in the field of database systems. We are very
+fortunate that these outstanding scholars are willing to volunteer their valuable time
+and indispensable expertise for handling manuscripts for the benefit of our scientific
+community. Indeed, I am gratified that they have committed to help TODS continue to
+improve, and I am looking forward to working with them.

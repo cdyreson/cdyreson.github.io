@@ -1,0 +1,127 @@
+:include[macros]
+:arg1[
+<b>Approved October 19, 2001</b>
+
+:journalAcronym[] has to date not published surveys. 
+This policy allows certain kinds of
+surveys to be accepted for publication in :journalAcronym[].
+
+A quick search of the ACM DL yielded 91 articles with "Survey" in their
+title, most in Computing Surveys. However, surveys also appear in <i>CACM</i>,
+<i>TODAES</i>, <i>TOG</i>, <i>JACM</i>, <i>TOMS</i> and <i>TOPLAS</i>, 
+but none (yet!) in :journalAcronym[]. (Another 50 or
+so papers had "Tutorial" in their title; I must admit I'm unclear as to what
+the difference is. Webster's defines "survey" as "to view or consider
+comprehensively" and "tutorial" as "a technical paper written to give
+practical information about a specific subject". Perhaps the key is
+"practical".)  The IEEE Transactions on Knowledge and Data Engineering
+(<i>TKDE</i>) and the Very Large Data Bases Journal (<i>VLDBJ</i>) 
+both allow surveys.  In
+addition, some surveys have appeared in SIGMOD Record, due to the efforts of
+the Associate Editor for surveys.
+
+Surveys can be a valuable source of information for researchers and
+practitioners.  About 10% of the papers in 
+<a href="http://www.acm.org/sigmod/dblp/db/about/top.html">Michael Ley's 
+list of most-cited database papers</a> are from
+Computing Surveys (11 in that list). The most recent was in 1993.
+
+:journalAcronym[] will now allow a limited number of focused surveys. 
+These should be
+deep and will sometimes be quite narrow, but would make a contribution to
+our understanding of an important area or subarea of databases, broadly
+defined. Such papers will be reviewed with different criteria (see below)
+than regular research submissions. The objective is to present useful
+material that is not appropriate for other venues and to increase interest
+in and readership of :journalAcronym[], while retaining the 
+scientific quality long
+associated with :journalAcronym[].
+
+More general surveys that are intended for a broad-based Computer Science
+audience (such as Goetz's survey on query evaluation) or surveys that may
+influence other areas of computing research should continue to go to
+Computing Surveys. Brief surveys on recent developments in database research
+are more appropriate for SIGMOD Record. :journalAcronym[] surveys should be educational
+to database audience by presenting a relatively well-established body of
+database research.
+
+It will be hard to attract good surveys; the Editorial Board will solicit
+such surveys, to augment those that are submitted.
+
+Surveys are limited initially to no more than two per volume (year); that
+limit will be reevaluated after a year or two of experience (some have
+argued for a one-per-issue limit). This limit will be applied internally;
+there is no need to communicate that to the readership, because that might
+discourage submissions. Surveys are in addition to normal papers (our page
+budget allows this), so no papers would have to be rejected to make room for
+surveys.  Surveys will appear in a special section on :journalAcronym[], 
+so as to not be confused with regular papers.
+
+Surveys should designated as such when they are submitted and reviewed,
+should be on an area of relevance to :journalAcronym[], should make a 
+contribution in
+organizing in a novel and useful way previous results in that area and
+should not overlap with existing papers.
+
+The editorial board member allocated a submission will initially determine
+whether the survey is potentially relevant to :journalAcronym[], or 
+should be referred to
+Computing Surveys or SIGMOD Record. Such a referral will be done only upon
+permission from the author. Additionally, it is hoped that the Editors of
+Computing Surveys and SIGMOD Record will refer surveys that are more
+appropriate for :journalAcronym[].
+
+Surveys will be refereed as with conventional submissions, but using a
+different review form, attached. Surveys are expected to be consistent with
+the high quality and depth associated with papers in :journalAcronym[].
+
+<pre>
+---------------------------------------------------------------------------
+
+                   Transactions on Database Systems
+
+                     Review Form for Survey Papers
+
+Title of Paper:
+
+Authors:
+
+Reviewer:
+
+Date Review Completed:
+
+Confidential Notes to Editor:
+
+
+---------------------------------------------------------------------------
+
+Relevance to Databases (check one):
+        very low _____ low _____ marginal _____ high _____ very high _____
+
+Breadth (relative to the interests of TODS readers):
+        very narrow ___ narrow ___ just right ___ broad ___ very broad ___
+
+Readability and Organization:
+        very poor ____ poor ____ marginal _____ good _____ very good _____
+
+Length (relative to the useful contents of the paper):
+        too long _____     too short _____      just right _____
+
+--------------------------------------------------------------------------
+
+Overall Recommendation:
+
+        reject _____       revise (major) _____ revise (minor) _____
+
+        conditional-accept _____                accept _____
+
+--------------------------------------------------------------------------
+
+
+Comments to the Author(s):
+----
+</pre>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy on Survey Articles]

@@ -1,0 +1,158 @@
+\batchmode
+
+
+
+\documentclass[11pt]{article}
+\makeatletter
+\usepackage{fullpage,epsfig}
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+\newcommand {\coment}[2]{\ \medskip\\ 
+\fbox{\parbox{6in}{{COMMENT:\medskip\\ {\small \tt #2}\ \\ {\bf #1}}}}\ \medskip\\  }
+
+\newcommand {\comment}[1]{\coment{Curtis}{#1}}
+
+\newenvironment {Proposition}{\Prop \rm}{\endProp\medskip}
+
+\newtheorem {Prop}{Proposition}[section]
+
+\newtheorem {Conj}[Prop]{Conjecture}
+
+\newenvironment {conjecture}{\Conj \rm}{\endConj\medskip}
+
+\newtheorem {Theor}[Prop]{Theorem}
+
+\newenvironment {theorem}{\Theor \rm}{\endTheor\medskip}
+
+\newtheorem {Cor}[Prop]{Corollary}
+
+\newenvironment {corollary}{\Cor \rm}{\endCor\medskip}
+
+\newtheorem {Const}[Prop]{Construction}
+
+\newenvironment {construction}{\Const \rm}{\endConst\medskip}
+
+\newtheorem {Lem}[Prop]{Lemma}
+
+\newenvironment {lemma}{\Lem \rm}{\endLem\medskip}
+
+\newtheorem {Meth}{Method}
+
+\newtheorem {Exam}[Prop]{Example}
+
+\newenvironment {example}{\Exam\rm}{\endExam\medskip}
+
+\newtheorem {Def}[Prop]{Definition}
+
+\newenvironment {definition}{\Def\rm}{\endDef\medskip}
+
+\newtheorem {Alg}[Prop]{Algorithm}
+
+\newenvironment {algorithm}{\Alg\rm}{\endDef\medskip}
+
+\newenvironment {Proof}{\hfill\break\smallskip\noindent{\bf Proof:}\rm}{\hfill$\Box$}
+
+\newenvironment {proof}{\hfill\break\smallskip\noindent{\bf Proof:\rm}}{\hfill$\Box$}
+
+\def\vtilde{{\tt\char'176\relax}}
+
+\newtheorem {Prr}[Prop]{}
+
+\newenvironment {prr}{\Prr\rm}{\endPrr\medskip}
+
+\def\sqr#1#2{{\vcenter{\hrule height.#2pt
+      \hbox{\vrule width.#2pt height#1pt \kern#1pt
+         \vrule width.#2pt}
+      \hrule height.#2pt}}}
+
+\def\square{\mathchoice\sqr64\sqr64\sqr{4.2}3\sqr{3.0}3}
+
+\def\bsqr#1#2{{\raisebox{-.3ex}{\vbox{\hrule width#1pt height#2pt
+     \hrule width#1pt height#2pt
+     \hrule width#1pt height#2pt
+     \hrule width#1pt height#2pt}}}}
+
+\def\bsquare{$\mathchoice\bsqr5{2.5}\bsqr5{2.5}\bsqr5{2.5}\bsqr5{2.5}$}
+
+\newcommand {\etalchar}[1]{$^{#1}$}
+
+\makeatother
+\newenvironment{tex2html_wrap}{}{}
+\newwrite\lthtmlwrite
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newbox\sizebox
+\begin{document}
+\pagestyle{empty}
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure*}\epsfig{file=dumps/demo.ps}
+
+\label{fig:screendump}
+\end{figure*}
+}
+
+\stepcounter{section}
+\stepcounter{section}
+
+\end{document}

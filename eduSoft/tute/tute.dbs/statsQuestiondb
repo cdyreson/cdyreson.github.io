@@ -1,0 +1,24 @@
+HASH#!_1VALUE#!_3statsQuestionFormat#!_2VALUE#!_3<HR>
+  <FORM METHOD="POST" ACTION="http://www.cs.jcu.edu.au/cgi-bin/perl/tute2/dummy">
+  <H1><A NAME="RBEGIN$RquestionIdREND">Question RBEGIN$RquestionIdREND</A></H1>
+  RBEGIN $RquestionText REND 
+  RBEGIN $RstatsText REND 
+  <BR><A HREF="#top">Back to overall statistics.</A>
+  </FORM>#!_2VALUE#!_3statsPresentationFormat#!_2VALUE#!_3<HTML>
+  <HEAD>
+  <TITLE>
+  Self-assessment Statistics
+  </TITLE>
+  </HEAD>
+  <BODY>
+    
+
+  <H1><A NAME="top">Overall Statistics</A></H1>
+
+  <left><table border=3 cellpadding=5>
+  RBEGIN $RstatsText REND
+  </table></left>
+
+    
+  </BODY>
+  </HTML>

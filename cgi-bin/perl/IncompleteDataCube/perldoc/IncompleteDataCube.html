@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_IncompleteDataCube_pm">NAME IncompleteDataCube.pm</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_IncompleteDataCube_pm">NAME IncompleteDataCube.pm</A></H1>
+<P>
+This class is the configuration for the entire incomplete data cube.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This package needs two other pieces.
+
+<UL>
+<LI>
+<P>
+<A HREF="././DBMDatabase.html#">the DBMDatabase manpage</A>
+- 
+<FONT SIZE=-1>A</FONT> 
+<FONT SIZE=-1>DBM</FONT> based database. Used to store the cube information.
+
+
+<LI>
+<P>
+<A HREF="./Persistent/Graph.html">Persistent::Graph</A>
+- 
+<FONT SIZE=-1>A</FONT> persistent graph class. The graph maintains
+information about the hierarchy of units and measures in the cube.
+
+</UL>
+<P>
+This package has several parts.
+
+<UL>
+<LI>
+<P>
+<A HREF="./IncompleteDataCube/Cubette.html">IncompleteDataCube::Cubette</A> 
+- 
+<FONT SIZE=-1>A</FONT> cubette is a complete sub-cube within the incomplete
+data cube.
+
+<LI>
+<P>
+<A HREF="./IncompleteDataCube/Globals.html">IncompleteDataCube::Globals</A>
+- Global constants to configure the cube.
+
+<LI>
+<P>
+<A HREF="./IncompleteDataCube/Constants.html">IncompleteDataCube::Constants</A>
+- The global constants, 
+<FONT SIZE=-1>EDIT</FONT> 
+<FONT SIZE=-1>THIS</FONT> 
+<FONT SIZE=-1>TO</FONT> 
+<FONT SIZE=-1>CONFIGURE</FONT> 
+<FONT SIZE=-1>THE</FONT> 
+<FONT SIZE=-1>CUBE.</FONT>
+
+
+<LI>
+<P>
+<A HREF="./IncompleteDataCube/Dimension.html">IncompleteDataCube::Dimension</A>
+- 
+<FONT SIZE=-1>A</FONT> class to create the global variables for a new
+dimension, a helper class for <A HREF="./IncompleteDataCube/Globals.html">IncompleteDataCube::Globals</A>.
+
+</UL>
+<P>
+For more information on the cube see the &lt;a
+href=``IncompleteDataCube/Overview.html''&gt;Overview&lt;/a&gt;.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the &lt;a href=``IncompleteDataCube/License.html''&gt;license&lt;/a&gt; and
+&lt;a href=``IncompleteDataCube/License.html''&gt;version&lt;/a&gt;.
+
+</BODY>
+
+</HTML>

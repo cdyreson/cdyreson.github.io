@@ -1,0 +1,235 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Welcome to the Metadata Management Home Page</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#E0E0E1" align=right valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td><a style="text-decoration:none"
+                 href="http://cs.usu.edu/people/CurtisDyreson/Metadata/images/full.gif"><img 
+                    src="http://cs.usu.edu/people/CurtisDyreson/Metadata/images/logo.gif" 
+                    alt="MetaXPath logo" 
+                    width="90" 
+                    height="68"
+                    border="2"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#E0E0E1">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#E0E0E1">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#E0E0E1"> 
+              <big>Welcome to the Metadata Management Home Page</big>
+              <br>
+              <font color="#800000" size="2">
+              Metadata Management for the Web<br>
+              by Curtis Dyreson, Michael Böhlen, and Christian S. Jensen
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#E0E0E1">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/AUCQL">
+              AUCQL&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/Metadata/metaxpath.htm">
+              M<small>ETA</small>XPath&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/Metadata/publications.htm">
+              Publications&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+The goal of this project is to investigate the use of <i>right-angle</i> 
+data models for metadata.
+A right-angle data model is a data model that is (recursively) nested.
+The nested data model stores the metadata in a different <i>dataspace</i>
+from the data, and enables users to naturally combine constraints on both within
+a single query.
+<P>
+The relational datamodel is not quite a right angle data model.
+The system catalog, which contains schema information and other metadata, 
+in most relational DBMS products is stored as a set of
+tables.  But the system catalog tables are not in a different dataspace.
+A (privileged) user that queries for a list of all tables in the
+database will also see the list of system tables.  Often the
+system tables have special names.
+<P>
+The <a href="http://cs.usu.edu/people/CurtisDyreson/pub/AUCQL">AUCQL project</a> extends the
+semistructured model of data with support for metadata.
+The metadata is stored as a semistructure within each edge label.
+AUCQL has been implemented as a research prototype, has a on-line demo, and
+there is a helpful tutorial on using it.
+<P>
+The <a href="metaxpath.htm">M<small>ETA</small>XPath</a> project recursively nests XPath data model trees to 
+extend XPath to support metadata.
+<P>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none"
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>,
+               Michael H. Böhlen, and
+     <a style="text-decoration:none"
+               href="http://www.cs.auc.dk/~csj">Christian S. Jensen</a>
+     &copy; 2001. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#E0E0E1">&nbsp;</td>
+    <td colspan=2 bgColor="#E0E0E1" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

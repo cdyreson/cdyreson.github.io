@@ -1,0 +1,1020 @@
+\batchmode
+\documentclass{article}
+\makeatletter
+\usepackage{times}
+\usepackage{graphics}
+\usepackage{xspace}
+\usepackage{latexsym}
+\usepackage{vldb}
+
+\setlength{\columnsep}{0.22in}  
+
+\DeclareGraphicsExtensions{.idraw, .ps}  
+
+\providecommand{\coment}[2]{\ \medskip\\
+\fbox{\parbox{6in}%
+{{COMMENT:\medskip\\{\small \tt #2}\ \\{\bf #1}}}}\ \medskip\\}
+\providecommand{\comment}[1]{\ \medskip\\
+\fbox{\parbox{6in} {{COMMENT:\medskip\\{\small \tt #1}\ \\{\bf Curtis}}}}\ \medskip\\}
+\providecommand{\mc}[1]{\ \medskip\\
+\fbox{\parbox{6in} {{COMMENT:\medskip\\{\small \tt #1}\ \\{\bf Mike}}}}\ \medskip\\}
+\providecommand{\nonterminal}[1]{{$\langle$ {\it\/#1\/}$\rangle$ }}
+\providecommand{\nonterminalm}[1]{{\langle{\it\/#1\/}\rangle}}
+\providecommand{\terminal}[1]{{\tt #1}}
+
+\providecommand{\lmean}{${{\tt\char'133\relax}}\!{{\tt\char'133\relax}}\,$ }
+\providecommand{\lmeanm}{{{\tt\char'133\relax}}\!{{\tt\char'133\relax}}\,}
+\providecommand{\rmean}{$\,{{\tt\char'135\relax}}\!{{\tt\char'135\relax}}$ }
+\providecommand{\rmeanm}{\,{{\tt\char'135\relax}}\!{{\tt\char'135\relax}}}
+\providecommand{\bnfEquals}{ ::= }
+\providecommand{\bnfOr}{{\tt |}}
+
+\providecommand{\PropertySlice}{{\it PrSl\/}\xspace}
+\providecommand{\PropertyMatch}{{\it PrMa\/}\xspace}
+\providecommand{\PropertyCollapse}{{\it PrCl\/}\xspace}
+\providecommand{\Collapse}{{\it Collapse\/}\xspace}
+\providecommand{\CollapsePath}{{\it ClPt\/}\xspace}
+\providecommand{\Coalesce}{{\it Coalesce\/}\xspace}
+\providecommand{\PropertyCoalesce}{{\it PrCs\/}\xspace}
+\providecommand{\Nodes}{{\it Nodes\/}\xspace}
+\providecommand{\Match}{{\it Match\/}\xspace}
+\providecommand{\PathValid}{{\it Valid\/}\xspace}
+\providecommand{\LabelMatch}{{\it LaMa\/}\xspace}
+\providecommand{\Slice}{{\it Slice\/}\xspace}
+\providecommand{\LabelSlice}{{\it LaSl\/}\xspace}
+
+\providecommand{\note}[3]{\setlength{\unitlength}{1mm}  \begin{picture}
+(1,1)%
+  \put({#1},{#2}){#3}
+\end{picture}\vspace*{-6mm}}
+
+\title{Capturing and Querying Multiple Aspects of Semistructured Data}
+
+\author{Curtis~E.~Dyreson \\
+Department of Computer Science \\
+James Cook University, Australia \\
+{\tt curtis@cs.jcu.edu.au} \and 
+Michael~H.~B\"ohlen \hspace{8mm} Christian S.~Jensen \\
+Department of Computer Science \\
+Aalborg University, Denmark\\
+{\tt\{boehlen,csj\}@cs.auc.dk}}
+
+\institution{}
+
+\pagestyle{empty}
+\par\usepackage[dvips]{color}
+\pagecolor[gray]{.7}
+
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{} \catcode`\_=\count@
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%\dimen1=\ht\sizebox
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{tex2html_wrap2749}%
+\scalebox{.7}{\includegraphics{idraw/edgeStandard.ps}}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{tex2html_wrap2751}%
+\scalebox{.7}{\includegraphics{idraw/edgeList.ps}}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{tex2html_wrap2801}%
+\scalebox{.7}{\includegraphics{idraw/movieHalf.ps}}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2117}%
+${\it DB\/} = (V,~E,~{\it
+\&root\/},~\Gamma)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2123}%
+${\it\&root\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2125}%
+$\Gamma$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2127}%
+${\it ROOTS\/}
+\subseteq E$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2129}%
+${\it
+\&root}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2137}%
+${\cal L}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2139}%
+$v~{\mathop{\longrightarrow}\limits^{\cal L}}~w$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2147}%
+$\{(p_1{\rm :}~x_1),~(p_2{\rm :}~x_2),~\ldots~,~(p_m{\rm :}~x_m)\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2153}%
+$x_i \in {\it domain\/}(p_i)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2159}%
+$\forall i, j (p_i = p_j \Rightarrow i = j)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2165}%
+$(p_i{\rm !}~ x_i)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2167}%
+$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2171}%
+${\it PrCl\/}\xspace$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2173}%
+${\it PrMa\/}\xspace$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2175}%
+${\it PrCs\/}\xspace$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2177}%
+${\it PrSl\/}\xspace$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2187}%
+${\it domain\/}(p)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2189}%
+${\it PrCl\/}\xspace_p: T \times T \rightarrow T~\cup~ 
+{\it\{undefined\}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2191}%
+${\it PrMa\/}\xspace_p: T \times T \rightarrow {\it BOOLEAN}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2193}%
+${\it PrCs\/}\xspace_p: 2^{T~\cup~{\it\{undefined\}}} \rightarrow T~\cup~
+{\it\{undefined\}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2195}%
+${\it PrSl\/}\xspace_p: T \times T \rightarrow T~\cup~
+{\it\{undefined\}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline384}%
+$\mbox{$\bullet$}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2199}%
+${\it PrMa\/}\xspace_p$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2201}%
+$\geq$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2203}%
+$\leq$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2205}%
+${\it PrCl\/}\xspace_p$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2207}%
+${\it PrCs\/}\xspace_p$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2209}%
+$\min$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2211}%
+${\it PrSl\/}\xspace_p$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlfigureA{tex2html_wrap3251}%
+\scalebox{.6}{\includegraphics{idraw/virtualEdge.ps}}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2217}%
+${{\it ClPt\/}\xspace_{\Gamma}}: 
+        {\it PATH} \rightarrow {\it EDGE}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2219}%
+${{\it ClPt\/}\xspace_{\Gamma}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2229}%
+${\it ClPt\/}\xspace_{\Gamma}(v~{\mathop{\longrightarrow}\limits^{\cal L}}~w) \stackrel{\scriptstyle \triangle}{=}v~{\mathop{\longrightarrow}\limits^{{\cal L}}}~w$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2231}%
+${\it ClPt\/}\xspace_{\Gamma}(    v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~u~{\mathop{\longrightarrow}\limits^{{\cal L}_2}}~w) \stackrel{\scriptstyle \triangle}{=}~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2235}%
+${\cal L} = $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2237}%
+$\{ (p{\rm :}~{\it PrCl\/}\xspace_p(x,~y)~|~(p{\rm :}~x) \in       {\cal L}_1~\land~(p{\rm :}~y) \in {\cal L}_2 \}~\cup $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2239}%
+$\{ (p{\rm :}~x)~|~(p{\rm :}~x)       \in {\cal L}_1~\land~(p{\rm :}~y) \not\in {\cal L}_2 \}~\cup $%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2241}%
+$\{ (p{\rm :}~y)~|~(p{\rm :}~x)       \not\in {\cal L}_1~\land~(p{\rm :}~y) \in {\cal L}_2 \}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2243}%
+${\it ClPt\/}\xspace_{\Gamma}(    v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~u~{\mathop{\longrightarrow}\limits^{{\cal L}_2}}~\ldots~    {\mathop{\longrightarrow}\limits^{{\cal L}_m}}~w) \stackrel{\scriptstyle \triangle}{=}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2245}%
+$ {\it ClPt\/}\xspace_{\Gamma}(        v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}        ~{\it ClPt\/}\xspace_{\Gamma}(        x~{\mathop{\longrightarrow}\limits^{{\cal L}_2}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_m}}~w))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2253}%
+${\it Valid\/}\xspace_{\Gamma}: {\it PATH} \rightarrow {\it BOOLEAN}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2257}%
+${\it Valid\/}\xspace_{\Gamma}(P) \stackrel{\scriptstyle \triangle}{=}\forall p   \; [ \: (p{\rm :} {\it undefined}) \not \in {\cal L}~\land$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2259}%
+$ (p{\rm !} {\it undefined}) \not \in {\cal L}~\land$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2261}%
+$ v~{\mathop{\longrightarrow}\limits^{\cal L}}~w = {\it ClPt\/}\xspace_{\Gamma}(P) \: ]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2267}%
+${\cal O}(n \cdot m)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2283}%
+${{\it LaMa\/}\xspace}_{\Gamma}: 
+   {\it LABEL} \times {\it LABEL} \rightarrow {\it BOOL}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2287}%
+${\cal S}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2291}%
+${\it LaMa\/}\xspace_{\Gamma}({\cal L},~{\cal S}) \stackrel{\scriptstyle \triangle}{=}~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2293}%
+$\forall p, x [        (p{\rm !}~x) \in {\cal L}        \Rightarrow       \exists y [(p{\rm :}~y) \in {\cal S} \wedge {\it PrMa\/}\xspace_p(x, y)]]~\land$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2295}%
+$\forall p, y [        (p{\rm !}~y) \in {\cal S}        \Rightarrow       \exists x [(p{\rm :}~x) \in {\cal L} \wedge {\it PrMa\/}\xspace_p(x, y)]]~\land$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2297}%
+$\forall p, x, y [        (p{\rm :}~x) \in {\cal L} \wedge (p{\rm :}~y) \in {\cal S}        \Rightarrow        {\it PrMa\/}\xspace_p(x, y)]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2303}%
+${\cal L}_{\it movie\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2305}%
+${\cal S}_{\it c\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2307}%
+${\cal S}_{\it w\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2309}%
+${\it LaMa\/}\xspace_{\Gamma}({\cal L}_{\it movie\/},~{\cal S}_{\it c\/})
+= {\it False\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2313}%
+${\it LaMa\/}\xspace_{\Gamma}({\cal L}_{\it movie\/},~{\cal S}_{\it w\/})
+= {\it True\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2321}%
+${\it Match\/}\xspace_{\it DB}: 
+  2^{\it PATHS} \times {\it REG} \rightarrow 2^{\it PATHS}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2329}%
+${\it DB\/} = (V,~E,~{\it\&root},~\Gamma)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2333}%
+${\it Match\/}\xspace_{\it DB}(S,~X) \stackrel{\scriptstyle \triangle}{=}  \{ x ~|~x \in M(S, X) ~\wedge~ {\it Valid\/}\xspace_{\Gamma}(x) \}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2337}%
+$M(S, {\cal L}) = \{ v_1~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_{m}}}~v_{m+1} ~|~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2339}%
+$v_1~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_{m - 1}}}~v_m       \in S~\land$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2341}%
+$v_{m}~{\mathop{\longrightarrow}\limits^{{\cal L}_{m}}}~v_{m+1} \in {\it E}~\land~     {\it LaMa\/}\xspace_{\Gamma}({\cal L}, {\cal L}_{m}) \}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2345}%
+$M(S, X*) = S~\cup~M(S, X+)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2349}%
+$M(S, X?) = S~\cup~M(X)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2351}%
+$M(S, X | Y) = M(S, X)~\cup~M(S, Y)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2359}%
+${\it LaMa\/}\xspace_\Gamma$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2363}%
+${\cal O}(m)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2367}%
+${\it LaMa\/}\xspace$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2371}%
+${\it Nodes\/}\xspace:
+  2^{\it PATHS} \rightarrow 2^{\it NODES}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2375}%
+${\it Nodes\/}\xspace(P) \stackrel{\scriptstyle \triangle}{=}\{ w ~|~ v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_m}}~w\in P \}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2381}%
+${\cal L}_{\it stars\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2383}%
+${\cal L}_{\it name\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2385}%
+${\it Nodes\/}\xspace({\it Match\/}\xspace_{\it DB}({\it ROOTS\/},   ~{\cal L}_{\it movie\/}.{\cal L}_{\it stars\/}.{\cal L}_{\it name\/}))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2387}%
+$\mathit{\&root}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2391}%
+${\it Slice\/}\xspace_{\Gamma}: 
+   {\it LABEL\/} \times 2^{\it PATHS\/} \rightarrow 
+   2^{\it PATHS\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2397}%
+${\it Slice\/}\xspace_{\Gamma}({\cal L},~P) \stackrel{\scriptstyle \triangle}{=}  \{ v~{\mathop{\longrightarrow}\limits^{{{\cal L}_1^\prime}}}~\ldots~        {\mathop{\longrightarrow}\limits^{{{\cal L}_m^\prime}}}~w ~|~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2399}%
+$v~{\mathop{\longrightarrow}\limits^{{{\cal L}_1}}}~\ldots~{\mathop{\longrightarrow}\limits^{{{\cal L}_m}}}~w \in P~\land~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2401}%
+${\cal L}_1^\prime = {\it LaSl\/}\xspace_{\Gamma}({\cal L},{\cal L}_1) \wedge \ldots \wedge {\cal L}_m^\prime = {\it LaSl\/}\xspace_{\Gamma}({\cal L},{\cal L}_m)\ \wedge$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2403}%
+${\it Valid\/}\xspace_{\Gamma}(v~{\mathop{\longrightarrow}\limits^{{{\cal L}_1^\prime}}}~\ldots~        {\mathop{\longrightarrow}\limits^{{{\cal L}_m^\prime}}}~w)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2407}%
+${\it LaSl\/}\xspace_{\Gamma}: 
+    {\it LABEL\/} \times {\it LABEL\/} \rightarrow {\it LABEL\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2413}%
+${\it LaSl\/}\xspace_{\Gamma}({\cal L},~{\cal S}) \stackrel{\scriptstyle \triangle}{=}  ~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2415}%
+$\{(p{\rm !}~ {\it PrSl\/}\xspace_p(x,~y))~|~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2417}%
+$      (p{\rm !}~x) \in {\cal L} \wedge      ((p{\rm :}~ y) \in {\cal S} \vee (p{\rm !}~ y) \in {\cal S})\}~\cup$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2421}%
+$      (p{\rm !}~y) \in {\cal S} \wedge      ((p{\rm :}~ x) \in {\cal L} \vee (p{\rm !}~ x) \in {\cal L})\}~\cup$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2423}%
+$\{(p{\rm :}~ {\it PrSl\/}\xspace_p(x,~y))~|~(p{\rm :}~x) \in {\cal L} \wedge      (p{\rm :}~ y) \in {\cal S} \}~\cup$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2425}%
+$\{(p{\rm !}~ y)~|~(p{\rm !}~ y) \in {\cal S}         \wedge \neg \exists x [(p{\rm :}~ x) \in {\cal L} \vee                                (p{\rm !}~ x) \in {\cal L}]         \}~\cup$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2427}%
+$\{(p{\rm !}~ x)~|~(p{\rm !}~ x) \in {\cal L} \wedge         \neg \exists y [(p{\rm :}~ y) \in {\cal L} \vee                         (p{\rm !}~ y) \in {\cal L}]         \}~\cup$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2429}%
+$\{(p{\rm :}~ x)~|~(p{\rm :}~ x) \in {\cal L}          \wedge \neg \exists y [(p{\rm :} y) \in {\cal S} \vee                               (p{\rm !}~ y) \in {\cal S}]         \}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2435}%
+${\cal L}_{\it m\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2437}%
+${\cal L}_{\it s\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2439}%
+${\cal L}_{\it n\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2441}%
+${\cal L}_{\it now\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2443}%
+${\it Slice\/}\xspace_{\Gamma}({\cal L}_{\mathit{now}}, {\it Match\/}\xspace_{\it DB\/}({\it ROOTS\/},   ~{\cal L}_{\it m\/}.{\cal L}_{\it s\/}.{\cal L}_{\it n\/}))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2445}%
+${\it Slice\/}\xspace_{\Gamma}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2451}%
+$Path{\it Collapse\/}\xspace_{\Gamma}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2453}%
+${\it Match\/}\xspace_{\it DB\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2455}%
+${{\it Collapse\/}\xspace}_{\Gamma}: 
+  2^{\it PATHS\/} \rightarrow 2^{\it EDGES\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2459}%
+${\it Collapse\/}\xspace_{\Gamma}(S) \stackrel{\scriptstyle \triangle}{=}\{ {\it ClPt\/}\xspace_{\Gamma}(P)~|~     P \in S~\land~{\it Valid\/}\xspace_{\Gamma}(P)\}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlfigureA{tex2html_wrap4327}%
+\scalebox{.68}{\includegraphics{idraw/j.ps}}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2463}%
+${\it Coalesce\/}\xspace_{\Gamma}: 
+     {\it NAME\/} \times2^{\it EDGES\/} \rightarrow {\it VALUE\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2471}%
+${\it Coalesce\/}\xspace_{\Gamma}(p, F) \stackrel{\scriptstyle \triangle}{=}{\it PrCs\/}\xspace_p($%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2473}%
+$\{ x~|~((p{\rm :}~x) \in {\cal L}~\lor~(p{\rm !}~x) \in {\cal L}~\land~v~{\mathop{\longrightarrow}\limits^{\cal L}}~w \in F\})\}~\cup$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2475}%
+$\{ {\it undefined}~|~((p{\rm :}~x) \not\in {\cal L}~\land~(p{\rm !}~x) \not\in {\cal L})~\land~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2477}%
+$v~{\mathop{\longrightarrow}\limits^{\cal L}}~w \in F\})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2485}%
+${\cal L}_{\it review\/}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2487}%
+$E :=~       {\it Collapse\/}\xspace_{\Gamma}({\it Match\/}\xspace_{\it DB\/}({\it ROOTS\/},~         {\cal L}_{\it movie\/}.{\cal L}_{\it review\/} ))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2489}%
+${\it Coalesce\/}\xspace_{\Gamma}(\mbox{\bf trans. time},~E)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2493}%
+$[{\it current~time} - {\rm uc}]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2497}%
+$DB = (V,~E,~{\it\&root\/},~\Gamma)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2499}%
+${\it Insert\/}_{\it DB\/}(T, v~{\mathop{\longrightarrow}\limits^{\cal L}}~w) \stackrel{\scriptstyle \triangle}{=}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2501}%
+$(V~\cup~\{v,~w\},~E~\cup~\{v~{\mathop{\longrightarrow}\limits^{{\cal L}^\prime}}~w\},~{\it\&root\/},~\Gamma)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2503}%
+${\cal L}^\prime = {\cal L}~\cup~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2505}%
+$~[T - {\rm uc}])\}.$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2513}%
+${\it Delete\/}_{\it DB\/}(T,~v~{\mathop{\longrightarrow}\limits^{\cal L}}~w) \stackrel{\scriptstyle \triangle}{=}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2515}%
+$(V,~(E~ - ~\{v~{\mathop{\longrightarrow}\limits^{\cal L}}~w\})~\cup ~\{v~{\mathop{\longrightarrow}\limits^{{\cal L}^\prime}}~w\},~{\it\&root\/},~\Gamma)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2517}%
+${\cal L}^\prime$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2525}%
+${\cal L}^\prime = {\cal L} - \{($%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2527}%
+$~x)\}~\cup~$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2529}%
+$\{($%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2531}%
+$~(x~\cap~[{\rm beginning} - T]))\}.$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2535}%
+${\cal L}^\prime = {\cal L} ~\cup ~\{($%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2537}%
+$~[{\rm beginning} - T])\}.$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2545}%
+${\cal L}_1~:=~~\{$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2547}%
+${\cal L}_2~:=~~\{$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2549}%
+${\it Insert\/}_{\it DB\/}($%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2551}%
+$v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~w)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2553}%
+${\it Delete\/}_{\it DB\/}($%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2559}%
+$v~{\mathop{\longrightarrow}\limits^{{\cal L}_2}}~w)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2577}%
+${\it PrCl\/}\xspace_p(t_1, t_2) = \lambda t_1 \; t_2 . \; t_2$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2579}%
+${\it PrMa\/}\xspace_p(t_1, t_2) = \lambda t_1 \; t_2 . \; \; t_1 = t_2$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2581}%
+${\it PrSl\/}\xspace_p(t_1, t_2)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2583}%
+${\it PrCs\/}\xspace_p(\{t_1, \ldots, t_n\})$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2603}%
+$\in {\it Nodes\/}\xspace({\it Match\/}\xspace_{\it DB\/}({\it ROOTS\/},   ~{\cal L}_{\it m\/}.{\cal L}_{\it s\/}.{\cal L}_{\it n\/}))$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{section}
+
+\end{document}

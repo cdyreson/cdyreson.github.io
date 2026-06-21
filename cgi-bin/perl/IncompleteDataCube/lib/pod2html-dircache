@@ -1,0 +1,30 @@
+.
+.
+test ./DBMDatabase/test:./Persistent/test:
+Convert ./DBMDatabase/Convert.pm:
+LogRecord ./IncompleteDataCube/Cubette/LogRecord.pm:
+PersistentGraph ./Persistent/PersistentGraph.pm:
+Globals ./IncompleteDataCube/Globals.pm:
+Version ./IncompleteDataCube/Version.pm:
+Dimension ./IncompleteDataCube/Dimension.pm:
+Table ./DBMDatabase/Table.pm:
+DBMDatabase ./DBMDatabase.pm:./DBMDatabase:
+IdList ./DBMDatabase/IdList.pm:
+IncompleteDataCube ./IncompleteDataCube.pm:./IncompleteDataCube:
+Tuple ./DBMDatabase/Tuple.pm:
+Cubette ./IncompleteDataCube/Cubette.pm:./IncompleteDataCube/Cubette:./IncompleteDataCube/Cubette/Cubette.pm:
+Id ./DBMDatabase/Id.pm:
+CubetteSpecification ./IncompleteDataCube/Cubette/CubetteSpecification.pm:
+Persistent ./Persistent.pm:./Persistent:
+Graph ./Persistent/Graph.pm:
+StringList ./DBMDatabase/StringList.pm:
+Licence ./IncompleteDataCube/Licence.pm:
+StringCol ./DBMDatabase/StringCol.pm:
+Database ./DBMDatabase/Database.pm:
+backup ./DBMDatabase/backup:
+BigDB_File ./DBMDatabase/BigDB_File.pm:
+Overview ./IncompleteDataCube/Overview.pm:
+IdSet ./DBMDatabase/IdSet.pm:
+Constants ./IncompleteDataCube/Constants.pm:
+QueryCondition ./IncompleteDataCube/Cubette/QueryCondition.pm:
+IdSetWithCount ./DBMDatabase/IdSetWithCount.pm:

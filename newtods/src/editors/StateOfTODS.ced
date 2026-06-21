@@ -1,0 +1,143 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<br>Richard Snodgrass
+<br>May, 2002
+
+Simply put, :journalAcronym[] is in great shape, in terms of its 
+prestige and impact.
+My first editorial, in the September 2001 issue, listed the convincing
+evidence of this fact.
+
+However, several challenges confront :journalAcronym[], and to a large extent scientific
+journals in general. In the remainder of this note I attempt to characterize
+these challenges.
+
+<b>DECLINING SUBSCRIPTION BASE</b>
+
+In July 1995 there were 3101 regular :journalAcronym[] subscribers. 
+By March 1999, less
+than four years later, this had fallen fully by half, to 1686. At that rate,
+there will be <i>no</i> regular subscribers in a few years.
+
+This is somewhat less alarming that it initially appears, because some of
+the decrease is attributable to institutional Digital Library (DL)
+subscriptions, which have dramatically increased over that same
+period. Those at most research universities and major research labs already
+have access to the ACM DL, and many of those have dropped their individual
+subscriptions.
+
+Nevertheless, this large drop is troubling, because it reduces the number of
+people who receive the print copy every three months (people are less likely
+to go the the library to look at recent copies, or periodically browse the
+DL), and it is the canary in the mine, indicating less interest in the
+publication.
+
+While many EiCs and members of the ACM publications board are sanguine about
+decreasing subscription levels, I find these decreases alarming. Decreasing
+subscriptions are not directly the problem; rather, this is a symptom of a
+more disturbing underlying concern: a lessening interest in the journal
+itself. Quite frankly, :journalAcronym[] has become a journal of a few 
+(about a dozen per
+year), very long (average length: 40 pages), old (average age: over three
+years) papers, which are read by very few researchers. And the move toward
+electronic publication only exacerbates this situation, because print
+subscribers who perused the publication when it arrived in the postal mail
+will no longer have this reminder. :journalAcronym[] needs to include 
+more recent work,
+more and shorter papers, and other features to entice people to look at the
+journal, while retaining very high quality and material of lasting value.
+
+We have already taken several steps in this direction, by encouraging
+shorter submissions and encouraging survey papers, both academic and
+industrial surveys. But we need to do much more.
+
+<b>INADEQUATE BACKLOG</b>
+
+For the past few years :journalAcronym[] has been coming out later and later. 
+The June 2000 issue was delivered in mid-January 2001. The ACM Publications 
+Board has
+been working very closely with the ACM publications staff to address late
+issues for :journalAcronym[] and for most other ACM journals, with impressive
+results. The March 2001 issue was delayed in the production process by over
+five months; the December 2001 issue was delayed by a much-improved process
+by only 22 days. The production process is now back on schedule.
+
+It is now clear that :journalAcronym[] has an inadequate backlog. 
+The publications staff
+requires that all the papers for a particular issue be delivered by the EiC
+by the first day of the month four months before the issue date. So the
+papers for the June 2002 issue are due February 1, 2002; the papers for the
+September 2002 issue were due May 1 (last week). We have just completed the
+June issue, but no papers have yet been accepted for the September issue, so
+the backlog is over four months behind. This was not particularly a problem
+when the production process was so slow, but it has now become a major
+concern. (I note that several other ACM Transactions also have inadequate
+backlogs.)
+
+We've already moved forward in this area, by inviting papers from SIGMOD (I
+just accepted an invited paper from SIGMOD'01 and have just invited three
+papers from SIGMOD'02; thanks, Mike Franklin!) and hopefully from 
+PODS (this is still
+in discussion by the PODS EC, with a final decision scheduled for the SIGMOD
+conference). We missed EDBT this year but I hope we can get EDBT in
+2004. Inviting ICDT papers is on hold.
+
+In any case, an inadequate backlog is another canary in the mind, indicating
+inadequate interest in this publication.
+
+<b>ACM AS THE PREFERRED PUBLISHER</b>
+
+The ACM Publications Board has prepared a wide-ranging strategic plan to
+establish ACM as the preferred high-quality computer science publisher. As
+an initial step, the pubs board has worked with the SIG Governing Board and
+the EiCs to state explicitly what Rights and Responsibilities it provides
+and expects. <a href="http://www.acm.org/pubs/rights.html">This document</a> 
+is comprehensive
+and exacting in what it expects, of ACM and of its journals. Currently,
+neither ACM nor any of its publications fully implement the rights listed in
+this document. :journalAcronym[] needs to move aggressively to make good 
+on the rights that ACM promises.
+
+<b>IRRELEVANCE IN THIS INTERNET AGE</b>
+
+A related concern is the perceived decrease in relevance of "old school"
+journals in an age of electronic journals, instant news, and a wide variety
+of (high- and low-quality) free information sources on the web. For each the
+papers that appeared in :journalAcronym[] from September 1999 to June 2000, the total
+processing time, from initial submission to appearance in print, was 25
+months. It is difficult for such a slow and cumbersome medium to compete
+with conferences and newsletters, which have a total processing time on the
+order of six months to nine months, and often are freely available on the
+web. I believe this is a driving factor in the declining subscription base,
+and implies that even with access to the ACM DL, :journalAcronym[] papers are being less
+frequently read.
+
+<b>ANALYSIS</b>
+
+How serious are these challenges? It is the impression of many on the ACM
+Publications Board that current journals will cease print publication in
+just a few years, and may become irrelevant in just a few more years.  In
+the longer term, there is the oft-expressed concern that journals will
+become the dinosaurs of the information age.
+
+My view is somewhat to the contrary. I feel that with the democratization of
+information on the web, more is available, but with a concomitant increase
+in variability. There is much more good information, but also much more poor
+or simply incorrect information, on the web. In such an environment,
+indicators of quality are even more critical. So I believe that the careful
+reviewing associated with :journalAcronym[], along with its established imprimatur, will
+be of great value, and will be the basis for the journal's enduring
+legacy. That said, there will always be the need to innovate the strong
+journals for them to prosper.
+
+In summary, :journalAcronym[] continues to be the premier database journal, but there are
+danger signs, in terms of declining subscriptions, an inadequate backlog,
+unmet promises on author and reviewer rights, and decreasing
+relevance. These challenges must by confronted; business as usual is simply
+not acceptable.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[On the State of TODS]

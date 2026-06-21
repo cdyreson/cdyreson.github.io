@@ -1,0 +1,24 @@
+HASH#!_1VALUE#!_3text#!_2VALUE#!_3 #!_2VALUE#!_3normalAction#!_2VALUE#!_3<HTML>
+  <HEAD>
+  <TITLE>
+  Question RBEGIN$RpageNumberREND
+  </TITLE>
+  </HEAD>
+  <BODY>
+    
+  
+    <FORM METHOD="POST" ACTION="http://www.cs.jcu.edu.au/cgi-bin/perl/tute2/marker">
+    RBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$RhiddenText">REND
+    RBEGIN$RquestionsTextREND
+    <BR>
+    </FORM>
+  
+   &lt;A HREF=&quot;http://www.cs.jcu.edu.au/&nbsp;curtis&quot;&gt;
+Curtis Dyreson's home page
+&lt;/A&gt; &lt;BR&gt;
+&lt;A HREF=&quot;http://www.cs.jcu.edu.au&quot;&gt;
+Dept. of Computer Science
+&lt;/A&gt; 
+    
+  </BODY>
+  </HTML>

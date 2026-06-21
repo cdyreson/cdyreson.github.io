@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> Incomplete Data Cube GUI Instructions </title>
+</head>
+
+<H1>Incomplete Data Cube GUI Instructions</H1>
+
+<hr>
+<OL>
+<LI> Select a unit and measure for each dimension.
+<UL>
+<LI> To select a measure, simply choose one from the list.
+For example choose `countries' from the Machine measures list,
+`months' from the Time measures list, and 
+`pages' from the Page measures list.
+<LI> Selecting a unit is a little more complicated because there are
+so many units.  To pinpoint a unit it is usually best to choose a 
+very coarse measure (say, `years'), drill down to retrieve all the units 
+for that measure (`1995', `1996', `1997'), and then drill down within
+the year to get to the appropriate month (choose `1997' and drill down
+to get a list of months in 1997).
+<UL>
+<LI> If the measures are loaded choose a measure for which you 
+want the corresponding units to be loaded and choose the `drill down'
+option in adjust unit menu.
+<LI> If the units are loaded, but the unit is too coarse, choose that
+unit and the `drill down' option to get a list of finer units within the 
+coarse unit.
+<LI> If the units are loaded, and it is a list of units you want, choose
+the unit you want, and the `unit OK' option.
+<LI> If the units are loaded, but you want the measures loaded to select
+a coarser unit, choose the `reload measures' option.
+</UL>
+<B>Important:</B>Activate the `adjust units' button to take the 
+selected options for each dimension.
+</UL>
+<LI> Once you have selected valid units and measures for every dimension a
+`submit query' button will appear.  Activate this button to submit
+your query.  If there is not enough information in the cube to 
+satisfy your query, the cube will let you know.
+</OL> 
+
+<hr>
+
+<a href="index.html">Home</a> |
+<a href="overview.html">Overview</a> |
+<a href="publications.html">Papers</a> |
+<a href="code.html">Implementation</a> |
+<a href="javademo.html">Java Applet demo</a> |
+<a href="perldemo.html">Perl CGI demo</a> 
+<P>
+<em><a href="http://www.it.bond.edu.au/cdyreson">Curtis Dyreson</a> &copy; 1997. 
+All rights reserved. </em>
+</html>
+

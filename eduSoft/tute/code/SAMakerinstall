@@ -1,0 +1,84 @@
+#!/usr/local/bin/perl
+#=======================START OF CONFIGURATION=========================
+# Set the following line to where your perl lives and put in flags so that
+# in can include the various .pm 
+# NOTE THIS MUST BE PERL VERSION 5.0 or above.
+$PERL = '#!/usr/local/bin/perl -I/world/httpd/cgi-bin/perl/pm';
+ 
+# Set the following line to where the URL ROOT of the SAMaker cgi-bin scripts
+$ROOT = "http://www.cs.jcu.edu.au/cgi-bin/perl/tute2";
+ 
+# Set the following line to where the mailto feature on HTML titles should
+# send mail (you can ignore this as it is unsupported anyways)
+$MAILTO = 'curtis@cs.jcu.edu.au';
+ 
+# Where will the cgi-bin scripts live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the scripts that are located in this directory (for scripts marker, 
+# stats, hint, lookat, and explanation) so make sure to
+# put all the SAMaker cgi-bin scripts in their own directory.
+$SCRIPTDIR = "/world/httpd/cgi-bin/perl/tute2";
+ 
+# Does your server only understand scripts with a certain extension?
+$SCRIPTEXTENSION = "";  # assume no
+#$SCRIPTEXTENSION = ".pl";
+ 
+# Where will SAMaker live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the script SAMaker that is located in this directory (which should be OK)
+$SAMAKERDIR = '/home/curtis/bin/perl';
+ 
+# Where will the SAMaker Formats live?
+$SAMAKERFORMATDIR = "$SAMAKERDIR/SAMakerFormats";
+ 
+# chmod and chgrp to set the protections appropriately
+$CHMOD= 'chmod a+x';
+$CHGRP = '';
+
+# copy commands
+$CP = 'cp ';          # to copy the things in the SAMakerFormats directory
+#=======================END OF CONFIGURATION=========================
+configure("marker.proto", "$SCRIPTDIR/marker$SCRIPTEXTENSION");
+configure("stats.proto", "$SCRIPTDIR/stats$SCRIPTEXTENSION");
+configure("SAMaker.proto", "$SAMAKERDIR/SAMaker");
+configure("LessonMaker.proto", "$SAMAKERDIR/LessonMaker");
+configure("germanexample.tex.proto", "germanexample.tex");
+print "Copying SAMakerTags.pm to $SAMAKERDIR.\n";
+system("$CP SAMakerTags.pm $SAMAKERDIR/");
+print "Copying LessonMakerTags.pm to $SAMAKERDIR.\n";
+system("$CP LessonMakerTags.pm $SAMAKERDIR/");
+print "Making $SAMAKERFORMATDIR directory.\n";
+mkdir "$SAMAKERFORMATDIR", 0755 unless -e "$SAMAKERFORMATDIR";
+print "Copying SAMakerFormats to $SAMAKERFORMATDIR.\n";
+system("$CP SAMakerFormats/* $SAMAKERFORMATDIR/");
+
+print "\nI'm ALL DONE!!!!!\n";
+print "But you should please check for any errors above!\n";
+print "IMPORTANT: You should manually copy the pm/ directory!\n";
+print "And set permissions appropriately for them too!\n";
+
+sub configure {
+  local ($filein, $fileout) = @_;
+
+  print "reading $filein\n";
+  open(PROTO, "<$filein") || die "no $filein\n";
+  
+  # slurp input 
+  @lines = <PROTO>;
+  close(PROTO);
+  $text = join("",@lines);
+  $text =~ s/&&&PERL&&&/$PERL/g;
+  $text =~ s/&&&ROOT&&&/$ROOT/g;
+  $text =~ s/&&&MAILTO&&&/$MAILTO/g;
+  $text =~ s/&&&EXTENSION&&&/$SCRIPTEXTENSION/g;
+  $text =~ s/&&&FORMATDIR&&&/$SAMAKERFORMATDIR/g;
+  $text =~ s/&&&SAMAKERDIR&&&/$SAMAKERDIR/g;
+
+  open(OUT, ">$fileout") || die "can't open $fileout\n";
+  print "creating $fileout\n";
+  print OUT $text;
+  close(OUT);
+
+  if ($CHMOD) {system("$CHMOD $fileout");}
+  if ($CHGRP) {system("$CHGRP $fileout");}
+}

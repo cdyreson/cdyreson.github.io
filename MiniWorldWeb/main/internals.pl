@@ -1,0 +1,63 @@
+# LaTeX2HTML 96.1-e (April 9, 1996)
+# Associate internals original text with physical files.
+
+$key = q/figfinal/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_MENDELZON97A/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/figconcept/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/figwebsql/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/secmotivation/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_KONOPNICKI95/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_LACROIX97A/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/figscreen2/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/figscreendump/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/figcs/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_AROCENA96/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_MCHUGH97/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_LAKSHMANAN96/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_FERNANDEZ97/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_DYRESON97/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_BUNEMAN96/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_BUNEMAN97/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/secRelatedWork/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+$key = q/cite_MENDELZON96/;
+$ref_files{$key} = "$dir".'main.html'; 
+$noresave{$key} = "$nosave";
+
+1;
+

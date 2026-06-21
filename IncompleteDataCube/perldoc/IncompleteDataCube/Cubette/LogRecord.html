@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube/Cubette/LogRecord.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_LogRecord">NAME LogRecord</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_units_unitToMeasureTables">new($units, $unitToMeasureTables, $coarserUnitGraphs)</A>
+		<LI><A HREF="#unitsAtMeasures_measures_">unitsAtMeasures($measures)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_LogRecord">NAME LogRecord</A></H1>
+<P>
+Class encapsulating a record in a logfile.
+
+<P>
+This package is part of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/IncompleteDataCube/Cubette.html">IncompleteDataCube::Cubette</A>. For more information on the cube see the &lt;a
+href=``IncompleteDataCube/Overview.html''&gt;Overview&lt;/a&gt;.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the &lt;a href=``IncompleteDataCube/License.html''&gt;license&lt;/a&gt; and
+&lt;a href=``IncompleteDataCube/License.html''&gt;version&lt;/a&gt;.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> log record is a structure consisting of units above
+a unit. It is used to update the count associated with filters for each
+record read from a log file.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_units_unitToMeasureTables">new($units, $unitToMeasureTables, $coarserUnitGraphs)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__units">$units</A></STRONG>
+<P>
+- An <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/IdList.html">DBMDatabase::IdList</A>. 
+<FONT SIZE=-1>A</FONT> list of units to look above in each dimension.
+
+<LI><STRONG><A NAME="item__unitToMeasureTables">$unitToMeasureTables</A></STRONG>
+<P>
+- An array of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/Table.html">DBMDatabase::Table</A>. Tables that map units to particular measures.
+
+<LI><STRONG><A NAME="item__coarserUnitGraphs">$coarserUnitGraphs</A></STRONG>
+<P>
+- An array of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/persistent/PersistentGraph.html">persistent::PersistentGraph</A>. Directed graphs that lead from finer to coarser units.
+
+</UL>
+<P>
+Constuct a new log record.
+
+<P>
+<HR>
+<H2><A NAME="unitsAtMeasures_measures_">unitsAtMeasures($measures)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__measures">$measures</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> &lt;DBMDatabase::IdList&gt; of measures.
+
+</UL>
+<P>
+Builds a list of the units in each dimension for a measure. Returns the
+constructed list.
+
+</BODY>
+
+</HTML>

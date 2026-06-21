@@ -1,0 +1,7 @@
+:include[macros]
+:arg1[
+:include[guidelinesBody]
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Reviewer Guidelines]

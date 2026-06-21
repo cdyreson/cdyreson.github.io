@@ -1,0 +1,56 @@
+\batchmode
+\documentclass[11pt]{article}
+\makeatletter
+\usepackage{fullpage,html,epsfig}
+
+
+
+
+
+
+\title{SAMaker User Manual}
+\author{}
+\date{}
+
+\newcommand {\tutemaker}{{\tt SAMaker}\xspace}
+
+\newcommand {\starter}{{\tt Starter}\xspace}
+
+\newcommand {\marker}{{\tt Marker}\xspace}
+
+\newcommand {\stats}{{\tt Stats}\xspace}
+
+\makeatother
+\newenvironment{tex2html_wrap}{}{}
+\newwrite\lthtmlwrite
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newbox\sizebox
+\begin{document}
+\pagestyle{empty}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\center
+\hspace{0in}
+\epsfig{file=idraw/overall,width=6.2in}
+ 
+\label{fig:overall}
+\end{figure}
+}
+
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\center
+\hspace{0in}
+\epsfig{file=idraw/marker.ps,width=6.2in}
+ 
+\label{fig:marker}
+\end{figure}
+}
+
+
+\end{document}

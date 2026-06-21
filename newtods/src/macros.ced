@@ -1,0 +1,47 @@
+% Default font
+:arg1[arial]
+:macro[myFont]
+% URL for DBLP
+:arg1[http://www.informatik.uni-trier.de/~ley/db/indices/a-tree]
+:macro[dblp]
+% button color
+:arg1["#FFFFFF"]
+:macro[buttonColor]
+% nopout any solutions
+:arg1[<A HREF="mailto:colon[]rts@cs.arizona.edu">rts@cs.arizona.edu</A>]
+:macro[mailtorick]
+:arg1[<A HREF="mailto:colon[]rts\@cs.arizona.edu">rts\@cs.arizona.edu</A>]
+:macro[mailtorickPerl]
+%
+:arg1[<A HREF="mailto:colon[]tods@acm.org">tods@acm.org</A>]
+:macro[mailtoEIC]
+:arg1[<A HREF="mailto:colon[]tods\@acm.org">tods\@acm.org</A>]
+:macro[mailtoEICPerl]
+%
+:arg1[ACM Transactions on Database Systems]
+:macro[journalTitle]
+%
+:arg1[ACM <i>Transactions on Database Systems</i>]
+:macro[journalTitleItalics]
+%
+:arg1[<i>TODS</i>]
+:macro[tods]
+%
+:arg1[<i>TODS</i>]
+:macro[journalAcronym]
+%
+:arg1[<A HREF="mailto:colon[]tods@acm.org">tods@acm.org</A>]
+:macro[mailtowebmaster]
+:arg1[<A HREF="mailto:colon[]tods\@acm.org">tods\@acm.org</A>]
+:macro[mailtowebmasterPerl]
+%
+:arg1[Jan. 11, 2001]
+:macro[todaysDate]
+%
+:arg1[]
+:macro[baseURL]
+% This is to limit the EIC to the Home Page (fix EIC info on index page)
+:arg1[]
+:macro[EditorInChief]
+:arg1[colspan=2]
+:macro[NoEICinTitleRow]

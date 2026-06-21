@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A Semistructured Model With Properties</TITLE>
+<META NAME="description" CONTENT="A Semistructured Model With Properties">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html126"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html124"
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html118"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html127"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Up:</B> <A NAME="tex2html125"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<B> Previous:</B> <A NAME="tex2html119"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00031000000000000000">
+A Semistructured Model With Properties</A>
+</H2>
+
+<P>
+A semistructured database, 
+<!-- MATH: ${\it DB\/} = (V,~E,~{\it
+\&root\/},~\Gamma)$ -->
+<IMG
+ WIDTH="168" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="${\it DB\/} = (V,~E,~{\it
+\&root\/},~\Gamma)$">,
+consists of a set of nodes, <I>V</I>, a set of
+labeled, directed edges, <I>E</I>, a single root node, 
+<!-- MATH: ${\it\&root\/}$ -->
+<IMG
+ WIDTH="44" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="${\it\&root\/}$">,
+and a collection of so-called property operations, <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">,
+that
+determine the semantics of properties.  We also define 
+<!-- MATH: ${\it ROOTS\/}
+\subseteq E$ -->
+<IMG
+ WIDTH="95" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="${\it ROOTS\/}
+\subseteq E$">
+to be the set of edges emanating from 
+<!-- MATH: ${\it
+\&root}$ -->
+<IMG
+ WIDTH="44" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="${\it
+\&root}$">.
+(These edges lead to what would normally be considered the
+roots of the semistructure; the extra level of indirection serves
+to record the properties of the root nodes.)
+An edge in <I>E</I> from node <I>v</I> to node <I>w</I> with the label <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">
+is
+denoted 
+<!-- MATH: $v~{\mathop{\longrightarrow}\limits^{\cal L}}~w$ -->
+<IMG
+ WIDTH="57" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="$v~{\mathop{\longrightarrow}\limits^{\cal L}}~w$">.
+<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">
+is a <EM>label with
+properties</EM>.
+
+<P>
+[Label with properties]
+
+<P>
+A label with properties, <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">,
+is a set of <I>m</I> pairs, 
+
+<!-- MATH: $\{(p_1{\rm :}~x_1),~(p_2{\rm :}~x_2),~\ldots~,~(p_m{\rm :}~x_m)\}$ -->
+<IMG
+ WIDTH="246" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\{(p_1{\rm :}~x_1),~(p_2{\rm :}~x_2),~\ldots~,~(p_m{\rm :}~x_m)\}$">,
+where 
+(i) each <I>p</I><SUB><I>i</I></SUB> is the <EM>name</EM> of a property,
+(ii) <I>x</I><SUB><I>i</I></SUB> is a <EM>value</EM> drawn from the property's domain,
+that is 
+<!-- MATH: $x_i \in {\it domain\/}(p_i)$ -->
+<IMG
+ WIDTH="115" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$x_i \in {\it domain\/}(p_i)$">,
+(iii) property operations exist in <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">
+for each <I>p</I><SUB><I>i</I></SUB>, and
+(iv) each property name is unique, 
+that is, 
+<!-- MATH: $\forall i, j (p_i = p_j \Rightarrow i = j)$ -->
+<IMG
+ WIDTH="153" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\forall i, j (p_i = p_j \Rightarrow i = j)$">.
+
+<P>
+A <EM>required</EM> property, say <I>p</I><SUB><I>i</I></SUB> with value <I>x</I><SUB><I>i</I></SUB>, is 
+denoted 
+<!-- MATH: $(p_i{\rm !}~ x_i)$ -->
+<IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$(p_i{\rm !}~ x_i)$">.
+
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+<P></P>
+
+<P>
+<BR>
+
+<P>
+Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A>, an edge connects 
+<TT>&amp;movies</TT> to <TT>&amp;Color of Night</TT>.
+The label is the set of properties
+{(<B>name:</B>&nbsp;movie),&nbsp;(<B>security!</B>&nbsp;over 18)}.
+The <B>security</B> property is a required property.
+It is intended to limit access to the node to individuals over
+18 years of age.
+
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+<P></P>
+
+<P>
+To accommodate properties in queries, several operations for each
+property are needed, namely property collapse (
+<!-- MATH: ${\it PrCl\/}\xspace$ -->
+<IMG
+ WIDTH="38" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="${\it PrCl\/}\xspace$">),
+property match (
+<!-- MATH: ${\it PrMa\/}\xspace$ -->
+<IMG
+ WIDTH="44" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="${\it PrMa\/}\xspace$">), property coalesce
+(
+<!-- MATH: ${\it PrCs\/}\xspace$ -->
+<IMG
+ WIDTH="40" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="${\it PrCs\/}\xspace$">), and property slice (
+<!-- MATH: ${\it PrSl\/}\xspace$ -->
+<IMG
+ WIDTH="35" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="${\it PrSl\/}\xspace$">)
+(see
+Section&nbsp;<A HREF="node9.html#sec:queryOperators">3.2</A>).  These operations determine the
+semantics of properties and are included in <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">.
+
+<P>
+[Property operations]
+
+<P>
+For each property <I>p</I> in a label, operations with the following
+signatures should be present in <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">.
+For brevity, 
+let <I>T</I> be 
+<!-- MATH: ${\it domain\/}(p)$ -->
+<IMG
+ WIDTH="76" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="${\it domain\/}(p)$">.
+<UL>
+<LI>
+<!-- MATH: ${\it PrCl\/}\xspace_p: T \times T \rightarrow T~\cup~
+{\it\{undefined\}}$ -->
+<IMG
+ WIDTH="246" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="${\it PrCl\/}\xspace_p: T \times T \rightarrow T~\cup~
+{\it\{undefined\}}$">
+<BR>
+<LI>
+<!-- MATH: ${\it PrMa\/}\xspace_p: T \times T \rightarrow {\it BOOLEAN}$ -->
+<IMG
+ WIDTH="215" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="${\it PrMa\/}\xspace_p: T \times T \rightarrow {\it BOOLEAN}$">
+<BR>
+<LI>
+<!-- MATH: ${\it PrCs\/}\xspace_p: 2^{T~\cup~{\it\{undefined\}}} \rightarrow T~\cup~
+{\it\{undefined\}}$ -->
+<IMG
+ WIDTH="306" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="${\it PrCs\/}\xspace_p: 2^{T~\cup~{\it\{undefined\}}} \rightarrow T~\cup~
+{\it\{undefined\}}$">
+<BR>
+<LI>
+<!-- MATH: ${\it PrSl\/}\xspace_p: T \times T \rightarrow T~\cup~
+{\it\{undefined\}}$ -->
+<IMG
+ WIDTH="243" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="${\it PrSl\/}\xspace_p: T \times T \rightarrow T~\cup~
+{\it\{undefined\}}$">
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</UL>
+<P></P>
+
+<P>
+These operations collapse, match, coalesce, and slice property values.
+
+<P>
+New properties may
+be introduced at any time by registering the appropriate operations
+with the database.  
+Default semantics are available for the operations,
+as will be discussed in Section&nbsp;<A HREF="node19.html#sec:propertyChanges">3.4.2</A>.
+Table&nbsp;<A HREF="node8.html#tab:propertyOps">1</A> lists operations for one possible implementation
+of the properties discussed in this paper.
+The role of the property operations will become clear when querying 
+is considered, next.
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="407">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Table 1:</STRONG>
+Property Operations</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="CENTER"><B> name</B></TD>
+<TD ALIGN="CENTER"><B> valid time</B></TD>
+<TD ALIGN="CENTER"><B> security</B></TD>
+<TD ALIGN="CENTER"><B> transaction time</B></TD>
+<TD ALIGN="CENTER"><B> price</B></TD>
+<TD ALIGN="CENTER"><B> quality</B></TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: ${\it PrMa\/}\xspace_p$ -->
+<IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="${\it PrMa\/}\xspace_p$"></TD>
+<TD ALIGN="CENTER">=</TD>
+<TD ALIGN="CENTER">truth assignment</TD>
+<TD ALIGN="CENTER">overlaps</TD>
+<TD ALIGN="CENTER">overlaps</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="16" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\geq$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="16" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\leq$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: ${\it PrCl\/}\xspace_p$ -->
+<IMG
+ WIDTH="45" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="${\it PrCl\/}\xspace_p$"></TD>
+<TD ALIGN="CENTER">concatenation</TD>
+<TD ALIGN="CENTER">AND</TD>
+<TD ALIGN="CENTER">intersection</TD>
+<TD ALIGN="CENTER">intersection</TD>
+<TD ALIGN="CENTER">sum</TD>
+<TD ALIGN="CENTER">minimum</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: ${\it PrCs\/}\xspace_p$ -->
+<IMG
+ WIDTH="47" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="${\it PrCs\/}\xspace_p$"></TD>
+<TD ALIGN="CENTER">union</TD>
+<TD ALIGN="CENTER">OR</TD>
+<TD ALIGN="CENTER">coalesce</TD>
+<TD ALIGN="CENTER">coalesce</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="30" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\min$"></TD>
+<TD ALIGN="CENTER">average</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: ${\it PrSl\/}\xspace_p$ -->
+<IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="${\it PrSl\/}\xspace_p$"></TD>
+<TD ALIGN="CENTER">semantic error</TD>
+<TD ALIGN="CENTER">conjunct elimination</TD>
+<TD ALIGN="CENTER">intersection</TD>
+<TD ALIGN="CENTER">intersection</TD>
+<TD ALIGN="CENTER">&gt; pruning</TD>
+<TD ALIGN="CENTER">&lt; pruning</TD>
+</TR>
+</TABLE>
+<P>
+</DIV>
+<BR>
+<A NAME="tab:propertyOps">&#160;</A></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html126"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html124"
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html118"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html127"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Up:</B> <A NAME="tex2html125"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<B> Previous:</B> <A NAME="tex2html119"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

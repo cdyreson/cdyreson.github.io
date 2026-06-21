@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./OODatabase/Database.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_database">NAME Database</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(string_databasename,_string_databasemode)">new(string databaseName, string databaseMode)</a></li>
+		<li><a href="#createtable(string_$tablename)">createTable(string $tableName)</a></li>
+		<li><a href="#createnewtable(string_$tablename)">createNewTable(string $tableName)</a></li>
+		<li><a href="#close()"><code>close()</code></a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_database">NAME Database</a></h1>
+<p>This class encapsulates a Database.</p>
+<p>This package is part of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase.html">the OODatabase manpage</a>.
+For more information on the database see the <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Overview.html">the OODatabase::Overview manpage</a>.</p>
+<p>Copyright &amp;copy 1998 Curtis E. Dyreson. All rights reserved.
+Please be aware of the <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Licence.html">the OODatabase::Licence manpage</a> and <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Version.html">the OODatabase::Version manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The database supports only tables of persistent associative arrays,
+so it is a really simple database! 
+In our implementation the database itself is a directory, and the tables
+within it are jdbm files. The name of the 
+directory is passed to the Database constructor.  Individual tables in
+the database are dbm files.
+See also <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Table.html">the OODatabase::Table manpage</a> and <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Tuple.html">the OODatabase::Tuple manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(string_databasename,_string_databasemode)">new(string databaseName, string databaseMode)</a></h2>
+<ul>
+<li><strong><a name="item_string_databasename">string databaseName</a></strong><br />
+</li>
+- The name of the database (a directory name).
+<p></p>
+<li><strong>string databaseName</strong><br />
+</li>
+- The mode of the database (BSD, GDBM, DBM, SMALLDBM, or BerkelyDB).
+<p></p></ul>
+<p>Creates a database structure.  Initializes the list of open files.
+Checks to see if the database directory exists, and if the mode is
+supported.</p>
+<p>
+</p>
+<h2><a name="createtable(string_$tablename)">createTable(string $tableName)</a></h2>
+<ul>
+<li><strong><a name="item_string_%24tablename">string $tableName</a></strong><br />
+</li>
+- The name of the table.
+<p></p></ul>
+<p>Creates a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Table.html">the OODatabase::Table manpage</a>.  
+A table is a database relation.</p>
+<p>
+</p>
+<h2><a name="createnewtable(string_$tablename)">createNewTable(string $tableName)</a></h2>
+<ul>
+<li><strong>string $tableName</strong><br />
+</li>
+- The name of the table.
+<p></p></ul>
+<p>Creates a new <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Table.html">the OODatabase::Table manpage</a> (will delete all entries from an 
+existing table).
+A table is a database relation.</p>
+<p>
+</p>
+<h2><a name="close()"><code>close()</code></a></h2>
+<p>Close the database making sure that the open tables have been flushed.</p>
+
+</body>
+
+</html>

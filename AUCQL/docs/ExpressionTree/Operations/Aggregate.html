@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./ExpressionTree/Operations/Aggregate.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_expressiontree::operations::aggregate;">NAME ExpressionTree::Operations::Aggregate;</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new($op,_$var)">new($op, $var)</a></li>
+		<li><a href="#resulttype()"><code>resultType()</code></a></li>
+		<li><a href="#dump($indent)"><code>dump($indent)</code></a></li>
+		<li><a href="#evaluate(state_state)">evaluate(State state)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_expressiontree::operations::aggregate;">NAME ExpressionTree::Operations::Aggregate;</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This class represents an aggregate operation.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new($op,_$var)">new($op, $var)</a></h2>
+<ul>
+<li><strong><a name="item_op">op</a></strong><br />
+</li>
+The aggregate operation.
+<p></p>
+<li><strong><a name="item_var">var</a></strong><br />
+</li>
+<a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/ExpressionTree/Operands/Variable.html">the ExpressionTree::Operands::Variable manpage</a> $var - the column on which to compute it
+<p></p></ul>
+<p>Create a new aggregate operation</p>
+<p>
+</p>
+<h2><a name="resulttype()"><code>resultType()</code></a></h2>
+<p>Return the type of result.</p>
+<p>
+</p>
+<h2><a name="dump($indent)"><code>dump($indent)</code></a></h2>
+<p>Dump this node.</p>
+<p>
+</p>
+<h2><a name="evaluate(state_state)">evaluate(State state)</a></h2>
+<p>Evaluate the aggregate operation returning a result.
+This goes through every tuple in the current group
+and computes the aggregate on the appropriate column.</p>
+
+</body>
+
+</html>

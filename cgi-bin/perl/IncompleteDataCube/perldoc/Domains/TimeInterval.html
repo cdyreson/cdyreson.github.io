@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<TITLE>./Domains/TimeInterval.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_TimeInterval">NAME TimeInterval</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Constant_value_">new(Constant value)</A>
+		<LI><A HREF="#validate_Constant_s_">validate(Constant s)</A>
+		<LI><A HREF="#overlaps_other_">overlaps(other)</A>
+		<LI><A HREF="#contains_other_">contains(other)</A>
+		<LI><A HREF="#intersect_other_">intersect(other)</A>
+		<LI><A HREF="#union_TimeInterval_other_">union(TimeInterval other)</A>
+		<LI><A HREF="#match_TimeInterval_other_">match(TimeInterval other)</A>
+		<LI><A HREF="#collapse_TimeInterval_other_">collapse(TimeInterval other)</A>
+		<LI><A HREF="#coalesce_TimeInterval_other_">coalesce(TimeInterval other)</A>
+		<LI><A HREF="#slice_TimeIntveral_other_">slice(TimeIntveral other)</A>
+		<LI><A HREF="#presentation_">presentation()</A>
+		<LI><A HREF="#evaluate_State_state_">evaluate(State state)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_TimeInterval">NAME TimeInterval</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> TimeInterval Type
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Constant_value_">new(Constant value)</A></H2>
+<P>
+Create a new type from the passed string value, if no string is passed
+create an interval over all time.
+
+<P>
+<HR>
+<H2><A NAME="validate_Constant_s_">validate(Constant s)</A></H2>
+<P>
+Check to see that this constant is a legal string value. Currently only
+Gregorian calendar days is supported. All times must be of the form
+'12/feb/1998' where the day is between 1 and 31 (inclusive), the month must
+be a legal 3 character English abbreviation of a month and the year must be
+four digits.
+
+<P>
+<HR>
+<H2><A NAME="overlaps_other_">overlaps(other)</A></H2>
+<P>
+Return the result of an overlaps operation.
+
+<P>
+<HR>
+<H2><A NAME="contains_other_">contains(other)</A></H2>
+<P>
+Return the result of a contains operation.
+
+<P>
+<HR>
+<H2><A NAME="intersect_other_">intersect(other)</A></H2>
+<P>
+Return the intersection of the two intervals.
+
+<P>
+<HR>
+<H2><A NAME="union_TimeInterval_other_">union(TimeInterval other)</A></H2>
+<P>
+Return the union of the two intervals, currently chooses the maximum
+extent. In future, it should return a temporal element.
+
+<P>
+<HR>
+<H2><A NAME="match_TimeInterval_other_">match(TimeInterval other)</A></H2>
+<P>
+Match this one against another.
+
+<P>
+<HR>
+<H2><A NAME="collapse_TimeInterval_other_">collapse(TimeInterval other)</A></H2>
+<P>
+Collapse this one with another using intersection.
+
+<P>
+<HR>
+<H2><A NAME="coalesce_TimeInterval_other_">coalesce(TimeInterval other)</A></H2>
+<P>
+Coalesce this one with another.
+
+<P>
+<HR>
+<H2><A NAME="slice_TimeIntveral_other_">slice(TimeIntveral other)</A></H2>
+<P>
+Slice this one using another.
+
+<P>
+<HR>
+<H2><A NAME="presentation_">presentation()</A></H2>
+<P>
+Present this string value.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_State_state_">evaluate(State state)</A></H2>
+<P>
+Self evaluating
+
+</BODY>
+
+</HTML>

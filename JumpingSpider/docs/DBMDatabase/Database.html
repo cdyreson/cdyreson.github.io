@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/Database.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Database">NAME Database</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_string_databaseName_">new(string $databaseName)</A>
+		<LI><A HREF="#createTable_string_tableName_">createTable(string $tableName)</A>
+		<LI><A HREF="#createNewTable_string_tableName">createNewTable(string $tableName)</A>
+		<LI><A HREF="#close_">close()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Database">NAME Database</A></H1>
+<P>
+This class encapsulates a Database.
+
+<P>
+This package is part of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/./DBMDatabase.html#">the DBMDatabase manpage</A>. For more information on the database see the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Overview.html">DBMDatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Licence.html">DBMDatabase::Licence</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Version.html">DBMDatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+The database supports only tables of persistent associative arrays, so it
+is a really simple database! In our implementation the database itself is a
+directory, and the tables within it are jdbm files. The name of the
+directory is passed to the Database constructor. Individual tables in the
+database are dbm files. See also <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Tuple.html">DBMDatabase::Tuple</A>.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_string_databaseName_">new(string $databaseName)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $databaseName</A></STRONG>
+<P>
+- The name of the database (a directory name).
+
+</UL>
+<P>
+This constructor just stores the name of the database as the directory. It
+does not open any files, nor check to make sure the directory exists.
+
+<P>
+<HR>
+<H2><A NAME="createTable_string_tableName_">createTable(string $tableName)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $tableName</A></STRONG>
+<P>
+- The name of the table.
+
+</UL>
+<P>
+Creates a <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>. 
+<FONT SIZE=-1>A</FONT> table is a database relation.
+
+<P>
+<HR>
+<H2><A NAME="createNewTable_string_tableName">createNewTable(string $tableName)</A></H2>
+<UL>
+<LI><STRONG>string $tableName</STRONG>
+<P>
+- The name of the table.
+
+</UL>
+<P>
+Creates a new <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A> (will delete all entries from an existing table). 
+<FONT SIZE=-1>A</FONT> table is a database relation.
+
+<P>
+<HR>
+<H2><A NAME="close_">close()</A></H2>
+<P>
+Close the database making sure that the open tables have been flushed.
+
+</BODY>
+
+</HTML>

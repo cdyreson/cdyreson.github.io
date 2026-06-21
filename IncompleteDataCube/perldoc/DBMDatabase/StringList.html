@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/StringList.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_StringList">NAME StringList</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_StringCol_ids_">new(StringCol[] @ids)</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+		<LI><A HREF="#fromBytes_Byte_b_">fromBytes(Byte[] $b)</A>
+		<LI><A HREF="#toStringColArray_">toStringColArray()</A>
+		<LI><A HREF="#addElement_StringCol_s_">addElement(StringCol $s)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_StringList">NAME StringList</A></H1>
+<P>
+Class encapsulating an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/StringCol.html">DBMDatabase::StringCol</A> list in a Database.
+
+<P>
+This package is part of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/./DBMDatabase.html#">the DBMDatabase manpage</A>. For more information on the database see the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/Overview.html">DBMDatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/Licence.html">DBMDatabase::Licence</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/Version.html">DBMDatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An StringList is a data type for a column in a database <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/Table.html">DBMDatabase::Table</A>.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_StringCol_ids_">new(StringCol[] @ids)</A></H2>
+<P>
+Construct a list from an array of StringCols
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Convert to a nice String image for dumping
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Returns a byte image of StringList.
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_Byte_b_">fromBytes(Byte[] $b)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Byte">Byte[] $b</A></STRONG>
+<P>
+- The sequence of bytes
+
+</UL>
+<P>
+Build a new StringList from a byte image.
+
+<P>
+<HR>
+<H2><A NAME="toStringColArray_">toStringColArray()</A></H2>
+<P>
+Build an array of StringCol that is the sequence.
+
+<P>
+<HR>
+<H2><A NAME="addElement_StringCol_s_">addElement(StringCol $s)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_StringCol">StringCol $s</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/IncompleteDataCube/perldoc/DBMDatabase/StringCol.html">DBMDatabase::StringCol</A>, the string to add
+
+</UL>
+<P>
+Add an element to this list
+
+</BODY>
+
+</HTML>

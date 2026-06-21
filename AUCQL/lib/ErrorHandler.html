@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/ErrorHandler.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_ErrorHandler">NAME ErrorHandler</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#clearText_">clearText()</A>
+		<LI><A HREF="#appendText_string_s_">appendText(string s)</A>
+		<LI><A HREF="#internalError_string_msg_string">internalError(string msg, string rest)</A>
+		<LI><A HREF="#syntaxError_string_msg_string_c">syntaxError(string msg, string current, string rest)</A>
+		<LI><A HREF="#semanticError_string_msg_string">semanticError(string msg, string current, string rest)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_ErrorHandler">NAME ErrorHandler</A></H1>
+<P>
+This class handles errors, primarily by reporting and dying! Only one
+ErrorHandler is permitted since this class contains class-dependent
+variables (i.e., it should not be instantiated).
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Various kinds of errors are detected during query evaluation, methods in
+this class support processing of those errors. In general, all errors
+should end up here rather than croaking or dying in the underlying methods.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="clearText_">clearText()</A></H2>
+<P>
+Clear the accumulated text from the class.
+
+<P>
+<HR>
+<H2><A NAME="appendText_string_s_">appendText(string s)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_s">s</A></STRONG>
+<P>
+- The string to append to the accumulated text.
+
+</UL>
+<P>
+Adds text to the accumulated text, used to remember where in the parsed
+text the program currently is.
+
+<P>
+<HR>
+<H2><A NAME="internalError_string_msg_string">internalError(string msg, string rest)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_msg">msg</A></STRONG>
+<P>
+- The message to print.
+
+<LI><STRONG><A NAME="item_rest">rest</A></STRONG>
+<P>
+- The rest of the program.
+
+</UL>
+<P>
+Some internal error was detected due to a bug in the compiler, print
+something appropriate and die.
+
+<P>
+<HR>
+<H2><A NAME="syntaxError_string_msg_string_c">syntaxError(string msg, string current, string rest)</A></H2>
+<UL>
+<LI><STRONG>msg</STRONG>
+<P>
+- The message to print.
+
+<LI><STRONG><A NAME="item_current">current</A></STRONG>
+<P>
+- The current token.
+
+<LI><STRONG>rest</STRONG>
+<P>
+- The rest of the program.
+
+</UL>
+<P>
+
+<FONT SIZE=-1>A</FONT> syntax error was detected. Print something
+appropriate and die.
+
+<P>
+<HR>
+<H2><A NAME="semanticError_string_msg_string">semanticError(string msg, string current, string rest)</A></H2>
+<UL>
+<LI><STRONG>msg</STRONG>
+<P>
+- The message to print.
+
+<LI><STRONG>current</STRONG>
+<P>
+- The current token.
+
+<LI><STRONG>rest</STRONG>
+<P>
+- The rest of the program.
+
+</UL>
+<P>
+
+<FONT SIZE=-1>A</FONT> semantic error was detected. Print something
+appropriate and die.
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_DBMDatabase_pm">NAME DBMDatabase.pm</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_DBMDatabase_pm">NAME DBMDatabase.pm</A></H1>
+<P>
+This package includes all the things required for the Configuration of a simple (non-concurrent) database based on 
+<FONT SIZE=-1>DBM</FONT> files.
+  
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+It has several parts 
+
+<UL>
+<LI>
+<P>
+<A HREF="./DBMDatabase/Database.html">DBMDatabase::Database</A> 
+- The database itself.
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A> 
+- 
+<FONT SIZE=-1>A</FONT> table in the database. All tables have two columns.
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/Tuple.html">DBMDatabase::Tuple</A> 
+- 
+<FONT SIZE=-1>A</FONT> tuple in a table. All tuples have a key and a value.
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A> 
+- An allowed column data-type. An Id is the internal representation of a
+string (as a list of integers). An Id can be a key.
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A> 
+- An allowed column data-type. An list of Ids. An IdList can be a key.
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A> 
+- An allowed column data-type. An set of Ids. An IdSet cannot be a key.
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/StringCol.html">DBMDatabase::StringCol</A> 
+- An allowed column data-type. 
+<FONT SIZE=-1>A</FONT> string. 
+<FONT SIZE=-1>A</FONT> StringCol can be a key.
+
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/StringList.html">DBMDatabase::StringList</A> 
+- An allowed column data-type. 
+<FONT SIZE=-1>A</FONT> list of string. 
+<FONT SIZE=-1>A</FONT> StringList can be a key.
+
+
+<LI>
+<P>
+<A HREF="./DBMDatabase/Convert.html">DBMDatabase::Convert</A> 
+- An internal class to implement the automatic conversion between strings
+and ids. It is effectively a private class for the database.
+
+</UL>
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved.
+
+</BODY>
+
+</HTML>

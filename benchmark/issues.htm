@@ -1,0 +1,309 @@
+<html>
+<head>
+<title>Design Issues in tauZaman</title>
+</head>
+<script language="JavaScript">
+<!--
+
+  forwardArrow=new Image
+  backArrow=new Image
+  backLinkArrow=new Image
+  forwardLinkArrow=new Image
+  forwardArrow.src="images/across.gif"
+  backArrow.src="images/b.gif"
+  backLinkArrow.src="images/back.gif"
+  forwardLinkArrow.src="images/backBlue.gif"
+
+//-->
+</script>
+<body>
+<div align="left">
+  <table width="754" cellSpacing="0" height="80" border="0" cellPadding="0">
+    <tr>
+      <td align="left"> 
+        <img src="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/images/logoblack.jpg"/>
+      </td>
+      <td align="left" vAlign="top">
+      <table width="527" cellSpacing="0" border="0" cellPadding="0">
+          <tr bgColor="#000000">
+            <td height="20">
+               <font color="#ffffff"> <b>Welcome to the <tauZaman/> project&nbsp;</b></font>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" nowrap="1" height="60"> 
+             <b>
+              <font face="Times New Roman, Times, serif" color="#993333" size="6">
+                Design Issues
+              </font>
+             </b>
+            </td>
+          </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+    <table width="754" bgColor="#6666cc" cellSpacing="0" height="15" border="0" cellPadding="0">
+      <tbody>
+         <tr>
+           <td width="100%">&nbsp;
+           </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="754" cellSpacing="0" border="0" cellPadding="0">
+      <tr> 
+        <td bgColor="#6666cc">&nbsp;</td>
+        <td width="15" vAlign="top">
+          <img width="15" src="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/images/hm_corner.gif" height="15" border="0"/>
+        </td>
+      </tr>
+      <tr>
+       <td bgColor="#6666cc" valign="top">
+         <table cellSpacing="2" border="0" cellPadding="0">
+          <tr>
+      <td width="10" nowrap="1"> 
+      </td>
+      <td width="100" bgcolor="#FFFFFF" align="left" nowrap="1">
+       <A onMouseOver="HomeC.src=backArrow.src" onMouseOut="HomeC.src=forwardArrow.src" style="text-decoration:none" HREF="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/index.htm">
+    <img alt="HomeC" src="images/across.gif" valign="center" name="HomeC" border="0"/>&nbsp;
+    <font face="#D0D0D0">
+      Home
+    </font>
+    </A>
+      </td>
+      <td width="20" nowrap="1"> 
+      </td>
+    </tr>
+          <tr>
+      <td width="10" nowrap="1"> 
+      </td>
+      <td width="100" bgcolor="#FFFFFF" align="left" nowrap="1">
+       <A onMouseOver="docgenC.src=backArrow.src" onMouseOut="docgenC.src=forwardArrow.src" style="text-decoration:none" HREF="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/docgen.htm">
+    <img alt="docgenC" src="images/across.gif" valign="center" name="docgenC" border="0"/>&nbsp;
+    <font face="#D0D0D0">
+      Document generator
+    </font>
+    </A>
+      </td>
+      <td width="20" nowrap="1"> 
+      </td>
+    </tr>
+          <tr>
+      <td width="10" nowrap="1"> 
+      </td>
+      <td width="100" bgcolor="#FFFFFF" align="left" nowrap="1">
+       <A onMouseOver="otherXMLC.src=backArrow.src" onMouseOut="otherXMLC.src=forwardArrow.src" style="text-decoration:none" HREF="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/otherXML.htm">
+    <img alt="otherXMLC" src="images/across.gif" valign="center" name="otherXMLC" border="0"/>&nbsp;
+    <font face="#D0D0D0">
+      Other XML benchmarks
+    </font>
+    </A>
+      </td>
+      <td width="20" nowrap="1"> 
+      </td>
+    </tr>
+          <tr>
+      <td width="10" nowrap="1"> 
+      </td>
+      <td width="100" bgcolor="#FFFFFF" align="left" nowrap="1">
+       <A onMouseOver="otherBenchC.src=backArrow.src" onMouseOut="otherBenchC.src=forwardArrow.src" style="text-decoration:none" HREF="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/otherBench.htm">
+    <img alt="otherBenchC" src="images/across.gif" valign="center" name="otherBenchC" border="0"/>&nbsp;
+    <font face="#D0D0D0">
+      Other benchmarks
+    </font>
+    </A>
+      </td>
+      <td width="20" nowrap="1"> 
+      </td>
+    </tr>
+         </table>
+       </td>
+        <td>&nbsp;</td>
+        <td valign="top"> 
+          <table cellspacing="0" cellpadding="0" border="0">
+            <tr><td valign="top">This page will maintain a list of design issues in <tauZaman/>.
+Some of the issues are OPEN, but some have been resolved and are
+indicated as CLOSED.
+Send e-mail to Curtis.Dyreson at usu.edu to add an issue.
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> Language property</td></tr>
+      <tr><td align="left"><b>Date:</b> Jan-20-2004</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Rick</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> There is no language property.
+I think there *should* be a language property, but this will 
+require redesign of some of the system, so I suggest we defer this to V2.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> Missing Epochs</td></tr>
+      <tr><td align="left"><b>Date:</b> Jan-20-2004</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Jessica</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> We decided not to support epochs, but they appear to be useful.
+How about if we add epochs?</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> Allen's algebra in Period</td></tr>
+      <tr><td align="left"><b>Date:</b> Feb-5-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Rick</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> For each operation in the DeterminateSemantics/IndeterminateSemantics,
+should we add a signature for that operation to the Instant, Period, or 
+Interval class, depending on the class of the first operand?
+Currently, the operation is called through a Semantics.
+We would need to add a "cached" Semantics to each constructed time value
+to support this.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> CLOSED </td></tr>
+      <tr><td align="left"><b>Title:</b> Granularity lattice</td></tr>
+      <tr><td align="left"><b>Date:</b> Feb-4-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Curtis</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> The design of the granularity lattice is open.  Basically we
+have to figure out how to generate and cache mappings.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> Probability Mass Function Class</td></tr>
+      <tr><td align="left"><b>Date:</b> Feb-4-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Curtis</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> Has yet to be designed.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> System Testing</td></tr>
+      <tr><td align="left"><b>Date:</b> Feb-4-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Curtis</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> We have to develop a comprehensive set of tests.  There should
+be both stress tests and performance tests.  TimeADT has some test code.
+Initially, the code specified there should be adapted.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> Full elaboration of Semantics</td></tr>
+      <tr><td align="left"><b>Date:</b> Feb-4-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Curtis</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> The IndeterminateSemantics and DeterminateSemantics lack an
+exhaustive set of operations, for instance there is no overlaps
+constructor (there is a predicate, but no constructor).  
+All operations need to be fully elaborated.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> CLOSED </td></tr>
+      <tr><td align="left"><b>Title:</b> Logo Design</td></tr>
+      <tr><td align="left"><b>Date:</b> Jan-31-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Curtis</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> The logo needs to be redesigned to make the dates legible.</td></tr>
+   </table>
+<hr noshade="1"/>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr><td align="left"><b>Status:</b> OPEN</td></tr>
+      <tr><td align="left"><b>Title:</b> Use Cases</td></tr>
+      <tr><td align="left"><b>Date:</b> Jan-31-2003</td></tr>
+      <tr><td align="left"><b>Raised by:</b> Curtis</td></tr>
+      <tr><td align="left"><b>Synopsis:</b> We need to develop a use case document.  Jessica added that
+the tool she uses for the UML diagrams can generate some use cases.
+We should definitely incorporate as many automatically generated
+cases as possible.  But we also should hand-develop some use cases.
+The idea is a set of examples that a user, interested in particular
+components, can use to further write his/her own code.  Bedirhan
+is to develop use cases for the Server/CalendricSystem.  Curtis is
+to develop use cases for timestamp/temporaldatatypes.</td></tr>
+   </table>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+</td></tr>
+         </table>
+        </td>
+      </tr>
+      <tr>
+        <td bgColor="#6666cc">&nbsp;</td><td align="left" nowrap="1" valign="bottom"><img width="15" src="http://digital.cs.usu.edu/~cdyreson/pub/benchmark/images/ll_corner.gif" border="0"/></td>
+      </tr>
+      <tr>
+        <td align="right" bgColor="#6666cc" colspan="3" height="20">
+          <font color="#fff111"> 
+            <small>
+              <i>E-mail questions or comments to <A HREF="mailto:hjin@eecs.wsu.edu"><font color="#00FF00">Hao Jin</font></A> or
+                                                 <font color="#00FF00">Curtis.Dyreson at usu.edu</font></i>
+            </small>
+          </font>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

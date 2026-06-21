@@ -1,0 +1,52 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved October 5, 2004</b>
+<BR>
+Won Kim regularly invited some SIGMOD papers for submission to 
+:journalAcronym[].
+When Rick Snodgrass came on board as EiC, he asked the EB which
+conferences were the best, and they replied SIGMOD, VLDB, PODS, EDBT,
+ICDT, ICDE, in roughly that order. VLDB already had a relationship
+with VLDBJ and ICDE with TKDE. Rick Snodgrass then negotiated with the four
+other conferences, realizing cooperative arrangements that provides
+roughly 10 submissions a year, most of which are eventually accepted,
+most after a major revision. (Note that EDBT and ICDT are every other
+year.) These arrangements are documented in other policies: 
+<a href="SIGMOD.html">SIGMOD</a>,
+<a href="EDBT.html">EDBT</a>, 
+<a href="ICDT.html">ICDT</a>, and
+<a href="PODS.html">PODS</a>.
+
+In a subsequent discussion in September 2004, it was strongly felt by
+the EB that the "invitation mode" should be reserved for a very small
+number of the very best first-rate conferences (no workshops, no
+second-tier conferences, and no specialized conferences). While
+invited papers are also fully reviewed, "invitation" still implies
+that there is an initial expectation that there is a higher
+probability that the paper will be accepted, and so reflects
+recognition from :journalAcronym[] of the quality of the conference.  It was felt
+that it would weaken :journalAcronym[] to be associated with anything but the top
+conferences that cover databases in a broad sense of the term. It was
+also emphasized that any author of any paper can always submit a paper
+to :journalAcronym[], so this policy does not limit submissions.
+
+This policy allows two kinds of invited papers. The first is a paper
+that appears in SIGMOD, PODS, EDBT, or ICDT that is vetted by the
+stated procedure for that conference, and subsequently invited for
+submission to :journalAcronym[]. Such papers are handled in a specified way (e.g.,
+some of the reviewers were the original reviewers of the conference
+submission, all reviewers are notified that the paper was invited). If
+and when these papers are accepted, they generally appear in a special
+section or issue.
+
+The second kind is an ad hoc invited paper. Any Associate Editor can
+encourage the author of work that AE respects, or of a conference
+paper that AE admires, to submit a follow-on paper to :journalAcronym[]. Such
+submissions are handled as regular submissions, with no special
+consideration whatsoever.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Inviting Conference Papers to TODS]

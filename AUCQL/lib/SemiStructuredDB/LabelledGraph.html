@@ -1,0 +1,183 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/SemiStructuredDB/LabelledGraph.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_LabelledGraph">NAME LabelledGraph </A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_db_name_">new($db, $name)</A>
+		<LI><A HREF="#addDimension_name_type_">addDimension(name, type)</A>
+		<LI><A HREF="#KeysImage_">KeysImage()</A>
+		<LI><A HREF="#addEdge_Edge_edge_">addEdge(Edge edge)</A>
+		<LI><A HREF="#nodesFromMatch_fromNode_testReg">nodesFromMatch(fromNode, testRegion)</A>
+		<LI><A HREF="#match_fromNode_testRegion_">match(fromNode, testRegion)</A>
+		<LI><A HREF="#roots_">roots()</A>
+		<LI><A HREF="#enumerate_">enumerate()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_LabelledGraph">NAME LabelledGraph</A></H1>
+<P>
+Class encapsulating a persistent labelled graph.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> persistent labelled graph is a <A HREF="./OODatabase/Table.html">OODatabase::Table</A> mapping from nodes to to nodes.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_db_name_">new($db, $name)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__db">$db</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./OODatabase/Database.html">OODatabase::Database</A>, the database where the graph will live
+
+<P>
+-item * <CODE>$name</CODE>
+
+<P>
+- 
+<FONT SIZE=-1>A</FONT> string, the name of the graph
+
+</UL>
+<P>
+Create a new persistent graph.
+
+<P>
+<HR>
+<H2><A NAME="addDimension_name_type_">addDimension(name, type)</A></H2>
+<P>
+Add a dimension
+
+<P>
+<HR>
+<H2><A NAME="KeysImage_">KeysImage()</A></H2>
+<P>
+Return an image of all the keys in the graph.
+
+<P>
+<HR>
+<H2><A NAME="addEdge_Edge_edge_">addEdge(Edge edge)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_edge">edge</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> labelled edge.
+
+</UL>
+<P>
+Add an edge. 
+
+<P>
+<HR>
+<H2><A NAME="nodesFromMatch_fromNode_testReg">nodesFromMatch(fromNode, testRegion)
+ 
+=over 4
+ 
+=item * fromNode
+ 
+- A &lt;A HREF=&quot;./Domains/Node.html&quot;&gt;Domains::Node&lt;/A&gt;, the node to start from
+ 
+=item * testRegion
+ 
+- The &lt;A HREF=&quot;./../lib/SemiStructuredDB/Region.html#&quot;&gt;the Region manpage&lt;/A&gt; to check
+ 
+=back
+ 
+Get the set of nodes that match the testRegion from the fromNode.
+Returns an &lt;A HREF=&quot;./Domains/NodeSet.html&quot;&gt;Domains::NodeSet&lt;/A&gt;, the set of nodes.
+ 
+=cut
+ 
+#---------------------------------------------------------------------
+  sub nodesFromMatch {
+    my ($self, $fromNode, $testRegion) = @_;</A></H2>
+<P>
+<PRE>    # retrieve the set of edges from fromNode out of the edge table
+    my ($edges);
+    my ($edgeTable) = $self-&gt;{'edges'};
+    my ($t) = $edgeTable-&gt;retrieveTuple($fromNode);
+    if ($t) { $edges = EdgeList-&gt;fromBytes($t-&gt;getValue()); }
+    else { $edges = new EdgeList($fromNode, []); }
+    my ($toSet) = new NodeSet();
+</PRE>
+<P>
+<PRE>    # Test each edge out of this node
+    my $edgeList = $edges-&gt;enumerateEdges();
+    foreach my $edge (@{$edgeList}) {
+</PRE>
+<P>
+<PRE>      # if it matches...
+      if ($edge-&gt;match($fromNode, $testRegion)) {
+</PRE>
+<P>
+<PRE>        # add the to node to the result set
+        $toSet-&gt;insert($edge-&gt;toNode());
+        }
+      }
+</PRE>
+<P>
+<PRE>    return $toSet;
+    }
+#---------------------------------------------------------------------
+</PRE>
+<P>
+<HR>
+<H2><A NAME="match_fromNode_testRegion_">match(fromNode, testRegion)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_fromNode">fromNode</A></STRONG>
+<P>
+- An <A HREF="./Domains/Node.html">Domains::Node</A>, the node to start from
+
+<LI><STRONG><A NAME="item_testRegion">testRegion</A></STRONG>
+<P>
+- The <A HREF="./../lib/SemiStructuredDB/Region.html#">the Region manpage</A> to check
+
+</UL>
+<P>
+Matches the testRegion against the regions in the labels on edges out of
+fromNode. Returns a list of edges!
+
+<P>
+<HR>
+<H2><A NAME="roots_">roots()</A></H2>
+<P>
+Return the EdgeList of root nodes.
+
+<P>
+<HR>
+<H2><A NAME="enumerate_">enumerate()</A></H2>
+<P>
+Return a reference to the dbm file.
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Save any changes to the persistent graph to disk.  
+
+</BODY>
+
+</HTML>

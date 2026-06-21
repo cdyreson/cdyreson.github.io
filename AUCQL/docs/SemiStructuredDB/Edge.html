@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./SemiStructuredDB/Edge.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_edge">NAME Edge</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(id_from,_label_label,_id_to)">new(Id from, Label label, Id to)</a></li>
+		<li><a href="#tostring()"><code>toString()</code></a></li>
+		<li><a href="#image()"><code>image()</code></a></li>
+		<li><a href="#from()"><code>from()</code></a></li>
+		<li><a href="#to()"><code>to()</code></a></li>
+		<li><a href="#label()"><code>label()</code></a></li>
+		<li><a href="#slice(region_region)">slice(Region region)</a></li>
+		<li><a href="#match(region_region)">match(Region region)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_edge">NAME Edge</a></h1>
+<p>Class encapsulating an Edge in a SemiStructured Database</p>
+<p>This package is part of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB.html">the SemiStructuredDB manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A Edge is a list from, label, and to.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(id_from,_label_label,_id_to)">new(Id from, Label label, Id to)</a></h2>
+<ul>
+<li><strong><a name="item_to">to</a></strong><br />
+</li>
+- The from node, a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Node.html">the Node manpage</a>
+<p></p>
+<li><strong><a name="item_label">label</a></strong><br />
+</li>
+- The label, a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Label.html">the Label manpage</a>
+<p></p>
+<li><strong><a name="item_from">from</a></strong><br />
+</li>
+- The to node, a <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Node.html">the Node manpage</a>
+<p></p></ul>
+<p>An Edge is a ordered triplet.</p>
+<p>
+</p>
+<h2><a name="tostring()"><code>toString()</code></a></h2>
+<p>Returns a string image of an Label.</p>
+<p>
+</p>
+<h2><a name="image()"><code>image()</code></a></h2>
+<p>Return a string image of the Label.</p>
+<p>
+</p>
+<h2><a name="from()"><a href="#item_from"><code>from()</code></a></a></h2>
+<p>Return the from node.</p>
+<p>
+</p>
+<h2><a name="to()"><a href="#item_to"><code>to()</code></a></a></h2>
+<p>Return the to node.</p>
+<p>
+</p>
+<h2><a name="label()"><a href="#item_label"><code>label()</code></a></a></h2>
+<p>Return the label.</p>
+<p>
+</p>
+<h2><a name="slice(region_region)">slice(Region region)</a></h2>
+<ul>
+<li><strong><a name="item_region">region</a></strong><br />
+</li>
+- Slice this region from each label on the edge.
+<p></p></ul>
+<p>Returns a new edge with the regions in the label that were sliced from 
+the existing edge.
+Returns 0 if no label could be sliced.</p>
+<p>
+</p>
+<h2><a name="match(region_region)">match(Region region)</a></h2>
+<ul>
+<li><strong>region</strong><br />
+</li>
+- Match this region against the label on the edge.
+<p></p></ul>
+<p>Returns a new edge with the regions in the label that match the edge.</p>
+
+</body>
+
+</html>

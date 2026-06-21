@@ -1,0 +1,225 @@
+#
+#  The grammar for a Select statement
+#
+
+start: 
+  defaults
+  select
+;
+
+defaults:
+  # empty
+  |
+  'set' 'default' 'property' propertyList 'semi-colon' defaults
+;
+
+select:
+  selectClause fromClause whereClause 'semi-colon'
+;
+
+propertyList:
+  'left parenthesis' 'right parenthesis'
+  |
+  'left parenthesis' property propertyListContinues 'right parenthesis'
+;
+
+propertyListContinues:
+  # empty 
+  | 'comma' property propertyListContinues 
+;
+
+property:
+  'identifier' propertyContinues 
+;
+
+propertyContinues:
+  requiredProperty | optionalProperty 
+;
+  
+requiredProperty:
+  'exclamation mark' literal
+;
+
+optionalProperty:
+  'colon' literal
+;
+
+literal:
+  'identifier'
+  | 
+  'timeInterval' 
+  | 
+  'integer' 
+  | 
+  'string'
+  | 
+  'constant' 'left parenthesis' 'identifier' 'comma' literal 'right parenthesis'
+;
+
+selectClause: 
+  'select' 
+  generalizedAttributeList
+;
+
+generalizedAttributeList:
+  '*' 
+  | 
+  generalizedAttribute 
+  attributeList
+;
+
+attributeList:
+  #empty
+  | 
+  'comma' generalizedAttribute attributeList
+;
+
+generalizedAttribute:
+  attribute 
+  | 
+  aggregate 
+;
+
+aggregate: 
+  'aggregate' 'left parenthesis' attribute 'right parenthesis'
+;
+
+attribute:
+   fullDescriptorExpression 
+;
+
+fromClause:
+  #empty
+  | 
+  'from' table tableList
+;
+
+tableList:
+  #empty
+  | 
+  'comma' table tableList
+;
+
+table:
+  valueSpecification 'identifier'
+;
+
+valueSpecification:
+  propertyValue 
+  | 
+  coalescedValue
+  | 
+  node
+  | 
+  path
+;
+
+propertyValue:
+  'property' 'left parenthesis' 'identifier' 'comma' path 'right parenthesis'
+;
+
+coalescedValue:
+  'coalesce' 'left parenthesis' 'identifier' 'comma' path 'right parenthesis'
+;
+
+path:
+  fullDescriptorExpression
+  |
+  collapsedPath
+  | 
+  slicedPath
+  | 
+  matchedPath
+  | 
+  'roots'
+;
+
+fullDescriptorExpression:
+  descriptorExpression
+;
+
+collapsedPath:
+  'collapse' 'left parenthesis' path 'right parenthesis'
+;
+
+slicedPath:
+  'slice' 'left parenthesis' regionSpecification 'comma' path 'right parenthesis'
+;
+
+matchedPath:
+  'match' 'left parenthesis' path  'comma' descriptorExpression 'right parenthesis'
+;
+
+node:
+  'nodes' 'left parenthesis' path 'right parenthesis'
+;
+
+descriptorExpression:
+  descriptor
+  | 
+  'left parenthesis' descriptorExpression 'right parenthesis' 
+  |
+  descriptorExpression 'period' descriptorExpression
+  |
+  descriptorExpression '*' 
+  |
+  descriptorExpression 'question mark' 
+  |
+  descriptorExpression '+' 
+;
+  
+regionSpecification:
+  'identifier'
+  |
+  propertyList
+;
+
+descriptor:
+  'identifier'
+  |
+  propertyList
+;
+
+whereClause:
+  #empty
+  | 
+  'where' predicate 
+;
+
+predicate:
+  'not' predicate
+  | 
+  'left parenthesis' predicate 'right parenthesis' 
+  | 
+  predicate 'and' predicate 
+  | 
+  predicate 'or' predicate 
+  |   
+  'null' 'left parenthesis' path 'right parenthesis'
+  |   
+  'nonnull' 'left parenthesis' path 'right parenthesis'
+  | 
+  expression 'comparison' expression 
+;
+
+expression: 
+  'integer'
+  |   
+  'string'
+  |   
+  'timeInterval'
+  | 
+  'constant' 'left parenthesis' 'identifier' 'comma' literal 'right parenthesis'
+  |   
+  fullDescriptorExpression 
+  |   
+  expression '+' expression 
+  |   
+  expression '-' expression       
+  |   
+  expression '*' expression      
+  |   
+  expression '/' expression     
+  |   
+  '-' expression 
+;

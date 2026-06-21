@@ -1,0 +1,33 @@
+FILTERS:
+  World@world
+  'All of Time'@days
+  'CS Home Page'@pages
+FILTERS:
+  World@countries 
+  'All of Time'@months 
+  'CP 1500 Home Page'@pages
+FILTERS:
+  World@countries 
+  'All of Time'@'months'
+  'CS Home Page'@pages
+FILTERS:
+  World@countries
+  'All of Time'@months
+  'Curtis Dyreson'@people
+FILTERS:
+  'World'@world
+  'All of Time'@all
+  'All Pages'@all
+FILTERS:
+  'James Cook University'@'university machines'
+  'All of Time'@days
+  'SAMaker total'@pages
+FILTERS:
+  'World'@countries
+  'All of Time'@days
+  'SAMaker total'@pages
+FILTERS:
+  'World'@countries 
+  'All of Time'@'months'
+  'Anthony Sloane'@people
+;

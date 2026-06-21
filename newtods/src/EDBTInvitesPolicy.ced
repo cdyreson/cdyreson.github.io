@@ -1,0 +1,18 @@
+:include[macros]
+:arg1[
+ 
+<b>Approved November 17, 2015</b>
+<h2>Policy for Inviting EDBT Papers to TODS</h2>
+ 
+From zero to four candidate invited EDBT papers are selected by the EDBT PC chair, on the bases of quality and perceived feasibility of being extended into submissions to TODS. These are forwarded to the TODS EiC along with the original reviews. The TODS EiC then invites submission of extended versions of the selected papers, or a subset thereof.
+
+TODS requires at least 30% new material. The new material should be content material, not just the addition of obvious proofs or a few more straightforward performance figures. 
+(See the relevant <a href="Authors.html">TODS guidelines for authors</a>).
+
+Each submission is reviewed in the normal manner, but reviewers are told that the submission is an invited submission, and single-blind reviewing is used. Acceptance is not guaranteed. The handling Associate Editor, who is responsible for choosing the reviewers, will receive names of reviewers of the original EDBT submission from the EIC and is expected to invite at least two of these as reviewers of the new submission.
+
+The EDBT PC chair is to send the candidate papers to the TODS EiC as soon as possible and at most 1 month after the conference. Authors are given approximately four months to extend their papers. The submissions are published as they are accepted, and they will be marked as invited EDBT papers.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Inviting EDBT Papers to TODS]

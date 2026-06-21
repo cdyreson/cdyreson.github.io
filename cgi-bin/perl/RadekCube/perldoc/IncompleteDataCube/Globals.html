@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube/Globals.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_IncompleteDataCube_Globals">NAME IncompleteDataCube::Globals</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_">new()</A>
+		<LI><A HREF="#close_">close()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_IncompleteDataCube_Globals">NAME IncompleteDataCube::Globals</A></H1>
+<P>
+The global variables in the cube, maintained in a global object. See also <A HREF="./IncompleteDataCube/Constants.html">IncompleteDataCube::Constants</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Below is the list of instance variables in the global object.
+
+<UL>
+<LI><STRONG><A NAME="item_dimensions">dimensions</A></STRONG>
+<P>
+- The number of dimensions in the cube.
+
+<LI><STRONG><A NAME="item_finerUnitGraphs">finerUnitGraphs</A></STRONG>
+<P>
+- An array of <A HREF="./persistent/PersistentGraph.html">persistent::PersistentGraph</A>. The finer unit graphs map each coarser unit to a set of finer units that
+are contained by it (but not the transitive closure, just the minimal set
+of edges). There is one graph for each dimension.
+
+<LI><STRONG><A NAME="item_coarserUnitGraphs">coarserUnitGraphs</A></STRONG>
+<P>
+- An array of <A HREF="./persistent/PersistentGraph.html">persistent::PersistentGraph</A>. The coarser unit graphs map each finer unit to a set of coarser units
+that contain it (but not the transitive closure, just the minimal set of
+edges). There is one graph for each dimension.
+
+<LI><STRONG><A NAME="item_finerMeasureGraphs">finerMeasureGraphs</A></STRONG>
+<P>
+- An array of <A HREF="./persistent/PersistentGraph.html">persistent::PersistentGraph</A>. The finer measure graphs map each coarser measure to a set of finer
+measures that are below it in the measure hierarchy (but not the transitive
+closure, just the minimal set of edges). There is one graph for each
+dimension.
+
+<LI><STRONG><A NAME="item_coarserMeasureGraphs">coarserMeasureGraphs</A></STRONG>
+<P>
+- An array of <A HREF="./persistent/PersistentGraph.html">persistent::PersistentGraph</A>. The coarser measure graphs map each finer measure to a set of coarser
+measures that are just above it in the measure hierarchy (but not the
+transitive closure, just the minimal set of edges). There is one graph for
+each dimension.
+
+<LI><STRONG><A NAME="item_unitToMeasureTables">unitToMeasureTables</A></STRONG>
+<P>
+- An array of <A HREF="./database/Table.html">database::Table</A>. Each unit to measure table maps a unit to the measure to which it
+belongs. There is one table for each dimension.
+
+<LI><STRONG><A NAME="item_measureTables">measureTables</A></STRONG>
+<P>
+- An array of <A HREF="./database/Table.html">database::Table</A>. Each measure table is a list of measures for that dimension. There is one
+table for each dimension.
+
+</UL>
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_">new()</A></H2>
+<P>
+Allocate and intialize the necessary variables.
+
+<P>
+<HR>
+<H2><A NAME="close_">close()</A></H2>
+<P>
+Close and write all the persistent variables are written to disk. This
+should be called prior to exiting, but even if it not called, in theory,
+all the persistent variables should be maintained since Perl will clean
+them up nicely for us by doing the appropriate unties.
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Write all the persistent variables are written to disk.
+
+</BODY>
+
+</HTML>

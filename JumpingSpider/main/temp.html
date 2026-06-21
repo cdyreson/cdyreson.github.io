@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1-e (April 9, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>A Jumping Spider: Restructuring the WWW Graph to Index Concepts that Span Pages</TITLE>
+<META NAME="description" CONTENT="A Jumping Spider: Restructuring the WWW Graph to Index Concepts that Span Pages">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="main.css">
+</HEAD>
+<BODY LANG="EN">
+<P>
+</BLOCKQUOTE></UL><H2><A NAME="SECTION00025000000000000000">Evaluating queries</A></H2>
+<P>
+In this section we briefly describe two query evaluation techniques.
+The first technique is slower but costs less space, while the second
+is faster but requires more space.
+For both techniques the query evaluation architecture is 
+a (relational) database, 
+which is described in detail elsewhere&nbsp;[<A HREF="main.html#DYRESON97">Dyr97</A>].
+For the first technique, the database has two tables:
+a <EM>SearchEngine(Concept, URL)</EM> table which maps concepts to URLs, and 
+a <EM>Reachable(From, To)</EM> table which records which nodes can be reached
+from which others (it is the edges in the concept graph).
+<P>
+We will assume that a query consists of a list of keywords,
+<em>k</em><sub><em>1</em></sub>,&nbsp;...,&nbsp;<em>k</em><sub><em>n</em></sub>.
+The first technique is to iteratively build a path through the concept
+graph between pairs of URLs that match each keyword.
+We will build the path `backwards' (that is, 
+from the <em>n</em><sup><em>th</em></sup> keyword to the first) 
+because the <EM>Reachable</EM> table is the transitive closure of all
+directory tree structures in the WWW graph, so for a 
+given URL the set of edges to that node tends to be a fraction of
+the size of the graph, 
+while the set of edges from that node may well be clase to 
+the size of the graph.
+So building backwards involves taking smaller intersections.
+Using the first technique a query is evaluated as follows.
+<ul>
+/* Map the final keyword, <em>k</em><sub><em>n</em></sub>, to a set of URLs 
+<em>U</em><sub><em>n</em></sub>, that matches the keyword */
+<br>
+<em>CANDIDATES</em> := SELECT <em>URL</em> FROM <EM>SearchEngine</EM> WHERE <EM>Concept</EM>=<em>k</em><sub><em>n</em></sub>
+<br>
+<br>
+/* Try each candidate */
+<br>
+for each <em>c</em> in <em>CANDIDATES</em> do 
+<br>
+<br>
+<ul>
+/* Establish a set of URLs that are still ACTIVE */
+<br>
+<em>ACTIVE</em> := {<em>c</em>}
+<br>
+<br>
+/* Iterate through the rest of the keywords */
+<br>
+for <em>i</em> := <em>n</em>-1 to 1 do
+<br>
+<br>
+<ul>
+/* Map keyword, <em>k</em><sub><em>i</em></sub>, to a set of URLs, 
+<em>U</em><sub><em>i</em></sub> */
+<br>
+<em>U</em><sub><em>i</em></sub> := SELECT <em>URL</em> FROM <EM>SearchEngine</EM> WHERE <EM>Concept</EM>=<em>k</em><sub><em>i</em></sub>
+<br>
+<br>
+/* for each <em>u</em> in <em>ACTIVE</em> 
+determine all the nodes that can reach <em>u</em> */
+<br>
+<em>CANREACH</em> := SELECT <em>From</em> FROM <EM>Reachable</EM> WHERE <EM>To</EM> IN <em>ACTIVE</em>
+<br>
+<br>
+/* Which URLs match the current keyword and can reach the next keyword? */
+<br>
+<em>ACTIVE</em> := <em>CANREACH</em> INTERSECT <em>U</em><sub><em>i</em></sub>
+<br>
+<br>
+</ul>
+/* Anything left in ACTIVE, then we have a path */
+<br>
+if <em>ACTIVE</em> is not empty THEN add <em>c</em> to <em>RESULT</em>
+<br>
+<br>
+</ul>
+/* All done, publish the final result */
+<br>
+report <em>RESULT</em>
+</ul>
+
+mapping each keyword to a set of URLs and then querying the 
+<EM>Reachable</EM> table 
+
+performing a sequence of joins between tuples in the
+<EM>SearchEngine</EM> and <EM>Reachable</EM> tables.
+The number of joins is proportional
+to the number of keywords in the query.
+For example, to find the lecture notes on trees in a data structures
+course the following relational algebra expression would be evaluated
+<PRE><TT> 
+		 <IMG WIDTH=395 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline647" SRC="img10.gif"  > 
+<P>
+				 <IMG WIDTH=380 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline649" SRC="img11.gif"  > 
+<P>
+				 <IMG WIDTH=209 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline651" SRC="img12.gif"  >  
+</TT></PRE>
+If we assume that each of the tables is indexed appropriately, 
+then the restrictions ( <IMG WIDTH=9 HEIGHT=8 ALIGN=BOTTOM ALT="tex2html_wrap_inline653" SRC="img13.gif"  > ) are cheap, and the joins are all
+hash joins, so the overall cost of the query will be largely determined by 
+the size of the output for each selection and the resulting join with
+the <EM>Reachable</EM> table.
+In other words, if there are many <EM>data structures</EM> pages 
+then the cost of the query will be relatively high since
+the number of reachable pages (jumping one link) will be high.
+In the worst case this will be the entire <EM>Reachable</EM> table, but
+in practice it will be a very small portion of that table.
+The primary difference between this navigation strategy and that in 
+WWW query languages is that only a single link is ever traversed between
+concepts, whereas in a WWW query language the transitive closure
+of the WWW graph may have to be computed.
+<P>
+We anticipate that the size of the concept graph will limit the
+number of servers that a Jumping Spider can index.
+For instance, a Jumping Spider could be constructed 
+for information available from the servers at James Cook University, or 
+for the servers at all the universities in Queensland, 
+or just for information in computer science courses, available from 
+universities world-wide.
+<P>
+<H2><A NAME="SECTION00026000000000000000">Reducing the size of the concept graph</A></H2>
+<P>
+The concept graph can be dramatically reduced in size by assuming that
+a down link exists from a page to all pages in either that directory 
+or a subdirectory.
+This assumption has two benefits. 
+First, it leaves only side links to unrelated directories in the
+concept graph.
+We note that Altavista&nbsp;[<A HREF="main.html#ALTAVISTA">Alt</A>] 
+already stores these links, so this strategy
+could be implemented using Altavista directly (we plan to do so 
+shortly).
+Second, it improves the speed of query evaluation by reducing the
+size of the <EM>Reachable</EM> table.
+
+<HR>
+
+</BODY>
+</HTML>

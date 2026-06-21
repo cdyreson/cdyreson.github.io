@@ -1,0 +1,109 @@
+LINK continents --> world
+LINK countries --> continents
+LINK countries --> treaty_organizations
+LINK countries --> global_regions
+LINK states --> countries
+LINK machines --> states
+LINK machines --> towns
+LINK machines --> university_departments
+LINK university_departments --> universities
+LINK universities --> towns
+LINK towns --> states
+
+UNIT world GRANULARITY world
+ australia
+ africa
+ europe
+# north america
+# south america 
+# antartica
+
+UNIT oceania GRANULARITY global_regions
+ australia  
+ png
+ nz
+ tahiti
+
+UNIT africa GRANULARITY continents
+ south_africa 
+
+UNIT europe GRANULARITY continents
+ france
+ united_kingdom
+ germany
+ switzerland
+
+UNIT queensland GRANULARITY states
+ townsville
+ brisbane
+
+UNIT brisbane GRANULARITY towns
+ uq          
+
+UNIT townsville GRANULARITY towns
+ jcu
+
+UNIT jcu_cs  GRANULARITY university_departments
+ reef        
+ coral      
+ hook      
+
+UNIT jcu GRANULARITY universities
+ jcu_cs
+ jcu_cc
+
+UNIT jcu_cc GRANULARITY university_departments
+ groper
+ manta   
+ lionfish  
+ sailfish    
+
+UNIT australia GRANULARITY countries BASE .*\.au 
+ new_south_wales
+ queensland
+
+UNIT groper GRANULARITY machines BASE groper\.jcu\.edu\.au 
+
+UNIT manta          GRANULARITY machines BASE manta\.jcu\.edu\.au 
+
+UNIT lionfish       GRANULARITY machines BASE lionfish\.jcu\.edu\.au 
+
+UNIT sailfish       GRANULARITY machines BASE sailfish\.jcu\.edu\.au 
+
+UNIT reef           GRANULARITY machines BASE reef\.cs\.jcu\.edu\.au 
+
+UNIT coral          GRANULARITY machines BASE coral\.cs\.jcu\.edu\.au 
+
+UNIT hook           GRANULARITY machines BASE hook\.cs\.jcu\.edu\.au 
+
+UNIT uq             GRANULARITY universities BASE .*\.uq\.edu\.au 
+
+UNIT france         GRANULARITY countries BASE .*\.fr 
+
+UNIT united_kingdom GRANULARITY countries BASE .*\.uk 
+
+UNIT germany        GRANULARITY countries BASE .*\.de 
+
+UNIT switzerland    GRANULARITY countries BASE .*\.ch 
+
+UNIT south_africa   GRANULARITY countries BASE .*\.za 
+
+UNIT nz             GRANULARITY countries BASE .*\.nz 
+
+
+# BASE groper         groper\.jcu\.edu\.au GRANULARITY machines
+# BASE manta          manta\.jcu\.edu\.au GRANULARITY machines
+# BASE lionfish       lionfish.jcu.edu.au GRANULARITY machines
+# BASE sailfish       sailfish.jcu.edu.au GRANULARITY machines
+# BASE reef           reef.cs.jcu.edu.au GRANULARITY machines
+# BASE coral          coral.cs.jcu.edu.au GRANULARITY machines
+# BASE hook           hook.cs.jcu.edu.au GRANULARITY machines
+# BASE uq             *.uq.edu.au GRANULARITY universities
+# BASE france         *.fr GRANULARITY countries
+# BASE united_kingdom *.uk GRANULARITY countries
+# BASE germany        *.de GRANULARITY countries
+# BASE switzerland    *.ch GRANULARITY countries
+# BASE south_africa   *.za GRANULARITY countries
+
+ BASE dummy just_to_end_it_all GRANULARITY none
+

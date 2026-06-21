@@ -1,0 +1,82 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved June 2, 2003</b>
+
+A "successor paper" is defined as one that reviews, critiques,
+corrects, expands, or generally depends heavily on a paper previously
+published in :journalAcronym[], termed the "predecessor" paper.
+
+There is precedent for :journalAcronym[] publishing successor papers, published as
+technical correspondences.
+
+In <a href="http://doi.acm.org/10.1145/319996.320019">
+:journalAcronym[] Volume 8,  Issue 4  (December 1983)</a>, 
+William Kent responds to 
+<a href="http://doi.acm.org/10.1145/320083.320091">
+a paper by Aho, Beeri and Ullman</a>. 
+In that same issue, 
+<a href="http://doi.acm.org/10.1145/319996.320017">
+Ullman responds to Kent's technical correspondence</a>.
+
+In 
+<a href="http://doi.acm.org/10.1145/27629.214296">
+:journalAcronym[] 1987, issue 3 of volume 12</a>,
+Arthur Keller responds to 
+<a href="http://doi.acm.org/10.1145/319628.319634">
+a :journalAcronym[] paper by Bancilhon and Spyratos</a>
+that appeared in :journalAcronym[] volume 6.
+
+:journalAcronym[] has not (yet) published any errata, but other ACM journals have.
+
+There is also SIGMOD Digital Review 
+available for reviews and critiques.
+Ling Liu is open to publishing successor papers in 
+SIGMOD Record, and is
+considering a quarterly feature with a separate editor.
+
+In a way, each paper published in a conference or a journal is a reaction
+and
+extension of the papers that came before it. So the entire archival record
+can
+be viewed as a formalized conversation with an elaborate set of rules.
+
+In summary, there exist a collection of venues/forums (:journalAcronym[], other journals,
+conferences, SIGMOD Record, SIGMOD Digital Review), each with differing
+editing and reviewing criteria, available for such scholarly discussion.
+
+This policy concerns :journalAcronym[] specifically. In handling such submissions, the
+archival and scholarly nature of :journalAcronym[] should be maintained.
+
+:journalAcronym[] will continue to consider publishing reviews, critiques,
+expansions, and errata of previously published papers, by authors of
+those papers and by others. Such submissions will be reviewed
+similarly to original manuscripts. The reviewers will generally
+include at least one reviewer of the published paper and at least one
+independent reviewer. For successor papers authored by anyone other
+than the exact author list of the predecessor paper, the authors of
+the predecessor paper will be given the opportunity to submit a
+response, which is handled as (yet another) successor paper.
+
+The following paragraph will be added to the Submission Instructions,
+at the end of Types of Papers.
+<blockquote>
+   Finally, :journalAcronym[] welcomes submissions that review, critique, correct, or
+   expand on a paper previously published in :journalAcronym[]. Such submissions will
+   go through the standard formal review. Where appropriate, the author(s)
+   of the original paper will be given an opportunity to respond, with their
+   own submission. (As an example, 
+   in <a href="http://doi.acm.org/10.1145/319996.320019">
+   :journalAcronym[] Volume 8,  Issue 4  (December 1983)</a>,
+   William Kent responds to
+   <a href="http://doi.acm.org/10.1145/320083.320091">
+   a paper by Aho, Beeri and Ullman</a>.
+   In that same issue,
+   <a href="http://doi.acm.org/10.1145/319996.320017">
+   Ullman responds to Kent's technical correspondence</a>.)
+</blockquote>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Successor Papers]

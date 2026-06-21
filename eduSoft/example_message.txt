@@ -1,0 +1,10 @@
+(basedirectory) noneyet
+(kind) <text> <text> <text> <text> <text> <numeric> <numeric>
+(alignment) <left> <left> <left> <left> <left> <right> <right>
+(display) <10> <0> <10> <10> <8> <3> <3>
+(weight) <none> <none> <none> <none> <none> <8> <8>
+(maxscore) <none> <none> <none> <none> <none> <28> <36>
+(schema) <Student Password> <ID> <First Name> <Last Name> <login> <Quiz1> <Quiz2>
+(tuple) <> <> <John> <Doe> <sci-jd> <28> <27>
+(tuple) <9411503056> <9411503056> <Jane> <Doe> <sci-jd> <25> <36>
+

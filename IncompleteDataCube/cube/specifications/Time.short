@@ -1,0 +1,79 @@
+MEASURE:years
+  UNIT:1997
+    months.'January 1997'
+    months.'February 1997'
+    months.'March 1997'
+    months.'April 1997'
+    months.'May 1997'
+    months.'June 1997'
+    months.'July 1997'
+    months.'August 1997'
+    months.'September 1997'
+    months.'October 1997'
+    months.'November 1997'
+    months.'December 1997'
+  UNIT:1996
+    months.'January 1996'
+    months.'February 1996'
+    months.'March 1996'
+    months.'April 1996'
+    months.'May 1996'
+    months.'June 1996'
+    months.'July 1996'
+    months.'August 1996'
+    months.'September 1996'
+    months.'October 1996'
+    months.'November 1996'
+    months.'December 1996'
+  UNIT:1995
+    months.'January 1995'
+    months.'February 1995'
+    months.'March 1995'
+    months.'April 1995'
+    months.'May 1995'
+    months.'June 1995'
+    months.'July 1995'
+    months.'August 1995'
+    months.'September 1995'
+    months.'October 1995'
+    months.'November 1995'
+    months.'December 1995'
+
+MEASURE:months
+  UNIT:'January 1997' = ("["[0-9][0-9]"/Jan/1997"[^\]]+)
+  UNIT:'February 1997' = ("["[0-9][0-9]"/Feb/1997"[^\]]+)
+  UNIT:'March 1997' = ("["[0-9][0-9]"/Mar/1997"[^\]]+)
+  UNIT:'April 1997' = ("["[0-9][0-9]"/Apr/1997"[^\]]+)
+  UNIT:'May 1997' = ("["[0-9][0-9]"/May/1997"[^\]]+)
+  UNIT:'June 1997' = ("["[0-9][0-9]"/Jun/1997"[^\]]+)
+  UNIT:'July 1997' = ("["[0-9][0-9]"/Jul/1997"[^\]]+)
+  UNIT:'August 1997' = ("["[0-9][0-9]"/Aug/1997"[^\]]+)
+  UNIT:'September 1997' = ("["[0-9][0-9]"/Sep/1997"[^\]]+)
+  UNIT:'October 1997' = ("["[0-9][0-9]"/Oct/1997"[^\]]+)
+  UNIT:'November 1997' = ("["[0-9][0-9]"/Nov/1997"[^\]]+)
+  UNIT:'December 1997' = ("["[0-9][0-9]"/Dec/1997"[^\]]+)
+  UNIT:'January 1996' = ("["[0-9][0-9]"/Jan/1996"[^\]]+)
+  UNIT:'February 1996' = ("["[0-9][0-9]"/Feb/1996"[^\]]+)
+  UNIT:'March 1996' = ("["[0-9][0-9]"/Mar/1996"[^\]]+)
+  UNIT:'April 1996' = ("["[0-9][0-9]"/Apr/1996"[^\]]+)
+  UNIT:'May 1996' = ("["[0-9][0-9]"/May/1996"[^\]]+)
+  UNIT:'June 1996' = ("["[0-9][0-9]"/Jun/1996"[^\]]+)
+  UNIT:'July 1996' = ("["[0-9][0-9]"/Jul/1996"[^\]]+)
+  UNIT:'August 1996' = ("["[0-9][0-9]"/Aug/1996"[^\]]+)
+  UNIT:'September 1996' = ("["[0-9][0-9]"/Sep/1996"[^\]]+)
+  UNIT:'October 1996' = ("["[0-9][0-9]"/Oct/1996"[^\]]+)
+  UNIT:'November 1996' = ("["[0-9][0-9]"/Nov/1996"[^\]]+)
+  UNIT:'December 1996' = ("["[0-9][0-9]"/Dec/1996"[^\]]+)
+  UNIT:'January 1995' = ("["[0-9][0-9]"/Jan/1995"[^\]]+)
+  UNIT:'February 1995' = ("["[0-9][0-9]"/Feb/1995"[^\]]+)
+  UNIT:'March 1995' = ("["[0-9][0-9]"/Mar/1995"[^\]]+)
+  UNIT:'April 1995' = ("["[0-9][0-9]"/Apr/1995"[^\]]+)
+  UNIT:'May 1995' = ("["[0-9][0-9]"/May/1995"[^\]]+)
+  UNIT:'June 1995' = ("["[0-9][0-9]"/Jun/1995"[^\]]+)
+  UNIT:'July 1995' = ("["[0-9][0-9]"/Jul/1995"[^\]]+)
+  UNIT:'August 1995' = ("["[0-9][0-9]"/Aug/1995"[^\]]+)
+  UNIT:'September 1995' = ("["[0-9][0-9]"/Sep/1995"[^\]]+)
+  UNIT:'October 1995' = ("["[0-9][0-9]"/Oct/1995"[^\]]+)
+  UNIT:'November 1995' = ("["[0-9][0-9]"/Nov/1995"[^\]]+)
+  UNIT:'December 1995' = ("["[0-9][0-9]"/Dec/1995"[^\]]+)
+;

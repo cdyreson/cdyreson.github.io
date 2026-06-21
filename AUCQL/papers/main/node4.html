@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Sample Properties</TITLE>
+<META NAME="description" CONTENT="Sample Properties">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html76"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html68"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html77"
+ HREF="node5.html">Features of Properties in</A>
+<B> Up:</B> <A NAME="tex2html75"
+ HREF="node2.html">Motivation and Background</A>
+<B> Previous:</B> <A NAME="tex2html69"
+ HREF="node3.html">An Example Database</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00022000000000000000">
+Sample Properties</A>
+</H2>
+
+<P>
+The data model presented in this paper is capable of capturing the
+facts described above, in part by using properties in labels.
+Labels are the most appropriate locations for properties since
+nodes are <EM>completely</EM> described by the paths that lead to
+them. For instance, while the <TT>&amp;Willis</TT> node in
+Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A> has a meaningful internal name, <TT>&amp;Willis</TT>, this name is of <EM>no</EM> importance, and the node may
+just as easily be called <TT>&amp;foo</TT>.  It is only known that 
+<TT>&amp;Willis</TT> <TT>stars</TT> in a <TT>movie</TT> because there exists an
+incoming edge labeled <TT>stars</TT>, which in turn is reached after
+traversing a <TT>movie</TT> edge.  Other descriptions of <TT>&amp;Willis</TT>, say as a <TT>father</TT> or as a <TT>person</TT>, would only
+be available as labels along other paths to the node (not shown in the
+figure).
+
+<P>
+The data model is extensible, in that any properties may be
+used. Below, we discuss a partial list of such properties.  None of
+them are mandatory.  Indeed, for most labels,
+one or more properties may be <EM>missing</EM>.
+
+<P>
+<BR>
+
+<B>name</B>: 
+The name is a text description.  The domain for names is the set of
+finite-length strings over some alphabet (e.g., Unicode characters).
+In general, the value of this property is a set of names.
+For simplicity, in this paper our examples only use a single name.
+
+<P>
+<BR>
+
+<B>security</B>: 
+Some data has security restrictions, which are intended to indicate
+that only qualifying users are allowed access to the data.  The
+essential ingredient to supporting this kind of security is to provide
+a method to restrict access to edges in queries.  We use required
+properties for this purpose, as will be discussed further in
+Section&nbsp;<A HREF="node11.html#sec:pathMatch">3.2.2</A>.
+This paper assumes that security is controlled through Netscape-like
+<EM>certificates</EM>.
+So a more descriptive
+property name would be <B>security.netscape.read</B>, but for brevity we
+have shortened it.  Several protocols exist for obtaining and managing
+these certificates.  Once obtained, a certificate or
+combination of certificates permits access to various services and
+documents.  
+For clarity, we render a certificate in plain text rather than
+in its encrypted form.
+The security is given as a formula built of
+individual certificates, AND, and OR.  For instance a security of
+<TT>over 18 AND subscriber</TT> would mean that a user needs <EM>both</EM>
+certificates to access a service; and a security of <TT>over 18 OR
+subscriber</TT> would mean that either certificate alone would suffice.  
+This is only one possible security property; the
+extensible data model can support others.
+
+<P>
+<BR>
+
+<B>transaction time</B>:
+The transaction time is the time when the edge is
+current in the database.  It is called transaction time since it is
+the time interval between the time of the transaction that led to the
+edge and the time of the transaction that deleted or updated the
+edge&nbsp;[<A
+ HREF="node25.html#JENSEN98G">19</A>].  Edges that are current have a special
+transaction-time end value, <EM>until changed</EM>, which indicates
+that the edge is current and will remain so until it is changed
+(deleted or updated).  The special role of transaction time
+in database modifications is elaborated in Section&nbsp;<A HREF="node17.html#sec:edgeInsertion">3.4</A>.
+
+<P>
+<BR>
+
+<B>valid time</B>:
+The valid time of a database fact indicates when that fact is true in
+the modeled reality&nbsp;[<A
+ HREF="node25.html#JENSEN98G">19</A>].  In our context, the valid-time
+property thus indicates when that edge reflects the
+real world.  
+As for transaction time, valid-time timestamps are closed intervals.
+
+<P>
+<BR>
+
+<B>price</B>: When data is spread over a network, accessing some data may have
+substantially greater cost than other data, e.g., in terms of size,
+time, or money.  The price property reflects these differing costs in
+obtaining data.  Multiple price properties can comfortably coexist,
+but we simply assume that the price is a U.S.&nbsp;dollar amount.
+
+<P>
+<BR>
+
+<B>quality</B>:
+Information on the web arises from many sources, some of which are far
+more credible than others.  For instance, one would commonly rate
+information from the CNN server as more credible than information from
+a user's personal home page.  The quality property records the quality
+of the source of the information.  We will assume that the quality is
+an intuitive ranking from <EM>low</EM> to <EM>high</EM>.
+
+<P>
+<BR>
+The above list only covers properties used in the movie database and
+does not exclude other properties such as language, Dublin Core tags,
+or URL space. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html76"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html68"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html77"
+ HREF="node5.html">Features of Properties in</A>
+<B> Up:</B> <A NAME="tex2html75"
+ HREF="node2.html">Motivation and Background</A>
+<B> Previous:</B> <A NAME="tex2html69"
+ HREF="node3.html">An Example Database</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

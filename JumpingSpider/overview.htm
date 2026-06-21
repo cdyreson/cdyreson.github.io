@@ -1,0 +1,215 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Jumping Spider Overview</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#F0E0F0" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/JumpingSpider/js.gif" 
+                  alt="jumping spider logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#F0E0F0">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#F0E0F0">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#F0E0F0"> 
+              <big>Jumping Spider Overview</big>
+              <br>
+              <font color="#800000" size="2">
+              An intranet index and search engine
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#F0E0F0">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/JumpingSpider/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              Overview&nbsp;&nbsp;&nbsp;
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/JumpingSpider/publications.htm">
+              Publications
+             </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/JumpingSpider/code.htm">
+              Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#F0E0F0">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#F0E0F0">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+A search engine can index a concept that
+appears entirely on a <EM>single</EM> page.
+But concepts can span <EM>several</EM> pages.
+For instance, a page on <EM>trees</EM> may be
+linked to a page on <EM>lecture notes</EM> for a <EM>data structures</EM> 
+course.  
+If the <EM>trees</EM> page does
+not specifically mention <EM>lecture notes</EM>, 
+then a search engine search for <EM>lecture notes on
+trees</EM> will, at best, only partially
+match each page.
+<P>
+Our goal is to develop a strategy to index concepts that span
+more than one page.  
+Our strategy assumes that a multi-page concept is created by a 
+<EM>concept-path</EM>, consisting of some number of hyperlinks,
+that transits through pages with specific content.
+For instance, there must be 
+a concept-path from the 
+<EM>lecture notes</EM> page to the <EM>trees</EM> page
+to create the 
+<EM>lecture notes on trees</EM> concept.
+<P>
+The key to indexing multi-page concepts is to find the 
+<EM>right</EM> concept-paths. 
+The paths must be relatively few (certainly much fewer than
+the overall number of paths in the World-wide Web) or the cost of the
+index will be too great.  
+At the same time, the paths must be easily identified, 
+so that they are capable of being automatically computed
+and indexed quickly.
+Finally, the paths must be viable, in the sense that they
+really do connect multi-page concepts.
+<P>
+At this site, you can explore a system called a Jumping Spider,
+to index content-paths.
+The Jumping Spider uses a search engine to find the starting point in 
+a content-path and then jumps to other pages with the desired 
+content in the content-path.
+It precomputes and stores the possible jumps to attain
+reasonable query efficiency.
+<P>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>
+     &copy; 1997-2001. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#F0E0F0">&nbsp;</td>
+    <td colspan=2 bgColor="#F0E0F0" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

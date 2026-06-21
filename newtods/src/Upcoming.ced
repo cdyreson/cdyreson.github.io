@@ -1,0 +1,374 @@
+:include[macros]
+:arg1[
+The following papers will be published in future issues of the
+ACM Transactions on Database Systems.
+They are listed here in approximate order of appearance.  
+Past and current issues of <i>TODS</i> are available from the
+following sources.
+<br>
+<table>
+      <tr><td>
+<A 
+          HREF="http://portal.acm.org/tods"
+          onMouseOver="CurrentTOC.src=backArrow.src"
+          onMouseOut="CurrentTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Archive of issues (ACM Portal)" 
+           name="CurrentTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Archive of issues (ACM Portal)
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+    <A 
+          HREF="http://www.acm.org/sigmod/dblp/db/journals/tods/index.html"
+          onMouseOver="PastDBLPTOC.src=backArrow.src"
+          onMouseOut="PastDBLPTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Archive of issues (DBLP)" 
+           name="PastDBLPTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Archive of issues (DBLP)</A>
+        </font>
+        </A>
+      </td></tr>
+</table>
+<H2>Papers to appear</H2>
+%<ul>
+%<a href=":dblp[]/t/Tatti:colon[]Nikolaj.html">Nikolaj Tatti</a>,
+%<a href=":dblp[]/m/Moerchen:colon[]Fabian.html">Fabian Moerchen</a>,
+%<a href=":dblp[]/c/Calders:colon[]Toon.html">Toon Calders</a>
+%<br/>
+%<i>
+%Finding Robust Itemsets Under Subsampling
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2013/TattiFinding.pdf"><samp>TattiFinding.pdf</samp></A> 
+%</ul>
+
+
+%<ul>
+%<a href=":dblp[]/z/Zhang_0003:colon[]Rui.html">Rui Zhang</a>,
+%<a href=":dblp[]/q/Qi:colon[]Jianzhong.html">Jianzhong Qi</a>,
+%<a href=":dblp[]/h/Huang:colon[]Jin.html">Jin Huang</a>,
+%<a href=":dblp[]/s/Stradling:colon[]Martin.html">Martin Stradling</a>
+%<br/>
+%<i>
+%Towards a Painless Index for Spatial Objects
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/k/Kimelfeld:colon[]Benny.html">Benny Kimelfeld</a>,
+%<a href=":dblp[]/k/Kolaitis:colon[]Phokion_G=.html">Phokion G. Kolaitis</a>
+%<br/>
+%<i>
+%The Complexity of Mining Maximal Frequent Subgraphs
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/p/Pang:colon[]HweeHwa.html">HweeHwa Pang</a>,
+%<a href=":dblp[]/d/Ding:colon[]Xuhua.html">Xuhua Ding</a>
+%<br/>
+%<i>
+%Privacy-Preserving Ad-Hoc Equi-Join on Outsourced Data
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/k/Karwa:colon[]Vishesh.html">Vishesh Karwa</a>,
+%<a href=":dblp[]/r/Raskhodnikova:colon[]Sofya.html">Sofya Raskhodnikova</a>,
+%<a href=":dblp[]/s/Smith:colon[]Adam.html">Adam Smith</a>,
+%<a href=":dblp[]/y/Yaroslavtsev:colon[]Grigory.html">Grigory Yaroslavtsev</a>
+%%<br/>
+%<i>
+%Private Analysis of Graph Structure
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/c/Choi:colon[]Dong=Wan.html">Dong-Wan Choi</a>,
+%<a href=":dblp[]/c/Chung:colon[]Chin=Wan.html">Chin-Wan Chung</a>,
+%<a href=":dblp[]/t/Tao:colon[]Yufei.html">Yufei Tao</a>
+%<br/>
+%<i>
+%Maximizing Range Sum in External Memory
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/ChoiMaximizing.pdf"><samp>ChoiMaximizing.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/z/Z=aacute=vodn=yacute=:colon[]Jakub.html">Jakub Z&aacute;vodn&yacute;</a>,
+%<a href=":dblp[]/o/Olteanu:colon[]Dan.html">Dan Olteanu</a>
+%<br/>
+%<i>
+%Size Bounds for Factorised Representations of Query Results
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/m/Malvestuto:colon[]Francesco_M=.html">Francesco Malvestuto</a>
+%<br/>
+%<i>
+%A join-like operator to combine data cubes, and answer queries from multiple data cubes
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/g/Gottlob:colon[]Georg.html">Georg Gottlob</a>,
+%<a href=":dblp[]/o/Orsi:colon[]Giorgio.html">Giorgio Orsi</a>,
+%<a href=":dblp[]/p/Pieris:colon[]Andreas.html">Andreas Pieris</a>
+%<br/>
+%<i>
+%Query Rewriting and Optimization for Ontological Databases
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/p/Papadopoulos:colon[]Stavros.html">Stavros Papadopoulos</a>,
+%<a href=":dblp[]/c/Cormode:colon[]Graham.html">Graham Cormode</a>,
+%<a href=":dblp[]/d/Deligiannakis:colon[]Antonios.html">Antonios Deligiannakis</a>,
+%<a href=":dblp[]/g/Garofalakis:colon[]Minos_N=.html">Minos N. Garofalakis</a>
+%<br/>
+%<i>
+%Lightweight Query Authentication on Streams
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/a/Arenas:colon[]Marcelo.html">Marcelo Arenas</a>,
+%<a href=":dblp[]/d/Daenen:colon[]Jonny.html">Jonny Daenen</a>,
+%<a href=":dblp[]/n/Neven:colon[]Frank.html">Frank Neven</a>,
+%<a href=":dblp[]/u/Ugarte:colon[]Martin.html">Martin Ugarte</a>,
+%<a href=":dblp[]/b/Bussche:colon[]Jan_Van_den.html">Jan Van den Bussche</a>,
+%<a href=":dblp[]/v/Vansummeren:colon[]Stijn.html">Stijn Vansummeren</a>
+%<br/>
+%<i>
+%Discovering XSD Keys from XML Data
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/p/Pripuzic:colon[]Kresimir.html">Kresimir Pripuzic</a>,
+%<a href=":dblp[]/z/Zarko:colon[]Ivana_Podnar.html">Ivana Podnar Zarko</a>,
+%<a href=":dblp[]/a/Aberer:colon[]Karl.html">Karl Aberer</a>
+%<br/>
+%<i>
+%Time- and Space-Efficient Sliding Window Top-k Query Processing
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/g/Gheerbrant:colon[]Am=eacute=lie.html">Am&eacute;lie Gheerbrant</a>,
+%<a href=":dblp[]/l/Libkin:colon[]Leonid.html">Leonid Libkin</a>,
+%<a href=":dblp[]/s/Sirangelo:colon[]Cristina.html">Cristina Sirangelo</a>
+%<br/>
+%<i>
+%Naive Evaluation of Queries over Incomplete Databases
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/GheerbrantWhen.pdf"><samp>GheerbrantWhen.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/b/Bienvenu:colon[]Meghyn.html">Meghyn Bienvenu</a>,
+%<a href=":dblp[]/c/Cate:colon[]Balder_ten.html">Balder ten Cate</a>,
+%<a href=":dblp[]/l/Lutz:colon[]Carsten.html">Carsten Lutz</a>,
+%<a href=":dblp[]/w/Wolter:colon[]Frank.html">Frank Wolter</a>
+%<br/>
+%<i>
+%Ontology-based Data Access: A Study through Disjunctive Datalog, CSP, and MMSNP
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/l/Li:colon[]Chao.html">Chao Li</a>,
+%<a href=":dblp[]/l/Li:colon[]Daniel_Yang.html">Daniel Yang Li</a>,
+%<a href=":dblp[]/m/Miklau:colon[]Gerome.html">Gerome Miklau</a>,
+%<a href=":dblp[]/s/Suciu:colon[]Dan.html">Dan Suciu</a>
+%<br/>
+%<i>
+%A Theory of Pricing Private Data
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/LiTheory.pdf"><samp>LiTheory.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/a/Athanassoulis:colon[]Manos.html">Manos Athanassoulis</a>,
+%<a href=":dblp[]/c/Chen:colon[]Shimin.html">Shimin Chen</a>,
+%<a href=":dblp[]/g/Gibbons:colon[]Phillip_B=.html">Phillip Gibbons</a>,
+%<a href=":dblp[]/a/Ailamaki:colon[]Anastasia.html">Anastasia Ailamaki</a>,
+%<a href=":dblp[]/s/Stoica:colon[]Radu.html">Radu Stoica</a><br/>
+%<i>Online Updates on Data Warehouses via Judicious Use of Solid-State Storage
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/b/Benedikt:colon[]Michael.html">Michael Benedikt</a>,
+%<a href=":dblp[]/b/Bourhis:colon[]Pierre.html">Pierre Bourhis</a>,
+%<a href=":dblp[]/l/Ley:colon[]Clemens.html">Clemens Ley</a>
+%<br/>
+%<i>
+%Analysis of Schemas with Access Restrictions
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/BenediktQuerying.pdf"><samp>BenediktQuerying.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/h/Hu:colon[]Xiaocheng.html">Xiaocheng Hu</a>,
+%<a href=":dblp[]/t/Tao:colon[]Yufei.html">Yufei Tao</a>,
+%<a href=":dblp[]/c/Chung:colon[]Chin=Wan.html">Chin-Wan Chung</a><br/>
+%<i>I/O-Efficient Algorithms on Triangle Listing and Counting
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/HuIO.pdf"><samp>HuIO.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/j/Jung:colon[]Hyungsoo.html">Hyungsoo Jung</a>,
+%<a href=":dblp[]/h/Han:colon[]Hyuck.html">Hyuck Han</a>,
+%<a href=":dblp[]/f/Fekete:colon[]Alan.html">Alan Fekete</a>,
+%<a href=":dblp[]/h/Heiser:colon[]Gernot.html">Gernot Heiser</a>,
+%<a href=":dblp[]/y/Yeom:colon[]Heon_Young.html">Heon Young Yeom</a><br/>
+%<i>A Scalable Lock Manager for Multicores
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/d/Davidson:colon[]Susan_B=.html">Susan Davidson</a>,
+%<a href=":dblp[]/k/Khanna:colon[]Sanjeev.html">Sanjeev Khanna</a>,
+%<a href=":dblp[]/m/Milo:colon[]Tova.html">Tova Milo</a>,
+%<a href=":dblp[]/r/Roy:colon[]Sudeepa.html">Sudeepa Roy</a><br/>
+%<i>Top-k and Clustering with Noisy Comparisons
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/DavidsonTop.pdf"><samp>DavidsonTop.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/d/Drosou:colon[]Marina.html">Marina Drosou</a>,
+%<a href=":dblp[]/p/Pitoura:colon[]Evaggelia.html">Evaggelia Pitoura</a><br/>
+%<i>Multiple Radii DisC Diversity: Result Diversification based on Dissimilarity and Coverage
+%</i>
+%<br/>
+%PDF: <A HREF="accepted/2014/DrosouMultiple.pdf"><samp>DrosouMultiple.pdf</samp></A> 
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/p/Pawlik:colon[]Mateusz.html">Mateusz Pawlik</a>,
+%<a href=":dblp[]/a/Augsten:colon[]Nikolaus.html">Nikolaus Augsten</a><br/>
+%<i>Efficient Computation of the Tree Edit Distance
+%</i>
+%PDF: <A HREF="accepted/2014/PawlikEfficient.pdf"><samp>PawlikEfficient.pdf</samp></A> 
+%<br/>
+%For more on the project please visit
+%<a href="http://www.inf.unibz.it/dis/projects/tree-edit-distance/">http://www.inf.unibz.it/dis/projects/tree-edit-distance/</a>.
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/n/Nagendra:colon[]Mithila.html">Mithila Nagendra</a>,
+%<a href=":dblp[]/c/Candan:colon[]K=_Sel=ccedil=uk.html">K. Sel&ccedil;uk Candan</a><br/>
+%<i>Efficient Processing of Skyline-Join Queries over Multiple Data Sources
+%</i>
+%</ul>
+
+%<ul>
+%<a href=":dblp[]/x/XXX:colon[]XXX.html">XXX</a>,
+%<a href=":dblp[]/x/XXX:colon[]XXX.html">XXX</a>
+%<br/>
+%<i>
+%</i>
+%</ul>
+
+<ul>
+Xiaochun Yang, Yaoshu Wang, Bin Wang, Wei Wang
+<br/>
+Negative Factor: Improving Regular-Expression Matching in Strings
+<i>
+</i>
+</ul>
+
+<ul>
+Tom Ameloot, Bas Ketsman, Frank Neven, Daniel Zinn
+<br/>
+<i>
+Weaker Forms of Monotonicity for Declarative Networking: a More Fine-grained Answer to the CALM-conjecture
+</i>
+</ul>
+
+<ul>
+Angela Bonifati, Radu Ciucanu, S&#322;awek Staworko
+<br/>
+<i>
+Learning Join Queries from User Examples
+</i>
+<br/>
+PDF: <A HREF="accepted/2015/BonifatiLearning.pdf"><samp>BonifatiLearning.pdf</samp></A> 
+</ul>
+
+<ul>
+Panos Parchas, Dimitris Papadias
+<br/>
+<i>
+Uncertain Graph Processing through Representative Instances
+</i>
+</ul>
+
+<ul>
+Yubao Liu
+<br/>
+<i>
+Optimal Location Queries in Road Networks
+</i>
+</ul>
+
+<ul>
+Jiaheng Lu
+<br/>
+<i>
+Boosting the Quality of Approximate String Matching by Synonyms
+</i>
+</ul>
+
+<ul>
+Florin Rusu, Zixuan Zhuang, Migxi Wu, Christopher Jermaine
+<br/>
+<i>
+Workload-Driven Antijoin Cardinality Estimation
+</i>
+</ul>
+
+<ul>
+Yu Cheng, Florin Rusu
+<br/>
+<i>
+SCANRAW: A Database Meta-Operator for Parallel In-Situ Processing and Loading
+</i>
+</ul>
+
+<ul>
+Xin Cao, Gao Cong, Tao Guo, Christian S. Jensen, Beng Chin Ooi
+<br/>
+<i>
+Efficient Processing of Spatial Group Keyword Queries
+</i>
+<br/>
+PDF: <A HREF="accepted/2015/CaoEfficient.pdf"><samp>CaoEfficient.pdf</samp></A> 
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Upcoming Articles]

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Summary and Future Work</TITLE>
+<META NAME="description" CONTENT="Summary and Future Work">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="main.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html276"
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html274"
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html268"
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html277"
+ HREF="node24.html">Acknowledgements</A>
+<B> Up:</B> <A NAME="tex2html275"
+ HREF="main.html">Capturing and Querying Multiple</A>
+<B> Previous:</B> <A NAME="tex2html269"
+ HREF="node22.html">Defaults</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00050000000000000000">
+Summary and Future Work</A>
+</H1>
+
+<P>
+This paper proposes an extensible framework for capturing more data
+semantics in semistructured data models.
+The framework is extensible so that 
+it can incorporate the latest advances in diverse domains, from web 
+security and e-commerce to transaction-time databases.
+The additional semantics for each domain are captured in 
+enriched labels.
+The new labels are sets of descriptive properties.
+The properties used as examples in this paper include
+transaction time, price, security, quality, and valid time.
+But the properties do not have to be the same for every database or
+even for every label within a database since
+this framework permits missing properties.
+Support for required properties, to model properties such as security, 
+is also built into the framework.
+
+<P>
+Several new operations are needed to manipulate labels with properties.
+<I>Match</I>  chooses a set of paths from the semistructure
+that match a user-given path regular expression.
+<I>Collapse</I>  combines the properties in labels along a path
+to create a new label for the entire path.
+<I>Slice</I>  slices a portion from each label on a path.
+Finally, <I>Coalesce</I>  coalesces a property from a set of edges.
+These operations are built into the AUCQL query language,
+an implemented, Lorel-like query language, which is
+briefly described in this paper.
+
+<P>
+This work may be extended in a number of directions.  
+Labels can be further extended to include a <EM>set</EM> of labels.  
+This does not greatly increase the modeling power
+since multiple descriptions of the same relationship can be split into
+individual labels on a multitude of edges.  However, it is essential to
+storing coalesced labels, which may be of some
+convenience to the user.
+
+<P>
+We also need to research translating meta-data in XML, such 
+as RDF&nbsp;[<A
+ HREF="node25.html#LASSILA99">21</A>] or P3P&nbsp;[<A
+ HREF="node25.html#P3P99">27</A>], to a set of properties.
+The translation should be relatively straightforward since there is
+a clear mapping between paths in an XML data-set and 
+properties: each path maps to a property, the labels along the
+path collapse to the property's name, while the terminal 
+value of the path is the property's value.
+
+<P>
+Finally, and perhaps most importantly, the impact of our framework on
+path indexes must be addressed.  We expect that a spatial or
+(bi)-temporal index can be generalized to index paths through properties
+in labels, and we plan to investigate this issue in the future.
+
+<P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html276"
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html274"
+ HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html268"
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html277"
+ HREF="node24.html">Acknowledgements</A>
+<B> Up:</B> <A NAME="tex2html275"
+ HREF="main.html">Capturing and Querying Multiple</A>
+<B> Previous:</B> <A NAME="tex2html269"
+ HREF="node22.html">Defaults</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

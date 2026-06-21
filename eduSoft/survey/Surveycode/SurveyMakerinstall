@@ -1,0 +1,66 @@
+#!/usr/local/bin/perl 
+#=======================START OF CONFIGURATION=========================
+# Set the following line to where your perl lives and put in flags so that
+# in can include the Bdbm.pm and CGI.pm packages
+# NOTE THIS MUST BE PERL VERSION 5.0 or above.
+$PERL = '#!/usr/local/bin/perl -I/world/httpd/cgi-bin/perl/pm -I/world/httpd/cgi-bin/perl/survey';
+
+# Set the following line to where the survey scripts will live
+$ROOT = "http://www.cs.jcu.edu.au/cgi-bin/perl/survey";
+
+# Set the following line to where the mailto feature on HTML titles should
+# send mail (you can ignore this as it is unsupported anyways I think)
+$MAILTO = 'curtis@cs.jcu.edu.au';
+
+# Where will the cgi-bin scripts live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the scripts that are located in this directory (for scripts marker, 
+# poster, reviewer, starter, and stats) so make sure to
+# put all the survey cgi-bin scripts in their own directory.
+$SCRIPTDIR = "/world/httpd/cgi-bin/perl/survey";
+
+# Where will SurveyMaker live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the script SurveyMaker that is located in this directory (which should be OK)
+$SURVEYMAKERDIR = '/home/curtis/bin/perl';
+
+# chmod and chgrp to set the protections appropriately
+$CHMOD= 'chmod ug+rx';
+$CHGRP = 'chgrp cgiperl';  
+
+#=======================END OF CONFIGURATION=========================
+
+configure("marker.proto", "$SCRIPTDIR/marker");
+configure("poster.proto", "$SCRIPTDIR/poster");
+configure("reviewer.proto", "$SCRIPTDIR/reviewer");
+configure("starter.proto", "$SCRIPTDIR/starter");
+configure("stats.proto", "$SCRIPTDIR/stats");
+configure("MyDB.pm", "$SCRIPTDIR/MyDB.pm");
+configure("SurveyMaker.proto", "$SURVEYMAKERDIR/SurveyMaker");
+
+print "\n\nI'm ALL DONE!!!!!\n";
+print "But you should please check for any errors above!\n";
+
+sub configure {
+  my ($filein, $fileout) = @_;
+  my ($answer) = ('no');
+
+  print "reading $filein\n";
+  open(PROTO, "<$filein") || die "no $filein\n";
+  
+  # slurp input 
+  @lines = <PROTO>;
+  close(PROTO);
+  $text = join("",@lines);
+  $text =~ s/&&&PERL&&&/$PERL/g;
+  $text =~ s/&&&ROOT&&&/$ROOT/g;
+  $text =~ s/&&&MAILTO&&&/$MAILTO/g;
+
+  open(OUT, ">$fileout") || die "can't open $fileout\n";
+  print "creating $fileout\n";
+  print OUT $text;
+  close(OUT);
+
+  if ($CHMOD) {system("$CHMOD $fileout");}
+  if ($CHGRP) {system("$CHGRP $fileout");}
+}

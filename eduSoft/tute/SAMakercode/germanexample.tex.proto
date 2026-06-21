@@ -1,0 +1,68 @@
+(INCLUDE) &&&FORMATDIR&&&/GermanSinglePage
+
+(RETURN-TO-WHERE) 
+<A HREF="http://www.cs.jcu.edu.au/~curtis">
+Home page auf Curtis Dyreson
+</A> <BR>
+<A HREF="http://www.cs.jcu.edu.au/~curtis/software/self_assessment.html">
+Home page auf SAMaker 
+</A>
+
+(QUESTIONS) 
+
+(QUESTIONSET)
+(T) Ein <i>leaf</i> hat keine Kinder.
+
+(F) Ein <i>leaf</i> hat Kinder.
+
+(QUESTIONSET)
+(MC) was die Stufe von Knotenpunkt 3 im folgenden Baum ist?
+<PRE>
+     8 
+    / \
+   4   9
+  / \   \
+ 3   5   7
+    / \
+   1   2
+</PRE>
+(w) 0
+(w) 1
+(r) 2
+(w) 3
+(w)  keine vom oben genannten
+(h) Die Stufe der Abstand von der Wurzel.
+(e) Die Stufe der Abstand von der Wurzel.
+Um an Knotenpunkt 3 von der Wurzel zu gelangen, Knotenpunkt 8,
+benutzen Sie zwei Ränder.
+
+(QUESTIONSET)
+(MM) Wählen Sie <i>alle</i> Blattknotenpunkte im folgenden Baum.
+<PRE>
+ 8 
+  \
+   4
+  / \
+ 3   5
+    / \
+   1   2
+</PRE>
+(r) 1
+(r) 2
+(r) 3
+(w) 4
+(w) 5
+(w) 8
+(h) Blattknotenpunkte sind die ohne Kinder.
+(e) Blattknotenpunkte sind die ohne Kinder.
+Knotenpunkte 1, 2 und 3 haben keine Kinder.
+ 
+(QUESTIONSET)
+(EA) Was ist mein Lieblingsaroma der Eiscreme? 
+(r) Passionsfrucht
+(r) Passions frucht
+(r) passionsfrucht
+(r) passions frucht
+(h) Sie ist nach tropisches Nordqueensland gebürtig.
+(e) Der gerade Süden der eisigen Mangopflaume von Ingham hat große
+Passionsfrucht-Eiscreme.

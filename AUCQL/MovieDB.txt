@@ -1,0 +1,65 @@
+;
+; The movie database captures information from various sites on the www
+;
+
+; This is just the starter edge to identify the roots of the semistructure
+INSERT EDGE &root, &movies;
+
+INSERT EDGE &movies, &Color_of_Night (
+  security! 'over 18',
+  name: 'movie'
+  );
+
+INSERT EDGE &Color_of_Night, &Willis (
+  name: 'stars'
+  );
+
+INSERT EDGE &Willis, 'Bruce Wilis' (
+  name: 'name',
+  transaction_time: [31/Jul/1994 - 1/Apr/1997]
+  );
+
+INSERT EDGE &Willis, 'Bruce Willis' (
+  name: 'name',
+  transaction_time: [2/Apr/1997 - uc]
+  );
+
+INSERT EDGE &movies, &Star_Wars_IV (
+  name: 'movie',
+  transaction_time: [31/Jul/1998 - uc]
+  );
+
+INSERT EDGE &Star_Wars_IV, &Willis (
+  name: 'stars'
+  );
+
+INSERT EDGE &Star_Wars_IV, &wars_clip (
+  price: '$2',
+  security! 'paid',
+  name: 'clip'
+  );
+
+INSERT EDGE &Star_Wars_IV, &by_Videotastic (
+  name: 'review',
+  quality: 'high',
+  security! 'subscriber',
+  valid_time: [1/Jun/1998 - 31/Jul/1998],
+  transaction_time: [25/May/1998 - uc]
+  );
+
+INSERT EDGE &by_Videotastic, &wars_clip (
+  name: 'clip'
+  );
+
+INSERT EDGE &Star_Wars_IV, &by_Joe_Doe (
+  quality: 'low',
+  name: 'review'
+  );
+
+INSERT EDGE &by_Joe_Doe, 'joe@yol.com' (
+  name: 'e-mail'
+  );
+
+INSERT EDGE &by_Joe_Doe, 'This movie rocks...' (
+  name: 'text'
+  );

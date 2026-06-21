@@ -1,0 +1,509 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Rationale for the design of the TADT in Java</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#C0F0E0" align=left valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td >
+             <img src="http://cs.usu.edu/people/CurtisDyreson/temporal/multical.color.gif" 
+                  alt="temporal logo" 
+                  width="90" 
+                  height="68"
+                  border="2">
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#C0F0E0">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#C0F0E0">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#C0F0E0"> 
+              <big>Rationale for the design of the TADT in Java</big>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#C0F0E0">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/spe.htm">
+              Fast I/O
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/granularity.htm">
+              Granularity
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/indeterminacy.htm">
+              Indeterminacy
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/multical.htm">
+              MultiCal
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/now.htm">
+              Now
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              TADT
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/infosys.htm">
+              Timestamps
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/temporal/tsql2.htm">
+              TSQL2
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#C0F0E0">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#C0F0E0">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#C0F0E0">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+This document describes the design of a
+Temporal Abstract Data-type (TADT).
+The design is based on a C and C++ design of a TADT in the
+MultiCal system.
+<P>
+The following sections outline each of the major pieces of the design
+and give a rationale as to the importance of each.  
+The design has been implemented and is in the public domain.
+<h2>TimeValue</h2>
+The <a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.domain.TimeValue.html"> TimeValue</a>
+Interface is an API for a set of primitive operations on time-values from
+some underlying temporal domain.
+This domain could be bounded or unbounded, discrete or continuous, 
+have exact values or fuzzy, inexact values, etc. 
+The TimeValue interface has just a minimal set of 
+operations on TimeValues needed to support higher-level, richer semantics.
+The interface permits a complete encapsulation of the domain-dependent
+code, isolating it from other parts of the TADT.
+<P>
+The TimeValue API is implemented in the desired domain.
+For example, we have implemented a 
+discrete, unbounded
+domain with two special
+values (effectively the integers plus Beginning and Ending of Time,
+the latter two values have special semantics).
+The domain is unbounded since it uses Java's built-in BigInteger class
+(which does not limit the size of integers).
+<h2>Semantics</h2>
+The <a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Semantics.html">Semantics</a>
+Interface
+defines a set of basic operations that should be supported 
+by a Temporal Semantics (perhaps a better name would be
+TemporalSemantics).
+<P>
+The general idea behind the Semantics interface is to abstract 
+the operations on temporal entities.
+Such operations have a variety of meanings or interpretations.
+Each implementation of the Semantics interface imbues temporal
+operations with a different meaning.
+<P>
+For example, a Semantics should
+support an operation that determines whether one instant precedes another.
+For the purpose of this example, we will assume that an instant
+is represented as a point on an underlying discrete time-line.
+Several alternative semantics for this simple operation 
+<P>
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.LeftOperandSemantics.html">
+LeftOperandSemantics
+</a>
+which casts the second operand
+to the granularity of the first operand in all operations).
+Here is an example using the LeftOperandSemantics.
+<pre>
+  Instant i = new Instant(...);
+  Instant j = new Instant(...);
+  Interval k = new Interval(...);
+  // A Semantics is just a name space
+  Semantics ops = new LeftOperandSemantics();
+  <br>
+  // Compare two instants
+  ExtendedBoolean cond = ops.precedes(i,j);
+  <br>
+  // Add an interval and an instant
+  Anchorable t = ops.add(i, k);
+  System.out.println("add(i,k) is " + t.image());
+</pre>
+Note that to change to a different semantics for the operations, 
+all we have to do is change one line, e.g., 
+<pre>
+  // Scale to the coarser operands
+  Semantics ops = new CoarserOperandSemantics();
+</pre>
+All the other code remains exactly the same.
+<P>
+Instead of using an interface and allowing dynamic switching between 
+semantics, one could use a package to encapsulate the semantics and
+call operations statically.  For example, assume the LeftOperandSemantics
+package has the Ops class that statically defines all the 
+available operations.  Then the code given above would look like the
+following.
+<pre>
+  import LeftOperandSemantics.*;
+   ...
+  Instant i = new Instant(...);
+  Instant j = new Instant(...);
+  Interval k = new Interval(...);
+  // A Semantics is just a name space
+  <br>
+  // Compare two instants
+  ExtendedBoolean cond = Ops.precedes(i,j);
+  <br>
+  // Add an interval and an instant
+  Anchorable t = Ops.add(i, k);
+  System.out.println("add(i,k) is " + t.image());
+</pre>
+By using the package, the semantics is fixed at compile-time (or more
+correctly class loading time), whereas using an interface 
+supports run-time switching of the Semantics and provides a general
+template for what operations a Semantics should support (at a 
+minimum).  I chose the latter.
+<P>
+We didn't add the ability to use different Semantics to the previous 
+versions of MultiCal (and it
+is not in the C++ OO design) because at the back of our minds
+we had what we wrote in the granularity paper: the SQL compiler
+will generate the proper code with the casts and scales done
+prior to the operation.  There are two reasons why this won't
+be best in this context.
+<OL>
+<LI> There won't necessarily be a compiler to generate the 
+proper sequence of calls, we expect the operations to be 
+called directly in other kinds of applications.
+<LI> Casts and scales are expensive, on temporal elements 
+they are especially expensive.  In general, it is actually 
+much better to do the cast and scale as needed by the
+operation.  Below I give an example with a 
+period to illustrate my point.  First, we'll give the
+naive sequence of calls.
+<pre>
+  ...
+  Instant i = new Instant(...);  
+  Period j = new Period(...);
+  // We want to do a precedes on the Instant and the Period
+  // So we first cast the Period to the granularity of the Instant
+  Period k = j.cast(i.granularity());
+  // Now we can do the precedes since the operands are at
+  // the same granularity 
+  ...precedes(i,k)....
+</pre>
+What may not be obvious is that we've done lots more work than
+necessary because we've cast both the starting *and* terminating
+instant in the period, when in fact all we had to do was
+cast the starting instant.  So the better code is
+<pre>
+  ...
+  Instant i = new Instant(...);  
+  Period j = new Period(...);
+  // We want to do a precedes on the Instant and the Period
+  // So we first fetch only the Starting Instant, then we do 
+  // the cast 
+  Instant starting = j.earliest();
+  Instant k = starting.cast(i.granularity());
+  // Now we can do the precedes since the operands are at
+  // the same granularity 
+  ...precedes(i,k)....
+</pre>
+Extrapolate for temporal elements.
+<P> 
+Sure a precise and careful implementer could write the optimised code 
+directly whenever
+a precedes is done between a period and an instant
+in a semantics that says they should cast to the granularity
+of the first operand, 
+but I believe it is much, much better for the implementor of the
+semantics to package all the optimisations/casting/scaling in a single 
+operation since the same thing is done every time the operation
+is called, for each semantics.
+</OL>
+This design also accommodates Indeterminacy through extension of 
+the Semantics Interface with a setPlausibility operation and
+similarly extending each of the implemented semantics to
+handle indeterminacy.  This will require minimal contortions
+on the user's side of things.  Here's what I have in mind.
+<pre>
+  Instant i = new Instant(...);
+  Instant j = new Instant(...);
+  Interval k = new Interval(...);
+  // A Semantics is just a name space
+  IndeterminateSemantics ops = new LeftOperandIndeterminateSemantics();
+  <br>
+  // Carry out the operations at a plausibility of 60
+  ops.setPlausibility(60);
+  <br>
+  // Compare two instants
+  ExtendedBoolean cond = ops.precedes(i,j);
+  <br>
+  // Add an interval and an instant
+  Anchorable t = ops.add(i, k);
+  System.out.println("add(i,k) is " + t.image());
+</pre>
+On the user's side, only two lines change, one to establish the 
+new semantics, and one to set the plausibility.
+<P>
+I'm certain that not every new semantics can be accommodated so easily
+within this framework, but all the ones that I currently know about
+can.  And it gives us some leverage for accommodating other as
+yet unthought of, temporal semantics.
+<P>
+I anticipate that TSQL2 semantics will be just another  
+implementation of a Semantics, exactly as any other semantics,
+although it will perhaps support a lot more methods than are outlined
+in the basic Semantics Interface, but that is not a worry,
+as one can always add to an interface.
+<h2>Anchorables and Unanchorables</h2>
+This section outlines the basic kinds of temporal values available.
+I wanted to be able to deal with new kinds of basic temporal entities.
+So I identified a minimal set of requirements that
+temporal entities such as Instants and Periods must have to
+support a Semantics and put those requirements into an
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Anchorable.html">Anchorable</a>
+Interface.
+The requirements for Interval-like things is the
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Unanchorable.html">Unanchorable</a>
+Interface.
+Things like 
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Instant.html">Instants</a>
+and 
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Interval.html">Intervals</a>
+are implementations of the temporal entities, although these
+two classes are very special implementations since 
+many of the operations in a
+Semantics are carried out with respect to arrays of 
+Instants/Periods and Intervals.
+<P>
+But before I talk about those two classes, suppose one
+wanted to add an PeriodicInstant temporal entity which is a
+periodic instant.  
+Basically, all they have to do is implement the Anchorable
+interface and then you should be able to add PeriodicInstants
+to TemporalElements without any problems.
+Anyways, that is the goal, and in theory, if I've done
+the design correctly, that is how it should work.  
+Note that Semantics are defined with respect to operations
+on Anchorables and Unanchorables, so the Semantics should
+work no matter what kinds of Anchorables and Unanchorables
+you give it, as long as they correctly implement the 
+Anchorable/Unanchorable interface.
+<P>
+As an aside, suppose you didn't want your LeftOperandSemantics
+to add PeriodicInstants and Intervals.  My view is that
+you are making an arbitrary decision in your semantics (which
+could be perfectly OK in a different semantics) so 
+to handle this restriction 
+you just overload the add method in your implementation of
+the semantics to detect
+this combination and either die if the user tries it or
+throw the appropriate exception.  So the design allows
+restrictions of general operations (needed for TSQL2).
+<P>
+The 
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Instant.html">Instant</a>,
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Period.html">Period</a>, and
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.Interval.html">Interval</a>,
+classes are special implementations and
+support all the operations on that are needed to
+implement a Semantics.
+To be truly orthogonal, I should define them as an Point, Segment, and
+a Distance interface, respectively, and then implement the
+interface appropriately.  But I slanted the names to just a Temporal
+domain.  For BiTemporalElements a "Region" class will be needed to
+support operations on regions.
+<h2>ExtendedBoolean</h2>
+The 
+<a href="http://cs.usu.edu/people/CurtisDyreson/tadt/tadt.standard.ExtendedBoolean.html">
+ExtendedBoolean 
+</a>
+class encapsulates boolean operations
+on some underlying multi-valued domain.
+I've currently implemented it on a 2-valued domain, but a 4-valued
+domain is needed for indeterminacy, and I suspect a 3-valued
+domain is really what you need for a determinate TSQL2 Semantics.
+New implementations are easy to do and plug in.
+Rather than implement it as an interface, my plan is to put it into 
+it's own package so that a semantics can import the appropriate
+ExtendedBoolean package, but perhaps it might be cleaner to 
+just do it as an interface.
+<h2>C/C++/Java API</h2>
+A unified API of just the TSQL2 semantics that doesn't use overloading
+or constructors can be written using
+calls to the appropriately implemented Semantics, Anchorables,
+and Unanchorables, with everything packaged in a TSQL2 package.
+For example, the add operation in the TSQL2 API might be 
+(assume the Semantics implementation is provided by the tadt.standard package):
+<pre>
+ package TSQL2.API;
+ import TSQL2.Instant.*;
+ import TSQL2.Interval.*;
+  <br>
+ Instant InstantPlusInterval(Instant i, Interval s) { 
+   return (Instant)tadt.standard.LeftOperandSemantics.add(i,s);
+   }
+</pre>
+and an Instant constructor could be:
+<pre>
+ package TSQL2.API;
+ import TSQL2.Instant.*;
+  <br>
+ Instant newInstant(byteArray b) {
+   return new Instant(b);
+   }
+ ...
+ package TSQL2.Instant;
+  <br>
+ public Instant(byteArray b) { 
+   return (Instant)new tadt.standard.Instant(b);
+   }
+</pre>
+<h2>Conclusion</h2>
+This is just a brief outline of the design, the API is on-line.
+It is not a radical departure from the earlier C and C++ designs,
+rather it generalises those designs to make them more
+flexible, and hopefully of more use.  At the same time, it
+does not sacrifice efficiency; this design incorporates the
+previous C design that I sent you recently except for the fancy stuff involving 
+interfaces and (lots of) method overloading (neither of which should have 
+much of an impact, if any).  Neither of these designs have any 
+mutators (so when you add two intervals, you get a new interval), I believe 
+that allocating objects as needed makes the code easier to write.
+Of course, one could always implement a MutatingInstant as an 
+Anchorable and use it in an implementation of a Semantics 
+called the SuperEfficientLeftOperandSemantics.  The design allows
+you to do these kinds of things if you really, really want to.
+<hr noshade>
+<ADDRESS>
+Copyright &#169; 1996 Curtis E. Dyreson.  All rights reserved.
+</ADDRESS>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <em><a style="text-decoration:none" 
+               href="http://cs.usu.edu/people/CurtisDyreson">Curtis E. Dyreson</a>
+     &copy; 1993-2001. All rights reserved.</em>
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#C0F0E0">&nbsp;</td>
+    <td colspan=2 bgColor="#C0F0E0" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

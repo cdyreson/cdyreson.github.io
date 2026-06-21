@@ -1,0 +1,268 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Download Morph</title>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#E0E0E1" align=right valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td><a style="text-decoration:none"
+                 href="http://www.cs.usu.edu/~cdyreson/pub/Morph/images/closestGraph.png"><img 
+                    src="http://www.cs.usu.edu/~cdyreson/pub/Morph/images/closestLogo.png" 
+                    alt="TTXPath logo" 
+                    height="80"
+                    border="0"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#E0E0E1">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#E0E0E1">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#E0E0E1"> 
+              <big>Download Morph</big>
+              <br>
+              <font color="#800000" size="2">
+              Flexible Querying for XML<br>
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#E0E0E1">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/tutorial.htm">
+              Tutorial&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/demo/index.htm">
+              Demo&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              Download&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/publications.htm">
+              Publications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+<P>
+<h3> Morph Dependencies </h3>
+The Morph system is written entirely in Java and released as a NetBeans
+project. It has the following Java library dependencies 
+(you'll have to download these separately).
+<ul>
+<li>
+Java 1.6 - Morph code uses generics so you'll need to download 
+Java 1.5 or higher.
+</li>
+<li>
+Xerces SAX parser - The standard SAX parser has a well-knwon
+bug (runs out of memory on large files), so some other SAX
+parser has to be used to parse large files. We developed with
+Xerces 2.9.1. Add xercesImpl.jar to your NetBeans library.
+</li>
+<li>
+ANTLR - We developed the grammar using AntlrWorks 1.2.3. Add
+antlrworks-1.2.3.jar to your library. You will also need the
+Antlr runtime library, version 3.1.3 or higher.
+</li>
+<li>
+BerekelyDB - Morph uses BerkeleyDB as the back end data store.
+Download the BerkeleyDB Java Edition and add db.jar to your
+library.
+</li>
+</ul>
+<P>
+<h3>Download Code</h3>
+With the above JAR files in place, you can download 
+a pre-release of version of Morph, which 
+is available as a NetBeans project:
+<a href="Morph.tar.gz">Morph.tar.gz</a>.
+<P>
+<h3>Using Morph</h3>
+To run Morph, use the top-level Ant taks in <code>run.xml</code>.
+Execute the task "parse test" followed by "morph test". The first
+task parses the data in <code>xml/test.xml</code>. The second
+task evaluates the query in <code>queries/author</code>.
+Modify each as you like. To re-parse the test data, you may with
+to delete the database by executing the task "delete db".
+<P>
+A diagram illustrating the Morph architecture is given below.
+<P>
+<img src="images/architecture.png" width="1000"/>
+<P>
+<h3>Unimplemented Features</h3>
+We are still debugging Morph and the following features are
+not yet fully tested and debugged.
+<ul>
+<li>
+data - data operator needs to be implemented, the current version 
+queries all documents
+</li>
+<li>
+cloning in mutatation - cloning in a mutatation has a bug
+</li>
+<li>
+dynamic grouping - only static grouping is currently supported
+</li>
+<li>
+XQuery tranlsation - only LCAJoin and Type are supported, grouping
+is not
+</li>
+<li>
+verbose type analysis - give feedback to the user as to which types
+are joined in an LCA-join
+</li>
+<li>
+integer comparisons - not yet implemented for the where modifier
+</li>
+<li>
+value indexing - the where clause filters each node rather than pushing
+a selection into the type sequence generator, once we set up a value
+index then we can use BerkeleyDB to do a more intelligent search
+</li>
+</ul>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson">Curtis E. Dyreson</a> 
+     &copy; 2009. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#E0E0E1">&nbsp;</td>
+    <td colspan=2 bgColor="#E0E0E1" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

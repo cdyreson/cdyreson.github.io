@@ -1,0 +1,19 @@
+#!/usr/local/bin/perl -w
+
+my $x = 0;
+$x = $ARGV[0];
+
+open(PAGE, "| Page > Page.out") || die "could not open Page\n";
+open(MACHINE , "| Machine > Machine.out") || die "could not open Machine\n";
+open(TIME , "| Time > Time.out") || die "could not open Time\n";
+
+while (<STDIN>) {
+  /^(.*) - - \[([^:]*:.*)\] \"(.*)\"\s*\d+\s*\d+\s*$/;
+  print MACHINE "$1\n";
+  print TIME "$2\n";
+  print PAGE "$3\n";
+  }
+
+close PAGE;
+close MACHINE;
+close TIME;

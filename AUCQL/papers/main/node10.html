@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Path Validity</TITLE>
+<META NAME="description" CONTENT="Path Validity">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html149"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html147"
+ HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html141"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html150"
+ HREF="node11.html">Path Match</A>
+<B> Up:</B> <A NAME="tex2html148"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Previous:</B> <A NAME="tex2html142"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00032100000000000000">&#160;</A>
+<A NAME="sec:pathValid">&#160;</A>
+<BR>
+Path Validity
+</H3>
+
+<P>
+Only some of the paths in the semistructure are <EM>valid</EM>.
+Intuitively a path is valid if it transits through properties that
+share some ``commonality.''  This commonality is computed by
+collapsing the labels on the path.
+
+<P>
+Consider the case of a path to a movie star's name.  One such path is
+shown in Figure&nbsp;<A HREF="node10.html#fig:virtualEdges">3</A>, composed by the solid lines.  
+Intuitively, the path forms a <EM>virtual edge</EM> from <TT>&amp;movies</TT> to <EM>Bruce Willis</EM>.  
+In the figure, the virtual edge is depicted as
+a dashed line.  The virtual edge should have a label that describes
+it, just like any other edge.  This label is determined by 
+collapsing the labels along the path into a single label.
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:virtualEdges">&#160;</A><A NAME="428">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 3:</STRONG>
+A (Virtual) Edge for the Name of a Movie Star</CAPTION>
+<TR><TD>
+<!-- MATH: $\scalebox{.6}{\includegraphics{idraw/virtualEdge.ps}}$ -->
+<IMG
+ WIDTH="301" HEIGHT="217" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="\scalebox{.6}{\includegraphics{idraw/virtualEdge.ps}}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+The operation described below collapses a path by recursively 
+collapsing the labels along the path.
+A pair of labels is collapsed by determining their common
+properties.  If only one of the labels has some property, that
+property is propagated to the collapsed label.  A
+missing property in a label is interpreted as ``don't care information,'' meaning that
+any value of the missing property is acceptable for the label.  For properties
+that appear in both labels, a property-specific collapsing constructor
+is used to compute the value of the property.  This constructor could
+result in an <EM>undefined</EM> value, which signifies that these
+labels do not have any commonality for that property.
+The path is collapsed backwards, that is, from the sink to the source,
+which effectively means that each collapsing constructor 
+is left-associative.
+
+<P>
+[
+<!-- MATH: ${{\it ClPt\/}\xspace_{\Gamma}}:
+{\it PATH} \rightarrow {\it EDGE}$ -->
+<IMG
+ WIDTH="177" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="${{\it ClPt\/}\xspace_{\Gamma}}:
+{\it PATH} \rightarrow {\it EDGE}$">]
+
+<P>
+Collapse path (
+<!-- MATH: ${{\it ClPt\/}\xspace_{\Gamma}}$ -->
+<IMG
+ WIDTH="45" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="${{\it ClPt\/}\xspace_{\Gamma}}$">)
+takes a path and computes the 
+label for the virtual edge between the first and last nodes in the path.
+The operation is extensible in that it depends on the semantics of the 
+properties as given by <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">.
+Each constructor 
+<!-- MATH: ${{\it PrCl\/}\xspace_p}$ -->
+<IMG
+ WIDTH="45" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="${\it PrCl\/}\xspace_p$">
+in <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\Gamma$">
+is property-specific
+and is used to collapse a pair of property values for property <I>p</I>.
+In this operation, required properties are treated the same as
+other properties.
+<PRE><TT>
+		<IMG
+ WIDTH="186" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="${\it ClPt\/}\xspace_{\Gamma}(v~{\mathop{\longrightarrow}\limits^{\cal L}}~w) \stackrel{\scriptstyle \triangle}{=}v~{\mathop{\longrightarrow}\limits^{{\cal L}}}~w$">
+<BR>		<IMG
+ WIDTH="179" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="${\it ClPt\/}\xspace_{\Gamma}( v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~...
+...{\longrightarrow}\limits^{{\cal L}_2}}~w) \stackrel{\scriptstyle \triangle}{=}~$">
+<IMG
+ WIDTH="57" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="$v~{\mathop{\longrightarrow}\limits^{\cal L}}~w$">
+where <BR>				  <IMG
+ WIDTH="31" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.gif"
+ ALT="${\cal L} = $"><IMG
+ WIDTH="325" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\{ (p{\rm :}~{\it PrCl\/}\xspace_p(x,~y)~\vert~(p{\rm :}~x) \in {\cal L}_1~\land~(p{\rm :}~y) \in {\cal L}_2 \}~\cup $">
+<BR>						 <IMG
+ WIDTH="260" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\{ (p{\rm :}~x)~\vert~(p{\rm :}~x) \in {\cal L}_1~\land~(p{\rm :}~y) \not\in {\cal L}_2 \}~\cup $">
+<BR>						 <IMG
+ WIDTH="245" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\{ (p{\rm :}~y)~\vert~(p{\rm :}~x) \not\in {\cal L}_1~\land~(p{\rm :}~y) \in {\cal L}_2 \}$">
+<BR>		<IMG
+ WIDTH="228" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="${\it ClPt\/}\xspace_{\Gamma}( v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~...
+...p{\longrightarrow}\limits^{{\cal L}_m}}~w) \stackrel{\scriptstyle \triangle}{=}$">
+<BR>						<IMG
+ WIDTH="265" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ {\it ClPt\/}\xspace_{\Gamma}( v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}...
+...\limits^{{\cal L}_2}}~\ldots~{\mathop{\longrightarrow}\limits^{{\cal L}_m}}~w))$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P>
+
+<P></P>
+
+<P>
+The collapsing constructor, 
+<!-- MATH: ${\it PrCl\/}\xspace_p$ -->
+<IMG
+ WIDTH="45" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="${\it PrCl\/}\xspace_p$">,
+depends on the
+semantics of the property.  Table&nbsp;<A HREF="node8.html#tab:propertyOps">1</A> suggests
+constructors for a few common properties.  In general, since each
+property is collapsed independently, the collapse constructor for a
+property should either be a <EM>mutator</EM>, which transforms one domain
+value into another, e.g., concatenation, or a <EM>restrictor</EM>, which
+reduces the extent of the domain value, e.g., time interval intersection.
+
+<P>
+<B>transaction time</B> property in the collapsed path in 
+Figure&nbsp;<A HREF="node10.html#fig:virtualEdges">3</A> is [31/Jul/1998 - uc].
+This is the intersection of the transaction times on the edges on the path.
+It follows that
+the value <EM>Bruce Willis</EM> was described in the database as a
+<TT>movie.stars.name</TT> from 31/Jul/1998 to the current time
+(until it is changed).
+Note that this is not an <EM>exclusive</EM> description--a different
+<TT>movie.stars.name</TT> path (through <TT>&amp;Color of Night</TT>)
+is current over a slightly longer transaction-time interval.
+
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+<P></P>
+
+<P>
+<BR>
+
+<P>
+To determine if a path is valid, the path is collapsed and
+then each property is checked to ensure that it is defined.
+
+<P>
+[
+<!-- MATH: ${\it Valid\/}\xspace_{\Gamma}: {\it PATH} \rightarrow {\it BOOLEAN}$ -->
+<IMG
+ WIDTH="216" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="${\it Valid\/}\xspace_{\Gamma}: {\it PATH} \rightarrow {\it BOOLEAN}$">]
+
+<P>
+A path, <I>P</I>, is valid if after collapsing the path, there are no
+properties with <I>undefined</I> values.
+<PRE><TT>
+		<IMG
+ WIDTH="262" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="${\it Valid\/}\xspace_{\Gamma}(P) \stackrel{\scriptstyle \triangle}{=}\forall p \; [ \: (p{\rm :} {\it undefined}) \not \in {\cal L}~\land$">
+<BR>				<IMG
+ WIDTH="140" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$ (p{\rm !} {\it undefined}) \not \in {\cal L}~\land$">
+<BR>				<IMG
+ WIDTH="153" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$ v~{\mathop{\longrightarrow}\limits^{\cal L}}~w = {\it ClPt\/}\xspace_{\Gamma}(P) \: ]$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P></P>
+
+<P>
+<BR>
+
+<P>
+<A NAME="exa:invalidPath">&#160;</A>Consider the path from <TT>&amp;movies</TT> through <TT>&amp;Star Wars IV</TT>
+to the misspelled value <EM>Bruce Wilis</EM> in
+Figure&nbsp;<A HREF="node3.html#fig:movieDatabase">2</A>.  When the path is collapsed, the <B>  name</B> property in the resulting label has the value <TT>  movie.stars.name</TT>.  The <B>transaction time</B> property is
+<I>undefined</I>.  The transaction times of the first and last edges in the
+path are disjoint, so their intersection does not produce a valid
+transaction time value.  Consequently the path is invalid.  
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+<P></P>
+
+<P>
+<BR>
+
+<P>
+The cost of checking path validity is 
+<!-- MATH: ${\cal O}(n \cdot m)$ -->
+<IMG
+ WIDTH="64" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="${\cal O}(n \cdot m)$">,
+where <I>n</I>is the length of the path and <I>m</I> is the number of properties
+in a label.  We expect that <I>m</I> will usually be much
+smaller than <I>n</I>.  Path validity can be checked as a path is matched,
+as discussed next.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html149"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html147"
+ HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html141"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html150"
+ HREF="node11.html">Path Match</A>
+<B> Up:</B> <A NAME="tex2html148"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<B> Previous:</B> <A NAME="tex2html142"
+ HREF="node9.html">Retrieving Information From Semistructures</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

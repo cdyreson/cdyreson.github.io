@@ -1,0 +1,6 @@
+slper.ozemail.com.au - - [13/Jan/1997:00:44:08 +1000] "GET / HTTP/1.0" 200 3858
+slper.ozemail.com.au - - [13/Jan/1997:00:44:08 +1000] "/cgi-bin/perl/icon/tute/cp2001/marker" 200 3858
+slper.ozemail.com.au - - [13/Jan/1997:00:44:08 +1000] "/cgi-bin/perl/icon/tute/marker" 200 3858
+slper1p38.ozemail.com.au - - [13/Jan/1997:00:43:50 +1000] "GET /ftp/web/research/profiles/grants/ HTTP/1.0" 200 1218
+slper1p38.ozemail.com.au - - [13/Jan/1997:00:43:58 +1000] "GET /ftp/web/research/profiles/grants/Grants97.shtml HTTP/1.0" 200 770
+crab.jcu.edu.au - - [13/Jan/1997:00:54:45 +1000] "/cp1500/HTTP/1.0" 200 3858

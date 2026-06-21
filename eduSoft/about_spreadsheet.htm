@@ -1,0 +1,96 @@
+<head>
+<title>The Spreadsheet Described</title>
+</head>
+<body>
+<h1>The Spreadsheet Described</h1>
+<hr>
+We developed a marks spreadsheet to allow teachers maintain student
+marks.
+The spreadsheet has several desirable features such as the 
+ability to create graphs of specified columns, automatically 
+maintain past copies of grades (is an append only changelog),
+compute the average, etc.  
+But the supported functionality is of little importance.
+The overriding concern in such a tool is maintaining marks security. 
+In particular, no new security holes should be introduced.
+How can marks be maintained on the WWW so that the teacher has access 
+to the marks, but others are prevented from accessing the marks?
+<P>
+In all the tools that we developed, we decided to depart as
+little as possible from prior practice.
+Prior to January 1995, marks were kept (unecrypted) in local files.
+To prevent unauthorised access,
+teachers would set the file's read and write permissions appropriately.
+So marks security rested upon a combination of Unix account security 
+and teacher action.
+Marks integrity could be comprimised either if an account was cracked
+or if permissions were set incorrectly.
+<P>
+Our initial solution was to hide the spreadsheet behind a password
+protection scheme.  
+This solution is problematic because it requires teachers to remember
+yet another password, it erects an obvious target for crackers, and
+it creates a new securtiy hole since it requires the protections on 
+the marks file to be shared by the teacher and the server.
+There is no protection against scripts, invoked
+through the Common Gateway Interface (CGI), from maliciously 
+modifying or inadvertently damaging marks.
+<P>
+Our second solution built upon prior practice rather than departing
+from it.
+We wrote a shell script that the user places in a private directory
+to invoke the spreadsheet.
+The shell script calls reads a private mail file (the name of the 
+file is an argument to the shell script) 
+and dynamically creates a private, temporary HTML page.
+The page is created with the teacher's read and write permissions only 
+and is deleted upon exit from the shell script.
+All marks information is maintained in the local page.
+<P>
+The script then starts a browser (the browser is another input
+variable to the shell script) on the temporary page.  
+From that page a link to an executable program is dynamically created 
+to other pages (so no pages are ever stored and accessible to 
+outside users).  Grades are passed as hidden variables from one 
+browser state to the next and ARE NEVER WRITTEN TO DISK.  
+All this is for security to ensure that noone but the user will
+ever see the grades.  
+Since grades are never written, any changes made are lost when 
+the user leaves the browser.
+However, an option in the grader allows the user to e-mail a copy of the
+grades to that user (the e-mail address is read from the environment
+USER variable in the shell that first invoked the grader and passed
+as a hidden variable from one state of the grader to the next).  
+When the user is emailed copy of the grades, they
+can simply append it to the mail file using their mailer.
+All past versions of the grades will then be accesible to the user
+(but to noone else).
+<P>
+The grader is no more or less secure than is Unix/Sendmail
+since it depends on sendmail to communicate the grades.
+The following are the salient security features.
+<UL>
+<LI> The grader program uses a private copy of your grades
+<LI> The private copy is maintained in a process state (e.g., like
+       in an editor state, only this state happens to be xmosaic).
+<LI> To get changes that you have made to the state of the grades
+       you must choose to email the grades to yourself.
+<LI> Grades are never stored on disk.
+</UL>
+Possible security flaws are the following:
+<UL>
+<LI> If someone has cracked your Unix account, and finds the grades
+      mail file then they can edit the grades.  The solution is to encrypt
+      and decrypt the file as part of the shell, although this feature
+      has not yet been implemented since it goes beyond prior security 
+      measures (previously marks were maintained in private, text files).
+<LI> If a malicious user can capture and modify network packets then 
+      they can modify the grades since grades are passed between browser
+      states using hidden variables as well as mailed. The
+      solution is once again to use encrypt the grades before mailing
+      and between browser states.
+      This feature has yet to be added.
+<LI> The grader program could contain hidden bugs.  No software is 
+ever perfect.  Use at your own risk.
+</UL>
+</body>

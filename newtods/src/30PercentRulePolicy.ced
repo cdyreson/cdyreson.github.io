@@ -1,0 +1,123 @@
+:include[macros]
+:arg1[
+<b>Approved July 23, 2002</b>
+
+For context, here is the entire (older) Prior Publication Policy, from 
+<a href="http://www.acm.org/tods/Authors.html#ManuscriptPreparation">http://www.acm.org/tods/Authors.html#ManuscriptPreparation</a>, as of July 2002.
+:quote[
+    "The technical contributions appearing in ACM journals are normally
+     original papers which have not been published elsewhere. Widely
+     disseminated conference proceedings and newsletters are a form of
+     publication. 
+
+    "A submission based on a paper appearing elsewhere must have major
+     value-added extensions to the version that appears elsewhere. For
+     conference papers, there is little scientific merit in simply
+     sending the submitted version to a journal once the paper has been 
+     accepted for the conference. The authors learn little from this,
+     and the scientific community gains little. 
+
+    "The submitted manuscript should thoroughly consolidate the material,
+     should extend it to be broader, and should more carefully cover related
+     research. It should have at least 30% new material. The new material
+     should be content material, not just the addition of proofs or a few more
+     performance figures. This affords an opportunity to describe the novel
+     approach in more depth, to consider the alternatives more
+     comprehensively, and to delve into some of the issues listed in the
+     other paper as future work."
+]
+
+From the discussion during summer 2002, there were several related but
+separable aspects.
+:uls
+:li Whether there should be additional content in a TODS submission over a
+  version that has already appeared elsewhere.
+
+  The first two paragraphs of the policy makes clear the need for
+  additional content.
+
+:li Who should decide whether the additional content is adequate.
+
+  We agree with Peter's definition: "It should be left to the referees
+  and editor (who will have the conference submission) to decide whether
+  the journal submission fits the bill."
+
+  Indeed, all questions of suitability for TODS ultimately come down to the
+  handling editor, who makes the final decision.
+
+:li What should be considered additional content.
+
+  There has been a lot of discussion on this. The consensus was
+  that the following are examples that generally should be considered
+  as additional content,
+
+:uls
+     :li complex proofs of theorems that appeared in the original paper
+     :li non-obvious proofs of correctness of algorithms that appeared in the
+       original paper
+     :li experimentation that enlarges the parameter space over which
+       algorithm(s) are evaluated
+     :li an in-depth analysis of how the results can be applied in practice
+:ule
+
+  while the following, while perhaps helpful to understanding the paper,
+  would generally not be considered as significant new content,
+
+:uls
+     :li background context
+     :li obvious theorems
+     :li straightforward proofs of existing theorems
+     :li more discussion of related work
+     :li more discussion of the material for non-experts
+     :li a few more performance figures that don't significantly elucidate the
+         applicability of the approach.
+:ule
+
+  Clearly "The new material should be content material, not just the
+  addition of proofs or a few more performance figures." is misleading,
+  since an insightful, well-executed proof is a contribution.
+
+:li Whether to be specific on how much new content is minimally required.
+
+  Some have felt that it is best to leave this entirely up to the reviewers
+  and editors, while others have felt that having a baseline is helpful.
+
+:li Should the TODS submission be a strict superset of the conference paper?
+
+  This was raised by one person, indirectly. Elsewhere we push for shorter
+  papers, but here we require journal papers to have more content than their
+  associated conference paper, necessarily making them longer.
+:ule
+The preference was to modify the sentence under question rather than dropping
+it completely. Reviewers need to have some guidance on the question that will
+otherwise be raised all the time: just how much extra content is required? (We
+all have a fairly good idea of the answer to this question, but reviewers
+certainly wouldn't without some kind of guidance.)
+
+At the same time, the above characterization of what should be considered
+additional content is simultaneously too verbose and not specific enough. It
+doesn't seem possible to be adequately specific while also accommodating all
+the peculiarities of individual papers. So the preference is for a statement
+that gives some guidance without being too prescriptive.
+
+Finally, the policy should explicitly address the superset issue. Papers
+should be allowed to reference the archival paper from which they were
+extended, rather than expecting them to include the entire paper as a subset.
+
+The final wording, agreed to on July 23, 2002, is as follows.
+:quote[
+    "The submitted manuscript should have at least 30% new material. The new
+     material should be content material, not just the addition of obvious
+     proofs or a few more straightforward performance figures. The submitted
+     manuscript affords an opportunity to describe the novel approach in
+     more depth, to consider the alternatives more comprehensively, and to
+     delve into some of the issues listed in the other paper as future
+     work. At the same time, it is not required that the submitted
+     manuscript contain all of the material from the published paper. To the
+     contrary: only enough material need be included from the published
+     paper to set the context and render the new material comprehensible."
+]
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[30% Rule]

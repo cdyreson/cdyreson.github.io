@@ -1,0 +1,16 @@
+all: Time Page Machine
+
+Page: Page.flex
+	flex Page.flex
+	gcc lex.yy.c -lfl -o Page
+
+Time: Time.flex
+	flex Time.flex
+	gcc lex.yy.c -lfl -o Time
+
+Machine: Machine.flex
+	flex Machine.flex
+	gcc lex.yy.c -lfl -o Machine
+
+clean: 
+	rm -f *.o lex.yy.c

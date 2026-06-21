@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Variables in AUCQL</TITLE>
+<META NAME="description" CONTENT="Variables in AUCQL">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html258"
+ HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html256"
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html250"
+ HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html259"
+ HREF="node22.html">Defaults</A>
+<B> Up:</B> <A NAME="tex2html257"
+ HREF="node20.html">AUCQL</A>
+<B> Previous:</B> <A NAME="tex2html251"
+ HREF="node20.html">AUCQL</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00041000000000000000">
+Variables in AUCQL</A>
+</H2>
+
+<P>
+The key to understanding AUCQL is understanding the specification and
+use of variables.  Variables in AUCQL are very much like variables in
+Lorel, the primary difference being that in AUCQL, a variable can
+range over the result of any of the extended query operators discussed
+in Section&nbsp;<A HREF="node9.html#sec:queryOperators">3.2</A>.  Below is an AUCQL (or Lorel)
+query to find the names of movie stars.
+<PRE>
+SELECT Name
+FROM   movie.stars.name Name;
+</PRE>(This is not the shortest, or best possible query, but is adequate for
+the purposes of this discussion.)  This query sets up a variable <TT>  Name</TT> that ranges over the terminal nodes of paths that match the
+regular expression <TT>movie.stars.name</TT>.  In terms of the operations
+discussed in Section&nbsp;<A HREF="node9.html#sec:queryOperators">3.2</A>, the variable has the
+following meaning.
+<PRE><TT>
+		 <IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="${\cal L}_{\it m\/}$">
+:=&nbsp;  {(<B>name!</B> movie)}
+<BR>		 <IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="${\cal L}_{\it s\/}$">
+:=&nbsp;  {(<B>name!</B> stars)}
+<BR>		 <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="${\cal L}_{\it n\/}$">
+:=&nbsp;  {(<B>name!</B> name)}
+<BR>		 <TT>Name</TT> <IMG
+ WIDTH="287" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.gif"
+ ALT="$\in {\it Nodes\/}\xspace({\it Match\/}\xspace_{\it DB\/}({\it ROOTS\/}, ~{\cal L}_{\it m\/}.{\cal L}_{\it s\/}.{\cal L}_{\it n\/}))$">
+</TT></PRE>In fact, in AUCQL, this interpretation can be given explicitly.
+
+<P>
+<BR>
+<BR>
+
+<P>
+<PRE>
+SELECT Name
+FROM NODES(MATCH(roots, (NAME! movie).
+     (NAME! stars).(NAME! name))) Name;
+</PRE>In AUCQL, a bareword descriptor (e.g., <TT>movie</TT>) defaults to a
+required use of the <B>name</B> property (e.g., to <TT>(NAME!
+  movie)</TT>), since that will be the most commonly used property.
+
+<P>
+<BR><HR>
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

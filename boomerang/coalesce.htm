@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <title>
+      Using AUCQL's COALESCE Operation
+    </title>
+  </head>
+  <body>
+    <table summary="table" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#E0F0F1" align="left" valign="top">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td>
+                <img src="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/images/logo.gif" alt="Boomerang logo" width="90" height="68" border="2"> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td align="left" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td bgcolor="#E0F0F1">
+                <big>Using AUCQL's COALESCE Operation</big> <br>
+                 <font color="#800000" size="2">A Dynamic Page-Reconfiguration System</font> 
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellpadding="2" cellspacing="2">
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/index.htm">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/talk.htm">Talk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                Curtis Dyreson
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/">Home</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/publications.htm">Publications</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/projects.htm">Projects</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/code.htm">Software</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/demos.htm">Demos</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/teaching.htm">Teaching</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/contact.htm">Contact me</a> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+        </td>
+        <td valign="top">
+          <br>
+           The COALESCE operation extracts and coalesces the value of a <i>property</i> that is distributed over a number of individual paths. 
+          <p>
+            <a name="section01"></a>
+          </p>
+          <h3>
+            Syntax
+          </h3>
+          The general form of a COALESCE is given below. 
+          <blockquote>
+            COALESCE(<i>property</i>, <i>variable</i>)
+          </blockquote>
+          The COALESCE operation extracts and coalesces the value of the <i>property</i> for the set of paths that connect two nodes in the (<b>collapsed</b>) paths represented by the variable. 
+          <p>
+            The paths are implicitly collapsed prior to evaluating the COALESCE if the user forgets to explicitly collapse the path.
+          </p>
+          <p>
+            <a name="section02"></a>
+          </p>
+          <h3>
+            Extracting the TRANSACTION TIME
+          </h3>
+          Let's start with a simple example to extract the transaction time all the 'movie' edges to a star name. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Get movie stars and their transaction times.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   movie.stars.name Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) TT;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber'); SELECT * FROM movie.stars.name Stars, PROPERTY(TRANSACTION_TIME, Stars) TT;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  The interesting feature about the result is that the Bruce Willis node appears twice. This is because there are two paths to that node, and each has a different transaction time. (Bruce Wilis, note the spelling, also appears once).
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section03"></a>
+          </p>
+          <h3>
+            Coalescing the TRANSACTION TIME
+          </h3>
+          Coalescing computes the transaction time over all possible paths. Let's do the same query as above, except this time we will coalesce the transaction time rather than just extracting it. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>Tell me about movie stars and their transaction times.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   movie.stars.name Stars,
+       PROPERTY(TRANSACTION_TIME, Stars) TT,
+       COALESCE(TRANSACTION_TIME, Stars) CoalescedTT;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber'); SELECT * FROM movie.stars.name Stars, PROPERTY(TRANSACTION_TIME, Stars) TT, COALESCE(TRANSACTION_TIME, Stars) CoalescedTT;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  The result illustrates the difference between the coalesced transaction time and the extracted transaction time.
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section04"></a>
+          </p>
+          <h3>
+            Coalescing other properties
+          </h3>
+          Any property can be coalesced. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>The coalesced names, security, and transaction time of all nodes.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber');
+SELECT *
+FROM   ()* All,
+       COALESCE(NAME, All) Name,
+       COALESCE(SECURITY, All) Security,
+       COALESCE(TRANSACTION_TIME, All) TT;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SET DEFAULT PROPERTY(SECURITY: 'over 18, paid, subscriber'); SELECT * FROM ()* All, COALESCE(NAME, All) Name, COALESCE(SECURITY, All) Security, COALESCE(TRANSACTION_TIME, All) TT;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <br>
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          <hr noshade size="1">
+          <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson">Curtis E. Dyreson</a> and <a style="text-decoration:none" href="http://www.comp.mq.edu.au/~asloane">Anthony Sloane</a> &copy; 1995-2001. All rights reserved.
+        </td>
+      </tr>
+      <tr>
+        <td height="20" bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td colspan="2" bgcolor="#E0F0F1" align="right">
+          <small><i>E-mail questions or comments to <a href="mailto:cdyreson@eecs.wsu.edu">Curtis Dyreson</a></i></small> 
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

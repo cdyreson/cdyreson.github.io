@@ -1,0 +1,177 @@
+MEASURE:all
+  UNIT:'All Pages' = (^.*$)
+
+MEASURE:'cgi-bin scripts'
+  UNIT:'SAMaker total'
+    'SAMaker scripts'.'SAMaker starter total'
+    'SAMaker scripts'.'SAMaker marker total' 
+    'SAMaker scripts'.'SAMaker stats total' 
+    'SAMaker scripts'.'SAMaker next total' 
+    'SAMaker scripts'.'SAMaker skip total' 
+
+MEASURE:'SAMaker scripts'
+  UNIT:'SAMaker starter total'
+    pages.'SAMaker starter cp1006'
+    pages.'SAMaker starter cp1030'
+    pages.'SAMaker starter cp1200'
+    pages.'SAMaker starter cp1300'
+    pages.'SAMaker starter cp1500'
+    pages.'SAMaker starter cp2001'
+    pages.'SAMaker starter cp2003'
+    pages.'SAMaker starter cp2050a'
+    pages.'SAMaker starter cp3020'
+    pages.'SAMaker starter other'
+    pages.'SAMaker starter early'
+  UNIT:'SAMaker marker total'
+    pages.'SAMaker marker cp1006'
+    pages.'SAMaker marker cp1030'
+    pages.'SAMaker marker cp1200'
+    pages.'SAMaker marker cp1300'
+    pages.'SAMaker marker cp1500'
+    pages.'SAMaker marker cp2001'
+    pages.'SAMaker marker cp2003'
+    pages.'SAMaker marker cp2050a'
+    pages.'SAMaker marker cp3020'
+    pages.'SAMaker marker other'
+    pages.'SAMaker marker early'
+  UNIT:'SAMaker next total'
+    pages.'SAMaker next cp1006'
+    pages.'SAMaker next cp1030'
+    pages.'SAMaker next cp1200'
+    pages.'SAMaker next cp1300'
+    pages.'SAMaker next cp1500'
+    pages.'SAMaker next cp2001'
+    pages.'SAMaker next cp2003'
+    pages.'SAMaker next cp2050a'
+    pages.'SAMaker next cp3020'
+    pages.'SAMaker next other'
+    pages.'SAMaker next early'
+  UNIT:'SAMaker skip total'
+    pages.'SAMaker skip cp1006'
+    pages.'SAMaker skip cp1030'
+    pages.'SAMaker skip cp1200'
+    pages.'SAMaker skip cp1300'
+    pages.'SAMaker skip cp1500'
+    pages.'SAMaker skip cp2001'
+    pages.'SAMaker skip cp2003'
+    pages.'SAMaker skip cp2050a'
+    pages.'SAMaker skip cp3020'
+    pages.'SAMaker skip other'
+    pages.'SAMaker skip early'
+  UNIT:'SAMaker stats total'
+    pages.'SAMaker stats cp1006'
+    pages.'SAMaker stats cp1030'
+    pages.'SAMaker stats cp1200'
+    pages.'SAMaker stats cp1300'
+    pages.'SAMaker stats cp1500'
+    pages.'SAMaker stats cp2001'
+    pages.'SAMaker stats cp2003'
+    pages.'SAMaker stats cp2050a'
+    pages.'SAMaker stats cp3020'
+    pages.'SAMaker stats other'
+    pages.'SAMaker stats early'
+
+MEASURE:subjects
+  UNIT:'CP1500 Introduction to Databases'
+    subjectsBySemester.'CP1500 I/1995'
+    subjectsBySemester.'CP1500 I/1996'
+    subjectsBySemester.'CP1500 I/1997'
+    subjectsBySemester.'CP1500 I/1998'
+  UNIT:'CP2001 Data Structures'
+    subjectsBySemester.'CP2000 I/1995'
+    subjectsBySemester.'CP2001 I/1996'
+    subjectsBySemester.'CP2001 I/1997'
+    subjectsBySemester.'CP2001 I/1998'
+  UNIT:'CP2003 Principles of Programming Languages'
+    subjectsBySemester.'CP2050a II/1995'
+    subjectsBySemester.'CP2003 II/1996'
+    subjectsBySemester.'CP2003 II/1997'
+    subjectsBySemester.'CP2003 II/1998'
+
+MEASURE:subjectsBySemester
+  UNIT:'CP1500 I/1995' = ("/cp1500/1995")
+  UNIT:'CP1500 I/1996' = ("/cp1500/1996")
+  UNIT:'CP1500 I/1997' = ("/cp1500/1997")
+  UNIT:'CP1500 I/1998' = ("/cp1500/1998")
+  UNIT:'CP2000 I/1995' = ("/cp2000/1995")
+  UNIT:'CP2001 I/1996' = ("/cp2001/1996")
+  UNIT:'CP2001 I/1997' = ("/cp2001/1997")
+  UNIT:'CP2001 I/1998' = ("/cp2001/1998")
+  UNIT:'CP2050a II/1995' = ("/cp2050a/1995")
+  UNIT:'CP2003 II/1996' = ("/cp2003/1996")
+  UNIT:'CP2003 II/1997' = ("/cp2003/1997")
+  UNIT:'CP2003 II/1998' = ("/cp2003/1998")
+  UNIT:'CP1010 II/1997' = ("/cp1010/1997")
+  UNIT:'CP1010 II/1997' = ("/cp1010/1998")
+
+MEASURE:people
+  UNIT:'Curtis Dyreson'
+    pages.'Curtis Incomplete Data Cube'
+    pages.'Curtis Home Page'
+  UNIT:'Olivier de Vel'
+    pages.'Olivier Home Page'
+  UNIT:'Anthony Sloane'
+    pages.'Tony Home Page'
+
+MEASURE:pages
+  UNIT:'CS Home Page' = (" / HT")
+  UNIT:"Curtis Home Page" = {" /~curtis"(\/|"/index.html")?" HT"}
+  UNIT:'Curtis Incomplete Data Cube' = ("curtis/""htmls/"?"Incomplete")
+  UNIT:"Olivier Home Page" = {" /~olivier"(\/|"/index.html")?" HT"}
+  UNIT:"Tony Home Page" = {" /~tony"(\/|"/index.html")?" HT"}
+  UNIT:'SAMaker starter early' = ("/cgi-bin/icon/starter")
+  UNIT:'SAMaker starter other' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/starter")
+  UNIT:'SAMaker starter cp1006' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1006/starter")
+  UNIT:'SAMaker starter cp1030' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1030/starter")
+  UNIT:'SAMaker starter cp1200' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1200/starter")
+  UNIT:'SAMaker starter cp1300' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1300/starter")
+  UNIT:'SAMaker starter cp1500' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1500/starter")
+  UNIT:'SAMaker starter cp2001' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2001/starter")
+  UNIT:'SAMaker starter cp2003' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2003/starter")
+  UNIT:'SAMaker starter cp2050a' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2050a/starter")
+  UNIT:'SAMaker starter cp3020' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp3020/starter")
+  UNIT:'SAMaker marker early' = ("/cgi-bin/icon/marker")
+  UNIT:'SAMaker marker other' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/marker")
+  UNIT:'SAMaker marker cp1006' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1006/marker")
+  UNIT:'SAMaker marker cp1030' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1030/marker")
+  UNIT:'SAMaker marker cp1200' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1200/marker")
+  UNIT:'SAMaker marker cp1300' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1300/marker")
+  UNIT:'SAMaker marker cp1500' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1500/marker")
+  UNIT:'SAMaker marker cp2001' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2001/marker")
+  UNIT:'SAMaker marker cp2003' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2003/marker")
+  UNIT:'SAMaker marker cp2050a' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2050a/marker")
+  UNIT:'SAMaker marker cp3020' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp3020/marker")
+  UNIT:'SAMaker next early' = ("/cgi-bin/icon/nextquestion")
+  UNIT:'SAMaker next other' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/next")
+  UNIT:'SAMaker next cp1006' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1006/next")
+  UNIT:'SAMaker next cp1030' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1030/next")
+  UNIT:'SAMaker next cp1200' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1200/next")
+  UNIT:'SAMaker next cp1300' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1300/next")
+  UNIT:'SAMaker next cp1500' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1500/next")
+  UNIT:'SAMaker next cp2001' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2001/next")
+  UNIT:'SAMaker next cp2003' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2003/next")
+  UNIT:'SAMaker next cp2050a' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2050a/next")
+  UNIT:'SAMaker next cp3020' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp3020/next")
+  UNIT:'SAMaker skip early' = ("/cgi-bin/icon/skipquestion")
+  UNIT:'SAMaker skip other' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/skip")
+  UNIT:'SAMaker skip cp1006' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1006/skip")
+  UNIT:'SAMaker skip cp1030' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1030/skip")
+  UNIT:'SAMaker skip cp1200' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1200/skip")
+  UNIT:'SAMaker skip cp1300' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1300/skip")
+  UNIT:'SAMaker skip cp1500' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1500/skip")
+  UNIT:'SAMaker skip cp2001' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2001/skip")
+  UNIT:'SAMaker skip cp2003' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2003/skip")
+  UNIT:'SAMaker skip cp2050a' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2050a/skip")
+  UNIT:'SAMaker skip cp3020' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp3020/skip")
+  UNIT:'SAMaker stats early' = ("/cgi-bin/icon/stats")
+  UNIT:'SAMaker stats other' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/stats")
+  UNIT:'SAMaker stats cp1006' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1006/stats")
+  UNIT:'SAMaker stats cp1030' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1030/stats")
+  UNIT:'SAMaker stats cp1200' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1200/stats")
+  UNIT:'SAMaker stats cp1300' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1300/stats")
+  UNIT:'SAMaker stats cp1500' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp1500/stats")
+  UNIT:'SAMaker stats cp2001' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2001/stats")
+  UNIT:'SAMaker stats cp2003' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2003/stats")
+  UNIT:'SAMaker stats cp2050a' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp2050a/stats")
+  UNIT:'SAMaker stats cp3020' = ("/cgi-bin/""icon/"?"perl/tute""2"?"/cp3020/stats")
+;

@@ -1,0 +1,468 @@
+#!/net/local/bin/perl -I/net/zeus/facstaff/cdyreson/public_html/cgi-bin/perl/pm
+ 
+#***************************************************************************
+# For more info on this software surf to
+#       http://www.cs.jcu.edu.au/~curtis/software.html
+# You are welcome to send bug reports, fixes, comments, questions or
+# suggestions to Curtis Dyreson at curtis@cs.jcu.edu.au.
+#
+# Copyright (c) 1997 Curtis Dyreson. All rights reserved.  This software is 
+# covered under the general license and lack of warranty as stated in the
+# installation kit. WARNING! DANGER WILL ROBINSON! USE AT YOUR OWN RISK!
+#****************************************************************************
+ 
+ use strict;
+ use CGI_Lite;
+ use TextDB;
+ my $cgi = new CGI_Lite;
+
+# What is the separator character to use in the criteriadb?
+ my $QUESTIONSEPARATOR = ".";
+ 
+# Build the header
+ print "Content-type: text/html", "\r\n\r\n";
+ my $data = $cgi->parse_form_data();
+
+# common routine to clean junk
+ require "cleanWS.pm";
+
+ my $hidden = new TextDB($$data{'hidden'});
+
+# set up the global state
+ my $collectStatistics = $hidden->FETCH('collectStatistics');
+ my $path = '/net/zeus/facstaff/cdyreson/prweb/SAMaker' . '/' . $hidden->FETCH('path');
+ my $login = $hidden->FETCH('login');
+ my %globalState = (
+   answerText => ' ',
+   explanation => ' ',
+   hintText => '',
+   questionsText => ' ',
+   questionNumber => 'zzzz',
+   pagesRemaining => 'zzzz',
+   pageNumber => 'zzzz',
+   questionId => 'zzzz',
+   );
+ 
+# Make security checks - none really
+#require "security.pm";
+
+# figure out which action to apply
+ if (defined($$data{'next'})) { &nextPage(); }
+ elsif (defined($$data{'this'})) { &thisPage(); }
+ elsif (defined($$data{'skip'})) { &skip(); }
+ #elsif (defined($$data{'mark'})) { &mark(); }
+ elsif (defined($$data{'starter'})) { &starter(); }
+ else { &thisPage();}
+
+#========================================================================
+# The student has just started the self-assessment, determine which
+# questions he or she should answer, and build the necessary database
+#========================================================================
+sub starter {
+  # Use pid version of password, token that will identify user for stats 
+  my ($time) = time;
+
+  my ($userid) = &cleanWS("$$.$time");
+
+  $hidden->STORE('total-tried', 0);
+  $hidden->STORE('total-right', 0);
+
+  # load the number of alternatives for each question
+  my $randomdb = new TextDB;
+  $randomdb->load("$path/randomdb");
+
+  # get how many question sets are on each page
+  my @questionSetsPerPage = @{ $randomdb->FETCH('values') };
+
+  my $pageCounter;
+  my $questionSetCounter;
+  my $questionName;
+  my @remaining = ();
+  
+  # generate a random seed
+  my $seed = time;
+  srand($seed);
+ 
+  # iterate through the pages
+  for ($pageCounter = 1;
+       $pageCounter <= scalar @questionSetsPerPage;
+       $pageCounter++) {
+    # get how many alternatives of each question exist
+    my $questionSets = @questionSetsPerPage[$pageCounter-1];
+    my $questionSetCounter = 0;
+    my @questions = ();
+
+    # iterate through the question sets on a page
+    for ($questionSetCounter = 1; 
+         $questionSetCounter <= scalar @$questionSets; 
+         $questionSetCounter++) {
+ 
+      # Construct a question file name
+      $questionName = 
+        "$pageCounter$QUESTIONSEPARATOR$questionSetCounter$QUESTIONSEPARATOR"
+          . (int(rand(@$questionSets[$questionSetCounter - 1])) + 1);
+      push @questions, $questionName;
+      }
+     push @remaining, [ @questions ];
+    }
+
+  # make these values available to other routines
+
+  $hidden->STORE('userid', $userid);
+  $hidden->STORE('remaining', [ @remaining ]);
+
+  # let's do the first question
+  &thisPage();
+}
+
+#========================================================================
+# The student wants to try the next page
+#========================================================================
+sub nextPage {
+  # load the student database
+  my $userid = $hidden->FETCH('userid');
+
+  # which questions are remaining
+  my @pagesRemaining = @{ $hidden->FETCH('remaining') };
+
+  # we are finished if there are no more pages remaining
+  &alldone() unless @pagesRemaining;
+
+  # make progress
+  shift @pagesRemaining;
+  $hidden->STORE('remaining', [ @pagesRemaining ]);
+
+  # do this page
+  &thisPage();
+}
+
+#========================================================================
+# The student wants to try this page
+#========================================================================
+sub thisPage {
+  # load the student database
+  my $userid = $hidden->FETCH('userid');
+
+  # which questions are remaining
+  my @pagesRemaining = @{ $hidden->FETCH('remaining') };
+
+  # we are finished if there are no more pages remaining
+  &alldone() unless @pagesRemaining;
+
+  my ($questionId) = $pagesRemaining[0][0];
+  my ($pageId) = split(/\./,$questionId);
+  $globalState{'pageNumber'} = $pageId;
+
+  # figure out the questions on this page
+  my $thisPage = new TextDB;
+  $thisPage->load("$path/page" . $globalState{'pageNumber'});
+
+  my @questionList = @{ $pagesRemaining[0] };
+  my @answered = ();
+  my @params = keys %$data;
+  my ($questionName, $thing);
+  foreach $questionName (@questionList) {
+
+    # load the question to try next
+    $globalState{'questionId'} = shift @questionList;
+
+    # add the question to the answered list
+    push @answered, $globalState{'questionId'};
+
+    my $thisQuestion = new TextDB;
+    $thisQuestion->load("$path/question$globalState{'questionId'}");
+  
+    my $handled = 0;
+    my $pattern =  '(\w+)(' . $globalState{'questionId'} . ')';
+    foreach $thing (@params) {
+      if ($thing =~ /$pattern/) {
+        # format the question, substituting any run-time stuff
+        if ($1 eq 'answer') { 
+           $globalState{'questionsText'} = $globalState{'questionsText'} . " " .              &markQuestion($thisQuestion);
+           $handled = 1;
+          }
+        elsif ($1 eq 'hintFormat') { 
+           &writeStats('HINT', $globalState{'questionId'});
+           $globalState{'hintText'} = $thisQuestion->FETCH('hint');
+           $globalState{'questionsText'} = $globalState{'questionsText'} . " " .
+            &cleanWS(&runTimeFormat($thisQuestion->FETCH('hintFormat')));
+           $handled = 1;
+          }
+
+        elsif ($1 eq 'explanationFormat') { 
+           &writeStats('EXPLANATION', $globalState{'questionId'});
+           my ($thing);
+           my ($answerText) = "<UL>\n";
+           foreach $thing (@{ $thisQuestion->FETCH('correctAnswer') }) {
+             $answerText .= &buildAnswerText($thing);
+             }
+           $answerText .= "\n</UL>\n";
+           $globalState{'answerText'} = $answerText;
+           $globalState{'explanation'} = $thisQuestion->FETCH('explanation');
+           $globalState{'pagesRemaining'} = (scalar @pagesRemaining) - 1;
+           $globalState{'questionsText'} = $globalState{'questionsText'} . " " .
+            &cleanWS(&runTimeFormat($thisQuestion->FETCH('explanationFormat')));
+           $handled = 1;
+          }
+        else {
+           $globalState{'questionsText'} = $globalState{'questionsText'} . " " .
+               &cleanWS(&runTimeFormat($thisQuestion->FETCH($1)));
+           $handled = 1;
+          }
+        }
+      }
+    if (!$handled) {
+       $globalState{'questionsText'} = $globalState{'questionsText'} . " " .
+                &cleanWS(&runTimeFormat($thisQuestion->FETCH('normalFormat')));
+      }
+
+  }
+  #print "x" . $globalState{'questionsText'} . "x";
+  
+  &closeStats();
+  $hidden->STORE('remaining', [ @pagesRemaining ]);
+  $hidden->STORE('answered', [ @answered ]);
+  print &cleanWS(&runTimeFormat($thisPage->FETCH('normalAction')));
+}
+
+#========================================================================
+# The student gave an answer, let's mark it!
+#========================================================================
+sub markQuestion {
+  my ($thisQuestion) = @_;
+  my ($questionText) = ' ';
+
+  # which questions are answered
+  my $questionsTried = $hidden->FETCH('questionsTried') || 0;
+  my $questionsCorrect = $hidden->FETCH('questionsCorrect') || 0;
+
+  # which questions are remaining
+  my @pagesRemaining = @{ $hidden->FETCH('remaining') };
+
+  # format the answer, answer may be a list
+  my ($i);
+  my ($temp) = "answer$globalState{'questionId'}";
+  my @answer = split("\0", $$data{$temp});
+ 
+  foreach ($i = 0; $i < scalar @answer; $i++) {
+    # strip any silly whitespace from answer
+    $answer[$i] = &cleanWS($answer[$i]);
+
+    # make answer case insensitive
+    #$answer[$i] =~ tr/A-Z/a-z/ if $thisQuestion->FETCH('caseInsensitive');
+    }
+
+  # check answer
+  my @answers = @{ $thisQuestion->FETCH('correctAnswer') };
+  my $good = &checkAnswer($thisQuestion->FETCH('caseInsensitive'), \@answer, \@answers);
+
+  $globalState{'pagesRemaining'} = (scalar @pagesRemaining) - 1;
+
+  $questionsTried++;
+  $questionsCorrect++ if $good;
+  $hidden->STORE('questionsTried', $questionsTried);
+  $hidden->STORE('questionsCorrect', $questionsCorrect);
+  $globalState{'questionsTried'} = $questionsTried;
+  $globalState{'questionsCorrect'} = $questionsCorrect;
+  if ($good) {
+    # format the good answer, substituting any run-time stuff
+    &writeStats('CORRECT', 
+                $globalState{'questionId'},
+                $questionsTried,
+                $questionsCorrect,
+                join(" ",@answer)
+               );
+    $globalState{'answerText'} = '<UL>' . &buildAnswerText(\@answer) . '</UL>';
+    $questionText = 
+      &cleanWS(&runTimeFormat($thisQuestion->FETCH('correctFormat')));
+    }
+  # format the bad answer, substituting any run-time stuff
+  else {
+    #push @stillBad, $globalState{'questionId'};
+    &writeStats('INCORRECT', 
+                $globalState{'questionId'},
+                $questionsTried,
+                $questionsCorrect,
+                join(" ",@answer)
+               );
+    $globalState{'answerText'} = '<UL>' . &buildAnswerText(\@answer) . '</UL>';
+    $questionText .= 
+      &cleanWS(&runTimeFormat($thisQuestion->FETCH('incorrectFormat')));
+    }
+
+  return $questionText;
+}
+
+#========================================================================
+# Reconstruct the answer text
+#========================================================================
+sub buildAnswerText {
+  my ($answer) = @_;  
+  return "\n<LI>" . join (", ", @$answer) . "\n";
+}
+
+#========================================================================
+# Skip a question
+#========================================================================
+sub skip {
+  # which questions are remaining
+  my @pagesRemaining = @{ $hidden->FETCH('remaining') };
+
+  # we are in an error state if there are no more pages remaining
+  internalError('should be one question left at least!') unless @pagesRemaining;
+
+  # get the first question
+  my $pageref = shift @pagesRemaining;
+  
+  # put it onto the end of the list
+  push @pagesRemaining, $pageref; 
+
+  # reload the remaining pages
+  $hidden->STORE('remaining', [ @pagesRemaining ]);
+  
+  # now go ahead and process normally
+  &thisPage();
+  }
+
+#========================================================================
+# Done with everything
+#========================================================================
+sub alldone {
+  # load the student database
+  my $userid = $hidden->FETCH('userid');
+ 
+  # figure out the questions on this page
+  my $thisPage = new TextDB;
+  $thisPage->load("$path/exit");
+  my $text = &cleanWS(&runTimeFormat($thisPage->FETCH('exit')));
+  print $text;
+  exit 0;
+} # end of final page section
+
+#========================================================================
+# parse all the RBEGIN - REND tags, and replace if necessary
+#========================================================================
+sub runTimeFormat {
+  my ($format) = @_;
+  my ($rbegin, $rend) = ('RBEGIN', 'REND');
+
+  my @tokens = ();
+  @tokens = split("$rbegin|$rend", $format);
+  my $total = "";
+  $globalState{'hiddenText'} = $hidden->toString();
+
+  while (@tokens) {
+    $total .= shift @tokens;
+    my ($text) = shift @tokens || '';
+    $total .= &substitute($text, \%globalState);
+    }
+  return $total;
+  }
+ 
+#========================================================================
+# Do the actual replacement in the run-time formatting
+#========================================================================
+sub substitute {
+  my ($text, $sub) = @_;
+ 
+  my $result = '';
+  my $thing = '';
+  my @locations = ();
+  @locations = split(/\$R([A-Za-z]+)/, $text);
+ 
+  while (@locations) {
+    $result .= shift @locations;
+    return $result unless @locations;
+    $thing = shift @locations;
+    #print "Undefined $thing" unless defined $$sub{$thing};
+    return "" unless defined $$sub{$thing};
+    $result .= $$sub{$thing};
+    }
+  return $result;
+} 
+ 
+#========================================================================
+# Hey, we found an error!!@!!!
+#========================================================================
+sub internalError {
+  my ($text) = @_;
+  print "An internal error was detected.<P>";
+  print "$text";
+  exit 0;
+}
+
+#========================================================================
+# Is this answer OK?
+#========================================================================
+sub checkAnswer {
+  my ($caseInsensitive, $answer, $answers) = @_;
+  my ($attempt, $i, $good);
+
+  # iterate through all the possible answers
+  foreach $attempt (@$answers) { 
+    # check each possibility with the answer given
+    if ((scalar @$answer) == (scalar @$attempt)) {
+      $good = 1;
+      foreach ($i = 0; $i < scalar @$attempt; $i++) {
+        #print "Checking @$answer[$i] with @$attempt[$i] <BR>";
+        my $temp1 = @$answer[$i];
+        my $temp2 = @$attempt[$i];
+        $temp1 =~ tr/A-Z/a-z/ if $caseInsensitive;
+        $temp2 =~ tr/A-Z/a-z/ if $caseInsensitive;
+        if ($temp1 ne $temp2) {$good = 0;}
+        }
+      return 1 if $good;
+      }
+    }
+  return 0;
+}
+
+# is the log file opened?
+my $logOpen = 0;
+
+#========================================================================
+# Let's keep stats around
+#========================================================================
+sub openStats {
+  my ($userid) = @_;
+  open(LOG, ">>$path/log$userid") || die "could not open $path/log$userid";
+  $logOpen = 1;
+  }
+
+#========================================================================
+# Let's keep stats around
+#========================================================================
+sub closeStats {
+  close LOG if $logOpen;
+  $logOpen = 0;
+  }
+
+#========================================================================
+# Write a stat log file
+#========================================================================
+sub writeStats {
+  my @elements = @_;
+
+  return unless $hidden->FETCH('collectStatistics');
+  my $userid = $hidden->FETCH('userid');
+  my $path = $hidden->FETCH('userid');
+
+  &openStats($userid) unless $logOpen;
+  my $temp = join('',@elements);
+  my $sep = '';
+  if ($temp !~ /\|/) {$sep = '|';}
+  elsif ($temp !~ /\?/) {$sep = '?';}
+  elsif ($temp !~ /\!/) {$sep = '!';}
+  elsif ($temp !~ /\,/) {$sep = ',';}
+  elsif ($temp !~ /\#/) {$sep = '#';}
+  elsif ($temp !~ /\f/) {$sep = "\f";}
+  elsif ($temp !~ /\e/) {$sep = "\e";}
+  else {
+    # throw it out! 
+    return;
+    }
+
+  $temp = join($sep, @elements);
+  $temp =~ s/\n/$sep/;
+  print LOG time . "$sep$temp\n";
+}

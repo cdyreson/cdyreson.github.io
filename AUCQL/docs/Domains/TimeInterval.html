@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./Domains/TimeInterval.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_timeinterval">NAME TimeInterval</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(constant_value)">new(Constant value)</a></li>
+		<li><a href="#validate(constant_s)">validate(Constant s)</a></li>
+		<li><a href="#overlaps(other)"><code>overlaps(other)</code></a></li>
+		<li><a href="#contains(other)"><code>contains(other)</code></a></li>
+		<li><a href="#intersect(other)"><code>intersect(other)</code></a></li>
+		<li><a href="#union(timeinterval_other)">union(TimeInterval other)</a></li>
+		<li><a href="#match(timeinterval_other)">match(TimeInterval other)</a></li>
+		<li><a href="#collapse(timeinterval_other)">collapse(TimeInterval other)</a></li>
+		<li><a href="#coalesce(timeinterval_other)">coalesce(TimeInterval other)</a></li>
+		<li><a href="#slice(timeintveral_other)">slice(TimeIntveral other)</a></li>
+		<li><a href="#presentation()"><code>presentation()</code></a></li>
+		<li><a href="#evaluate(state_state)">evaluate(State state)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_timeinterval">NAME TimeInterval</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A TimeInterval Type</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(constant_value)">new(Constant value)</a></h2>
+<p>Create a new type from the passed string value, if no string
+is passed create an interval over all time.</p>
+<p>
+</p>
+<h2><a name="validate(constant_s)">validate(Constant s)</a></h2>
+<p>Check to see that this constant is a legal string value.
+Currently only Gregorian calendar days is supported.
+All times must be of the form '12/feb/1998' where
+the day is between 1 and 31 (inclusive), the month must
+be a legal 3 character English abbreviation of a month and
+the year must be four digits.</p>
+<p>
+</p>
+<h2><a name="overlaps(other)"><code>overlaps(other)</code></a></h2>
+<p>Return the result of an overlaps operation.</p>
+<p>
+</p>
+<h2><a name="contains(other)"><code>contains(other)</code></a></h2>
+<p>Return the result of a contains operation.</p>
+<p>
+</p>
+<h2><a name="intersect(other)"><code>intersect(other)</code></a></h2>
+<p>Return the intersection of the two intervals.</p>
+<p>
+</p>
+<h2><a name="union(timeinterval_other)">union(TimeInterval other)</a></h2>
+<p>Return the union of the two intervals, currently chooses
+the maximum extent.  In future, it should return a temporal
+element.</p>
+<p>
+</p>
+<h2><a name="match(timeinterval_other)">match(TimeInterval other)</a></h2>
+<p>Match this one against another.</p>
+<p>
+</p>
+<h2><a name="collapse(timeinterval_other)">collapse(TimeInterval other)</a></h2>
+<p>Collapse this one with another using intersection.</p>
+<p>
+</p>
+<h2><a name="coalesce(timeinterval_other)">coalesce(TimeInterval other)</a></h2>
+<p>Coalesce this one with another.</p>
+<p>
+</p>
+<h2><a name="slice(timeintveral_other)">slice(TimeIntveral other)</a></h2>
+<p>Slice this one using another.</p>
+<p>
+</p>
+<h2><a name="presentation()"><code>presentation()</code></a></h2>
+<p>Present this string value.</p>
+<p>
+</p>
+<h2><a name="evaluate(state_state)">evaluate(State state)</a></h2>
+<p>Self evaluating</p>
+
+</body>
+
+</html>

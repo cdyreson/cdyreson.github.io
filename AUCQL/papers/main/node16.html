@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Coalesce </TITLE>
+<META NAME="description" CONTENT="Coalesce ">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html208"
+ HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html206"
+ HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html202"
+ HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html209"
+ HREF="node17.html">Updates</A>
+<B> Up:</B> <A NAME="tex2html207"
+ HREF="node13.html">Additional Query Operators</A>
+<B> Previous:</B> <A NAME="tex2html203"
+ HREF="node15.html">Collapse</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00033300000000000000">&#160;</A>
+<A NAME="sec:edgeCoalesce">&#160;</A>
+<BR>
+<I>Coalesce</I> 
+</H3>
+
+<P>
+Several (virtual) edges may connect a pair of nodes.  For example, two
+edges connect the pair of nodes in Figure&nbsp;<A HREF="node16.html#fig:evolution">4</A>.  The
+first edge was added when the review began to be developed on
+15/Mar/1998.  The security was set to restrict the edge to page
+developers.  By 25/May/1998, the edge was publicly released as part of
+the June issue and so the security was weakened to include paid
+subscribers.
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig:evolution">&#160;</A><A NAME="846">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 4:</STRONG>
+Evolving Information About a Review</CAPTION>
+<TR><TD>
+<!-- MATH: $\scalebox{.68}{\includegraphics{idraw/j.ps}}$ -->
+<IMG
+ WIDTH="371" HEIGHT="186" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.gif"
+ ALT="\scalebox{.68}{\includegraphics{idraw/j.ps}}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+When several edges connect a pair of nodes, information about a single
+property may be distributed among multiple labels.  In order to
+determine the full extent of a property that (conceptually) pertains
+to a relationship between a pair of nodes, regardless of whether
+information about that property is distributed among a number of
+edges, it is advantageous to <EM>coalesce</EM> the property from the
+set of edges.
+
+<P>
+[
+<!-- MATH: ${\it Coalesce\/}\xspace_{\Gamma}:
+{\it NAME\/} \times2^{\it EDGES\/} \rightarrow {\it VALUE\/}$ -->
+<IMG
+ WIDTH="289" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="${\it Coalesce\/}\xspace_{\Gamma}:
+{\it NAME\/} \times2^{\it EDGES\/} \rightarrow {\it VALUE\/}$">]
+
+<P>
+Assume that a set of edges, <I>F</I>, connects the same pair of nodes.
+<I>F</I> is coalesced for a <EM>single</EM> property, <I>p</I>, as follows. 
+<PRE><TT>
+		<IMG
+ WIDTH="183" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="${\it Coalesce\/}\xspace_{\Gamma}(p, F) \stackrel{\scriptstyle \triangle}{=}{\it PrCs\/}\xspace_p($">
+<BR>				<IMG
+ WIDTH="347" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$\{ x~\vert~((p{\rm :}~x) \in {\cal L}~\lor~(p{\rm !}~x) \in {\cal L}~\land~v~{\mathop{\longrightarrow}\limits^{\cal L}}~w \in F\})\}~\cup$">
+<BR>				<IMG
+ WIDTH="281" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\{ {\it undefined}~\vert~((p{\rm :}~x) \not\in {\cal L}~\land~(p{\rm !}~x) \not\in {\cal L})~\land~$">
+<BR>						<IMG
+ WIDTH="103" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$v~{\mathop{\longrightarrow}\limits^{\cal L}}~w \in F\})$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE> 
+<P></P>
+
+<P>
+The 
+<!-- MATH: ${\it PrCs\/}\xspace_p$ -->
+<IMG
+ WIDTH="47" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="${\it PrCs\/}\xspace_p$">
+operation is a property-specific constructor.
+Unlike the collapsing constructor, the coalescing constructor
+does not have to be a restrictor or mutator.  Also, the result is not
+a label, but a single, coalesced value.
+
+<P>
+following strategy can be used to determine the <B>transaction
+  time</B> for the review of <EM>Star Wars IV</EM> by <EM>Videotastic</EM>,
+irrespective of the <B>security</B>, <B>valid time</B>, etc.  First,
+find all the paths from a root to the review.  Note that this requires
+a certain level of <B>security</B>.  Second, collapse each path into a
+virtual edge.  Finally, coalesce the <B>transaction time</B>s of the
+virtual edges.
+<PRE><TT>
+		 <IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="${\cal L}_{\it movie\/}$">
+:=&nbsp;     {(<B>name!</B> movie), (<B>security:</B> developer)}
+<BR>		 <IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.gif"
+ ALT="${\cal L}_{\it review\/}$">
+:=&nbsp;     {(<B>name!</B> review), (<B>security:</B> developer)}
+<BR>		 <IMG
+ WIDTH="370" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.gif"
+ ALT="$E :=~ {\it Collapse\/}\xspace_{\Gamma}({\it Match\/}\xspace_{\it DB\/}({\it ROOTS\/},~ {\cal L}_{\it movie\/}.{\cal L}_{\it review\/} ))$">
+<BR>		 <IMG
+ WIDTH="182" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="${\it Coalesce\/}\xspace_{\Gamma}(\mbox{\bf trans. time},~E)$">
+</TT></PRE>The result is 
+{(<TT>&amp;root</TT>, (<B>trans. time:</B> [15/Mar/1998 - uc]), 
+   <TT>&amp;by Videotastic</TT>)}.
+The coalesced transaction time property, [15/Mar/1998 - uc], is the 
+union of the two transaction time intervals 
+in Figure&nbsp;<A HREF="node16.html#fig:evolution">4</A>.  
+<!-- MATH: $\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt
+     \hrule width5pt height2.5pt}}}$ -->
+<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+<P></P>
+
+<P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html208"
+ HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html206"
+ HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html202"
+ HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html209"
+ HREF="node17.html">Updates</A>
+<B> Up:</B> <A NAME="tex2html207"
+ HREF="node13.html">Additional Query Operators</A>
+<B> Previous:</B> <A NAME="tex2html203"
+ HREF="node15.html">Collapse</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

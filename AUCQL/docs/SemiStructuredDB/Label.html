@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./SemiStructuredDB/Label.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_label">NAME Label</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(list_of_regions_r)">new(List of Regions r)</a></li>
+		<li><a href="#tostring()"><code>toString()</code></a></li>
+		<li><a href="#image()"><code>image()</code></a></li>
+		<li><a href="#regions()"><code>regions()</code></a></li>
+		<li><a href="#insert(region_r)">insert(Region r)</a></li>
+		<li><a href="#dimensionextract(string_dimension)">dimensionExtract(string dimension)</a></li>
+		<li><a href="#slice(region_s)">slice(Region S)</a></li>
+		<li><a href="#collapse(label_other)">collapse(Label other)</a></li>
+		<li><a href="#match(region_r)">match(Region r)</a></li>
+		<li><a href="#coalesce(string_propertyname)">coalesce(String propertyName)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_label">NAME Label</a></h1>
+<p>Class encapsulating an Edge Label in a SemiStructured Database</p>
+<p>This package is part of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB.html">the SemiStructuredDB manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A Label is a list of property space regions (see <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a>).
+The label supports matching, slicing, coalescing, and collapsing
+operations.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(list_of_regions_r)">new(List of Regions r)</a></h2>
+<ul>
+<li><strong><a name="item_regionlist_r">RegionList r</a></strong><br />
+</li>
+- The list of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a>s
+<p></p></ul>
+<p>A Label is a list of property space <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a>s.
+This creates a Label from a list of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a>s.</p>
+<p>
+</p>
+<h2><a name="tostring()"><code>toString()</code></a></h2>
+<p>Returns a string image of an Label.</p>
+<p>
+</p>
+<h2><a name="image()"><code>image()</code></a></h2>
+<p>Return a string image of the Label.</p>
+<p>
+</p>
+<h2><a name="regions()"><code>regions()</code></a></h2>
+<p>Return a reference to the list of regions in a Label.</p>
+<p>
+</p>
+<h2><a name="insert(region_r)">insert(Region r)</a></h2>
+<ul>
+<li><strong>RegionList r</strong><br />
+</li>
+- The list of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a>s
+<p></p></ul>
+<p>Insert a region into the list.</p>
+<p>
+</p>
+<h2><a name="dimensionextract(string_dimension)">dimensionExtract(string dimension)</a></h2>
+<ul>
+<li><strong><a name="item_string_dimension">string dimension</a></strong><br />
+</li>
+- The name of the dimension to extract
+<p></p></ul>
+<p>Extracts the dimension value from each region in the list 
+building a new list.</p>
+<p>
+</p>
+<h2><a name="slice(region_s)">slice(Region S)</a></h2>
+<ul>
+<li><strong><a name="item_region_s">Region S</a></strong><br />
+</li>
+- The region to slice with.
+<p></p></ul>
+<p>Slices a portion from each region in the label, creating a new label.</p>
+<p>
+</p>
+<h2><a name="collapse(label_other)">collapse(Label other)</a></h2>
+<ul>
+<li><strong><a name="item_label_other">Label other</a></strong><br />
+</li>
+- The label to collapse with.
+<p></p></ul>
+<p>Collapses this label with another, creating a new label.
+The collapsing is the pairwise collapsing of each region in
+each label.  Typically, this will be one region in, one region out.</p>
+<p>This function will fail (return value of undef) if there is
+no collapsed label (the resulting label has some empty property in 
+all Regions).</p>
+<p>
+</p>
+<h2><a name="match(region_r)">match(Region r)</a></h2>
+<ul>
+<li><strong><a name="item_region_r">Region r</a></strong><br />
+</li>
+- The region to match against.
+<p></p></ul>
+<p>Matches a region to every region in this label, returns a new Label
+that contains all the matching regions, or 0 (false) if no region
+matches.</p>
+<p>
+</p>
+<h2><a name="coalesce(string_propertyname)">coalesce(String propertyName)</a></h2>
+<ul>
+<li><strong><a name="item_string_propertyname">String propertyName</a></strong><br />
+</li>
+- The propertyName to coalesce on.
+<p></p></ul>
+<p>Coalesce all the Regions in this Label on the indicated property.</p>
+
+</body>
+
+</html>

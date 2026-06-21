@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./ExpressionTree/RegExp/KleeneClosure.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_expressiontree::regexp::kleeneclosure">NAME ExpressionTree::RegExp::KleeneClosure</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(region_token)">new(Region token)</a></li>
+		<li><a href="#resulttype()"><code>resultType()</code></a></li>
+		<li><a href="#dump($indent)"><code>dump($indent)</code></a></li>
+		<li><a href="#evaluate(labelledgraph_graph,_path_path)">evaluate(LabelledGraph graph, Path path)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_expressiontree::regexp::kleeneclosure">NAME ExpressionTree::RegExp::KleeneClosure</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This class represents the KleeneClosure (zero to infinity) matching
+of a single regular expression.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(region_token)">new(Region token)</a></h2>
+<ul>
+<li><strong><a name="item_token">token</a></strong><br />
+</li>
+- The <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Region.html">the Region manpage</a> to match.
+<p></p></ul>
+<p>Create a new KleeneClosure operation.</p>
+<p>
+</p>
+<h2><a name="resulttype()"><code>resultType()</code></a></h2>
+<p>Return the type of result.</p>
+<p>
+</p>
+<h2><a name="dump($indent)"><code>dump($indent)</code></a></h2>
+<p>Dump this node.</p>
+<p>
+</p>
+<h2><a name="evaluate(labelledgraph_graph,_path_path)">evaluate(LabelledGraph graph, Path path)</a></h2>
+<ul>
+<li><strong><a name="item_graph">graph</a></strong><br />
+</li>
+- A <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/LabelledGraph.html">the SemiStructuredDB::LabelledGraph manpage</a> that stores the semistructure.
+<p></p>
+<li><strong><a name="item_path">path</a></strong><br />
+</li>
+- A <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Path.html">the SemiStructuredDB::Path manpage</a>, the path to this point in the graph.
+<p></p></ul>
+<p>Compare the token against all the edges out of this node.</p>
+
+</body>
+
+</html>

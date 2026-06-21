@@ -1,0 +1,40 @@
+BIN = ~cdyreson/bin/perl
+WEBDIR = webpages
+FINALWEBDIR = finalwebpages
+CGIDIR = /net/zeus/facstaff/cdyreson/public_html/cgi-bin/perl/upload
+
+all: top subdirectories
+top: index.htm Authors.htm COI.htm Charter.htm Editors.htm Referees.htm Subscription.htm Upcoming.htm SubmitByCoRR.htm starter.pl TurnaroundTime.htm reviewerguidelines.htm
+
+final: index.fin Authors.fin COI.fin Charter.fin Editors.fin Referees.fin Subscription.fin Upcoming.fin SubmitByCorr.fin
+
+subdirectories:
+	cd editors; make index.htm
+
+%.pl:
+	$(BIN)/htmlifyer -nop $* >$(CGIDIR)/$*.pl
+	perl -w postprocess.pl -directory $(CGIDIR) -fontcolor FFFFFF -color 4444FF -page $*.pl
+	chmod u+x $(CGIDIR)/$*.pl
+
+%.fin:
+	$(BIN)/htmlifyer $* >$(FINALWEBDIR)/$*.html
+	#tidy -f /tmp/tidyerror.txt -wrap 0 -indent -quiet -m $(FINALWEBDIR)/$*.html
+	perl -w postprocess.pl -directory $(FINALWEBDIR) -fontcolor FFFFFF -color 4444FF -page $*.html
+	chmod -R a+r $(FINALWEBDIR)/$*.html
+
+%.htm:
+	$(BIN)/htmlifyer $* >$(WEBDIR)/$*.html
+	#tidy -f /tmp/tidyerror.txt -wrap 0 -indent -quiet -m $(WEBDIR)/$*.html
+	perl -w postprocess.pl -directory $(WEBDIR) -fontcolor FFFFFF -color 4444FF -page $*.html
+	chmod -R a+r $(WEBDIR)/$*.html
+
+%.graphics:
+	$(BIN)/htmlifyer -graphics $* >$(WEBDIR)/$*.html
+	chmod -R a+r $(WEBDIR)/$*.html
+	chmod a+r $(WEBDIR)/images/*
+
+%.clean:
+	rm -rf $(LESSONSDIR)/$*.dbs $(WEBDIR)/$*.html
+
+clean: 
+	rm -f idraw/*.ppm idraw/*.tmp *.log *.dvi *.ps *.aux

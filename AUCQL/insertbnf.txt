@@ -1,0 +1,71 @@
+#
+#  The grammar for insert
+#
+
+start: 
+  statementList
+;
+
+statementList:
+  #empty
+  |
+  statement statementList
+;
+
+statement:
+  'insert' insertStatement 'semi-colon'
+;   
+
+insertStatement:
+  'edge'  node 'comma' node properties
+;    
+
+properties:
+  # empty
+  | 
+  propertyList
+; 
+
+propertyList:
+  'left parenthesis' property propertyListContinues 'right parenthesis'
+;
+
+propertyListContinues:
+  # empty
+  | 
+  'comma' property propertyListContinues 
+;
+
+property:
+  'identifier' propertyContinues
+;
+
+propertyContinues:
+  requiredProperty
+  | 
+  optionalProperty
+;
+  
+requiredProperty:
+  'exclamation mark' literal
+;
+
+optionalProperty:
+  'colon' literal
+;
+
+node:
+  'object'
+  | 
+  literal 
+;
+
+literal:
+  'identifier'
+  | 
+  'timeInterval' 
+  | 
+  'integer' 
+  | 
+  'string'
+;

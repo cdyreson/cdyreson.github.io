@@ -1,0 +1,42 @@
+:include[macros]
+:arg1[
+<b>Approved June 2, 2001</b>
+
+The following policies were instituted to ensure uniform service to
+reviewers and to let others know of the guarantees we provide to reviewers.
+
+:uls
+:li A :journalAcronym[] Editor will always request permission from a referee before sending
+  a paper a paper for review. The paper's abstract and the deadline for the
+  review will accompany this request.
+
+:li :journalAcronym[] will allow a reasonable time for a review, at least two months for
+  an initial formal review.
+
+:li :journalAcronym[] will strive to not overload referees with :journalAcronym[] reviews. Specifically,
+  :journalAcronym[] will not expect referees to review more than one :journalAcronym[] paper in any
+  twelve-month period.
+
+:li :journalAcronym[] recognizes that reviewing is a service to the profession and
+  that reviewers have the right to decline a requested review.
+
+:li :journalAcronym[] employs single-blind reviewing. The identity of reviewers
+  will not be revealed to the authors or to the other reviewers.
+  The author-visible portion of reviews as well as the final
+  editorial decision will be provided to the contact author as well
+  as to the reviewers once an editorial decision has been
+  made. No one else will be shown the reviews. Reviewers retain
+  ownership of copyright for their reviews.
+:ule
+
+There are some provisos and exceptions for these policies.  Informal reviews
+and reviews of revised manuscripts can be quicker than two months.  Revised
+papers should be reviewed by the same referees, and this review will
+probably occur within the twelve months, but that will just extend the
+required interval before the next review. And referees are welcome to
+volunteer for more reviewing than the maximum of one formal review per year,
+if they wish.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Reviewer Rights Policy]

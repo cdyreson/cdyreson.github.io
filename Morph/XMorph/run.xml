@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="targets" default="all" basedir=".">
+    <target name="delete db" description="deletes the db">
+        <delete>
+            <fileset dir="db" includes="*.jdb"/>
+            <fileset dir="db" includes="*.lck"/>
+        </delete>
+    </target>
+    <target name="XMorph -p input.xml qwer" description="run XMorph on qwer">
+        <java classname="xmorph.edu.usu.main.XMorph">
+            <classpath>
+                <pathelement location="dist/XMorph.jar"/>
+                <pathelement location="antlrworks-1.2.3.jar"/>
+            </classpath>
+            <arg value="--parse"/>
+            <arg value="xml/input.xml" />
+            <arg value="queries/qwer"/>
+        </java>
+    </target>
+    <target name="XMorph -p foo.xml foo" description="run XMorph on foo">
+        <java classname="xmorph.edu.usu.main.XMorph">
+            <classpath>
+                <pathelement location="dist/XMorph.jar"/>
+                <pathelement location="antlrworks-1.2.3.jar"/>
+            </classpath>
+            <arg value="--parse"/>
+            <arg value="xml/foo.xml" />
+            <arg value="queries/foo"/>
+        </java>
+    </target>
+    <target name="XMorph -p asdf.xml asdf" description="run XMorph on asdf">
+        <java classname="xmorph.edu.usu.main.XMorph">
+            <classpath>
+                <pathelement location="dist/XMorph.jar"/>
+                <pathelement location="antlrworks-1.2.3.jar"/>
+            </classpath>
+            <arg value="-parse"/>
+            <arg value="xml/asdf.xml" />
+            <arg value="queries/asdf"/>
+        </java>
+    </target>
+    <target name="xmorph asdf" description="run author on asdf.xml">
+        <java classname="xmorph.edu.usu.grammar.Test">
+            <classpath>
+                <pathelement location="dist/XMorph.jar"/>
+                <pathelement location="antlrworks-1.2.3.jar"/>
+            </classpath>
+            <arg value="queries/asdf"/>
+            <arg value="db" />
+            <arg value="xml/asdf.xml" />
+        </java>
+    </target>
+    <target name="xmorph test" description="only run query">
+        <java classname="xmorph.edu.usu.grammar.Test">
+            <classpath>
+                <pathelement location="dist/XMorph.jar"/>
+                <pathelement location="antlrworks-1.2.3.jar"/>
+                <pathelement location="je-4.0.71.jar"/>
+            </classpath>
+            <arg value="queries/author"/>
+            <arg value="db" />
+            <arg value="xml/test.xml" />
+            <arg value="xml/asdf.xml" />
+        </java>
+    </target>
+</project>

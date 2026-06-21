@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube/Cubette/Cubette.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Cubette">NAME Cubette</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#query_cubetteSpec_queryUnitsA">query($cubetteSpec, $queryUnitsAbove, $queryMeasuresBelow)</A>
+		<LI><A HREF="#relaxQuery_cubetteSpec_queryU">relaxQuery($cubetteSpec, $queryUnitsAbove, $queryMeasuresBelow)</A>
+		<LI><A HREF="#sum_satisfyingCubette_query_">sum($satisfyingCubette, $query, $finerUnitGraphs, $unitToMeasureTables, $countTable)</A>
+		<LI><A HREF="#increment_cubette_log_finer">increment($cubette, $log, $finerUnitGraphs, $unitToMeasureTables, $countTable, $doneThisRound, $verbose)</A>
+		<LI><A HREF="#quickIncrement_countList_coun">quickIncrement($countList, $countTable)</A>
+	</UL>
+
+	<LI><A HREF="#PRIVATE_METHODS">PRIVATE METHODS</A>
+	<UL>
+
+		<LI><A HREF="#_innerCubettes_query_finerUni">_innerCubettes($query, $finerUnitGraphs, $unitToMeasureTables)</A>
+		<LI><A HREF="#_newCrossProduct_unitSets_mea">_newCrossProduct($unitSets, $measureList)</A>
+		<LI><A HREF="#_newInnerCrossProduct">_newInnerCrossProduct</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Cubette">NAME Cubette</A></H1>
+<P>
+The top-level interface to a complete sub-cube within the incomplete data
+cube.
+
+<P>
+This package is part of <A HREF="./IncompleteDataCube/Cubette.html">IncompleteDataCube::Cubette</A>. For more information on the cube see the &lt;a
+href=``IncompleteDataCube/Overview.html''&gt;Overview&lt;/a&gt;.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the &lt;a href=``IncompleteDataCube/License.html''&gt;license&lt;/a&gt; and
+&lt;a href=``IncompleteDataCube/License.html''&gt;version&lt;/a&gt;.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> Cubette is a complete sub-cube. This class
+advertises operations that are available on Cubettes.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="query_cubetteSpec_queryUnitsA">query($cubetteSpec, $queryUnitsAbove, $queryMeasuresBelow)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__cubetteSpec">$cubetteSpec</A></STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A> 
+that specifies the units and measures in the query.
+
+<LI><STRONG><A NAME="item__queryUnitsAbove">$queryUnitsAbove</A></STRONG>
+<P>
+- An array of <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>. Each <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A> is the set of units above the query's unit in the respective domain in the
+query.
+
+<LI><STRONG><A NAME="item__cubetteMeasuresBelow">$cubetteMeasuresBelow</A></STRONG>
+<P>
+- An array of <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>. Each <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A> is the set of measures below the query's measure in the respective domain
+in the query.
+
+</UL>
+<P>
+Determine if a query is satisfied by the specified Cubette. Return true if the query can be satisfied, false otherwise. For more on satisfaction, see the relevant papers (e.g., the 
+<FONT SIZE=-1>VLDB</FONT> paper).
+
+
+<P>
+History
+
+<UL>
+<LI><STRONG><A NAME="item_Nov">Nov 14, 1997</A></STRONG>
+<P>
+- Added count of unit and measure matching. It now returns the number of
+units and measures matched as a list.
+
+</UL>
+<P>
+<HR>
+<H2><A NAME="relaxQuery_cubetteSpec_queryU">relaxQuery($cubetteSpec, $queryUnitsAbove, $queryMeasuresBelow)</A></H2>
+<UL>
+<LI><STRONG>$cubetteSpec</STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A> that specifies the units and measures in the query.
+
+<LI><STRONG>$queryUnitsAbove</STRONG>
+<P>
+- An array of <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>. Each <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A> is the set of units above the query's unit in the respective domain in the
+query.
+
+<LI><STRONG>$cubetteMeasuresBelow</STRONG>
+<P>
+- An array of <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>. Each <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A> is the set of measures below the query's measure in the respective domain
+in the query.
+
+</UL>
+<P>
+Determine if a query can be relaxed to be satisfied by the specified Cubette. Return true if the query can be relaxed, false otherwise. For more on query relaxation or generalization, see the relevant papers (e.g., the 
+<FONT SIZE=-1>VLDB</FONT> paper).
+
+
+<P>
+<HR>
+<H2><A NAME="sum_satisfyingCubette_query_">sum($satisfyingCubette, $query, $finerUnitGraphs, $unitToMeasureTables, $countTable)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__satisfyingCubette">$satisfyingCubette</A></STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A> of the cubette that we know satisfies a query.
+
+<LI><STRONG><A NAME="item__query">$query</A></STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A> of the query.
+
+<LI><STRONG><A NAME="item__finerUnitGraphs">$finerUnitGraphs</A></STRONG>
+<P>
+- An array of persistent <A HREF="./Persistent/Graph.html">Persistent::Graph</A>s. Each finer unit graph is a graph of which sub-units that are within a
+given unit (edges go from coarser to finer units).
+
+<LI><STRONG><A NAME="item__unitToMeasureTables">$unitToMeasureTables</A></STRONG>
+<P>
+- An array of database <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>s. Each unit to measure table maps a unit to the corresponding measure.
+
+<LI><STRONG><A NAME="item__countTable">$countTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The count for each cubette.
+
+</UL>
+<P>
+Compute a sum aggregate for the answer. Only call this after you have
+assured that the cubette is satisfying! For now we will assume a strict
+hierarchy.
+
+<P>
+<HR>
+<H2><A NAME="increment_cubette_log_finer">increment($cubette, $log, $finerUnitGraphs, $unitToMeasureTables, $countTable, $doneThisRound, $verbose)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__cubette">$cubette</A></STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A> 
+of the cubette to increment.
+
+<LI><STRONG><A NAME="item__log">$log</A></STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A> of the log file?
+
+<LI><STRONG><A NAME="item__filterUnitTable">$filterUnitTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The units for each filter.
+
+<LI><STRONG><A NAME="item__filterMeasureTable">$filterMeasureTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The measures for each filter.
+
+<LI><STRONG>$countTable</STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The count for each cubette.
+
+<LI><STRONG><A NAME="item__doneThisRound">$doneThisRound</A></STRONG>
+<P>
+- An <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>. 
+<FONT SIZE=-1>A</FONT> set of filters that have been counted.
+
+<LI><STRONG><A NAME="item__verbose">$verbose</A></STRONG>
+<P>
+- Turn on if verbose reporting wanted.
+
+</UL>
+<P>
+Increment the count associated with this filter.
+
+<P>
+<HR>
+<H2><A NAME="quickIncrement_countList_coun">quickIncrement($countList, $countTable)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__countList">$countList</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A> of the units to increment the count of.
+
+<LI><STRONG>$countTable</STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The count for each cubette.
+
+</UL>
+<P>
+Quickly increment the count for a particular multidimensonal unit.
+
+<P>
+<HR>
+<H1><A NAME="PRIVATE_METHODS">PRIVATE METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="_innerCubettes_query_finerUni">_innerCubettes($query, $finerUnitGraphs, $unitToMeasureTables)</A></H2>
+<UL>
+<LI><STRONG>$query</STRONG>
+<P>
+- An <A HREF="./IncompleteDataCube/Cubette/CubetteSpecification.html">IncompleteDataCube::Cubette::CubetteSpecification</A>.
+
+<LI><STRONG>$finerUnitGraphs</STRONG>
+<P>
+- An array of <A HREF="./Persistent/Graph.html">Persistent::Graph</A>s. Each finer unit graph is a graph of which sub-units that are within a
+given unit (edges go from coarser to finer units).
+
+<LI><STRONG>$unitToMeasureTables</STRONG>
+<P>
+- An array of database <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>s. Each unit to measure table maps a unit to the corresponding measure.
+
+</UL>
+<P>
+Compute the query units Only call this after you have assured that the
+cubette is satisfying! For now we will assume a strict hierarchy.
+
+<P>
+<HR>
+<H2><A NAME="_newCrossProduct_unitSets_mea">_newCrossProduct($unitSets, $measureList)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__unitSets">$unitSets</A></STRONG>
+<P>
+- An array of <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>s.  
+
+<LI><STRONG><A NAME="item__measureList">$measureList</A></STRONG>
+<P>
+- An array of <A HREF="./DBMDatabase/IdSet.html">DBMDatabase::IdSet</A>s.  
+
+</UL>
+<P>
+Determine the cross product in terms of which cubettes, of a set of units
+and a list of measures (so all the units at a particular measure).
+
+<P>
+<HR>
+<H2><A NAME="_newInnerCrossProduct">_newInnerCrossProduct</A></H2>
+<P>
+
+<FONT SIZE=-1>A</FONT> helper function for _newCrossProduct.
+
+</BODY>
+
+</HTML>

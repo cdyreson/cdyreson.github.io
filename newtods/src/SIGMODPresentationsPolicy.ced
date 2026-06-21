@@ -1,0 +1,19 @@
+:include[macros]
+:arg1[
+ 
+<b>Approved April 27, 2015</b>
+<h2>ACM TODS Paper Presentations at ACM SIGMOD Conferences</h2>
+ 
+The leadership at SIGMOD and TODS agree to offer authors of certain TODS papers the opportunity to present their paper at the next SIGMOD conference.
+ 
+The eligible papers include original research papers that (1) are not extensions of conference papers, that (2) were accepted or published approximately within the year preceding the particular SIGMOD conference, and (3) that were not already offered this opportunity at the previous conference. Focused surveys, critiques, corrections, and similar type papers are not eligible.
+ 
+The presentation is in the form of a poster.
+ 
+The authors of eligible papers are invited by TODS.
+
+The agreement takes effect starting with SIGMOD 2015. It can be discontinued by either party with a 1-year notice, and it can be modified by mutual agreement.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Presentations at SIGMOD]

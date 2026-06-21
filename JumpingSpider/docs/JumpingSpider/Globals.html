@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>./JumpingSpider/Globals.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_JumpingSpider_Globals">NAME JumpingSpider::Globals</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_">new()</A>
+		<LI><A HREF="#close_">close()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_JumpingSpider_Globals">NAME JumpingSpider::Globals</A></H1>
+<P>
+The global variables in the 
+<FONT SIZE=-1>MWW,</FONT> maintained in a global object. See also <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/JumpingSpider/Constants.html">JumpingSpider::Constants</A>.
+
+<P>
+For more information on the 
+<FONT SIZE=-1>MWW</FONT> see the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/JumpingSpider/Overview.html">JumpingSpider::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/JumpingSpider/Licence.html">JumpingSpider::Licence</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/JumpingSpider/Version.html">JumpingSpider::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Below is the list of instance variables in the global object.
+
+<UL>
+<LI><STRONG><A NAME="item_sideGraph">sideGraph</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/Persistent/Graph.html">Persistent::Graph</A>. The sideGraph is the graph of side edges in the 
+<FONT SIZE=-1>MWW.</FONT>
+
+<LI><STRONG><A NAME="item_downGraph">downGraph</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/Persistent/Graph.html">Persistent::Graph</A>. The downGraph is the graph of down edges in the 
+<FONT SIZE=-1>MWW.</FONT>
+
+<LI><STRONG><A NAME="item_WWWreachableGraph">WWWreachableGraph</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/Persistent/Graph.html">Persistent::Graph</A>. The WWWReachableGraph is the computed reachable graph for the 
+<FONT SIZE=-1>MWW.</FONT>
+
+<LI><STRONG><A NAME="item_indexTable">indexTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>. The index table is the mapping from content descriptions to Ids.
+
+<LI><STRONG><A NAME="item_titleTable">titleTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>. The title table is the mapping from Ids to title strings.
+
+<LI><STRONG><A NAME="item_ids">ids</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>. 
+<FONT SIZE=-1>A</FONT> table that maps Ids to strings.
+
+<LI><STRONG><A NAME="item_strings">strings</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>. 
+<FONT SIZE=-1>A</FONT> table that maps strings to Ids.
+
+</UL>
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_">new()</A></H2>
+<P>
+Allocate and intialize the global vars.
+
+<P>
+<HR>
+<H2><A NAME="close_">close()</A></H2>
+<P>
+Close and write all the persistent variables are written to disk. This should be called prior to exiting the 
+<FONT SIZE=-1>MWW</FONT> (when creating it), but even if it not called, in theory, all the persistent variables should be maintained since Perl will clean them up nicely for us by doing the appropriate unties.
+
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Write all the persistent variables are written to disk.  
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,257 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, March 2007</em>)
+
+As announced in an 
+<a href="http://doi.acm.org/10.1145/1168092.1168094">editorial</a>, 
+ACM <i>Transactions on Database Systems</i> has adopted
+double-blind reviewing, in which the identities of the
+author and the reviewer are not known to each other. That editorial provided
+a comprehensive analysis of the costs of double-blind reviewing (DBR) and a
+detailed examination of the decision.
+
+The present document is an
+easy-to-read summary. For those readers who prefer TLAs (three-letter
+acronyms), the title may be restated as a "DBR FAQ."
+
+<h2><i>TODS</i> Policy</h2>
+The following is now <i>TODS</i> policy.
+<ul>
+<li><i>TODS</i> reaffirms the general ACM policy that "the quality of a refereed
+  publication rests primarily on the impartial judgment of their volunteer
+  reviewers."
+</li>
+<li>
+<i>TODS</i> will continue to strive to ensure fairness in reviewing, even if
+  that involves more work for the <i>TODS</i> editorial board.
+</li>
+<li>
+Scientific studies have demonstrated opportunities for bias inherent in
+  single-blind reviewing.
+</li>
+<li>
+It is <i>TODS</i> policy that every submission should be judged on its own
+merits. The identity and affiliation of the authors should not influence,
+  either positively or negatively, the evaluation of submissions to <i>TODS</i>.
+</li>
+<li>
+In consideration of the above, <i>TODS</i> will utilize double-blind reviewing.
+</li>
+<li>
+<i>TODS</i> will continue to strive to make the submission process for
+  authors as simple as possible.
+</li>
+<li>
+<i>TODS</i> will continue to strive to effect a comprehensive review of each
+submission.
+</li>
+</ul>
+
+This policy is not dependent on absolute or even relative blinding
+efficacy. The central and unambiguous message is that every submission
+should be judged solely on its own merits. This message applies even when
+reviewers know exactly who the authors are.
+The other important message is that <i>TODS</i> so values fairness that it is
+willing to undertake additional effort by AEs to make the process
+more fair.
+
+<h2>Frequently-Asked Questions by Authors</h2>
+During the long gestation of this policy, several questions and concerns
+were raised. The guidelines provided on the 
+<a href="http://www.acm.org/tods"><i>TODS</i> web page</a>
+were designed to address these concerns.
+
+Here, we provide responses to these questions to explain the policy,
+starting with questions from authors and then turning to questions from
+reviewers.
+
+<ul>
+<li><i>Why double-blind reviewing?</i>
+
+Double-blind reviewing has been shown through 
+<a href="http://doi.acm.org/10.1145/1168092.1168094">numerous scientific studies to
+be more fair</a>. <i>TODS</i> goes to great lengths to ensure fairness in the review
+process. DBR is just one component of this.
+
+</li>
+<li><i>What must I as an author do to blind my manuscript?</i>
+
+Authors need only apply six simple steps to blind their submission.
+<ol>
+<li>Anonymize the title page.
+</li>
+<li>Remove mention of funding sources and personal acknowledgments.
+</li>
+<li>Anonymize references found in running prose that cite your papers.
+</li>
+<li>Anonymize citations of submitted work in the bibliography.
+</li>
+<li>Ambiguate statements on well-known or unique systems that identify an author.
+</li>
+<li>Name your files with care and ensure document properties are also anonymized.
+</li>
+</ol>
+</li>
+
+Details may be found in the author guidelines, included in the
+<a href="http://doi.acm.org/10.1145/1168092.1168094">editorial</a> 
+and on the <i>TODS</i> web site.
+
+</li>
+<li><i>Can I submit an extension of a published conference paper?</i>
+
+Yes, certainly. <i>TODS</i> continues to encourage such submissions, subject to
+the existing novelty and disclosure requirements listed in the author
+instructions on the <i>TODS</i> web site. In summary, the paper must have 30%
+new material, must explicitly describe the differences between the
+submission and the paper(s) it was extended from, and reference those papers, 
+as anonymous citations.
+
+</li>
+<li><i>Can I distribute a technical report version of my manuscript prior
+to submission?</i>
+
+Yes, you can. There are no restrictions on the dissemination of drafts or
+technical reports prior to or after submission.
+
+</li>
+<li><i>What about papers that are descriptions of software artifacts or
+describe well-known projects?</i>
+
+Such papers continue to be encouraged. The anonymizing steps listed above
+have been designed to allow such papers to be submitted.
+
+</li>
+<li><i>Will consideration of DBR adversely affect the quality of my
+prose?</i>
+
+The paper should be first written with no concern for DBR. Then, right
+before the paper is submitted, it can be blinded by following those six
+steps, which will generally affect only a few sentences of your manuscript.
+
+</li>
+<li><i> Won't reviewers be able to guess my identity anyway?</i>
+
+Blinding efficacy (the percentage of papers for which blinding was
+successful, that is, that a reviewer could not determine the identity of an
+author) varies greatly, depending on a mix of factors.  Certainly if the
+submission is an extension of a paper published in a prevalent conference,
+blinding efficacy may be considerably reduced. Note however that in the
+worst case, the process merely devolves back to single-blind reviewing,
+which has been the practice for many years. And even in that case, the
+blinded cover page still emphasizes to the reviewer that the identity of the
+author should not be taken into account.
+
+Hence, when the identity is not known or is uncertain, DBR affords the
+benefit of increased fairness. When the identity is known, we're back to
+the previous process, with the added reminder to the reviewer.
+
+The reviewing process in place at <i>TODS</i> explicitly favors comprehensiveness
+of the review over blinding efficacy, via a set of stated principles.
+
+</li>
+<li><i>I'm a prolific author. Why shouldn't the reviewer know my
+identity? Won't DBR penalize me?</i>
+
+This in my view is a source of much of the concern about DBR.
+
+There is a prevalent feeling among prolific authors that their name on a
+submitted manuscript increases the chance of that paper being accepted. The
+scientific evidence does not support that view. A review of the scientific
+studies concludes that "These contradictory results
+render it impossible to say anything definitive about the 
+<a href="http://doi.acm.org/10.1145/1168092.1168094">impact of blinding on prolific authors</a>."
+
+So where did this perception come from?  My guess is that prolific authors
+are more likely to write high quality papers (there <i>is</i> scientific
+evidence to support this); it is then the higher quality of their average
+submission rather than the identity of the author that increases the
+acceptance rate.
+
+If you are a prolific author (or even if you are not), you should have
+nothing to fear from DBR, because such a process focuses the reviewer on the
+quality of your submission.
+
+</li>
+<li><i>Can I cite my own work?</i>
+
+Yes, you should retain these citations. Steps 3 through 4 require such
+citations to be anonymized, again, following the guidelines on the <i>TODS</i>
+web site.
+
+</li>
+<li><i>Will a reviewer finding out my identity cause my paper to be
+rejected?</i>
+
+No. If you follow the six stated steps your manuscript will meet the anonymity
+requirements for submission.
+
+</li>
+<li><i>Does DBR affect anything else?</i>
+
+Yes: you need to include in your cover letter details on any
+anonymous citations and lists conflicts of interest. See the
+<a href="http://doi.acm.org/10.1145/1168092.1168094">editorial</a> 
+or the <a href="http://www.acm.org/tods"><i>TODS</i> web site</a>
+for details.
+
+The entire process of blinding your manuscript and preparing the cover
+letter should take only an hour or two.
+</li>
+</ul>
+
+<h2>Frequently-Asked Questions by Reviewers</h2>
+<ul>
+<li><i>What if I as a reviewer discover the identity of an author?</i>
+
+If you as a reviewer accidentally discover the identity of an author, just
+continue the review. (Of course, you should not strive to unmask the paper.)
+
+It is <i>TODS</i> policy that every submission should be judged on its own
+merits. Your task is to review the <i>submission</i>, not the <i>author</i>.
+
+</li>
+<li><i>What if I know an author personally?</i>
+
+In that case, you should check the conflict of interest rules in the
+<a href="http://doi.acm.org/10.1145/1168092.1168094">editorial</a> 
+or the <a href="http://www.acm.org/tods"><i>TODS</i> web site</a>; 
+these rules are
+identical to those for the US National Science Foundation. If you have any
+concerns, please contact the Associate Editor handling this submission.
+
+</li>
+<li><i>How can I check previous work?</i>
+
+If this work is included as an anonymous citation in the submitted
+manuscript and you need to check it,
+just contact the Associate Editor and request the full
+citation. Additionally, you are permitted to search the web and other
+sources if you feel that there is related work that has not been cited.
+
+</li>
+</ul>
+
+<h2>Summary</h2>
+Over the past few years, <i>TODS</i> has adopted many innovative policies: a call
+for short papers and directed surveys, a limit of one review per year per
+reviewer, a guaranteed turn-around time of
+five months, full implementation of the ACM Rights and Responsibilities
+policy, and reviewing statistics published on its web site. Most of these
+innovations were at the time unique to <i>TODS</i>; some other journals are now
+following up.
+
+These policies were somewhat controversial when first considered. What if
+the reviewer pool dried up given this promised limit? What if reviewers
+weren't responsive, causing the Editorial Board to violate its five-month
+guarantee? Over time, the community responded and everything worked out.
+
+These past policies were enacted to increase fairness and
+quality. The double-blind policy furthers both of these objectives. The
+expectation is that over time the database community will become accustomed
+to the process and benefits of double-blind reviewing, as has occurred in
+other scientific communities.
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[Frequently-Asked Questions About Double-Blind Reviewing}\\[2ex]]

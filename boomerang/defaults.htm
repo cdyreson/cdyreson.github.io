@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <title>
+      Using AUCQL's Syntactic Sugar
+    </title>
+  </head>
+  <body>
+    <table summary="table" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#E0F0F1" align="left" valign="top">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td>
+                <img src="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/images/logo.gif" alt="Boomerang logo" width="90" height="68" border="2"> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td align="left" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td bgcolor="#E0F0F1">
+                <big>Using AUCQL's Syntactic Sugar</big> <br>
+                 <font color="#800000" size="2">A Dynamic Page-Reconfiguration System</font> 
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellpadding="2" cellspacing="2">
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/index.htm">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/talk.htm">Talk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                Curtis Dyreson
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/">Home</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/publications.htm">Publications</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/projects.htm">Projects</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/code.htm">Software</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/demos.htm">Demos</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/teaching.htm">Teaching</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/contact.htm">Contact me</a> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+        </td>
+        <td valign="top">
+          <br>
+           AUCQL has several useful syntactic shortcuts that can be utilized to significantly reduce verbose queries. In this section, we first give a simple query and then show how to use AUCQL's defaults to significantly shorten the query. 
+          <p>
+            <a name="section01"></a>
+          </p>
+          <h3>
+            A verbose query
+          </h3>
+          First, let's look at a very verbose query. Below is a query to find the names of movie stars. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are movie star names?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM   MATCH(ROOTS, (NAME! movie)) Movie,
+       MATCH(Movie, (NAME! stars).(NAME! name)) Name;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie, Name FROM MATCH(ROOTS, (NAME! movie)) Movie, MATCH(Movie, (NAME! stars).(NAME! name)) Name;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  The query result is duplicated below. 
+                  <blockquote>
+                    <table summary="table" border="1" cellpadding="9" cellspacing="0">
+                      <tr>
+                        <th valign="%">
+                          Movie
+                        </th>
+                        <th valign="%">
+                          Name
+                        </th>
+                      </tr>
+                      <tr>
+                        <td valign="%">
+                          &amp;Star_Wars_IV
+                        </td>
+                        <td valign="%">
+                          Bruce Willis
+                        </td>
+                      </tr>
+                    </table>
+                  </blockquote>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section02"></a>
+          </p>
+          <h3>
+            Default MATCHs
+          </h3>
+          A regular expression that appears alone in a FROM clause, by default, is assumed to be the regular expression in a MATCH(ROOTS, ...) operation. For instance, the query given above can be shortened by using the default MATCH operation as follows. (Note that the second MATCH cannot be removed since it is from Movie rather than ROOTS.) 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are movie star names?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM   (NAME! movie) Movie,
+       MATCH(Movie, (NAME! stars).(NAME! name)) Name;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie, Name FROM (NAME! movie) Movie, MATCH(Movie, (NAME! stars).(NAME! name)) Name;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section03"></a>
+          </p>
+          <h3>
+            Variables can start regular expressions
+          </h3>
+          Now let's remove that second MATCH! If a variable starts a regular expression, an implicit MATCH that extends the paths represented by the variable is assumed. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are movie star names?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM   (NAME! movie) Movie,
+       Movie.(NAME! stars).(NAME! name) Name;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie, Name FROM (NAME! movie) Movie, Movie.(NAME! stars).(NAME! name) Name;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section04"></a>
+          </p>
+          <h3>
+            Required NAME properties
+          </h3>
+          Since searching on required <b>NAMEs</b> will be common, property lists that are just a single word are assumed to be a required NAME property with that word. So the above query can be rewritten, more concisely, as follows. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are movie star names?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Name
+FROM movie Movie,
+     Movie.stars.name Name;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie, Name FROM movie Movie, Movie.stars.name Name;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          Note that the variable namespace is not distinct from the <b>NAME</b> property valuespace, which can be a potential source of confusion! 
+          <p>
+            <a name="section05"></a>
+          </p>
+          <h3>
+            An expression in a SELECT or WHERE clause
+          </h3>
+          An implicit variable assignment is generated for expressions that appear in the SELECT or WHERE clause. So the above query can be rewritten, more concisely, as follows. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are movie star names?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT Movie, Movie.stars.name
+FROM movie Movie;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT Movie, Movie.stars.name FROM movie Movie;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          The even shorter query 
+<pre>
+   SELECT movie, movie.stars.name;
+</pre>
+          is a perfectly legal query, but determines all the combinations of <tt>movies</tt> and <tt>movie.stars.names</tt> in the database, rather than associating a <tt>star.name</tt> with a particular <tt>movie</tt>. So it has a very different meaning than the previous queries. 
+          <p>
+            <a name="section06"></a>
+          </p>
+          <h3>
+            SETting DEFAULT PROPERTYs
+          </h3>
+          Often it is useful to establish default properties for all the descriptors in a query. Setting the <a href="security.htm">security</a> certificates owned by the user, or setting the <a href="transactionTime.htm">transaction time</a> to <i>now</i> are common defaults. Defaults can be set using the following syntax. 
+          <blockquote>
+            SET DEFAULT PROPERTY <i>property list</i>
+          </blockquote>
+          Below is a query to set the default transaction time. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are the current nodes?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (TRANSACTION_TIME: [now - now]);
+SELECT ()*;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SET DEFAULT PROPERTY (TRANSACTION_TIME: [now - now]); SELECT ()*;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            Another common default is to set all the security certificates available to the user. (Note, in general the certificate is an encrypted string.)
+          </p>
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>What are the nodes that I can access with my security certificates?</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SET DEFAULT PROPERTY (SECURITY: 'paid, subscriber, over 18');
+SELECT ()*;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SET DEFAULT PROPERTY (SECURITY: 'paid, subscriber, over 18'); SELECT ()*;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <br>
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          <hr noshade size="1">
+          <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson">Curtis E. Dyreson</a> and <a style="text-decoration:none" href="http://www.comp.mq.edu.au/~asloane">Anthony Sloane</a> &copy; 1995-2001. All rights reserved.
+        </td>
+      </tr>
+      <tr>
+        <td height="20" bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td colspan="2" bgcolor="#E0F0F1" align="right">
+          <small><i>E-mail questions or comments to <a href="mailto:cdyreson@eecs.wsu.edu">Curtis Dyreson</a></i></small> 
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

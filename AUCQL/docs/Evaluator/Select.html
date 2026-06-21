@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./Evaluator/Select.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_evaluator::select">NAME Evaluator::Select</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#evaluate(hashtable_codehash)">evaluate(HashTable codeHash)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_evaluator::select">NAME Evaluator::Select</a></h1>
+<p>This is the code for the query evaluation of the SELECT statement.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The SELECT statement evaluation proceeds by first determining a 
+tuple from the variable assignments in the From clause.
+Then the WHERE clause predicate is applied, and if the tuple
+passes, the SELECT clause attributes are projected.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="evaluate(hashtable_codehash)">evaluate(HashTable codeHash)</a></h2>
+<ul>
+<li><strong><a name="item_codehash">codeHash</a></strong><br />
+</li>
+- A hash table of the clauses.
+<p></p></ul>
+<p>Evaluate the select clause.</p>
+
+</body>
+
+</html>

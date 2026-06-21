@@ -1,0 +1,411 @@
+:include[macros]
+:arg1[
+    <table summary="Policies" cellspacing="1" border="0">
+      <tr><td>
+        <A 
+          HREF="ReviewerRightsPolicy.html"
+          onMouseOver="ReviewerRightsPolicy.src=backArrow.src"
+          onMouseOut="ReviewerRightsPolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Reviewer rights" 
+           name="ReviewerRightsPolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Reviewer rights
+        </font>
+        </A>
+</td><td> Approved June 2, 2001
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="ReviewFormPolicy.html"
+          onMouseOver="ReviewFormPolicy.src=backArrow.src"
+          onMouseOut="ReviewFormPolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Review form" 
+           name="ReviewFormPolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Review form 
+        </font>
+        </A>
+</td><td> Approved October 18, 2001
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="SurveyPapersPolicy.html"
+          onMouseOver="SurveyPapersPolicy.src=backArrow.src"
+          onMouseOut="SurveyPapersPolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Survey articles" 
+           name="SurveyPapersPolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Survey articles 
+        </font>
+        </A>
+</td><td> Approved October 19, 2001
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="ShortPapersPolicy.html"
+          onMouseOver="ShortPapersPolicy.src=backArrow.src"
+          onMouseOut="ShortPapersPolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Short papers" 
+           name="ShortPapersPolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Short papers
+        </font>
+        </A>
+</td><td> Approved December 19, 2001
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="30PercentRulePolicy.html"
+          onMouseOver="PercentRulePolicy.src=backArrow.src"
+          onMouseOut="PercentRulePolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="30 Percent Rule" 
+           name="PercentRulePolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           30% rule 
+        </font>
+        </A>
+</td><td> Approved July 23, 2002
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="PODSPolicy.html"
+          onMouseOver="PODS.src=backArrow.src"
+          onMouseOut="PODS.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="PODS" 
+           name="PODS"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Inviting PODS papers
+        </font>
+        </A>
+</td><td> Approved August 14, 2002; Amended October 22, 2003; Amended March 14, 2012
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="AECOIPolicy.html"
+          onMouseOver="AECOI.src=backArrow.src"
+          onMouseOut="AECOI.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Associate Editor COI" 
+           name="AECOI"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Papers (co-)authored by an associate editor
+        </font>
+        </A>
+</td><td> Approved September 23, 2002
+      </td></tr>
+      <tr><td>
+        <A
+          HREF="ICDTPolicy.html"
+          onMouseOver="ICDT.src=backArrow.src"
+          onMouseOut="ICDT.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="ICDT"
+           name="ICDT"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Inviting ICDT papers
+        </font>
+        </A>
+</td><td> Approved December 6, 2002; Amended May 15, 2012
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="TurnaroundTimePolicy.html"
+          onMouseOver="TurnaroundTime.src=backArrow.src"
+          onMouseOut="TurnaroundTime.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Turnaround Time" 
+           name="TurnaroundTime"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Turnaround time 
+        </font>
+        </A>
+</td><td> Approved April 14, 2003; Amended May 23, 2005
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="SelfPlagiarismPolicy.html"
+          onMouseOver="SelfPlagiarism.src=backArrow.src"
+          onMouseOut="SelfPlagiarism.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Self-Plagiarism" 
+           name="SelfPlagiarism"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Self-plagiarism
+        </font>
+        </A>
+</td><td> Approved April 14, 2003; Amended March 15, 2005; Amended April 20, 2005
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="CharterPolicy.html"
+          onMouseOver="CharterPolicy.src=backArrow.src"
+          onMouseOut="CharterPolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Charter Policy" 
+           name="CharterPolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Charter policy
+        </font>
+        </A>
+</td><td> Approved May 23, 2003
+      </td></tr>
+      <tr><td>
+        <A
+          HREF="SuccessorPapersPolicy.html"
+          onMouseOver="SuccessorPapers.src=backArrow.src"
+          onMouseOut="SuccessorPapers.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Successor Papers"
+           name="SuccessorPapers"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Successor papers
+        </font>
+        </A>
+</td><td> Approved June 2, 2003
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="AssociateEditorsPolicy.html"
+          onMouseOver="AssociateEditors.src=backArrow.src"
+          onMouseOut="AssociateEditors.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Associate Editors" 
+           name="AssociateEditors"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Selecting associate editors
+        </font>
+        </A>
+</td><td> Approved October 19, 2003; Amended September 24, 2004
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="PageLengthPolicy.html"
+          onMouseOver="PageLength.src=backArrow.src"
+          onMouseOut="PageLength.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Page length" 
+           name="PageLength"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Page length 
+        </font>
+        </A>
+</td><td> Adopted May 7, 2005; Amended August 3, 2006
+      </td></tr>
+      <tr><td>
+        <A
+          HREF="DoubleBlindPolicy.html"
+          onMouseOver="DoubleBlind.src=backArrow.src"
+          onMouseOut="DoubleBlind.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Double Blind"
+           name="DoubleBlind"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Double blind
+        </font>
+        </A>
+</td><td> Approved November 29, 2006
+      </td></tr>
+<tr><td>
+        <A
+          HREF="SIGMODPresentationsPolicy.html"
+          onMouseOver="SIGMODPresentations.src=backArrow.src"
+          onMouseOut="SIGMODPresentations.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="SIGMOD Presentations"
+           name="SIGMODPresentations"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Presentations at SIGMOD 
+        </font>
+        </A>
+</td><td> Approved April 27, 2015
+</td></tr>
+<tr><td>
+        <A
+          HREF="SIGMODInvitesPolicy.html"
+          onMouseOver="SIGMODInvites.src=backArrow.src"
+          onMouseOut="SIGMODInvites.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="SIGMOD Invites"
+           name="SIGMODInvites"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+Inviting SIGMOD Papers to <i>TODS</i>
+        </font>
+        </A>
+</td><td> Approved November 4, 2015
+</td></tr>
+<tr><td>
+        <A
+          HREF="EDBTInvitesPolicy.html"
+          onMouseOver="EDBTInvites.src=backArrow.src"
+          onMouseOut="EDBTInvites.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="EDBT Invites"
+           name="EDBTInvites"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+Inviting EDBT Papers to <i>TODS</i>
+        </font>
+        </A>
+</td><td> Approved November 17, 2015
+</td></tr>
+    </table>
+
+<h2>Obsolete Policies (of historical interest only)</h2>
+    <table summary="Policies" cellspacing="1" border="0">
+
+      <tr><td>
+        <A
+          HREF="ManuscriptSubmissionPolicy.html"
+          onMouseOver="ManuscriptSubmission.src=backArrow.src"
+          onMouseOut="ManuscriptSubmission.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Manuscript submission"
+           name="ManuscriptSubmission"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Manuscript submission
+        </font>
+        </A>
+</td><td> Adopted May 7, 2005, Dropped August 12, 2014 
+(current manuscript submission instructions can be found at 
+<a href="Authors.html#SubmissionforEditorialReview">here</a>).
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="SIGMODPolicy.html"
+          onMouseOver="SIGMODPolicy.src=backArrow.src"
+          onMouseOut="SIGMODPolicy.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGMOD" 
+           name="SIGMODPolicy"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Inviting SIGMOD papers
+        </font>
+        </A>
+</td><td> Approved August 14, 2002; Amended October 22, 2003; Amended May 15, 2012; Dropped November 4, 2015
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="EDBTPolicy.html"
+          onMouseOver="EDBT.src=backArrow.src"
+          onMouseOut="EDBT.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="EDBT" 
+           name="EDBT"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Inviting EDBT papers
+        </font>
+        </A>
+</td><td> Approved September 16, 2002; Amended May 15, 2012; Dropped November 17, 2015
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="InvitedPapersPolicy.html"
+          onMouseOver="InvitedPapers.src=backArrow.src"
+          onMouseOut="InvitedPapers.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Invited Papers" 
+           name="InvitedPapers"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Inviting conference papers
+        </font>
+        </A>
+</td><td> Approved October 5, 2004; Dropped November 4, 2015
+      </td></tr>
+    </table>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Editorial Policies]

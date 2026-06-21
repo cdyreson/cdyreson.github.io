@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<TITLE>./JumpingSpider/WWWGraph.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#PUBLIC_METHODS">PUBLIC METHODS</A>
+	<UL>
+
+		<LI><A HREF="#done_">done()</A>
+		<LI><A HREF="#init_">init()</A>
+		<LI><A HREF="#addEdge_string_fromURL_string_">addEdge(string $fromURL, string $toURL)</A>
+		<LI><A HREF="#createReachable_">createReachable()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+WWWGraph - 
+<FONT SIZE=-1>A</FONT> class encapsulating the 
+<FONT SIZE=-1>WWW</FONT> graph model
+
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class encapsulates the 
+<FONT SIZE=-1>WWW</FONT> graph. The 
+<FONT SIZE=-1>WWW</FONT> graph actually has several `helper' graphs that implement the cost model.
+
+
+<UL>
+<LI><STRONG><A NAME="item_DownGraph">DownGraph</A></STRONG>
+<P>
+- a graph for downward edges
+
+<LI><STRONG><A NAME="item_SideGraph">SideGraph</A></STRONG>
+<P>
+- a graph for side edges
+
+<LI><STRONG><A NAME="item_SideTargetsTable">SideTargetsTable</A></STRONG>
+<P>
+- a table of targets for side edges that come from outside
+
+<LI><STRONG><A NAME="item_ReachableTable">ReachableTable</A></STRONG>
+<P>
+- a reachability table
+
+</UL>
+<P>
+We ignore back edges.
+
+<P>
+<HR>
+<H1><A NAME="PUBLIC_METHODS">PUBLIC METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="done_">done()</A></H2>
+<P>
+Finished, save the the graph objects.
+
+<P>
+<HR>
+<H2><A NAME="init_">init()</A></H2>
+<P>
+Cache the graph object references.
+
+<P>
+<HR>
+<H2><A NAME="addEdge_string_fromURL_string_">addEdge(string $fromURL, string $toURL)</A></H2>
+<P>
+Add an edge to the 
+<FONT SIZE=-1>WWW</FONT> graph from one 
+<FONT SIZE=-1>URL</FONT> to another 
+<FONT SIZE=-1>URL.</FONT> This function determines which subgraph to add it to internally.
+
+
+<P>
+<HR>
+<H2><A NAME="createReachable_">createReachable()</A></H2>
+<P>
+Create the reachable graph from the side and downward graphs.
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,256 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/IdSetWithCount.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_IdSetWithCount">NAME IdSetWithCount</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Id_ids_">new(Id[] \@ids)</A>
+		<LI><A HREF="#fromBytes_string_b_">fromBytes(string $b)</A>
+		<LI><A HREF="#numberOfElements_">numberOfElements()</A>
+		<LI><A HREF="#memberOf_Id_id_">memberOf(Id $id)</A>
+		<LI><A HREF="#delete_Id_id_">delete(Id $id)</A>
+		<LI><A HREF="#insert_Id_id_">insert(Id $id)</A>
+		<LI><A HREF="#insertWithCount_Id_id_int_cou">insertWithCount(Id $id, int $count)</A>
+		<LI><A HREF="#enumerate_">enumerate()</A>
+		<LI><A HREF="#enumerateInSortedOrder_">enumerateInSortedOrder()</A>
+		<LI><A HREF="#union_IdSetWithCount_other_">union(IdSetWithCount $other)</A>
+		<LI><A HREF="#unionSelf_IdSetWithCount_other_">unionSelf(IdSetWithCount $other)</A>
+		<LI><A HREF="#intersect_IdSetWithCount_other_">intersect(IdSetWithCount $other)</A>
+		<LI><A HREF="#intersectSelf_IdSetWithCount_ot">intersectSelf(IdSetWithCount $other)</A>
+		<LI><A HREF="#toIdArrayReference_">toIdArrayReference()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+		<LI><A HREF="#import_">import()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_IdSetWithCount">NAME IdSetWithCount</A></H1>
+<P>
+Class encapsulating a set of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> and an integer count for the number of such things within the set.
+
+<P>
+This package is part of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/./DBMDatabase.html#">the DBMDatabase manpage</A>. For more information on the database see the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Overview.html">DBMDatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Licence.html">DBMDatabase::Licence</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Version.html">DBMDatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An IdSetWithCount is a data type for columns in a database <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>. An IdSetWithCount cannot be used as a key.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Id_ids_">new(Id[] \@ids)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__ids">\@ids</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> reference to a list of Ids.
+
+</UL>
+<P>
+Construct a Set from a list of Ids
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_string_b_">fromBytes(string $b)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__b">$b</A></STRONG>
+<P>
+- The string to convert from (a byte image of an IdSetWithCount or <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdList.html">DBMDatabase::IdList</A>).
+
+</UL>
+<P>
+Construct a new IdSetWithCount from a byte image of an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdList.html">DBMDatabase::IdList</A>
+or IdSetWithCount.
+
+<UL>
+<LI><STRONG><A NAME="item__ls">$ls</A></STRONG>
+<P>
+- An <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdList.html">DBMDatabase::IdList</A> 
+
+ 
+
+</UL>
+<P>
+Construct a new IdSetWithCount from an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdList.html">DBMDatabase::IdList</A> (basically, convert the list to a set).
+
+<P>
+<HR>
+<H2><A NAME="numberOfElements_">numberOfElements()</A></H2>
+<P>
+Return the number of Ids in the set.
+
+<P>
+<HR>
+<H2><A NAME="memberOf_Id_id_">memberOf(Id $id)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__id">$id</A></STRONG>
+<P>
+- Check if this <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> is in the set.
+
+</UL>
+<P>
+Returns true if it is, false otherwise.
+
+<P>
+<HR>
+<H2><A NAME="delete_Id_id_">delete(Id $id)</A></H2>
+<UL>
+<LI><STRONG>$id</STRONG>
+<P>
+- The <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> to remove from the set.
+
+</UL>
+<P>
+Delete an Id from the set.
+
+<P>
+<HR>
+<H2><A NAME="insert_Id_id_">insert(Id $id)</A></H2>
+<UL>
+<LI><STRONG>$id</STRONG>
+<P>
+- The <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> to insert.
+
+</UL>
+<P>
+Inserts an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> into this set.
+
+<P>
+<HR>
+<H2><A NAME="insertWithCount_Id_id_int_cou">insertWithCount(Id $id, int $count)</A></H2>
+<UL>
+<LI><STRONG>$id</STRONG>
+<P>
+- The <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> to insert.
+
+<LI><STRONG><A NAME="item__count">$count</A></STRONG>
+<P>
+- The count for this item.
+
+</UL>
+<P>
+Inserts an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> into this set with the indicated count. Careful, it overwrites existing
+count for element!
+
+<P>
+<HR>
+<H2><A NAME="enumerate_">enumerate()</A></H2>
+<P>
+Return an enumeration of the IdSetWithCount. 
+<FONT SIZE=-1>OK,</FONT> we have to fake it in Perl since this is a Java concept (although now that 
+<FONT SIZE=-1>I</FONT> understand hash tables 
+<FONT SIZE=-1>I</FONT> think 
+<FONT SIZE=-1>I</FONT> can do it with each). So we will return the list of values in the table. Currently, only small sets should be enumerated.
+
+
+<P>
+<HR>
+<H2><A NAME="enumerateInSortedOrder_">enumerateInSortedOrder()</A></H2>
+<P>
+Return an enumeration of the IdSetWithCount. 
+<FONT SIZE=-1>OK,</FONT> we have to fake it in Perl since this is a Java concept (although now that 
+<FONT SIZE=-1>I</FONT> understand hash tables 
+<FONT SIZE=-1>I</FONT> think 
+<FONT SIZE=-1>I</FONT> can do it with each). So we will return the list of values in the table. Currently, only small sets should be enumerated. We do this by sorting the list prior to enumerating it.
+
+
+<P>
+<HR>
+<H2><A NAME="union_IdSetWithCount_other_">union(IdSetWithCount $other)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__other">$other</A></STRONG>
+<P>
+- The other <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdSetWithCount.html">DBMDatabase::IdSetWithCount</A>.
+
+</UL>
+<P>
+Union this set with the other set, and update this set with the result.
+
+<P>
+<HR>
+<H2><A NAME="unionSelf_IdSetWithCount_other_">unionSelf(IdSetWithCount $other)</A></H2>
+<UL>
+<LI><STRONG>$other</STRONG>
+<P>
+- The other <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdSetWithCount.html">DBMDatabase::IdSetWithCount</A>.
+
+</UL>
+<P>
+Union this set with the other set, and update this set with the result.
+
+<P>
+<HR>
+<H2><A NAME="intersect_IdSetWithCount_other_">intersect(IdSetWithCount $other)</A></H2>
+<UL>
+<LI><STRONG>$other</STRONG>
+<P>
+- The other <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdSetWithCount.html">DBMDatabase::IdSetWithCount</A>.
+
+</UL>
+<P>
+Intersect this set with the other set, and return the result.
+
+<P>
+<HR>
+<H2><A NAME="intersectSelf_IdSetWithCount_ot">intersectSelf(IdSetWithCount $other)</A></H2>
+<UL>
+<LI><STRONG>$other</STRONG>
+<P>
+- The other <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/IdSetWithCount.html">DBMDatabase::IdSetWithCount</A>.
+
+</UL>
+<P>
+Intersect this set with the other set, and update this set with the result.
+
+<P>
+<HR>
+<H2><A NAME="toIdArrayReference_">toIdArrayReference()</A></H2>
+<P>
+Returns a reference to an array of Ids from the Set. Replicates an id for
+each count.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Create a formatted string of all the elements in the set
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Convert to a byte array
+
+<P>
+<HR>
+<H2><A NAME="import_">import()</A></H2>
+<P>
+Is this still needed? Just for requires.
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Updates</TITLE>
+<META NAME="description" CONTENT="Updates">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html216"
+ HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html214"
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html210"
+ HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html217"
+ HREF="node18.html">Data Updates</A>
+<B> Up:</B> <A NAME="tex2html215"
+ HREF="node7.html">Extending a Semistructured Data</A>
+<B> Previous:</B> <A NAME="tex2html211"
+ HREF="node16.html">Coalesce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00034000000000000000">&#160;</A>
+<A NAME="sec:edgeInsertion">&#160;</A>
+<BR>
+Updates
+</H2>
+
+<P>
+When transaction time is one of the supported properties,
+special semantics for update should be enforced to accommodate
+transaction time.  In a transaction-time database the database is
+trusted to enforce these semantics.  On the web, no such trusted
+mechanism is available for updates.  However, individual sites
+or even collections of pages within a site can be archived
+to correctly support transaction time.  Because of the
+flexibility of our framework, information from pages that support
+transaction time can be freely mixed with information from pages
+that do not.
+
+<P>
+In this section, we describe the constraints that should exist to
+correctly support transaction time, but leave open the issue of how
+these constraints are enforced on update.  An update can be either at
+the data level, consisting of a change to an edge, label, or node, or
+at the meta-data level, consisting of the addition of a property.
+We discuss each kind of modification in turn.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html218"
+ HREF="node18.html">Data Updates</A>
+<LI><A NAME="tex2html219"
+ HREF="node19.html">Adding and Removing Properties</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

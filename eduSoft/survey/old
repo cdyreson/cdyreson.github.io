@@ -1,0 +1,5 @@
+newcodepackage:		
+		rm -f Surveycode.tar.gz
+		tar cf Surveycode.tar Surveycode
+		gzip Surveycode.tar
+		chmod a+r Surveycode.tar.gz

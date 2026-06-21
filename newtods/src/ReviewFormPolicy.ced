@@ -1,0 +1,74 @@
+:include[macros]
+:arg1[
+<b>Approved October 18, 2001</b>
+
+For the last several years, TODS issues have come out late, sometimes very
+late. For example, just a few weeks ago the March 2001 issue was published.
+This is simply unacceptable. our goal is to ensure that printed copies of an
+issue are available on the first day of the cover month.
+
+There are several complex and interacting reasons for this delay, which will
+take some time to untangle. One critical component is the backlog. (The
+backlog is the set of accepted papers to appear.) Simply put, the papers to
+appear in an issue need to be determined four months before the issue's cover
+date. As an example, the papers for the March, 2002 issue are due November 1,
+2001. At this point (October 2001), there is not a single paper accepted for
+that issue (though at least one is close).
+
+This inadequate backlog has existed for several years, but was masked by
+problems on the production side.
+
+The one positive side effect of an inadequate backlog is that each paper when
+it is accepted goes directly into the very next issue. The paper mentioned
+above that is close will certainly go into the March issue.  For this reason,
+the concept of "fast-track publication" of selected papers is a practical
+irrelevance. Put another way, we now, and have for many years, treated every
+accepted paper as a fast-track publication.
+
+Even if in the future we increase submissions and acceptances, this general
+strategy of treating every paper as expeditiously as possible is still
+appropriate.
+
+Thus the attached portions of the review form should be eliminated.
+The "Originality" question is already covered by the "Significance of
+Contribution," the "opens up a new area" question is not an appropriate
+criterion (though if a paper does open up a new area, its contribution would
+probably be very high) and the "particularly timely subject" question also
+doesn't seem to be a useful question for a reviewer to consider.
+
+From the review form:colon[]
+<pre>
+- --------------------------------------------------------------------------
+
+Merits Fast-Track Publication (no or yes):
+
+        1. Originality?  high_____    medium _____  low _____  none _____
+
+        2. Does the paper open up a new and relevant area of research
+                and development?
+        
+                yes _____       no _____
+- -------------------------------------------------------------------------
+</pre>
+
+From the proposed survey form:
+<pre>
+- --------------------------------------------------------------------------
+
+Merits Fast-Track Publication (no or yes):
+
+        1. Does the paper survey a particularly timely subject?
+        
+                yes _____       no _____
+
+        2. Can the paper potentially foster new original research on its
+           subject? 
+        
+                yes _____       no _____
+
+- -------------------------------------------------------------------------
+</pre>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Review Form]

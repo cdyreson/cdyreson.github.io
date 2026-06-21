@@ -1,0 +1,73 @@
+:include[macros]
+:arg1[<FONT
+        SIZE="3" face="helvetica">&nbsp;&nbsp;&nbsp;&nbsp;Editor-in-Chief: <a 
+         style="text-decoration:colon[]none"
+         href="http://www.cs.arizona.edu/~rts">Richard T. Snodgrass</a></FONT>
+]
+:macro[EditorInChief]
+:arg1[
+The <em>Transactions on Database Systems</em> (<em>TODS</em>)
+is part of the family of journals produced by the
+<A HREF="http://www.acm.org/">ACM</a>.
+TODS publishes one volume yearly.  
+Each volume is comprised of four issues, which appear in
+March, June, September and December.
+<ul>
+<table summary="TOC">
+ <tr><td valign=top><font face="helvetica">
+      <b>For readers</b><ul>
+    <li><a HREF="Current.html">Current issue</A>
+    <li><a HREF="Upcoming.html">Upcoming issues</A>
+    <li><a HREF="http://www.acm.org/pubs/contents/journals/tods/">Past issues</A>
+    <li><a HREF="http://www.acm.org/sigmod/dblp/db/journals/tods/index.html">Past issues (from DBLP)</A>
+    <li><a HREF="Subscription.html">Subscribe to TODS</A>
+    </ul>
+    <br>
+    <b>Related ACM links</b>
+    <ul>
+      <li> <a HREF="http://www.acm.org/dl/toc.html">All ACM journals</A>
+      <li> <a HREF="http://www.acm.org/dl">ACM Digital Library</A>
+      <li> <a HREF="http://www.acm.org/dl/Search.html">Search ACM Digital Library</A>
+      <li> <a HREF="http:colon[]//acm.org/sigmod/">SIGMOD</A>
+% Special Interest Group on
+%Management of Data<br>
+    </ul>
+    </font>
+   </td>
+   <td valign="top">
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   </td>
+   <td valign="top">
+    <font face="helvetica">
+      <b>About TODS</b>
+      <ul>
+        <li> <a HREF="Charter.html">Editorial charter and scope</A>
+        <li> <a HREF="Editors.html">Editorial board</A>
+      </ul>
+      <b>For authors</b>
+      <ul>
+        <li> <a HREF="Authors.html#ManuscriptPreparation">Manuscript preparation</A>
+        <li> <a HREF="Authors.html#SubmissionforEditorialReview">Submission instructions</A>
+        <li> <a HREF="COI.html">Conflict of interest policy</A>
+        <li> <a HREF="Authors.html#ProceduresforAcceptedPapers">Procedures for accepted papers</A>
+      </ul>
+    <br>
+      <b>For referees</b>
+      <ul>
+        <li> <a HREF="Referees.html">Referee instructions</A>
+      </ul>
+    </font>
+   </td>
+ </tr>
+</table>
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Home Page]

@@ -1,0 +1,20 @@
+:include[macros]
+:arg1[
+(for Papers Authored by ACM :journalAcronym[] Editor-in-Chief)
+<ol>
+<li> The EIC will submit the paper to an Associate Editor, who
+must have agreed to accept this responsibility and should
+not be a collaborator of the EIC or from the same organization
+as the EIC.
+<li> In case of guest edited special issues, such as based on papers
+invited from Conferences, the guest editor will make the final
+decision directly but will make anonymous all reviewer information in
+corresponding with the authors, including the EIC.
+<li> In order to avoid the appearance of impropriety, existing standards
+of acceptability must be rigorously applied when considering papers
+(co-)authored by EICs.  Papers which are marginal in any way should
+be rejected.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Conflict of Interest Policy]

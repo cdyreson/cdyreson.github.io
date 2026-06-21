@@ -1,0 +1,30 @@
+
+<foo>
+    <doc>
+        <author nme="xxx">a8
+        </author>
+        <person>p7
+            <name>fred</name>
+        </person>
+        <author nme="joe">a9
+        </author>
+    </doc>
+    <doc>
+        <author nme="xxx">a2
+        </author>
+        <person>p1
+            <name>fred</name>
+        </person>
+        <author nme="joe">a3
+        </author>
+        <author nme="xxy">a4
+        </author>
+        <person>p3
+            <name>fred</name>
+        </person>
+        <person>p4
+            <name>fred</name>
+        </person>
+    </doc>
+</foo>
+

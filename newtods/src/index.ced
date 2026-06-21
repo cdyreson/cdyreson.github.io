@@ -1,0 +1,655 @@
+:include[macros]
+:arg1[<td align="right" bgcolor="#D0D0D0"><FONT
+        SIZE="3" face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;Editor-in-Chief:&nbsp;<a 
+         style="text-decoration:colon[]none"
+         href="http://people.cs.aau.dk/~csj"
+         >Christian S. Jensen</a>&nbsp;</FONT></td>
+]
+:macro[EditorInChief]
+:arg1[ ]
+:macro[NoEICinTitleRow]
+:arg1[
+<em>ACM Transactions on Database Systems</em> (<em>TODS</em>) is a prestigious publication for computer scientists working in the area of data management. In this increasingly multi-faceted and rapidly evolving area, <em>TODS</em> aims to publish high-quality and influential results that represent a fusion of theory and practice. In doing so, <em>TODS</em> provides insights into the thoughts of the best minds in database research.
+
+<em>TODS</em> covers the management of structured and unstructured data, including text and XML data; spatial and temporal data; multimedia data; scientific data; graph data; sensor data; uncertain data; streaming data.
+
+Topics include, but are not limited to, the following aspects of database systems: data modeling and semantics, database design; data models and query languages; query processing and optimization; analytics, aggregation, warehousing, OLAP; storage, physical database design; access methods and indexing; transaction management and processing; data integration; security, privacy, authentication, provenance, and trust; cloud computing; data management applications and infrastructures; systems architectures; distributed data management; and in-memory data management.
+
+%The <em>Transactions on Database Systems</em> (:journalAcronym[])
+%is part of the family of journals produced by the
+%<A HREF="http://www.acm.org/">ACM</a>.
+%:journalAcronym[] publishes one volume yearly.  
+%Each volume is comprised of four issues, which appear in
+%March, June, September, and December.
+<ul>
+<table summary="TOC">
+ <tr>
+  <td valign=top>
+    <font face=":myFont[]">
+      <b>About :journalAcronym[]</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <A 
+          HREF="Charter.html"
+          onMouseOver="Charter.src=backArrow.src"
+          onMouseOut="Charter.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Charter"
+           name="Charter"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Charter and scope
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Editors.html"
+          onMouseOver="EditorsTOC.src=backArrow.src"
+          onMouseOut="EditorsTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Editorial Board" 
+           name="EditorsTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial Board
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Editorials.html"
+          onMouseOver="EditorialsTOC.src=backArrow.src"
+          onMouseOut="EditorialsTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Editorials"
+           name="EditorialsTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           :journalAcronym[] editorials
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Editorials.html#SIGMODRecordColumns"
+          onMouseOver="SIGMODRecordColumns.src=backArrow.src"
+          onMouseOut="SIGMODRecordColumns.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGMOD Record Column" 
+           name="SIGMODRecordColumns"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGMOD Record column
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Policies.html"
+          onMouseOver="Policies.src=backArrow.src"
+          onMouseOut="Policies.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Policies" 
+           name="Policies"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Policies 
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="History.html"
+          onMouseOver="History.src=backArrow.src"
+          onMouseOut="History.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="History" 
+           name="History"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           History
+        </font>
+        </A>
+      </td></tr>
+    </table>
+    <br>
+    <font face=":myFont[]">
+      <b>For readers</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0">
+      <tr><td>
+        <A 
+          HREF="Upcoming.html"
+          onMouseOver="UpcomingTOC.src=backArrow.src"
+          onMouseOut="UpcomingTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Upcoming issue" 
+           name="UpcomingTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Upcoming issues
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://portal.acm.org/tods/current"
+          onMouseOver="CurrentTOC.src=backArrow.src"
+          onMouseOut="CurrentTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Current issue" 
+           name="CurrentTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Current issue
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://portal.acm.org/tods"
+          onMouseOver="PastPortalTOC.src=backArrow.src"
+          onMouseOut="PastPortalTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Archive of issues (ACM Portal)" 
+           name="PastPortalTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Archive of issues (ACM Portal)
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://www.informatik.uni-trier.de/~ley/db/journals/tods/index.html"
+          onMouseOver="PastDBLPTOC.src=backArrow.src"
+          onMouseOut="PastDBLPTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Archive of issues (DBLP)" 
+           name="PastDBLPTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Archive of issues (DBLP)</A>
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Subscription.html"
+          onMouseOver="SubscribeTOC.src=backArrow.src"
+          onMouseOut="SubscribeTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Subscribe to TODS" 
+           name="SubscribeTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Subscribe to :journalAcronym[]
+        </font>
+        </A>
+      </td></tr>
+    </table><br>
+    <font face=":myFont[]">
+      <b>For referees</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <A 
+          HREF="Referees.html#Rights"
+          onMouseOver="RefereeRights.src=backArrow.src"
+          onMouseOut="RefereeRights.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Referee rights" 
+           name="RefereeRights"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Referee rights
+        </font>
+        </A>
+      </td></tr>
+%      <tr><td>
+%        <A 
+%          HREF="Referees.html#Instructions"
+%          onMouseOver="RefereeInstructions.src=backArrow.src"
+%          onMouseOut="RefereeInstructions.src=forwardArrow.src"
+%          style="text-decoration:colon[]none">
+%        <img 
+%           alt="Referee instructions" 
+%           name="RefereeInstructions"
+%           border=0
+%           valign="center" 
+%           src="across.gif">&nbsp;
+%        <font face=":myFont[]">
+%           Referee instructions
+%        </font>
+%        </A>
+%      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Referees.html#Guidelines"
+          onMouseOver="RefereeGuidelines.src=backArrow.src"
+          onMouseOut="RefereeGuidelines.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Referee guidelines" 
+           name="RefereeGuidelines"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Referee guidelines
+        </font>
+        </A>
+      </td></tr>
+     </table>
+   </td>
+   <td valign="top">
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   &nbsp;
+   </td>
+   <td valign="top">
+    <font face=":myFont[]">
+      <b>For authors</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0" cellpadding="2">
+      <tr><td>
+        <A 
+          HREF="Authors.html#ManuscriptPreparation"
+          onMouseOver="ManuTOC.src=backArrow.src"
+          onMouseOut="ManuTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Author Instructions - Manuscript Preparation" 
+           name="ManuTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Manuscript preparation
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Authors.html#SubmissionforEditorialReview"
+          onMouseOver="SubmitTOC.src=backArrow.src"
+          onMouseOut="SubmitTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Submission instructions"
+           name="SubmitTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Submission instructions
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A
+          HREF="Statistics.html"
+          onMouseOver="Statistics.src=backArrow.src"
+          onMouseOut="Statistics.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Publication statistics"
+           name="Statistics"
+           border=0
+           valign="center"
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Publication statistics
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="COI.html"
+          onMouseOver="COITOC.src=backArrow.src"
+          onMouseOut="COITOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Conflict of interest policy" 
+           name="COITOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Conflict of interest policy
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="Authors.html#ProceduresforAcceptedPapers"
+          onMouseOver="ProcTOC.src=backArrow.src"
+          onMouseOut="ProcTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Procedures for accepted papers"
+           name="ProcTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Procedures for accepted papers
+        </font>
+        </A>
+      </td></tr>
+    </table>
+    <br>
+    <font face=":myFont[]">
+      <b>Related ACM links</b>
+    </font>
+    <table summary="TOC" cellspacing="1" border="0">
+      <tr><td>
+        <A 
+          HREF=" http://dl.acm.org/pubs.cfm"
+          onMouseOver="ACMTOC.src=backArrow.src"
+          onMouseOut="ACMTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="All ACM journals"
+           name="ACMTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           All ACM journals
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http://www.acm.org/dl"
+          onMouseOver="DLTOC.src=backArrow.src"
+          onMouseOut="DLTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="ACM Digital Library"
+           name="DLTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           ACM Digital Library
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//www.informatik.uni-trier.de/~ley/db/"
+          onMouseOver="SIGMODDBLP.src=backArrow.src"
+          onMouseOut="SIGMODDBLP.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Access DBLP" 
+           name="SIGMODDBLP"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           Access DBLP
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//acm.org/sigmod/"
+          onMouseOver="SIGMODTOC.src=backArrow.src"
+          onMouseOut="SIGMODTOC.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGMOD home page" 
+           name="SIGMODTOC"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGMOD
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//www.acm.org/sigs/sigkdd/"
+          onMouseOver="SIGKDD.src=backArrow.src"
+          onMouseOut="SIGKDD.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGKDD home page" 
+           name="SIGKDD"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGKDD
+        </font>
+        </A>
+      </td></tr>
+      <tr><td>
+        <A 
+          HREF="http:colon[]//www.acm.org/sigs/sigir/"
+          onMouseOver="SIGIR.src=backArrow.src"
+          onMouseOut="SIGIR.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="SIGIR home page" 
+           name="SIGIR"
+           border=0
+           valign="center" 
+           src="across.gif">&nbsp;
+        <font face=":myFont[]">
+           SIGIR
+        </font>
+        </A>
+      </td></tr>
+     </table>
+   </td>
+ </tr>
+</table>
+</ul>
+<hr/>
+<h3>:journalAcronym[] News</h3>
+<dl>
+<dt>
+April 30, 2015
+<dd>
+:journalAcronym[] and SIGMOD have agreed to offer :journalAcronym[] papers 
+that are not extensions of a conference paper a presentation slot at 
+the next SIGMOD conference. One more reason to publish 
+in :journalAcronym[].
+Read more <a href="SIGMODPresentationsPolicy.html">here</a>.
+</dd>
+</dl>
+<dl>
+<dt>
+February 1, 2015
+<dd>
+As of February 1, 2015, four Associate Editors, George Kollios, 
+Paul Larson, Yufei Tao, and Johannes Gehrke, have ended their terms, 
+having served on the editorial board for seven, seven, seven, and 
+four years, respectively. (They will stay on until they complete their 
+current loads.) 
+We are fortunate that they have donated
+their time and world-class expertise during these years.
+Also six new Associate Editors have joined the editorial board:
+<a href="http://aria.asu.edu/candan/">K. Selcuk Candan</a>, 
+<a href="http://www.cs.umd.edu/~amol">Amol Deshpande</a>,
+<a href="http://www.cse.psu.edu/~dkifer">Daniel Kifer</a>,
+<a href="http://www-users.cs.umn.edu/~mokbel">Mohamed Mokbel</a>,
+<a href="http://www.cs.duke.edu/~junyang">Jun Yang</a>,
+and <a href="http://www.cse.ust.hk/~yike">Ke Yi</a>.
+Please <a href="editorials/Mar15.html">read more here</a>.
+</dd>
+</dl>
+<dl>
+<dt>
+June 1, 2014
+<dd>
+The <a href="http://www.acm.org/publications/panel?pageIndex=4">ACM
+Publications Board</a> has appointed <a href="http://www.cs.aau.dk/~csj">
+<b>Christian S. Jensen</b></a>
+as the <a href="History.html">seventh</a>
+Editor-in-Chief of ACM :journalAcronym[], as of this date. 
+Christian replaces Z.&nbsp;Meral &Ouml;zsoyo&#287;lu, who provided six
+years and eight months of excellent stewardship 
+as :journalAcronym[] Editor-in-Chief.
+In addition to his many other accomplishments, 
+Christian is an experienced :journalAcronym[] editor having
+previously served for six years as an Associate Editor (8/1/2001 to 7/31/2007).
+</dd>
+</dl>
+<dl>
+<dt>
+Jan 5, 2014
+<dd>
+:journalAcronym[] welcomes five new associate editors: 
+Yanlei Diao, Floris Geerts, Ihab Ilyas, Nick Koudas, Christopher R&eacute;.  
+In January 2014, Anastasia Ailamaki, Michael Bohlen, and Xuemin Lin 
+are completing their terms as :journalAcronym[] associate editors.
+</dd>
+</dl>
+<dl>
+<dt>
+July 11, 2013
+<dd>
+<a href="http://authors.acm.org"><img src="AuthorRights.jpg" width="75" align="left"></a>
+New options for ACM authors to manage rights and permissions for their work: ACM introduces
+a new publishing license agreement, an updated copyright transfer agreement, and a new 
+author-pays option which allows for perpetual open access through the ACM Digital Library.
+For more information, visit the ACM Author Rights webpage a <a href="http://authors.acm.org">authors.acm.org</a>.
+</dd>
+</dl>
+%<dl>
+%<dt>
+%January 28, 2012
+%<dd>
+%:journalAcronym[] welcomes six new associate editors Walid G. Aref, 
+%Paolo Ciaccia, Graham Cormode, Sabrina De Capitani di Vimercati, 
+%Gautam Das, and Dirk Van Gucht.  In 2011, Phokion Kolaitis, 
+%Hank Korth, Ken Ross, Betty Salzberg, Pierangela Samarati, and Dan Suciu, 
+%completed their terms as :journalAcronym[] associate editors. 
+%</dd> 
+%</dt>
+%<dt>
+%November 18, 2011
+%<dd>
+%The ACM has launched a new service for authors
+%called 
+%the <a href="http://www.acm.org/publications/acm-author-izer-service">
+%ACM Author-Izer Service</a>.
+%The service extends the ACM's support for 
+%self-archiving by 
+%enabling authors to generate and post links in their own 
+%bibliographies that they maintain on either their personal home page 
+%or institutional repository.
+%</dd> 
+%</dt>
+%<dt>
+%January 19, 2011
+%<dd>
+%:journalAcronym[] welcomes four new associate editors:
+%Divyakant Agrawal, Anastasia Ailamaki, Sihem Amer-Yahia, 
+%and Johannes Gehrke.
+%</dd> 
+%</dt>
+%</dl>
+%<dl>
+%
+%<dt>
+%October 18, 2007
+%<dd>
+%:journalAcronym[] was <a href="ranking2007.pdf">ranked</a> 3<sup>rd</sup> 
+%of 82 journals indexed in the software engineering category in 2006 
+%in terms of its Journal Impact Factor by 
+%<a href="http://www.isinet.com/">Thomson Scientific</a>. 
+%The Impact Factor is a ratio of the number of 
+%citations in 2006 of a given journal compared to the journal's total 
+%citations for 2005 and 2004.
+%</dd> 
+%</dt>
+%
+%<dt>
+%September 17, 2007
+%<dd>
+%The <a href="http://www.acm.org/publications/panel?pageIndex=4">ACM
+%Publications Board</a> has appointed <a href="http://zmo.cwru.edu"><b>Z.
+%Meral &Ouml;zsoyo&#287;lu</b></a> as the <a href="History.html">sixth</a>
+%Editor-in-Chief of ACM :journalAcronym[], as of this date. 
+%Meral has long experience,
+%serving as Associate Editor and member of the Editorial Board for over
+%six years. She has also served as Vice Chair of ACM SIGMOD and as program
+%chair of PODS.
+%</dd>
+%</dt>
+%
+%<dt>
+%June 15, 2007
+%<dd>
+%Richard T. Snodgrass's term as Editor-in-Chief ends on July 1, 2007.
+%Betty Salzberg will serve as the interim Editor-in-Chief until a
+%replacement is found. Professor Salzberg's contact information can
+%be found <a href="Editors.html">here</a>.
+%</dd>
+%</dt>
+%
+%<dt>
+%January 27, 2007
+%<dd>
+%A <a href="http://doi.acm.org/10.1145/1276301.1276317">DBR FAQ</a> 
+%addressing questions about the new :journalAcronym[]
+%double-blind review procedure is now available.
+%</dd>
+%</dt>
+%
+%</dl>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Home Page]

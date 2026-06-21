@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/evaluateQuery.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#EXAMPLE_USAGE">EXAMPLE USAGE</A>
+	<LI><A HREF="#OPTIONS">OPTIONS</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+<STRONG>evaluateQuery</STRONG> - Do a SemiS query.
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>  evaluateQuery 
+    [-help] |
+    [-version] |
+    [-verbose] 
+    [-databaseName databaseName] 
+    [-databaseMode GDBM | DBM | BSD] 
+    &lt; query
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+<STRONG>evaluateQuery</STRONG> reads a query from standard input and evaluates it.
+
+<P>
+<HR>
+<H1><A NAME="EXAMPLE_USAGE">EXAMPLE USAGE</A></H1>
+<P>
+Do a query
+
+<P>
+<PRE> perl -I../lib evaluateQuery -verbose &lt;specifications/query
+</PRE>
+<P>
+See also <A HREF="./../lib/SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="OPTIONS">OPTIONS</A></H1>
+<DL>
+<DT><STRONG><A NAME="item__help">-help</A></STRONG><DD>
+<P>
+Display a short help message with a reminder of supported command-line
+options.
+
+<DT><STRONG><A NAME="item__version">-version</A></STRONG><DD>
+<P>
+Display the version of <STRONG>evaluateQuery</STRONG>.
+
+<DT><STRONG><A NAME="item__verbose">-verbose</A></STRONG><DD>
+<P>
+Enable verbose reporting.
+
+<DT><STRONG><A NAME="item__databaseName">-databaseName databaseName</A></STRONG><DD>
+<P>
+The name of the database, overides the default name in <A HREF="./SemiStructuredDB/Constants.html">SemiStructuredDB::Constants</A>.
+
+<DT><STRONG><A NAME="item__databaseMode">-databaseMode databaseMode</A></STRONG><DD>
+<P>
+The mode of the database, overides the default mode in <A HREF="./SemiStructuredDB/Constants.html">SemiStructuredDB::Constants</A>.
+
+</DL>
+</BODY>
+
+</HTML>

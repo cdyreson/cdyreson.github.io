@@ -1,0 +1,677 @@
+&&&PERL&&&
+
+use Bdbm;
+$qdb = new Bdbm;
+$hdb = new Bdbm;
+$edb = new Bdbm;
+$ROOT = '&&&ROOT&&&';
+$EXTENSION = '&&&EXTENSION&&&';
+
+if ($ARGV[2]) {
+  ($tdirectory, $tpage, $spage) = @ARGV;
+  $direction{"test-directory"} = $tdirectory;
+  $direction{"tute-page"}= $tpage;
+  $direction{"stats-page"}=$spage;
+  }
+else {
+  die "use SAMaker as follows\n  SAMaker db_directory tute_page stats_page <infile.\n";
+  }
+
+# slurp standard in, ignoring comments (lines that start with %)
+$message = "\n";
+while (<STDIN>) {
+  if (!/^%/) {$message .= $_;}
+  }
+
+# set up tags
+$hbtag = '\(HTML-BASE\)';
+$rtwtag = '\(RETURN-TO-WHERE\)';
+$ertwtag = '\(EMAIL-RESULTS-TO-WHOM\)';
+$tdtag = '\(TEST-DIRECTORY\)';
+$tptag = '\(TUTE-PAGE\)';
+$sptag = '\(STATS-PAGE\)';
+$tetag = '\(TEST-ENTRY\)';
+$tfdtag = '\(TF-DIRECTIONS\)';
+$tfmtag = '\(TF-MARKS\)';
+$tfnmtag = '\(TF-NEGATIVE-MARKS\)';
+$mmdtag = '\(MM-DIRECTIONS\)';
+$mmmtag = '\(MM-MARKS\)';
+$mmnmtag = '\(MM-NEGATIVE-MARKS\)';
+$mcdtag = '\(MC-DIRECTIONS\)';
+$mcmtag = '\(MC-MARKS\)';
+$mcnmtag = '\(MC-NEGATIVE-MARKS\)';
+$sadtag = '\(SA-DIRECTIONS\)';
+$samtag = '\(SA-MARKS\)';
+$sanmtag = '\(SA-NEGATIVE-MARKS\)';
+$eadtag = '\(EA-DIRECTIONS\)';
+$eamtag = '\(EA-MARKS\)';
+$eanmtag = '\(EA-NEGATIVE-MARKS\)';
+$rotag = '\(RANDOM-ORDER\)';
+$dtag = '\(DIRECTIONS\)';
+$nmtag = '\(NEGATIVE-MARKS\)';
+$mtag = '\(MARKS\)';
+$cltag = '\(CLASS-LIST\)';
+$ctag = '\(CLASS\)';
+$tltag = '\(TUTE-LIST\)';
+$qtag = '\(QUESTIONS\)';
+$qstag = '\(QUESTIONSET\)';
+$wtag = '\(W\)';
+$rtag = '\(R\)';
+$htag = '\(H\)';
+$etag = '\(E\)';
+$ttag = '\(T\)';
+$ftag = '\(F\)';
+$mmtag = '\(MM\)';
+$mctag = '\(MC\)';
+$satag = '\(SA\)';
+$eatag = '\(EA\)';
+$mytag = '\(MA\)';
+$newblank = '\n\s*';
+
+# Split text into directions and questions
+$directionspattern = "$newblank$qtag";
+($directions_text, $questions_text) = split(/$directionspattern/i,$message);
+
+# Parse the directions
+$directionspattern = "$newblank($rtwtag|$ertwtag|$tptag|$sptag|$hbtag|$tdtag|$tetag|$tltag|$ctag|$cltag|$tfdtag|$tfmtag|$tfnmtag|$mmdtag|$mmmtag|$mmnmtag|$mcdtag|$mcmtag|$mcnmtag|$sadtag|$samtag|$sanmtag|$eadtag|$eamtag|$eanmtag|$rotag|$qtag)";
+@fields = split(/$directionspattern/i, $directions_text);
+$ndex = 1;
+while ($tag = $fields[$ndex]) {
+  $_ = $tag;
+  #chew up white space at both ends (parsing of fields depends on this!)
+  my ($tempString) = $fields[$ndex+1];
+  $tempString =~ s/^\s+//;
+  $tempString =~ s/\s+$//;
+  $tempString =~ s/<P>+$//;
+  $tempString =~ s/\s+$//;
+  $fields[$ndex+1] = $tempString;
+
+  CASE: {
+  /$ertwtag/i && do {$direction{"email"}=$fields[$ndex+1]; last CASE;};
+  /$rtwtag/i && do {$direction{"return-to-where"}=$fields[$ndex+1]; last CASE;};
+  /$hbtag/i && do {$direction{"html-base"}=$fields[$ndex+1]; last CASE;};
+  #/$tdtag/i && do {$direction{"test-directory"}=$fields[$ndex+1]; last CASE;};
+  #/$tptag/i && do {$direction{"tute-page"}=$fields[$ndex+1]; last CASE;};
+  #/$sptag/i && do {$direction{"stats-page"}=$fields[$ndex+1]; last CASE;};
+  /$tetag/i && do {$direction{"test-entry"}=$fields[$ndex+1]; last CASE;};
+  /$ctag/i && do {
+    $direction{"class"}=$fields[$ndex+1]; 
+    $ROOT .= '/' . $direction{'class'};
+    last CASE;};
+  /$cltag/i && do {$direction{"class-list"}=$fields[$ndex+1]; last CASE;};
+  /$tltag/i && do {$direction{"tute-list"}=$fields[$ndex+1]; last CASE;};
+  /$tfdtag/i && do {$direction{"tf-directions"}=$fields[$ndex+1]; last CASE;};
+  /$mcdtag/i && do {$direction{"mc-directions"}=$fields[$ndex+1]; last CASE;};
+  /$eadtag/i && do {$direction{"ea-directions"}=$fields[$ndex+1]; last CASE;};
+  /$sadtag/i && do {$direction{"sa-directions"}=$fields[$ndex+1]; last CASE;};
+  /$rotag/i && do {$direction{"random-order"}=$fields[$ndex+1]; last CASE;};
+  print "unrecognized tag $tag\n"; #default
+  } #CASE
+  $ndex += 2;
+  } #while
+
+&process_directions() || die "could not process directions";
+
+$splitpattern = "$newblank$qstag";
+@question_sets = split(/$splitpattern/i, $questions_text);
+#ignore the first set (before the first (QUESTIONSET) is empty)
+shift(@question_sets);
+$set_index = 0;
+foreach $question_set (@question_sets) {
+  $splitpattern = "$newblank($ftag|$ttag|$mmtag|$mctag|$satag|$eatag|$mytag)";
+  @questions = split(/$splitpattern/i, $question_set);
+  $ndex = 1;
+  $set_index++;
+  $question_index = 0;
+  while ($tag = $questions[$ndex]) {
+    $questions[$ndex+1] =~ s/^\s*//;
+    $questions[$ndex+1] =~ s/\s*$//;
+    $questions[$ndex+1] =~ s/<P>+$//;
+    $question_index++;
+    $question = $set_index . ":" . $question_index;
+    $_ = $tag;
+    CASE2: {
+      /$ttag/i && do {
+        &truequestion($questions[$ndex+1]);
+        last CASE2;
+        };
+      /$ftag/i && do {
+        &falsequestion($questions[$ndex+1]);
+        last CASE2;
+        };
+      /$mmtag/i && do {
+        &mmquestion($questions[$ndex+1]);
+        last CASE2;
+        };
+      /$mctag/i && do {
+        &mcquestion($questions[$ndex+1]);
+        last CASE2;
+        };
+      /$eatag/i && do {
+        &eaquestion($questions[$ndex+1]);
+        last CASE2;
+        };
+      /$satag/i && do {
+        &saquestion($questions[$ndex+1]);
+        last CASE2;
+        };
+      print "unrecognized tag $tag\n";  # default
+      } #CASE2
+    $ndex += 2;
+    }
+  $randomdb{"$set_index"} = $question_index;
+  }
+
+$temp = join("\e",(1..$set_index));
+$tpage = $direction{'tute-page'};
+$spage = $direction{'stats-page'};
+@keys = sort(keys(%tutedb));
+#@keys = reverse keys(%rvtutedb);
+$size = scalar(@keys);
+$options = "";
+foreach $key (@keys) {
+  $options .= "<OPTION  VALUE=\"$key\">$tutedb{$key}\n";
+  }
+open(OUT,">$tpage") || die "Sorry, couldn't create $tpage\n";
+print OUT <<"HEAD";
+<HEAD>
+<TITLE>
+Self-assessment
+</TITLE>
+</HEAD>
+<BODY>
+<FORM METHOD="POST" ACTION="$ROOT/starter$EXTENSION">
+<H1> Hello and Welcome to the Self-assessment!</H1>
+<HR>
+<P>
+Please choose when your tutorial meets.<BR>
+<SELECT NAME="tute" SIZE=$size>
+$options
+</SELECT>
+<P>
+<INPUT TYPE="hidden" NAME="total_questions" VALUE="$question">
+<INPUT TYPE="hidden" NAME="path" VALUE="$path">
+<P>
+<INPUT TYPE="submit" NAME="entry" VALUE="Continue">
+</FORM>
+</BODY>
+HEAD
+close(OUT);
+
+#Please input the self-assessment password (your Computer Centre login, e.g., sci-aaa). <BR>
+#<INPUT TYPE="password" NAME="password" VALUE="" SIZE=10> <BR>
+
+open(OUTSTATS,">$spage") || die "Sorry, couldn't create $spage\n";
+print OUTSTATS <<"HEAD";
+<HEAD>
+<TITLE>
+Self-assessment Stats
+</TITLE>
+</HEAD>
+<BODY>
+<FORM METHOD="POST" ACTION="$ROOT/stats$EXTENSION">
+<H1> Vailkommen to the Self-assessment Stats!</H1>
+<HR>
+<P>
+Click here to load the stats (it may take awhile) 
+<INPUT TYPE="submit" NAME="entry" VALUE="Click Here">
+<P>
+<INPUT TYPE="hidden" NAME="path" VALUE="$path">
+<INPUT TYPE="hidden" NAME="password" VALUE="32879nnfdabh43287bdfsauh32487">
+</FORM>
+</BODY>
+HEAD
+close(OUTSTATS);
+
+sub process_directions{
+  local ($line, @lines, $person, $login, $key);
+  
+  #check to see if test directory exists
+  (-e $direction{"test-directory"}) || die "no test directory " . 
+                                            $direction{"test-directory"} .
+                                            "\n";
+  #open databases
+  $path = $direction{"test-directory"};
+  open_dbms($path) || die "could not open dbms \n";
+  
+  #process tute-list
+  @lines = split("\n", $direction{"tute-list"});
+  foreach $line (@lines) {
+    ($person, $login) = split("=", $line);
+    $person =~ s/^\s*//;
+    $person =~ s/\s*$//;
+    $login =~ s/^\s*//;
+    $login =~ s/\s*$//;
+    $tutedb{$login} = $person;
+    $rvtutedb{$person} = $login;
+    }
+  delete $direction{"tute-list"};
+
+  #process class-list
+  @lines = split("\n", $direction{"class-list"});
+  foreach $line (@lines) {
+    ($person, $login) = split("=", $line);
+    $person =~ s/^\s*//;
+    $person =~ s/\s*$//;
+    $login =~ s/^\s*//;
+    $login =~ s/\s*$//;
+    $classdb{$login} = $person;
+    $rvclassdb{$person} = $login;
+    }
+  delete $direction{"class-list"};
+
+  #fill in relevant values in the directions database
+  foreach $key (keys %direction) {
+    $directionsdb{$key} = $direction{$key};
+    }
+
+  return 1;
+}
+
+# open databases
+sub open_dbms{
+  local ($path) = @_;
+
+  # open and clear question db
+  $qdb->open("$path/questiondb", 0640) || die "open failed questions\n";
+  $qdb->clear;
+
+  # open and clear explanation db
+  $edb->open("$path/explaindb", 0640) || die "open failed explain\n";
+  $edb->clear;
+
+  # open and clear hint db
+  $hdb->open("$path/hintdb", 0640) || die "open failed hint\n";
+  $hdb->clear;
+
+  # open and clear answer db
+  dbmopen(%answerdb, "$path/answerdb", 0640) || die "open failed answer\n";
+  # create answerdb anew
+  foreach $key (keys %answerdb) {
+    delete $answerdb{$key};
+    }
+
+  # open and clear random db
+  dbmopen(%randomdb, "$path/randomdb", 0640) || die "open failed random\n";
+  # create randomdb anew
+  foreach $key (keys %randomdb) {
+    delete $randomdb{$key};
+    }
+
+  # open and clear class db
+  dbmopen(%classdb, "$path/classdb", 0660) || die "open failed class\n";
+  # create classdb anew
+  foreach $key (keys %classdb) {
+    delete $classdb{$key};
+    }
+
+  # open and clear rvclass db
+  dbmopen(%rvclassdb, "$path/rvclassdb", 0660) || die "open failed rvclass\n";
+  # create rvclassdb anew
+  foreach $key (keys %rvclassdb) {
+    delete $rvclassdb{$key};
+    }
+
+  # open and clear tute db
+  dbmopen(%tutedb, "$path/tutedb", 0660) || die "open failed tute\n";
+  # create tutedb anew
+  foreach $key (keys %tutedb) {
+    delete $tutedb{$key};
+    }
+
+  # open and clear rvtute db
+  dbmopen(%rvtutedb, "$path/rvtutedb", 0660) || die "open failed rvtute\n";
+  # create rvtutedb anew
+  foreach $key (keys %rvtutedb) {
+    delete $rvtutedb{$key};
+    }
+
+  # open and clear directions db
+  dbmopen(%directionsdb, "$path/directionsdb", 0640) || die "open failed directions\n";
+  # create directionsdb anew
+  foreach $key (keys %directionsdb) {
+    delete $directionsdb{$key};
+    }
+  return 1;
+}
+
+sub form_start {
+return;
+return <<"HEAD";
+<HEAD>
+<TITLE>
+Question $question
+</TITLE>
+</HEAD>
+<BODY>
+<FORM METHOD="POST" ACTION="$ROOT/marker$EXTENSION">
+<INPUT TYPE="hidden" NAME="questionnum" VALUE="$question">
+HEAD
+}
+
+sub submit_button {
+return <<"HEAD";
+<INPUT TYPE="submit" NAME="$_[0]" VALUE="$_[1]">
+HEAD
+}
+
+sub form_end {
+return;
+return <<"HEAD";
+</FORM>
+</BODY>
+HEAD
+}
+
+sub split_question {
+  local ($in_question_text) = @_;
+  local ($ndex, @info, $answer_text, $question_text, $directions_text, $hint_text);
+
+  # split up each question still further
+  $question_splitpattern = "$newblank($dtag|$etag|$htag|$mtag|$nmtag)";
+  @info = split(/$question_splitpattern/i, $in_question_text);
+
+  # remember out actual question
+  $question_text = $info[0];
+  $directions_text = "";
+  $hint_text = "";
+  $explain_text = "";
+
+  $ndex = 1;
+  while ($tag = $info[$ndex]) {
+    # directions
+    if ($tag =~ /$dtag/i) {
+      $directions_text = $info[$ndex + 1];
+      }
+    elsif ($tag =~ /$etag/i) {
+      $explain_text = $info[$ndex + 1];
+      }
+    elsif ($tag =~ /$htag/i) {
+      $hint_text = $info[$ndex + 1];
+      }
+    elsif ($tag =~ /$nmtag/i) {
+      print "$info[$ndex + 1]";
+      }
+    else {
+      die "unrecognized tag $tag \n";
+      }
+    $ndex += 2;
+    }
+  return ($directions_text, $question_text, $hint_text, $explain_text);
+}
+
+sub truequestion {
+  local ($in_question_text) = @_;
+  local ($temp, @info, $directions_text, $question_text, , $explain_text, @answer_list, $hint_text);
+
+  ($directions_text, $question_text, $hint_text, $explain_text) = &split_question($in_question_text);
+  @answer_list = (&right_answer("true"," "), &wrong_answer("false"," "));
+  $temp = &tfhead();
+  $temp .= $directions_text . "<P>" . $question_text;
+  #&anstextdbmwrite("$question",join("\f",@answer_list));
+  $temp .= &reconstruct_answer_text(@answer_list);
+
+  #&Bigdbm::write(*cntrl, *zdbm, "$question", $temp);
+  $qdb->write("$question", $temp);
+  $hdb->write("$question", $hint_text);
+  $edb->write("$question", $explain_text);
+  }
+
+sub falsequestion {
+  local ($in_question_text) = @_;
+  local ($temp, @info, $directions_text, $question_text, $explain_text, $answer_text, $hint_text);
+
+  ($directions_text, $question_text, $hint_text, $explain_text) = &split_question($in_question_text);
+  @answer_list = (&wrong_answer("true"," "), &right_answer("false"," "));
+  $temp = &tfhead();
+  $temp .= $directions_text . "<P>" . $question_text;
+  #&anstextdbmwrite("$question",join("\f",@answer_list));
+  $temp .= &reconstruct_answer_text(@answer_list);
+  #&Bigdbm::write(*cntrl, *zdbm,"$question",$temp);
+  $qdb->write("$question", $temp);
+  $hdb->write("$question", $hint_text);
+  $edb->write("$question", $explain_text);
+  }
+
+sub eaquestion {
+  local ($in_question_text) = @_;
+  local (@answer_list, $ndex, $tag, $temp, @info, $directions_text, $ans,
+        $question_text, $answer_text, $hint_text, $explain_text);
+
+  # split question
+  ($directions_text, $question_text, $hint_text, $explain_text) = &split_question($in_question_text);
+
+  @info = ();
+  # split up the answers still further
+  $answer_splitpattern = "$newblank($rtag|$wtag)";
+  @info = split(/$answer_splitpattern/i, $question_text);
+
+  # remember actual question
+  $question_text = $info[0];
+  
+  @answer_list = ();
+  $ndex = 1;
+  $tag = $info[$ndex];
+  while ($tag = $info[$ndex]) {
+    # right answer
+    if ($tag =~ /$rtag/i) {
+      # answers must be all on one line!
+      @ans = split(/\n/,$info[$ndex+1]);
+      push(@answer_list, &right_answer($ans[0],$ans[0]));
+      }
+    else {
+      die "unrecognized tag $tag \n";
+      }
+    $ndex += 2;
+    }
+
+  $temp = '';
+  $temp = &eahead();
+  $temp .= $directions_text . "<P>" . $question_text;
+  #$temp .= &reconstruct_answer_text(@answer_list);
+  $temp .= "<P> Put your answer here <INPUT TYPE=\"text\" NAME=\"answer\" VALUE=\"\" SIZE=30>";
+  $temp .= "\n<P>\n" . &submit_button("ignore", "Click Here When Done");
+  $qdb->write("$question", $temp);
+  $hdb->write("$question", $hint_text);
+  $edb->write("$question", $explain_text);
+  }
+
+# many choice question
+sub mmquestion {
+  local ($in_question_text) = @_;
+  local ($tag, $ndex, @info, @answer_list, $question_text, $directions_text,
+        @letters, $temp, $hint_text, $explain_text);
+
+  ($directions_text, $question_text, $hint_text, $explain_text) = &split_question($in_question_text);
+  # split up the answers still further
+  $answer_splitpattern = "$newblank($rtag|$wtag)";
+  @info = split(/$answer_splitpattern/i, $question_text);
+
+  # remember actual question
+  $question_text = $info[0];
+
+  @answer_list = ();
+  $ndex = 1;
+  while ($tag = $info[$ndex]) {
+    # right answer
+    if ($tag =~ /$wtag/i) {
+      push(@answer_list, &wrong_answer($info[$ndex+1], " "));
+      }
+    elsif ($tag =~ /$rtag/i) {
+      push(@answer_list, &right_continuing_answer($info[$ndex+1], " "));
+      }
+    else {
+      die "unrecognized tag $tag \n";
+      }
+    $ndex += 2;
+    }
+
+  $temp = &mmhead();
+  $temp .= $directions_text . $question_text;
+  $temp .= &reconstruct_menu_answer_text('MULTIPLE',@answer_list);
+  $qdb->write("$question", $temp);
+  $hdb->write("$question", $hint_text);
+  $edb->write("$question", $explain_text);
+  }
+
+sub mcquestion {
+  local ($in_question_text) = @_;
+  local ($tag, $ndex, @info, @answer_list, $question_text, $directions_text,
+        @letters, $temp, $hint_text, $explain_text);
+
+  ($directions_text, $question_text, $hint_text, $explain_text) = &split_question($in_question_text);
+  @letters = ('a'..'z');
+
+  # split up the answers still further
+  $answer_splitpattern = "$newblank($rtag|$wtag)";
+  @info = split(/$answer_splitpattern/i, $question_text);
+
+  # remember actual question
+  $question_text = $info[0];
+  
+  @answer_list = ();
+  $ndex = 1;
+  while ($tag = $info[$ndex]) {
+    # right answer
+    if ($tag =~ /$wtag/i) {
+      push(@answer_list, &wrong_answer(@letters[$ndex/2],$info[$ndex+1]));
+      }
+    elsif ($tag =~ /$rtag/i) {
+      push(@answer_list, &right_answer(@letters[$ndex/2],$info[$ndex+1]));
+      }
+    else {
+      die "unrecognized tag $tag \n";
+      }
+    $ndex += 2;
+    }
+
+  $temp = &mchead();
+  $temp .= $directions_text . $question_text;
+  $temp .= &reconstruct_answer_text(@answer_list);
+  $qdb->write("$question", $temp);
+  $hdb->write("$question", $hint_text);
+  $edb->write("$question", $explain_text);
+  }
+
+sub reconstruct_menu_answer_text {
+  local ($multiple, @answers) = @_;
+  local ($value, $text, $s, $size);
+ 
+  $size = scalar(@answers);
+  $s = "<P> <SELECT NAME=\"answer\" SIZE=$size $multiple>";
+  foreach (@answers) {
+    ($value, $text) = split(/\e/,$_);
+    $s .= '<OPTION> ' . $value;
+    }
+  $s .= '</SELECT>';
+  $s .= "\n<P>\n";
+  $s .= '<INPUT TYPE="hidden" NAME="answer" VALUE="">';
+  $s .= &submit_button("ignore", "Click Here When Done");
+  return $s;
+  }
+ 
+sub reconstruct_answer_text {
+  local (@answers) = @_;
+  local ($value, $text, $s);
+
+  $s = "";
+  foreach (@answers) {
+    ($value, $text) = split(/\e/,$_);
+    $s .= "<BR>";
+    $s .= &submit_button("answer", $value);
+    $s .= $text . "\n";
+    }
+  return $s;
+  }
+
+sub wrong_answer {
+  local ($key_text,$answer_text) = @_;
+
+  return $key_text . "\e" . $answer_text;
+  }
+
+# First argument is the answer, second argument is the previous answer?
+sub right_continuing_answer {
+  local ($key_text,$answer_text) = @_;
+
+  $key_text =~ s/^\s*//;
+  $key_text =~ s/\s*$//;
+  if (! defined($answerdb{"$question"})) 
+    { $answerdb{"$question"} = "\f" . $key_text . "\e"; }
+  else 
+    {$answerdb{"$question"} = $answerdb{"$question"} .  $key_text . "\e";}
+  $answer_text = $key_text . "\e" . $answer_text;
+  return $answer_text;
+  }
+
+# First argument is the answer, second argument is the previous answer?
+sub right_answer {
+  local ($key_text,$answer_text) = @_;
+
+  $key_text =~ s/^\s*//;
+  $key_text =~ s/\s*$//;
+  $answerdb{"$question"} = $answerdb{"$question"} . "\f" . $key_text;
+  $answer_text = $key_text . "\e" . $answer_text;
+  return $answer_text;
+  }
+
+sub saquestion {
+  &form_start();
+  #print OUT &sahead() . $_[0] ;
+  &form_end();
+  }
+
+sub tfhead {
+local ($sec);
+
+($sec) = split("\:",$question);
+return <<"HEAD";
+<H1> Question $sec True/False </H1>
+<HR>
+<P>
+HEAD
+}
+
+sub mmhead {
+local ($sec);
+ 
+($sec) = split("\:",$question);
+return "$sec) ";
+return <<"HEAD";
+<H1>Question $sec Several Choices Possible </H1>
+<HR>
+HEAD
+}
+
+sub mchead {
+local ($sec);
+
+($sec) = split("\:",$question);
+return <<"HEAD";
+<H1>Question $sec Multiple Choice </H1>
+<HR>
+<P>
+HEAD
+}
+
+sub eahead {
+local ($sec);
+
+($sec) = split("\:",$question);
+return <<"HEAD";
+<H1>Question $sec Exact Answer </H1>
+<HR>
+<P>
+HEAD
+}
+
+sub sahead {
+local ($sec);
+
+($sec) = split("\:",$question);
+return <<"HEAD";
+<H1>Short Answer Question</H1>
+<HR>
+<P>
+HEAD
+}

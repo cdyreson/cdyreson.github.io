@@ -1,0 +1,49 @@
+SurveyMaker by Curtis Dyreson <curtis@cs.jcu.edu.au> 
+ 
+SurveyMaker is a system to put surveys onto the WWW.  This is the 
+SurveyMaker installation package.  You should do the following
+to get it working.  You need to have PERL version 5.0 or above.
+
+0) If you don't already have it, get CGI.pm off of the WWW.  It should
+   be VERSION 5.0 or above!  
+
+1) Edit SurveyMakerinstall - configure the short configuration section at the
+   start to what your system requires.
+
+2 OPTIONAL) Configure MyDB.pm to use something other than BSD dbm files.
+   I have included a MyTextDB.pm that uses a TextDB file (a text dbm 
+   file that should work on any machine), but basically you have to 
+   make sure that your machine supports the kind of dbm file that you
+   configure MyDB with (BSD is a great dbm, GDBM is good too).
+
+3) make install - This runs the SurveyMakerinstall script and puts files into
+   CGI-bin directories and other directories as needed.
+
+4) Copy the files in the pm/ directory to the directory that you specified
+   in the configuration.  Make sure that the WWW user can read these pm/
+   files.
+
+5 OPTIONAL) Edit Makefile - Configure the short configuration section at
+  the start to what your system requires, this is only for the example.
+
+6 OPTIONAL) make example - This builds the example.  Now you are off and
+  running.
+
+The installation package contains the following files:
+
+Makefile -- obvious
+SurveyMakerinstall -- installation script in Perl (YOU WILL EDIT THIS!)
+SurveyMaker.proto -- prototype for SAMaker to configure during make install
+marker.proto -- prototype for CGI-bin script to configure during make install
+poster.proto -- prototype for CGI-bin script to configure during make install
+reviewer.proto -- prototype for CGI-bin script to configure during make install
+starter.proto -- prototype CGI-bin script to configure during make install
+stats.proto -- prototype CGI-bin script to configure during make install
+regrader.proto -- prototype CGI-bin script to configure during make install
+example.tex -- an example lesson
+pm -- a list of useful pm that the scrips use
+MyDB.pm -- a dbm interface configured to use BSD
+MyTextDB.pm -- a dbm interface configured to use a homegrown TextDB
+my.Makefile -- The kind of Makefile a guru like Tony Sloane uses for his 
+               surveys. A make example.html will do everything for you but 
+               brush your teeth

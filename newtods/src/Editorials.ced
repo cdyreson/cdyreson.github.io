@@ -1,0 +1,682 @@
+:include[macros]
+:arg1[
+<br/>
+<font face=":myFont[]">
+<h3>:journalAcronym[] Editorials</h3>
+</font>
+<blockquote>
+        <A 
+          href="editorials/Mar15.html"
+          onMouseOver="Editorial0315.src=backArrow.src"
+          onMouseOut="Editorial0315.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="March 2015" 
+           name="Editorial0315"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial: Updates to the Editorial Board
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - March 2015
+        </font>
+        <br/>
+        <font face=":myFont[]">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Christian S. Jensen 
+        (Also <a style="text-decoration:colon[]none"
+          href="http://dx.doi.org/10.1145/2747020">in PDF from the 
+          ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="editorials/Sep14.html"
+          onMouseOver="Editorial0914.src=backArrow.src"
+          onMouseOut="Editorial0914.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="September 2014" 
+           name="Editorial0914"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial 
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - September 2014
+        </font>
+        <br/>
+        <font face=":myFont[]">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Christian S. Jensen 
+        (Also <a style="text-decoration:colon[]none"
+          href="http://dx.doi.org/10.1145/2662448">in PDF from the 
+          ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="DoubleBlindPolicy.htm"
+          onMouseOver="RickDouble.src=backArrow.src"
+          onMouseOut="RickDouble.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="March 2007" 
+           name="RickDouble"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Single- versus Double-Blind Reviewing
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - March 2007
+        </font>
+        <br/>
+        <font face=":myFont[]">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/1168092.1168094">in PDF from the 
+          ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="PreviousEditorials.html#Fourth"
+          onMouseOver="RickDec.src=backArrow.src"
+          onMouseOut="RickDec.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="December 2001" 
+           name="RickDec"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial
+        </font>
+        </A>
+        <font face=":myFont[]">
+          - December 2001
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also 
+           <a style="text-decoration:colon[]none"
+             href="http://doi.acm.org/10.1145/503099.505055">in PDF 
+             from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          HREF="PreviousEditorials.html#Third"
+          onMouseOver="RickSep.src=backArrow.src"
+          onMouseOut="RickSep.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="September 2001" 
+           name="RickSep"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial
+        </font>
+        </A>
+        <font face=":myFont[]">
+         - September 2001
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also 
+           <a style="text-decoration:colon[]none"
+                 href="http://doi.acm.org/10.1145/502030.505049">in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="PreviousEditorials.html#Second"
+          onMouseOver="KimSep.src=backArrow.src"
+          onMouseOut="KimSep.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="September 1995" 
+           name="KimSep"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Editorial Directions
+        </font>
+        </A>
+        <font face=":myFont[]">
+          - September 1995
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Won Kim
+        (Also
+           <a style="text-decoration:colon[]none"
+                 href="http://doi.acm.org/10.1145/211414.569785">in 
+           PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="PreviousEditorials.html#First"
+          onMouseOver="KimMar.src=backArrow.src"
+          onMouseOut="KimMar.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="March 1995" 
+           name="KimMar"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Charter and Scope
+        </font>
+        </A>
+        <font face=":myFont[]">
+         -  March 1995
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Won Kim
+           (Also
+           <a style="text-decoration:colon[]none"
+                 href="http://doi.acm.org/10.1145/202106.569784">in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="PreviousEditorials.html#HsiaoDec"
+          onMouseOver="HsiaoDec.src=backArrow.src"
+          onMouseOut="HsiaoDec.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="December 1980" 
+           name="HsiaoDec"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           TODS - The First Three Years (1976-1978)</font></A>
+        <font face=":myFont[]">
+         - December 1980 
+        </font>
+        <br> 
+        <font face=":myFont[]">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by David K. Hsiao
+        (Also
+           <a style="text-decoration:colon[]none"
+                 href="http://doi.acm.org/10.1145/320610.320611">in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="PreviousEditorials.html#HsiaoMar"
+          onMouseOver="HsiaoDec.src=backArrow.src"
+          onMouseOut="HsiaoDec.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="March 1976" 
+           name="HsioDec"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">
+        <font face=":myFont[]">
+        Aim and Scope
+        </font>
+        </a>
+        <font face=":myFont[]">
+        - March 1976
+        </font>
+        <font face=":myFont[]">
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by David K. Hsiao
+        (Also
+           <a style="text-decoration:colon[]none"
+              href="http://doi.acm.org/10.1145/320434.320436"
+           >in PDF from the ACM DL</a>)
+        </font>
+    <font face=":myFont[]">
+<br/>
+<br/>
+<br/>
+</blockquote>
+ <h3><a href="http://www.acm.org/sigmod/record" style="text-decoration:colon[]none">SIGMOD Record</a> <a name="SIGMODRecordColumns">columns</a></h3>
+</font>
+<blockquote>
+        <A
+          href="editorials/Sep09.pdf"
+          onMouseOver="Sep09.src=backArrow.src"
+          onMouseOut="Sep09.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="September 09"
+           name="Sep09"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Changes to the :journalAcronym[] Editorial Board and
+           :journalAcronym[] Web Site</font></A>
+        <font face=":myFont[]">
+          - September 2009
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Z.&nbsp;Meral&nbsp;&Ouml;zsoyo&#287;lu
+        (Also <a style="text-decoration:colon[]none"
+          href="http://www.sigmod.org/publications/sigmod-record/0909/p52.tods.meral.pdf"
+           >in PDF from the SIGMOD website</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/Sep07.html"
+          onMouseOver="Sep07.src=backArrow.src"
+          onMouseOut="Sep07.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="September 07"
+           name="Sep07"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           ACM :journalAcronym[] EIC Selection</font></A>
+        <font face=":myFont[]">
+          - September 2007
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by M. Tamer &Ouml;zsu
+        (Also <a style="text-decoration:colon[]none"
+          href="http://portalparts.acm.org/1330000/1324185/fm/frontmatter.pdf"
+           >in PDF from the ACM DL (see page 5)</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/DoubleBlindFAQ.html"
+          onMouseOver="Mar07.src=backArrow.src"
+          onMouseOut="Mar07.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="March 07"
+           name="Mar07"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Frequently Asked Questions about DBR</font></A>
+        <font face=":myFont[]">
+           - March 2007
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/1276301.1276317"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/Dec2006.html"
+          onMouseOver="Dec2006.src=backArrow.src"
+          onMouseOut="Dec2006.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="December 2006"
+           name="Dec2006"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Changes to the :journalAcronym[] Editorial Board
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - December 2006
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/1228268.1228289"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="http://doi.acm.org/10.1145/1168092.1168094"
+          onMouseOver="Sep2006.src=backArrow.src"
+          onMouseOut="Sep2006.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="September 2006"
+           name="Sep2006"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">Single- vs. Double-Blind Reviewing: An Analysis of the Literature</font></A><font face=":myFont[]"> (PDF from the ACM DL) - September 2006<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;written by Richard T. Snodgrass
+        </font>
+<br/>
+        <A
+          href="editorials/Dec05.html"
+          onMouseOver="Dec05.src=backArrow.src"
+          onMouseOut="Dec05.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="December 05"
+           name="Dec05"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Changes to the :journalAcronym[] Editorial Board
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - December 2005
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/1107499.1107521"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/Sep05.html"
+          onMouseOver="Sep05.src=backArrow.src"
+          onMouseOut="Sep05.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="September 05"
+           name="Sep05"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           CMM and ACM :journalAcronym[]
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - September 2005
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/1084805.1084833"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/March05.html"
+          onMouseOver="March05.src=backArrow.src"
+          onMouseOut="March05.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="March 05"
+           name="March05"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Developments at ACM :journalAcronym[]
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - March 2005
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/1058150.1058174"
+           >in PDF</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/EBChanges.html"
+          onMouseOver="EBChanges.src=backArrow.src"
+          onMouseOut="EBChanges.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="EB Changes"
+           name="EBChanges"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Changes to the ACM :journalAcronym[] Editorial Board
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - December 2004
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://portalparts.acm.org/1050000/1041410/bm/backmatter.pdf"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/ACMDevelopments.html"
+          onMouseOver="ACMDevelopments.src=backArrow.src"
+          onMouseOut="ACMDevelopments.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Special Issues"
+           name="ACMDevelopments"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Developments at ACM :journalAcronym[]
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - June 2004
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://portalparts.acm.org/1030000/1024694/fm/frontmatter.pdf"
+           >in PDF, see page 4, from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/TODSSpecialIssues.html"
+          onMouseOver="TODSSpecialIssues.src=backArrow.src"
+          onMouseOut="TODSSpecialIssues.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Special Issues"
+           name="TODSSpecialIssues"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Special Issues
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - March 2004
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://portalparts.acm.org/980000/974121/fm/frontmatter.pdf"
+           >in PDF, see page 5, from the ACM DL</a>)
+        </font>
+<br/>
+        <A
+          href="editorials/TODSDevelopments.html"
+          onMouseOver="TODSDevelopments.src=backArrow.src"
+          onMouseOut="TODSDevelopments.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Developments at ACM"
+           name="TODSDevelopments"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Developments at ACM :journalAcronym[]
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - December 2003
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/959060.959062"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="editorials/TODSStatistics.html"
+          onMouseOver="TODSStatistics.src=backArrow.src"
+          onMouseOut="TODSStatistics.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Journal Relevance" 
+           name="TODSStatistics"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Journal Relevance
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - September 2003
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://doi.acm.org/10.1145/945721.945723"
+           >in PDF from the ACM DL</a>)
+        </font>
+<br/>
+        <A 
+          href="editorials/TODSReviewers.html"
+          onMouseOver="TODSReviewers.src=backArrow.src"
+          onMouseOut="TODSReviewers.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="ACM TODS Reviewers" 
+           name="TODSReviewers"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           ACM :journalAcronym[] Reviewers
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - June 2003
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://www.acm.org/sigmod/record/issues/0306/F1-june031-rick.pdf"
+           >in PDF from SIGMOD Record</a>)
+        </font>
+<br/>
+        <A 
+          href="InternetAge.html"
+          onMouseOver="InternetAge.src=backArrow.src"
+          onMouseOut="InternetAge.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="ACM TODS in this Internet Age" 
+           name="InternetAge"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           ACM :journalAcronym[] in this Internet Age
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - March 2003
+        </font>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://www.acm.org/sigmod/record/issues/0303/rick-tods.pdf"
+           >in PDF from SIGMOD Record</a>)
+        </font>
+<br/>
+        <A 
+          href="ReviewerRights.html"
+          onMouseOver="RightsSIGMOD.src=backArrow.src"
+          onMouseOut="RightsSIGMOD.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="Rights of TODS Readers, Authors, and Reviewers"
+           name="RightsSIGMOD"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           Rights of :journalAcronym[] Readers, Authors, and Reviewers
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - December 2002
+        </font>
+        <br>
+        <font face=":myFont[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             written by Richard T. Snodgrass
+        (Also <a style="text-decoration:colon[]none"
+          href="http://www.acm.org/sigmod/record/issues/0212/RickSnodgrass.pdf"
+           >in PDF from SIGMOD Record</a>)
+        </font>
+<br/>
+        <A 
+          href="http://www.acm.org/sigmod/record/issues/0209/ricksnodgrass.pdf"
+          onMouseOver="Misconceptions.src=backArrow.src"
+          onMouseOut="Misconceptions.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="TODS Perceptions and Misconceptions" 
+           name="Misconceptions"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif"/>&nbsp;
+        <font face=":myFont[]">
+           :journalAcronym[] perceptions and misconceptions, in PDF
+        </font>
+        </A>
+        <font face=":myFont[]">
+           - September 2002
+        </font>
+        <font face=":myFont[]">
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              written by Richard T. Snodgrass 
+           (Also available in
+           <a style="text-decoration:colon[]none"
+              href="http://portalparts.acm.org/610000/601858/fm/frontmatter.pdf">in PDF, see page 6, from the ACM DL</a>) 
+        </font>
+</blockquote>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Editorials]

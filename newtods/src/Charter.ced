@@ -1,0 +1,142 @@
+:include[macros]
+:arg1[
+<font face="arial">
+The ACM Transactions on Database Systems 
+(<i>TODS</i>) publishes original
+archival papers in the area of databases and closely related disciplines. The
+majority of the papers that have appeared in <i>TODS</i> address the logical and
+technical foundation of data management.
+</font></p><p>
+<font face="arial">The international Editorial Board is composed of recognized experts 
+in the various subareas of this field, all with a commitment to maintain <i>TODS</i> 
+as the premier publication in this active field.
+The Editorial Board maintains contact with ACM's
+Special Interest Group on Management and Organization of Data (<a href="http://www.sigmod.org/">SIGMOD</a>),
+as well as with other societies, to encourage submittal of advanced and
+original papers. When appropriate, concise results may be submitted as
+technical notes; technical comments on earlier publications are welcome as
+well.
+</font></p><p>
+<font face="arial">
+:journalAcronym[] was founded by David
+K.&nbsp;Hsiao, with the first issue appearing in March, 1975; 
+Robert W.&nbsp;Taylor took over the editorship five years later
+and Gio Wiederhold five years after that, successively
+raising the prestige and visibility of this journal. 
+Won Kim served from 1992 for nine years, maintaining the excellence of 
+the journal while increasing 
+coverage of systems-related issues and decreasing the time to publication. 
+Under the stewardship of Richard T. Snodgrass, who took over in 2001,
+:journalAcronym[] improved its service to readers and authors by shortening
+the turnaround time on all papers to a guaranteed maximum of five months,
+adopting double-blind reviewing, working with conferences to
+secure the best papers, and becoming the first publication to implement
+all of the <a href="http://www.acm.org/publications/policies/RightsResponsibilities">ACM Rights and Responsibilities</a>.
+Z.&nbsp;Meral&nbsp;&Ouml;zsoyo&#287;lu, who was Editor-in-Chief from 2007
+to May 2014, retained these innovations.  The current Editor-in-Chief,
+Christian S.&nbsp;Jensen, took over in June 2014.
+</font></p><p>
+<font face="arial"><i>TODS</i> has evolved to
+become the premier database journal.
+Summarizing a citation analysis of database literature, considering over
+100,000 citations, the web page
+<a href="http://www.acm.org/sigmod/dblp/db/about/top.html">http://www.acm.org/sigmod/dblp/db/about/top.html</a> 
+lists the top-cited
+papers and books. Thirty <i>TODS</i> papers appear on this list; 31 papers
+were from all other journals combined. <i>TODS</i> also dominated all
+conferences. The top-cited database paper of all time, Peter P.-S.&nbsp;Chen's
+"The Entity-Relationship Model," appeared in the inaugural issue of 
+<i>TODS</i>.
+</font></p><p>
+<font face="arial">Impact correlates with journal accessibility (the causality
+probably goes both ways).  Of
+course, the journal (including all past issues) appears
+in the <a href="http://www.acm.org/dl">ACM Digital Library</a> and is thus 
+available to the many individual and
+institutional DL subscribers. <i>TODS</i> is also included in the 
+<a href="http://www.sigmod.org/publications/anthology/">SIGMOD Anthology</a> and 
+<a href="http://www.sigmod.org/publications/ds-collection">SIGMOD <i>Digital Symposium Collection</i></a>
+CDROM publications. 5000 copies of the Anthology and DiSC have been sent all over
+the world. These disparate media (print, web, CDROM, DVDROM),
+widely distributed, ensure that <i>TODS</i> articles are easily available to
+database researchers.
+</font></p><p>
+<font face="arial">The existence of <i>TODS</i> has helped to define the field of database 
+research.  It encompasses the development, formalization, and validation of 
+abstractions and models to describe database applications and the design and
+implementation methods for organizing and processing data on computer
+hardware.
+</font></p><p>
+<font face="arial"><i>TODS</i> 
+welcomes papers on a full range of database research in the
+management of diverse forms of data. Such subjects include: data
+modeling, database languages, database theory, query processing,
+access methods and indexing, security and privacy, transaction 
+management, fault tolerance, distribution, performance, data
+storage, data mining, and novel applications and infrastructures
+exploiting database technology.
+</font></p><p>
+<font face="arial"><i>TODS</i> encourages papers that explore the above subjects in the context 
+of large distributed networks of computers, parallel or multiprocessing
+computers, or new data devices (including data storage devices, data capture
+devices, 
+and data presentation devices). <i>TODS</i> also encourages papers that describe
+emerging data-intensive applications that cannot be satisfied by the current
+database technology.
+</font></p><p>
+<font face="arial"><i>TODS</i> welcomes papers that both lay theoretical foundations for database
+management and those that provide new insights into the design and
+implementation of large-scale database management systems, database
+application 
+development tools, database access interface tools, and database connectivity
+tools for heterogeneous database systems. <i>TODS</i> also accepts papers that
+describe user and database administration experiences and issues in
+large-scale real-world database installations. The emphasis on integration
+of theory and practice is an attempt to encourage authors of theory papers
+to consider applicability and/or implementability of the theoretical
+results, while encouraging authors of systems papers to reflect on the
+theoretical results that may have been used in building the systems and/or
+to offer suggestions on issues that may require theoretical treatment.  
+</font></p><p>
+<font face="arial"><I>TODS</I> also solicits focused surveys on topics
+relevant to <i>TODS</i>. These should be deep and will sometimes be quite narrow,
+but should make a contribution to our understanding of an important area or
+subarea of databases. More general surveys that are intended for a
+broad-based Computer Science audience or surveys that may influence other
+areas of computing research should continue to go to <a href="http://www.acm.org/surveys">ACM Computing
+Surveys</a>. Brief surveys on recent developments in database research are more
+appropriate for <a href="http://www.sigmod.org/publications/sigmod-record">ACM SIGMOD
+Record</a>. <i>TODS</i> surveys should be educational to the 
+database audience by presenting a relatively well-established body of
+database research.
+</font></p><p>
+<font face="arial">For additional information on the types of papers <i>TODS</i> 
+will accept, see <a
+href="http://www.acm.org/tods/Authors.html#ManuscriptPreparation">
+Editorial Guidelines</a>.
+</font></p><p>
+<font face="arial">In terms of the <a href="http://beta.reviews.com/">ACM Computing
+Reviews </a> (1998) <a href="http://www.acm.org/class/1998/">classification</a>,
+the primary area of <i>TODS</i> is all of area H (Information Systems), with a
+strong focus on subarea H2 (Database Management). Articles in subarea H4
+(Information Systems Applications) would be appropriate only if there were
+a strong scientific basis in database technology. </font></p><p>
+<font face="arial">Database systems may employ Specialized Languages (D.3.2) and unique
+Datatypes and Structures (D.3.3). Effective information retrieval and
+management require inferential power, and important advances are being
+made in this area. Topics Deduction and Theorem Proving (I.2.3), Knowledge
+Representation Formalisms and Methods (I.2.4), Learning (I.2.6), and
+Problem Solving, Control Methods, and Search (I.2.8) are all relevant when
+they are applied to large collections of data.
+</font></p><p>
+<font face="arial">Since files provide a foundation for databases, the topic of Files 
+(E.5) is covered as well, and many papers expand on operating system concerns,
+Storage Management (D.4.3), Reliability (D.4.5), Security and Protection
+(D.4.6), Organization and Design (D.4.7), and Performance (D.4.8). <i>TODS</i>
+publishes papers dealing with hardware systems for databases, but avoids those
+about specific devices, so that the topic Storage Hardware (B.3.2) is covered
+only in part.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[TODS Charter and Scope]

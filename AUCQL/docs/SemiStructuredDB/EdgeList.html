@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./SemiStructuredDB/EdgeList.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_edgelist">NAME EdgeList</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new(node_from,_list_a)">new(Node from, list a)</a></li>
+		<li><a href="#insert(edge_edge)">insert(Edge edge)</a></li>
+		<li><a href="#enumerateedges()"><code>enumerateEdges()</code></a></li>
+		<li><a href="#enumeratetonodes()"><code>enumerateToNodes()</code></a></li>
+		<li><a href="#image()"><code>image()</code></a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_edgelist">NAME EdgeList</a></h1>
+<p>Class encapsulating a set of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a>s.</p>
+<p>This package is part of <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB.html">the SemiStructuredDB manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>An EdgeList is a data type for columns in a 
+database <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./OODatabase/Table.html">the Table manpage</a>.  An EdgeList cannot be used as a key.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new(node_from,_list_a)">new(Node from, list a)</a></h2>
+<ul>
+<li><strong><a name="item_from">from</a></strong><br />
+</li>
+- The reference to a the from node object.
+<p></p>
+<li><strong><a name="item_a">a</a></strong><br />
+</li>
+- The reference to a list of edges to store, often it is an empty list.
+<p></p></ul>
+<p>Construct an empty List</p>
+<p>
+</p>
+<h2><a name="insert(edge_edge)">insert(Edge edge)</a></h2>
+<ul>
+<li><strong><a name="item_edge">edge</a></strong><br />
+</li>
+- The <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> to insert.
+<p></p></ul>
+<p>Inserts an <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the SemiStructuredDB::Edge manpage</a> into this list.</p>
+<p>
+</p>
+<h2><a name="enumerateedges()"><code>enumerateEdges()</code></a></h2>
+<p>Return an enumeration of the <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Edge.html">the Edge manpage</a>s in the EdgeList.  
+OK, we have to fake it in Perl since this is a Java concept</p>
+<p>
+</p>
+<h2><a name="enumeratetonodes()"><code>enumerateToNodes()</code></a></h2>
+<p>Return an enumeration of the 'to' nodes in the EdgeList.  
+OK, we have to fake it in Perl since this is a Java concept</p>
+<p>
+</p>
+<h2><a name="image()"><code>image()</code></a></h2>
+<p>Create a formatted string of all the elements in the list</p>
+
+</body>
+
+</html>

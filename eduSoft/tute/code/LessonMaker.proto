@@ -1,0 +1,283 @@
+&&&PERL&&& -I&&&SAMAKERDIR&&& -w
+
+#-----------------------------------------------------------------------
+
+=head1 NAME
+
+LessonMaker - a program to create a lesson with embedded self-assessments
+  on the WWW.  
+
+=head1 SYNOPSIS
+
+ LessonMaker \
+   [-help] \
+   [-verbose] \
+   [-version] \
+   [-verbatim_answers] \
+   [-embed] \
+   [-format format] \
+   -database directory \
+   -lesson page 
+
+=head1 DESCRIPTION
+
+B<LessonMaker> is a program to create a lesson containing
+self-assessment from an input file.
+
+=head1 EXAMPLE USAGE
+
+Create a lesson using the SinglePage format in the current directory
+
+ LessonMaker \
+   -embed \
+   -format SinglePage \
+   -database ./dbs \
+   -lesson lesson.html <types.source
+
+=cut
+
+#-----------------------------------------------------------------------
+  use strict;
+  #require 5.002;
+ 
+  use Getopt::Long;
+  use English;
+
+  use TextDB;
+  require "LessonMakerTags.pm";
+
+  require "cleanWS.pm";
+
+# Global variables
+  my $LESSONMAKERNAME = 'LessonMaker';
+  my $FORMAT = '';
+  my $VERSION = '1.1';
+  my $PATH = '';
+  my $VERBOSE = '';
+  my $EMBED = '';
+  my $SHOW_VERSION = '';
+  my $HTML_IN_ANSWERS = '';
+  my $LESSON_PAGE = '';
+  my $SHOW_HELP = '';
+  my $HTMLBASE = '';
+  my $RETURN_PAGE = '';
+
+  my @tokens = ();
+
+# Global counters
+  my $lessonCounter = 0;
+  my $lessonText = "";
+
+# Assume no parsing pattern
+  my $Pattern = "";
+
+  &ParseCommandLine();
+
+# check to see if test directory exists
+  (-e $PATH) || die "no test directory $PATH\n";
+
+# Initialize the lexical analyzer
+  &initTokenizer();
+# Parse it
+  &parse();
+ 
+# Emit the lesson page
+  &emitLessonPage();
+
+#------------------------------------------------------------------------
+# Print out the page that is the lesson page
+#------------------------------------------------------------------------
+sub emitLessonPage {
+  open(OUT,">$LESSON_PAGE") || die "Sorry, couldn't create $LESSON_PAGE\n";
+  print OUT $lessonText;
+  print OUT "\n";
+  close(OUT);
+}
+
+#------------------------------------------------------------------------
+# parse the input
+#------------------------------------------------------------------------
+sub parse { 
+  $lessonText .= &getToken();
+  &lessons(); 
+  if (@tokens) { $lessonText .= &getToken(); }
+}
+
+#------------------------------------------------------------------------
+# parse each lesson
+#------------------------------------------------------------------------
+sub lessons { 
+  $_ = &cleanWS(&getToken()); 
+  if (/$Tags::SelfAssessmentTitleTag/i) {
+    my $linkText = &cleanWS(&getToken());
+    $_ = &cleanWS(&getToken()); 
+    if (/$Tags::SelfAssessmentStartTag/i) {
+      my $saText = &getToken();
+      # run the text through SAMaker
+      my $lessonName = "sa$lessonCounter";
+      my $format = '';
+      if ($FORMAT) {$format = "-format $FORMAT ";}
+      my $verbose = '';
+      if ($VERBOSE) {$verbose = "-verbose $VERBOSE ";}
+      my $embed = '';
+      if ($EMBED) {$embed = "-embedded_tex '$linkText' ";}
+      $lessonCounter++;
+      if (!(-e "$PATH/$lessonName.dbs")) {
+        mkdir "$PATH/$lessonName.dbs", 0770;
+        chmod 0770, "$PATH/$lessonName.dbs";
+        print "Making directory $PATH/$lessonName.dbs\n";
+        }
+      my $prettycommand = <<"PRETTYCOMMAND";
+
+ &&&SAMAKERDIR&&&/SAMaker 
+         $verbose 
+         $format
+         $embed          
+         -database $PATH/$lessonName.dbs 
+         -entry $PATH/$lessonName.html 
+         -stats $PATH/$lessonName-stats.html
+PRETTYCOMMAND
+      print $prettycommand;
+      my $command = "&&&SAMAKERDIR&&&/SAMaker " .
+                    " $verbose $format $embed " .
+                    " -database $PATH/$lessonName.dbs " .
+                    " -entry $PATH/$lessonName.html " .
+                    " -stats $PATH/$lessonName-stats.html";
+      open (SAMAKER, "| $command") || die "could not open SAMaker";
+      if ($RETURN_PAGE) {
+        print SAMAKER "\n(RETURN-TO-WHERE) <a href=\"$RETURN_PAGE#lesson$lessonCounter\">return to lesson</a>\n$saText";
+        }
+      else {print SAMAKER $saText;}
+      close SAMAKER;
+
+      # should we embed in the lesson or just add a link?
+      $lessonText .= "\n<A NAME=\"lesson$lessonCounter\">\n";
+      if ($EMBED) {
+        my $thisPage = new TextDB();
+        open (FILE, "<$PATH/$lessonName.dbs/embedded") || die "no embed open";
+        $lessonText .= join("", <FILE>);
+        close FILE;
+        }
+      else {
+        # just use a link
+        $lessonText .= "<a href=\"$lessonName\">$linkText</a>";
+        }
+
+      # suck up the end tag
+      $_ = &cleanWS(&getToken()); 
+      if (/$Tags::SelfAssessmentEndTag/i) {
+        $lessonText .= &getToken();
+        }
+      else {&parseError("Expecting $Tags::SelfAssessmentEndTag\n");}
+      }
+    else { &parseError("Expected " . $Tags::SelfAssessmentStartTag . " tag.");}
+    }
+  else {
+    &ungetToken($_); 
+    return;
+    }
+  &lessons();
+} 
+  
+#------------------------------------------------------------------------
+# Print out an error message and die
+#------------------------------------------------------------------------
+sub parseError { 
+  my ($errorMessage) = @_;
+  print "\nERROR: $errorMessage";
+  print join("\n",@tokens);
+  exit(1);
+}
+
+#------------------------------------------------------------------------
+# replace a token in the token queue
+#------------------------------------------------------------------------
+sub ungetToken {
+  my ($token) = @_;
+  print "UNGETTING $token\n" if ($VERBOSE);
+  unshift @tokens, $token;
+} 
+ 
+#------------------------------------------------------------------------
+# get the next token from token queue
+#------------------------------------------------------------------------
+sub getToken {
+  my ($token);
+  $token = shift @tokens;
+  print "--------\n$token\n" if ($VERBOSE);
+  return $token;
+} 
+ 
+#------------------------------------------------------------------------
+# tokenize the input
+#------------------------------------------------------------------------
+sub initTokenizer {
+  # set up tags
+  my $newblank = '\n\s*';
+  
+  $Pattern = "$newblank($Tags::SelfAssessmentStartTag" .
+             "|$Tags::SelfAssessmentEndTag" . 
+             "|$Tags::SelfAssessmentTitleTag)";
+
+  # slurp standard in, ignoring comments (lines that start with %)
+  my $message = join("", <STDIN>);
+  @tokens = split(/$Pattern/i,$message);
+}
+
+#------------------------------------------------------------------------
+# ParseCommandLine() - This function parses the command line.
+#------------------------------------------------------------------------
+sub ParseCommandLine {
+  my @switches = (
+    'verbatim_answers', \$HTML_IN_ANSWERS,
+    'database=s',     \$PATH,
+    'format=s',       \$FORMAT,
+    'verbose',      \$VERBOSE,
+    'embed',        \$EMBED,
+    'version',      \$SHOW_VERSION,
+    'lesson=s',     \$LESSON_PAGE,
+    'return=s',     \$RETURN_PAGE,
+    'help',         \$SHOW_HELP,
+    );
+ 
+  &GetOptions(@switches) || die "use -help switch to display brief help\n";
+ 
+  if ($SHOW_VERSION) {
+    print "This is $LESSONMAKERNAME, version $VERSION\n\n";
+    exit 0;
+    }
+ 
+  if ($SHOW_HELP) {
+    print <<EofHelp;
+    $LESSONMAKERNAME, v$VERSION - Create a self-assessment.
+
+    Usage: 
+
+      $LESSONMAKERNAME  \
+         [-version] \
+         [-verbatim_answers] \
+         [-format format] \
+         [-embed] \
+         -db directory \
+         -stats page \
+         -lesson page \
+ 
+    Options: 
+ 
+        -help            : display this message
+        -verbose         : display verbose information as running
+        -version         : display the version of $LESSONMAKERNAME
+        -return          : display the version of $LESSONMAKERNAME
+        -verbatim_answers: do not de-HTMLize correct answers
+        -embed           : embed self-assessments as a form in the lesson
+        -format format   : the default formats to use
+        -database directory  : the directory where the SA databases will live
+        -lesson page      : the name of the lesson page 
+EofHelp
+    exit 0;
+    }
+ 
+  $LESSON_PAGE = $ARGV[1] unless $LESSON_PAGE;
+  $PATH = $ARGV[0] unless $PATH;
+ 
+}

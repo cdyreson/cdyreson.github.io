@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> An Mini-World Web: On-line POD documentation </title>
+</head>
+<META NAME="ROBOTS" CONTENT="NOFOLLOW">
+
+<H1> An Incomplete Data Cube : A Perl Implementation</H1>
+
+<hr>
+<a href="http://www.cs.jcu.edu.au/~curtis/htmls/perldoc/cube.html">POD Documenation</a> - on-line documentation for every package<BR>
+<a href="http://www.cs.jcu.edu.au/~curtis/htmls/IncompleteDataCube/perlcode/cube.tar.gz">cube.tar.gz</a> - tarred, gzipped Perl source 
+
+<H1>Dependencies</H1>
+<UL>
+<LI> Perl 5 - the code is Object-oriented
+<LI> dbm - Unix dbm files are used to store the cube
+<LI> flex (a lexical analyzer generator) - to sieve data, not for the cube per se
+<LI> development environment is UNIX (SunOS5) - untested in other environments
+(but, it's Perl so there should few portability issues!)
+</UL>
+<H1>Implemented Features</H1>
+<UL>
+<LI> unlimited number of dimensions
+<LI> unlimited number of measures (e.g., days, years, countries)
+<LI> unlimited number of units (e.g., '1 October 1997', 1995, Australia)
+<LI> any user-specified measures and units (none are "built-in")
+<LI> input data parsed from a text file
+<LI> data is "filtered" through cubette specifications
+<LI> data cube data, units, and measures stored in generic database, 
+     for speed the database is currently configured to Unix dbm files
+<LI> query satisfaction algorithm
+<LI> sum queries
+<LI> CGI-bin GUI for query engine
+<LI> sparse storage of data, only points in the cube that have data
+are materialized
+</UL>
+
+<H1>Unimplemented features (wish list)</H1>
+<UL> 
+<LI> incomplete data cube store configured to use Perl DB API
+<LI> input data to be retrieved from database using Perl DB API
+<LI> GUI to modify cubette store
+<LI> deletion/renaming of units/measures
+<LI> min - max queries
+<LI> upper - lower bounds on query results
+<LI> completeness measures for query results
+<LI> suggestion of alternate answers
+</UL> 
+<hr>
+
+Mini-World Web <a HREF="index.html">Home</a>
+| <a HREF="overview.html">Overview</a>
+| <a HREF="publications.html">Papers</a>
+| <a HREF="demo.html">Interactive demo</a>
+| <a HREF="code.html">Implementation</a>
+<p>
+<em><a href="http://www.it.bond.edu.au/cdyreson">Curtis Dyreson</a> &copy; 1997.
+All rights reserved.</em>
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube/Cubette/CubetteSpecification.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_CubetteSpecification">NAME CubetteSpecification</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_cubette_filterUnitTable_">new($cubette, $filterUnitTable, $filterMeasureTable)</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#imageWithMeasures_">imageWithMeasures()</A>
+		<LI><A HREF="#getUnits_">getUnits()</A>
+		<LI><A HREF="#getMeasures_">getMeasures()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_CubetteSpecification">NAME CubetteSpecification</A></H1>
+<P>
+The CubetteSpecification class implements the specification of a cubette in
+terms of units and measures.
+
+<P>
+This package is part of <A HREF="./IncompleteDataCube/Cubette.html">IncompleteDataCube::Cubette</A>. For more information on the cube see the &lt;a
+href=``IncompleteDataCube/Overview.html''&gt;Overview&lt;/a&gt;.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the &lt;a href=``IncompleteDataCube/License.html''&gt;license&lt;/a&gt; and
+&lt;a href=``IncompleteDataCube/License.html''&gt;version&lt;/a&gt;.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+The CubetteSpecification class implements the specification of a cubette in
+terms of units and measures.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_cubette_filterUnitTable_">new($cubette, $filterUnitTable, $filterMeasureTable)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__cubette">$cubette</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Id.html">DBMDatabase::Id</A>? The cubette.
+
+<LI><STRONG><A NAME="item__filterUnitTable">$filterUnitTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The units for each filter.
+
+<LI><STRONG><A NAME="item__filterMeasureTable">$filterMeasureTable</A></STRONG>
+<P>
+- 
+<FONT SIZE=-1>A</FONT> <A HREF="./DBMDatabase/Table.html">DBMDatabase::Table</A>. The measures for each filter.
+
+</UL>
+<P>
+Construct a specification.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Create a nice formatted image of the Cubette.
+
+<P>
+<HR>
+<H2><A NAME="imageWithMeasures_">imageWithMeasures()</A></H2>
+<P>
+Create a nice formatted image of the Cubette with measures, e.g,
+
+<P>
+<PRE>   World@continents, 1997@months, Incomplete Cube@Curtis Dyreson
+</PRE>
+<P>
+<HR>
+<H2><A NAME="getUnits_">getUnits()</A></H2>
+<P>
+Return an <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A> of the units in this cubette.
+
+<P>
+<HR>
+<H2><A NAME="getMeasures_">getMeasures()</A></H2>
+<P>
+Return an <A HREF="./DBMDatabase/IdList.html">DBMDatabase::IdList</A> of the measures in this cubette.
+
+</BODY>
+
+</HTML>

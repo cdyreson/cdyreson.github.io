@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Jumping Spider/Mini-World Web : An Overview </title>
+</head>
+
+<H1> Jumping Spider/Mini-World Web : An Overview </H1>
+<hr>
+A search engine can index a concept that
+appears entirely on a <EM>single</EM> page.
+But concepts can span <EM>several</EM> pages.
+For instance, a page on <EM>trees</EM> may be
+linked to a page on <EM>lecture notes</EM> for a <EM>data structures</EM> 
+course.  
+If the <EM>trees</EM> page does
+not specifically mention <EM>lecture notes</EM>, 
+then a search engine search for <EM>lecture notes on
+trees</EM> will, at best, only partially
+match each page.
+<P>
+Our goal is to develop a strategy to index concepts that span
+more than one page.  
+Our strategy assumes that a multi-page concept is created by a 
+<EM>concept-path</EM>, consisting of some number of hyperlinks,
+that transits through pages with specific content.
+For instance, there must be 
+a concept-path from the 
+<EM>lecture notes</EM> page to the <EM>trees</EM> page
+to create the 
+<EM>lecture notes on trees</EM> concept.
+<P>
+The key to indexing multi-page concepts is to find the 
+<EM>right</EM> concept-paths. 
+The paths must be relatively few (certainly much fewer than
+the overall number of paths in the WWW) or the cost of the
+index will be too great.  
+At the same time, the paths must be easily identified, 
+so that they are capable of being automatically computed
+and indexed quickly.
+Finally, the paths must be viable, in the sense that they
+really do connect multi-page concepts.
+<P>
+At this site, you can explore a system called a Jumping Spider/Mini-world Web,
+to index content-paths.
+The Jumping Spider/MWW uses a search engine to find the starting point in 
+a content-path and then jumps to other pages with the desired 
+content in the content-path.
+It precomputes and stores the possible jumps to attain
+reasonable query efficiency.
+
+<hr>
+
+Mini-World Web <a HREF="index.html">Home</a>
+| <a HREF="overview.html">Overview</a>
+| <a HREF="publications.html">Papers</a>
+| <a HREF="demo.html">Interactive demo</a>
+| <a HREF="code.html">Implementation</a>
+<p>
+<em><a href="http://www.it.bond.edu.au/cdyreson">Curtis Dyreson</a> &copy; 1997.
+All rights reserved.</em>
+</body>
+</html>
+

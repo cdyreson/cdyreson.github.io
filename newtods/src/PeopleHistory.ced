@@ -1,0 +1,1381 @@
+:include[macros]
+:arg1
+Ordered chronologically by when their service began.
+
+<ul>
+<b><a name="EICs"><font size="+1">Editors-in-Chief</font></a></b>
+<table>
+<tr>
+<td>
+<img width=100 src="images/csj.jpg">
+</td><td>
+<A
+style="text-decoration:colon[]none"
+href="http://www.cs.aau.dk/~csj">Christian S.&nbsp;Jensen</a>
+<br/>Aalborg University
+<br/>6/1/2014 to now
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/meral.jpg">
+</td><td>
+<A
+style="text-decoration:colon[]none"
+href="http://zmo.cwru.edu">Z.&nbsp;Meral&nbsp;&Ouml;zsoyo&#287;lu</a>
+<br/>Case Western Reserve University
+<br/>9/17/2007 to 5/31/2014
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Rick.jpg">
+</td>
+<td>
+<a
+style="text-decoration:colon[]none"
+href="http://www.cs.arizona.edu/people/rts/">Richard T. Snodgrass</a>
+<br/>University of Arizona
+<br/> 7/1/2001 to 9/16/2007
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Won_Kim.jpg">
+</td>
+<td>
+<a
+style="text-decoration:colon[]none"
+href="http://sigmod.org/dblp/db/indices/a-tree/k/Kim:colon[]Won.html">Won Kim</a>
+<br/>UniSQL, Inc.
+<br/>12/1/1992 to 6/30/2001
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/gio.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://infolab.stanford.edu/people/gio.html">Gio Wiederhold</a>
+<br/>Stanford University
+<br/>9/1/1987 to 11/30/1992
+</td>
+</tr>
+<tr>
+<td>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://sigmod.org/dblp/db/indices/a-tree/t/Taylor:colon[]Robert_W=.html">Robert W. Taylor</a>
+<br/>IBM Research Laboratory, San Jose, California
+<br/>1/1/1981 to 8/31/1987
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/DavidKHsiao.JPG">
+</td><td>
+<a
+style="text-decoration:colon[]none"
+href="http://sigmod.org/dblp/db/indices/a-tree/h/Hsiao:colon[]David_K=.html">David K. Hsiao
+</a>
+<br/> Ohio State University
+<br/>3/1/1976 to 12/31/1980
+</td>
+</tr>
+</table>
+
+<b><font size="+1">Interim Editors-in-Chief</font></b>
+<table>
+<tr>
+<td>
+<img width=100 src="images/salzberg.jpg">
+</td><td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.ccs.neu.edu/home/salzberg">Betty Salzberg</a>
+<br/>Northeastern University
+<br/>6/15/2007 to 8/24/2007
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/pix_carey.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:colon[]Michael_J=.html">Michael J. Carey</a>
+<br/>IBM Almaden Research Center
+<br/>6/1/2002 to 6/30/2002
+</td>
+</tr>
+</table>
+
+<b><a name="AEs"><font size="+1">Associate Editors</font></name></b>
+<table>
+
+<tr>
+<td>
+<img width=100 src="images/peter.haas.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://researcher.watson.ibm.com/researcher/view.php?person=us-phaas">Peter J. Haas</A>
+<br/>IBM Almaden Research Center
+<br/>1/1/2016 to 12/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/gao.cong.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://www.ntu.edu.sg/home/gaocong/">Gao Cong</A>
+<br/>Nanyang Technological University 
+<br/>1/1/2016 to 12/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/marcelo.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://web.ing.puc.cl/~marenas">Marcelo Arenas</A>
+<br/>Pontificia Universidad Catolica de Chile
+<br/>1/1/2016 to 12/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/Torsten-Grust.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://db.inf.uni-tuebingen.de/team/grust">Torsten Grust</A>
+<br/>University of Tübingen 
+<br/>1/1/2016 to 12/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/kifer.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://www.cse.psu.edu/~dkifer">Daniel Kifer</A>
+<br/>Penn State University
+<br/>2/1/2015 to 1/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/selcuk.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://aria.asu.edu/candan/">K. Sel&ccedil;uk Candan</A>
+<br/>Arizona State University
+<br/>2/1/2015 to 1/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/amol.jpg">
+</td>
+<td>
+<A style="text-decoration:colon[]none"
+HREF="http://www.cs.umd.edu/~amol/">Amol Deshpande</A>
+<br/>University of Maryland
+<br/>2/1/2015 to 1/31/2018
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img width=100 src="images/Mokbel.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www-users.cs.umn.edu/~mokbel/">Mohamed F.&nbsp;Mokbel</A>
+<br/>University of Minnesota
+<br/>2/1/2015 to 1/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/JunYang.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cs.duke.edu/~junyang/">Jun Yang</A>
+<br/>Duke University
+<br/>2/1/2015 to 1/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/KeYi.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cse.ust.hk/~yike/">Ke Yi</A>
+<br/>Hong Kong University of Science and Technology
+<br/>2/1/2015 to 1/31/2018
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/NickKoudas.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://queens.db.toronto.edu/~koudas">Nick Koudas</A>
+<br/>University of Toronto
+<br/>1/2/2014 to 1/1/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/FlorisGeerts.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://adrem.ua.ac.be/floris.geerts">Floris Geerts</A>
+<br/>University of Antwerp
+<br/>1/2/2014 to 1/1/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/IhabIlyas.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="https://cs.uwaterloo.ca/~ilyas/">Ihab Ilyas</A>
+<br/>University of Waterloo
+<br/>1/2/2014 to 1/1/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/YanleiDiao.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://people.cs.umass.edu/~yanlei/">Yanlei Diao</A>
+<br/>University of Massachusetts Amherst
+<br/>1/2/2014 to 1/1/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/ChrisRe.png">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://cs.stanford.edu/people/chrismre/">Christopher R&eacute;</A>
+<br/>Stanford University
+<br/>1/2/2014 to 1/1/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/aref.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cs.purdue.edu/homes/aref/">Walid G. Aref</A>
+<br/>Purdue University
+<br/>1/1/2012 to 12/31/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/cormode.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://dimacs.rutgers.edu/~graham/">Graham Cormode</A>
+<br/>University of Warwick
+<br/>1/1/2012 to 12/31/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/das.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://ranger.uta.edu/~gdas/">Gautam Das</A>
+<br/>University of Texas at Arlington
+<br/>1/1/2012 to 12/31/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/sabrina.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.dti.unimi.it/decapita/">Sabrina De Capitani di Vimercati</A>
+<br/>Universit&agrave; degli Studi di Milano
+<br/>1/1/2012 to 12/31/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/dirk.gif">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="https://www.cs.indiana.edu/~vgucht/">Dirk Van Gucht</A>
+<br/>Indiana University
+<br/>1/1/2012 to 12/31/2014
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/ciaccia.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www-db.deis.unibo.it/~pciaccia/">Paolo Ciaccia</A>
+<br/>University of Bologna
+<br/>4/1/2011 to 3/31/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/DivyAgrawal.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cs.ucsb.edu/~agrawal">Divyakant Agrawal</A>
+<br/>University of California at Santa Barbara
+<br/>1/15/2011 to 1/14/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/AnastasiaAilamaki.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://dias.epfl.ch">Anastasia Ailamaki</A>
+<br/>Ecole Polytechnique F&eacute;d&eacute;rale de Lausanne
+(Adjunct Professor, Carnegie Mellon University)
+<br/>1/15/2010 to 1/1/2014
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/SihemAmerYahia.gif">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://lig-membres.imag.fr/amery/">Sihem Amer-Yahia</A>
+<br/>Laboratoire d'Informatique de Grenoble (LIG)
+<br/>1/15/2011 to 1/14/2017
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/JohannesGehrke.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cs.cornell.edu/johannes/">Johannes Gehrke</A>
+<br/>Cornell University
+<br/>1/15/2011 to 1/14/2015
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/MichaelBohlen.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.ifi.uzh.ch/dbtg/Staff/Boehlen/">Michael B&ouml;hlen</A>
+<br/>University of Z&uuml;rich 
+<br/>1/15/2010 to 1/1/2014
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/LucianPopa.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.almaden.ibm.com/cs/people/lucian/">Lucian Popa</A>
+<br/>IBM Almaden Research Center
+<br/>1/1/2010 to 12/31/2015  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/MartinKersten.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://homepages.cwi.nl/~mk/">Martin Kersten</A>
+<br/>Centrum Wiskunde & Informatica (CWI)
+<br/>1/1/2010 to 12/31/2010  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/TovaMilo.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cs.tau.ac.il/~milo">Tova Milo</A>
+<br/>Tel Aviv University 
+<br/>1/1/2010 to 12/31/2015  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/SusanDavidson.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+HREF="http://www.cis.upenn.edu/~susan">Susan B. Davidson</A>
+<br/>University of Pennsylvania
+<br/>5/1/2009 to 12/31/2012  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/WenfeiFan.jpg">
+</td>
+<td>
+<A
+style="text-decoration:colon[]none"
+HREF="http://homepages.inf.ed.ac.uk/wenfei">Wenfei 
+Fan <span lang=ZH-CN>(&#27146&#25991&#39134)</span></a>
+<br/>University of Edinburgh
+<br/>5/1/2009 to 12/31/2015  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/jermaine.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+HREF="http://www.cs.rice.edu/~cmj4/">Chris Jermaine</a>
+<br/>Rice University
+<br/>5/1/2009 to 12/31/2015  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/DiveshSrivastava.jpg">
+</td>
+<td>
+<A 
+style="text-decoration:colon[]none"
+href="http://www.research.att.com/~divesh">Divesh Srivastava</a>
+<br/>AT&T Labs - Research
+<br/>5/1/2009 to 12/31/2015  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/YufeiTao.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cse.cuhk.edu.hk/~taoyf">Yufei Tao</a>
+<br/>Chinese University of Hong Kong
+<br/>2/1/2008 to 1/31/2015  
+</td>
+</tr>
+
+<tr>
+<td>
+<img width=100 src="images/GuidoMoerkotte.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://pi3.informatik.uni-mannheim.de/moerkotte.html.en">Guido Moerkotte</a>
+<br/>University of Mannheim
+<br/>2/1/2008 to 1/31/2011  
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/XueminLin.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cse.unsw.edu.au/~lxue">Xuemin Lin</a>
+<br/>University of New South Wales
+<br/>2/1/2008 to 1/1/2014  
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/PaulLarson.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://research.microsoft.com/~palarson">Per-&Aring;ke (Paul) Larson</a>
+<br/>Microsoft Research
+<br/>2/1/2008 to 1/31/2015  
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/GeorgeKollios.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.bu.edu/~gkollios">George Kollios</a>
+<br/>Boston University
+<br/>2/1/2008 to 1/31/2015  
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/MinosGarofalakis.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.berkeley.edu/~minos">Minos Garofalakis</a>
+<br/>Yahoo! Research and University of California, Berkeley
+<br/>2/1/2008 to 1/31/2011  
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/bussche.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://alpha.uhasselt.be/~vdbuss">Jan Van den Bussche</a>
+<br/>Universiteit Hasselt
+<br/>3/1/2006 to 6/1/2012
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/kolaitis.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.almaden.ibm.com/cs/people/kolaitis">Phokion Kolaitis</a>
+<br/>IBM Almaden Research Center
+<br/>10/1/2005 to 9/30/2011
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/karbw.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.columbia.edu/~kar">Kenneth Ross</a>
+<br/>Columbia University
+%</td>
+%<td>
+%&nbsp;&mdash; 
+<br/>10/1/2005 to 9/30/2011
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/samarati.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.dti.unimi.it/~samarati">Pierangela Samarati</a>
+<br/>Universit&agrave degli Studi di Milano
+<br/>10/1/2005 to 9/30/2011
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/sudarsha.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cse.iitb.ac.in/~sudarsha">S. Sudarshan</a>
+<br/>IIT Bombay
+<br/>10/1/2005 to 1/1/2013
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/arnie.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.mitre.org/tech/itc/staffpages/arnie">Arnon Rosenthal</a>
+<br/>The MITRE Corporation
+<br/>4/15/2005 to 12/15/2008
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/mannila.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.helsinki.fi/u/mannila/">Heikki Mannila</a>
+<br/>University of Helsinki, Finland
+<br/>10/18/2004 to 10/31/2009
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/suciu.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.washington.edu/homes/suciu/">Dan Suciu</a>
+<BR>University of Washington
+<br/>10/18/2004 to 10/31/2011
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/sunita.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+ href="http://www.it.iitb.ac.in/~sunita">Sunita Sarawagi</a>
+<br/>IIT Bombay
+<br/>10/18/2004 to 10/31/2007
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/chomicki.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+HREF="http://www.cse.buffalo.edu/~chomicki/">Jan Chomicki</a>
+<BR>SUNY at Buffalo
+<br/>10/18/2004 to 10/31/2010
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Raghu.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://research.yahoo.com/~ramakris">Raghu Ramakrishnan</a>
+<br/>University of Wisconsin
+<br/>10/18/2004 to 11/30/2006
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/gravano.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.columbia.edu/~gravano">Luis Gravano</a>
+<br/>Columbia University
+<br/>3/2004 to 10/31/2010
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Hartmut2.jpeg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+HREF="http:colon[]//www.informatik.fernuni-hagen.de/pi4/gueting/home.html">Ralf Hartmut G&uuml;ting</a>
+<br/>Fernuniversit&auml;t Hagen
+<br/>3/2004 to 10/31/2010
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/hankkorth.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+HREF="http://www.lehigh.edu/~hfk2/hfk2.html">Hank Korth</a>
+<br/>Lehigh University
+<br/>3/2004 to 3/20/2011
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/salzberg.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.ccs.neu.edu/home/salzberg">Betty Salzberg</a>
+<br/>Northeastern University
+<br/>3/2004 to 3/20/2011
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/mary.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.research.att.com/~mff">Mary Fern&aacute;ndez</a>
+<br/>ATT Labs Research
+<br/>10/23/2003 to 10/31/2006
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/hull.jpg">
+</td>
+<td>
+%<a 
+%style="text-decoration:colon[]none"
+%HREF="http://db.bell-labs.com/user/hull">Rick Hull</a>
+Rick Hull
+<br/>Bell Labs Research
+<br/>10/23/2003 to 10/31/2009
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/kossmannprof.bmp">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+HREF="http://www.dbis.ethz.ch">Donald Kossmann</a>
+<br/>ETH Zurich
+<br/>10/23/2003 to 10/31/2009
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/widom.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://infolab.stanford.edu/~widom/">Jennifer Widom</a>
+<br/>Stanford University
+<br/>10/23/2003 to 10/31/2006
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/buneman.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://homepages.inf.ed.ac.uk/opb/">Peter Buneman</a>
+<br/>University of Edinburgh
+<br/>8/2001 to 7/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/csjg1.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.aau.dk/~csj/">Christian S. Jensen</a>
+<br/>Aalborg University
+<br/>8/2001 to 7/31/2007
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/photo1.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.berkeley.edu/~franklin/">Mike Franklin</a>
+<br/>University of California, Berkeley
+<br/>3/2001 to 2/28/2006
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Surajit.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.research.microsoft.com/users/surajitc">Surajit Chaudhuri</a>
+<br/>Microsoft Research
+<br/>11/2000 to 10/31/2007
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/mendel.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.toronto.edu/~mendel/">Alberto Mendelzon</a>
+<br/>University of Toronto
+<br/>11/2000 to 4/15/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/meral.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://zmo.cwru.edu">Z. Meral &Ouml;zsoyo&#287;lu</a>
+<br/>Case Western Reserve University
+<br/>11/2000 to 9/16/2007
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Abiteboul.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www-rocq.inria.fr/~abitebou/">Serge Abiteboul</a>
+<br/>INRIA
+<br/>4/1998 to 3/2001
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Dave1-6.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="https://research.microsoft.com/~lomet/">David Lomet</a>
+<br/>Microsoft Research
+<br/>4/1998 to 3/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Masunaga.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.dc.ocha.ac.jp/fukugo/masunaga_e.html">Yoshifumi Masunaga</a>
+<br/>Ochanomizu University
+<br/>4/1998 to 3/2001
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/naughton-small.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://pages.cs.wisc.edu/~naughton/">Jeffery F. Naughton</a>
+<br/>University of Wisconsin
+<br/>10/1995 to 9/2001
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/moshe.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.rice.edu/~vardi/">Moshe Vardi</a>
+<br/>Rice University
+<br/>9/1995 to 8/2001
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/msw.small.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://dais.cs.uiuc.edu/trustbuilder/people/Winslett.html">Marianne Winslett</a>
+<br/>University of Illinois
+<br/>4/1994 to 7/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/weikum-photo2-72dpi.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.mpi-inf.mpg.de/~weikum/">Gerhard Weikum</a>
+<br/>Max-Planck-Institut f&uuml;r Informatik
+<br/>1/1993 to 12/31/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/rakesh.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://rakesh.agrawal-family.com/">Rakesh Agrawal</a>
+<br/>IBM Almaden Research Center
+<br/>10/1992 to 9/30/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/pix_carey.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:colon[]Michael_J=.html">Michael J. Carey</a>
+<br/>IBM Almaden Research Center
+<br/>8/1992 to 7/2004
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Rick.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http:/www.cs.arizona.edu/people/rts/">Richard T. Snodgrass</a> 
+<br/>University of Arizona
+<br/>7/1/1992 to 6/30/2001
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Kambayashi.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kambayashi:colon[]Yahiko.html">Yahiko Kambayashi</a>
+<br/>Kyoto University
+<br/>12/1989 to 12/1992
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Ceri.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://home.dei.polimi.it/ceri/">Stefano Ceri</a>
+<br/>Politecnico di Milano
+<br/>3/1989 to 7/1992
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Beeri2.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:colon[]Catriel.html">Catriel Beeri</a>
+<br/>The Hebrew University of Jerusalem
+<br/>12/1988 to 7/1992
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Haerder.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://wwwdvs.informatik.uni-kl.de/agdbis/staff/Haerder/">Theo H&auml;rder</a>
+<br/>Technische Universit&auml;t  Kaiserslautern
+<br/>12/1987 to 6/1992
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Won_Kim.jpg">
+</td>
+<td>
+<a
+style="text-decoration:colon[]none"
+href="http://sigmod.org/dblp/db/indices/a-tree/k/Kim:colon[]Won.html">Won Kim</a>
+<br/> MCC
+<br/> 9/1987 to 12/1992
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Maier.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://web.cecs.pdx.edu/~maier/">David Maier</a>
+<br/>Oregon Graduate Center
+<br/>7/1987 to 6/1992
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Batory.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.utexas.edu/~dsb/">Don S. Batory</a>
+<br/>University of Texas
+<br/>9/1986 to 12/1990
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Haas.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.almaden.ibm.com/cs/people/laura/">Laura Haas</a>
+<br/>IBM, Alamden Research Laboratory
+<br/>9/1986 to 9/1991
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/UmeshwarDayal.jpg">
+</td>
+<td>
+Umeshwar Dayal
+<br/> Computer Corporation of America, Cambridge, MA
+<br/> 3/1984 to 3/1989
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/AriShoshani.jpg">
+</td>
+<td>
+Ari Shoshani
+<br/> Lawrence Berkeley Laboratory, University of California
+<br/> 6/1982 to 9/1986
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/FrancoisBancilon.jpg">
+</td>
+<td>
+Fran&ccedil;ois Bancilhon
+<br/> INRIA
+<br/> 6/1982 to 12/1987
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/gio.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://infolab.stanford.edu/people/gio.html">Gio Wiederhold</a>
+<br/>Stanford University
+<br/> 6/1982 to 9/1987
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/DavidDeWitt.jpg">
+</td>
+<td>
+David DeWitt
+<br/> University of Wisconsin, Madison
+<br/> 6/1982 to 6/1987
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Salton.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.cornell.edu/Info/Department/Annual95/Faculty/Salton.html">Gerard Salton</a>
+<br/>Cornell University
+<br/> 9/1980 to 7/1992
+<td/>
+</tr>
+<tr>
+<td>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</td>
+<td>
+James B. Rothnie
+<br/> Computer Corporation of America
+<br/> 9/1980 to 3/1984
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/MichaelHammer.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://en.wikipedia.org/wiki/Michael_Hammer">Michael Hammer</a>
+<br/> Laboratory for Computer Science, MIT
+<br/> 9/1980 to 9/1983
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/PhilBernstein.jpg">
+</td>
+<td>
+Philip A. Bernstein
+<br/> Aiken Computation Laboratory, Harvard University
+<br/> 9/1980 to 3/1989
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/EugeneWong.jpg">
+</td>
+<td>
+Eugene Wong
+<br/> University of California, Berkeley
+<br/> 6/1980 to 3/1982
+<td/>
+</tr>
+<tr>
+<td>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</td>
+<td>
+Vincent Y. Lum
+<br/> IBM Research Laboratory, San Jose, California
+<br/> 3/1978 to 3/1982
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/RudolfBayer.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://wwwbayer.in.tum.de/cgi-webcon/webcon/lehrstuhldb/details/Mitarbeiter/num/5/1">Rudolf Bayer</a>
+<br/>Technische Universit&auml;t M&uuml;nchen
+<br/> 3/1977 to 9/1987
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/DavidKuck.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.intel.com/pressroom/kits/bios/kuck.htm">David J. Kuck</a>
+<br/> University of Illinois
+<br/> 3/1977 to 6/1982
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/EdgarSibley.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://mason.gmu.edu/~esibley/">Edgar H. Sibley</a>
+<br/> University of Maryland
+<br/> 3/1976 to 6/1980
+<td/>
+</tr>
+<tr>
+<td>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</td>
+<td>
+Christine A. Montgomery
+<br/> Operating Systems, Inc.
+<br/> 3/1976 to 3/1977
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/HowardMorgan.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.edge.org/3rd_culture/bios/morgan.html">Howard L. Morgan</a>
+<br/> The Wharton School, University of Pennsylvania
+<br/> 3/1976 to 6/1982
+<td/>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/StuartMadnick.gif">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://web.mit.edu/smadnick/www/home.html">Stuart E. Madnick</a>
+<br/> Sloan School of Management, Massachusetts Institute of Technology
+<br/> 3/1976 to 9/1976
+<td/>
+</tr>
+</table>
+
+<b><a name="IDs"><font size="+1">Information Directors</font></a></b>
+<table>
+<tr>
+<td>
+<img width=100 src="images/dyreson.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http://www.cs.usu.edu/~cdyreson">Curtis Dyreson</a>
+<br/>Utah State University
+<br/>7/2001 to now
+</td>
+</tr>
+<tr>
+<td>
+<img width=100 src="images/Rick.jpg">
+</td>
+<td>
+<a 
+style="text-decoration:colon[]none"
+href="http:/www.cs.arizona.edu/people/rts/">Richard T. Snodgrass</a>
+<br/>University of Arizona
+<br/>3/1996 to 7/2001
+</td>
+</tr>
+</table>
+</ul>
+
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[People History of ACM Transactions on Database Systems]
+

@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<TITLE>./ExpressionTree/Operations/Aggregate.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_ExpressionTree_Operations_">NAME ExpressionTree::Operations::Aggregate;</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_op_var_">new($op, $var)</A>
+		<LI><A HREF="#resultType_">resultType()</A>
+		<LI><A HREF="#dump_indent_">dump($indent)</A>
+		<LI><A HREF="#evaluate_State_state_">evaluate(State state)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_ExpressionTree_Operations_">NAME ExpressionTree::Operations::Aggregate;</A></H1>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class represents an aggregate operation.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_op_var_">new($op, $var)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_op">op</A></STRONG>
+<P>
+The aggregate operation.
+
+<LI><STRONG><A NAME="item_var">var</A></STRONG>
+<P>
+<A HREF="./ExpressionTree/Operands/Variable.html">ExpressionTree::Operands::Variable</A> <CODE>$var</CODE> - the column on which to compute it
+
+</UL>
+<P>
+Create a new aggregate operation
+
+<P>
+<HR>
+<H2><A NAME="resultType_">resultType()</A></H2>
+<P>
+Return the type of result.
+
+<P>
+<HR>
+<H2><A NAME="dump_indent_">dump($indent)</A></H2>
+<P>
+Dump this node.
+
+<P>
+<HR>
+<H2><A NAME="evaluate_State_state_">evaluate(State state)</A></H2>
+<P>
+Evaluate the aggregate operation returning a result. This goes through
+every tuple in the current group and computes the aggregate on the
+appropriate column.
+
+</BODY>
+
+</HTML>

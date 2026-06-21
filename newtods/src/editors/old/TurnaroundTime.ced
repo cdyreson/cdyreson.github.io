@@ -1,0 +1,63 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved April 14, 2003; amended May 23, 2005</b>
+
+There is a wide-spread impression that journals take a long time to review
+submissions. This perception is in general well-founded, as I'm sure your
+personal experience with journals confirms. Such delays do not aid science,
+create problems for those working toward tenure, and detract from the
+relevance of journal papers.
+
+This perception does not match reality for :journalAcronym[]. 
+Over the last decade, Won Kim
+worked with the EB to reduce the turnaround time from something like
+eighteen months to an estimated six months in most cases (detailed data
+from that era is not available).
+
+The current :journalAcronym[] Editorial Board has done a wonderful job 
+in further reducing
+the turnaround time. In fact, the average is around four months, with a
+maximum of not more than six months for the last seven months. This statistic
+is something that :journalAcronym[] should emphasize to 
+potential authors, to change the
+perception that :journalAcronym[] is just like other 
+journals: slow and irrelevant.  The :journalAcronym[] information director
+has added the <a href="../Statistics.html">turnaround time statistics</a>, 
+as a nice graph, to the :journalAcronym[] web
+site. :journalAcronym[] may be the first database journal, and the first 
+ACM journal, to publicly share its performance in reviewing papers.
+
+The new policy goes a step further, to emphasize to authors that the Editorial
+Board is serious about keeping the reviewing time down.
+:quote[
+        The :journalAcronym[] Editorial Board is committed to providing an 
+        editorial
+        decision within six months, starting with papers submitted in
+        April 2002. On May 23, 2005 the commitment was changed to a 
+        five-month turnaround time, starting with papers submitted 
+        January 2004. This new commitment will appear in the Editorial 
+        Guidelines and in the turnaround statistics.
+        The turnaround time is defined to start with the
+        day the paper was physically received by an Editor, if sent by
+        post, or the day it was emailed or submitted electronically,
+        and extends to the day the decision was sent to the author (most
+        papers are now submitted electronically). It is expected that
+        the average turnaround time will be even shorter, so prospective
+        authors can expect a fast review of their submission.
+]
+
+This statement will be added to the Editorial Guidelines and the six-month
+commitment added to the turnaround statistics.
+
+Note: The EB discussed a previous proposal that was stated as a guarantee.
+The problem with a guarantee is: what happens when it isn't met?
+Without stating what happens then, what does the guarantee mean?
+Hence, the wording above, which is stated in the form of a commitment
+rather than a guarantee, is used.
+
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Turnaround Time Policy]

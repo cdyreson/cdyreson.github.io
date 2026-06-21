@@ -1,0 +1,34 @@
+From: Curtis Dyreson <curtis>
+To: student@jcu.edu.au
+Subject: Quiz Results
+
+*****This message is automatically generated*****
+All the quiz questions will soon be on the WWW via the interactive
+lessons link off the cp2050a home page.                  
+
+You scored 33 out of 36, or 91.67%.
+
+The questions that were marked as wrong are listed below.
+
+Question 12, worth 3 marks,
+   your answer was `538759',
+   accepted answers were  ` -4'
+
+Here is an overall statistical breakdown on the quiz.
+         | # that   | # that    | % who answered 
+         | attempted| answered  | answered       
+question | question | correctly | correctly      
+------------------------------------------------ 
+      1  |    50    |    45     |     90%
+      2  |    14    |    13     |     92%
+      3  |    11    |    10     |     90%
+      4  |    16    |    16     |    100%
+      5  |     8    |     8     |    100%
+      6  |    14    |    13     |     92%
+      7  |    12    |    11     |     91%
+      8  |    10    |     9     |     90%
+      9  |    14    |    12     |     85%
+     10  |    16    |    14     |     87%
+     11  |    11    |     4     |     36%
+     12  |    11    |     2     |     18%
+

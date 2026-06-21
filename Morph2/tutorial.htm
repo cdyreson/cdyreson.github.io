@@ -1,0 +1,501 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>A Tutorial on Morph</title>
+<SCRIPT language="javascript">
+<!--
+function loadApplet(query)
+{
+morphEngine = window.open("","MorphQueryWindow" + window.name,"resizable=yes,width=780,height=680")
+morphEngine.document.open()
+morphEngine.document.write("<HTML><HEAD><TITLE>Morph Query Interface</TITLE></HEAD><BODY><CENTER>")
+morphEngine.document.write("<APPLET WIDTH='700' HEIGHT='600' ALT='Morph query interface' CODE='applet.CannedQueryTester.class' CODEBASE='http://digital.cs.usu.edu/~cdyreson/pub/Morph' ARCHIVE='antlrworks-1.2.3.jar,je-3.3.75.jar,xercesImpl.jar,antlr-runtime-3.1.3.jar,Morph.jar'>")
+morphEngine.document.write('<PARAM NAME="query" VALUE="')
+morphEngine.document.write(query)
+morphEngine.document.write('">')
+morphEngine.document.write("</APPLET></CENTER></BODY></HTML>")
+morphEngine.document.write("")
+morphEngine.document.close()
+}
+function loadApplet3(query1,query2,query3)
+{
+morphEngine = window.open("","MorphQueryWindow" + window.name,"resizable=yes,width=780,height=680")
+morphEngine.document.open()
+morphEngine.document.write("<HTML><HEAD><TITLE>Morph Query Interface</TITLE></HEAD><BODY><CENTER>")
+morphEngine.document.write("<APPLET WIDTH='700' HEIGHT='600' ALT='Morph query interface' CODE='applet.CannedQueryTester.class' CODEBASE='http://digital.cs.usu.edu/~cdyreson/pub/Morph' ARCHIVE='antlrworks-1.2.3.jar,je-3.3.75.jar,xercesImpl.jar,antlr-runtime-3.1.3.jar,Morph.jar'>")
+morphEngine.document.write('<PARAM NAME="query" VALUE="' + 
+                           query1+ "'" + query2 + "'" + query3 + '">')
+morphEngine.document.write("</APPLET></CENTER></BODY></HTML>")
+morphEngine.document.write("")
+morphEngine.document.close()
+}
+// -->
+</SCRIPT>
+</head>
+<body>
+<table summary="table" border="0" cellPadding="0" cellSpacing="0">
+  <tr>
+    <td bgColor="#E0E0E1" align=right valign=top>
+      <table summary="table" border="0" cellSpacing="1">
+        <tr>
+          <td><a style="text-decoration:none"
+                 href="http://www.cs.usu.edu/~cdyreson/pub/Morph/images/closestGraph.png"><img 
+                    src="http://www.cs.usu.edu/~cdyreson/pub/Morph/images/closestLogo.png" 
+                    alt="TTXPath logo" 
+                    height="80"
+                    border="0"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td bgColor="#E0E0E1">
+      &nbsp;
+    </td>
+    <td align=left valign=top bgColor="#E0E0E1">
+        <table summary="table" border="0" cellSpacing="1">
+          <tr>
+            <td bgcolor="#E0E0E1"> 
+              <big>A Tutorial on Morph</big>
+              <br>
+              <font color="#800000" size="2">
+              Flexible Querying for XML<br>
+              </font>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td align=center vAlign="top" bgcolor="#E0E0E1">
+      <table summary="table" border="0" cellpadding="2" cellspacing="2">
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/index.htm">
+              Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FF4444">
+<font color="#FFFFFF">              Tutorial&nbsp;&nbsp;&nbsp;&nbsp;
+</font>        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/demo/index.htm">
+              Demo&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/download.htm">
+              Download&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/Morph/publications.htm">
+              Publications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">&nbsp;
+        </td></tr>
+        <tr><td colspan=2 bgcolor="#E0E0E1">
+            Curtis Dyreson
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/">
+              Home
+              </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/publications.htm">
+              Publications
+            </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/projects.htm">
+              Projects
+             </a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+        </td></tr>
+        <tr><td bgcolor="#E0E0E1">&nbsp;</td><td bgcolor="#FFFFFF">
+            <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+        </td></tr>
+      </table>
+    </td>
+    <td>
+    </td>
+    <td vAlign="top">
+      <br>
+      
+This section gives a short tutorial on Morph through a series of examples of 
+increasing complexity. The <a href="Morph.g">ANTLR syntax for Morph is 
+available</a>.
+The examples in this tutorial will transform the data about books written 
+by E. F. Codd shown below.
+<P>
+  <img src="images/data.png"/>
+<P>
+Though database query languages tend to be declarative rather than 
+functional, Morph is a functional query language (i.e., similar to 
+a query algebra rather than a query calculus). The primary function 
+in Morph is a <i>morph</i>, which places children below a parent in the 
+result. The parameter of the morph function is a pattern, 
+which specifies the structure of the result. 
+Below is an example of a morph.
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>List titles by author</b>:
+
+
+<pre>
+
+   morph author [ name title ]
+
+</pre>
+
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick='loadApplet("morph author [ name title ]")'>
+</FORM>
+
+</td></tr></table></blockquote>
+
+
+<P>
+The query lists the titles written by each author extracted 
+from a collection of book data. 
+The pattern specifies that &lt;title&gt; and &lt;name&gt; elements are 
+placed as children of &lt;author&gt; elements.  
+Only &lt;title&gt; and &lt;name&gt; elements that are closest to 
+an &lt;author&gt; element are placed within that &lt;author&gt;. 
+The notion of closeness, which forms the core semantics for Morph, 
+is explained in the Morph <a href="publications.htm">publications</a>, 
+but intuitively the idea is that authors are closely related to the 
+titles of their own books and articles (and their own names), but 
+not close to titles written by others (or the names of others). 
+<P>
+A morph can be restricted to select individual authors. Suppose we 
+want only the titles by the author E. F. Codd. Then we can use the 
+query given in below which selects &lt;author&gt; elements where the 
+value of the element is 'E.F. Codd'. 
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>List titles only for the author named 'E. F. Codd'</b>:
+
+
+<pre>
+
+   morph author [ 
+        name, where value == 'E. F. Codd'
+        title 
+      ]
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick="loadApplet3('morph author [ \n          name, where value == ','E. F. Codd',' \n        title \n         ]')">
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+The result is the same as that above since only E. F. Codd has authored 
+books in the source data.
+<P>
+There may be duplicate authors in the data, but authors can be grouped 
+to eliminate the duplicates. The query given below shows an example 
+that consolidates titles under a single E. F. Codd author using a 
+'group' modifier for the author. 
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>List titles grouped by E. F. Codd</b>:
+
+
+<pre>
+
+   morph author, group [ 
+        name, where value == 'E.F. Codd'
+        title [ book, hide ]
+      ]
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick="loadApplet3('morph author, group [ \n     name, where value == ','E.F. Codd',' \n     title [ book, hide ] \n   ]')">
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+Modifiers are listed after a label, separated by commas. 
+The group modifier uses the default, persistent grouping for 
+author (e.g., author is grouped by its 'key' as specified by the 
+data's schema, or by the distinct-values function for a 
+schema-less data collection). Authors could also be dynamically 
+grouped during query evaluation, by specifying a grouping pattern.
+E. F. Codd wrote both books and articles, and we may want to 
+select only book titles. In the query given in below, 
+&lt;title&gt; elements closest to a &lt;book&gt; element 
+are selected but books are hidden in the output; 
+a &lt;book&gt; is only used to find a closely-related &lt;title&gt;. 
+The result is the same as that shown above since the data 
+has only &lt;book&gt;s.
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>List book titles by E. F. Codd</b>:
+
+
+<pre>
+
+   morph author, group [ 
+        name, where value == 'E.F. Codd'
+        title [ book, hide ]
+      ]
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick="loadApplet3('morph author, group [ \n     name, where value == ','E.F. Codd','\n     title [ book, hide ] \n   ]')">
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+Though Morph assumes that a user is familiar with the 
+vocabulary of the data, it also has a translate function to 
+automate translation of a query or its result into the terms desired 
+by a user. The translation can be specified before a morph, 
+with the output of the translation being piped into the morph,
+as shown below, 
+or after a morph, in which case the output of the morph 
+is piped into a translate function.
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>Translate author to writer</b>:
+
+
+<pre>
+
+   translate 
+      author -&gt; writer
+   | morph writer [ 
+        name, where value == 'E.F. Codd'
+        title [ book, hide ]
+      ]
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick="loadApplet3('translate \n   author -> writer \n| morph writer [ \n     name, where value == ','E.F. Codd','\n     title [ book, hide ] \n   ]')">
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+The pipe operator, '|', is used to connect the output of 
+one Morph function into the input of another function. 
+Initially, the input is assumed to come from a default data 
+collection, but the data collection could be explicitly named 
+using a data specification as illustrated below.
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>Translate author to writer</b>:
+
+
+<pre>
+
+   data 'dblp.xml' 
+   | morph author [ 
+        name, where value == 'E.F. Codd'
+        title 
+      ]
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick="loadApplet3('data dblp.xml \n| morph author [ \n     name, where value == ','E.F. Codd',' \n     title \n   ]')">
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+To this point, the descriptions of the queries have avoided 
+describing the shape of the input, that is, the same query 
+could be applied to data in a variety of hierarchies. Moreover 
+each query, when applied to the same data in different hierarchies will 
+produce the same output. The only hierarchy that the user needs 
+to specify is that of the output. To illustrate this, consider 
+the query shown below. 
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>Morphing a morph</b>:
+
+
+<pre>
+ 
+   morph publisher, group [ 
+           title [ author [ name ] ]
+           ]
+   | morph 
+       author [ name title ] 
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick='loadApplet("morph publisher, group [ \n        title [ author [ name ] ]\n        ] \n| morph \n    author [ name title ]")'>
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+The query applies a morph to the result of a morph. The 
+first morph produces a hierarchy which lists the titles published in 
+each year and within each title the authors for that title. 
+The second morph is a transformation previously given.
+<P>
+Morph also supports mutation of the data's hierarchy. 
+A mutation is like a morph in that it changes the shape of the 
+hierarchy; but unlike a morph, the entire hierarchy is implicitly involved. 
+A mutation is given in below. 
+<P>
+
+<BLOCKQUOTE><table summary="table" border=1 cellpadding=9 cellspacing=0><tr><td><b>Mutating</b>:
+
+
+<pre>
+ 
+   mutate 
+     author [
+       publisher
+       title, clone
+       ]
+
+</pre>
+ 
+
+<FORM NAME="MorphQuery">
+<INPUT TYPE=BUTTON NAME="poup" VALUE="Submit Query" onClick='loadApplet("mutate \n  author [ \n    publisher \n    title, clone \n    ]")'>
+</FORM>
+ 
+</td></tr></table></blockquote>
+
+
+<P>
+The mutation explicitly lists only three types, but it outputs 
+the entire hierarchy, with two mutations. 
+First it moves &lt;publisher&gt; elements to within the 
+closest &lt;author&gt; elements, and second, it 
+clones &lt;title&gt; elements to also place them under 
+the closest &lt;author&gt; (the un-cloned &lt;title&gt; elements 
+will remain in place). The rest of the hierarchy is not changed.
+<P>
+These examples show a few of the uses of Morph and illustrate its 
+most important design feature: shape polymorphism. In a shape 
+polymorphic query language users specify only what they want as 
+output. A query adapts to the shape of the input data to 
+produce the desired output. In Morph, this adaptation is 
+based on the notion of closeness.
+<P>
+
+      <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <hr noshade size="1">
+     <a style="text-decoration:none" 
+               href="http://www.cs.usu.edu/~cdyreson">Curtis E. Dyreson</a> 
+     &copy; 2009. All rights reserved.
+    </td>
+  </tr>
+  <tr>
+    <td height="20" bgColor="#E0E0E1">&nbsp;</td>
+    <td colspan=2 bgColor="#E0E0E1" align="right">
+      <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

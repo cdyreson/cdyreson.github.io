@@ -1,0 +1,85 @@
+MEASURE:world
+  UNIT: world 
+    continents.australia_continent
+    continents.other
+    continents.europe
+
+MEASURE:continents
+  UNIT:australia_continent
+    countries.australia
+  UNIT:other
+    countries.nz
+  UNIT:europe
+    countries.france
+    countries.denmark
+
+MEASURE:regions
+  UNIT:oceania 
+    countries.australia
+    countries.nz
+
+  UNIT:continents 
+    countries.france
+    countries.denmark
+
+MEASURE:countries
+  UNIT:australia = ([A-Za-z0-9\.]*".au - ")
+  UNIT:nz = ([A-Za-z0-9\.]*".nz - ")
+  UNIT:france = ([A-Za-z0-9\.]*".fr - ")
+  UNIT:denmark = ([A-Za-z0-9\.]*".ac - ")
+
+MEASURE:pages
+  UNIT:home_page = ("] \"GET / HTT")
+  UNIT:cp1500 = ("/cp1500/")
+
+MEASURE:months
+  UNIT:january_1997
+    days.a1_january_1997
+    days.a2_january_1997
+    days.a3_january_1997
+    days.a4_january_1997
+    days.a5_january_1997
+    days.a6_january_1997
+    days.a7_january_1997
+    days.a8_january_1997
+    days.a9_january_1997
+    days.a10_january_1997
+    days.a11_january_1997
+    days.a12_january_1997
+    days.a13_january_1997
+    days.a14_january_1997
+    days.a15_january_1997
+    days.a16_january_1997
+    days.a17_january_1997
+    days.a18_january_1997
+    days.a19_january_1997
+
+MEASURE:days
+  UNIT:a1_january_1997 = ("- [1/Jan/1997"[^\]]+)
+  UNIT:a2_january_1997 = ("- [2/Jan/1997"[^\]]+)
+  UNIT:a3_january_1997 = ("- [3/Jan/1997"[^\]]+)
+  UNIT:a4_january_1997 = ("- [4/Jan/1997"[^\]]+)
+  UNIT:a5_january_1997 = ("- [5/Jan/1997"[^\]]+)
+  UNIT:a6_january_1997 = ("- [6/Jan/1997"[^\]]+)
+  UNIT:a7_january_1997 = ("- [7/Jan/1997"[^\]]+)
+  UNIT:a8_january_1997 = ("- [8/Jan/1997"[^\]]+)
+  UNIT:a9_january_1997 = ("- [9/Jan/1997"[^\]]+)
+  UNIT:a10_january_1997 = ("- [10/Jan/1997"[^\]]+)
+  UNIT:a11_january_1997 = ("- [11/Jan/1997"[^\]]+)
+  UNIT:a12_january_1997 = ("- [12/Jan/1997"[^\]]+)
+  UNIT:a13_january_1997 = ("- [13/Jan/1997"[^\]]+)
+  UNIT:a14_january_1997 = ("- [14/Jan/1997"[^\]]+)
+  UNIT:a15_january_1997 = ("- [15/Jan/1997"[^\]]+)
+  UNIT:a16_january_1997 = ("- [16/Jan/1997"[^\]]+)
+  UNIT:a17_january_1997 = ("- [17/Jan/1997"[^\]]+)
+  UNIT:a18_january_1997 = ("- [18/Jan/1997"[^\]]+)
+  UNIT:a19_january_1997 = ("- [19/Jan/1997"[^\]]+)
+
+FILTERS:
+  australia@countries january_1997@days home_page@pages
+FILTERS:
+  australia_continent@countries a13_january_1997@days cp1500@pages
+FILTERS:
+  world@countries january_1997@months cp1500@pages
+  
+;

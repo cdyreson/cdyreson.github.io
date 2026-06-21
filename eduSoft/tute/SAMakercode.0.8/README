@@ -1,0 +1,33 @@
+SAMaker by Curtis Dyreson <curtis@cs.jcu.edu.au> and
+           Anthony Sloane <tony@cs.jcu.edu.au>
+ 
+SAMaker is a system to put text-based self-assessment onto the WWW.
+This is the SAMaker installation package.  You should do the following
+to get it working.
+
+1) Edit SAMakerinstall - configure the short configuration section at the
+   start to what your system requires.
+
+2) make install - This runs the SAMakerinstall script and puts files into
+   CGI-bin directories and other directories as needed.
+
+3 Optional) Edit Makefile - Configure the short configuration section at
+  the start to what your system requires, this is only for the example.
+
+4 Optional) make example - This builds the example.  Now you are off and
+  running.
+
+The installation package contains the following files:
+
+Makefile -- obvious
+SAMakerinstall -- installation script in Perl (YOU WILL EDIT THIS!)
+SAMaker.proto -- prototype for SAMaker to configure during make install
+marker.proto -- prototype for CGI-bin script to configure during make install
+starter.proto -- prototype CGI-bin script to configure during make install
+stats.proto -- prototype CGI-bin script to configure during make install
+Bdbm.pm  -- Big DBM package, needed by the scripts and SAMaker, put it into
+             a place they know about
+example.tex -- an example lesson
+my.Makefile -- The kind of Makefile a guru like Tony Sloane uses for his lessons
+               A make example.html will do everything for you but brush your
+               teeth

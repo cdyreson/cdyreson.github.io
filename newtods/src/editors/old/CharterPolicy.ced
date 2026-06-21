@@ -1,0 +1,107 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved May 23, 2003</b>
+
+The <a href="http://www.acm.org/tods/Charter.html">:journalAcronym[] charter</a>
+as of May 2003 (and for several years prior to that) includes the 
+following paragraph.
+<blockquote>
+    :journalAcronym[] welcomes papers on a full range of subjects in the field of
+    database research. They include, but are not limited to, data
+    modeling, database language design, theoretical foundations of
+    database languages, automatic query optimization and processing,
+    access methods for storing and retrieving data, security and
+    authorization, transaction management, concurrency control,
+    backup and recovery, database performance tuning, and so forth.
+</blockquote>
+During April and May 2003 the :journalAcronym[] Editorial Board 
+had a wide-ranging discussion about this paragraph and in general 
+about database research and :journalAcronym[]' place in disseminating that 
+research. This discussion is summarized here.
+
+We quickly agreed that small grammatical changes and some additions to the
+topics were warranted. At the recommendation of several on the Board, we then
+took a fresh look at this charter, to cover a broader agenda.
+
+Rick Snodgrass asked Surajit Chaudhuri and David Lomet to craft a draft. In
+Surajit's words,
+<pre>
+> 1. We decided that reference to particular instances of technology, such
+> as e-commerce, relational model, web, etc. were not sufficiently general
+> purpose and risked being too transient.  So we dropped such references. 
+> 2. We looked carefully at the list of topics, and decided that some
+> explored things in needless depth and were covered by more generic
+> terms, e.g. transaction management includes CC & R, query processing
+> includes optimization, security includes authorization.  So we dropped
+> the more detailed terms.
+
+> We focused on broadly describing what it is that we understand people in
+> the database field to actually be working on. 
+</pre>
+They came up with the following charter, sent to the Board on April 17.
+<blockquote>
+    :journalAcronym[] welcomes papers on a full range of subjects in the field of database
+    research and the management of structured and semi-structured data.  Such
+    subjects include: data modeling, database languages, database theory,
+query
+    processing, access methods and indexing, security and privacy, transaction
+    management, fault tolerance, distribution, performance, data storage, data
+    mining, novel and distributed applications exploiting database technology.
+</blockquote>
+
+Christian Jensen then suggested a few optimizations. Several iterations
+between Christian Jensen, Surajit Chaudhuri and Dave Lomet resulted in the following draft,
+sent to the Board on April 21.
+<blockquote>
+    :journalAcronym[] welcomes papers on a full range of database research in the
+    management of structured and semi-structured data. Such subjects
+    include: data modeling, database languages, database theory, query
+    processing, access methods and indexing, security and privacy,
+    transaction management, fault tolerance, distribution, performance, data
+    storage, data mining, and novel applications exploiting database
+    technology.
+</blockquote>
+
+Mike Carey then had a side conversation with Dave Lomet, Rick Snodgrass 
+and Surajit Chaudhuri; they
+agreed to end the description with "novel applications and infrastructures
+exploiting database technology".
+
+There was one concern outstanding. Rakesh Agrawal and Mike Carey wanted to
+include unstructured data, whereas Surajit Chaudhuri thought we should stick with
+structured and semistructured data.
+
+Rick Snodgrass agreed with Mike Carey that LOBs and buffering techniques and
+with Rakesh Agrawal that multimedia data are certainly part of :journalAcronym[]' charter. He
+agreed with Surajit Chaudhuri and Alberto Mendelzon that we want to be careful not to
+get into <i>TOIS</i> and <i>TOIT</i>'s charters.
+
+Mike Franklin suggested broadening the opening sentence to "management of
+data," which would include structured, semi-structured, and unstructured data.
+Dave Lomet suggested broadening further to "management of diverse forms of data."
+
+The final charter, sent to the Board on May 16, is the following.
+<blockquote>
+    :journalAcronym[] welcomes papers on a full range of database research in the
+    management of diverse forms of data. Such subjects include: data
+    modeling, database languages, database theory, query processing,
+    access methods and indexing, security and privacy, transaction 
+    management, fault tolerance, distribution, performance, data
+    storage, data mining, and novel applications and infrastructures
+    exploiting database technology.
+</blockquote>
+
+For those papers that overlap significantly with other journals, such as <i>ACM
+Transactions on Information Systems</i>, <i>ACM Transactions on Information and
+Security</i>, and <i>ACM Transactions on Internet Technology</i>, 
+the Editor-in-Chief,
+perhaps in consultation with one or more Associate Editors, will make the
+determination of whether the paper is most appropriate for :journalAcronym[] or for another
+journal. This determination will consider the following aspects, among others:
+topic, terminology, methodology, and references to related work.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy on TODS Charter]

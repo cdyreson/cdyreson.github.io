@@ -1,0 +1,41 @@
+QuizMaker by Curtis Dyreson <curtis@cs.jcu.edu.au> 
+ 
+QuizMaker is a system to put text-based assessment onto the WWW.
+This is the QuizMaker installation package.  You should do the following
+to get it working.
+
+0) If you don't already have it, get CGI.pm off of the WWW and put it
+   in the appropriate place (where cgi-bin scripts can find included
+   perl modules).
+ 
+1) Edit QuizMakerinstall - configure the short configuration section at the
+   start to what your system requires.
+
+2) make install - This runs the QuizMakerinstall script and puts files into
+   CGI-bin directories and other directories as needed.
+
+3) Copy Bdbm.pm to the appropriate place.
+ 
+4 Optional) Edit Makefile - Configure the short configuration section at
+  the start to what your system requires, this is only for the example.
+ 
+5 Optional) make example - This builds the example.  Now you are off and
+  running.
+ 
+The installation package contains the following files:
+
+Makefile -- obvious
+QuizMakerinstall -- installation script in Perl (YOU WILL EDIT THIS!)
+QuizMaker.proto -- prototype for SAMaker to configure during make install
+marker.proto -- prototype for CGI-bin script to configure during make install
+poster.proto -- prototype for CGI-bin script to configure during make install
+reviewer.proto -- prototype for CGI-bin script to configure during make install
+starter.proto -- prototype CGI-bin script to configure during make install
+stats.proto -- prototype CGI-bin script to configure during make install
+regrader.proto -- prototype CGI-bin script to configure during make install
+Bdbm.pm  -- Big DBM package, needed by the scripts and SAMaker, put it into
+             a place they know about
+example.tex -- an example lesson
+my.Makefile -- The kind of Makefile a guru like Tony Sloane uses for his quizzes
+               A make example.html will do everything for you but brush your
+               teeth

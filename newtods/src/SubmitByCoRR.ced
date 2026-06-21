@@ -1,0 +1,75 @@
+:include[macros]
+:arg1[
+One acceptable form of submission is by posting the paper first at the 
+<A HREF="http://www.acm.org/corr">Computing Research
+Repository (CoRR)</A> and subsequently sending the archive identifier
+by email to :mailtowebmaster[].
+A submission to CoRR is available to the public one day after the posting.
+<P>
+In this way the ACM would like to encourage the researchers in
+computer science to make the results of their research immediately and
+widely available to the scientific community.
+<P>
+Posting the first paper at CoRR is longer, since one needs to acquire a
+password, but subsequent postings typically take 20 minutes or less.
+The submitted papers are automatically available to those who
+subscribed to the relevant areas of the repository. The subscription
+to any area of CoRR takes just a couple of minutes and is free.
+Furthermore, one can easily search within CoRR.
+<P>
+<STRONG> Frequently Asked Questions </STRONG>
+<OL TYPE =1>
+<LI>
+If I submit a paper to :journalAcronym[] via CoRR the information that I
+submitted this paper to :journalAcronym[] will become known to others.
+So this is not an anonymous submission.
+<P>
+Not quite so: Many papers posted at CoRR do not specify the current
+status of the paper. Obviously, you do not need to mention in the
+abstract or in the Comments field that the posted paper is submitted
+to :journalAcronym[]. 
+<P> 
+<LI>
+Why should I make the results of my research known to the
+scientific community when they are not yet in a final form?
+<P>
+If you submit a paper to :journalAcronym[], you are apparently convinced that it is
+a high-quality contribution. Why not to let the others know the
+results of your research immediately?
+<P> 
+<LI>
+Posting a paper at my home page or my home institution repository
+will achieve the same effect.
+<P>
+Not quite: Posting a paper at your home page or your home institution
+repository does not lead to sending any information to any
+subscription list.  Also, putting all the papers in one central
+repository makes it easier to search for papers and link papers
+together.
+<P> 
+<LI>
+In case I need to revise my submission to :journalAcronym[], CoRR will contain
+the obsolete version of the paper.
+<P>
+You can update the status of the paper you posted at CoRR
+by posting the final version with any information you find relevant,
+for instance that the paper will appear in :journalAcronym[].
+<P> 
+<LI>
+Isn't CoRR some new form of fad that is likely to disappear
+in a couple of years?
+<P>
+The Los Alamos National Laboratory (LANL) archives of which CoRR
+forms a part have been widely used since 1992 by the physicists and
+mathematicians.  The number of connections per day is around 100,000.
+The computer science part of the archives opened, in cooperation with
+the ACM, in August 1998.
+</OL>
+<P>
+<i>
+Acknowledgements: This page was adapted from a similar page for TOCL.
+</i>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Submission by CoRR]

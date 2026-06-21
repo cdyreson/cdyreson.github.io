@@ -1,0 +1,8 @@
+set anchors @page "x/<a href=[^>]+>/ .,/<\/a>/"
+set anchors anchors "a/<BR>/"
+%%
+@head
+<body>
+The following anchors were found in this page:<BR>
+@anchors
+</body>

@@ -1,0 +1,130 @@
+:include[macros]
+:arg1[
+
+<H2>Subscriptions</H2>
+
+As of May, 2002 subscriptions are $39 per year (four issues) for ACM
+Members, $34 per year for ACM Student Members, and $164 for nonmembers. An
+electronic subscription is $31 for members, $27 for student members, and
+$131 for non-members. A combined print and online subscription is $47 for
+ACM Members, $41 for ACM Student Members, and $197 for nonmembers. You
+can subscribe by:
+<UL>
+<li><A HREF="http://www.acm.org/catalog/journals/109.html"> the web</A>
+<li>calling 1-800-342-6626 (outside the U.S., 1-212-626-0500), or
+<li>sending e-mail to <A
+	HREF="mailto:colon[]acmhelp@acm.org"><TT>acmhelp@acm.org</TT></A> (or
+	<TT><A
+	HREF="mailto:colon[]acm_europe@acm.org">acm_europe@acm.org</A></TT>).
+</ul>
+
+<H2>Acquiring Individual Articles</H2>
+
+All past articles published in ACM :journalAcronym[] are available through the 
+<A HREF="http://portal.acm.org/browse_dl.cfm?linked=1&part=transaction&idx=J777&coll=portal&dl=ACM">ACM Portal (:journalAcronym[] gateway)</a> and the
+<A HREF="http://www.lib.washington.edu/rss/acm.html">ACM Article 
+Delivery Service</A>.
+
+<H2>Single Copies of Issues</H2>
+Single copies are $18 each to ACM members and $40 to nonmembers.
+For credit card orders (MasterCard, VISA,
+American Express) in the US and Canada, call toll tree 1-800-342-6626.
+From New York or outside the US and Canada: 212-626-0500.
+
+Alternatively, in North America, please send order your order to one 
+of the following addresses.
+<UL>
+Postal mail:colon[]
+<UL>
+ACM Order Department<br> 
+RO. Box 12114<br>
+Church Street Station<br>
+New York, NY 10257<br>
+</UL>
+<br>
+Fax:colon[] 212-944-1318  
+<br>
+E-mail:colon[] <A href=mailto:colon[]acmhelp@acm.org>acmhelp@acm.org</A>
+</UL>
+
+In Europe you may use one of the following contact addresses.
+<UL>
+Postal mail:colon[]
+<UL>
+ACM European Member Service Center<br>
+Avenue Marcel Third 204<br>
+1200 Brussels<br>
+Belgium
+</UL>
+Phone:colon[] 32 2 774 9602<br>
+Fax:colon[] 32 2 774 9690<br>
+Email:colon[] <A href=mailto:colon[]acm_europe@acm.org>acm_europe@acm.org</A>
+</UL>
+
+<h2>Microfilm and Microfiche</h2>
+Microfilm editions from 1976 through 1982 can be purchased from the following
+address.
+<UL>
+Microfilm Department<br>
+Waverly Press<br>
+428 East Preston Street<br>
+Baltimore, MD 21202
+</UL>
+
+Microfiche editions through 1982 can be
+purchased from the following address.
+<UL>
+Kraus Microform Route 100<br>
+Millwood, NY 10546
+</UL>
+
+Microfilm and microfiche editions are also available from the adress given
+below.
+<UL>
+University Microfilms International<br>
+300 North Zeeb Road<br>
+Department PR<br>
+Ann Arbor, M1 48106
+</UL>
+
+When payment is included with subscriptions, membership applications, 
+or renewal notices, use the following address.
+<UL>
+ACM<br>
+P.O. Box 12105<br>
+Church Street Station<br>
+New York, NY 10249
+</UL>
+
+See the top line of mailing label for subscription expiration date coded 
+in four digits: the first two are the year, the last two the month of 
+expiration.
+
+You may 
+<A HREF="http://acm.org/catalog/journals/109.html">subscribe</A>
+to ACM :journalAcronym[] or 
+<A HREF="http://acm.org/catalog/journals/109.html">obtain</A>
+copies of individual issues or back volumes.
+
+<P>
+
+<h2>Address Changes and Requests for Membership Applications and
+Information</h2>
+ 
+Notices of address changes and requests for membership applications and 
+subscription information should be sent to the following address.
+<UL>
+ACM<br>
+1515 Broadway<br>
+New York, NY 10036
+</UL>
+
+Allow 6-8 weeks tor change of name and address or 
+new membership to become effective.  Send old label with new address 
+notification. To avoid interruption of service, notify your local post office 
+before change of residence; for a fee, the post office will forward 
+second and third class periodicals.
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Subscribe to TODS]

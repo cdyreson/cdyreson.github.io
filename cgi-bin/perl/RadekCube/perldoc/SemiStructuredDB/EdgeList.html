@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<TITLE>./SemiStructuredDB/EdgeList.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_EdgeList">NAME EdgeList</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Node_from_list_a_">new(Node from, list a)</A>
+		<LI><A HREF="#insert_Edge_edge_">insert(Edge edge)</A>
+		<LI><A HREF="#enumerateEdges_">enumerateEdges()</A>
+		<LI><A HREF="#enumerateToNodes_">enumerateToNodes()</A>
+		<LI><A HREF="#image_">image()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_EdgeList">NAME EdgeList</A></H1>
+<P>
+Class encapsulating a set of <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A>s.
+
+<P>
+This package is part of <A HREF="././SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An EdgeList is a data type for columns in a database <A HREF="././OODatabase/Table.html#">the Table manpage</A>. An EdgeList cannot be used as a key.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Node_from_list_a_">new(Node from, list a)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_from">from</A></STRONG>
+<P>
+- The reference to a the from node object.
+
+<LI><STRONG><A NAME="item_a">a</A></STRONG>
+<P>
+- The reference to a list of edges to store, often it is an empty list.
+
+</UL>
+<P>
+Construct an empty List
+
+<P>
+<HR>
+<H2><A NAME="insert_Edge_edge_">insert(Edge edge)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_edge">edge</A></STRONG>
+<P>
+- The <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> to insert.
+
+</UL>
+<P>
+Inserts an <A HREF="./SemiStructuredDB/Edge.html">SemiStructuredDB::Edge</A> into this list.
+
+<P>
+<HR>
+<H2><A NAME="enumerateEdges_">enumerateEdges()</A></H2>
+<P>
+Return an enumeration of the <A HREF="././SemiStructuredDB/Edge.html#">the Edge manpage</A>s in the EdgeList. 
+<FONT SIZE=-1>OK,</FONT> we have to fake it in Perl since this is a Java
+concept 
+
+<P>
+<HR>
+<H2><A NAME="enumerateToNodes_">enumerateToNodes()</A></H2>
+<P>
+Return an enumeration of the 'to' nodes in the EdgeList. 
+<FONT SIZE=-1>OK,</FONT> we have to fake it in Perl since this is a Java
+concept 
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Create a formatted string of all the elements in the list
+
+</BODY>
+
+</HTML>

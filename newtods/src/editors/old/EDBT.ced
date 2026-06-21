@@ -1,0 +1,64 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved September 16, 2002</b>
+<OL>
+:li Selection of the invited EDBT papers will be done by the EDBT PC chair,
+    on the bases of high quality and perceived feasibility of being extended
+    into submissions to :journalAcronym[]. A minimum of 0 and a maximum of 4 papers will
+    be selected for invitation.
+ 
+:li The :journalAcronym[] EiC will then invite submission of extended versions
+    of the selected papers, or a subset thereof.
+ 
+    Note that :journalAcronym[] requires at least 30% new material. The new material
+    should be content material, not just the addition of obvious proofs or a
+    few more straightforward performance figures. (See the
+   <a href="http://www.acm.org/tods/Authors.html#TypesofPapers">relevant
+   :journalAcronym[] guidelines for authors</a>).
+ 
+:li  These submissions will be reviewed in the normal manner, but reviewers
+   will be told that the submission was invited upon the recommendation of
+    the EDBT PC chair. Acceptance is not guaranteed.  The editor handling the
+    paper will be responsible for choosing the reviewers; however, it is
+    expected that at least two of the reviewers will be ones who reviewed the
+   original EDBT submission.
+ 
+:li There will be an accelerated review and resubmission schedule with the
+    goal of having the papers appear before the following incarnation of the
+   EDBT conference.
+
+   :quote[
+   <table summary="list of dates" cellpadding="1" cellspacing="1" border="0">
+   <tr>
+      <td><font face="Arial">December</font></td><td><font face="Arial">Invite submission</font></td>
+   </tr><tr>
+      <td><font face="Arial">June</font></td><td><font face="Arial">Receive submission, 6 months later</font></td>
+   </tr><tr>
+      <td><font face="Arial">October</font></td><td><font face="Arial">First review completed, taking four months</font></td>
+   </tr><tr>
+      <td><font face="Arial">January</font></td><td><font face="Arial">Second submission, within three months of receiving the review</font></td>
+   </tr><tr>
+      <td><font face="Arial">May</font></td><td><font face="Arial">Second review completed, taking three months</font></td>
+   </tr><tr>
+      <td><font face="Arial">June</font></td><td><font face="Arial">Final revision, within a month of the review</font></td>
+   </tr><tr>
+      <td><font face="Arial">September</font></td><td><font face="Arial">Paper appears, with a production of three months</font></td>
+   </tr>
+   </table>
+   ]
+
+   This is a very tight schedule. Any paper not meeting this schedule can
+   appear in a subsequent issue.
+
+   At some point ACM will adopt a completely online publication
+   process, in which papers can be "published" (i.e., put on the DL)
+   as they are accepted. This will allow the schedule to be relaxed.
+   We expect that all the papers in the issue will be in one
+   virtual volume.
+</ol>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy For Inviting EDBT Papers to TODS]

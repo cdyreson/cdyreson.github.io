@@ -1,0 +1,1 @@
+perl genDB3.pl --rows 10000 > out.txt

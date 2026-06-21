@@ -1,0 +1,165 @@
+:include[macros]
+:arg1[../]
+:macro[baseURL]
+:arg1[
+<b>Approved November 29, 2006</b>
+<BR>
+After an exhaustive (and exhausting!) two-month discussion to characterize
+the benefits and costs of double-blind review (DBR) and to design an
+effective double-blind reviewing procedure, the Editorial Board was asked
+for its recommendation.  Roughly a third favored retaining single-blind
+reviewing (SBR), roughly a third recommended moving to DBR, and roughly a
+third were comfortable with either SBR or DBR.
+
+These recommendations can be viewed in at least three ways.
+<ul>
+<li> The editorial board (EB) favors SBR: a majority recommended SBR or were
+  comfortable with SBR and a significant minority recommended against DBR.
+
+<li> The EB favors DBR: a majority recommended DBR or were comfortable with DBR
+  and a significant minority recommended against SBR.
+
+<li> There is no true consensus: a significant minority recommended against SBR
+  and a significant minority recommended against DBR.
+</ul>
+Editor-in-Chief Rick Snodgrass considered these recommendations, along with
+the scientific literature, the informal vote at the SIGMOD'06 business
+meeting, and the feedback he had received via private email. His
+considerations are documented in his <a>Editorial</a>. He decided based on
+all of this information that :journalAcronym[] would adopt DBR.
+
+The following is now :journalAcronym[] policy.
+<ul>
+<li> :journalAcronym[] reaffirms the general ACM policy that "the quality of a refereed
+  publication rests primarily on the impartial judgment of their volunteer
+  reviewers."
+
+<li> :journalAcronym[] will continue to strive to ensure fairness in reviewing, even if
+  that involves more work for the :journalAcronym[] editorial board.
+
+<li> Scientific studies have demonstrated opportunities for bias inherent in
+  single-blind reviewing.
+
+<li> It is :journalAcronym[] policy that every submission should be judged on its own
+  merits. The identity and affiliation of the authors should not influence,
+  either positively or negatively, the evaluation of submissions to :journalAcronym[].
+
+<li> In consideration of the above, :journalAcronym[] will utilize 
+double-blind reviewing.
+
+<li> :journalAcronym[] will continue to strive to make the submission process for
+  authors as simple as possible.
+
+<li> :journalAcronym[] will continue to strive to effect a comprehensive review of each
+  submission.
+</ul>
+The central and unambiguous message is that every submission should be
+judged solely on its own merits.  The other important message is that :journalAcronym[]
+so values fairness that it is willing to undertake additional effort by AEs
+to make the process more fair.
+
+The procedure that will be followed can be summarized as follows. Part of
+the procedure are instructions to authors and to reviewers, found in an
+appendix in the accompanying <a href="../editorial.pdf">Editorial</a>.
+
+<h1>PROCEDURE</h1>
+<ul>
+<li> Applicability
+
+All submissions to :journalAcronym[] must be masked by the author(s), following
+the simple instructions given in the author guidelines.
+
+<li> Submitting a Manuscript
+
+:journalAcronym[], as with most ACM journals and transactions, uses ScholarOne's
+web-based ManuscriptCentral manuscript tracking system to automate
+submission and reviewing. The manuscript will be submitted normally. The EiC
+will examine the manuscript to ensure that it has been properly blinded.
+The cover letter and other correspondence from the author(s) will be marked
+in ManuscriptCentral (MC) by the EiC as not to be revealed to the
+reviewers. The handling AE will have full access to these materials.  As
+mentioned in the author guidelines, the cover letter should contain the full
+details of each anonymous citation as well as a list of people who
+constitute a conflict of interest.
+
+<li> Reviewing
+
+The identity of the authors will be visible to the EiC and Associate Editor;
+this meta-data will not be revealed by MC to the reviewers. Templates of
+email to be sent to reviewers will be modified to eliminate identifying
+information.
+
+Reviewers should direct questions about a paper referenced by an anonymous
+citation within the manuscript (say, arising from a consideration of the
+:journalAcronym[] novelty requirement) to the AE, who would then provide the cited paper
+(or equivalently, a full citation) to the reviewer.
+
+In cases where an AE has an intransigent referee who does not respond, the
+AE sometimes just does the review him/herself, as permitted in the AE
+manual. While this is strictly speaking a violation of DBR, the AE will
+continue to have this option available.
+
+<li> Assessing the Disclosure and Novelty Requirements
+
+:journalAcronym[] has specific <a
+href="http://www.acm.org/tods/Authors.html#PriorPublicationPolicy">guidelines</a>
+for disclosing related work by the author(s)
+of the submitted paper and for what represents adequate contribution over
+existing published work.
+
+The procedures listed above allow the disclosure and novelty requirements to be
+checked. It is completely up to the AE to decide which reviewers should be
+told about an anonymous citation.
+
+<li> On Revision
+
+The author guidelines includes a section on anonymity in revisions.
+
+<li> Acceptance
+
+As the AE is considering whether to accept the manuscript for publication,
+they will consider the novelty requirements, which for double-blinded
+reviews necessarily involve anonymous citations, which as noted above must
+be fully documented in the cover letter.
+
+If and when the manuscript is accepted for publication, the author will
+prepare a non-anonymized version.  The AE will at that time make a final
+check to ensure that the :journalAcronym[] disclosure requirements are met.
+
+<li> Transition
+
+It is important to educate the community as to the benefits and costs
+of DBR. It is also important to publicize and promulgate policy changes
+widely, <I>before</I> those changes go into effect. Finally, it is critical
+to ensure that ManuscriptCentral is handling things correctly before
+adopting such policy changes.
+
+This new procedure will go into effect on Thursday, February 1, 2007.  This
+will give authors several months to learn about this new policy and for the
+community to read about the context and the motivation for this decision.
+
+A detailed analysis of the scientific literature regarding blind reviewing,
+a comparison of costs and benefits, a proposal for a double-blind reviewing
+procedure, a general discussion of relevant questions, and author and
+reviewer guidelines can be found in Rick's <a>editorial</a>.
+
+The following tasks are required to implement DBR.
+<ul>
+<li> Rick will write up a discussion of the issues and his decision. This will
+  be made available when the decision is announced.
+
+<li> Rick will work with ScholarOne to configure MC. This will involve removing
+  the identity of the authors and their affiliations from the templates of
+  emails sent to reviewers and removing this information from the Referee
+  Center. 
+
+<li> Rick will update the author and reviewer instructions on the web and in email
+  templates to explain their roles, respectively, in DBR.
+
+<li> Rick will update the Editor Manual to include the changes in the process.
+</ul>
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Policy on Double-Blind Reviewing]

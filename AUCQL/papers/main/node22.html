@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Defaults</TITLE>
+<META NAME="description" CONTENT="Defaults">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html266"
+ HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html264"
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html260"
+ HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html267"
+ HREF="node23.html">Summary and Future Work</A>
+<B> Up:</B> <A NAME="tex2html265"
+ HREF="node20.html">AUCQL</A>
+<B> Previous:</B> <A NAME="tex2html261"
+ HREF="node21.html">Variables in AUCQL</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00042000000000000000">
+Defaults</A>
+</H2>
+
+<P>
+Default properties can be set to simplify queries.  Once a default is
+set, that value is used for the property in all subsequent operations.
+Properties specifically mentioned in an operation override their
+default values.  The syntax for setting defaults is straightforward.
+Below is an example that retrieves movie stars' names that are current
+in the semi-structure.
+<PRE>
+SET DEFAULT PROPERTY
+    (TRANSACTION_TIME: [now-now]);
+SELECT movie.star.name;
+</PRE>Security is one of the most common default settings.  Users can
+advertise their security certificates in all subsequent queries by
+setting a default.
+<PRE>
+SET DEFAULT PROPERTY 
+    (SECURITY: over 18 AND subscriber);
+</PRE>
+<P>
+<BR><HR>
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

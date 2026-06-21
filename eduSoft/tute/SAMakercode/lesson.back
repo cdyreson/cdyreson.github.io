@@ -1,0 +1,125 @@
+<HTML>
+<TITLE>
+An example lesson
+</TITLE>
+<BODY>
+<h1> Overview </h1>
+Welcome to the lesson.  This is just a simple lesson to demonstrate
+how one can embed self-assessments in a lesson with text.
+<a NAME="lesson1">
+
+(SELF-ASSESSMENT TITLE) Try the first self-assessment.
+(SELF-ASSESSMENT START)
+
+(RETURN-TO-WHERE) 
+  <a href="http://www.cs.jcu.edu.au/~curtis/htmls/software/lesson.html#lesson1">
+  Back to the lesson.
+  </a>
+(QUESTIONS)
+(QUESTIONSET)
+(MC) Using the primitive and composite type notation developed in class,
+what is the following C type?
+<P>
+  <code>
+     type value = 3;
+  </code>
+<P>
+ 
+(r) integer
+(w) float
+(w) integer X float
+(w) integer + float
+(w) integer --> float
+(w) none of the above
+(h) It is a simple type.
+(e) Recall that a type is a set of values (and associated operations
+on those values).
+
+(MC) Using the primitive and composite type notation developed in class,
+what is the following Pascal type?
+<P>
+<code>
+   type value = real;
+</code>
+<P>
+(w) integer
+(r) float
+(w) integer X float
+(w) integer + float
+(w) integer --> float
+(r) none of the above
+(h) It is a simple type.
+(e) Reals are actually implemented by floating point numbers.
+(SELF-ASSESSMENT END)
+
+
+<h2> A second self-assessment</h2>
+As many self-assessments as desired can be embedded.
+This is the second one, isn't it fascinating!
+
+<a NAME="lesson2">
+(SELF-ASSESSMENT TITLE) Try the second quiz.
+(SELF-ASSESSMENT START)
+(RETURN-TO-WHERE) 
+  <a href="http://www.cs.jcu.edu.au/~curtis/htmls/software/lesson.html#lesson2">
+  Back to the lesson.
+  </a>
+
+(QUESTIONS)
+(QUESTIONSET)
+(MC) Using the primitive and composite type notation developed in class,
+what is the following C type?
+<P>
+  <code>
+     type value = 3;
+  </code>
+<P>
+ 
+(r) integer
+(w) float
+(w) integer X float
+(w) integer + float
+(w) integer --> float
+(w) none of the above
+(h) It is a simple type.
+(e) Recall that a type is a set of values (and associated operations
+on those values).
+
+(QUESTIONSET)
+(MC) Using the primitive and composite type notation developed in class,
+what is the following Pascal type?
+<P>
+<code>
+   type value = real;
+</code>
+<P>
+(w) integer
+(r) float
+(w) integer X float
+(w) integer + float
+(w) integer --> float
+(r) none of the above
+(h) It is a simple type.
+(e) Reals are actually implemented by floating point numbers.
+
+(MC) Using the primitive and composite type notation developed in class,
+what is the following Pascal type?
+<P>
+<code>
+   type value = real;
+</code>
+<P>
+(w) integer
+(r) float
+(w) integer X float
+(w) integer + float
+(w) integer --> float
+(r) none of the above
+(h) It is a simple type.
+(e) Reals are actually implemented by floating point numbers.
+(SELF-ASSESSMENT END)
+
+hello how are you
+
+</BODY>
+</HTML>

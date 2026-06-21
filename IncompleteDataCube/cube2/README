@@ -1,0 +1,31 @@
+The Java implementation can be run by doing the following.
+We have the database configured to use gdbm files (this can be changed in the
+cube.database package to use your favorite DB, which shouldn't
+be too hard).  Unfortunately, gdbm files do not exist on some platforms,
+so if you are running on a non-Unix box you may be out of luck.
+Anyways, do the following to get the cube going.
+
+0) Decide which dimensions you would like to support.  
+1) Add those dimensions to the specifications directory.  Each dimension should
+   be in a separate file.  Three dimensions currently exist in specifications:
+   Time, Machine, and Page.
+2) Add the filters to specifications/Filters.  The filters are the regions 
+   in the Incomplete Cube that you would like to maintain.
+3) You must configure configure/Constants.java to your site.  The edits you
+   will need to make are commented in that file.
+4) Now you are ready to create a new cube.  Execute the following in sequence.
+
+     make cleanDbs   
+     make code
+     make dimensions
+     make count
+     cd gui; java CubeGUI
+
+   `make cleanDbs' will clean out the old cube database (gdbm files), you
+   download these as part of the package, so you can just skip to the
+   last step and try out the cube, it may work.  But just in case, there
+   is no harm in recreating the cube.  `make code' recompiles the classes
+   as needed (all the classes should be there).  `make dimensions' will 
+   read the specification files and create the dimensions.  `make count'
+   will then populate the cube.  It reads the accesslog in logFiles/access_log.
+   Finally `cd gui; java CubeGUI' will fire up the GUI. 

@@ -1,0 +1,29 @@
+FILTERS:
+  Australia@countries 
+  'December 1997'@months 
+  'CS Home Page'@pages
+FILTERS:
+  World@countries 
+  'December 1997'@months 
+  'CP 1500 Home Page'@pages
+FILTERS:
+  'Australian Continent'@countries 
+  1997@months 
+  'CP 1500 Home Page'@pages
+FILTERS:
+  World@countries 
+  1997@'months'
+  'CS Home Page'@pages
+FILTERS:
+  World@world
+  1997@months
+  'Curtis Dyreson'@people
+FILTERS:
+  'World'@world
+  'All of Time'@all
+  'All Pages'@all
+FILTERS:
+  'World'@countries 
+  '1997'@'months'
+  'Anthony Sloane'@people
+;

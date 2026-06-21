@@ -1,0 +1,399 @@
+#!/usr/local/bin/perl -I/world/httpd/cgi-bin/perl/pm
+ 
+# Copyright (c) 1996. Curtis E. Dyreson. All rights reserved.  This 
+# software is covered under the general license and lack of 
+# warranty as stated in the installation kit. WARNING! DANGER WILL 
+# ROBINSON! USE AT YOUR OWN RISK!
+ 
+# Lincoln Stein's Fantabulous CGI package
+use CGI;
+ 
+$query = new CGI;
+$ROOT = 'http://www.cs.jcu.edu.au/cgi-bin/perl/cube/scripts';
+
+# What is the separator character to use?
+$SEPARATOR = "\f";
+$INNERSEPARATOR = "\e";
+
+# What is the size of each scrolling list?
+$LISTSIZE = 5;
+ 
+# Define possible actions
+$submitQueryAction = "submit query";
+$readjustAction = "adjust units";
+$drillDownAction = "drill down";
+$reloadMeasuresAction = "reload measures";
+$okAction = "units OK";
+
+# Is is possible to query from this configuration?
+$canQuery = 1;
+
+# Build the header
+print $query->header; 
+print $query->start_html('VailKommen to the Incomplete Data Cube','');
+#print $query->dump();
+ 
+print '<a href="http://www.cs.jcu.edu.au/~curtis/htmls/IncompleteDataCube/demoinstructions.html">Instructions on use</a><P>';
+
+# Open databases
+require cube::cube;
+$global = new Globals();
+
+# Make security checks
+#require "security.pm";
+#&overallPasswordCheck();
+
+# print out the graphic user interface
+&whichAction();
+print <<'OUT';
+<hr size=3 noshade>
+[<a href="http://www.cs.jcu.edu.au/~curtis/htmls/IncompleteDataCube/publications.html">Papers</a>]
+[<a href="http://www.cs.jcu.edu.au/~curtis/htmls/IncompleteDataCube/demo.html">Interactive demo</a>]
+[<a href="http://www.cs.jcu.edu.au/~curtis/htmls/IncompleteDataCube/code.html">Implementation</a>]
+[<A HREF="mailto:curtis@cs.jcu.edu.au">join mailing list</A>]
+<P>
+Curtis Dyreson &copy; 1997. All rights reserved. 
+OUT
+
+
+print $query->end_html;
+
+sub printMeasureTables {
+  my $measureTables = $global->{'measureTables'};
+  my $i;
+  print '<tr>';
+  for ($i = 0; $i < $Constants::dimensions; $i++) {
+    print '<td valign=top>';
+    print @$Constants::dimensionNames[$i] . " measures<BR>";
+    $measureTable = @$measureTables[$i];
+    #my @keys = sort $measureTable->enumerateKeys();
+    my @keys = sort {$a <=> $b} $measureTable->enumerateKeys();
+    my $key;
+    my @k = ();
+    foreach $key (@keys) {
+      my $tempId = Id::fromBytes($key);
+      push @k, $tempId->toString();
+      }
+    while (scalar(@k) < $LISTSIZE) { push @k, ""; }
+    printScrollingList("measure$i", \@k);
+    print '</td>';
+  }
+  print '</tr>';
+}
+
+# First time entered? or Measures Reloaded?
+sub printUnitTableWithMeasuresLoaded {
+  my ($i) = @_;
+  print @$Constants::dimensionNames[$i] . " units<BR>";
+  my $unitTables = $global->{'measureTables'};
+  my $unitTable = @$unitTables[$i];
+  #my @keys = sort $unitTable->enumerateKeys();
+  my @keys = sort {$a <=> $b} $unitTable->enumerateKeys();
+  my $key;
+  my @k = ();
+  foreach $key (@keys) {
+    my $tempId = Id::fromBytes($key);
+    push @k, $tempId->toString();
+    }
+  while (scalar(@k) < $LISTSIZE) { push @k, ""; }
+  $query->delete("unit$i");
+  printScrollingList("unit$i", \@k);
+  print "<BR>";
+  
+  $canQuery = 0;
+  printUnitActions($i, $drillDownAction);
+  print &hidden("measuresLoaded$i","measuresLoaded$i");
+}  
+
+# The previous unit table is still in force
+sub printPreviousUnitTable {
+  my ($i) = @_;
+  my ($result);
+  my @units = split($SEPARATOR, $query->param("unitOKList$i"));
+  print @$Constants::dimensionNames[$i] . " units<BR>";
+  while (scalar(@units) < $LISTSIZE) { push @units, ""; }
+  printScrollingList("unit$i", \@units);
+  print "<BR>";
+  print &hidden("unitOKList$i", join($SEPARATOR,@units));
+  printUnitActions($i, $okAction);
+}  
+
+sub printUnitActions {
+  my ($i,$option) = @_;
+  my @k = ($okAction, $drillDownAction, $reloadMeasuresAction);
+  printScrollingList("unitAction$i", \@k, 1, $option);
+}
+
+# Drill down on the sucker
+sub printUnitTableWithDrillDown {
+  my ($i) = @_;
+  my ($result, @k);
+  # should we look in the measures?
+  if (!$query->param("unit$i")) {
+    printMessage("cannot drill down<BR>no unit or measure<BR>selected<BR>");
+    printPreviousUnitTable($i);
+    return;
+    }
+
+  print @$Constants::dimensionNames[$i] . " units<BR>";
+  # is the thing to drill down a measure?
+  if (defined $query->param("measuresLoaded$i")) {
+    my $unitToMeasureTables = $global->{'unitToMeasureTables'};
+    my $unitToMeasureTable = @$unitToMeasureTables[$i];
+    my $unit;
+    my $measure = Id::fromString($query->param("unit$i"));
+    my @units = ();
+    my $href = $unitToMeasureTable->enumerate();
+    my $id;
+    foreach $unit (keys %$href) {
+      $id = Id::fromBytes($unit);
+      my $r = $unitToMeasureTable->retrieveTuple($id);
+      my $toTest = $r->getValueAsId(); 
+      if ($toTest->equals($measure)) {
+        push @units, $unit + 0;
+        }
+      }
+    # sort Units by underlying token value
+    #my @unitsSorted = sort @units;
+    my @unitsSorted = sort {$a <=> $b} @units;
+    @units = ();
+    foreach $id (@unitsSorted) {
+      my $tempId = Id::fromBytes($id);
+      push @units, $tempId->toString($tempId);
+      }
+    $query->delete("unit$i");
+    print &hidden("unitOKList$i", join($SEPARATOR,@units));
+    printScrollingList("unit$i", \@units);
+    print '<BR>';
+    printUnitActions($i, $okAction);
+    $canQuery = 1;
+    return;
+    } 
+
+  # we are drilling down on a unit  
+  my $finerUnitGraphs = $global->{'finerUnitGraphs'};
+  my $finerUnitGraph = @$finerUnitGraphs[$i];
+  my $unitTable = $finerUnitGraph->{'edges'};
+  my @units = ();
+  my $t = Id::fromString($query->param("unit$i"));
+  my $r = $unitTable->retrieveTuple($t);
+  if ($r) {
+    # tuple is found, format list of edges at this node
+    my $idSet = $r->getValueAsIdSet();
+    my $id;
+    foreach $id ($idSet->enumerate()) {
+      push @units, $id->toBytes() + 0;
+      }
+    # should probably sort by String Names on insertion
+    #my @unitsSorted = sort @units;
+    my @unitsSorted = sort {$a <=> $b} @units;
+    @units = ();
+    foreach $id (@unitsSorted) {
+      my $tempId = Id::fromBytes($id);
+      push @units, $tempId->toString();
+      }
+    }
+  else {
+    # tuple is not found, so this is the last one, just show it
+    @units = ($query->param("unit$i"));
+    }
+  $query->delete("unit$i");
+  print &hidden("unitOKList$i", join($SEPARATOR,@units));
+  printScrollingList("unit$i", \@units);
+  print '<BR>';
+  printUnitActions($i, $okAction);
+}  
+
+sub printGUI {
+  print $query->startform('POST',"$ROOT/starter");
+  print &hidden('files',$files);
+  print '<center><table border=3 cellpadding=5>';
+  print '<tr></tr>';
+  &printMeasureTables();
+  &printUnitTables();
+  print '</table>';
+  print "\n<P>\n";
+  print $query->submit($readjustAction);
+  if ($canQuery) {print $query->submit($submitQueryAction);}
+  print $query->endform;
+}
+
+sub printUnitTables {
+  my $unitTables;
+    $unitTables = $global->{'unitToMeasureTables'};
+  my ($result, $i, @k);
+  print '<tr>';
+  for ($i = 0; $i < $Constants::dimensions; $i++) {
+    print '<td>';
+    # First time entered? or Measures Reloaded?
+    if ((!defined $query->param("unitAction$i")) ||
+        ($query->param("unitAction$i") eq $reloadMeasuresAction)) {
+      printUnitTableWithMeasuresLoaded($i);
+      }
+    # drill down to finer units selected?
+    elsif ($query->param("unitAction$i") eq $drillDownAction) {
+      printUnitTableWithDrillDown($i);
+      }
+    # must be an OK action
+    else { 
+      printPreviousUnitTable($i);
+      }
+    print '</td>';
+    }
+  print '</tr>';
+}
+
+sub printMessage {
+  my ($message) = @_;
+  print $message;
+}  
+
+sub doQuery {
+  my @u = ();
+  my @m = ();
+  my @queryUnitsAbove = ();
+  my @queryMeasuresBelow = ();
+  my ($i, $k);
+ 
+  for ($i = 0; $i < $Constants::dimensions; $i++) {
+    #print "i is $i";
+    #print $query->param("unit$i");
+    #print $query->param("measure$i");
+    if (!defined $query->param("unit$i")) {
+      &printMessage("No ".@$Constants::dimensionNames[$i]." unit selected.");
+      return;
+      }
+    push @u, Id::fromString($query->param("unit$i"));
+    if (!defined $query->param("measure$i")) {
+      &printMessage("No ".@$Constants::dimensionNames[$i]." measure selected.");
+      return;
+      }
+    push @m, Id::fromString($query->param("measure$i"));
+    }
+
+  for ($i = 0; $i < $Constants::dimensions; $i++) {
+    #my $temp = $global->{'finerMeasureGraphs'};
+    #my $g = @$temp[$i];
+    #$queryUnitsAbove[$i] = $g->reachableSet($u[$i]);
+    #$queryMeasuresBelow[$i] = $g->reachableSet($m[$i]);
+
+    #print "hiya";
+    my $temp = $global->{'coarserUnitGraphs'};
+    my $g = @$temp[$i];
+    $queryUnitsAbove[$i] = new IdSet();
+    $queryUnitsAbove[$i] = $g->reachableSet($u[$i]);
+    $temp = $global->{'finerMeasureGraphs'};
+    $g = @$temp[$i];
+    $queryMeasuresBelow[$i] = new IdSet();
+    $queryMeasuresBelow[$i] = $g->reachableSet($m[$i]);
+    }
+
+  my $querySpec = new CubetteSpecification(\@u, \@m);
+  my $table = $global->{'filterUnitTable'};
+  my %partial = {};
+  foreach $keyAsBytes ($table->enumerateKeys) {
+    my $key = Id::fromBytes($keyAsBytes);
+    my $testSpec = new CubetteSpecification($key, 
+        $global->{'filterUnitTable'}, 
+        $global->{'filterMeasureTable'});
+    my $queryCondition = Cubette::query(
+                                    $testSpec,
+                                    \@queryUnitsAbove,
+                                    \@queryMeasuresBelow);
+    if ($queryCondition->fullySatisfied()) {
+      # We have a satisfying cubette
+      my $answer = 
+           Cubette::sum(
+             $testSpec, 
+             $querySpec, 
+             $global->{'finerUnitGraphs'}, 
+             $global->{'unitToMeasureTables'}, 
+             $global->{'countTable'});
+      for ($k = 0; $k < scalar(@$answer); $k++) {
+        print @$answer[$k]->image() . "<BR>\n";
+        }
+      return;
+      }
+    elsif ($queryCondition->partiallySatisfied()) {
+      $partial{$keyAsBytes} = $queryCondition;
+      }
+    }
+
+  # no satisfying cubette
+  printMessage("Sorry, not enough information in the cube to satisfy your query.");
+
+  # are there partial queries?
+  my @ranked = sort { $partial{$b}->rank() <=> $partial{$a}->rank() } keys %partial;
+  printMessage("You may want to try one of the following.") 
+     if scalar(@ranked); 
+  foreach (@ranked) {
+    my $key = Id::fromBytes($_);
+    my $filter = new CubetteSpecification($key, 
+        $global->{'filterUnitTable'}, 
+        $global->{'filterMeasureTable'});
+    printMessage("<BR>" . $filter->imageWithMeasures());
+    }
+} 
+
+# figure out which action to apply
+sub whichAction {
+  my ($i);
+  if (defined $query->param($submitQueryAction)) { 
+    &printGUI();
+    &doQuery(); 
+    return; 
+    }
+  if (defined $query->param($readjustAction)) { 
+    for ($i = 0; $i < $Constants::dimensions; $i++) {
+      my $choice = $query->param('unitAction$i'); 
+      if ($choice eq $drillDownAction) {
+        # user wants finer units/etc
+        &drillDown($i);
+        }
+      elsif ($choice eq $reloadMeasuresAction) {
+        # user wants to reload the measures
+        &reloadMeasures($i);
+        }
+      else {
+        # user wants to keep as is
+        }
+      }
+    &printGUI();
+    return;
+    }
+  &printGUI();
+}    
+
+sub printScrollingList {
+  my $param = shift @_;
+  my $listref = shift @_;
+  my $size = (shift @_) || $LISTSIZE;
+  my $selected = (shift @_) || $query->param($param) || "";
+  print "<SELECT NAME=\"$param\" SIZE=" . $size . ">";
+  if ($selected) {
+    print "<OPTION  VALUE=\"$selected\" SELECTED>$selected\n";
+    }
+  my $option;
+  if ($selected) {
+    foreach $option (@$listref) {
+      if ($selected ne $option) {
+        print "<OPTION  VALUE=\"$option\">$option\n";
+        }
+      }
+    }
+  else {
+    foreach $option (@$listref) {
+      print "<OPTION  VALUE=\"$option\">$option\n";
+      }
+    }
+  print "</SELECT>";
+}
+
+# Fix it so that hidden variables work correctly
+sub hidden {
+  my ($name, $value) = @_;
+  $query->param($name, $value);
+  return $query->hidden($name, $value);
+}
+ 
+

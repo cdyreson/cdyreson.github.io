@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./ErrorHandler.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_errorhandler">NAME ErrorHandler</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#cleartext()"><code>clearText()</code></a></li>
+		<li><a href="#appendtext(string_s)">appendText(string s)</a></li>
+		<li><a href="#internalerror(string_msg,_string_rest)">internalError(string msg, string rest)</a></li>
+		<li><a href="#syntaxerror(string_msg,_string_current,_string_rest)">syntaxError(string msg, string current, string rest)</a></li>
+		<li><a href="#semanticerror(string_msg,_string_current,_string_rest)">semanticError(string msg, string current, string rest)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_errorhandler">NAME ErrorHandler</a></h1>
+<p>This class handles errors, primarily by reporting and dying!
+Only one ErrorHandler is permitted since this class contains
+class-dependent variables (i.e., it should not be instantiated).</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Various kinds of errors are detected during query evaluation,
+methods in this class support processing of those errors.
+In general, all errors should end up here rather than croaking
+or dying in the underlying methods.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="cleartext()"><code>clearText()</code></a></h2>
+<p>Clear the accumulated text from the class.</p>
+<p>
+</p>
+<h2><a name="appendtext(string_s)">appendText(string s)</a></h2>
+<ul>
+<li><strong><a name="item_s">s</a></strong><br />
+</li>
+- The string to append to the accumulated text.
+<p></p></ul>
+<p>Adds text to the accumulated text, used to remember where in the
+parsed text the program currently is.</p>
+<p>
+</p>
+<h2><a name="internalerror(string_msg,_string_rest)">internalError(string msg, string rest)</a></h2>
+<ul>
+<li><strong><a name="item_msg">msg</a></strong><br />
+</li>
+- The message to print.
+<p></p>
+<li><strong><a name="item_rest">rest</a></strong><br />
+</li>
+- The rest of the program.
+<p></p></ul>
+<p>Some internal error was detected due to a bug in the compiler,
+print something appropriate and die.</p>
+<p>
+</p>
+<h2><a name="syntaxerror(string_msg,_string_current,_string_rest)">syntaxError(string msg, string current, string rest)</a></h2>
+<ul>
+<li><strong>msg</strong><br />
+</li>
+- The message to print.
+<p></p>
+<li><strong><a name="item_current">current</a></strong><br />
+</li>
+- The current token.
+<p></p>
+<li><strong>rest</strong><br />
+</li>
+- The rest of the program.
+<p></p></ul>
+<p>A syntax error was detected.  Print something appropriate and die.</p>
+<p>
+</p>
+<h2><a name="semanticerror(string_msg,_string_current,_string_rest)">semanticError(string msg, string current, string rest)</a></h2>
+<ul>
+<li><strong>msg</strong><br />
+</li>
+- The message to print.
+<p></p>
+<li><strong>current</strong><br />
+</li>
+- The current token.
+<p></p>
+<li><strong>rest</strong><br />
+</li>
+- The rest of the program.
+<p></p></ul>
+<p>A semantic error was detected.  Print something appropriate and die.</p>
+
+</body>
+
+</html>

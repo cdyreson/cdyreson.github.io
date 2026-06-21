@@ -1,0 +1,102 @@
+Subject: Successor papers in TODS
+Date: Mon, 02 Jun 2003 13:09:38 -0700
+From: Rick Snodgrass <rts@CS.Arizona.EDU>
+To: "Surajit Chaudhuri" <surajitc@microsoft.com>,
+     "David Lomet" <lomet@microsoft.com>, "Michael Carey" <carey@acm.org>,
+     "Michael Franklin" <franklin@cs.berkeley.edu>,
+     "Alberto Mendelzon" <mendel@db.toronto.edu>,
+     "Gerhard Weikum" <weikum@cs.uni-sb.de>,
+     "Marianne Winslett" <winslett@cs.uiuc.edu>,
+     "Rakesh Agrawal" <ragrawal@almaden.ibm.com>,
+     "Peter Buneman" <peter@central.cis.upenn.edu>,
+     "Christian S. Jensen" <csj@cs.auc.dk>,
+     "Meral Ozsoyoglou" <mxo2@po.cwru.edu>,
+     Curtis Dyreson <cdyreson@eecs.wsu.edu>,
+     lingliu@cc.gatech.edu (Ling Liu)
+
+Everyone,
+
+Only a few reactions to this proposal, all positive, with the suggestion to
+point to good precedents, in a footnote to the policy, to guide submitters,
+which I have done.
+
+Curtis, please add this policy to the editors only portion, and make the
+addition indicated at the end of the policy.
+
+Thanks,
+
+Rick
+
+P.S. Ling, I'm Ccing you, as the policy mentioned SIGMOD Record, though
+only in the Editor-only portion of the web site, so no one else will see
+this.
+
+I'll continue to suggest SIGMOD Record for those successor papers that
+are not appropriate for TODS.
+
+---------------------
+Policy on Successor Papers
+
+Approved June 2, 2003
+
+A "successor paper" is defined as one that reviews, critiques,
+corrects, expands, or generally depends heavily on a paper previously
+published in TODS, termed the "predecessor" paper.
+
+There is precedent for TODS publishing successor papers, published as
+technical correspondences.
+
+In TODS Volume 8,  Issue 4  (December 1983), (http://doi.acm.org/10.1145/
+319996.320019) William Kent responds to a paper by Aho, Beeri and Ullman
+(http://doi.acm.org/10.1145/320083.320091). In that same issue, Ullman
+(http://doi.acm.org/10.1145/319996.320017) responds to Kent's technical
+correspondence.
+
+In TODS 1987, issue 3 of volume 12 (http://doi.acm.org/10.1145/27629.214296
+),
+Arthur Keller responds to a TODS paper by Bancilhon and Spyratos (http://
+doi.acm.org/10.1145/319628.319634) that appeared in TODS volume 6.
+
+TODS has not (yet) published any errata, but other ACM journals have.
+
+There is also SIGMOD Digital Review available for reviews and critiques.
+Ling Liu is open to publishing successor papers in SIGMOD Record, and is
+considering a quarterly feature with a separate editor.
+
+In a way, each paper published in a conference or a journal is a reaction
+and
+extension of the papers that came before it. So the entire archival record
+can
+be viewed as a formalized conversation with an elaborate set of rules.
+
+In summary, there exist a collection of venues/forums (TODS, other journals,
+conferences, SIGMOD Record, SIGMOD Digital Review), each with differing
+editing and reviewing criteria, available for such scholarly discussion.
+
+This policy concerns TODS specifically. In handling such submissions, the
+archival and scholarly nature of TODS should be maintained.
+
+TODS will continue to consider publishing reviews, critiques,
+expansions, and errata of previously published papers, by authors of
+those papers and by others. Such submissions will be reviewed
+similarly to original manuscripts. The reviewers will generally
+include at least one reviewer of the published paper and at least one
+independent reviewer. For successor papers authored by anyone other
+than the exact author list of the predecessor paper, the authors of
+the predecessor paper will be given the opportunity to submit a
+response, which is handled as (yet another) successor paper.
+
+The following paragraph will be added to the Submission Instructions,
+at the end of Types of Papers.
+
+   Finally, TODS welcomes submissions that review, critique, correct, or
+   expand on a paper previously published in TODS. Such submissions will
+   go through the standard formal review. Where appropriate, the author(s)
+   of the original paper will be given an opportunity to respond, with their
+   own submission. (As an example, in TODS Volume 8, Issue 4  (December
+1983),
+   (http://doi.acm.org/10.1145/319996.320019) William Kent responds to a
+   paper by Aho, Beeri and Ullman (http://doi.acm.org/10.1145/320083.320091
+).
+   In that same issue, Ullman (http://doi.acm.org/10.1145/319996.320017)
+   responds to Kent's technical correspondence.)

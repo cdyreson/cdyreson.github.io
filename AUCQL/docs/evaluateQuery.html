@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./evaluateQuery.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#example_usage">EXAMPLE USAGE</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p><strong>evaluateQuery</strong> - Do a SemiS query.</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+  evaluateQuery 
+    [-help] |
+    [-version] |
+    [-verbose] 
+    [-databaseName databaseName] 
+    [-databaseMode GDBM | DBM | BSD] 
+    &lt; query</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p><strong>evaluateQuery</strong> reads a query from standard input and evaluates it.</p>
+<p>
+</p>
+<hr />
+<h1><a name="example_usage">EXAMPLE USAGE</a></h1>
+<p>Do a query</p>
+<pre>
+ perl -I../lib evaluateQuery -verbose &lt;specifications/query</pre>
+<p>See also <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB.html">the SemiStructuredDB manpage</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item_%2dhelp">-help</a></strong><br />
+</dt>
+<dd>
+Display a short help message with a reminder of supported command-line options.
+</dd>
+<p></p>
+<dt><strong><a name="item_%2dversion">-version</a></strong><br />
+</dt>
+<dd>
+Display the version of <strong>evaluateQuery</strong>.
+</dd>
+<p></p>
+<dt><strong><a name="item_%2dverbose">-verbose</a></strong><br />
+</dt>
+<dd>
+Enable verbose reporting.
+</dd>
+<p></p>
+<dt><strong><a name="item_%2ddatabasename_databasename">-databaseName databaseName</a></strong><br />
+</dt>
+<dd>
+The name of the database, overides the default name 
+in <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Constants.html">the SemiStructuredDB::Constants manpage</a>.
+</dd>
+<p></p>
+<dt><strong><a name="item_%2ddatabasemode_databasemode">-databaseMode databaseMode</a></strong><br />
+</dt>
+<dd>
+The mode of the database, overides the default mode
+in <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/Constants.html">the SemiStructuredDB::Constants manpage</a>.
+</dd>
+<p></p></dl>
+
+</body>
+
+</html>

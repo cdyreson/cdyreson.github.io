@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/SemiStructuredDB/Edge.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Edge">NAME Edge</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Id_from_Label_label_Id_to_">new(Id from, Label label, Id to)</A>
+		<LI><A HREF="#toString_">toString()</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#from_">from()</A>
+		<LI><A HREF="#to_">to()</A>
+		<LI><A HREF="#label_">label()</A>
+		<LI><A HREF="#slice_Region_region_">slice(Region region)</A>
+		<LI><A HREF="#match_Region_region_">match(Region region)</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Edge">NAME Edge</A></H1>
+<P>
+Class encapsulating an Edge in a SemiStructured Database
+
+<P>
+This package is part of <A HREF="./../lib/SemiStructuredDB.html#">the SemiStructuredDB manpage</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+
+<FONT SIZE=-1>A</FONT> Edge is a list from, label, and to.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Id_from_Label_label_Id_to_">new(Id from, Label label, Id to)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_to">to</A></STRONG>
+<P>
+- The from node, a <A HREF="./../lib/SemiStructuredDB/Node.html#">the Node manpage</A>
+
+
+
+<LI><STRONG><A NAME="item_label">label</A></STRONG>
+<P>
+- The label, a <A HREF="./../lib/SemiStructuredDB/Label.html#">the Label manpage</A> 
+
+ 
+
+<LI><STRONG><A NAME="item_from">from</A></STRONG>
+<P>
+- The to node, a <A HREF="./../lib/SemiStructuredDB/Node.html#">the Node manpage</A> 
+
+ 
+
+</UL>
+<P>
+An Edge is a ordered triplet.
+
+<P>
+<HR>
+<H2><A NAME="toString_">toString()</A></H2>
+<P>
+Returns a string image of an Label.
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Return a string image of the Label.
+
+<P>
+<HR>
+<H2><A NAME="from_">from()</A></H2>
+<P>
+Return the from node.
+
+<P>
+<HR>
+<H2><A NAME="to_">to()</A></H2>
+<P>
+Return the to node.
+
+<P>
+<HR>
+<H2><A NAME="label_">label()</A></H2>
+<P>
+Return the label.
+
+<P>
+<HR>
+<H2><A NAME="slice_Region_region_">slice(Region region)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_region">region</A></STRONG>
+<P>
+- Slice this region from each label on the edge.
+
+</UL>
+<P>
+Returns a new edge with the regions in the label that were sliced from the
+existing edge. Returns 0 if no label could be sliced.
+
+<P>
+<HR>
+<H2><A NAME="match_Region_region_">match(Region region)</A></H2>
+<UL>
+<LI><STRONG>region</STRONG>
+<P>
+- Match this region against the label on the edge.
+
+</UL>
+<P>
+Returns a new edge with the regions in the label that match the edge.
+
+</BODY>
+
+</HTML>

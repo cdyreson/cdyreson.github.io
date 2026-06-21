@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<TITLE>./DBMDatabase/IdList.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_IdList">NAME IdList</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_Id_ids_">new(Id[] @ids)</A>
+		<LI><A HREF="#image_">image()</A>
+		<LI><A HREF="#toBytes_">toBytes()</A>
+		<LI><A HREF="#fromBytes_Byte_b_">fromBytes(Byte[] $b)</A>
+		<LI><A HREF="#toIdArray_">toIdArray()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_IdList">NAME IdList</A></H1>
+<P>
+Class encapsulating an <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Id.html">DBMDatabase::Id</A> list in a Database.
+
+<P>
+This package is part of <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/./DBMDatabase.html#">the DBMDatabase manpage</A>. For more information on the database see the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Overview.html">DBMDatabase::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Licence.html">DBMDatabase::Licence</A> and <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Version.html">DBMDatabase::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+An IdList is a data type for a column in a database <A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/JumpingSpider/docs/DBMDatabase/Table.html">DBMDatabase::Table</A>.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_Id_ids_">new(Id[] @ids)</A></H2>
+<P>
+Construct a list from an array of Ids
+
+<P>
+<HR>
+<H2><A NAME="image_">image()</A></H2>
+<P>
+Convert to a nice String image for dumping
+
+<P>
+<HR>
+<H2><A NAME="toBytes_">toBytes()</A></H2>
+<P>
+Returns a byte image of IdList.
+
+<P>
+<HR>
+<H2><A NAME="fromBytes_Byte_b_">fromBytes(Byte[] $b)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Byte">Byte[] $b</A></STRONG>
+<P>
+- The sequence of bytes
+
+</UL>
+<P>
+Build a new IdList from a byte image.
+
+<P>
+<HR>
+<H2><A NAME="toIdArray_">toIdArray()</A></H2>
+<P>
+Build an array of Ids that is the sequence.
+
+</BODY>
+
+</HTML>

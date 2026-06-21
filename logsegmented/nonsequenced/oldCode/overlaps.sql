@@ -1,0 +1,94 @@
+explain select r.dept, greatest(r.start,s.start), least(r.stop,s.start)
+from empt r, empt s
+where ((r.start <= s.start AND s.start <= r.stop) 
+       OR (s.start <= r.start AND r.start <= s.stop)); 
+
+explain (select r.dept, greatest(r.start,s.start), least(r.stop,s.start)
+from empt r, empt s
+where r.s1 = s.p1
+  OR r.s2 = s.p2
+  OR r.s4 = s.p4
+  OR r.s8 = s.p8
+  OR r.s16 = s.p16
+  OR r.s32 = s.p32
+  OR r.s64 = s.p64
+  OR r.s128 = s.p128
+  OR r.s256 = s.p256
+  OR r.s512 = s.p512
+  OR r.s1024 = s.p1024
+  OR r.s2048 = s.p2048
+  OR r.s4096= s.p4096
+  OR r.s8192 = s.p8192
+  OR r.s16384 = s.p16384
+  OR r.s32768 = s.p32768
+  OR r.s65536 = s.p65536
+  OR r.s131072 = s.p131072
+  OR r.s262144 = s.p262144
+  OR r.s524288 = s.p524288
+  OR r.s1 = s.p1x
+  OR r.s2 = s.p2x
+  OR r.s4 = s.p4x
+  OR r.s8 = s.p8x
+  OR r.s16 = s.p16x
+  OR r.s32 = s.p32x
+  OR r.s64 = s.p64x
+  OR r.s128 = s.p128x
+  OR r.s256 = s.p256x
+  OR r.s512 = s.p512x
+  OR r.s1024 = s.p1024x
+  OR r.s2048 = s.p2048x
+  OR r.s4096 = s.p4096x
+  OR r.s8192 = s.p8192x
+  OR r.s16384 = s.p16384x
+  OR r.s32768 = s.p32768x
+  OR r.s65536 = s.p65536x
+  OR r.s131072 = s.p131072x
+  OR r.s262144 = s.p262144x
+  OR r.s524288 = s.p524288x
+  ) union all (
+  select r.dept, greatest(r.start,s.start), least(r.stop,s.start)
+from empt r, empt s
+where 
+  s.s1 = r.p1
+  OR s.s2 = r.p2
+  OR s.s4 = r.p4
+  OR s.s8 = r.p8
+  OR s.s16 = r.p16
+  OR s.s32 = r.p32
+  OR s.s64 = r.p64
+  OR s.s128 = r.p128
+  OR s.s256 = r.p256
+  OR s.s512 = r.p512
+  OR s.s1024 = r.p1024
+  OR s.s2048 = r.p2048
+  OR s.s4096= r.p4096
+  OR s.s8192 = r.p8192
+  OR s.s16384 = r.p16384
+  OR s.s32768 = r.p32768
+  OR s.s65536 = r.p65536
+  OR s.s131072 = r.p131072
+  OR s.s262144 = r.p262144
+  OR s.s524288 = r.p524288
+  OR s.s1 = r.p1x
+  OR s.s2 = r.p2x
+  OR s.s4 = r.p4x
+  OR s.s8 = r.p8x
+  OR s.s16 = r.p16x
+  OR s.s32 = r.p32x
+  OR s.s64 = r.p64x
+  OR s.s128 = r.p128x
+  OR s.s256 = r.p256x
+  OR s.s512 = r.p512x
+  OR s.s1024 = r.p1024x
+  OR s.s2048 = r.p2048x
+  OR s.s4096= r.p4096x
+  OR s.s8192 = r.p8192x
+  OR s.s16384 = r.p16384
+  OR s.s32768 = r.p32768x
+  OR s.s65536 = r.p65536x
+  OR s.s131072 = r.p131072x
+  OR s.s262144 = r.p262144x
+  OR s.s524288 = r.p524288x)
+
+
+

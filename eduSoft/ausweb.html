@@ -1,0 +1,1103 @@
+<HTML>
+<HEAD>
+<TITLE>AusWeb96-Education-An Experiment in Class Management Using the World-Wide Web</TITLE>
+</HEAD>
+<BODY LANG="EN">
+ <h1 align="center">An Experiment in Class Management Using the World-Wide Web</h1>
+<hr>
+Curtis Dyreson, Department of Computer Science, James Cook University, 
+Townsville, QLD 4811, Australia. Phone +61 77 81 4621 Fax: +61 77 81 4029. 
+<a href="mailto:curtis@cs.jcu.edu.au">Email: curtis@cs.jcu.edu.au</a>
+<a href="http://www.cs.jcu.edu.au/~curtis">
+Home Page: Dr. Curtis Dyreson [HREF1]</a>
+<hr>
+Keywords: WorldWideWeb, Tertiary Education, Assessment
+<hr>
+<P>
+<H1><A NAME="SECTION00010000000000000000">Introduction</A></H1>
+<P>
+While there are numerous papers on using the World Wide Web (WWW) for 
+educational purposes,
+most of these papers are speculative, approaching the topic from
+a ``what could be done'' perspective, e.g., 
+[<a href="http://www.scu.edu.au:80/ausweb95/papers/education1/omari/">HREF2</a>,
+<a href="http://www.scu.edu.au:80/ausweb95/papers/education2/alexander/">HREF3</a>, and
+<A HREF="http://www.w3.org/pub/Conferences/WWW4/Papers/238/" >HREF4</a>].
+In contrast, this paper has a very practical focus;
+it is a report on what we have done.
+<P>
+Starting in February 1995, we began to 
+develop several tools to help teachers put their classrooms 
+onto the WWW [REF1,REF2].
+At that time few tools existed beyond translation tools to 
+put lecture notes on-line, e.g., <TT>LaTeX2HTML</TT>
+[<a href="http://cbl.leeds.ac.uk/nikos/tex2html/doc/latex2html/latex2html.html">HREF5</a>],
+and robots to find links to related materials, e.g., <TT>Lycos</TT>.
+In addition to these facilities, we wanted self-assessment lessons,
+electronic testing, on-line marks, 
+and electronic teacher evaluation forms.
+<P>
+This paper describes the tools that we developed.
+The primary obstacle that we encountered in developing these tools
+is that the WWW is designed for open,
+anonymous use, whereas exams, marks, and teacher evaluations must be kept 
+secure, in order to prevent cheating, protect student privacy, 
+and eliminate unauthorised modifications.
+We address security and privacy concerns in this paper.
+We also provide a detailed analysis of student usage and feedback.
+The analysis leads us to mixed conclusions 
+about the utility of the WWW in a tertiary classroom.  
+Some classroom aspects, such as interactive lessons were used 
+heavily, but we found that others, such as lecture notes, were used 
+much less than we expected.
+<P>
+<H1><A NAME="SECTION00020000000000000000">Motivation</A></H1>
+<P>
+Others have observed that the WWW is a potentially valuable tool for 
+education, in terms of connecting students to a world-wide fund
+of information, delivering multimedia classroom materials, and 
+supporting interactive lessons.
+We believe that the WWW can not only be utilised to improve 
+student education but, just as importantly, to improve teacher
+efficiency by reducing the clerical load on teachers.
+<P>
+To take one example,
+teachers invest a significant amount of time in mundane 
+clerical tasks associated with the typical exam.
+The exam is usually prepared using a word-processor.
+Once complete, it is printed, the 
+printed copy is Xeroxed, and the Xeroxed copies are
+distributed to students in the class.
+After students take the exam, it is collected and marked 
+by the teacher.
+Marking consists of grading each question,
+tabulating the results, and entering the marks into 
+a spread-sheet (or other grade calculation database).
+An electronic exam on the WWW can reduce the clerical load in
+every step save the first, that of developing the 
+exam using a word-processor.
+If the exam is on the WWW, copying the exam, distributing it, and collecting
+the results are done by the WWW, rather than by the teacher.
+Further, the student answers can be automatically marked (to some extent),
+the marks tabulated, and those marks inserted directly into a spread-sheet.
+As a result, the time currently spent on menial clerical tasks could instead 
+be spent on developing a better exam.
+<P>
+We are well aware of the fact that within the educational community 
+there exist widely divergent viewpoints as to what constitutes 
+the ``best'' testing environment.
+There are definite advantages to electronic testing and marking such as
+the fact that electronic exams support automatic collection of 
+student performance statistics on individual questions.
+Such statistics are important in determining which lessons need to 
+be reiterated in class.
+There are also distinct disadvantages such as machine crashes.
+We leave the pedagogical wrangling to the experts;
+in this paper we address whether the 
+electronic testing, marking, and maintenance of marks 
+using the WWW is technologically viable.
+<P>
+The advantage of using the WWW to deliver classroom materials is that 
+it offers a simple, highly-accessible, platform independent 
+interface.  It does not matter whether a student is at home using 
+a MacIntosh or in a lab using a Sparc station, the student uses 
+essentially the same interface to access the classroom.
+The primary obstacle that we encountered in using the WWW for these
+purposes is that the WWW is designed for open,
+anonymous use, whereas exams, marks, and teacher evaluations must be kept 
+secure, in order to prevent cheating, protect student privacy, 
+and eliminate unauthorised modifications.
+We address security and privacy concerns in this paper.
+<P>
+A secondary concern is to develop a ``good'' exam user-interface.
+Students at the tertiary level have years of experience 
+in taking exams using pen and paper, but no experience in taking an
+exam on a computer.
+An exam is usually a very stressful time for a student.
+The last thing that a student needs during an exam is to 
+fight against a poorly-designed user-interface.
+User-interface design is an on-going concern.
+<P>
+So our goal was not to replace the traditional classroom with a 
+WWW classroom, but to use the WWW to help supplement the traditional 
+classroom.
+<H1><A NAME="SECTION00030000000000000000">Development environment</A></H1>
+<P>
+We developed our tools for use in a university environment.
+More specifically, we taught the following introductory-level 
+computer science subjects using the WWW:
+CP1500 - Information Systems (80 students) 
+[<a href="http://www.cs.jcu.edu.au/ftp/web/teaching/Subjects/cp1500/1995/root.html">HREF6</a>]
+and
+CP2050a - Principles of Programming Languages (55 students) 
+[<a href="http://www.cs.jcu.edu.au/ftp/web/teaching/Subjects/cp2050a/1995/root.html">HREF7</a>].
+(We would like to note that other subjects at JCU, such as CP1006, CP2700, 
+and CP1020 also made extensive use of the WWW, but this
+report does not cover the software used to maintain them nor does it
+make an analysis of these subjects).
+A majority of the students in both subjects were Computer Science
+majors, but some were non-Computer Science
+majors (primarily Commerce majors) in 
+their very first term in college.
+The level of previous computer experience varied widely from those
+with 10+ years of industry experience to those that 
+had no previous exposure to computers (e.g., 16% of CP1500 
+students claimed to have never previously touched a computer).
+Almost all of the students were novice WWW surfers.
+All subject development was done on a DEC-alpha machine in 
+a Unix environment.
+<P>
+<H1><A NAME="SECTION00040000000000000000">Teaching environment</A></H1>
+<P>
+Each subject had two or three lectures and one tutorial per week.  
+The WWW was used primarily during the tutorials.
+The goal of our project was not to replace lectures or tutorials but 
+to utilise the WWW whenever we could to supplement the traditional modes
+of instruction.
+Tutorials were held in a lab with approximately thirty 
+networked, diskless 486 machines with 10 inch colour monitors.
+Students were able to access the WWW using
+netscape through windows or an XTERM emulator.
+Lynx and xmosaic were also available.
+Overall, the network was slow and subject to frequent crashes (once a day).
+<P>
+<H1><A NAME="SECTION00050000000000000000">An on-line subject</A></H1>
+<P>
+A large part of putting subject materials on-line is making
+information presented in the classroom available, such as
+lecture notes, subject handouts, links to related information, 
+and important announcements.
+We were trivially able to put all subject materials onto the WWW
+using existing tools (we used <TT>LaTeX2HTML</TT> extensively).
+A more interesting part of a subject is the classroom 
+aspects relating to assessment.
+This includes lessons with self-assessment,
+quizzes, exams, teacher evaluations, and student marks.
+There exist several tools to put self-assessment on-line
+such as the Tutorial Gateway
+[<a href="http://www.civeng.carleton.ca/~nholtz/tut/doc/doc.html">HREF8</a>],
+the Review Automated Generation System (RAGS)
+[<a href="http://stargate.jpl.nasa.gov:1084/RAGS/">HREF9</a>],
+CUQuiz
+[<a href="http://ASCILITE95.unimelb.edu.au/SMTU/ASCILITE95/abstracts-/Cox.html">HREF10</a>],
+Mklesson
+[<a href="http://lglwww.epfl.ch/Ada/Tutorials/Lovelace/userg.html">HREF11</a>],
+QM Web [<a href="http://www.qmark.com/qmweb.html">HREF12</a>],
+qform [<a href="http://www.satlab.hawaii.edu/space/hawaii/qform.html">HREF13</a>],
+and a system presented at AusWeb '95
+[<a href="http://www.scu.edu.au:80/ausweb95/papers/education3/byrnes/">HREF14</a>],
+but we developed our own tools for putting both self-assessment 
+lessons [REF3] and quizzes with assessment on to the WWW
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software.html">HREF15</a>].
+<P>
+In the next four sections, we discuss the tools for
+quizzes, self-assessment lessons, surveys (teacher evaluations), and 
+student access to marks.
+We then turn to an analysis of student usage of the various parts of 
+a WWW classroom.
+<P>
+<H2><A NAME="SECTION00051000000000000000">Electronic quizzes</A></H2>
+<P>
+In this section we describe a tool, called QuizMaker 
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software.html">HREF15</a>]
+for putting a quiz 
+onto the WWW, and a ``semi''-secure protocol that we used for 
+tri-weekly exams.
+<P>
+Our quizzes are a sequence of forms processed by CGI-bin
+scripts.
+The first form asks the student for an entry password, which is then
+used to identify the student for the remainder of the quiz.
+Once the student gains entry to the quiz, they use a 
+very simple interface to answer each question.
+We designed the interface to be sensitive to small screen sizes 
+and to minimise the number of key strokes and mouse movements required 
+to answer a question.
+Each quiz page contains just a single question, so even with large
+font sizes, most questions fit comfortably within the narrow confines of 
+a 10 inch monitor.
+Each question is either a true/false, multiple choice, 
+exact answer, or short answer question.
+We used buttons for the true/false and multiple choice options so that
+only one mouse click is required to answer many questions.
+Maximum marks (and negative marks) for each question are
+displayed with the question.
+Each question also has a button that allows a student to skip the question 
+and return to it later, as well as a button to review and update all previously 
+answered questions.
+An example quiz is available
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_quiz.html">HREF16</a>].
+Student answers are collected in a student database for later marking.
+If the network or browser crashes during the exam, when the student restarts 
+the quiz their current quiz state is restored from the answer database.
+Once the student finishes they push a button to submit the exam which 
+e-mails a copy of the student's answers to both the student and to the lecturer.
+<P>
+There are two primary security concerns associated with quizzes:
+<ol>
+<li> protecting the integrity of the student answer database, and
+<li> preventing cheating during the exam.
+</ol>
+Since the student answer database is accessible via the WWW (the WWW updates
+the database during the exam with student answers), what is to prevent anyone
+from altering or damaging answers?
+The integrity of the database is maintained through
+standard Unix file protections that only allow the WWW to change
+the student answer database.
+The answer database resides outside of the WWW file hierarchy so possible 
+changes are restricted to CGI-bin scripts or Java applets.
+On our system, only trusted users are allowed 
+to write CGI-bin scripts and applets.
+While our security arrangements place trust in the integrity of 
+Unix and CGI-bin script authors, we can detect whether that 
+trust has been violated and restore integrity by checking the 
+database against the e-mailed copies of quiz answers.
+<P>
+Another security concern is that student may cheat during the quiz.
+The WWW makes it easier for students to cheat in a number of non-traditional
+ways such as examining the quiz outside of when they are taking it,
+`spoofing' another student, exchanging answers via e-mail or 
+WWW pages, and bookmarking quiz questions to return to them and
+change their answers long after the quiz has completed.
+<P>
+To discourage spoofing and restrict remote examination of the quiz we 
+used a one-time password-protection scheme.
+Students take the quiz in tutorial sessions (i.e., in a supervised 
+environment).
+The tutor hands out a unique, one-time entry password to each student 
+just prior to when they begin the quiz.
+The password grants permission to enter the quiz exactly once
+and also identifies the student (to the CGI-bin scripts) for the remainder 
+of the quiz (it is passed as a hidden variable from form to form).
+Choosing unique one-time passwords and handing them out at the last 
+possible moment prevents one student from cooperatively spoofing another 
+student (by e-mailing a reusable password to a student at a remote site 
+who then takes the exam concurrently, filling in the correct answers).
+We also checked the HTTP-REFERER variable to ensure that the quiz
+CGI-bin scripts are accessed only from quiz-related CGI-bin scripts.
+So a student cannot save a quiz question, 
+modify the hidden state, and restart the browser on the modified
+state (i.e., bypass the entry protocol and jump directly to the 
+modified quiz).
+This check prevents one student 
+from changing their password to maliciously or cooperatively spoof 
+another and also prevents
+students from saving a quiz page and restarting the quiz at a later time.
+Also, using hidden variables to pass the quiz state (rather than in a URL)
+keeps students from bookmarking questions and returning to them later.
+<P>
+While a one-time password limits spoofing, it also makes it impossible for
+a student to reenter the quiz after an unforeseen crash.
+So QuizMaker generates a sequence of one-time passwords for each student 
+to allow readmission after a crash. 
+The tutor hands out these passwords as needed.
+As a final security precaution, we restricted quiz access to 
+tutorial times.
+<P>
+We could not, however, institute a ``closed book'' quiz.
+Current browsers make the full slate of information on the WWW, e.g., 
+lecture notes, available to each student during the quiz.
+So we used an ``open book'' philosophy and encouraged students to 
+surf during the quizzes.
+<P>
+Another security hole is that since tutorial times are typically staggered,
+students in earlier tutorials can save quiz questions to 
+local files and e-mail them to students in later tutorials.
+Since we encourage surfing, 
+students can even use the WWW to make these 
+questions (and possible answers) available during the exam itself.
+Off-line checks of the access log can possibly detect questionable 
+surfing behaviours at a server, but it is impossible to fully monitor
+and detect whether cheating is in fact occurring.
+We offset this to some extent by randomly chosing questions during the quiz
+from a pool of questions.
+But students in later tutorials still have a distinct advantage
+since they can see the ``kinds'' of questions that are on the quiz.
+With current browsers, in a multi-window environment,
+there is no way to prevent students from saving quiz questions, or 
+their answers to them.
+<P>
+Teachers are concerned not only with quiz security, but with the
+ease of putting a quiz on the WWW.
+We assumed that teachers would like to develop all subject materials,
+including quizzes, using a familiar word processor (e.g., emacs) and 
+formatting package (e.g., LaTeX) rather than enter quiz information using
+a form-based interface (e.g.,
+[<a href="http://www5conf.inria.fr/fich_html/papers/P29/Overview.html">HREF17</a>]).
+So we wrote a Perl program, called QuizMaker, to read a text file with special
+``quiz tags'' and generate all the databases and HTML needed for the quiz.
+QuizMaker creates several small databases that contain the quiz information.
+The actual quiz pages are dynamically constructed during the quiz from 
+the database by a CGI-bin script, with the security restrictions described
+above.
+The only difficult part to learning to use QuizMaker is learning what
+each quiz tag means. 
+The quiz tags entirely control how the quiz is formatted and constructed. 
+Tags were used to distinguish question types, answers, and hints.
+Most tags are self-evident.
+An example multiple choice question is shown below, the correct 
+answer is indicated by the <TT>(r)</TT> tag.
+<PRE>(MC) When a tuple is deleted,
+  (w) the key, if any, is replaced by NULL.
+  (w) the delete operation is not allowed if the tuple's primary
+      key is a target of a foreign key.
+  (w) the tuple is deleted as well as the tuples that have foreign keys
+      that have the deleted primary key as their target.
+  (w) all of the above. 
+  (r) none of the above.
+</PRE>
+<P>
+We chose to maintain the quiz questions in a text file and then convert them
+to a database so that we could format the questions
+using LaTeX.
+We then ran QuizMaker on the output of <TT>latex2html</TT>.
+Consequently we could generate a LaTeX version of the quiz as well as 
+an HTML version as a backup in case the network was down for an extended
+period of time.
+<P>
+We found that we would always make one or more minor mistakes when we 
+created a quiz, however, unlike a paper quiz, an electronic quiz can 
+be dynamically modified. 
+One must be careful when modifying a quiz because some students may already
+have answered some of the questions. 
+So we added a flag to QuizMaker
+to allow teachers to change
+the entry/submit passwords and times,
+the wording of a question, e.g., reword a question to make it clearer, or 
+the correctness of an answer, e.g., add a new answer to an exact 
+answer question.
+Changes other than those mentioned above are not supported.
+<P>
+We also developed a WWW interface to mark the quiz.
+Questions and student answers are presented one-by-one and the
+the marker is given the choice of changing correct to incorrect answers or 
+vice-versa.
+The marking program also has options to collect statistics on how
+students did on each question, e-mail results and statistics to students,
+and insert the final marks into a spread-sheet.
+While the marking interface is accessible to the WWW, and several tutors can 
+mark at once if needed, the program is password-protected and can only be 
+accessed by starting a browser directly on the marking-entry page 
+(Unix protections on this page should be set so that only the person marking
+can read the page).  The entry page is generated by 
+QuizMaker with the password and location of the student answer databases
+encoded in hidden variables.
+Marking of the example quiz is available 
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_quiz-stats.html">HREF18</a>].
+<P>
+The result is that all we had to do to conduct a quiz was to create
+the questions and run QuizMaker;
+after that everything happened automatically.  
+The marking interface enabled us 
+to easily analyse and mark questions.
+<P>
+In CP2050a, we ran four quizzes between fifteen to twenty questions 
+in length.  We spent approximately 4.5 hours creating the quizzes
+and 1 hour modifying the quiz and analysing results for all 54 
+students.
+Because it was so easy to conduct quizzes, we were tempted to 
+to run weekly quizzes to train students on every concept covered in class.
+<P>
+<H2><A NAME="SECTION00052000000000000000">Self-assessment</A></H2>
+<P>
+A self-assessment is an interactive lesson that a student works through
+at their own pace, without the pressure of punitive marking, and with
+the support of immediate feedback on their performance.
+An example self-assessment is available
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_sa.html">HREF19</a>].
+For a self-assessment we used the same simple interface that we adopted
+for quizzes.
+To keep pages small we presented only one question to a page.
+We also made extensive use of buttons so that
+most questions could be answered by a single mouse click.
+In a self-assessment, a student's answer is 
+is marked immediately and feedback 
+given to the student in terms of a running tally of incorrect and correct
+responses.  
+We also stored each answer for later statistical analysis to pinpoint 
+which questions students found difficult.
+The current statistics for the example self-assessment are available
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_sa-stats.html">HREF20</a>].
+<P>
+We wrote a modified QuizMaker, called SAMaker [REF3,<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software.html">HREF15</a>],
+to create a self-assessment from a 
+text file using essentially the same tags as the quiz questions.
+Consequently we could easily put old quizzes on the WWW as
+self-assessment.
+We also had to modify the quiz CGI-bin scripts to mark questions
+and to provide feedback to the student on the fly.
+Self-assessment has no real security concerns
+so we stripped all of the quiz security restrictions from the
+self-assessment scripts.
+<P>
+<H2><A NAME="SECTION00053000000000000000">Teacher evaluations</A></H2>
+<P>
+On the surface a teacher evaluation form appears to be just a special
+kind of quiz.
+Like a quiz it consists of a series of questions to which students 
+give answers.
+For example, ``Did the lecturer adequately explain difficult concepts?,''
+to which a range of possible responses are given.
+The responses are not marked for correctness since there are no correct 
+answers, rather all the responses are tabulated and, eventually, 
+statistically analysed.
+But the security issues in implementing an electronic teacher evaluation form
+are entirely different.  
+In an quiz, each student must be identified and tracked.
+But in a teacher evaluation, student anonymity must be guaranteed.
+<P>
+The crux of the problem of preserving anonymity is that in order to 
+prevent multiple submissions,
+a student must be identified as having submitted a form.
+An easy way of identifying a student as having submitted a form is to 
+ask the student for some personal information, such as a student id.
+This differs from the in-class method of filling out teacher evaluation
+forms since no personal information must ever be given to fill 
+out a teacher evaluation form.
+It is risky for a student to give any personal information.
+The risk is that the teacher could be the same individual that 
+designs the scripts to handle the teacher evaluations.
+In such situations, a teacher has the potential to violate student 
+trust and modify the form handler to identify students rather than 
+to protect their anonymity.
+So for instance, the teacher could tag each submitted evaluation with 
+the student's id.
+<P>
+To preserve student anonymity while preventing multiple submissions,
+we chose to use an anonymous one-time password scheme.
+An anonymous one-time password is a password that grants permission to 
+submit one teacher evaluation, but cannot be used to identify a student.
+For teacher evaluations, we ensure anonymity by allowing students to 
+randomly choose one password from a bag of one-time passwords.
+The student can then fill out the form whenever they like.
+The password grants permission to submit a single teacher evaluation form,
+and it, rather than any personal identification, is used to register
+that a form had been submitted.
+Once used, no further submissions using that password are allowed.
+<P>
+The key feature of the anonymous password scheme is that trust lies with 
+the students, not with the teachers.
+But the anonymous password solution only eliminates some obvious student risks.
+The chief hidden risk to students is that it is impossible to guarantee 
+anonymous usage with current browsers and servers.
+Some browsers, e.g., netscape, allow a mail address
+scam that could be used to identify a student. (The scam is
+to modify the teacher evaluation entry page so that when the page is 
+accessed, an e-mail message is silently sent from the student's account 
+to the malicious teacher's account.)
+Another risk is that when a form is submitted it can be timestamped.
+The timestamp can then be used to (partially) identify the student by
+examining the HTTPD referer_log and access_log since
+a student will typically fill the form out in tutorial 
+by starting a browser on their home page and shortly thereafter jump
+to the teacher evaluation form.
+<P> 
+From the teacher's perspective, the primary risk is that a single 
+student could collect and use several passwords.
+To prevent this abuse of the system, passwords could be 
+chosen and used under supervised conditions, e.g., during tutorials,
+as is done with current teacher evaluations.
+<P>
+To ease the burden of putting evaluations (and other surveys) onto the WWW,
+we wrote a tool called SurveyMaker [<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software.html">HREF15</a>],
+to create a survey from a text file using essentially the same tags as the 
+quiz and self-assessment questions.
+We also wrote CGI-bin scripts to collect and analyse
+student responses.
+An example survey is available
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_survey.html">HREF21</a>] as well as the current statistics on the survey
+[<a href="http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_survey-stats.html">HREF22</a>].
+<P>
+<H2><A NAME="SECTION00054000000000000000">Student access to marks</A></H2>
+<P>
+Providing WWW access to student marks is very beneficial
+for students because they can see their marks at any time,
+but WWW access potentially allows others to also view their marks.
+In providing on-line access to marks, protecting student privacy 
+is our chief concern.  Marks security is not a primary concern 
+because the marks are read-only copies of marks. The actual
+marks are maintained elsewhere.  The marks page informs students
+that the WWW marks are unofficial.
+<P>
+It is common practice at many universities for teachers to post grades, 
+sorted by student id, in a common area, e.g., on an office door.
+It would be easy to post the entire list to the WWW and 
+restrict access to on-campus machines.
+However, the practice of posting a list of grades sorted by 
+student id does not go far enough in protecting students' privacy.
+First, a student id does not provide sufficient anonymity.
+A parent typically knows a student's id, but a parent should not
+have unrestricted access to a student's mark.
+Second, no possible good can come from a student being able to 
+see the ids of other students in the class, especially when 
+those ids are publicly associated with marks, be they good or bad marks.
+Finally, a student is not given the option of removing their id
+and mark from the list of marks.
+<P>
+Our solution was to carefully explain, in class, the privacy concerns.
+Students that wanted on-line access had to sign a release form.
+On the form, the student chose a password to be used when accessing
+the marks.
+To gain access to their marks, the student had to first enter their
+password, and only then could they see their marks (and class averages). 
+Only the password along with copies of the marks themselves, and 
+in particular, no personal student information,
+such as name or student id, were stored or presented with the 
+copies of the marks.
+So if one student guessed another's password, or somehow obtained
+access to the password and marks file by writing a malicious CGI-bin
+script (on our system only trusted authors can write CGI-bin scripts), 
+they would only be able to read the marks for an anonymous person in 
+the class, which still
+represents a substantial privacy improvement on prior practice.
+Only 60% of students signed the release form initially, and
+an additional 24% signed on during the term.
+23% of those students chose their student id as their marks password.
+Another 20% chose a proper name (usually a first name)
+<P>
+Our solution has two problems.
+First, it forces students to choose a password. 
+To avoid having to remember yet another password, the temptation for 
+a student is to use a login password or a credit-card PIN.
+While teachers are usually trustworthy, it is still a risk.
+Second, it introduces a new clerical task for the teacher,
+that of maintaining a list of marks passwords.
+28% of the students forgot their password during the term and
+polled the teacher for it.
+Our goal is to reduce clerical tasks, not to create new tasks.
+<P>
+<H1><A NAME="SECTION00060000000000000000">Analysis</A></H1>
+<P>
+In this section we analyse the experimental classroom from both the
+student and teacher perspectives.  From a teacher's perspective, 
+we found that maintaining the 
+WWW classroom was time consuming (we estimate 2 extra hours per week, 
+not including time spent on lecture notes),
+but it also saved time on a number of tasks.
+Overall, students rated the WWW classroom highly, 
+but their use of the classroom did not match how we expected them to 
+use it.
+<P>
+<H2><A NAME="SECTION00061000000000000000">Student usage statistics</A></H2>
+<P>
+One advantage to putting a subject on the WWW 
+is that the server access_log contains a wealth of information about
+how students actually use the various parts of the subject.
+Table 1 given below shows student usage for CP1500 and CP2050a.
+<P>
+<table id=2 border=2>
+<caption> <b> Table 1: Access log statistics </b> </caption>
+<TR>
+<th> 
+<th colspan=4> CP1500 (80 students) 
+<th colspan=4> CP2050a (54 students)
+<th colspan=9>
+<TR>
+<th> section
+<th> accesses
+<th> %
+<th> relativised %
+<th> per link %
+<th> accesses
+<th> %
+<th> relativised %
+<th> per link %
+<tr> 
+<td>class home page 
+<td > 608  
+<td> 750% 
+<td> 75% 
+<td> 230% 
+<td> 1855 
+<td> 3050% 
+<td> 200% 
+<td> 560% 
+<TR>
+<td>lecture notes 
+<td> 276 
+<td> 350% 
+<td> 10% 
+<td> 45%
+<td> 521 
+<td> 950% 
+<td> 39% 
+<td> 80% 
+<TR>
+<td>on-line marks 
+<td> 222 
+<td> 300% 
+<td> 300% 
+<td> 300% 
+<td> 375 
+<td> 700%  
+<td> 700%
+<td> 700%
+<TR>
+<td>self-assessment 
+<td> 542 
+<td> 650% 
+<td> 65% 
+<td> 75% 
+<td> 730 
+<td> 1400% 
+<td> 100% 
+<td> 100% 
+<TR>
+<td>copies of assignments 
+<td> 109 
+<td> 130% 
+<td> 45% 
+<td> 45% 
+<td> 283 
+<td> 500% 
+<td> 75% 
+<td> 100% 
+<TR>
+<td>copies of class handouts 
+<td> 51 
+<td> 65% 
+<td> 30% 
+<td> 18% 
+<td> 81 
+<td> 150% 
+<td> 75% 
+<td> 170% 
+<TR>
+<td>midterm answers 
+<td> 88 
+<td> 110% 
+<td> 110% 
+<td> 81% 
+<td> 119 
+<td> 210% 
+<td> 150% 
+<td> 150% 
+<TR>
+<td>pointers to related materials 
+<td> none 
+<td> none 
+<td> none  
+<td> none  
+<td> 278 
+<td> 500% 
+<td> 40% 
+<td> unknown
+<TR>
+<td>subject times 
+<td> 19 
+<td> 25% 
+<td> 25% 
+<td> 25% 
+<td> 29 
+<td> 50% 
+<td> 50%
+<td> 50%
+<TR>
+</table>
+<P>
+
+Each class is broken down into sections, and only
+accesses to the root page in each section are shown
+(e.g., all lecture notes are linked to a lecture note root page).
+The first column in the table is the total number of accesses over
+the entire term to the root page for that section of the subject.
+The percentage of the on-line class that used that section of the class
+is shown in the second column, e.g., 
+if there were 80 students in the class and 40 accesses to a
+root page, then 50% of the class accessed that page.
+But the total access percentage is somewhat misleading
+since there are several links within some sections, e.g., there
+are six assignments in CP2050a so a 500% access percentage means that some
+students did not look at each assignment rather than that each student
+looked at every assignment five times.
+The third column shows a <EM>relativised</EM> percentage which is 
+the percentage of the total access per link in the respective root page.
+A relativised percentage of 100% means that there were enough accesses
+to account for each student following every link.
+The fourth column shows the actual per link percentage.
+It represents the percentage of students that followed a link (on average) 
+in the respective section.
+A per link percentage of 300% means that every student followed
+each link from the section's root page three times, on average.
+<P>
+The relativised percentage and the per link percentage are related measures.
+If the relativised percentage is much lower than the per link percentage
+then students tended to surf to the relevant section and then explore several 
+of the links within that section without reloading the root page 
+(i.e., the root page is cached).
+For instance, it appears that students tend to come into a class home page and
+from that page browse three to four parts of the class in a single session.
+If the relativised percentage is approximately the same as the per link 
+percentage then students tended to follow only one link per visit to the 
+root page.
+For example, it appears that students will browse to the self-assessments, 
+try a single self-assessment, and then leave, rather than doing multiple
+self-assessments in a single visit to the class.
+Finally, if 
+the relativised percentage
+is much higher than the
+per link percentage
+then students tended to reach a section, see little of interest and leave
+to explore a different section.
+<P>
+The relativised and per link percentages show that students visited pages 
+related to assessment more frequently than those not directly related.
+Students appear to have checked on-line marks religiously.
+They also checked midterm test answers and trained on self-assessment,
+perhaps in preparation for the final exam
+since the lecturer informed students that some self-assessment questions
+would appear on the final.
+We still find it impressive that, on average, each student in CP2050a tried 
+178 self-assessment questions.
+<P>
+In contrast, and somewhat surprisingly, lecture notes and pointers 
+to related materials appear to have been ignored by over half the class.
+We expected that students would consult the lecture notes 
+frequently during the term, especially during WWW quizzes and self-assessment
+(we encouraged students to surf to the notes during quizzes).
+But students appear to have made more extensive use of the page for the 
+time and location for the subject (which did not change at all 
+during the term!) than they did of the lecture notes.  
+The relatively high per link percentage (in comparison to the 
+relativised percentage) shows that the students who did visit the lecture
+notes tended to explore several weeks of lecture notes in a single session.
+We suspect that during these sessions students printed the notes 
+rather than explore them on-line.
+Access rates on individual lectures vary wildly between 10% and 200%, 
+with little relation to expected study patterns for quizzes and exams.
+We should note that the lecture notes were also made available in 
+the university library prior to the final exam.
+<P>
+A complete report of 
+CP1500 accesses 
+[<a href="http://www.cs.jcu.edu.au/~curtis/cp1500stats.html">HREF23</a>]
+and 
+CP2050a accesses 
+[<a href="http://www.cs.jcu.edu.au/~curtis/cp2050astats.html">HREF24</a>]
+are available.
+<P><H2><A NAME="SECTION00062000000000000000">Student feedback survey</A></H2>
+<P>
+We also surveyed the students in an attempt to ascertain student
+perceptions of a WWW classroom.
+We asked the students to judge how often they used the WWW and to 
+rate the utility of the various sections of the subject.
+Student perception of how often they used the subject is shown in 
+Table 2 below.
+<P>
+<table id=3 border=2>
+<caption> <b> Table 2: Student usage survey results by percentage of class </b> </caption>
+<TR>
+<th colspan=1> 
+<th colspan=2> CP1500 (39 responses)
+<th colspan=2> CP2050a (41 responses)
+<TR>
+<th> when
+<th> outside of tutorial 
+<th> overall 
+<th> outside of tutorial 
+<th> overall 
+<TR>
+<td> never              
+<td> 5%  
+<td> 6% 
+<td> 2% 
+<td> 2%
+<TR>
+<td> rarely             
+<td>31%  
+<td> 10% 
+<td> 10% 
+<td> 8% 
+<TR>
+<td> less than one hour per week 
+<td> 33%  
+<td> 25% 
+<td> 22% 
+<td> 22%
+<TR>
+<td> more than one hour per week 
+<td>31%  
+<td> 54% 
+<td> 66% 
+<td> 66%
+</table>
+<P>
+
+The more advanced students in CP2050a used the WWW to a much greater extent.
+Student ratings of the classroom 
+are given in Table 3 below.
+<P>
+<table id=4 border=2>
+<caption> <b> Table 3: Student survey ratings, scale is 1 to 4 (4 is very useful)</b> </caption>
+<TR>
+<th colspan=1> section
+<th colspan=1> CP1500 (39 responses)
+<th colspan=1> CP2050a (41 responses)
+<tr>
+<td> on-line marks 
+<td> 3.12 
+<td> 3.36
+<tr>
+<td> lecture notes 
+<td> 3.44 
+<td> 3.34 
+<tr>
+<td> handouts 
+<td> 3.10 
+<td> 2.82 
+<tr>
+<td> self-assessment 
+<td> 3.23 
+<td> 3.17 
+</table>
+<P>
+
+Student feedback was almost entirely positive.
+The high marks given to lecture notes seems at odds with the 
+relatively low number
+of accesses to the notes, but may indicate that students found it valuable
+to check the notes when they missed lecture.
+Or perhaps, psychologically, it was reassuring to students to know that
+the notes were available.
+We were also very concerned with students having difficultly 
+using the WWW since most were novices, but Table 4 below
+shows that most students found the WWW easy to use.
+<P>
+<table id=5 border=2>
+<caption> <b> 
+Table 4: 
+Student ratings for WWW ease of use, scale is 1 to 4 (4 is very easy)
+</b> 
+</caption>
+<TR>
+<th colspan=1> 
+<th colspan=1> CP1500 (39 responses)
+<th colspan=1> CP2050a (41 responses)
+<tr>
+<td> computer beginners ease of use 
+<td> 2.36 
+<td> 3.11 
+<tr>
+<td> computer intermediate ease of use 
+<td> 3.40 
+<td> 3.55 
+<tr>
+<td> computer expert ease of use 
+<td> 3.83 
+<td> 4.0 
+<tr>
+<td> WWW beginners ease of use 
+<td> 3.0 
+<td> 3.0 
+<tr>
+<td> WWW intermediate ease of use 
+<td> 3.66 
+<td> 3.9 
+<tr>
+<td> WWW expert ease of use 
+<td> 4.0 
+<td> 4.0 
+<tr>
+<td> overall ease of use 
+<td> 3.35 
+<td> 3.48 
+<tr>
+<td> adequacy of facilities 
+<td> 2.05 
+<td> 2.36 
+</table>
+<P><H2><A NAME="SECTION00063000000000000000">Teacher perspective</A></H2>
+<P>
+An important goal in the experiment was to determine if the WWW could
+reduce the clerical load on a teacher.
+We found, unfortunately, that it actually increased that load by an 
+average of two hours a week.
+The two hour per week figure is conservative, but does not include 
+the time needed to learn HTML or to create class materials on 
+a word-processor.
+Using the WWW saved time in marking quizzes, 
+xeroxing (the class was ``paperless''),
+distributing handouts during lectures,
+and responding to student queries about marks.
+But the WWW classroom also created several time-consuming tasks, such as
+using the tools to put materials on-line,
+testing that material to make sure that all the links worked,
+and maintaining the on-line marks password database.
+Even worse, because the WWW classroom could do more than the 
+traditional classroom, it invented the following tasks:
+creating self-assessment questions,
+analysing student performance on self-assessments and quizzes,
+and responding to student queries on self-assessment questions.
+Overall, the only clear-cut time-savers were the WWW quizzes and having
+a paperless class.
+We did not assess how electronic instead of paper quizzes impacted 
+student learning.
+The fact that students made extensive use of on-line marks and 
+self-assessment helps to reassure
+us that the time spent creating and maintaining these aspects of the
+classroom, which are unique to a WWW classroom, is worthwhile.
+In future, we plan to scale-back our efforts to create lecture notes 
+and find related materials on the WWW since those portions of the class are
+under-utilised.
+<P>
+<H1><A NAME="SECTION00070000000000000000">Conclusions</A></H1>
+<P>
+The paper presents the design of several tools that we developed
+to help teachers put their classrooms onto the WWW and gives a 
+detailed analysis of how students used the resulting classroom.
+<P>
+Our primary goal in the experiment was to reduce the clerical load on 
+teachers by automating the process of putting interactive self-assessment, 
+student access to marks, interactive quizzes, and subject evaluation 
+forms on the WWW.
+Once on the WWW, the computer, rather than the teacher, 
+assumes the clerical tasks associated with these classroom aspects.
+Although the tools that we developed made the process of creating 
+the interactive parts of a WWW classroom quick and easy, 
+we ultimately found that they did not reduce the clerical load on teachers 
+since the time spent maintaining and testing the classroom offset 
+any reduction in other tasks.
+We estimate that we spent an additional two hours each week on a subject
+because it was on the WWW.
+<P>
+An analysis of the access_log shows that students
+made extensive use of what we put on the WWW, especially the classroom aspects 
+relating to assessment such as on-line marks and self-assessment.
+The analysis also shows that students under-utilised on-line lecture notes and
+did not surf to related materials available elsewhere on the WWW.
+Our findings suggest that teachers should not invest a significant 
+amount of time in developing these portions of the classroom.
+The results of a student survey on the experiment clearly indicates 
+that students found the WWW to be very easy to use and thought that
+the WWW classroom was a useful resource.
+<P>
+We also addressed security and privacy concerns connected with making
+quizzes, marks, and evaluation forms available in an open forum.
+Our tools incorporated many security and privacy mechanisms, but 
+current browsers cannot completely ensure student anonymity when filling 
+out subject evaluation forms, nor can students be prevented from cheating 
+during a quiz by looking for answers elsewhere on the WWW.
+<P>
+<H1><A NAME="SECTION00080000000000000000">Acknowledgements</A></H1>
+<P>
+We would like to thank Dr. Shyam Kapur who was the inspiration for 
+developing WWW subjects at James Cook University.  We used his 
+software to report student marks, and the design of our tools profited
+by discussing techniques with him.  We would also like to thank
+our webmistress Marianne Brown, Tony Sloane, Michael Sharpe, 
+and Trevor Tracey-Patte. 
+Work on an object-oriented extension of the tools discussed in 
+this paper has also begun thanks to a James Cook University 
+Teaching and Learning Grant [REF2].
+<P>
+<hr>
+<h2>Hypertext References</h2>
+<dl>
+<dt>HREF1<dt>
+<dd>http://www.cs.jcu.edu.au - Dr. Curtis Dyreson's Home Page.
+<dt>HREF2<dt>
+<dd>http://www.scu.edu.au:80/ausweb95/papers/education1/omari/ -
+Omari, A. and Brogan, M.,
+<i> New Directions in courseware delivery - Multimedia, CDROM and the Internet</i>, AusWeb '95.
+<dt>HREF3<dt>
+<dd>http://www.scu.edu.au:80/ausweb95/papers/education2/alexander/ -
+Alexander, S., <i>Teaching and Learning on the World-Wide-Web</i>,  AusWeb '95.
+<dt>HREF4<dt>
+<dd>http://www.w3.org/pub/Conferences/WWW4/Papers/238/ -
+Lai, M.-C., Chen, B.-H., and Yuan S.-M.,
+<i>Toward a New Educational Environment</i>,
+Fourth International WWW Conference, Boston 1995.
+<dt>HREF5<dt>
+<dd>http://cbl.leeds.ac.uk/nikos/tex2html/doc/latex2html/latex2html.html - 
+All About LaTeX2HTML.
+<dt>HREF6<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/web/teaching/Subjects/cp1500/1995/root.html -
+CP1500, Information Systems Home Page.
+<dt>HREF7<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/web/teaching/Subjects/cp2050a/1995/root.html -
+CP2050a, Principles of Programming Languages Home Page.
+<dt>HREF8<dt>
+<dd>http://www.civeng.carleton.ca/~nholtz/tut/doc/doc.html - The Tutorial Gateway.
+<dt>HREF9<dt>
+<dd>http://stargate.jpl.nasa.gov:1084/RAGS/ -
+The Review Automated Generation System (RAGS).
+<dt>HREF10<dt>
+<dd>http://ASCILITE95.unimelb.edu.au/SMTU/ASCILITE95/abstracts-/Cox.html -
+Cox, K. and Clubb, O., <i>
+Formative Quizzes and the World Wide Web</i>,
+Australian Society for Computers in Learning In Tertiary Education
+Conference (ASCILITE), Melbourne, Dec. 1995.
+<dt>HREF11<dt>
+<dd>http://lglwww.epfl.ch/Ada/Tutorials/Lovelace/userg.html - Mklesson.
+<dt>HREF12<dt>
+<dd>http://www.qmark.com/qmweb.html - QM Web.
+<dt>HREF13<dt>
+<dd>http://www.satlab.hawaii.edu/space/hawaii/qform.html - qform.
+<dt>HREF14<dt>
+<dd>http://www.scu.edu.au:80/ausweb95/papers/education3/byrnes/ - 
+Byrnes, R., Debreceny, R., and Gilmour, P., <i>
+The Development of a Multiple-Choice and True-False Testing Environment 
+on the Web</i>, AusWeb '95.
+<dt>HREF15<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software.html - Educational Software Home Page, e.g, QuizMaker etc.
+<dt>HREF16<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_quiz.html - Example quiz.
+<dt>HREF17<dt>
+<dd>http://www5conf.inria.fr/fich_html/papers/P29/Overview.html -
+Goldberg, M., Salari, S., and Swoboda, P.
+<i> World Wide Web - Course Tool: An Environment for Building WWW-Based Courses</i>, Fifth International World Wide Web Conference, May 6-10, 1996, Paris, France.
+<dt>HREF18<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_quiz-stats.html - Marking the example quiz.
+<dt>HREF19<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_sa.html - Example self-assessment.
+<dt>HREF20<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_sa-stats.html - Statistics on the example self-assessment.
+<dt>HREF21<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_survey.html - Example survey.
+<dt>HREF22<dt>
+<dd>http://www.cs.jcu.edu.au/ftp/users/CDyreson/web/htmls/software/example_survey-stats.html - Statistics on the example survey.
+<dt>HREF23<dt>
+<dd>http://www.cs.jcu.edu.au/~curtis/cp1500stats.html - CP1500 access_log Statistics Page.
+<dt>HREF24<dt>
+<dd>http://www.cs.jcu.edu.au/~curtis/cp2050astats.html - CP2050a access_log Statistics Page.
+</dl>
+<h2>References</h2>
+<dl>
+<dt>REF1<dt>
+<dd>S. Kapur, C. Dyreson, and A. Sloane, <i> A World-Wide Web
+Classroom Toolkit</i>, CAUT grant application.
+<dt>REF2<dt>
+<dd>S. Kapur, C. Dyreson, A. Sloane, and I. White, 
+<i> Development of World Wide Web Tools for Teaching with an Application
+to Graphic Design</i>,
+JCU Teaching and Learning Development Grant. 
+<dt>REF3<dt>
+<dd>A. Sloane and C. Dyreson,
+<i> An Interactive Self-Paced Learning Environment for the World-Wide Web</i>,
+First Australian Conference on Computer Science Education (ACSE '96), Sydney,
+June 1996.
+</dl>
+<HR>
+<h2>Copyright</h2>
+Curtis E. Dyreson &copy, 1996. The authors assigns to Southern Cross University 
+and other educational and non-profit institutions 
+a non-exclusive licence to use 
+this document for personal use and in courses of 
+instruction provided that the article 
+is used in full and this copyright statement is reproduced. 
+The authors also grant a non-exclusive licence to Southern Cross 
+University to publish this document in full on the World Wide Web 
+and on CD-ROM and in printed form with the conference 
+papers, and for the document to be published on mirrors on the World Wide Web.  
+Any other usage is prohibited without the express permission of the author.
+<hr>
+<address>
+<i>AusWeb96 The Second Australian WorldWideWeb Conference
+<a href="mailto:ausweb96@scu.edu.au">"ausweb96@scu.edu.au"</a></i>
+</address>
+<p>
+<P>
+<BR> <HR>
+
+</BODY>
+</HTML>

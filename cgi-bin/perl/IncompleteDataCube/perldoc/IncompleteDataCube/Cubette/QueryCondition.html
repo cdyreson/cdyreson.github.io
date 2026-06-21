@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube/Cubette/QueryCondition.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_QueryCondition">NAME QueryCondition</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_dimensions_unitsMatched_">new($dimensions, $unitsMatched, $measuresMatched)</A>
+		<LI><A HREF="#fullySatisfied_">fullySatisfied()</A>
+		<LI><A HREF="#partiallySatisfied_">partiallySatisfied()</A>
+		<LI><A HREF="#rank_">rank()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_QueryCondition">NAME QueryCondition</A></H1>
+<P>
+This class represents the satisfaction condition for a query. 
+<FONT SIZE=-1>A</FONT> query can be partially satisfied.
+
+<P>
+This package is part of <A HREF="./cube/cubette.html">cube::cubette</A>. For more information on the cube see the <A HREF="./cube/Overview.html">cube::Overview</A>.
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved. Please be aware of
+the <A HREF="./cube/Licence.html">cube::Licence</A> and <A HREF="./cube/Version.html">cube::Version</A>.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+When a query is evaluated, the cubettes are tested to determine if they
+satisfy the query. This class records how fully the query is satisfied
+since it may be partially satisfied.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_dimensions_unitsMatched_">new($dimensions, $unitsMatched, $measuresMatched)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__dimensions">$dimensions</A></STRONG>
+<P>
+- The number of dimensions (yeah, sure it is a global constant too!)
+
+<LI><STRONG><A NAME="item__unitsMatched">$unitsMatched</A></STRONG>
+<P>
+- How many units were matched.
+
+<LI><STRONG><A NAME="item__measuresMatched">$measuresMatched</A></STRONG>
+<P>
+- How many measures where matched.
+
+</UL>
+<P>
+Create a query satisfacation object.
+
+<P>
+History
+
+<UL>
+<LI><STRONG><A NAME="item_Nov">Nov 14, 1997</A></STRONG>
+<P>
+- Born.
+
+</UL>
+<P>
+<HR>
+<H2><A NAME="fullySatisfied_">fullySatisfied()</A></H2>
+<P>
+Was the query fully satisfied by this cubette?
+
+<P>
+<HR>
+<H2><A NAME="partiallySatisfied_">partiallySatisfied()</A></H2>
+<P>
+Was the query partially satisfied by this cubette?
+
+<P>
+<HR>
+<H2><A NAME="rank_">rank()</A></H2>
+<P>
+Rank how well the query is partially satisfied.
+
+</BODY>
+
+</HTML>

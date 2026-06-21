@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Data Updates</TITLE>
+<META NAME="description" CONTENT="Data Updates">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="main.css">
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node17.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html228"
+ HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html226"
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html220"
+ HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html229"
+ HREF="node19.html">Adding and Removing Properties</A>
+<B> Up:</B> <A NAME="tex2html227"
+ HREF="node17.html">Updates</A>
+<B> Previous:</B> <A NAME="tex2html221"
+ HREF="node17.html">Updates</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00034100000000000000">
+Data Updates</A>
+</H3>
+
+<P>
+An edge can be inserted at any time into the semistructure.  On insertion,
+the transaction time of the label on the inserted edge
+is set to 
+<!-- MATH: $[{\it current~time} - {\rm uc}]$ -->
+<IMG
+ WIDTH="135" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$[{\it current~time} - {\rm uc}]$">.
+
+<P>
+<BR>
+
+<P>
+[Edge insertion]
+
+<P>
+Let <I>T</I> be the current time.
+An edge is inserted into a semistructure, 
+
+<!-- MATH: $DB = (V,~E,~{\it\&root\/},~\Gamma)$ -->
+<IMG
+ WIDTH="170" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.gif"
+ ALT="$DB = (V,~E,~{\it\&root\/},~\Gamma)$">,
+as follows.
+<PRE><TT>
+		<IMG
+ WIDTH="167" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="${\it Insert\/}_{\it DB\/}(T, v~{\mathop{\longrightarrow}\limits^{\cal L}}~w) \stackrel{\scriptstyle \triangle}{=}$">
+<BR>				<IMG
+ WIDTH="290" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$(V~\cup~\{v,~w\},~E~\cup~\{v~{\mathop{\longrightarrow}\limits^{{\cal L}^\prime}}~w\},~{\it\&root\/},~\Gamma)$">,
+<BR>
+where<IMG
+ WIDTH="77" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.gif"
+ ALT="${\cal L}^\prime = {\cal L}~\cup~$">{(<B>transaction time:</B><IMG
+ WIDTH="82" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.gif"
+ ALT="$~[T - {\rm uc}])\}.$">`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P></P>
+
+<P>
+<BR>
+
+<P>
+Redundant and overlapping labels are permitted
+on edges, i.e., the data is not stored <EM>coalesced</EM>.
+Note also that edge insertion inserts nodes if the nodes not already
+exist in the database. We do not give a separate operation to insert
+only a node (our focus is on the relevant changes needed to support
+properties in labels).
+
+<P>
+Edges are (logically) deleted by terminating their transaction-time
+interval.
+
+<P>
+<BR>
+
+<P>
+[Edge deletion]
+
+<P>
+Let <I>T</I> be the current time.
+An edge is deleted from a semistructure, 
+
+<!-- MATH: $DB = (V,~E,~{\it\&root\/},~\Gamma)$ -->
+<IMG
+ WIDTH="170" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.gif"
+ ALT="$DB = (V,~E,~{\it\&root\/},~\Gamma)$">,
+as follows.
+<PRE><TT>
+		<IMG
+ WIDTH="173" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.gif"
+ ALT="${\it Delete\/}_{\it DB\/}(T,~v~{\mathop{\longrightarrow}\limits^{\cal L}}~w) \stackrel{\scriptstyle \triangle}{=}$">
+<BR>				<IMG
+ WIDTH="324" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.gif"
+ ALT="$(V,~(E~ - ~\{v~{\mathop{\longrightarrow}\limits^{\cal L}}~w\})~\cup ~\{v~{\mathop{\longrightarrow}\limits^{{\cal L}^\prime}}~w\},~{\it\&root\/},~\Gamma)$">,
+</TT></PRE>
+<BR>
+where the label 
+<!-- MATH: ${\cal L}^\prime$ -->
+<IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="${\cal L}^\prime$">
+is exactly the same 
+as <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">
+except in the transaction time property.
+If <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">
+has a transaction time property, say
+(<B>transaction time:</B>&nbsp;<I>x</I>), then 
+<PRE><TT>
+		<IMG
+ WIDTH="85" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.gif"
+ ALT="${\cal L}^\prime = {\cal L} - \{($"><B>transaction time:</B><IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$~x)\}~\cup~$">
+<BR>				<IMG
+ WIDTH="17" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.gif"
+ ALT="$\{($"><B>transaction time:</B><IMG
+ WIDTH="181" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.gif"
+ ALT="$~(x~\cap~[{\rm beginning} - T]))\}.$">
+</TT></PRE>If the transaction time property is missing from <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="${\cal L}$">,
+<PRE><TT>
+		<IMG
+ WIDTH="91" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.gif"
+ ALT="${\cal L}^\prime = {\cal L} ~\cup ~\{($"><B>transaction time:</B><IMG
+ WIDTH="134" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.gif"
+ ALT="$~[{\rm beginning} - T])\}.$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P></P>
+
+<P>
+Finally, a node can be (logically) deleted by removing all incoming
+edges, and an edge modification is modeled as an edge deletion
+followed by an edge insertion.
+
+<P>
+<BR>
+
+<P>
+transactions that created the two edges in
+Figure&nbsp;<A HREF="node16.html#fig:evolution">4</A> are given below.  Let
+<PRE><TT>
+		<I>v</I> :=&nbsp;&nbsp;<TT>&amp;Star Wars IV</TT>, <BR>		<I>w</I> :=&nbsp;&nbsp;<TT>&amp;by Videotastic</TT>, <BR>		<IMG
+ WIDTH="67" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.gif"
+ ALT="${\cal L}_1~:=~~\{$">(<B>name:</B> review),   (<B>security!</B> developer)}, and <BR>		<IMG
+ WIDTH="67" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.gif"
+ ALT="${\cal L}_2~:=~~\{$">(<B>name:</B> review),  (<B>security!</B> paid subscriber)}.
+<BR>
+On 15/Mar/1998, the first edge is inserted:
+<BR>				<IMG
+ WIDTH="73" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img128.gif"
+ ALT="${\it Insert\/}_{\it DB\/}($">15/Mar/1998, <IMG
+ WIDTH="63" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.gif"
+ ALT="$v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~w)$">
+<BR>
+On 24/May/1998, the first edge is deleted:
+<BR>				<IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.gif"
+ ALT="${\it Delete\/}_{\it DB\/}($">24/May/1998, <IMG
+ WIDTH="63" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.gif"
+ ALT="$v~{\mathop{\longrightarrow}\limits^{{\cal L}_1}}~w)$">
+<BR>
+On 25/May/1998, the second edge is inserted:
+<BR>				<IMG
+ WIDTH="73" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img128.gif"
+ ALT="${\it Insert\/}_{\it DB\/}($">25/May/1998, <IMG
+ WIDTH="63" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img131.gif"
+ ALT="$v~{\mathop{\longrightarrow}\limits^{{\cal L}_2}}~w)$">
+`<IMG
+ WIDTH="11" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathchoice{\raisebox{-.3ex}{\vbox{\hrule width5pt height2.5pt
+\hrule width5pt...
+...dth5pt height2.5pt
+\hrule width5pt height2.5pt
+\hrule width5pt height2.5pt}}}$">2
+</TT></PRE>
+<P></P>
+
+<P>
+<BR>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html228"
+ HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html226"
+ HREF="node17.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html220"
+ HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html229"
+ HREF="node19.html">Adding and Removing Properties</A>
+<B> Up:</B> <A NAME="tex2html227"
+ HREF="node17.html">Updates</A>
+<B> Previous:</B> <A NAME="tex2html221"
+ HREF="node17.html">Updates</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<BR>Copyright &#169; 1998. Curtis E. Dyreson, Michael H. B&.  All rights reserved.
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>../lib/OODatabase/Table.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Table">NAME Table</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_string_tableName_">new(string $tableName)</A>
+		<LI><A HREF="#insertTuple_Tuple_tuple_">insertTuple(Tuple $tuple)</A>
+		<LI><A HREF="#deleteTuple_Column_key_">deleteTuple(Column $key) </A>
+		<LI><A HREF="#retrieveTuple_Column_key_">retrieveTuple(Column $key)</A>
+		<LI><A HREF="#enumerate_">enumerate()</A>
+		<LI><A HREF="#enumerateKeys_">enumerateKeys()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Table">NAME Table</A></H1>
+<P>
+This package is part of <A HREF="./../lib/OODatabase.html#">the OODatabase manpage</A>.  
+
+<P>
+Copyright <CODE>&amp;copy</CODE> 1997 Curtis 
+<FONT SIZE=-1>E.</FONT> Dyreson. All rights reserved.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This class represents a table in a <A HREF="./OODatabase/Database.html">OODatabase::Database</A>. 
+<FONT SIZE=-1>A</FONT> table is a dbm file. Each entry in the table is a <A HREF="./OODatabase/Tuple.html">OODatabase::Tuple</A>. The class has been configured to use either 
+<FONT SIZE=-1>BSD,</FONT> 
+<FONT SIZE=-1>GDBM,</FONT> or BigDB files. You must edit this package to configure it.
+
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_string_tableName_">new(string $tableName)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_string">string $tableName</A></STRONG>
+<P>
+- The name of the table (a dbm file name).
+
+</UL>
+<P>
+Create a table with the give name (opens a dbm file). Second line.
+
+<P>
+<HR>
+<H2><A NAME="insertTuple_Tuple_tuple_">insertTuple(Tuple $tuple)</A></H2>
+<UL>
+<LI>
+<P>
+<A HREF="./OODatabase/Tuple.html">OODatabase::Tuple</A> <CODE>$tuple</CODE> - The tuple to insert.
+
+</UL>
+<P>
+Insert a <A HREF="./OODatabase/Tuple.html">OODatabase::Tuple</A> into the table. Will replace an existing tuple so be careful.
+
+<P>
+<HR>
+<H2><A NAME="deleteTuple_Column_key_">deleteTuple(Column $key)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item_Column">Column $key</A></STRONG>
+<P>
+- The key for the tuple to retrieve, must be a <A HREF="./OODatabase/Persistent.html">OODatabase::Persistent</A> object.
+
+</UL>
+<P>
+Delete a tuple. The function returns true or false depending on whether or
+not the tuple found and deleted.
+
+<P>
+<HR>
+<H2><A NAME="retrieveTuple_Column_key_">retrieveTuple(Column $key)</A></H2>
+<UL>
+<LI><STRONG>Column $key</STRONG>
+<P>
+- The key for the tuple to retrieve, must be a <A HREF="./OODatabase/Persistent.html">OODatabase::Persistent</A> object.
+
+</UL>
+<P>
+Retrieve a tuple with the given key from the table. This routine will
+retrieve a tuple from the table, or if the tuple is not found it will
+return 0. Use as follows.
+
+<P>
+<PRE>   # we want to retrieve the tuple for the key &quot;hi&quot;
+   $key = Id::fromString(&quot;hi&quot;);
+   # try to retrieve it 
+   $r = $table-&gt;retrieveTuple($key);    
+   # let's test if we found it
+   if ($r) { 
+     # key was found in the table 
+   else { 
+     # key was not found
+     }
+</PRE>
+<P>
+<HR>
+<H2><A NAME="enumerate_">enumerate()</A></H2>
+<P>
+Return a reference to the dbm file.
+
+<P>
+<HR>
+<H2><A NAME="enumerateKeys_">enumerateKeys()</A></H2>
+<P>
+Return a list of the keys.
+
+<P>
+<HR>
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Close the 
+<FONT SIZE=-1>DBM</FONT> file
+
+</BODY>
+
+</HTML>

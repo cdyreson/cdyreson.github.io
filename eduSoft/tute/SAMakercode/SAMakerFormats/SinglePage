@@ -1,0 +1,264 @@
+(EMBEDDED-FORMAT)
+  <FORM METHOD="POST" ACTION="CBEGIN$Croot/marker$CextensionCEND">
+  CBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$ChiddenText">CEND
+  CBEGIN<INPUT TYPE="submit" NAME="starter" VALUE="$CembeddedText">CEND
+  </FORM>
+
+(ENTRY-FORMAT)
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Self-assessment
+  </TITLE>
+  </HEAD>
+
+  <BODY>
+  CBEGIN $CheaderText CEND
+
+  <FORM METHOD="POST" ACTION="CBEGIN$Croot/marker$CextensionCEND">
+  CBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$ChiddenText">CEND
+  <H1> Hello and Welcome to the Self-assessment!</H1>
+  Use the mouse to select your choices.
+  At some places you will be asked to enter text.
+  If you are using a Netscape brower, before typing the text
+  you must first click the mouse in the text box.
+  <BR>
+  <INPUT TYPE="submit" NAME="starter" VALUE="Start Self-assessment">
+  </FORM>
+
+  CBEGIN $CfooterText CEND
+
+  </BODY>
+  </HTML>
+
+(STATS-FORMAT)
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Self-assessment Statistics
+  </TITLE>
+  </HEAD>
+  <BODY>
+  CBEGIN $CheaderText CEND
+ 
+  <FORM METHOD="POST" ACTION="CBEGIN$Croot/stats$CextensionCEND">
+  CBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$ChiddenText">CEND
+  <H1> Vailkommen to the Self-assessment Stats!</H1>
+  <HR>
+  Loading the stats may take awhile. 
+  <BR>
+  <INPUT TYPE="submit" NAME="action" VALUE="continue">
+  </FORM>
+ 
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+
+(STATS-PRESENTATION-FORMAT)
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Self-assessment Overall Statistics
+  </TITLE>
+  </HEAD>
+  <BODY>
+  CBEGIN $CheaderText CEND
+
+  <H1><A NAME="top">Overall Statistics</A></H1>
+
+  <left><table border=3 cellpadding=5>
+  RBEGIN $RstatsText REND
+  </table></left>
+
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+
+(STATS-QUESTION-FORMAT)
+  <HR>
+  <FORM METHOD="POST" ACTION="CBEGIN$Croot/dummy$CextensionCEND">
+  <H1><A NAME="RBEGIN$RquestionIdREND">Question RBEGIN$RquestionIdREND</A></H1>
+  RBEGIN $RquestionText REND 
+  RBEGIN $RstatsText REND 
+  <BR><A HREF="#top">Back to overall statistics.</A>
+  </FORM>
+
+(EXIT-FORMAT)
+  <HTML>
+  <TITLE>
+  All Done!
+  </TITLE>
+  <BODY>
+  CBEGIN $CheaderText CEND
+  Congratulations, you have finished the self-assessment.
+  <P>
+  CBEGIN $CreturnText CEND
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+
+(CORRECT-FORMAT)
+  <HR>
+  Congratulations, your answer,
+  RBEGIN $RanswerText REND
+  is correct!  Your current score is 
+  RBEGIN$RquestionsCorrectREND
+  out of 
+  RBEGIN$RquestionsTriedREND.
+  <BR>
+  <INPUT TYPE="submit" NAME="explanationFormatRBEGIN$RquestionIdREND" 
+      VALUE="Look at Answer">
+  <INPUT TYPE="submit" NAME="next" VALUE="Next Question">
+  RBEGIN $RpagesRemaining more question(s) are left. REND
+  <HR>
+
+(INCORRECT-FORMAT)
+  <HR>
+  Your answer,
+  RBEGIN $RanswerText REND
+  is incorrect.  Your current score is 
+  RBEGIN$RquestionsCorrectREND
+  out of 
+  RBEGIN$RquestionsTriedREND.
+  <BR>
+  <INPUT TYPE="submit" NAME="this" VALUE="Retry Question">
+  <INPUT TYPE="submit" NAME="explanationFormatRBEGIN$RquestionIdREND" 
+     VALUE="Look at Answer">
+  <INPUT TYPE="submit" NAME="next" VALUE="Next Question">
+  RBEGIN $RpagesRemaining more question(s) are left. REND
+  <HR>
+
+%(MARK-FORMAT)
+%  <HTML>
+%  <TITLE>
+%  Question RBEGIN$RpageNumberREND - Answer Given
+%  </TITLE>
+%  <BODY>
+%  CBEGIN $CheaderText CEND
+%  CBEGIN
+%    <FORM METHOD="POST" ACTION="$Croot/marker$Cextension">
+%    RBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$RhiddenText">REND
+%    RBEGIN$RquestionsTextREND
+%    </FORM>
+%  CEND
+%  CBEGIN $CreturnText CEND
+%  CBEGIN $CfooterText CEND
+%  </BODY>
+%  </HTML>
+
+(EXPLANATION-FORMAT)
+  <H1>Answer for Question RBEGIN $RpageNumber REND</H1>
+  RBEGIN $Rexplanation REND
+  RBEGIN The correct answer(s) are $RanswerTextREND
+  <INPUT TYPE="submit" NAME="next" VALUE="Next Question">
+  RBEGIN $RpagesRemaining more question(s) are left. REND
+  <HR>
+  CBEGIN $CquestionText CEND
+  <HR>
+
+(HINT-FORMAT)
+  RBEGIN <H1> Hint for Question $RpageNumber</H1> <P> $RhintText <HR> REND
+  CBEGIN $CquestionText CEND
+  <HR>
+  <INPUT TYPE="submit" NAME="skip" VALUE="Skip Question">
+  CBEGIN $CexistsHint<INPUT TYPE="submit" NAME="hintFormatRBEGIN$RquestionIdREND" VALUE="Hint"> CEND
+
+(QUESTION-FORMAT)
+  CBEGIN$CquestionTextCEND
+  <HR>
+  <INPUT TYPE="submit" NAME="skip" VALUE="Skip Question">
+  CBEGIN $CexistsHint<INPUT TYPE="submit" NAME="hintFormatRBEGIN$RquestionIdREND" VALUE="Hint"> CEND
+
+(PAGE-FORMAT)
+  <HTML>
+  <HEAD>
+  <TITLE>
+  Question RBEGIN$RpageNumberREND
+  </TITLE>
+  </HEAD>
+  <BODY>
+  CBEGIN $CheaderText CEND
+  CBEGIN
+    <FORM METHOD="POST" ACTION="$Croot/marker$Cextension">
+    RBEGIN<INPUT TYPE="hidden" NAME="hidden" VALUE="$RhiddenText">REND
+    RBEGIN$RquestionsTextREND
+    <BR>
+    </FORM>
+  CEND
+  CBEGIN $CreturnText CEND
+  CBEGIN $CfooterText CEND
+  </BODY>
+  </HTML>
+
+(F-FORMAT)
+ (DEFAULTANSWER)
+  false
+ (ACTUALTEXT)
+  <H1>Question RBEGIN$RpageNumberREND True/False </H1>
+  <HR>
+  CBEGIN$CquestionTextCEND
+  <BR><INPUT TYPE="submit" NAME="answerRBEGIN$RquestionIdREND" VALUE="true"> 
+  <INPUT TYPE="submit" NAME="answerRBEGIN$RquestionIdREND" VALUE="false">
+
+(T-FORMAT)
+ (DEFAULTANSWER)
+  true
+ (ACTUALTEXT)
+  <H1>Question RBEGIN$RpageNumberREND True/False </H1>
+  <HR>
+  CBEGIN$CquestionTextCEND
+  <BR>
+  <INPUT TYPE="submit" NAME="answerRBEGIN$RquestionIdREND" VALUE="true"> 
+  <INPUT TYPE="submit" NAME="answerRBEGIN$RquestionIdREND" VALUE="false">
+
+(MC-FORMAT)
+ (VALUES)
+  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w
+ (OPTION)
+  CBEGIN<BR><INPUT TYPE="submit" 
+                  NAME="answerRBEGIN$RquestionIdREND" 
+                  VALUE="$CanswerValue"
+            >$CanswerText
+  CEND
+ (ACTUALTEXT)
+  <H1> Question RBEGIN$RpageNumberREND Multiple Choice </H1>
+  <HR>
+  CBEGIN$CquestionTextCEND
+  CBEGIN$CanswerTextCEND
+
+(MM-FORMAT)
+ (OPTION)
+  <OPTION> CBEGIN$CanswerTextCEND
+ (ACTUALTEXT)
+  <H1> Question RBEGIN$RpageNumberREND Many Choice </H1>
+  CBEGIN$CquestionTextCEND
+  <BR>
+  <SELECT NAME="answerRBEGIN$RquestionIdREND" 
+        SIZE=CBEGIN$CanswerSizeCEND MULTIPLE>
+  CBEGIN$CanswerTextCEND
+  </SELECT>
+  <BR>
+  <INPUT TYPE="submit" NAME="this" VALUE="Done"> 
+
+(SA-FORMAT)
+  CBEGIN$CquestionTextCEND
+  <P>
+  Put your answer here 
+    <INPUT TYPE="text" NAME="answerRBEGIN$RquestionIdREND" VALUE="" SIZE=30>
+  <INPUT TYPE="submit" NAME="this" VALUE="Done"> 
+
+(EA-FORMAT)
+ (ACTUALTEXT)
+  <H1> Question RBEGIN$RpageNumberREND Exact Answer </H1>
+  <HR>
+  CBEGIN$CquestionTextCEND
+  <P>
+  Put your answer here 
+    <INPUT TYPE="text" NAME="answerRBEGIN$RquestionIdREND" VALUE="" SIZE=30>
+  <BR>
+  <INPUT TYPE="submit" NAME="this" VALUE="Done"> 
+
+(HEADER)
+
+(FOOTER)
+

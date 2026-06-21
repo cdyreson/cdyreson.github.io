@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+    <title>
+      Using AUCQL's COLLAPSE Operation
+    </title>
+  </head>
+  <body>
+    <table summary="table" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#E0F0F1" align="left" valign="top">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td>
+                <img src="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/images/logo.gif" alt="Boomerang logo" width="90" height="68" border="2"> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td align="left" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellspacing="1">
+            <tr>
+              <td bgcolor="#E0F0F1">
+                <big>Using AUCQL's COLLAPSE Operation</big> <br>
+                 <font color="#800000" size="2">A Dynamic Page-Reconfiguration System</font> 
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" bgcolor="#E0F0F1">
+          <table summary="table" border="0" cellpadding="2" cellspacing="2">
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/index.htm">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/boomerang/talk.htm">Talk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" bgcolor="#E0F0F1">
+                Curtis Dyreson
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/">Home</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/publications.htm">Publications</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/projects.htm">Projects</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/code.htm">Software</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/demos.htm">Demos</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/teaching.htm">Teaching</a> 
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E0F0F1">
+                &nbsp;
+              </td>
+              <td bgcolor="#FFFFFF">
+                <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson/pub/contact.htm">Contact me</a> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+        </td>
+        <td valign="top">
+          <br>
+           <a name="section01"></a> 
+          <h3>
+            Syntax
+          </h3>
+          The general form of a COLLAPSE is given below. 
+          <blockquote>
+            COLLAPSE(<i>variable</i>)
+          </blockquote>
+          COLLAPSE collapses a path, represented by the variable, to a single edge. How each property in the path is collapsed depends on the semantics of the property. 
+          <p>
+            <a name="section02"></a>
+          </p>
+          <h3>
+            Collapsing the NAME property
+          </h3>
+          The <b>NAME</b> property is collapsed by concatenating names. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>The names of paths to all nodes.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18, paid, subscriber')* All,
+       COLLAPSE(All) Collapsed,
+       PROPERTY(NAME, Collapsed) Names;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18, paid, subscriber')* All, COLLAPSE(All) Collapsed, PROPERTY(NAME, Collapsed) Names;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  Note that the NAME of a root edge is missing ('@').
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          The <a href="property.htm">PROPERTY</a> operation does an implicit COLLAPSE, so the following query is effectively equivalent to the one given above. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>The names of paths to all nodes redux.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18, paid, subscriber')* All,
+       PROPERTY(NAME, All) Names;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18, paid, subscriber')* All, PROPERTY(NAME, All) Names;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section03"></a>
+          </p>
+          <h3>
+            Collapsing security
+          </h3>
+          The <b>SECURITY</b> property is collapsed by determining which certificates are needed. 
+          <p>
+          </p>
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>The security on paths to all nodes.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18, paid, subscriber')* All,
+       PROPERTY(NAME, All) Name,
+       PROPERTY(SECURITY, All) Security;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18, paid, subscriber')* All, PROPERTY(NAME, All) Name, PROPERTY(SECURITY, All) Security;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                  Note that many&ugrave;nodes are reachable without any security.
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section04"></a>
+          </p>
+          <h3>
+            Collapsing transaction time
+          </h3>
+          The <b>TRANSACTION TIME</b> property is collapsed using temporal intersection. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>The security and transaction time for all nodes.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18, paid, subscriber')* All,
+       PROPERTY(NAME, All) Name,
+       PROPERTY(SECURITY, All) Security,
+       PROPERTY(QUALITY, All) Quality,
+       PROPERTY(TRANSACTION_TIME, All) TT;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18, paid, subscriber')* All, PROPERTY(NAME, All) Name, PROPERTY(SECURITY, All) Security, PROPERTY(QUALITY, All) Quality, PROPERTY(TRANSACTION_TIME, All) TT;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>
+            <a name="section05"></a>
+          </p>
+          <h3>
+            Other properties
+          </h3>
+          Other properties, such as <b>QUALITY</b>, are also collapsed. 
+          <blockquote>
+            <table summary="table" border="1" cellpadding="9" cellspacing="0">
+              <tr>
+                <td>
+                  <b>The security, transaction time, and quality for all nodes.</b>: 
+                  <form method="POST" action="http://www.eecs.wsu.edu/cgi-bin/cgiwrap/~cdyreson/cgi-bin/perl/SemiStructured/starter.pl">
+<pre>
+SELECT *
+FROM   (SECURITY: 'over 18, paid, subscriber')* All,
+       PROPERTY(NAME, All) Name,
+       PROPERTY(SECURITY, All) Security,
+       PROPERTY(QUALITY, All) Quality,
+       PROPERTY(TRANSACTION_TIME, All) TT;
+</pre>
+                    <br>
+                    <input type="hidden" name="query" value="SELECT * FROM (SECURITY: 'over 18, paid, subscriber')* All, PROPERTY(NAME, All) Name, PROPERTY(SECURITY, All) Security, PROPERTY(QUALITY, All) Quality, PROPERTY(TRANSACTION_TIME, All) TT;"> <input type="submit" name="submit" value="submit">
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <br>
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          <hr noshade size="1">
+          <a style="text-decoration:none" href="http://www.eecs.wsu.edu/~cdyreson">Curtis E. Dyreson</a> and <a style="text-decoration:none" href="http://www.comp.mq.edu.au/~asloane">Anthony Sloane</a> &copy; 1995-2001. All rights reserved.
+        </td>
+      </tr>
+      <tr>
+        <td height="20" bgcolor="#E0F0F1">
+          &nbsp;
+        </td>
+        <td colspan="2" bgcolor="#E0F0F1" align="right">
+          <small><i>E-mail questions or comments to <a href="mailto:cdyreson@eecs.wsu.edu">Curtis Dyreson</a></i></small> 
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

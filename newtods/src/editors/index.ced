@@ -1,0 +1,80 @@
+:include[macros]
+:arg1[
+This area contains information for :journalAcronym[] editors.
+<ul>
+<table summary="TOC">
+ <tr>
+  <td valign=top>
+    <font face=":myFont[]">
+      <b>Editorial Manuals</b>
+    </font>
+    <table summary="Manuals" cellspacing="1" border="0">
+      <tr><td>
+        <A
+          HREF="manualFeb2007.pdf"
+          onMouseOver="Manual.src=backArrow.src"
+          onMouseOut="Manual.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img
+           alt="Manual"
+           name="Manual"
+           border=0
+           valign="center"
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           :journalAcronym[] editor's manual (pdf), revised Feb 1, 2007.
+        </font>
+        </A>
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;
+        (<A HREF="manualMay2005.pdf" style="text-decoration:colon[]none"
+         >revised version May 7, 2005</A>)
+        <br>
+        &nbsp;&nbsp;&nbsp;
+        (<A HREF="manualOct2004.pdf" style="text-decoration:colon[]none"
+         >revised version October 15, 2004</A>)
+        <br>
+        &nbsp;&nbsp;&nbsp;
+        (<A HREF="manualApril2004.pdf" style="text-decoration:colon[]none"
+         >revised version April 14, 2004</A>)
+        <br>
+        &nbsp;&nbsp;&nbsp;
+        (<A HREF="manualv1.pdf" style="text-decoration:colon[]none"
+         >initial version Oct. 23, 2003</A>)
+      </td></tr>
+    </table>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top>
+    <font face=":myFont[]">
+      <b>Editorial Guidelines</b>
+    </font>
+    <table summary="Guidelines" cellspacing="1" border="0">
+      <tr><td>
+        <A 
+          HREF="StateOfTODS.html"
+          onMouseOver="StateOfTODS.src=backArrow.src"
+          onMouseOut="StateOfTODS.src=forwardArrow.src"
+          style="text-decoration:colon[]none">
+        <img 
+           alt="State of TODS" 
+           name="StateOfTODS"
+           border=0
+           valign="center" 
+           src=":baseURL[]across.gif">&nbsp;
+        <font face=":myFont[]">
+           State of :journalAcronym[], May 2002
+        </font>
+        </A>
+      </td></tr>
+    </table>
+  </td>
+ </tr>
+</table>
+</ul>
+]
+:macro[pageContent]
+:include[standard]
+:pageHeader[Editors Only Area]

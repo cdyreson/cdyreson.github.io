@@ -1,0 +1,71 @@
+#!/usr/local/bin/perl
+#=======================START OF CONFIGURATION=========================
+# Set the following line to where your perl lives and put in flags so that
+# in can include the Bdbm.pm and CGI.pm packages
+# NOTE THIS MUST BE PERL VERSION 5.0 or above.
+$PERL = '#!/usr/local/bin/perl -I/world/httpd/cgi-bin/perl/pm';
+ 
+# Set the following line to where the URL ROOT of the SAMaker cgi-bin scripts
+$ROOT = "http://www.cs.jcu.edu.au/cgi-bin/perl/tute";
+ 
+# Set the following line to where the mailto feature on HTML titles should
+# send mail (you can ignore this as it is unsupported anyways)
+$MAILTO = 'curtis@cs.jcu.edu.au';
+ 
+# Where will the cgi-bin scripts live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the scripts that are located in this directory (for scripts marker, 
+# starter, stats, hint, lookat, and explanation) so make sure to
+# put all the SAMaker cgi-bin scripts in their own directory.
+$SCRIPTDIR = "/world/httpd/cgi-bin/perl/tute";
+ 
+# Does your server only understand scripts with a certain extension?
+$SCRIPTEXTENSION = ".pl";
+ 
+# Where will SAMaker live?
+# WARNING, WARNING, WARNING!!! when you run install it will overwrite 
+# the script SAMaker that is located in this directory (which should be OK)
+$SAMAKERDIR = '/home/curtis/bin/perl';
+ 
+# chmod and chgrp to set the protections appropriately
+$CHMOD= 'chmod a+x';
+$CHGRP = '';
+$LN = 'ln -f -s'; #force links 
+#=======================END OF CONFIGURATION=========================
+configure("marker.proto", "$SCRIPTDIR/marker$SCRIPTEXTENSION");
+configure("starter.proto", "$SCRIPTDIR/starter$SCRIPTEXTENSION");
+configure("stats.proto", "$SCRIPTDIR/stats$SCRIPTEXTENSION");
+configure("SAMaker.proto", "$SAMAKERDIR/SAMaker");
+
+# These is the same script, but this trick will let the access log
+# track how many next buttons were activated vs. real questions marked
+print "creating symbolic link from $SCIPTDIR/skip$SCRIPTEXTENSION to $SCRIPTDIR/marker$SCRIPTEXTENSION\n";
+system ("$LN $SCRIPTDIR/marker$SCRIPTEXTENSION $SCRIPTDIR/skip$SCRIPTEXTENSION");
+print "creating symbolic link from $SCIPTDIR/next$SCRIPTEXTENSION to $SCRIPTDIR/marker$SCRIPTEXTENSION\n";
+system ("$LN $SCRIPTDIR/marker$SCRIPTEXTENSION $SCRIPTDIR/next$SCRIPTEXTENSION");
+print "\n\nI'm ALL DONE!!!!!\n";
+print "But you should please check for any errors above!\n";
+
+sub configure {
+  local ($filein, $fileout) = @_;
+
+  print "reading $filein\n";
+  open(PROTO, "<$filein") || die "no $filein\n";
+  
+  # slurp input 
+  @lines = <PROTO>;
+  close(PROTO);
+  $text = join("",@lines);
+  $text =~ s/&&&PERL&&&/$PERL/g;
+  $text =~ s/&&&ROOT&&&/$ROOT/g;
+  $text =~ s/&&&MAILTO&&&/$MAILTO/g;
+  $text =~ s/&&&EXTENSION&&&/$SCRIPTEXTENSION/g;
+
+  open(OUT, ">$fileout") || die "can't open $fileout\n";
+  print "creating $fileout\n";
+  print OUT $text;
+  close(OUT);
+
+  if ($CHMOD) {system("$CHMOD $fileout");}
+  if ($CHGRP) {system("$CHGRP $fileout");}
+}

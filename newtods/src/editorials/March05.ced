@@ -1,0 +1,86 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, March 2005</em>)
+
+The March 2005 issue of :journalAcronym[]
+has eight papers invited from the SIGMOD and
+PODS'2003 conferences. These papers are significantly extended versions of
+the conference papers, allowing the authors to refine and elaborate without
+the strictures of a twelve-page limit.
+
+The first four papers in that issue were invited from the SIGMOD conference;
+the last four papers were invited from the PODS conference. Each went
+through the normal rigorous review process.
+
+Alon Halevy was Program Chair for SIGMOD'2003; Tova Milo was Program Chair
+for PODS'2003. It is interesting that the first author of the first paper in
+this special issue is Tova. I should emphasize that while Tova helped
+select the PODS papers to invite, she had no involvement in selecting the
+SIGMOD papers to invite. It just turned out that one of the four SIGMOD
+papers selected was co-authored by her.
+
+The June 2005 issue is almost
+complete; it will have at least seven papers (available now on the 
+<a href="http://www.acm.org/tods/Upcoming.html">Upcoming Issues page</a>). 
+:journalAcronym[] continues to grow: the first two issues of 2005 contain 
+more papers than
+the first two issues of 2004, and more than the number of papers that appeared
+in all of 2002. The full story is on the :journalAcronym[]
+<a href="http://www.acm.org/tods/Statistics.html">web site</a>.
+
+I have appointed six new Associate Editors, bringing the complete Editorial
+Board to nineteen.
+
+<ul>
+<b>Jan Chomicki's</b> research interests are in logical foundations of
+databases.  Specific topics include: database integrity, data integration,
+data models, and query languages. His current projects involve query
+answering in inconsistent databases and preference queries.
+</ul>
+
+<ul>
+<b>Heikki Mannila</b> works in data mining, algorithms and bioinformatics.
+</ul>
+
+<ul>
+<b>Raghu Ramakrishnan's</b> current research is in two broad areas. In the EDAM
+project, he is working on data mining problems with driving applications in
+environmental monitoring, physics simulations, and e-commerce.  In the
+CICADA project, he is working together with researchers from Microsoft
+Research on extending SQL to allow applications to specify when (potentially
+out of date) copies of data can be used.
+</ul>
+
+<ul>
+<b>Arnie Rosenthal's</b> research is in the areas of data security and data
+sharing. In particular, he tries to align the technologies with feasible
+practices for data-owning organizations.
+</ul>
+
+<ul>
+<b>Sunita Sarawagi's</b> research interests span several fields including 
+databases, data mining, machine learning and statistics.  Currently she 
+is investigating the deployment of learning-based techniques for solving 
+various data integration and cleaning tasks.
+</ul>
+
+<ul>
+<b>Dan Suciu</b> works on applying formal theory to novel and difficult data 
+management tasks.  His past work was on various aspects of managing 
+semistructured data, including query languages, compression, query 
+processing and type inference, while his recent work focused on data 
+security and on querying unreliable and inconsistent data sources.
+</ul>
+
+All six are internationally-known scholars in the field of
+database systems and are well known also to the database community
+through their past service. In addition, they hail from three different
+continents.
+
+I'm gratified that they are willing to help :journalAcronym[]
+ continue to improve.
+
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[March 2005 Developments at ACM TODS]

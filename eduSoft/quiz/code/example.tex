@@ -1,0 +1,111 @@
+% The first few tags are directions to quizmaker on where to build the quiz
+% The actual questions start with the (QUESTIONS) tag.  Everything up to 
+% the (QUESTIONS) remains essentially the same for each quiz, so you just 
+% create it once and reuse it.
+
+% To whom should quiz results be emailed
+(EMAIL-RESULTS-TO-WHOM) 
+cdyreson@eecs.wsu.edu
+(HTML-BASE)
+<BASE HREF="http://www.eecs.wsu.edu/~cdyreson">
+
+% When a student finished the quiz, where should she return to?
+(RETURN-TO-WHERE) 
+<A HREF="http://www.eecs.wsu.edu/~cdyreson/pub/eduSoft/quizzes.htm">Return 
+to QuizMaker Page</A>
+
+% Seed for generating passwords
+(SEED) 432
+
+% When can a student gain entry to the quiz, and what are the passwords.
+% The format used is
+%   month/day   starthour:finishhour   entry_password  submit_password
+% The times shown just happen to be my tute times.
+(TEST-ENTRY)  
+7/17    8:24   guest     guestsubmit
+7/06   14:17   guest     guestsubmit 
+7/07   18:21   guest     guestsubmit 
+7/08   14:17   guest     guestsubmit
+7/09    9:12   guest     guestsubmit
+
+% The following tags just control special directions, marks, and negative marks
+% for various types Questions
+% TF - true/false questions
+% MC - multiple choice questsion
+% SA - short answer questions
+% EA - exact answer questions
+(TF-DIRECTIONS) 
+(TF-MARKS) 1
+(TF-NEGATIVE-MARKS) 0
+(MC-DIRECTIONS) 
+(MC-MARKS) 3
+(MC-NEGATIVE-MARKS) 0
+(SA-DIRECTIONS) 
+(SA-MARKS) 3
+(SA-NEGATIVE-MARKS) 0
+(EA-DIRECTIONS) 
+(EA-MARKS) 3
+(EA-NEGATIVE-MARKS) 0
+
+% This tag is currently ignored, but will be used to randomise the order of 
+% questions
+(RANDOM-ORDER) yes
+
+% A list of all the people in the class and their email addresses
+% The format used is
+%   person name = key = email
+(CLASS-LIST) 
+Guest 1 = 1 = cdyreson@eecs.wsu.edu
+Guest 2 = 2 = cdyreson@eecs.wsu.edu
+Guest 3 = 3 = cdyreson@eecs.wsu.edu
+
+% Now the questions start!
+(QUESTIONS) 
+
+% A question set is just a group of related questions.  One question
+%  from this set will be presented as the Nth question, which one is
+%  randomly chosen at run-time.  Since there is only one question in 
+%  this set, it will always be the first question!
+(QUESTIONSET)
+% EA is an exact answer question
+% The (r) tag stipulates what are acceptable answers
+(EA) What is 2+2?
+(r) 4
+(r) four
+(r) Four
+(e) The result of adding 2 to 2 is 4.
+
+% Since this question set has two questions, one will be chosen randomly
+%  when the student takes the test
+(QUESTIONSET)
+(EA) What is 2+3?
+(r) 5
+(r) five
+(e) The result of adding 3 to 2 is 5.
+
+(EA) What is 3+2?
+(r) 5
+(r) five
+(e) The result of adding 3 to 2 is 5.
+
+% MC is a multiple choice question
+% (w) is a wrong answer
+% (r) is a right answer
+(QUESTIONSET)
+(MC) What is 7+5?
+(w) 3454
+(r) 12
+(w) 423
+(w) 3
+(w) 6
+(w) none of the above
+(e) The result of adding 7 to 5 is 12.
+
+% T is a true/false question with a true answer
+% F is a true/false question with a false answer
+(QUESTIONSET)
+(T) 3+2 give the same answer as 2+3.
+(e) Addition is symmetric.
+
+(F) 3-2 give the same answer as 2-3.
+(e) Addition is symmetric.

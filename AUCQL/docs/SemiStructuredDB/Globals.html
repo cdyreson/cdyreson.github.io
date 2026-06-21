@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./SemiStructuredDB/Globals.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_semistructureddb::globals">NAME SemiStructuredDB::Globals</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new()"><code>new()</code></a></li>
+		<li><a href="#close()"><code>close()</code></a></li>
+		<li><a href="#save()"><code>save()</code></a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_semistructureddb::globals">NAME SemiStructuredDB::Globals</a></h1>
+<p>The global state in the semistructured db.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Below is the list of instance variables in the global object.</p>
+<ul>
+<li><strong><a name="item_ssgraph">SSGraph</a></strong><br />
+</li>
+- A <a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./SemiStructuredDB/LabelledGraph.html">the LabelledGraph manpage</a>.  
+The SSGraph is the raw semistructured graph.
+<p></p></ul>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new()"><code>new()</code></a></h2>
+<p>Allocate and intialize the necessary variables.</p>
+<p>
+</p>
+<h2><a name="close()"><code>close()</code></a></h2>
+<p>Close and write all the persistent variables are written to disk.  This
+should be called prior to exiting, but even if
+it not called, in theory, all the persistent variables should be
+maintained since Perl will clean them up nicely for us by doing
+the appropriate unties.</p>
+<p>
+</p>
+<h2><a name="save()"><code>save()</code></a></h2>
+<p>Write all the persistent variables are written to disk.</p>
+
+</body>
+
+</html>

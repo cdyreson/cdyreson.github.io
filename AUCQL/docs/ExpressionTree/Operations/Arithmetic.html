@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>./ExpressionTree/Operations/Arithmetic.html</title>
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name_expressiontree::operations::arithmetic">NAME ExpressionTree::Operations::Arithmetic</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#new($op,_$left,_$right)">new($op, $left, $right)</a></li>
+		<li><a href="#validate(op,_left,_right)">validate(op, left, right)</a></li>
+		<li><a href="#resulttype()"><code>resultType()</code></a></li>
+		<li><a href="#dump($indent)"><code>dump($indent)</code></a></li>
+		<li><a href="#evaluate(state_state)">evaluate(State state)</a></li>
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name_expressiontree::operations::arithmetic">NAME ExpressionTree::Operations::Arithmetic</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This class represents any arithmetic operation.</p>
+<p>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>
+</p>
+<h2><a name="new($op,_$left,_$right)">new($op, $left, $right)</a></h2>
+<ul>
+<li><strong><a name="item_op">op</a></strong><br />
+</li>
+The arithmetic operation.
+<p></p>
+<li><strong><a name="item_left">left</a></strong><br />
+</li>
+<a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./ExpressionTree.html">the ExpressionTree manpage</a> $left - The left child
+<p></p>
+<li><strong><a name="item_right">right</a></strong><br />
+</li>
+<a href="http://www.cs.usu.edu/~cdyreson/pub/AUCQL/docs/./ExpressionTree.html">the ExpressionTree manpage</a> $right - The right child
+<p></p></ul>
+<p>Create a new arithmetic operation</p>
+<p>
+</p>
+<h2><a name="validate(op,_left,_right)">validate(op, left, right)</a></h2>
+<p>#---------------------------------------------------------------------
+  sub validate {
+    my $type = shift;</p>
+<pre>
+    return &quot;No operation for arithmetic.&quot; unless scalar(@_);
+    my $op = shift;
+    return &quot;No left operand in arithmetic.&quot; unless scalar(@_);
+    shift;
+    return &quot;No right operand in arithmetic.&quot; unless scalar(@_);
+    shift;
+    return &quot;invalid operation $op&quot; unless defined $Operations{$op};
+    return undef; # successful validation!
+    }
+#---------------------------------------------------------------------</pre>
+<p>
+</p>
+<h2><a name="resulttype()"><code>resultType()</code></a></h2>
+<p>Return the type of result.</p>
+<p>
+</p>
+<h2><a name="dump($indent)"><code>dump($indent)</code></a></h2>
+<p>Dump this node.</p>
+<p>
+</p>
+<h2><a name="evaluate(state_state)">evaluate(State state)</a></h2>
+<p>Evaluate the arithmetic operation returning a boolean result.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+<HTML>
+<HEAD>
+<TITLE>../YAPP/lex/ParseLex-2.02/doc/Lex.fr.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<UL>
+
+		<LI><A HREF="#Conditions">Conditions</A>
+		<LI><A HREF="#Méthodes">Méthodes</A>
+	</UL>
+
+	<LI><A HREF="#EXEMPLES">EXEMPLES</A>
+	<LI><A HREF="#BUGS">BUGS</A>
+	<LI><A HREF="#VOIR_EGALEMENT">VOIR EGALEMENT</A>
+	<LI><A HREF="#AUTEUR">AUTEUR</A>
+	<LI><A HREF="#REMERCIEMENTS">REMERCIEMENTS</A>
+	<LI><A HREF="#REFERENCES">REFERENCES</A>
+	<LI><A HREF="#COPYRIGHT">COPYRIGHT</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+<CODE>Parse::Lex</CODE> - Générateur d'analyseurs lexicaux (Beta 2.02).
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>        require 5.004;
+</PRE>
+<P>
+<PRE>        use Parse::Lex;
+        @token = (
+          qw(
+             ADDOP    [-+]
+             LEFTP    [\(]
+             RIGHTP   [\)]
+             INTEGER  [1-9][0-9]*
+             NEWLINE  \n
+             
+            ),
+          qw(STRING),   [qw(&quot; (?:[^&quot;]+|&quot;&quot;)* &quot;)],
+          qw(ERROR  .*), sub {
+            die qq!can\'t analyze: &quot;$_[1]&quot;!;
+          }
+         );
+</PRE>
+<P>
+<PRE>        Parse::Lex-&gt;trace;  # Class method
+        $lexer = Parse::Lex-&gt;new(@token);
+        $lexer-&gt;from(\*DATA);
+        print &quot;Tokenization of DATA:\n&quot;;
+</PRE>
+<P>
+<PRE>        TOKEN:while (1) {
+          $token = $lexer-&gt;next;
+          if (not $lexer-&gt;eoi) {
+            print &quot;Line $.\t&quot;;
+            print &quot;Type: &quot;, $token-&gt;name, &quot;\t&quot;;
+            print &quot;Content:-&gt;&quot;, $token-&gt;text, &quot;&lt;-\n&quot;;
+          } else {
+            last TOKEN;
+          }
+        }
+</PRE>
+<P>
+<PRE>        __END__
+        1+2-5
+        &quot;a multiline
+        string with an embedded &quot;&quot; in it&quot;
+        an invalid string with a &quot;&quot; in it&quot;
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+La classe <CODE>Parse::Lex</CODE> permet de créer des analyseurs lexicaux. Un analyseur lexical est spécifié
+au moyen d'un liste de tokens passée en argument à la méthode <A HREF="#item_new">new()</A>.
+
+<P>
+<CODE>Parse::Lex</CODE> ne fonctionne qu'avec perl 5.004. Si votre version est antérieure, utilisez
+la sous-classe <CODE>Parse::CLex</CODE>. Les analyseurs générés par ces deux classes exploitent des techniques
+d'analyse différentes :
+
+<P>
+1. <CODE>Parse::Lex</CODE> utilise <A HREF="#item_pos">pos()</A>, associé à <CODE>\G</CODE>,
+
+<P>
+2. <CODE>Parse::CLex</CODE> utilise <CODE>s///</CODE> et donc consomme le flot de caractères à analyser.
+
+<P>
+Les analyseurs de la classe <CODE>Parse::CLex</CODE> ne permettent pas d'utiliser des expressions régulières avec ancrage.
+
+<P>
+Les tokens sont des objets de la classe <CODE>Parse::Token</CODE>, livré avec
+<CODE>Parse::Lex</CODE>. La définition d'un token comporte ordinairement deux arguments : un nom
+symbolique (comme <CODE>INTEGER</CODE>), suivi d'une expression régulière. Si une fonction anonyme est donnée en
+troisième argument, elle est exécutée lorsque le token est reconnu. Elle
+reçoit en argument l'objet <CODE>Parse::Token</CODE>, suivi de la chaîne reconnue par l'expression régulière. Le scalaire
+retourné par la fonction anonyme définit la chaîne de caractères placée
+dans l'objet <CODE>Parse::Token</CODE>.
+
+<P>
+L'ordre dans lequel l'analyseur lexical examine les expressions régulières
+est déterminé par l'ordre dans lequel ces expressions sont passées en
+argument à la méthode <A HREF="#item_new">new()</A>. Le token retourné par l'analyseur lexical correspond à la première expression qui s'apparie avec le début du flot de caractères à analyser (la stratégie est différente de celle adoptée par l'analyseur lexical 
+<FONT SIZE=-1>LEX</FONT> qui retourne la plus longue chaîne de toutes celles qu'il est possible de reconnaître). Le token est un objet de la classe
+ <CODE>Parse::Token</CODE>.
+
+<P>
+Les analyseurs lexicaux peuvent reconnaître des tokens disposés sur
+plusieurs enregistrements. Si la définition du token comporte plusieurs
+expressions régulières, et est placée dans un tableau anonyme, l'analyseur
+lit autant d'enregistrements que nécessaire pour reconnaître le token (voir
+la documentation de la classe
+<CODE>Parse::Token</CODE>). Lorsque que le motif du début est trouvé, l'analyseur en cherche la fin,
+et si besoin est, lit de nouveaux enregistrements. Il n'y a pas de
+rebroussement en cas d'échec.
+
+<P>
+L'analyseur peut être utilisé pour analyser une chaîne de caractères isolée
+ou un flot de données provenant d'une entrée quelconque. Lorsque
+l'analyseur a épuisé les données il retourne un objet
+<CODE>Parse::Token</CODE> dont le nom est <CODE>EOI</CODE> (End Of Input).
+
+<P>
+<HR>
+<H2><A NAME="Conditions">Conditions</A></H2>
+<P>
+Il est possible d'associer des conditions de déclenchement aux règles de reconnaissance de tokens qui composent votre analyseur lexical (à la manière de ce l'on trouve dans 
+<FONT SIZE=-1>FLEX).</FONT> Grâce aux conditions la règle qui réussit n'est plus obligatoirement la première qui s'apparie.
+
+
+<P>
+Toute désignation de symbole peut être précédée par la spécification de
+conditions d'activation de la règle de reconnaissance associée. Par exemple
+:
+
+<P>
+<PRE>        qw(C1:TERMINAL_1  REGEXP), sub { # associated action },
+        qw(TERMINAL_2  REGEXP), sub { # associated action },
+</PRE>
+<P>
+Le symbole <CODE>TERMINAL_1</CODE> ne sera reconnu que si la condition <CODE>C1</CODE> est active. L'activation/désactivation s'opère respectivement aux moyens
+des méthodes <A HREF="#item_start">start(&lt;EM&gt;NOM_CONDITION&lt;/EM&gt;)</A> et <A HREF="#item_end">end(&lt;EM&gt;NOM_CONDITION&lt;/EM&gt;)</A>.
+
+<P>
+<A HREF="#item_start">start('INITIAL')</A> permet de remettre à zéro l'automate d'analyse.
+
+<P>
+Les conditions peuvent être combinées aux moyens d'opérateurs 
+<FONT SIZE=-1>ET/OU</FONT> comme suit : 
+
+<P>
+<PRE>        C1:SYMBOL      condition C1
+</PRE>
+<P>
+<PRE>        C1:C2:SYMBOL   condition C1 ET condition C2
+</PRE>
+<P>
+<PRE>        C1,C2:SYMBOL   condition C1 OU condition C2
+</PRE>
+<P>
+Il existe deux types de conditions : les conditions <EM>inclusives</EM> et les conditions <EM>exclusives</EM>, respectivement déclarées par les méthodes de classe <A HREF="#item_inclusive">inclusive()</A> et <A HREF="#item_exclusive">exclusive()</A>. Avec une condition inclusive les règles actives sont celles qui
+comportent la condition, ainsi que celles qui n'en comportent pas du tout.
+Avec une condition exclusive, seules les règles qui comportent cette
+condition sont actives. Toutes les autres sont désactivées.
+
+<P>
+Exemple (emprunté à la documentation de 
+<FONT SIZE=-1>FLEX).</FONT>
+
+<P>
+<PRE> use Parse::Lex;
+ @token = (
+          'EXPECT', 'expect-floats', sub {
+            $lexer-&gt;start('expect'); 
+            $_[1] 
+          },
+          'expect:FLOAT', '\d+\.\d+', sub { 
+            print &quot;found a float: $_[1]\n&quot;;
+            $_[1] 
+          },
+          'expect:NEWLINE', '\n', sub { 
+            $lexer-&gt;end('expect') ;
+            $_[1] 
+          },
+          'NEWLINE2', '\n',
+          'INT', '\d+', sub {
+            print &quot;found an integer: $_[1] \n&quot;;
+            $_[1] 
+          },
+          'DOT', '\.', sub {
+            print &quot;found a dot\n&quot;;
+            $_[1] 
+          },
+         );
+</PRE>
+<P>
+<PRE> Parse::Lex-&gt;exclusive('expect');
+ $lexer = Parse::Lex-&gt;new(@token);
+</PRE>
+<P>
+La condition spéciale <CODE>ALL</CODE> est toujours vérifiée.
+
+<P>
+<HR>
+<H2><A NAME="Méthodes">Méthodes</A></H2>
+<DL>
+<DT><STRONG><A NAME="item_analyze">analyze EXPR</A></STRONG><DD>
+<P>
+Analyze <CODE>EXPR</CODE> et retourne une liste de couples composés d'un nom de token suivi du texte
+reconnu. <CODE>EXPR</CODE> peut être une chaîne de caractères ou une référence à un filehandle.
+
+<P>
+Exemples.
+
+<P>
+<PRE> @tokens = Parse::Lex-&gt;new(qw(PLUS [+] NUMBER \d+))-&gt;analyze(&quot;3+3+3&quot;);
+ @tokens = Parse::Lex-&gt;new(qw(PLUS [+] NUMBER \d+))-&gt;analyze(\*STREAM);
+</PRE>
+<DT><STRONG><A NAME="item_buffer">buffer EXPR</A></STRONG><DD>
+<DT><STRONG>buffer</STRONG><DD>
+<P>
+Retourne le contenu du buffer interne à l'analyseur lexical. Avec une
+expression en argument, place le résultat de l'expression dans le buffer.
+
+<P>
+Il n'est pas conseillé de changer directement le contenu du buffer sans
+changer la position du pointeur qui suit l'analyse (<A HREF="#item_pos">pos()</A>) et la valeur de la longueur du buffer (<A HREF="#item_length">length()</A>).
+
+<DT><STRONG><A NAME="item_end">end EXPR</A></STRONG><DD>
+<P>
+Désactive la condition <CODE>EXPR</CODE>.
+
+<DT><STRONG><A NAME="item_eoi">eoi</A></STRONG><DD>
+<P>
+Retourne 
+<FONT SIZE=-1>VRAI</FONT> lorsqu'il n'y a plus de données à analyser.
+
+<DT><STRONG><A NAME="item_every">every SUB</A></STRONG><DD>
+<P>
+Évite de devoir écrire une boucle de lecture pour analyser un flot de
+données.  <CODE>SUB</CODE> est une fonction anonyme exécutée après la reconnaissance de chaque token.
+Par exemple, pour analyser la chaîne
+<CODE>&quot;1+2&quot;</CODE> vous pouvez écrire : 
+
+<P>
+<PRE>        use Parse::Lex;
+</PRE>
+<P>
+<PRE>        $lexer = Parse::Lex-&gt;new(
+          qw(
+             ADDOP [-+]
+             INTEGER \d+
+            ));
+</PRE>
+<P>
+<PRE>        $lexer-&gt;from(&quot;1+2&quot;);
+        $lexer-&gt;every (sub { 
+          print $_[0]-&gt;name, &quot;\t&quot;;
+          print $_[0]-&gt;text, &quot;\n&quot;; 
+        });
+</PRE>
+<P>
+Le premier argument de la fonction anonyme est l'objet Token reconnu.
+
+<DT><STRONG><A NAME="item_exclusive">exclusive LISTE</A></STRONG><DD>
+<P>
+Méthode de classe déclarant comme <EM>exclusives</EM> les conditions présentes dans <CODE>LISTE</CODE>.
+
+<DT><STRONG><A NAME="item_flush">flush</A></STRONG><DD>
+<P>
+Si la conservation des chaînes consommées est activée, <A HREF="#item_flush">flush()</A>
+retourne et vide le buffer contenant les chaînes de caractères reconnues
+jusqu'ici. Utile seulement si vous êtes dans le mode activé par <A HREF="#item_hold">hold()</A>.
+
+<DT><STRONG><A NAME="item_from">from EXPR</A></STRONG><DD>
+<DT><STRONG>from</STRONG><DD>
+<P>
+<A HREF="#item_from">from(EXPR)</A> permet d'indiquer les données à analyser ou la source des données à
+analyser. L'argument de cette méthode est donc, soit une chaîne de
+caractère (ou une liste), soit une référence à un filehandle. Avec un
+argument retourne l'objet receveur. Sans argument retourne le filehandle
+s'il est défini, sinon <CODE>undef</CODE>.
+
+<P>
+Par défaut on suppose que les données sont lues sur <CODE>STDIN</CODE>.
+
+<P>
+Exemple.
+
+<P>
+<PRE>        $lexer-&gt;from(\*DATA);
+        $lexer-&gt;from('les données à analyser');
+</PRE>
+<DT><STRONG><A NAME="item_getSub">getSub</A></STRONG><DD>
+<P>
+<A HREF="#item_getSub">getSub()</A> retourne la fonction anonyme réalisant l'analyse lexicale.
+
+<P>
+Exemple.
+
+<P>
+<PRE>        my $token = '';
+        my $sub = $lexer-&gt;getSub;
+        while (($token = &amp;$sub()) ne $Token::EOI) {
+          print $token-&gt;name, &quot;\t&quot;;
+          print $token-&gt;text, &quot;\n&quot;;
+        }
+    
+   # or 
+        
+        my $token = '';
+        local *tokenizer = $lexer-&gt;getSub;
+        while (($token = tokenizer()) ne $Token::EOI) {
+          print $token-&gt;name, &quot;\t&quot;;
+          print $token-&gt;text, &quot;\n&quot;;
+        }
+</PRE>
+<DT><STRONG><A NAME="item_getToken">getToken</A></STRONG><DD>
+<P>
+Synonyme de la méthode <A HREF="#item_token">token()</A>.
+
+<DT><STRONG><A NAME="item_hold">hold EXPR</A></STRONG><DD>
+<DT><STRONG>hold</STRONG><DD>
+<P>
+Active/désactive la conservation des chaînes analysées (et consommées dans
+le cas de <CODE>Parse::CLex</CODE>). Retourne la valeur courante. Peut être utilisée comme méthode de classe.
+
+<P>
+On peut obtenir le contenu du buffer au moyen de la méthode <A HREF="#item_flush">flush()</A>
+qui a également pour effet de vider le buffer. 
+
+<DT><STRONG><A NAME="item_inclusive">inclusive LISTE</A></STRONG><DD>
+<P>
+Méthode de classe déclarant comme <EM>inclusives</EM> les conditions présentes dans <CODE>LISTE</CODE>.
+
+<DT><STRONG><A NAME="item_length">length EXPR</A></STRONG><DD>
+<DT><STRONG>length</STRONG><DD>
+<P>
+<A HREF="#item_length">length()</A> Retourne la longueur de l'enregistrement courant.  <CODE>length
+EXPR</CODE> fixe la longueur de cet enregistrement.
+
+<DT><STRONG><A NAME="item_line">line EXPR</A></STRONG><DD>
+<DT><STRONG>line</STRONG><DD>
+<P>
+<A HREF="#item_line">line</A> retourne le numéro de l'enregistrement courant.  <CODE>line EXPR</CODE>
+permet de fixer ce numéro. Retourne toujours 1 si on analyse une chaîne de
+caractères. La méthode <A HREF="#item_readline">readline()</A> incrémente le numéro de ligne.
+
+<DT><STRONG><A NAME="item_name">name EXPR</A></STRONG><DD>
+<DT><STRONG>name</STRONG><DD>
+<P>
+Permet de donner un nom à un analyseur lexical. <A HREF="#item_name">name()</A> permet de connaître ce nom.
+
+<DT><STRONG><A NAME="item_next">next</A></STRONG><DD>
+<P>
+Provoque la recherche du prochain token. Retourne l'objet Token reconnu.
+Retourne l'objet <CODE>Token::EOI</CODE> en fin de données.
+
+<P>
+Exemples.
+
+<P>
+<PRE>        $lexer = Parse::Lex-&gt;new(@token);
+        print $lexer-&gt;next-&gt;name;   # print the token type
+        print $lexer-&gt;next-&gt;text;   # print the token content
+</PRE>
+<DT><STRONG><A NAME="item_new">new LISTE</A></STRONG><DD>
+<P>
+Crée et retourne un nouvel analyseur lexical. L'argument de la méthode est
+une liste d'objets de la classe <CODE>Parse::Token</CODE> ou de triplets permettant de les créer. Ces triplets sont constitués du nom
+symbolique du token, de l'expression régulière nécessaire à sa
+reconnaissance et éventuellement d'une fonction anonyme exécutée lors de la
+reconnaissance du token. Pour chaque triplet, un objet de type
+<CODE>Parse::Token</CODE> est créé dans le package appelant.
+
+<DT><STRONG><A NAME="item_offset">offset</A></STRONG><DD>
+<P>
+Retourne le nombre de caractères déjà consommé depuis le début du flot de
+données analysé.
+
+<DT><STRONG><A NAME="item_pos">pos EXPR</A></STRONG><DD>
+<DT><STRONG>pos</STRONG><DD>
+<P>
+<CODE>pos EXPR</CODE> fixe la position de début du prochain token à reconnaître dans
+l'enregistrement courant (ne fonctionne pas avec les analyseurs de la
+classe <CODE>Parse::CLex</CODE>). <A HREF="#item_pos">pos()</A> retourne le nombre de caractères déjà consommés dans l'enregistrement
+courant.
+
+<DT><STRONG><A NAME="item_readline">readline</A></STRONG><DD>
+<P>
+Effectue la lecture des données sur l'entrée spécifiée par la méthode <A HREF="#item_from">from()</A>. Retourne le résultat de la lecture.
+
+<P>
+Exemple.
+
+<P>
+<PRE>        use Parse::Lex;
+</PRE>
+<P>
+<PRE>        print STDERR &quot;read and print one line\n&quot;;
+        $lexer = Parse::Lex-&gt;new();
+        while (not $lexer-&gt;eoi) {
+          print $lexer-&gt;readline()
+        }
+</PRE>
+<DT><STRONG><A NAME="item_reset">reset</A></STRONG><DD>
+<P>
+Vide le buffer interne à l'analyseur lexical et efface tout token déjà
+reconnu.
+
+<DT><STRONG><A NAME="item_restart">restart</A></STRONG><DD>
+<P>
+Réinitialise l'automate d'analyse. La seule condition active devient la
+condition <CODE>INITIAL</CODE>.
+
+<DT><STRONG><A NAME="item_setToken">setToken TOKEN</A></STRONG><DD>
+<P>
+Force le token à <CODE>TOKEN</CODE>. Utile pour requalifier un token à l'intérieur de la fonction anonyme
+associée à ce token.
+
+<DT><STRONG><A NAME="item_skip">skip EXPR</A></STRONG><DD>
+<DT><STRONG>skip</STRONG><DD>
+<P>
+<CODE>EXPR</CODE> est une expression régulière définissant un motif inter-token (par défaut <CODE>[ \t]+</CODE>). <A HREF="#item_skip">skip('')</A> permet de supprimer ce motif. <A HREF="#item_skip">skip()</A> retourne la valeur du motif. <A HREF="#item_skip">skip()</A> peut être utilisée comme méthode de classe.  
+
+<P>
+Le changement du motif à ``sauter'' provoque une recompilation de
+l'analyseur lexical.
+
+<DT><STRONG><A NAME="item_start">start EXPR</A></STRONG><DD>
+<P>
+Active la condition 
+<FONT SIZE=-1>EXPR.</FONT>
+
+<DT><STRONG><A NAME="item_state">state EXPR</A></STRONG><DD>
+<P>
+<CODE>state EXPR</CODE> permet de connaître l'état de la condition représentée par 
+<FONT SIZE=-1>EXPR.</FONT>
+
+<DT><STRONG><A NAME="item_token">token</A></STRONG><DD>
+<P>
+Retourne l'objet correspondant au dernier token reconnu. En l'absence de
+token lu, retourne un token spécial dont le nom est <CODE>DEFAULT</CODE>.
+
+<DT><STRONG><A NAME="item_tokenClass">tokenClass EXPR</A></STRONG><DD>
+<DT><STRONG>tokenClass</STRONG><DD>
+<P>
+Indique quelle est la classe des tokens à créer à partir de la liste passée
+en argument à la méthode <A HREF="#item_new">new()</A>. Sans argument retourne le nom de cette classe. Par défaut la classe est <CODE>Parse::Token</CODE>.
+
+<DT><STRONG><A NAME="item_trace">trace OUTPUT</A></STRONG><DD>
+<DT><STRONG>trace</STRONG><DD>
+<P>
+Méthode de classe qui active le mode trace. L'activation du mode trace doit
+avoir lieu avant la création de l'analyseur lexical. Le mode peut être
+ensuite désactivé par un nouvel appel de la méthode.
+
+<P>
+<CODE>OUTPUT</CODE> peut être un nom de fichier ou une référence à un filehandle vers laquelle
+la trace va être dirigée.
+
+</DL>
+<P>
+<HR>
+<H1><A NAME="EXEMPLES">EXEMPLES</A></H1>
+<P>
+ctokenizer.pl - Segmentation d'un flot de données au moyen de la classe <CODE>Parse::CLex</CODE>.
+
+<P>
+tokenizer.pl - Segmentation d'un flot de données au moyen de la classe <CODE>Parse::Lex</CODE>.
+
+<P>
+every.pl - Utilisation de la méthode <A HREF="#item_every">every()</A>.
+
+<P>
+sexp.pl - Interprète d'expressions arithmétiques préfixées.
+
+<P>
+sexpcond.pl - Interprète d'expressions arithmétiques préfixées avec
+utilisation des conditions.
+
+<P>
+<HR>
+<H1><A NAME="BUGS">BUGS</A></H1>
+<P>
+<CODE>Parse::Lex</CODE> ne fonctionne qu'avec perl 5.004. Si votre version de Perl est antérieure,
+utilisez la classe <CODE>Parse::CLex</CODE>.
+
+<P>
+Les analyseurs de la classe <CODE>Parse::CLex</CODE> ne permettent pas d'utiliser des expressions régulières avec ancrage.
+
+<P>
+<HR>
+<H1><A NAME="VOIR_EGALEMENT">VOIR EGALEMENT</A></H1>
+<P>
+La classe <CODE>Parse::YYLex</CODE> qui interface <CODE>Parse::Lex</CODE> avec le parseur byacc.
+
+<P>
+<HR>
+<H1><A NAME="AUTEUR">AUTEUR</A></H1>
+<P>
+Philippe Verdret 
+
+<P>
+<HR>
+<H1><A NAME="REMERCIEMENTS">REMERCIEMENTS</A></H1>
+<P>
+La version 2.0 doit beaucoup aux suggestions de Vladimir Alexiev. Ocrat a
+largement contribué à l'amélioration de cette documentation.
+
+<P>
+<HR>
+<H1><A NAME="REFERENCES">REFERENCES</A></H1>
+<P>
+Friedl, 
+<FONT SIZE=-1>J.E.F.</FONT> Mastering Regular Expressions. O'Reilly &amp;
+Associates 1996.
+
+<P>
+Mason, 
+<FONT SIZE=-1>T.</FONT> &amp; Brown, 
+<FONT SIZE=-1>D.</FONT> - Lex &amp; Yacc. O'Reilly &amp; Associates, Inc. 1990.
+
+
+<P>
+
+<FONT SIZE=-1>FLEX</FONT> - 
+<FONT SIZE=-1>A</FONT> Scanner generator (voir par exemple <A HREF="ftp://ftp.ee.lbl.gov/)">ftp://ftp.ee.lbl.gov/)</A>
+
+
+<P>
+<HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT</A></H1>
+<P>
+Copyright (c) 1995-1998 Philippe Verdret. All rights reserved. This module
+is free software; you can redistribute it and/or modify it under the same
+terms as Perl itself.
+
+</BODY>
+
+</HTML>

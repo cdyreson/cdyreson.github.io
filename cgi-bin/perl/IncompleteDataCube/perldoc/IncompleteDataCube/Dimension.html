@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>./IncompleteDataCube/Dimension.html</TITLE>
+<LINK REV="made" HREF="mailto:syshelp@eecs.wsu.edu">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME_Dimension">NAME Dimension</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#METHODS">METHODS</A>
+	<UL>
+
+		<LI><A HREF="#new_dimensionName_">new($dimensionName)</A>
+		<LI><A HREF="#close_">close()</A>
+		<LI><A HREF="#save_">save()</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME_Dimension">NAME Dimension</A></H1>
+<P>
+Build the global variables for a single dimension.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+This is a helper class for <A HREF="./IncompleteDataCube/Globals.html">IncompleteDataCube::Globals</A>. It encapsulates the creation of global variables for each dimension since
+all dimensions look the same, they just have different names.
+
+<P>
+<HR>
+<H1><A NAME="METHODS">METHODS</A></H1>
+<P>
+<HR>
+<H2><A NAME="new_dimensionName_">new($dimensionName)</A></H2>
+<UL>
+<LI><STRONG><A NAME="item__dimensionName">$dimensionName</A></STRONG>
+<P>
+- The name of the dimension. Needed since the persistent graphs and tables
+for this dimension will be distinguished on disk by name.
+
+<H2><A NAME="close_">close()</A></H2>
+<P>
+Close and write all the persistent variables are written to disk. This
+should be called prior to exiting, but even if it not called, in theory,
+all the persistent variables should be maintained since Perl will clean
+them up nicely for us by doing the appropriate unties.
+
+<H2><A NAME="save_">save()</A></H2>
+<P>
+Write all the persistent variables are written to disk.
+
+</DL>
+</BODY>
+
+</HTML>

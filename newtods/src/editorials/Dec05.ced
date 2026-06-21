@@ -1,0 +1,54 @@
+:include[macros]
+:arg1
+(<em>written by Richard T.&nbsp;Snodgrass, September 2005</em>)
+
+The December issue should be out soon, if it isn't already. It is a special
+issue of papers invited from the SIGMOD'04 and PODS'04 conferences. I thank
+the authors, associate editors, and reviewers (some from the SIGMOD and PODS
+program committees) for writing, reviewing, revising, reviewing again, and
+then getting into final form these papers in the amazingly short time of
+eighteen months. This is a very nice issue, with seven substantive papers.
+
+The 2005 volume (volume 30) of :journalAcronym[] is the largest one yet, by far,
+and the first one over 1000 pages (over 1100 pages, actually). Included in
+this volume, in the September 2005 issue, is one of Alberto Mendelzon's last
+papers, "Capturing summarizability with integrity constraints in OLAP."
+Alberto was a :journalAcronym[] Associate Editor for four years, and before that
+worked with me as SIGMOD Information Director. I greatly miss him and his
+gentle smile.
+
+Submissions to :journalAcronym[] have doubled over the past three years. 
+I'm very
+pleased to announce the appointment of four new Associate Editors, bringing
+the <a href="http://www.acm.org/tods/Editors.html">Editorial Board</a> to 23.
+
+<ul>
+<li><b>Phokion Kolaitis</b> works on logic in databases. Current research 
+interests
+include data integration and interoperability, metadata management, query 
+languages, and deductive databases.
+</li>
+<li>
+<b>Ken Ross's</b> current interests include query processing and optimization,
+particularly in the context of database systems running on new
+and/or nontraditional hardware.  He also has projects in several
+application domains, including archeology, architecture, and biology.
+</li>
+<li>
+<b>Pierangela Samarati's</b> research interests are in the areas of access
+control policies, models, languages, and systems; data security and privacy;
+information system security; and information protection in general.
+</li>
+<li>
+<b>S. Sudarshan's</b> main research interests include query optimization, 
+keyword queries on structured and semi-structured data, and 
+fine-grained access control.  He is also working on tools for
+supporting database application development. 
+</li>
+</ul>
+We're very fortunate that such accomplished scholars are willing to invest
+their valuable time to handle manuscripts.
+
+:macro[pageContent]
+:include[standard]
+:pageHeader[Changes to the :journalAcronym[] Editorial Board]

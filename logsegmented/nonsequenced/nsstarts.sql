@@ -1,0 +1,45 @@
+explain analyze select s.dept, s.start, s.stop
+from empt r, empt s
+where r.id <> s.id AND
+  r.start=s.start AND
+  (
+  r.s1 = s.p1x
+  OR r.s2 = s.p2x
+  OR r.s4 = s.p4x
+  OR r.s8 = s.p8x
+  OR r.s16 = s.p16x
+  OR r.s32 = s.p32x
+  OR r.s64 = s.p64x
+  OR r.s128 = s.p128x
+  OR r.s256 = s.p256x
+  OR r.s512 = s.p512x
+  OR r.s1024 = s.p1024x
+  OR r.s2048 = s.p2048x
+  OR r.s4096 = s.p4096x
+  OR r.s8192 = s.p8192x
+  OR r.s16384 = s.p16384x
+  OR r.s32768 = s.p32768x
+  OR r.s65536 = s.p65536x
+  OR r.s131072 = s.p131072x
+  OR r.s262144 = s.p262144x
+  OR r.s524288 = s.p524288x
+  OR r.s1x = s.p1x
+  OR r.s2x = s.p2x
+  OR r.s4x = s.p4x
+  OR r.s8x = s.p8x
+  OR r.s16x = s.p16x
+  OR r.s32x = s.p32x
+  OR r.s64x = s.p64x
+  OR r.s128x = s.p128x
+  OR r.s256x = s.p256x
+  OR r.s512x = s.p512x
+  OR r.s1024x = s.p1024x
+  OR r.s2048x = s.p2048x
+  OR r.s4096x = s.p4096x
+  OR r.s8192x = s.p8192x
+  OR r.s16384x = s.p16384x
+  OR r.s32768x = s.p32768x
+  OR r.s65536x = s.p65536x
+  OR r.s131072x = s.p131072x
+  OR r.s262144x = s.p262144x
+  OR r.s524288x = s.p524288x)
