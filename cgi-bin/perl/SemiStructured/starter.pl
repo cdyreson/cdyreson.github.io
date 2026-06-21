@@ -96,7 +96,7 @@ print <<"PAGE";
       <table summary="table" border="0" cellSpacing="1">
         <tr>
           <td >
-             <img src="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/images/logo.gif" 
+             <img src="https://cdyreson.github.io/AUCQL/images/logo.gif"
                   alt="AUCQL logo" 
                   width="90" 
                   height="68"
@@ -127,13 +127,13 @@ print <<"PAGE";
       <table summary="table" border="0" cellpadding="2" cellspacing="2">
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/index.htm">
+               href="https://cdyreson.github.io/AUCQL/index.htm">
               Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/doc.htm">
+               href="https://cdyreson.github.io/AUCQL/doc.htm">
               Publications&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
@@ -142,76 +142,76 @@ print <<"PAGE";
 </font>        </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/prototype.htm">
+               href="https://cdyreson.github.io/AUCQL/prototype.htm">
               Prototype&nbsp;&nbsp;
              </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/examples.htm">
+               href="https://cdyreson.github.io/AUCQL/examples.htm">
               Examples&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/database.htm">
+               href="https://cdyreson.github.io/AUCQL/database.htm">
               The DB
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/basics.htm">
+               href="https://cdyreson.github.io/AUCQL/basics.htm">
               Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/defaults.htm">
+               href="https://cdyreson.github.io/AUCQL/defaults.htm">
               Defaults
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/match.htm">
+               href="https://cdyreson.github.io/AUCQL/match.htm">
               Match
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/property.htm">
+               href="https://cdyreson.github.io/AUCQL/property.htm">
               Property
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/collapse.htm">
+               href="https://cdyreson.github.io/AUCQL/collapse.htm">
               Collapse
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/coalesce.htm">
+               href="https://cdyreson.github.io/AUCQL/coalesce.htm">
              Coalesce
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/security.htm">
+               href="https://cdyreson.github.io/AUCQL/security.htm">
              Security
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/transactionTime.htm">
+               href="https://cdyreson.github.io/AUCQL/transactionTime.htm">
              Time
             </a>
         </td></tr>
@@ -228,31 +228,31 @@ print <<"PAGE";
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/publications.htm">
+               href="https://cdyreson.github.io/publications.htm">
               Publications
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/projects.htm">
+               href="https://cdyreson.github.io/projects.htm">
               Projects
              </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+               href="https://cdyreson.github.io/code.htm">Software</a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+               href="https://cdyreson.github.io/demos.htm">Demos</a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+               href="https://cdyreson.github.io/teaching.htm">Teaching</a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+               href="https://cdyreson.github.io/contact.htm">Contact me</a>
         </td></tr>
       </table>
     </td>
@@ -291,7 +291,7 @@ print <<"PAGE";
       <hr noshade size="1">
      <a style="text-decoration:none" 
                href="http://digital.cs.usu.edu/~cdyreson">Curtis E. Dyreson</a>,
-               Michael H. Böhlen, and
+               Michael H. Bï¿½hlen, and
      <a style="text-decoration:none" 
                href="http://www.cs.auc.dk/~csj">Christian S. Jensen</a>
      &copy; 1998-2000. All rights reserved.
@@ -302,7 +302,7 @@ print <<"PAGE";
     <td colspan=2 bgColor="#D0AEFF" align="right">
       <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
             <a href="http://validator.w3.org/check/referer"><img 
-               src="http://digital.cs.usu.edu/~cdyreson/pub/images/html401.gif" 
+               src="https://cdyreson.github.io/images/html401.gif"
              height="15"
              alt="Valid HTML 4.01!" border="0"></a>
     </td>
@@ -368,7 +368,7 @@ print <<"PAGE2";
       <table summary="table" border="0" cellSpacing="1">
         <tr>
           <td >
-             <img src="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/images/logo.gif" 
+             <img src="https://cdyreson.github.io/AUCQL/images/logo.gif"
                   alt="AUCQL logo" 
                   width="90" 
                   height="68"
@@ -399,13 +399,13 @@ print <<"PAGE2";
       <table summary="table" border="0" cellpadding="2" cellspacing="2">
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/index.htm">
+               href="https://cdyreson.github.io/AUCQL/index.htm">
               Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/doc.htm">
+               href="https://cdyreson.github.io/AUCQL/doc.htm">
               Publications&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
@@ -417,76 +417,76 @@ print <<"PAGE2";
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/prototype.htm">
+               href="https://cdyreson.github.io/AUCQL/prototype.htm">
               Prototype&nbsp;&nbsp;
              </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/examples.htm">
+               href="https://cdyreson.github.io/AUCQL/examples.htm">
               Examples&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/database.htm">
+               href="https://cdyreson.github.io/AUCQL/database.htm">
               The DB
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/basics.htm">
+               href="https://cdyreson.github.io/AUCQL/basics.htm">
               Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/defaults.htm">
+               href="https://cdyreson.github.io/AUCQL/defaults.htm">
               Defaults
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/match.htm">
+               href="https://cdyreson.github.io/AUCQL/match.htm">
               Match
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/property.htm">
+               href="https://cdyreson.github.io/AUCQL/property.htm">
               Property
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/collapse.htm">
+               href="https://cdyreson.github.io/AUCQL/collapse.htm">
               Collapse
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/coalesce.htm">
+               href="https://cdyreson.github.io/AUCQL/coalesce.htm">
              Coalesce
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/security.htm">
+               href="https://cdyreson.github.io/AUCQL/security.htm">
              Security
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td>
           <td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/AUCQL/transactionTime.htm">
+               href="https://cdyreson.github.io/AUCQL/transactionTime.htm">
              Time
             </a>
         </td></tr>
@@ -503,31 +503,31 @@ print <<"PAGE2";
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/publications.htm">
+               href="https://cdyreson.github.io/publications.htm">
               Publications
             </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/projects.htm">
+               href="https://cdyreson.github.io/projects.htm">
               Projects
              </a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+               href="https://cdyreson.github.io/code.htm">Software</a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+               href="https://cdyreson.github.io/demos.htm">Demos</a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+               href="https://cdyreson.github.io/teaching.htm">Teaching</a>
         </td></tr>
         <tr><td bgcolor="#D0AEFF">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+               href="https://cdyreson.github.io/contact.htm">Contact me</a>
         </td></tr>
       </table>
     </td>
@@ -566,7 +566,7 @@ print <<"PAGE2";
       <hr noshade size="1">
      <a style="text-decoration:none" 
                href="http://digital.cs.usu.edu/~cdyreson">Curtis E. Dyreson</a>,
-               Michael H. Böhlen, and
+               Michael H. Bï¿½hlen, and
      <a style="text-decoration:none" 
                href="http://www.cs.auc.dk/~csj">Christian S. Jensen</a>
      &copy; 1998-2000. All rights reserved.
@@ -577,7 +577,7 @@ print <<"PAGE2";
     <td colspan=2 bgColor="#D0AEFF" align="right">
       <small><i>E-mail questions or comments to Curtis.Dyreson at usu.edu</i></small>
             <a href="http://validator.w3.org/check/referer"><img 
-               src="http://digital.cs.usu.edu/~cdyreson/pub/images/html401.gif" 
+               src="https://cdyreson.github.io/images/html401.gif"
              height="15"
              alt="Valid HTML 4.01!" border="0"></a>
     </td>

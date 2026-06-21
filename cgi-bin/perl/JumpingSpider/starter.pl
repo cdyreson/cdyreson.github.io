@@ -104,7 +104,7 @@ print <<"PAGE";
       <table summary="table" border="0" cellSpacing="1">
         <tr>
           <td >
-             <img src="http://digital.cs.usu.edu/~cdyreson/pub/JumpingSpider/js.gif" 
+             <img src="https://cdyreson.github.io/JumpingSpider/js.gif"
                   alt="jumping spider logo" 
                   width="90" 
                   height="68"
@@ -135,31 +135,31 @@ print <<"PAGE";
       <table summary="table" border="0" cellpadding="2" cellspacing="2">
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/JumpingSpider/index.htm">
+               href="https://cdyreson.github.io/JumpingSpider/index.htm">
               Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/JumpingSpider/overview.htm">
+               href="https://cdyreson.github.io/JumpingSpider/overview.htm">
               Overview&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/JumpingSpider/publications.htm">
+               href="https://cdyreson.github.io/JumpingSpider/publications.htm">
               Publications
              </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/JumpingSpider/demo.htm">
+               href="https://cdyreson.github.io/JumpingSpider/demo.htm">
               Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/JumpingSpider/code.htm">
+               href="https://cdyreson.github.io/JumpingSpider/code.htm">
               Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
@@ -176,31 +176,31 @@ print <<"PAGE";
         </td></tr>
         <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/publications.htm">
+               href="https://cdyreson.github.io/publications.htm">
               Publications
             </a>
         </td></tr>
         <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/projects.htm">
+               href="https://cdyreson.github.io/projects.htm">
               Projects
              </a>
         </td></tr>
         <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+               href="https://cdyreson.github.io/code.htm">Software</a>
         </td></tr>
         <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+               href="https://cdyreson.github.io/demos.htm">Demos</a>
         </td></tr>
         <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+               href="https://cdyreson.github.io/teaching.htm">Teaching</a>
         </td></tr>
         <tr><td bgcolor="#F0E0F0">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+               href="https://cdyreson.github.io/contact.htm">Contact me</a>
         </td></tr>
       </table>
     </td>

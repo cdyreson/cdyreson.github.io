@@ -87,7 +87,7 @@ print <<"PAGE";
       <table summary="table" border="0" cellSpacing="1">
         <tr>
           <td >
-             <img src="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/cube.gif" 
+             <img src="https://cdyreson.github.io/IncompleteDataCube/cube.gif"
                   alt="cube logo" 
                   width="90" 
                   height="68"
@@ -118,37 +118,37 @@ print <<"PAGE";
       <table summary="table" border="0" cellpadding="2" cellspacing="2">
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/index.htm">
+               href="https://cdyreson.github.io/IncompleteDataCube/index.htm">
               Cube Home&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/overview.htm">
+               href="https://cdyreson.github.io/IncompleteDataCube/overview.htm">
               Overview&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/publications.htm">
+               href="https://cdyreson.github.io/IncompleteDataCube/publications.htm">
               Publications
              </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/javademo.htm">
+               href="https://cdyreson.github.io/IncompleteDataCube/javademo.htm">
               Java Demo&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/perldemo.htm">
+               href="https://cdyreson.github.io/IncompleteDataCube/perldemo.htm">
               Perl Demo&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
         <tr><td colspan=2 bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/IncompleteDataCube/code.htm">
+               href="https://cdyreson.github.io/IncompleteDataCube/code.htm">
               Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </td></tr>
@@ -165,31 +165,31 @@ print <<"PAGE";
         </td></tr>
         <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/publications.htm">
+               href="https://cdyreson.github.io/publications.htm">
               Publications
             </a>
         </td></tr>
         <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/projects.htm">
+               href="https://cdyreson.github.io/projects.htm">
               Projects
              </a>
         </td></tr>
         <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/code.htm">Software</a>
+               href="https://cdyreson.github.io/code.htm">Software</a>
         </td></tr>
         <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/demos.htm">Demos</a>
+               href="https://cdyreson.github.io/demos.htm">Demos</a>
         </td></tr>
         <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/teaching.htm">Teaching</a>
+               href="https://cdyreson.github.io/teaching.htm">Teaching</a>
         </td></tr>
         <tr><td bgcolor="#DEFEDE">&nbsp;</td><td bgcolor="#FFFFFF">
             <a style="text-decoration:none" 
-               href="http://digital.cs.usu.edu/~cdyreson/pub/contact.htm">Contact me</a>
+               href="https://cdyreson.github.io/contact.htm">Contact me</a>
         </td></tr>
       </table>
     </td>
@@ -198,7 +198,7 @@ print <<"PAGE";
     <td vAlign="top">
       <br>
       
-  <a href="http://digital.cs.usu.edu/~cdyreson/pub//IncompleteDataCube/demoinstructions.htm">Instructions on use</a>
+  <a href="https://cdyreson.github.io//IncompleteDataCube/demoinstructions.htm">Instructions on use</a>
   <P>
   $GUI
 
