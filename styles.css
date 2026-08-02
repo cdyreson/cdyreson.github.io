@@ -1,9 +1,9 @@
 /* Theming */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 
 :root{
     --white: #f9f9f9;
-    --black: #36383F;
+    --black: #000000;
     --grey: #85888C;
 }
 
@@ -15,8 +15,8 @@
 }
 
 body{
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
+
+
 }
 
 a{
@@ -57,7 +57,7 @@ ul{
 
 .menu a{
     display: block;
-    padding: 30px;
+    padding: 10px;
     color: var(--white);
 
 }
@@ -116,7 +116,7 @@ ul{
 /* Toggle menu icon */
 
 .side-menu:checked ~ nav{
-    max-height: 100%;
+    max-height: 65%;
 }
 
 .side-menu:checked ~ .hamb .hamb-line {
